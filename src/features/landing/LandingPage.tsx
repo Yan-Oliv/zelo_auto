@@ -204,7 +204,7 @@ export function LandingPage() {
                   Faça seu orçamento
                 </a>
                 <a href="#servicos" className="button-secondary">
-                  Nossos servicos
+                  Nossos serviços
                 </a>
               </div>
             </motion.div>
@@ -231,10 +231,10 @@ export function LandingPage() {
 
         <section id="servicos" className="scene-shell scene-panel">
           <Reveal className="section-intro section-intro-wide">
-            <div className="eyebrow">EXCELENCIA EM CADA DETALHE</div>
+            <div className="eyebrow">EXCELÊNCIA EM CADA DETALHE</div>
             <p className="section-description mt-6">
               Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado
-              que voce tem pelo seu veiculo.
+              que você tem pelo seu veículo.
             </p>
           </Reveal>
 
@@ -265,7 +265,7 @@ export function LandingPage() {
             <Reveal className="section-intro">
               <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
               <p className="section-description mt-6">
-                Siga-nos para ver as transformacoes diarias em nosso estudio.
+                Siga-nos para ver as transformações diárias em nosso estúdio.
               </p>
               <a
                 href={siteConfig.instagramLink}
@@ -303,12 +303,12 @@ export function LandingPage() {
                   <Camera size={26} />
                   <p>
                     {instagramFeed.loading
-                      ? 'Carregando ultimas postagens...'
+                      ? 'Carregando últimas postagens...'
                       : instagramFeed.error
-                        ? 'Nao foi possivel carregar o feed agora.'
+                        ? 'Não foi possível carregar o feed agora.'
                         : instagramFeed.configured
-                          ? 'Nenhuma publicacao encontrada ainda.'
-                          : 'Perfil conectado. As ultimas postagens aparecem aqui assim que o feed oficial estiver configurado.'}
+                          ? 'Nenhuma publicação encontrada ainda.'
+                          : 'Perfil conectado. As últimas postagens aparecem aqui assim que o feed oficial estiver configurado.'}
                   </p>
                   <a href={siteConfig.instagramLink} target="_blank" rel="noreferrer" className="button-secondary">
                     Abrir Instagram

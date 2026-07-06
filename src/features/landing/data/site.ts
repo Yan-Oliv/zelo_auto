@@ -25,20 +25,20 @@ export const siteConfig = {
 export const heroCopy = {
   title: 'MAIS QUE LIMPEZA. CUIDADO.',
   description:
-    'Estética automotiva premium para carros e motos. Técnica, produtos de alta performance e atenção a cada detalhe do seu veículo.',
+    'Est\u00e9tica automotiva premium para carros e motos. T\u00e9cnica, produtos de alta performance e aten\u00e7\u00e3o a cada detalhe do seu ve\u00edculo.',
 }
 
 export const sectionLinks = [
-  { label: 'Serviços', href: '#servicos' },
+  { label: 'Servi\u00e7os', href: '#servicos' },
   { label: 'Instagram', href: '#instagram' },
-  { label: 'Localização', href: '#localizacao' },
+  { label: 'Localiza\u00e7\u00e3o', href: '#localizacao' },
 ]
 
 export const footerLinks = [
-  { label: 'Início', href: '#hero' },
-  { label: 'Serviços', href: '#servicos' },
+  { label: 'In\u00edcio', href: '#hero' },
+  { label: 'Servi\u00e7os', href: '#servicos' },
   { label: 'Instagram', href: '#instagram' },
-  { label: 'Localização', href: '#localizacao' },
+  { label: 'Localiza\u00e7\u00e3o', href: '#localizacao' },
 ]
 
 export type ServiceItem = {
@@ -52,28 +52,28 @@ export const services: ServiceItem[] = [
   {
     title: 'Lavagem Completa',
     description:
-      'Remoção profunda de contaminantes e poeira, sem agredir a pintura, preservando o verniz original.',
+      'Remo\u00e7\u00e3o profunda de contaminantes e poeira, sem agredir a pintura, preservando o verniz original.',
     icon: 'wash',
     eyebrow: 'Lavagem',
   },
   {
     title: 'Limpeza Interna',
     description:
-      'Higienização completa do interior, do painel aos detalhes que ninguém vê.',
+      'Higieniza\u00e7\u00e3o completa do interior, do painel aos detalhes que ningu\u00e9m v\u00ea.',
     icon: 'interior',
     eyebrow: 'Interior',
   },
   {
-    title: 'Higienização de Bancos',
+    title: 'Higieniza\u00e7\u00e3o de Bancos',
     description:
-      'Remoção de manchas e odores, com produtos bactericidas e reidratação do couro/tecido.',
+      'Remo\u00e7\u00e3o de manchas e odores, com produtos bactericidas e reidrata\u00e7\u00e3o do couro/tecido.',
     icon: 'seats',
     eyebrow: 'Bancos',
   },
   {
-    title: 'Higienização de Carpete',
+    title: 'Higieniza\u00e7\u00e3o de Carpete',
     description:
-      'Extração profunda que restaura as fibras e elimina odores na base do veículo.',
+      'Extra\u00e7\u00e3o profunda que restaura as fibras e elimina odores na base do ve\u00edculo.',
     icon: 'carpet',
     eyebrow: 'Carpete',
   },
@@ -100,7 +100,7 @@ export const instagramPosts = [
   {
     id: '1',
     image: dirtyCarImage,
-    alt: 'Veículo coberto por barro passando por processo de lavagem detalhada.',
+    alt: 'Ve\u00edculo coberto por barro passando por processo de lavagem detalhada.',
     postUrl: siteConfig.instagramLink,
     className: 'object-center',
   },
@@ -108,7 +108,7 @@ export const instagramPosts = [
     id: '2',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy',
-    alt: 'Capô com reflexos intensos de estúdio, evidenciando acabamento premium.',
+    alt: 'Cap\u00f4 com reflexos intensos de est\u00fadio, evidenciando acabamento premium.',
     postUrl: siteConfig.instagramLink,
     className: '',
   },
@@ -131,7 +131,7 @@ export const instagramPosts = [
     id: '5',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN',
-    alt: 'Roda metálica detalhada com acabamento limpo e contraste alto.',
+    alt: 'Roda met\u00e1lica detalhada com acabamento limpo e contraste alto.',
     postUrl: siteConfig.instagramLink,
     className: '',
   },
@@ -139,7 +139,7 @@ export const instagramPosts = [
     id: '6',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ',
-    alt: 'Produtos de estética automotiva organizados em bancada premium.',
+    alt: 'Produtos de est\u00e9tica automotiva organizados em bancada premium.',
     postUrl: siteConfig.instagramLink,
     className: '',
   },
@@ -147,7 +147,7 @@ export const instagramPosts = [
     id: '7',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF',
-    alt: 'Lavagem técnica de carro clássico em ambiente escuro e controlado.',
+    alt: 'Lavagem t\u00e9cnica de carro cl\u00e1ssico em ambiente escuro e controlado.',
     postUrl: siteConfig.instagramLink,
     className: '',
   },
@@ -169,7 +169,7 @@ export const instagramPosts = [
 ]
 
 export const locationInfo = {
-  address: 'R. Ant\\u00f4nio Hor\\u00e1cio Pereira, 1485 - Lot. Ipanema, Catal\\u00e3o - GO, 75705-150',
+  address: 'R. Ant\u00f4nio Hor\u00e1cio Pereira, 1485 - Lot. Ipanema, Catal\u00e3o - GO, 75705-150',
   phoneLabel: 'WhatsApp: (64) 99616-1968',
   mapsLink: 'https://maps.app.goo.gl/9twSEgWic6k4YYyf7',
   embedUrl:
@@ -193,7 +193,7 @@ export const scheduleRows: ScheduleRow[] = [
   },
   {
     key: 'saturday',
-    label: 'Sábado',
+    label: 'S\u00e1bado',
     hours: '08:00 - 14:00',
     hoursRange: { start: 8 * 60, end: 14 * 60 },
   },
@@ -210,17 +210,15 @@ export const contactCards = [
   {
     type: 'whatsapp',
     title: 'WhatsApp',
-    description: 'Resposta imediata e agendamento rápido.',
-    buttonLabel: 'Faça um orçamento',
+    description: 'Resposta imediata e agendamento r\u00e1pido.',
+    buttonLabel: 'Fa\u00e7a um or\u00e7amento',
     href: siteConfig.whatsappLink,
   },
   {
     type: 'instagram',
     title: 'Instagram',
-    description: 'Veja nosso portfólio completo e tire suas dúvidas.',
+    description: 'Veja nosso portf\u00f3lio completo e tire suas d\u00favidas.',
     buttonLabel: 'Ir para o perfil',
     href: siteConfig.instagramLink,
   },
 ] as const
-
-
