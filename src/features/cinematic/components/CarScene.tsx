@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useRef, type MutableRefObject } from 'react'
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState, type MutableRefObject } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import {
   Environment,
@@ -44,6 +44,7 @@ type OpacityMaterial = THREE.Material & {
 let dirtyPaintTexture: THREE.CanvasTexture | null = null
 let dirtyGlassTexture: THREE.CanvasTexture | null = null
 let carShadowTexture: THREE.CanvasTexture | null = null
+let warmedModelFetch: Promise<unknown> | null = null
 
 export function CarScene({
   reducedMotion,
@@ -52,19 +53,38 @@ export function CarScene({
   sceneProgress,
   globalProgress,
 }: CarSceneProps) {
+  const [carReady, setCarReady] = useState(false)
+  const handleCarReady = useCallback(() => {
+    setCarReady(true)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || warmedModelFetch) {
+      return
+    }
+
+    warmedModelFetch = fetch(CLEAN_MODEL_URL, { cache: 'force-cache' }).catch(() => undefined)
+  }, [])
+
   if (reducedMotion) {
     return <StaticBackdrop />
   }
 
-  const lowerQuality = activeSection === 'horarios' || activeSection === 'contato' || activeSection === 'parceiros'
+  const lowerQuality = activeSection === 'contato' || activeSection === 'parceiros' || activeSection === 'instagram'
 
   return (
     <div
       className="pointer-events-none fixed inset-0 z-0"
       aria-hidden="true"
     >
+      <div
+        className={`absolute inset-0 z-[1] transition-opacity duration-700 ${carReady ? 'opacity-0' : 'opacity-100'}`}
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_52%,rgba(212,175,55,0.14),transparent_0_32%),linear-gradient(90deg,rgba(13,27,42,0.14)_0%,rgba(13,27,42,0)_52%)]" />
+        <div className="absolute right-[10vw] top-[30vh] h-[28vw] max-h-[360px] min-h-[180px] w-[44vw] max-w-[760px] min-w-[260px] rounded-[46%] bg-[radial-gradient(circle_at_50%_52%,rgba(212,175,55,0.22),rgba(212,175,55,0.08)_42%,transparent_72%)] blur-2xl" />
+      </div>
       <Canvas
-        dpr={lowerQuality ? [0.75, 1] : [0.85, 1]}
+        dpr={lowerQuality ? [0.7, 0.95] : [0.8, 1]}
         gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
         onCreated={({ gl }) => {
           gl.toneMapping = THREE.ACESFilmicToneMapping
@@ -84,6 +104,7 @@ export function CarScene({
             activeSceneId={activeSceneId}
             sceneProgress={sceneProgress}
             globalProgress={globalProgress}
+            onReady={handleCarReady}
           />
         </Suspense>
       </Canvas>
@@ -96,10 +117,12 @@ function CinematicRig({
   activeSceneId,
   sceneProgress,
   globalProgress,
+  onReady,
 }: {
   activeSceneId: SceneId
   sceneProgress: number
   globalProgress: number
+  onReady: () => void
 }) {
   const cleanGltf = useGLTF(CLEAN_MODEL_URL)
   const cleanGroupRef = useRef<THREE.Group>(null)
@@ -110,6 +133,7 @@ function CinematicRig({
   const sparkleRef = useRef<THREE.Sprite>(null)
   const smoothSceneProgress = useRef(sceneProgress)
   const smoothGlobalProgress = useRef(globalProgress)
+  const introReveal = useRef(0)
   const currentRotation = useRef(-0.62)
   const currentPosition = useRef(new THREE.Vector3(1.12, 0.02, -0.1))
   const targetPosition = useRef(new THREE.Vector3(1.12, 0.02, -0.1))
@@ -117,8 +141,13 @@ function CinematicRig({
   const cleanModel = usePreparedModel(cleanGltf.scene, 'clean')
   const dirtyModel = usePreparedModel(cleanGltf.scene, 'dirty')
   const { camera, pointer, viewport } = useThree()
+  const compactViewport = viewport.width < 9
   const climaxStartedAt = useRef<number | null>(null)
   const climaxPlayed = useRef(false)
+
+  useEffect(() => {
+    onReady()
+  }, [onReady])
 
   useEffect(() => {
     if (activeSceneId !== 'contato' || sceneProgress < 0.4 || climaxPlayed.current) {
@@ -129,7 +158,8 @@ function CinematicRig({
     climaxPlayed.current = true
   }, [activeSceneId, sceneProgress])
 
-  useFrame(() => {
+  useFrame((_, delta) => {
+    introReveal.current = THREE.MathUtils.damp(introReveal.current, 1, 4.2, delta)
     smoothSceneProgress.current += (sceneProgress - smoothSceneProgress.current) * 0.08
     smoothGlobalProgress.current += (globalProgress - smoothGlobalProgress.current) * 0.08
 
@@ -156,9 +186,12 @@ function CinematicRig({
     currentPosition.current.lerp(targetPosition.current, 0.08)
     currentFov.current += (targetFov - currentFov.current) * 0.08
 
-    const scale = viewport.width < 9 ? 1.28 : 2.04
-    const mobileOffsetX = viewport.width < 9 ? -0.58 : 0
-    const mobileOffsetY = viewport.width < 9 ? -0.02 : 0
+    const entranceEase = cinematicEase(introReveal.current)
+    const scale = compactViewport ? 1.28 : 2.04
+    const animatedScale = THREE.MathUtils.lerp(scale * 0.92, scale, entranceEase)
+    const mobileOffsetX = compactViewport ? -0.58 : 0
+    const mobileOffsetY = compactViewport ? -0.02 : 0
+    const entranceLift = (1 - entranceEase) * 0.14
 
     for (const group of [cleanGroupRef.current, dirtyGroupRef.current]) {
       if (!group) {
@@ -167,17 +200,27 @@ function CinematicRig({
 
       group.rotation.y += (currentRotation.current - group.rotation.y) * 0.08
       group.position.x += ((currentPosition.current.x + mobileOffsetX) - group.position.x) * 0.08
-      group.position.y += ((currentPosition.current.y + mobileOffsetY) - group.position.y) * 0.08
+      group.position.y += ((currentPosition.current.y + mobileOffsetY - entranceLift) - group.position.y) * 0.08
       group.position.z += (currentPosition.current.z - group.position.z) * 0.08
-      group.scale.setScalar(scale)
+      group.scale.setScalar(animatedScale)
     }
 
     if (shadowGroupRef.current) {
       shadowGroupRef.current.rotation.y += (currentRotation.current - shadowGroupRef.current.rotation.y) * 0.08
       shadowGroupRef.current.position.x += ((currentPosition.current.x + mobileOffsetX) - shadowGroupRef.current.position.x) * 0.08
-      shadowGroupRef.current.position.y += ((currentPosition.current.y + mobileOffsetY - 0.035) - shadowGroupRef.current.position.y) * 0.08
+      shadowGroupRef.current.position.y += ((currentPosition.current.y + mobileOffsetY - 0.035 - entranceLift * 0.6) - shadowGroupRef.current.position.y) * 0.08
       shadowGroupRef.current.position.z += (currentPosition.current.z - shadowGroupRef.current.position.z) * 0.08
-      shadowGroupRef.current.scale.setScalar(scale)
+      shadowGroupRef.current.scale.setScalar(animatedScale)
+
+      shadowGroupRef.current.children.forEach((child, index) => {
+        if (!(child instanceof THREE.Mesh)) {
+          return
+        }
+
+        const material = child.material as THREE.MeshBasicMaterial
+        const baseOpacity = index === 0 ? 0.58 : 0.34
+        material.opacity = baseOpacity * entranceEase
+      })
     }
 
     const perspectiveCamera = camera as THREE.PerspectiveCamera
@@ -197,8 +240,8 @@ function CinematicRig({
       cleanGroupRef.current.visible = true
     }
 
-    setGroupOpacity(dirtyModel, dirtyOpacity, false)
-    setGroupOpacity(cleanModel, 1, true)
+    setGroupOpacity(dirtyModel, dirtyOpacity * entranceEase, false)
+    setGroupOpacity(cleanModel, entranceEase, true)
 
     const now = performance.now()
     const climaxElapsed = climaxStartedAt.current === null ? 9999 : now - climaxStartedAt.current
@@ -210,13 +253,13 @@ function CinematicRig({
       : 0
 
     if (rimLightRef.current) {
-      rimLightRef.current.intensity = 0.8 + rimEnvelope * 9
+      rimLightRef.current.intensity = (0.8 + rimEnvelope * 9) * entranceEase
       rimLightRef.current.position.x = 2.8 - rimEnvelope * 5.2
       rimLightRef.current.position.y = 1.5 + rimEnvelope * 1.2
     }
 
     if (revealLightRef.current) {
-      revealLightRef.current.intensity = 0.35 + revealEnvelope * 5.8
+      revealLightRef.current.intensity = (0.35 + revealEnvelope * 5.8) * entranceEase
       revealLightRef.current.position.x = THREE.MathUtils.lerp(2.4, -2.8, cleanReveal)
       revealLightRef.current.position.y = 1.25 + revealEnvelope * 0.75
       revealLightRef.current.position.z = 1.45
@@ -224,7 +267,7 @@ function CinematicRig({
 
     if (sparkleRef.current) {
       const revealSparkle = revealEnvelope * 0.34
-      sparkleRef.current.material.opacity = Math.max(sparkleEnvelope, revealSparkle)
+      sparkleRef.current.material.opacity = Math.max(sparkleEnvelope, revealSparkle) * entranceEase
       sparkleRef.current.position.x = THREE.MathUtils.lerp(1.15, 0.28, cleanReveal)
       sparkleRef.current.position.y = 0.28 + revealEnvelope * 0.16
       sparkleRef.current.scale.setScalar(0.18 + rimEnvelope * 0.42 + revealEnvelope * 0.2)
@@ -294,7 +337,11 @@ function CinematicRig({
         <primitive object={cleanModel.scene} />
       </group>
 
-      <CinematicParticleField globalProgress={smoothGlobalProgress} pointer={pointer} />
+      <CinematicParticleField
+        globalProgress={smoothGlobalProgress}
+        pointer={pointer}
+        compactViewport={compactViewport}
+      />
 
       <sprite ref={sparkleRef} position={[0.84, 0.28, 0.92]} scale={0.18}>
         <spriteMaterial
@@ -312,12 +359,14 @@ function CinematicRig({
 function CinematicParticleField({
   globalProgress,
   pointer,
+  compactViewport,
 }: {
   globalProgress: MutableRefObject<number>
   pointer: THREE.Vector2
+  compactViewport: boolean
 }) {
   const pointsRef = useRef<THREE.Points>(null)
-  const particleCount = 240
+  const particleCount = compactViewport ? 96 : 240
   const positions = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const colors = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const seeds = useMemo(() => new Float32Array(particleCount), [particleCount])
@@ -345,6 +394,11 @@ function CinematicParticleField({
   }, [particleCount, positions, seeds])
 
   useFrame((state) => {
+    if (compactViewport && frameTick.current % 3 !== 0) {
+      frameTick.current += 1
+      return
+    }
+
     const progress = globalProgress.current
     const material = pointsRef.current?.material as THREE.PointsMaterial | undefined
     const geometry = pointsRef.current?.geometry
@@ -807,8 +861,8 @@ function setGroupOpacity(model: PreparedMeshGroup, opacity: number, keepDepthWri
 function LoadingMark() {
   return (
     <Html center>
-      <div className="border border-white/10 bg-brand-graphite/92 px-5 py-5 backdrop-blur-xl">
-        <img src={iconLogo} alt="" className="h-14 w-14 animate-pulse object-contain" />
+      <div className="rounded-2xl border border-white/10 bg-brand-graphite/88 px-5 py-5 shadow-[0_18px_40px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+        <img src={iconLogo} alt="" className="h-14 w-14 animate-pulse object-contain opacity-90" />
       </div>
     </Html>
   )

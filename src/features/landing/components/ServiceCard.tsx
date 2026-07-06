@@ -103,10 +103,14 @@ export function ServiceCard({
 
       <div className="mt-7 flex items-center gap-2 text-brand-gold">
         <Sparkles size={12} />
-        <span className="text-[10px] uppercase tracking-[0.28em]">{service.eyebrow}</span>
+        <span className="font-['Eurostile_Extended','Montserrat',sans-serif] text-[10px] uppercase tracking-[0.28em]">
+          {service.eyebrow}
+        </span>
       </div>
 
-      <h3 className="mt-4 text-[1.2rem] uppercase tracking-[0.12em] text-brand-white">{service.title}</h3>
+      <h3 className="mt-4 font-['Eurostile_Extended','Montserrat',sans-serif] text-[1.2rem] uppercase tracking-[0.12em] text-brand-white">
+        {service.title}
+      </h3>
       <p className="mt-4 text-sm leading-7 text-brand-silver">{service.description}</p>
     </motion.article>
   )

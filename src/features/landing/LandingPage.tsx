@@ -18,7 +18,6 @@ import {
   locationInfo,
   partnerLogos,
   productBrands,
-  scheduleRows,
   sectionLinks,
   services,
   siteConfig,
@@ -42,7 +41,6 @@ export function LandingPage() {
   const activeSection = useActiveSection([
     'hero',
     ...sectionLinks.map((link) => link.href.replace('#', '')),
-    'horarios',
     'contato',
     'parceiros',
   ])
@@ -93,11 +91,11 @@ export function LandingPage() {
             <img
               src={siteConfig.horizontalLogo}
               alt="Zelo Estética Automotiva"
-              className="h-9 w-auto md:h-10"
+              className="brand-mark brand-mark-header"
             />
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-8 font-['Eurostile_Extended','Montserrat',sans-serif] md:flex">
             {sectionLinks.map((link) => {
               const sectionId = link.href.replace('#', '')
               return (
@@ -253,7 +251,7 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section id="marcas" className="brand-scene-shell section-divider">
+        <section id="marcas" className="brand-scene-shell">
           <div className="brand-scene-content">
             <Reveal className="section-intro">
               <div className="eyebrow">PRODUTOS QUE UTILIZAMOS</div>
@@ -347,22 +345,6 @@ export function LandingPage() {
               </Reveal>
             </div>
 
-            <div id="horarios">
-              <Reveal className="section-intro">
-                <div className="eyebrow">HORARIO DE ATENDIMENTO</div>
-              </Reveal>
-
-              <Reveal className="hours-panel mt-10">
-                {scheduleRows.map((row) => (
-                  <div key={row.label} className="hours-row">
-                    <span className="hours-label">{row.label}</span>
-                    <span className={clsx('hours-value', row.closed && 'text-brand-gold')}>
-                      {row.hours}
-                    </span>
-                  </div>
-                ))}
-              </Reveal>
-            </div>
           </div>
         </section>
 
@@ -400,7 +382,7 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section id="parceiros" className="section-divider border-t border-white/10">
+        <section id="parceiros">
           <div className="section-shell partners-shell">
             <Reveal className="section-intro">
               <div className="eyebrow">PARCEIROS DA EMPRESA</div>
@@ -410,15 +392,15 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 bg-brand-graphite/92">
-        <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+      <footer className="relative z-10 border-t border-white/10 bg-brand-navy/72 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-[1400px] gap-6 px-5 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <div>
             <img
               src={siteConfig.horizontalLogo}
               alt="Zelo Estética Automotiva"
-              className="h-10 w-auto"
+              className="brand-mark brand-mark-footer"
             />
-            <p className="mt-6 max-w-md text-sm leading-7 text-brand-silver">
+            <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">
               Mais que limpeza. Cuidado.
             </p>
           </div>
@@ -436,7 +418,15 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 px-5 py-5 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
+        <div className="border-t border-white/10 px-5 py-6 text-center lg:px-8">
+          <p className="mx-auto max-w-4xl text-sm leading-7 text-brand-silver md:text-[15px]">
+            "Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja
+            honra e gl\u00f3ria para todo o sempre. Am\u00e9m."
+          </p>
+          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">1 Tim\u00f3teo 1:17</p>
+        </div>
+
+        <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-4 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
           © {new Date().getFullYear()} Zelo Estética Automotiva. Todos os direitos reservados.
         </div>
       </footer>

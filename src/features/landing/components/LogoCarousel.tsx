@@ -8,7 +8,8 @@ type LogoCarouselProps = {
 }
 
 export function LogoCarousel({ items, variant, className }: LogoCarouselProps) {
-  const repeatedItems = Array.from({ length: 8 }, () => items).flat()
+  const repeatedItems = Array.from({ length: variant === 'partners' ? 6 : 8 }, () => items).flat()
+  const showNames = variant === 'products'
 
   return (
     <div className={clsx('logo-marquee', `logo-marquee-${variant}`, className)} aria-label="Carrossel de logos">
@@ -18,10 +19,17 @@ export function LogoCarousel({ items, variant, className }: LogoCarouselProps) {
             key={`${item.name}-${index}`}
             className={clsx('logo-marquee__item', variant === 'partners' && 'logo-marquee__item-partner')}
           >
-            <span className="logo-marquee__logo">
+            <span
+              className={clsx(
+                'logo-marquee__logo',
+                item.style === 'partner' && 'logo-marquee__logo-partner',
+                item.style === 'product' && 'logo-marquee__logo-product',
+              )}
+              data-brand={item.name.toLowerCase()}
+            >
               <img src={item.logo} alt="" loading="lazy" />
             </span>
-            {variant === 'products' ? <span className="logo-marquee__name">{item.name}</span> : null}
+            {showNames ? <span className="logo-marquee__name">{item.name}</span> : null}
           </div>
         ))}
       </div>

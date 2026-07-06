@@ -3,10 +3,11 @@ import dirtyCarImage from '@assets/images/sujo.jpg'
 import horizontalLogo from '@assets/logos/zelo_horizontal_logo_png.png'
 import iconLogo from '@assets/logos/zelo_icon_png.png'
 import mainLogo from '@assets/logos/zelo_logo_png.png'
-import omnyatechLogo from '@assets/parceiros/omnyatech.svg'
+import omnyatechLogo from '@assets/parceiros/omnyatech.png'
 import skgLogo from '@assets/parceiros/skg.svg'
 import vintexLogo from '@assets/produtos/vintex.png'
 import vonixxLogo from '@assets/produtos/vonixx.png'
+import zacsLogo from '@assets/produtos/zacs.jpg'
 
 export const siteConfig = {
   horizontalLogo,
@@ -18,7 +19,7 @@ export const siteConfig = {
   instagramGraphUserId: import.meta.env.VITE_INSTAGRAM_GRAPH_USER_ID ?? '',
   instagramAccessToken: import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN ?? '',
   whatsappLink:
-    'https://wa.me/556496161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
+    'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
 }
 
 export const heroCopy = {
@@ -81,16 +82,18 @@ export const services: ServiceItem[] = [
 export type CarouselLogoItem = {
   name: string
   logo: string
+  style?: 'product' | 'partner'
 }
 
 export const productBrands: CarouselLogoItem[] = [
-  { name: 'Vonixx', logo: vonixxLogo },
-  { name: 'Vintex', logo: vintexLogo },
+  { name: 'Vonixx', logo: vonixxLogo, style: 'product' },
+  { name: 'Vintex', logo: vintexLogo, style: 'product' },
+  { name: 'Zacs', logo: zacsLogo, style: 'product' },
 ]
 
 export const partnerLogos: CarouselLogoItem[] = [
-  { name: 'OmnyaTech', logo: omnyatechLogo },
-  { name: 'SKG', logo: skgLogo },
+  { name: 'OmnyaTech', logo: omnyatechLogo, style: 'partner' },
+  { name: 'SKG', logo: skgLogo, style: 'partner' },
 ]
 
 export const instagramPosts = [
@@ -166,11 +169,11 @@ export const instagramPosts = [
 ]
 
 export const locationInfo = {
-  address: 'Atendimento com agendamento prévio. Use o mapa para abrir a rota da Zelo Estética Automotiva.',
-  phoneLabel: 'WhatsApp: +55 64 9616-1968',
-  mapsLink: 'https://www.google.com/maps/search/?api=1&query=Zelo%20Est%C3%A9tica%20Automotiva',
+  address: 'R. Ant\\u00f4nio Hor\\u00e1cio Pereira, 1485 - Lot. Ipanema, Catal\\u00e3o - GO, 75705-150',
+  phoneLabel: 'WhatsApp: (64) 99616-1968',
+  mapsLink: 'https://maps.app.goo.gl/9twSEgWic6k4YYyf7',
   embedUrl:
-    'https://www.google.com/maps?q=Zelo%20Est%C3%A9tica%20Automotiva&z=14&output=embed',
+    'https://www.google.com/maps?q=R.%20Ant%C3%B4nio%20Hor%C3%A1cio%20Pereira%2C%201485%20-%20Lot.%20Ipanema%2C%20Catal%C3%A3o%20-%20GO%2C%2075705-150&z=16&output=embed',
 }
 
 type ScheduleRow = {
@@ -219,3 +222,5 @@ export const contactCards = [
     href: siteConfig.instagramLink,
   },
 ] as const
+
+
