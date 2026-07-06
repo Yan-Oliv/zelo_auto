@@ -33,6 +33,25 @@ import { Reveal } from '@shared/components/Reveal'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
 
+const brandName = 'Zelo Est\u00e9tica Automotiva'
+const budgetLabel = 'Fa\u00e7a seu or\u00e7amento'
+const servicesLabel = 'Nossos servi\u00e7os'
+const serviceEyebrow = 'EXCEL\u00caNCIA EM CADA DETALHE'
+const serviceDescription =
+  'Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado que voc\u00ea tem pelo seu ve\u00edculo.'
+const instagramDescription = 'Siga-nos para ver as transforma\u00e7\u00f5es di\u00e1rias em nosso est\u00fadio.'
+const instagramLoading = 'Carregando \u00faltimas postagens...'
+const instagramError = 'N\u00e3o foi poss\u00edvel carregar o feed agora.'
+const instagramEmpty = 'Nenhuma publica\u00e7\u00e3o encontrada ainda.'
+const instagramPending =
+  'Perfil conectado. As \u00faltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'
+const mapTitle = 'Mapa Zelo Est\u00e9tica Automotiva'
+const contactDescription = 'Solicite seu or\u00e7amento personalizado agora mesmo.'
+const verse =
+  '"Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja honra e gl\u00f3ria para todo o sempre. Am\u00e9m."'
+const verseReference = '1 Tim\u00f3teo 1:17'
+const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reservados.'
+
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { reducedMotion } = useMotionSettings()
@@ -44,6 +63,7 @@ export function LandingPage() {
     'contato',
     'parceiros',
   ])
+
   useCinematicTimeline(true)
 
   const heroTextVisible = activeSceneId !== 'hero' || sceneProgress <= 0.15
@@ -88,11 +108,7 @@ export function LandingPage() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 lg:px-8">
           <a href="#hero" className="flex items-center gap-4">
-            <img
-              src={siteConfig.horizontalLogo}
-              alt="Zelo EstÃƒÂ©tica Automotiva"
-              className="brand-mark brand-mark-header"
-            />
+            <img src={siteConfig.horizontalLogo} alt={brandName} className="brand-mark brand-mark-header" />
           </a>
 
           <nav className="hidden items-center gap-8 font-['Eurostile_Extended','Montserrat',sans-serif] md:flex">
@@ -114,7 +130,7 @@ export function LandingPage() {
               )
             })}
             <a href={siteConfig.whatsappLink} className="button-primary text-[11px]">
-              FaÃƒÂ§a seu orÃƒÂ§amento
+              {budgetLabel}
             </a>
           </nav>
 
@@ -173,7 +189,7 @@ export function LandingPage() {
                 href={siteConfig.whatsappLink}
                 className="button-primary mt-10 justify-center text-center text-sm"
               >
-                FaÃƒÂ§a seu orÃƒÂ§amento
+                {budgetLabel}
               </a>
             </motion.div>
           </motion.div>
@@ -201,10 +217,10 @@ export function LandingPage() {
 
               <div className="hero-actions mt-10 flex flex-col gap-4 sm:flex-row">
                 <a href={siteConfig.whatsappLink} className="button-primary">
-                  FaÃƒÂ§a seu orÃƒÂ§amento
+                  {budgetLabel}
                 </a>
                 <a href="#servicos" className="button-secondary">
-                  Nossos serviÃƒÂ§os
+                  {servicesLabel}
                 </a>
               </div>
             </motion.div>
@@ -221,7 +237,7 @@ export function LandingPage() {
               }}
               className="inline-flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.36em] text-brand-silver"
             >
-              role a tela
+              {'role a tela'}
               <span className="inline-flex h-9 w-9 items-center justify-center border border-brand-gold/35 text-brand-gold">
                 <ArrowDown size={14} />
               </span>
@@ -231,11 +247,8 @@ export function LandingPage() {
 
         <section id="servicos" className="scene-shell scene-panel">
           <Reveal className="section-intro section-intro-wide">
-            <div className="eyebrow">EXCELÃƒÅ NCIA EM CADA DETALHE</div>
-            <p className="section-description mt-6">
-              Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado
-              que vocÃƒÂª tem pelo seu veÃƒÂ­culo.
-            </p>
+            <div className="eyebrow">{serviceEyebrow}</div>
+            <p className="section-description mt-6">{serviceDescription}</p>
           </Reveal>
 
           <div className="services-spotlight-grid mt-16">
@@ -264,9 +277,7 @@ export function LandingPage() {
           <div className="grid gap-14 xl:grid-cols-[0.34fr_0.66fr] xl:items-start">
             <Reveal className="section-intro">
               <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
-              <p className="section-description mt-6">
-                Siga-nos para ver as transformaÃƒÂ§ÃƒÂµes diÃƒÂ¡rias em nosso estÃƒÂºdio.
-              </p>
+              <p className="section-description mt-6">{instagramDescription}</p>
               <a
                 href={siteConfig.instagramLink}
                 className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-brand-gold"
@@ -303,15 +314,15 @@ export function LandingPage() {
                   <Camera size={26} />
                   <p>
                     {instagramFeed.loading
-                      ? 'Carregando ÃƒÂºltimas postagens...'
+                      ? instagramLoading
                       : instagramFeed.error
-                        ? 'NÃƒÂ£o foi possÃƒÂ­vel carregar o feed agora.'
+                        ? instagramError
                         : instagramFeed.configured
-                          ? 'Nenhuma publicaÃƒÂ§ÃƒÂ£o encontrada ainda.'
-                          : 'Perfil conectado. As ÃƒÂºltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'}
+                          ? instagramEmpty
+                          : instagramPending}
                   </p>
                   <a href={siteConfig.instagramLink} target="_blank" rel="noreferrer" className="button-secondary">
-                    Abrir Instagram
+                    {'Abrir Instagram'}
                   </a>
                 </div>
               )}
@@ -330,13 +341,13 @@ export function LandingPage() {
                   <InfoLine icon={<Camera size={16} />} value={siteConfig.instagramHandle} />
                 </div>
                 <a href={locationInfo.mapsLink} className="button-secondary mt-8">
-                  Como chegar
+                  {'Como chegar'}
                 </a>
               </Reveal>
 
               <Reveal className="map-frame">
                 <iframe
-                  title="Mapa Zelo EstÃƒÂ©tica Automotiva"
+                  title={mapTitle}
                   src={locationInfo.embedUrl}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -344,14 +355,13 @@ export function LandingPage() {
                 />
               </Reveal>
             </div>
-
           </div>
         </section>
 
         <section id="contato" className="scene-shell scene-panel">
           <Reveal className="section-intro">
             <div className="eyebrow">ENTRE EM CONTATO</div>
-            <p className="section-description mt-6">Solicite seu orÃƒÂ§amento personalizado agora mesmo.</p>
+            <p className="section-description mt-6">{contactDescription}</p>
           </Reveal>
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
@@ -395,14 +405,8 @@ export function LandingPage() {
       <footer className="relative z-10 border-t border-white/10 bg-brand-navy/72 backdrop-blur-xl">
         <div className="mx-auto grid max-w-[1400px] gap-6 px-5 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <div>
-            <img
-              src={siteConfig.horizontalLogo}
-              alt="Zelo EstÃƒÂ©tica Automotiva"
-              className="brand-mark brand-mark-footer"
-            />
-            <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">
-              Mais que limpeza. Cuidado.
-            </p>
+            <img src={siteConfig.horizontalLogo} alt={brandName} className="brand-mark brand-mark-footer" />
+            <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">{'Mais que limpeza. Cuidado.'}</p>
           </div>
 
           <div className="grid gap-3 md:justify-self-end md:text-right">
@@ -419,16 +423,12 @@ export function LandingPage() {
         </div>
 
         <div className="border-t border-white/10 px-5 py-6 text-center lg:px-8">
-          <p className="mx-auto max-w-4xl text-sm leading-7 text-brand-silver md:text-[15px]">
-            {'\"Ora, ao Rei dos séculos, imortal, invisível, ao Deus único, sábio, seja honra e glória para todo o sempre. Amém.\"'}
-          </p>
-          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">
-            {'1 Timóteo 1:17'}
-          </p>
+          <p className="mx-auto max-w-4xl text-sm leading-7 text-brand-silver md:text-[15px]">{verse}</p>
+          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">{verseReference}</p>
         </div>
 
         <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-4 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
-          {'©'} {new Date().getFullYear()} {'Zelo Estética Automotiva. Todos os direitos reservados.'}
+          {'©'} {new Date().getFullYear()} {copyrightNotice}
         </div>
       </footer>
       <DevMotionToggle />
