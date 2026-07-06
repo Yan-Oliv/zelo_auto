@@ -90,7 +90,7 @@ export function LandingPage() {
           <a href="#hero" className="flex items-center gap-4">
             <img
               src={siteConfig.horizontalLogo}
-              alt="Zelo Estética Automotiva"
+              alt="Zelo EstÃƒÂ©tica Automotiva"
               className="brand-mark brand-mark-header"
             />
           </a>
@@ -114,7 +114,7 @@ export function LandingPage() {
               )
             })}
             <a href={siteConfig.whatsappLink} className="button-primary text-[11px]">
-              Faça seu orçamento
+              FaÃƒÂ§a seu orÃƒÂ§amento
             </a>
           </nav>
 
@@ -173,7 +173,7 @@ export function LandingPage() {
                 href={siteConfig.whatsappLink}
                 className="button-primary mt-10 justify-center text-center text-sm"
               >
-                Faça seu orçamento
+                FaÃƒÂ§a seu orÃƒÂ§amento
               </a>
             </motion.div>
           </motion.div>
@@ -201,10 +201,10 @@ export function LandingPage() {
 
               <div className="hero-actions mt-10 flex flex-col gap-4 sm:flex-row">
                 <a href={siteConfig.whatsappLink} className="button-primary">
-                  Faça seu orçamento
+                  FaÃƒÂ§a seu orÃƒÂ§amento
                 </a>
                 <a href="#servicos" className="button-secondary">
-                  Nossos serviços
+                  Nossos serviÃƒÂ§os
                 </a>
               </div>
             </motion.div>
@@ -231,10 +231,10 @@ export function LandingPage() {
 
         <section id="servicos" className="scene-shell scene-panel">
           <Reveal className="section-intro section-intro-wide">
-            <div className="eyebrow">EXCELÊNCIA EM CADA DETALHE</div>
+            <div className="eyebrow">EXCELÃƒÅ NCIA EM CADA DETALHE</div>
             <p className="section-description mt-6">
               Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado
-              que você tem pelo seu veículo.
+              que vocÃƒÂª tem pelo seu veÃƒÂ­culo.
             </p>
           </Reveal>
 
@@ -265,7 +265,7 @@ export function LandingPage() {
             <Reveal className="section-intro">
               <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
               <p className="section-description mt-6">
-                Siga-nos para ver as transformações diárias em nosso estúdio.
+                Siga-nos para ver as transformaÃƒÂ§ÃƒÂµes diÃƒÂ¡rias em nosso estÃƒÂºdio.
               </p>
               <a
                 href={siteConfig.instagramLink}
@@ -303,12 +303,12 @@ export function LandingPage() {
                   <Camera size={26} />
                   <p>
                     {instagramFeed.loading
-                      ? 'Carregando últimas postagens...'
+                      ? 'Carregando ÃƒÂºltimas postagens...'
                       : instagramFeed.error
-                        ? 'Não foi possível carregar o feed agora.'
+                        ? 'NÃƒÂ£o foi possÃƒÂ­vel carregar o feed agora.'
                         : instagramFeed.configured
-                          ? 'Nenhuma publicação encontrada ainda.'
-                          : 'Perfil conectado. As últimas postagens aparecem aqui assim que o feed oficial estiver configurado.'}
+                          ? 'Nenhuma publicaÃƒÂ§ÃƒÂ£o encontrada ainda.'
+                          : 'Perfil conectado. As ÃƒÂºltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'}
                   </p>
                   <a href={siteConfig.instagramLink} target="_blank" rel="noreferrer" className="button-secondary">
                     Abrir Instagram
@@ -336,7 +336,7 @@ export function LandingPage() {
 
               <Reveal className="map-frame">
                 <iframe
-                  title="Mapa Zelo Estética Automotiva"
+                  title="Mapa Zelo EstÃƒÂ©tica Automotiva"
                   src={locationInfo.embedUrl}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -351,7 +351,7 @@ export function LandingPage() {
         <section id="contato" className="scene-shell scene-panel">
           <Reveal className="section-intro">
             <div className="eyebrow">ENTRE EM CONTATO</div>
-            <p className="section-description mt-6">Solicite seu orçamento personalizado agora mesmo.</p>
+            <p className="section-description mt-6">Solicite seu orÃƒÂ§amento personalizado agora mesmo.</p>
           </Reveal>
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
@@ -397,7 +397,7 @@ export function LandingPage() {
           <div>
             <img
               src={siteConfig.horizontalLogo}
-              alt="Zelo Estética Automotiva"
+              alt="Zelo EstÃƒÂ©tica Automotiva"
               className="brand-mark brand-mark-footer"
             />
             <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">
@@ -420,14 +420,15 @@ export function LandingPage() {
 
         <div className="border-t border-white/10 px-5 py-6 text-center lg:px-8">
           <p className="mx-auto max-w-4xl text-sm leading-7 text-brand-silver md:text-[15px]">
-            "Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja
-            honra e gl\u00f3ria para todo o sempre. Am\u00e9m."
+            {'\"Ora, ao Rei dos séculos, imortal, invisível, ao Deus único, sábio, seja honra e glória para todo o sempre. Amém.\"'}
           </p>
-          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">1 Tim\u00f3teo 1:17</p>
+          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">
+            {'1 Timóteo 1:17'}
+          </p>
         </div>
 
         <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-4 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
-          © {new Date().getFullYear()} Zelo Estética Automotiva. Todos os direitos reservados.
+          {'©'} {new Date().getFullYear()} {'Zelo Estética Automotiva. Todos os direitos reservados.'}
         </div>
       </footer>
       <DevMotionToggle />
