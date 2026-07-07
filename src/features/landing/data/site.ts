@@ -21,14 +21,14 @@ export const siteConfig = {
 }
 
 export const heroCopy = {
-  title: 'SEU CARRO MERECE MAIS QUE UM BALDE E UMA ESPONJA.',
+  titleLines: ['Seu carro merece', 'mais que um balde', 'e uma esponja'],
   description:
-    'Seu carro conta uma hist\u00f3ria sobre voc\u00ea antes mesmo de voc\u00ea abrir a boca. Est\u00e9tica automotiva premium para carros e motos — t\u00e9cnica de showroom, produtos de alta performance, e o tipo de acabamento que faz as pessoas olharem duas vezes.',
+    'Seu carro conta uma hist\u00f3ria sobre voc\u00ea antes mesmo de voc\u00ea abrir a boca. Est\u00e9tica automotiva premium para carros e motos - t\u00e9cnica de showroom, produtos de alta performance, e o tipo de acabamento que faz as pessoas olharem duas vezes.',
 }
 
 export const instagramCopy = {
   description:
-    'Antes e depois n\u00e3o \u00e9 s\u00f3 marketing — \u00e9 o que a gente faz todo dia. Veja de perto o que a t\u00e9cnica certa \u00e9 capaz de fazer.',
+    'Antes e depois n\u00e3o \u00e9 s\u00f3 marketing - \u00e9 o que a gente faz todo dia. Veja de perto o que a t\u00e9cnica certa \u00e9 capaz de fazer.',
 }
 
 export const contactSectionCopy = {

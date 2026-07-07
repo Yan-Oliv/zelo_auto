@@ -30,7 +30,6 @@ import { useInstagramFeed } from './hooks/useInstagramFeed'
 import { CarScene } from '@features/cinematic/components/CarScene'
 import { useCinematicState } from '@features/cinematic/context/CinematicContext'
 import { useCinematicTimeline } from '@features/cinematic/hooks/useCinematicTimeline'
-import { DevMotionToggle } from '@shared/components/DevMotionToggle'
 import { Reveal } from '@shared/components/Reveal'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
@@ -239,7 +238,13 @@ export function LandingPage() {
               className="hero-copy"
             >
               <div className="eyebrow">SHOWROOM DE CUIDADO AUTOMOTIVO</div>
-              <h1 className="hero-title mt-5">{heroCopy.title}</h1>
+              <h1 className="hero-title mt-5">
+                {heroCopy.titleLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </h1>
               <p className="hero-description mt-5">
                 {heroCopy.description}
               </p>
@@ -434,14 +439,14 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 bg-brand-navy/72 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-[1400px] gap-6 px-5 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+      <footer className="relative z-10 border-t border-white/10 bg-brand-navy/70 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-[1400px] gap-4 px-5 py-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
           <div>
             <img src={siteConfig.horizontalLogo} alt={brandName} className="brand-mark brand-mark-footer" />
-            <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">{'Mais que limpeza. Cuidado.'}</p>
+            <p className="mt-2 max-w-md text-sm leading-6 text-brand-silver">{'Mais que limpeza. Cuidado.'}</p>
           </div>
 
-          <div className="grid gap-3 md:justify-self-end md:text-right">
+          <div className="grid gap-2 md:justify-self-end md:text-right">
             {footerLinks.map((link) => (
               <a
                 key={link.href}
@@ -454,17 +459,16 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 px-5 py-6 text-center lg:px-8">
-          <p className="mx-auto max-w-4xl text-sm leading-7 text-brand-silver md:text-[15px]">{verse}</p>
-          <p className="mt-3 text-[11px] uppercase tracking-[0.24em] text-brand-gold">{verseReference}</p>
+        <div className="border-t border-white/10 px-5 py-4 text-center lg:px-8">
+          <p className="mx-auto max-w-4xl text-sm leading-6 text-brand-silver md:text-[15px]">{verse}</p>
+          <p className="mt-2 text-[11px] uppercase tracking-[0.24em] text-brand-gold">{verseReference}</p>
         </div>
 
-        <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-4 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
-          {'©'} {new Date().getFullYear()} {copyrightNotice}
+        <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-2.5 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
+          {String.fromCharCode(169)} {new Date().getFullYear()} {copyrightNotice}
         </div>
       </footer>
       </div>
-      {sceneReady ? <DevMotionToggle /> : null}
     </div>
   )
 }
