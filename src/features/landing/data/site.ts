@@ -1,13 +1,15 @@
-import civicImage from '@assets/images/civic.jpg'
-import dirtyCarImage from '@assets/images/sujo.jpg'
-import horizontalLogo from '@assets/logos/zelo_horizontal_logo_png.png'
-import iconLogo from '@assets/logos/zelo_icon_png.png'
-import mainLogo from '@assets/logos/zelo_logo_png.png'
+import horizontalLogo from '@assets/logos/zelo_horizontal_logo_png_optimized.png'
+import iconLogo from '@assets/logos/zelo_icon_png_optimized.png'
+import mainLogo from '@assets/logos/zelo_logo_png_optimized.png'
 import omnyatechLogo from '@assets/parceiros/omnyatech.png'
 import skgLogo from '@assets/parceiros/skg.svg'
 import vintexLogo from '@assets/produtos/vintex.png'
 import vonixxLogo from '@assets/produtos/vonixx.png'
 import zacsLogo from '@assets/produtos/zacs.jpg'
+
+const dirtyCarImage = '/models/lincoln-dirty-preview.png'
+const civicImage =
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn'
 
 export const siteConfig = {
   horizontalLogo,
@@ -15,7 +17,7 @@ export const siteConfig = {
   mainLogo,
   instagramHandle: '@zelo_autoestetica',
   instagramLink: 'https://www.instagram.com/zelo_autoestetica/',
-  instagramFeedEndpoint: import.meta.env.VITE_INSTAGRAM_FEED_ENDPOINT ?? '',
+  instagramFeedEndpoint: import.meta.env.VITE_INSTAGRAM_FEED_ENDPOINT?.trim() || null,
   whatsappLink:
     'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
 }

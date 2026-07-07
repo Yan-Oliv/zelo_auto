@@ -8,7 +8,8 @@ type LogoCarouselProps = {
 }
 
 export function LogoCarousel({ items, variant, className }: LogoCarouselProps) {
-  const repeatedItems = Array.from({ length: variant === 'partners' ? 6 : 8 }, () => items).flat()
+  const repeatCount = variant === 'partners' ? 8 : 6
+  const repeatedItems = Array.from({ length: repeatCount }, () => items).flat()
   const showNames = variant === 'products'
 
   return (
@@ -18,6 +19,7 @@ export function LogoCarousel({ items, variant, className }: LogoCarouselProps) {
           <div
             key={`${item.name}-${index}`}
             className={clsx('logo-marquee__item', variant === 'partners' && 'logo-marquee__item-partner')}
+            aria-hidden={index >= items.length}
           >
             <span
               className={clsx(
@@ -27,7 +29,7 @@ export function LogoCarousel({ items, variant, className }: LogoCarouselProps) {
               )}
               data-brand={item.name.toLowerCase()}
             >
-              <img src={item.logo} alt="" loading="lazy" />
+              <img src={item.logo} alt="" loading="lazy" decoding="async" />
             </span>
             {showNames ? <span className="logo-marquee__name">{item.name}</span> : null}
           </div>

@@ -167,6 +167,17 @@ function CinematicRig({
   }, [onReady])
 
   useEffect(() => {
+    const readyTimer = window.setTimeout(() => {
+      if (!readyNotified.current) {
+        readyNotified.current = true
+        onReady()
+      }
+    }, 650)
+
+    return () => window.clearTimeout(readyTimer)
+  }, [cleanGltf.scene, onReady])
+
+  useEffect(() => {
     if (activeSceneId !== 'contato' || sceneProgress < 0.4 || climaxPlayed.current) {
       return
     }
@@ -243,8 +254,11 @@ function CinematicRig({
     }
 
     const perspectiveCamera = camera as THREE.PerspectiveCamera
-    perspectiveCamera.fov += (currentFov.current - perspectiveCamera.fov) * motionSmoothing
-    perspectiveCamera.updateProjectionMatrix()
+    const nextFov = perspectiveCamera.fov + (currentFov.current - perspectiveCamera.fov) * motionSmoothing
+    if (Math.abs(nextFov - perspectiveCamera.fov) > 0.001) {
+      perspectiveCamera.fov = nextFov
+      perspectiveCamera.updateProjectionMatrix()
+    }
 
     const dirtyOpacity = Math.max(0, 1 - cleanReveal)
     const revealEnvelope = dirtProgress > 0.04 && dirtProgress < 0.98
@@ -393,7 +407,7 @@ function CinematicParticleField({
   compactViewport: boolean
 }) {
   const pointsRef = useRef<THREE.Points>(null)
-  const particleCount = compactViewport ? 96 : 240
+  const particleCount = compactViewport ? 72 : 180
   const positions = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const colors = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const seeds = useMemo(() => new Float32Array(particleCount), [particleCount])
@@ -695,8 +709,8 @@ function getDirtyPaintTexture() {
   }
 
   const canvas = document.createElement('canvas')
-  canvas.width = 768
-  canvas.height = 512
+  canvas.width = 384
+  canvas.height = 256
   const context = canvas.getContext('2d')
 
   if (!context) {
@@ -707,7 +721,7 @@ function getDirtyPaintTexture() {
   context.fillStyle = '#c6a06b'
   context.fillRect(0, 0, canvas.width, canvas.height)
 
-  for (let index = 0; index < 5200; index += 1) {
+  for (let index = 0; index < 1700; index += 1) {
     const x = Math.random() * canvas.width
     const y = Math.random() * canvas.height
     const radius = 0.45 + Math.random() * 2.8
@@ -720,7 +734,7 @@ function getDirtyPaintTexture() {
     context.fill()
   }
 
-  for (let index = 0; index < 54; index += 1) {
+  for (let index = 0; index < 26; index += 1) {
     const x = Math.random() * canvas.width
     const y = Math.random() * canvas.height * 0.62
     const length = 46 + Math.random() * 170
@@ -752,8 +766,8 @@ function getDirtyGlassTexture() {
   }
 
   const canvas = document.createElement('canvas')
-  canvas.width = 512
-  canvas.height = 512
+  canvas.width = 256
+  canvas.height = 256
   const context = canvas.getContext('2d')
 
   if (!context) {
@@ -768,7 +782,7 @@ function getDirtyGlassTexture() {
   context.fillStyle = baseGradient
   context.fillRect(0, 0, canvas.width, canvas.height)
 
-  for (let index = 0; index < 2600; index += 1) {
+  for (let index = 0; index < 900; index += 1) {
     const x = Math.random() * canvas.width
     const y = Math.random() * canvas.height
     const radius = 0.35 + Math.random() * 2.2
@@ -781,7 +795,7 @@ function getDirtyGlassTexture() {
     context.fill()
   }
 
-  for (let index = 0; index < 34; index += 1) {
+  for (let index = 0; index < 18; index += 1) {
     const x = Math.random() * canvas.width
     const y = Math.random() * canvas.height * 0.28
     const length = 72 + Math.random() * 210

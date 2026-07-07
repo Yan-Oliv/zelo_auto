@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { siteConfig } from '../data/site'
+import { instagramPosts, siteConfig } from '../data/site'
 
 export type InstagramFeedPost = {
   id: string
@@ -62,12 +62,20 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
 }
 
 export function useInstagramFeed() {
-  const [posts, setPosts] = useState<InstagramFeedPost[]>([])
+  const feedUrl = siteConfig.instagramFeedEndpoint
+  const [posts, setPosts] = useState<InstagramFeedPost[]>(instagramPosts)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const feedUrl = siteConfig.instagramFeedEndpoint || '/api/instagram-feed'
+    if (!feedUrl) {
+      setPosts(instagramPosts)
+      setLoading(false)
+      setError(null)
+      return
+    }
+
+    const currentFeedUrl = feedUrl
     const controller = new AbortController()
 
     async function loadFeed() {
@@ -75,16 +83,18 @@ export function useInstagramFeed() {
       setError(null)
 
       try {
-        const response = await fetch(feedUrl, { signal: controller.signal })
+        const response = await fetch(currentFeedUrl, { signal: controller.signal })
         const payload = (await response.json()) as FeedResponse
 
         if (!response.ok) {
           throw new Error(payload.error?.message ?? `Instagram feed returned ${response.status}`)
         }
 
-        setPosts(normalizePosts(payload))
+        const normalizedPosts = normalizePosts(payload)
+        setPosts(normalizedPosts.length > 0 ? normalizedPosts : instagramPosts)
       } catch (feedError) {
         if (!controller.signal.aborted) {
+          setPosts(instagramPosts)
           setError(feedError instanceof Error ? feedError.message : 'Instagram feed unavailable')
         }
       } finally {
@@ -99,12 +109,12 @@ export function useInstagramFeed() {
     return () => {
       controller.abort()
     }
-  }, [])
+  }, [feedUrl])
 
   return {
     posts,
     loading,
     error,
-    configured: true,
+    configured: Boolean(feedUrl),
   }
 }

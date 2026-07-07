@@ -45,6 +45,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -135,6 +136,8 @@ body {
 
   .section-shell {
     @apply mx-auto max-w-[1400px] px-5 py-28 lg:px-8;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 540px;
   }
 
   .section-divider {
@@ -311,6 +314,11 @@ body {
   .service-card:hover {
     border-color: rgba(212, 175, 55, 0.46);
     box-shadow: 0 24px 48px rgba(212, 175, 55, 0.08);
+  }
+
+  .service-card[data-focused='true'] {
+    border-color: rgba(212, 175, 55, 0.52);
+    box-shadow: 0 20px 42px rgba(212, 175, 55, 0.12);
   }
 
   .service-card::before {
@@ -667,7 +675,6 @@ body {
   }
 
   .hero-copy,
-  .service-card,
   .contact-card,
   .instagram-tile img {
     will-change: transform, opacity;

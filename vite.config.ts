@@ -67,4 +67,23 @@ export default defineConfig(({ mode }) => ({
       '@shared': fileURLToPath(new URL('./src/shared', import.meta.url)),
     },
   },
+  build: {
+    modulePreload: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/three') || id.includes('@react-three')) {
+            return 'three'
+          }
+          if (id.includes('node_modules/framer-motion')) {
+            return 'motion'
+          }
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react'
+          }
+          return undefined
+        },
+      },
+    },
+  },
 }))

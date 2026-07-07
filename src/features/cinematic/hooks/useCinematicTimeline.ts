@@ -1,10 +1,6 @@
 import { useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { cinematicScenes } from '../data/cinematicKeyframes'
 import { useSetCinematicState } from '../context/CinematicContext'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export function useCinematicTimeline(enabled: boolean) {
   const setSceneState = useSetCinematicState()
@@ -14,34 +10,64 @@ export function useCinematicTimeline(enabled: boolean) {
       return
     }
 
-    const triggers = cinematicScenes
-      .map((scene) => {
-        const triggerElement = document.getElementById(scene.triggerId)
+    let frameId = 0
 
-        if (!triggerElement) {
-          return null
-        }
+    const updateSceneState = () => {
+      frameId = 0
 
-        return ScrollTrigger.create({
-          trigger: triggerElement,
-          pin: true,
-          scrub: true,
-          start: 'top top',
-          end: () => `+=${window.innerHeight * (scene.pinDurationVh / 100)}`,
-          invalidateOnRefresh: true,
-          onEnter: () => setSceneState(scene.id, 0),
-          onEnterBack: () => setSceneState(scene.id, 1),
-          onUpdate: (self) => {
-            setSceneState(scene.id, self.progress)
-          },
+      const viewportHeight = window.innerHeight
+      const viewportCenter = window.scrollY + viewportHeight * 0.5
+      const sceneMetrics = cinematicScenes
+        .map((scene) => {
+          const element = document.getElementById(scene.triggerId)
+
+          if (!element) {
+            return null
+          }
+
+          const rect = element.getBoundingClientRect()
+          const top = window.scrollY + rect.top
+          const height = Math.max(element.offsetHeight, viewportHeight * 0.92)
+          const start = scene.id === 'hero' ? top : top - viewportHeight * 0.6
+          const end = top + height - viewportHeight * 0.35
+          const progress = clamp((window.scrollY - start) / Math.max(1, end - start))
+          const center = top + height * 0.5
+
+          return {
+            id: scene.id,
+            progress,
+            distance: Math.abs(center - viewportCenter),
+          }
         })
-      })
-      .filter((trigger): trigger is ScrollTrigger => Boolean(trigger))
+        .filter((scene): scene is { id: typeof cinematicScenes[number]['id']; progress: number; distance: number } => Boolean(scene))
 
-    ScrollTrigger.refresh()
+      const activeScene = sceneMetrics.sort((left, right) => left.distance - right.distance)[0]
+
+      if (activeScene) {
+        setSceneState(activeScene.id, activeScene.progress)
+      }
+    }
+
+    const requestUpdate = () => {
+      if (!frameId) {
+        frameId = window.requestAnimationFrame(updateSceneState)
+      }
+    }
+
+    requestUpdate()
+    window.addEventListener('scroll', requestUpdate, { passive: true })
+    window.addEventListener('resize', requestUpdate)
 
     return () => {
-      triggers.forEach((trigger) => trigger.kill())
+      if (frameId) {
+        window.cancelAnimationFrame(frameId)
+      }
+      window.removeEventListener('scroll', requestUpdate)
+      window.removeEventListener('resize', requestUpdate)
     }
   }, [enabled, setSceneState])
+}
+
+function clamp(value: number) {
+  return Math.max(0, Math.min(1, value))
 }

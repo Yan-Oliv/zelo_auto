@@ -23,15 +23,8 @@ export function ServiceCard({
 }) {
   const Icon = iconMap[service.icon]
   const { reducedMotion } = useMotionSettings()
-  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1440
-  const focusScale = viewportWidth < 768
-    ? 0.96 + focus * 0.1
-    : viewportWidth < 1280
-      ? 0.94 + focus * 0.16
-      : 0.94 + focus * 0.22
+  const focusScale = reducedMotion ? 1 : 0.98 + focus * 0.06
   const focusOpacity = 0.72 + focus * 0.28
-  const focusBorder = 0.2 + focus * 0.52
-  const focusGlow = focus * 0.22
   const cleaningSweep = `${-28 + focus * 118}%`
   const residueOpacity = reducedMotion ? 0.08 : 0.2 * (1 - focus)
   const foamOpacity = reducedMotion ? 0 : focus * 0.46
@@ -48,10 +41,8 @@ export function ServiceCard({
       data-service={service.icon}
       data-focused={focused}
       animate={{
-        scale: reducedMotion ? 1 : focusScale,
+        scale: focusScale,
         opacity: focusOpacity,
-        borderColor: `rgba(212, 175, 55, ${focusBorder})`,
-        boxShadow: `0 22px 54px rgba(212, 175, 55, ${focusGlow})`,
       }}
       style={{ zIndex: focused ? 2 : 1 }}
     >

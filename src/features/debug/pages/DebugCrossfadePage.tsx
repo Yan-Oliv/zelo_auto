@@ -8,7 +8,7 @@ import {
   useGLTF,
 } from '@react-three/drei'
 import * as THREE from 'three'
-import iconLogo from '@assets/logos/zelo_icon_png.png'
+import iconLogo from '@assets/logos/zelo_icon_png_optimized.png'
 
 const CLEAN_MODEL_URL = '/models/lincoln.glb'
 const DIRTY_MODEL_URL = '/models/lincoln-dirty.glb'

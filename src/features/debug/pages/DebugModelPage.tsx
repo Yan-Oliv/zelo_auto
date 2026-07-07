@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Html, OrbitControls, PerspectiveCamera, useGLTF } from '@react-three/drei'
-import iconLogo from '@assets/logos/zelo_icon_png.png'
+import iconLogo from '@assets/logos/zelo_icon_png_optimized.png'
 
 const MODEL_URL = '/models/lincoln.glb'
 

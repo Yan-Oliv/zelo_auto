@@ -1,4 +1,4 @@
-import { Suspense, useMemo, useState, type ReactNode } from 'react'
+import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react'
 import {
   ArrowDown,
   ArrowUpRight,
@@ -51,12 +51,17 @@ const verse =
   '"Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja honra e gl\u00f3ria para todo o sempre. Am\u00e9m."'
 const verseReference = '1 Tim\u00f3teo 1:17'
 const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reservados.'
+const transparentPixel =
+  'data:image/gif;base64,R0lGODlhAQABAAAAACw='
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [sceneReady, setSceneReady] = useState(false)
+  const [loadingGateReleased, setLoadingGateReleased] = useState(false)
+  const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
   const instagramFeed = useInstagramFeed()
+  const instagramSectionNear = useNearViewport(instagramRef, '1100px')
   const { activeSceneId, sceneProgress, globalProgress } = useCinematicState()
   const activeSection = useActiveSection([
     'hero',
@@ -64,8 +69,19 @@ export function LandingPage() {
     'contato',
     'parceiros',
   ])
+  const instagramImagesReady = instagramSectionNear || activeSection === 'instagram'
 
   useCinematicTimeline(true)
+
+  useEffect(() => {
+    if (sceneReady) {
+      setLoadingGateReleased(true)
+      return
+    }
+
+    const releaseTimer = window.setTimeout(() => setLoadingGateReleased(true), 1200)
+    return () => window.clearTimeout(releaseTimer)
+  }, [sceneReady])
 
   const heroTextVisible = activeSceneId !== 'hero' || sceneProgress <= 0.15
   const contactActive = activeSceneId === 'contato' && sceneProgress >= 0.38
@@ -88,7 +104,7 @@ export function LandingPage() {
   }, [activeSceneId, sceneProgress])
 
   return (
-    <div className={clsx('min-h-screen bg-brand-navy text-brand-white', !sceneReady && 'h-screen overflow-hidden')}>
+    <div className="min-h-screen bg-brand-navy text-brand-white">
       <Suspense fallback={null}>
         <CarScene
           reducedMotion={reducedMotion}
@@ -103,9 +119,9 @@ export function LandingPage() {
       <div
         className={clsx(
           'pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-brand-navy transition-opacity duration-700',
-          sceneReady ? 'invisible opacity-0' : 'visible opacity-100',
+          loadingGateReleased ? 'invisible opacity-0' : 'visible opacity-100',
         )}
-        aria-hidden={sceneReady}
+        aria-hidden={loadingGateReleased}
       >
         <div className="flex flex-col items-center gap-5 px-6 text-center">
           <img src={siteConfig.mainLogo} alt={brandName} className="brand-mark brand-mark-loader" />
@@ -120,12 +136,7 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div
-        className={clsx(
-          'transition-opacity duration-700',
-          sceneReady ? 'visible opacity-100' : 'pointer-events-none invisible opacity-0',
-        )}
-      >
+      <div className="transition-opacity duration-700">
         <header
         className={clsx(
           'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
@@ -136,7 +147,14 @@ export function LandingPage() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 lg:px-8">
           <a href="#hero" className="flex items-center gap-4">
-            <img src={siteConfig.mainLogo} alt={brandName} className="brand-mark brand-mark-header" />
+            <img
+              src={siteConfig.mainLogo}
+              alt={brandName}
+              className="brand-mark brand-mark-header"
+              width={888}
+              height={334}
+              fetchPriority="high"
+            />
           </a>
 
           <nav className="hidden items-center gap-8 font-['Eurostile_Extended','Montserrat',sans-serif] md:flex">
@@ -189,7 +207,7 @@ export function LandingPage() {
               className="ml-auto flex h-full w-[84%] max-w-sm flex-col border-l border-white/10 bg-brand-graphite px-6 pb-10 pt-6"
             >
               <div className="mb-12 flex items-center justify-between">
-                <img src={siteConfig.iconLogo} alt="" className="h-11 w-11 object-contain" />
+                <img src={siteConfig.iconLogo} alt="" className="h-11 w-11 object-contain" width={150} height={140} />
                 <button
                   type="button"
                   aria-label="Fechar menu"
@@ -307,7 +325,7 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section id="instagram" className="scene-shell scene-panel">
+        <section id="instagram" ref={instagramRef} className="scene-shell scene-panel">
           <div className="grid gap-14 xl:grid-cols-[0.34fr_0.66fr] xl:items-start">
             <Reveal className="section-intro">
               <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
@@ -333,9 +351,15 @@ export function LandingPage() {
                       className="instagram-tile"
                     >
                       <img
-                        src={post.image}
+                        key={`${post.id}-${instagramImagesReady ? 'image' : 'placeholder'}`}
+                        src={instagramImagesReady ? post.image : transparentPixel}
+                        data-src={post.image}
                         alt={post.alt}
                         className={clsx('h-full w-full object-cover', post.className)}
+                        width={800}
+                        height={800}
+                        loading={instagramImagesReady ? 'eager' : 'lazy'}
+                        decoding="async"
                       />
                       <span className="instagram-overlay">
                         <Camera size={16} />
@@ -442,7 +466,15 @@ export function LandingPage() {
       <footer className="relative z-10 border-t border-white/10 bg-brand-navy/70 backdrop-blur-xl">
         <div className="mx-auto grid max-w-[1400px] gap-4 px-5 py-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
           <div>
-            <img src={siteConfig.horizontalLogo} alt={brandName} className="brand-mark brand-mark-footer" />
+            <img
+              src={siteConfig.horizontalLogo}
+              alt={brandName}
+              className="brand-mark brand-mark-footer"
+              width={573}
+              height={127}
+              loading="lazy"
+              decoding="async"
+            />
             <p className="mt-2 max-w-md text-sm leading-6 text-brand-silver">{'Mais que limpeza. Cuidado.'}</p>
           </div>
 
@@ -488,4 +520,35 @@ function InfoLine({
       <div className="text-sm leading-7 text-brand-white">{value}</div>
     </div>
   )
+}
+
+function useNearViewport<T extends Element>(ref: RefObject<T | null>, rootMargin: string) {
+  const [isNear, setIsNear] = useState(false)
+
+  useEffect(() => {
+    if (isNear) {
+      return
+    }
+
+    const element = ref.current
+    if (!element || typeof IntersectionObserver === 'undefined') {
+      setIsNear(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setIsNear(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin },
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [isNear, ref, rootMargin])
+
+  return isNear
 }
