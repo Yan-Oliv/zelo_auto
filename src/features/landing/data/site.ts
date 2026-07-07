@@ -16,16 +16,25 @@ export const siteConfig = {
   instagramHandle: '@zelo_autoestetica',
   instagramLink: 'https://www.instagram.com/zelo_autoestetica/',
   instagramFeedEndpoint: import.meta.env.VITE_INSTAGRAM_FEED_ENDPOINT ?? '',
-  instagramGraphUserId: import.meta.env.VITE_INSTAGRAM_GRAPH_USER_ID ?? '',
-  instagramAccessToken: import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN ?? '',
   whatsappLink:
     'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
 }
 
 export const heroCopy = {
-  title: 'MAIS QUE LIMPEZA. CUIDADO.',
+  title: 'SEU CARRO MERECE MAIS QUE UM BALDE E UMA ESPONJA.',
   description:
-    'Est\u00e9tica automotiva premium para carros e motos. T\u00e9cnica, produtos de alta performance e aten\u00e7\u00e3o a cada detalhe do seu ve\u00edculo.',
+    'Seu carro conta uma hist\u00f3ria sobre voc\u00ea antes mesmo de voc\u00ea abrir a boca. Est\u00e9tica automotiva premium para carros e motos — t\u00e9cnica de showroom, produtos de alta performance, e o tipo de acabamento que faz as pessoas olharem duas vezes.',
+}
+
+export const instagramCopy = {
+  description:
+    'Antes e depois n\u00e3o \u00e9 s\u00f3 marketing — \u00e9 o que a gente faz todo dia. Veja de perto o que a t\u00e9cnica certa \u00e9 capaz de fazer.',
+}
+
+export const contactSectionCopy = {
+  headline: 'SEU CARRO J\u00c1 SABE QUE PRECISA DISSO.',
+  description:
+    'Poucos minutos separam o carro que voc\u00ea tem do carro que voc\u00ea queria ter. Fale com a gente agora.',
 }
 
 export const sectionLinks = [
@@ -210,14 +219,14 @@ export const contactCards = [
   {
     type: 'whatsapp',
     title: 'WhatsApp',
-    description: 'Resposta imediata e agendamento r\u00e1pido.',
+    description: 'Sem enrola\u00e7\u00e3o: resposta r\u00e1pida, hor\u00e1rio marcado, or\u00e7amento claro.',
     buttonLabel: 'Fa\u00e7a um or\u00e7amento',
     href: siteConfig.whatsappLink,
   },
   {
     type: 'instagram',
     title: 'Instagram',
-    description: 'Veja nosso portf\u00f3lio completo e tire suas d\u00favidas.',
+    description: 'Quer ver o trabalho antes de decidir? Nosso perfil \u00e9 a prova.',
     buttonLabel: 'Ir para o perfil',
     href: siteConfig.instagramLink,
   },

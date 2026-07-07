@@ -22,11 +22,18 @@ type RawInstagramPost = {
   mediaType?: string
 }
 
+type FeedResponse = {
+  data?: unknown
+  error?: {
+    message?: string
+  }
+}
+
 function normalizePosts(payload: unknown): InstagramFeedPost[] {
   const rawItems = Array.isArray(payload)
     ? payload
     : typeof payload === 'object' && payload !== null && 'data' in payload
-      ? (payload as { data?: unknown }).data
+      ? (payload as FeedResponse).data
       : []
 
   if (!Array.isArray(rawItems)) {
@@ -36,12 +43,7 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
   return rawItems
     .map((item, index) => {
       const post = item as RawInstagramPost
-      const image =
-        post.media_url ??
-        post.mediaUrl ??
-        post.thumbnail_url ??
-        post.thumbnailUrl ??
-        ''
+      const image = post.media_url ?? post.mediaUrl ?? post.thumbnail_url ?? post.thumbnailUrl ?? ''
 
       if (!image) {
         return null
@@ -59,30 +61,13 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
     .slice(0, 9)
 }
 
-function buildGraphUrl() {
-  if (!siteConfig.instagramGraphUserId || !siteConfig.instagramAccessToken) {
-    return ''
-  }
-
-  const url = new URL(`https://graph.facebook.com/v23.0/${siteConfig.instagramGraphUserId}/media`)
-  url.searchParams.set('fields', 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp')
-  url.searchParams.set('limit', '9')
-  url.searchParams.set('access_token', siteConfig.instagramAccessToken)
-  return url.toString()
-}
-
 export function useInstagramFeed() {
   const [posts, setPosts] = useState<InstagramFeedPost[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const feedUrl = siteConfig.instagramFeedEndpoint || buildGraphUrl()
-
-    if (!feedUrl) {
-      return
-    }
-
+    const feedUrl = siteConfig.instagramFeedEndpoint || '/api/instagram-feed'
     const controller = new AbortController()
 
     async function loadFeed() {
@@ -91,12 +76,12 @@ export function useInstagramFeed() {
 
       try {
         const response = await fetch(feedUrl, { signal: controller.signal })
+        const payload = (await response.json()) as FeedResponse
 
         if (!response.ok) {
-          throw new Error(`Instagram feed returned ${response.status}`)
+          throw new Error(payload.error?.message ?? `Instagram feed returned ${response.status}`)
         }
 
-        const payload = await response.json()
         setPosts(normalizePosts(payload))
       } catch (feedError) {
         if (!controller.signal.aborted) {
@@ -120,6 +105,6 @@ export function useInstagramFeed() {
     posts,
     loading,
     error,
-    configured: Boolean(siteConfig.instagramFeedEndpoint || buildGraphUrl()),
+    configured: true,
   }
 }

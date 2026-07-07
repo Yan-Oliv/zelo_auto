@@ -13,8 +13,10 @@ import { AnimatePresence, motion } from 'framer-motion'
 import clsx from 'clsx'
 import {
   contactCards,
+  contactSectionCopy,
   footerLinks,
   heroCopy,
+  instagramCopy,
   locationInfo,
   partnerLogos,
   productBrands,
@@ -39,14 +41,13 @@ const servicesLabel = 'Nossos servi\u00e7os'
 const serviceEyebrow = 'EXCEL\u00caNCIA EM CADA DETALHE'
 const serviceDescription =
   'Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado que voc\u00ea tem pelo seu ve\u00edculo.'
-const instagramDescription = 'Siga-nos para ver as transforma\u00e7\u00f5es di\u00e1rias em nosso est\u00fadio.'
 const instagramLoading = 'Carregando \u00faltimas postagens...'
 const instagramError = 'N\u00e3o foi poss\u00edvel carregar o feed agora.'
 const instagramEmpty = 'Nenhuma publica\u00e7\u00e3o encontrada ainda.'
 const instagramPending =
   'Perfil conectado. As \u00faltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'
 const mapTitle = 'Mapa Zelo Est\u00e9tica Automotiva'
-const contactDescription = 'Solicite seu or\u00e7amento personalizado agora mesmo.'
+const loadingExperienceLabel = 'Preparando a experi\u00eancia 3D'
 const verse =
   '"Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja honra e gl\u00f3ria para todo o sempre. Am\u00e9m."'
 const verseReference = '1 Tim\u00f3teo 1:17'
@@ -54,6 +55,7 @@ const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reserv
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [sceneReady, setSceneReady] = useState(false)
   const { reducedMotion } = useMotionSettings()
   const instagramFeed = useInstagramFeed()
   const { activeSceneId, sceneProgress, globalProgress } = useCinematicState()
@@ -87,18 +89,45 @@ export function LandingPage() {
   }, [activeSceneId, sceneProgress])
 
   return (
-    <div className="min-h-screen bg-brand-navy text-brand-white">
+    <div className={clsx('min-h-screen bg-brand-navy text-brand-white', !sceneReady && 'h-screen overflow-hidden')}>
       <Suspense fallback={null}>
         <CarScene
-          reducedMotion={false}
+          reducedMotion={reducedMotion}
           activeSection={activeSection}
           activeSceneId={activeSceneId}
           sceneProgress={sceneProgress}
           globalProgress={globalProgress}
+          onReadyChange={setSceneReady}
         />
       </Suspense>
 
-      <header
+      <div
+        className={clsx(
+          'pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-brand-navy transition-opacity duration-700',
+          sceneReady ? 'invisible opacity-0' : 'visible opacity-100',
+        )}
+        aria-hidden={sceneReady}
+      >
+        <div className="flex flex-col items-center gap-5 px-6 text-center">
+          <img src={siteConfig.mainLogo} alt={brandName} className="brand-mark brand-mark-loader" />
+          <div className="h-[2px] w-28 overflow-hidden rounded-full bg-white/8">
+            <motion.div
+              className="h-full w-1/2 bg-brand-gold"
+              animate={{ x: ['-100%', '220%'] }}
+              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.2, ease: 'easeInOut' }}
+            />
+          </div>
+          <p className="max-w-sm text-[11px] uppercase tracking-[0.28em] text-brand-silver">{loadingExperienceLabel}</p>
+        </div>
+      </div>
+
+      <div
+        className={clsx(
+          'transition-opacity duration-700',
+          sceneReady ? 'visible opacity-100' : 'pointer-events-none invisible opacity-0',
+        )}
+      >
+        <header
         className={clsx(
           'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
           globalProgress > 0.02
@@ -108,7 +137,7 @@ export function LandingPage() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 lg:px-8">
           <a href="#hero" className="flex items-center gap-4">
-            <img src={siteConfig.horizontalLogo} alt={brandName} className="brand-mark brand-mark-header" />
+            <img src={siteConfig.mainLogo} alt={brandName} className="brand-mark brand-mark-header" />
           </a>
 
           <nav className="hidden items-center gap-8 font-['Eurostile_Extended','Montserrat',sans-serif] md:flex">
@@ -143,10 +172,10 @@ export function LandingPage() {
             <Menu size={18} />
           </button>
         </div>
-      </header>
+        </header>
 
       <AnimatePresence>
-        {menuOpen ? (
+        {sceneReady && menuOpen ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -210,12 +239,12 @@ export function LandingPage() {
               className="hero-copy"
             >
               <div className="eyebrow">SHOWROOM DE CUIDADO AUTOMOTIVO</div>
-              <h1 className="hero-title mt-6">{heroCopy.title}</h1>
-              <p className="mt-6 max-w-[34rem] text-base leading-8 text-brand-silver md:text-lg">
+              <h1 className="hero-title mt-5">{heroCopy.title}</h1>
+              <p className="hero-description mt-5">
                 {heroCopy.description}
               </p>
 
-              <div className="hero-actions mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="hero-actions mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href={siteConfig.whatsappLink} className="button-primary">
                   {budgetLabel}
                 </a>
@@ -277,7 +306,7 @@ export function LandingPage() {
           <div className="grid gap-14 xl:grid-cols-[0.34fr_0.66fr] xl:items-start">
             <Reveal className="section-intro">
               <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
-              <p className="section-description mt-6">{instagramDescription}</p>
+              <p className="section-description mt-6">{instagramCopy.description}</p>
               <a
                 href={siteConfig.instagramLink}
                 className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-brand-gold"
@@ -361,7 +390,10 @@ export function LandingPage() {
         <section id="contato" className="scene-shell scene-panel">
           <Reveal className="section-intro">
             <div className="eyebrow">ENTRE EM CONTATO</div>
-            <p className="section-description mt-6">{contactDescription}</p>
+            <h2 className="mt-5 font-['Eurostile_Extended','Montserrat',sans-serif] text-[2rem] uppercase leading-[0.98] tracking-[0.08em] text-brand-white md:text-[2.65rem]">
+              {contactSectionCopy.headline}
+            </h2>
+            <p className="section-description mt-6">{contactSectionCopy.description}</p>
           </Reveal>
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
@@ -431,7 +463,8 @@ export function LandingPage() {
           {'©'} {new Date().getFullYear()} {copyrightNotice}
         </div>
       </footer>
-      <DevMotionToggle />
+      </div>
+      {sceneReady ? <DevMotionToggle /> : null}
     </div>
   )
 }
