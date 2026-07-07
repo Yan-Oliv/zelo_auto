@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zelo-auto.pages.dev/sitemap.xml
