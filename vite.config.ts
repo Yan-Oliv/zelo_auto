@@ -13,10 +13,10 @@ function instagramFeedDevPlugin(mode: string): Plugin {
       end: (body: string) => void
     },
   ) => {
-    const userId = env.VITE_INSTAGRAM_GRAPH_USER_ID?.trim()
-    const accessToken = env.VITE_INSTAGRAM_ACCESS_TOKEN?.trim()
+    const userId = (env.INSTAGRAM_GRAPH_USER_ID ?? env.VITE_INSTAGRAM_GRAPH_USER_ID)?.trim()
+    const accessToken = (env.INSTAGRAM_ACCESS_TOKEN ?? env.VITE_INSTAGRAM_ACCESS_TOKEN)?.trim()
 
-    if (!userId || !accessToken) {
+    if (!accessToken) {
       res.statusCode = 500
       res.setHeader('Content-Type', 'application/json; charset=utf-8')
       res.end(JSON.stringify({ error: 'Instagram feed is not configured.' }))
@@ -24,8 +24,11 @@ function instagramFeedDevPlugin(mode: string): Plugin {
     }
 
     try {
-      const upstreamUrl = new URL(`https://graph.facebook.com/v23.0/${userId}/media`)
-      upstreamUrl.searchParams.set('fields', 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp')
+      const upstreamUrl = new URL(`https://graph.instagram.com/${userId ? `${userId}/media` : 'me/media'}`)
+      upstreamUrl.searchParams.set(
+        'fields',
+        'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,children{media_type,media_url,thumbnail_url}',
+      )
       upstreamUrl.searchParams.set('limit', '9')
       upstreamUrl.searchParams.set('access_token', accessToken)
 

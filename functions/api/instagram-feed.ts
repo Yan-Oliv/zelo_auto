@@ -1,9 +1,12 @@
 type Env = {
+  INSTAGRAM_GRAPH_USER_ID?: string
+  INSTAGRAM_ACCESS_TOKEN?: string
   VITE_INSTAGRAM_GRAPH_USER_ID?: string
   VITE_INSTAGRAM_ACCESS_TOKEN?: string
 }
 
-const INSTAGRAM_FIELDS = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp'
+const INSTAGRAM_FIELDS =
+  'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,children{media_type,media_url,thumbnail_url}'
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -16,14 +19,14 @@ function json(body: unknown, status = 200) {
 }
 
 export const onRequestGet: PagesFunction<Env> = async ({ env, request }) => {
-  const userId = env.VITE_INSTAGRAM_GRAPH_USER_ID?.trim()
-  const accessToken = env.VITE_INSTAGRAM_ACCESS_TOKEN?.trim()
+  const userId = (env.INSTAGRAM_GRAPH_USER_ID ?? env.VITE_INSTAGRAM_GRAPH_USER_ID)?.trim()
+  const accessToken = (env.INSTAGRAM_ACCESS_TOKEN ?? env.VITE_INSTAGRAM_ACCESS_TOKEN)?.trim()
 
-  if (!userId || !accessToken) {
+  if (!accessToken) {
     return json({ error: 'Instagram feed is not configured.' }, 500)
   }
 
-  const upstreamUrl = new URL(`https://graph.facebook.com/v23.0/${userId}/media`)
+  const upstreamUrl = new URL(`https://graph.instagram.com/${userId ? `${userId}/media` : 'me/media'}`)
   upstreamUrl.searchParams.set('fields', INSTAGRAM_FIELDS)
   upstreamUrl.searchParams.set('limit', '9')
   upstreamUrl.searchParams.set('access_token', accessToken)

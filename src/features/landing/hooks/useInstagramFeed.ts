@@ -20,6 +20,18 @@ type RawInstagramPost = {
   postUrl?: string
   media_type?: string
   mediaType?: string
+  children?: {
+    data?: RawInstagramChild[]
+  }
+}
+
+type RawInstagramChild = {
+  media_url?: string
+  mediaUrl?: string
+  thumbnail_url?: string
+  thumbnailUrl?: string
+  media_type?: string
+  mediaType?: string
 }
 
 type FeedResponse = {
@@ -43,7 +55,20 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
   return rawItems
     .map((item, index) => {
       const post = item as RawInstagramPost
-      const image = post.media_url ?? post.mediaUrl ?? post.thumbnail_url ?? post.thumbnailUrl ?? ''
+      const child = post.children?.data?.find(
+        (childPost) => childPost.media_url ?? childPost.mediaUrl ?? childPost.thumbnail_url ?? childPost.thumbnailUrl,
+      )
+      const image =
+        post.media_url ??
+        post.mediaUrl ??
+        post.thumbnail_url ??
+        post.thumbnailUrl ??
+        child?.media_url ??
+        child?.mediaUrl ??
+        child?.thumbnail_url ??
+        child?.thumbnailUrl ??
+        ''
+      const mediaType = post.media_type ?? post.mediaType ?? child?.media_type ?? child?.mediaType
 
       if (!image) {
         return null
@@ -54,7 +79,7 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
         image,
         alt: post.caption?.slice(0, 140) ?? `Post ${index + 1} da Zelo no Instagram.`,
         postUrl: post.permalink ?? post.postUrl ?? siteConfig.instagramLink,
-        className: post.media_type === 'VIDEO' || post.mediaType === 'VIDEO' ? 'object-center' : '',
+        className: mediaType === 'VIDEO' ? 'object-center' : '',
       }
     })
     .filter((post): post is InstagramFeedPost => post !== null)
