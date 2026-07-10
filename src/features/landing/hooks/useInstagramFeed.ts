@@ -26,6 +26,7 @@ type RawInstagramPost = {
 }
 
 type RawInstagramChild = {
+  id?: string
   media_url?: string
   mediaUrl?: string
   thumbnail_url?: string
@@ -53,36 +54,53 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
   }
 
   return rawItems
-    .map((item, index) => {
+    .flatMap((item, index) => {
       const post = item as RawInstagramPost
-      const child = post.children?.data?.find(
-        (childPost) => childPost.media_url ?? childPost.mediaUrl ?? childPost.thumbnail_url ?? childPost.thumbnailUrl,
-      )
-      const image =
+      const postUrl = post.permalink ?? post.postUrl ?? siteConfig.instagramLink
+      const alt = post.caption?.slice(0, 140) ?? `Post ${index + 1} da Zelo no Instagram.`
+      const parentImage =
         post.media_url ??
         post.mediaUrl ??
         post.thumbnail_url ??
         post.thumbnailUrl ??
-        child?.media_url ??
-        child?.mediaUrl ??
-        child?.thumbnail_url ??
-        child?.thumbnailUrl ??
         ''
-      const mediaType = post.media_type ?? post.mediaType ?? child?.media_type ?? child?.mediaType
+      const parentMediaType = post.media_type ?? post.mediaType
+      const children = post.children?.data ?? []
+      const childTiles = children
+        .map((childPost, childIndex) => {
+          const childImage =
+            childPost.media_url ?? childPost.mediaUrl ?? childPost.thumbnail_url ?? childPost.thumbnailUrl ?? ''
 
-      if (!image) {
-        return null
+          if (!childImage) {
+            return null
+          }
+
+          return {
+            id: `${post.id ?? `instagram-post-${index}`}-${childPost.id ?? childIndex}`,
+            image: childImage,
+            alt,
+            postUrl,
+            className: (childPost.media_type ?? childPost.mediaType) === 'VIDEO' ? 'object-center' : '',
+          }
+        })
+        .filter((childPost): childPost is InstagramFeedPost => childPost !== null)
+
+      if (parentMediaType === 'CAROUSEL_ALBUM' && childTiles.length > 0) {
+        return childTiles
+      }
+
+      if (!parentImage) {
+        return childTiles
       }
 
       return {
         id: post.id ?? `instagram-post-${index}`,
-        image,
-        alt: post.caption?.slice(0, 140) ?? `Post ${index + 1} da Zelo no Instagram.`,
-        postUrl: post.permalink ?? post.postUrl ?? siteConfig.instagramLink,
-        className: mediaType === 'VIDEO' ? 'object-center' : '',
+        image: parentImage,
+        alt,
+        postUrl,
+        className: parentMediaType === 'VIDEO' ? 'object-center' : '',
       }
     })
-    .filter((post): post is InstagramFeedPost => post !== null)
     .slice(0, 9)
 }
 
