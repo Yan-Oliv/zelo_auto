@@ -42,6 +42,29 @@ type FeedResponse = {
   }
 }
 
+function getMediaType(mediaType?: string) {
+  return mediaType?.toUpperCase()
+}
+
+function getDisplayImage(media: {
+  media_url?: string
+  mediaUrl?: string
+  thumbnail_url?: string
+  thumbnailUrl?: string
+  media_type?: string
+  mediaType?: string
+}) {
+  const mediaType = getMediaType(media.media_type ?? media.mediaType)
+  const mediaUrl = media.media_url ?? media.mediaUrl ?? ''
+  const thumbnailUrl = media.thumbnail_url ?? media.thumbnailUrl ?? ''
+
+  if (mediaType === 'VIDEO') {
+    return thumbnailUrl || mediaUrl
+  }
+
+  return mediaUrl || thumbnailUrl
+}
+
 function normalizePosts(payload: unknown): InstagramFeedPost[] {
   const rawItems = Array.isArray(payload)
     ? payload
@@ -58,18 +81,13 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
       const post = item as RawInstagramPost
       const postUrl = post.permalink ?? post.postUrl ?? siteConfig.instagramLink
       const alt = post.caption?.slice(0, 140) ?? `Post ${index + 1} da Zelo no Instagram.`
-      const parentImage =
-        post.media_url ??
-        post.mediaUrl ??
-        post.thumbnail_url ??
-        post.thumbnailUrl ??
-        ''
-      const parentMediaType = post.media_type ?? post.mediaType
+      const parentMediaType = getMediaType(post.media_type ?? post.mediaType)
+      const parentImage = getDisplayImage(post)
       const children = post.children?.data ?? []
       const childTiles = children
         .map((childPost, childIndex) => {
-          const childImage =
-            childPost.media_url ?? childPost.mediaUrl ?? childPost.thumbnail_url ?? childPost.thumbnailUrl ?? ''
+          const childMediaType = getMediaType(childPost.media_type ?? childPost.mediaType)
+          const childImage = getDisplayImage(childPost)
 
           if (!childImage) {
             return null
@@ -80,7 +98,7 @@ function normalizePosts(payload: unknown): InstagramFeedPost[] {
             image: childImage,
             alt,
             postUrl,
-            className: (childPost.media_type ?? childPost.mediaType) === 'VIDEO' ? 'object-center' : '',
+            className: childMediaType === 'VIDEO' ? 'object-center' : '',
           }
         })
         .filter((childPost): childPost is InstagramFeedPost => childPost !== null)

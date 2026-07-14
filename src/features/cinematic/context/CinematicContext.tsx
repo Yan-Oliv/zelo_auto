@@ -49,10 +49,20 @@ export function CinematicProvider({ children }: { children: ReactNode }) {
       Math.min(1, sceneOffsets[sceneId] + sceneWeights[sceneId] * clampedSceneProgress),
     )
 
-    setState({
-      activeSceneId: sceneId,
-      sceneProgress: clampedSceneProgress,
-      globalProgress,
+    setState((currentState) => {
+      if (
+        currentState.activeSceneId === sceneId &&
+        Math.abs(currentState.sceneProgress - clampedSceneProgress) < 0.001 &&
+        Math.abs(currentState.globalProgress - globalProgress) < 0.001
+      ) {
+        return currentState
+      }
+
+      return {
+        activeSceneId: sceneId,
+        sceneProgress: clampedSceneProgress,
+        globalProgress,
+      }
     })
   }, [])
 

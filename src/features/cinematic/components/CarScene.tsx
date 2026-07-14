@@ -67,11 +67,29 @@ export function CarScene({
   }, [onReadyChange])
 
   useEffect(() => {
-    if (assetsLoading || progress < 100) {
+    if (!carReady && (assetsLoading || progress < 100)) {
       setCarReady(false)
       onReadyChange?.(false)
     }
-  }, [assetsLoading, onReadyChange, progress])
+  }, [assetsLoading, carReady, onReadyChange, progress])
+
+  useEffect(() => {
+    if (carReady || assetsLoading || progress < 100) {
+      return
+    }
+
+    let firstFrame = 0
+    let secondFrame = 0
+
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(handleCarReady)
+    })
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame)
+      window.cancelAnimationFrame(secondFrame)
+    }
+  }, [assetsLoading, carReady, handleCarReady, progress])
 
   useEffect(() => {
     if (typeof window === 'undefined' || warmedModelFetch) {
@@ -95,6 +113,7 @@ export function CarScene({
         <div className="absolute right-[10vw] top-[30vh] h-[28vw] max-h-[360px] min-h-[180px] w-[44vw] max-w-[760px] min-w-[260px] rounded-[46%] bg-[radial-gradient(circle_at_50%_52%,rgba(212,175,55,0.22),rgba(212,175,55,0.08)_42%,transparent_72%)] blur-2xl" />
       </div>
       <Canvas
+        frameloop="demand"
         dpr={lowerQuality ? [0.7, 0.95] : [0.8, 1]}
         gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
         onCreated={({ gl }) => {
@@ -154,7 +173,7 @@ function CinematicRig({
   const currentFov = useRef(34)
   const cleanModel = usePreparedModel(cleanGltf.scene, 'clean')
   const dirtyModel = usePreparedModel(cleanGltf.scene, 'dirty')
-  const { camera, pointer, viewport } = useThree()
+  const { camera, invalidate, viewport } = useThree()
   const compactViewport = viewport.width < 9
   const climaxStartedAt = useRef<number | null>(null)
   const climaxPlayed = useRef(false)
@@ -167,15 +186,28 @@ function CinematicRig({
   }, [onReady])
 
   useEffect(() => {
-    const readyTimer = window.setTimeout(() => {
-      if (!readyNotified.current) {
-        readyNotified.current = true
-        onReady()
-      }
-    }, 650)
+    invalidate()
+  }, [activeSceneId, cleanGltf.scene, globalProgress, invalidate, sceneProgress])
 
-    return () => window.clearTimeout(readyTimer)
-  }, [cleanGltf.scene, onReady])
+  useEffect(() => {
+    let firstFrame = 0
+    let secondFrame = 0
+
+    firstFrame = window.requestAnimationFrame(() => {
+      invalidate()
+      secondFrame = window.requestAnimationFrame(() => {
+        if (!readyNotified.current) {
+          readyNotified.current = true
+          onReady()
+        }
+      })
+    })
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame)
+      window.cancelAnimationFrame(secondFrame)
+    }
+  }, [cleanGltf.scene, invalidate, onReady])
 
   useEffect(() => {
     if (activeSceneId !== 'contato' || sceneProgress < 0.4 || climaxPlayed.current) {
@@ -274,7 +306,9 @@ function CinematicRig({
     }
 
     setGroupOpacity(dirtyModel, dirtyOpacity * entranceEase, false)
-    setGroupOpacity(cleanModel, entranceEase, true)
+    if (entranceEase < 0.995 || cleanModel.lastOpacity < 0.995) {
+      setGroupOpacity(cleanModel, entranceEase, true)
+    }
 
     const now = performance.now()
     const climaxElapsed = climaxStartedAt.current === null ? 9999 : now - climaxStartedAt.current
@@ -312,6 +346,18 @@ function CinematicRig({
         readyNotified.current = true
         onReady()
       }
+    }
+
+    const isSettled =
+      Math.abs(sceneProgress - smoothSceneProgress.current) < 0.0015 &&
+      Math.abs(globalProgress - smoothGlobalProgress.current) < 0.0015 &&
+      Math.abs(targetRotation - currentRotation.current) < 0.0015 &&
+      currentPosition.current.distanceToSquared(targetPosition.current) < 0.000004 &&
+      Math.abs(targetFov - currentFov.current) < 0.003 &&
+      introReveal.current > 0.995
+
+    if (!isSettled) {
+      invalidate()
     }
   })
 
@@ -380,7 +426,6 @@ function CinematicRig({
 
       <CinematicParticleField
         globalProgress={smoothGlobalProgress}
-        pointer={pointer}
         compactViewport={compactViewport}
       />
 
@@ -399,33 +444,23 @@ function CinematicRig({
 
 function CinematicParticleField({
   globalProgress,
-  pointer,
   compactViewport,
 }: {
   globalProgress: MutableRefObject<number>
-  pointer: THREE.Vector2
   compactViewport: boolean
 }) {
   const pointsRef = useRef<THREE.Points>(null)
-  const particleCount = compactViewport ? 72 : 180
+  const particleCount = compactViewport ? 42 : 96
   const positions = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const colors = useMemo(() => new Float32Array(particleCount * 3), [particleCount])
   const seeds = useMemo(() => new Float32Array(particleCount), [particleCount])
-  const pointerLocal = useMemo(() => new THREE.Vector3(99, 99, 99), [])
-  const particleOrigin = useMemo(() => new THREE.Vector3(0.98, 0.42, 0.72), [])
-  const pointerNear = useMemo(() => new THREE.Vector3(), [])
-  const pointerFar = useMemo(() => new THREE.Vector3(), [])
-  const rayDirection = useMemo(() => new THREE.Vector3(), [])
   const frameTick = useRef(0)
+  const elapsedTime = useRef(0)
   const dustColor = useMemo(() => new THREE.Color('#C59A61'), [])
   const foamColor = useMemo(() => new THREE.Color('#DDE8EA'), [])
   const dropColor = useMemo(() => new THREE.Color('#D7C7A4'), [])
   const colorScratch = useMemo(() => new THREE.Color(), [])
-  const pointerFine = useMemo(
-    () => typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches,
-    [],
-  )
-  const { camera } = useThree()
+  const { invalidate } = useThree()
 
   useMemo(() => {
     for (let index = 0; index < particleCount; index += 1) {
@@ -434,12 +469,8 @@ function CinematicParticleField({
     }
   }, [particleCount, positions, seeds])
 
-  useFrame((state) => {
-    if (compactViewport && frameTick.current % 3 !== 0) {
-      frameTick.current += 1
-      return
-    }
-
+  useFrame((_, delta) => {
+    elapsedTime.current += delta
     const progress = globalProgress.current
     const material = pointsRef.current?.material as THREE.PointsMaterial | undefined
     const geometry = pointsRef.current?.geometry
@@ -455,45 +486,13 @@ function CinematicParticleField({
     const updateColors = frameTick.current % 3 === 0
     frameTick.current += 1
 
-    const hasPointer = pointerFine && (Math.abs(pointer.x) > 0.001 || Math.abs(pointer.y) > 0.001)
-
-    if (hasPointer) {
-      pointerNear.set(pointer.x, pointer.y, -1).unproject(camera)
-      pointerFar.set(pointer.x, pointer.y, 1).unproject(camera)
-      rayDirection.subVectors(pointerFar, pointerNear)
-
-      const distanceToParticlePlane = 0.72 - pointerNear.z
-      const rayLengthOnZ = rayDirection.z || 1
-      const rayT = distanceToParticlePlane / rayLengthOnZ
-
-      pointerLocal
-        .copy(pointerNear)
-        .addScaledVector(rayDirection, rayT)
-        .sub(particleOrigin)
-    } else {
-      pointerLocal.set(99, 99, 99)
-    }
-
     for (let index = 0; index < particleCount; index += 1) {
       const stride = index * 3
       const seed = seeds[index] * 12.81 + index * 0.173
-      const xDrift = Math.sin(state.clock.elapsedTime * 1.05 + seed) * (0.006 + phaseOne * 0.012)
-      const zDrift = Math.cos(state.clock.elapsedTime * 0.9 + seed) * (0.005 + phaseOne * 0.01)
+      const modelWake = 0.55 + phaseOne * 0.45 + phaseTwo * 0.7 + phaseThree * 0.35
+      const xDrift = Math.sin(elapsedTime.current * 1.05 + seed) * (0.005 + phaseOne * 0.01) * modelWake
+      const zDrift = Math.cos(elapsedTime.current * 0.9 + seed) * (0.004 + phaseOne * 0.009) * modelWake
       const gravity = phaseTwo * 0.0035 + phaseThree * 0.007
-      const dx = positions[stride] - pointerLocal.x
-      const dy = positions[stride + 1] - pointerLocal.y
-      const dz = positions[stride + 2] - pointerLocal.z
-      const coarseRange = Math.abs(dx) < 2.35 && Math.abs(dy) < 2.35
-      const distanceSq = coarseRange ? dx * dx + dy * dy + dz * dz * 0.3 : 99
-
-      if (distanceSq < 3.05) {
-        const distance = Math.max(0.08, Math.sqrt(distanceSq))
-        const falloff = Math.max(0, 1 - distance / 1.75)
-        const force = falloff * falloff * 0.082
-        positions[stride] += (dx / distance) * force
-        positions[stride + 1] += (dy / distance) * force
-        positions[stride + 2] += (dz / distance) * force * 0.35
-      }
 
       positions[stride] += xDrift
       positions[stride + 1] -= gravity
@@ -525,6 +524,7 @@ function CinematicParticleField({
     }
     material.opacity = 0.05 + visibleIntensity * 0.34
     material.size = 0.018 + phaseOne * 0.014 + phaseTwo * 0.036 + phaseThree * 0.018
+    invalidate()
   })
 
   return (

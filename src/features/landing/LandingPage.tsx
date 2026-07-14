@@ -76,11 +76,7 @@ export function LandingPage() {
   useEffect(() => {
     if (sceneReady) {
       setLoadingGateReleased(true)
-      return
     }
-
-    const releaseTimer = window.setTimeout(() => setLoadingGateReleased(true), 1200)
-    return () => window.clearTimeout(releaseTimer)
   }, [sceneReady])
 
   const heroTextVisible = activeSceneId !== 'hero' || sceneProgress <= 0.15
@@ -136,7 +132,13 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div className="transition-opacity duration-700">
+      <div
+        className={clsx(
+          'transition-opacity duration-700',
+          loadingGateReleased ? 'opacity-100' : 'pointer-events-none opacity-0',
+        )}
+        aria-hidden={!loadingGateReleased}
+      >
         <header
         className={clsx(
           'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
