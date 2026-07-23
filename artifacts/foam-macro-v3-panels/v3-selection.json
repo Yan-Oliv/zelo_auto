@@ -1,0 +1,6955 @@
+[
+  {
+    "id": "PaintIsland_000",
+    "region": "hood",
+    "classification": "large",
+    "surfaceArea": 2.5446507007109176,
+    "surfaceAreaPercent": 14.968036075018913,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 6,
+        "width": 0.01621691857509173,
+        "aspectRatio": 20.488461253204544
+      },
+      {
+        "face": 36,
+        "width": 0.010425045936951061,
+        "aspectRatio": 14.407021193830582
+      },
+      {
+        "face": 37,
+        "width": 0.010425045936951061,
+        "aspectRatio": 14.478580032573722
+      },
+      {
+        "face": 38,
+        "width": 0.009962051507683235,
+        "aspectRatio": 15.072069304473134
+      },
+      {
+        "face": 40,
+        "width": 0.009962051507683235,
+        "aspectRatio": 33.90806267202799
+      },
+      {
+        "face": 42,
+        "width": 0.00908524328222741,
+        "aspectRatio": 37.18049768962024
+      },
+      {
+        "face": 44,
+        "width": 0.015934638453590038,
+        "aspectRatio": 20.99993596329487
+      },
+      {
+        "face": 54,
+        "width": 0.009771949938228787,
+        "aspectRatio": 16.23552839290406
+      },
+      {
+        "face": 57,
+        "width": 0.009678635386915116,
+        "aspectRatio": 16.358093418974097
+      },
+      {
+        "face": 58,
+        "width": 0.009678635386915116,
+        "aspectRatio": 16.397613350236167
+      },
+      {
+        "face": 59,
+        "width": 0.009771928717794946,
+        "aspectRatio": 16.198754411114052
+      },
+      {
+        "face": 60,
+        "width": 0.009771928717794946,
+        "aspectRatio": 16.199971274085037
+      },
+      {
+        "face": 61,
+        "width": 0.004455116388868356,
+        "aspectRatio": 35.53981538297199
+      },
+      {
+        "face": 119,
+        "width": 0.009678635386915116,
+        "aspectRatio": 10.560094345823279
+      },
+      {
+        "face": 120,
+        "width": 0.009771962689081343,
+        "aspectRatio": 10.459239978356475
+      },
+      {
+        "face": 121,
+        "width": 0.009678635386915116,
+        "aspectRatio": 17.19169323174905
+      },
+      {
+        "face": 122,
+        "width": 0.009771949938228787,
+        "aspectRatio": 17.020642036467724
+      },
+      {
+        "face": 139,
+        "width": 0.006975126683568155,
+        "aspectRatio": 52.541705384167635
+      },
+      {
+        "face": 140,
+        "width": 0.0072056062316783725,
+        "aspectRatio": 50.719873145880584
+      },
+      {
+        "face": 142,
+        "width": 0.0072056062316783725,
+        "aspectRatio": 21.181227122240575
+      },
+      {
+        "face": 143,
+        "width": 0.007180361465817291,
+        "aspectRatio": 21.207313870749317
+      },
+      {
+        "face": 145,
+        "width": 0.007180361465817291,
+        "aspectRatio": 22.627844026811715
+      },
+      {
+        "face": 146,
+        "width": 0.007180367241900153,
+        "aspectRatio": 22.62784179027373
+      },
+      {
+        "face": 148,
+        "width": 0.007180367241900153,
+        "aspectRatio": 42.80011148168112
+      },
+      {
+        "face": 149,
+        "width": 0.007180373019957493,
+        "aspectRatio": 42.80009392227061
+      },
+      {
+        "face": 151,
+        "width": 0.007180373019957493,
+        "aspectRatio": 28.8752910852193
+      },
+      {
+        "face": 152,
+        "width": 0.007180361465817291,
+        "aspectRatio": 28.87533754933718
+      },
+      {
+        "face": 154,
+        "width": 0.007180361465817291,
+        "aspectRatio": 14.471929577605712
+      },
+      {
+        "face": 155,
+        "width": 0.007180361465817291,
+        "aspectRatio": 14.471929577605712
+      },
+      {
+        "face": 157,
+        "width": 0.007180361465817291,
+        "aspectRatio": 12.508196919142184
+      },
+      {
+        "face": 158,
+        "width": 0.007404466472614914,
+        "aspectRatio": 12.129621424748672
+      },
+      {
+        "face": 160,
+        "width": 0.007404466472614914,
+        "aspectRatio": 11.79834020475284
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_000_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_001",
+    "region": "rear",
+    "classification": "large",
+    "surfaceArea": 1.5163955528387305,
+    "surfaceAreaPercent": 8.919677397195304,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 35,
+        "width": 0.0066098258153179405,
+        "aspectRatio": 19.2805414861167
+      },
+      {
+        "face": 38,
+        "width": 0.0066098258153179405,
+        "aspectRatio": 13.118924484105213
+      },
+      {
+        "face": 39,
+        "width": 0.007305531314156032,
+        "aspectRatio": 13.815451601878117
+      },
+      {
+        "face": 41,
+        "width": 0.006914056580153385,
+        "aspectRatio": 14.720742939922385
+      },
+      {
+        "face": 43,
+        "width": 0.006600719666939419,
+        "aspectRatio": 13.137022945931614
+      },
+      {
+        "face": 46,
+        "width": 0.006628257006812452,
+        "aspectRatio": 13.06347700697311
+      },
+      {
+        "face": 51,
+        "width": 0.006025653151952341,
+        "aspectRatio": 13.041649634598928
+      },
+      {
+        "face": 70,
+        "width": 0.01105621481195785,
+        "aspectRatio": 17.370861544062688
+      },
+      {
+        "face": 71,
+        "width": 0.007095497203882691,
+        "aspectRatio": 15.338361462733502
+      },
+      {
+        "face": 72,
+        "width": 0.007469497134754213,
+        "aspectRatio": 14.570365167500501
+      },
+      {
+        "face": 74,
+        "width": 0.007469497134754213,
+        "aspectRatio": 16.108475932193112
+      },
+      {
+        "face": 75,
+        "width": 0.007171970978240229,
+        "aspectRatio": 16.776729184464276
+      },
+      {
+        "face": 77,
+        "width": 0.007171970978240229,
+        "aspectRatio": 16.934170963047364
+      },
+      {
+        "face": 78,
+        "width": 0.007146517444547416,
+        "aspectRatio": 16.99448488441009
+      },
+      {
+        "face": 80,
+        "width": 0.007146517444547416,
+        "aspectRatio": 16.96839265728018
+      },
+      {
+        "face": 81,
+        "width": 0.00714656096871751,
+        "aspectRatio": 16.968289315937195
+      },
+      {
+        "face": 83,
+        "width": 0.00714656096871751,
+        "aspectRatio": 16.61962817141625
+      },
+      {
+        "face": 84,
+        "width": 0.007146517444547416,
+        "aspectRatio": 16.619729389321197
+      },
+      {
+        "face": 86,
+        "width": 0.007146517444547416,
+        "aspectRatio": 22.172893601016842
+      },
+      {
+        "face": 88,
+        "width": 0.009559053455308998,
+        "aspectRatio": 17.231224867895875
+      },
+      {
+        "face": 97,
+        "width": 0.0072725295893885655,
+        "aspectRatio": 17.249200987707322
+      },
+      {
+        "face": 99,
+        "width": 0.007239205360761296,
+        "aspectRatio": 17.328604221723552
+      },
+      {
+        "face": 100,
+        "width": 0.007239205360761296,
+        "aspectRatio": 17.87881197699197
+      },
+      {
+        "face": 101,
+        "width": 0.007052861713621269,
+        "aspectRatio": 18.298472157549543
+      },
+      {
+        "face": 103,
+        "width": 0.007052861713621269,
+        "aspectRatio": 15.537993990809841
+      },
+      {
+        "face": 106,
+        "width": 0.0072388156317277,
+        "aspectRatio": 14.824581032800708
+      },
+      {
+        "face": 108,
+        "width": 0.0072388156317277,
+        "aspectRatio": 14.878855625763572
+      },
+      {
+        "face": 110,
+        "width": 0.006754707146913071,
+        "aspectRatio": 15.94522017660214
+      },
+      {
+        "face": 111,
+        "width": 0.006754707146913071,
+        "aspectRatio": 17.834475895305214
+      },
+      {
+        "face": 112,
+        "width": 0.007044275362199198,
+        "aspectRatio": 17.10135615054346
+      },
+      {
+        "face": 114,
+        "width": 0.007044275362199198,
+        "aspectRatio": 17.052015217020756
+      },
+      {
+        "face": 116,
+        "width": 0.006754707146913071,
+        "aspectRatio": 17.783019760375556
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_001_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_002",
+    "region": "rightFenders",
+    "classification": "large",
+    "surfaceArea": 1.1913563489279113,
+    "surfaceAreaPercent": 7.007745622601116,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.00880779837159269,
+        "aspectRatio": 14.712789702216408
+      },
+      {
+        "face": 4,
+        "width": 0.00869727134377801,
+        "aspectRatio": 17.867977274536315
+      },
+      {
+        "face": 30,
+        "width": 0.014381757417828343,
+        "aspectRatio": 10.559596707248929
+      },
+      {
+        "face": 52,
+        "width": 0.004535924504826835,
+        "aspectRatio": 14.238711011892372
+      },
+      {
+        "face": 62,
+        "width": 0.004535924504826835,
+        "aspectRatio": 12.309002587260505
+      },
+      {
+        "face": 98,
+        "width": 0.00496887298709716,
+        "aspectRatio": 23.875177056642666
+      },
+      {
+        "face": 108,
+        "width": 0.00952086118040277,
+        "aspectRatio": 20.0096007257676
+      },
+      {
+        "face": 109,
+        "width": 0.0163359741616328,
+        "aspectRatio": 12.266580221110392
+      },
+      {
+        "face": 111,
+        "width": 0.010100677072780258,
+        "aspectRatio": 23.15832637855221
+      },
+      {
+        "face": 112,
+        "width": 0.010784626165203554,
+        "aspectRatio": 20.834797688855875
+      },
+      {
+        "face": 129,
+        "width": 0.00853575290122039,
+        "aspectRatio": 13.95075283870597
+      },
+      {
+        "face": 141,
+        "width": 0.005821415743794697,
+        "aspectRatio": 70.13901721665472
+      },
+      {
+        "face": 193,
+        "width": 0.013815263498389666,
+        "aspectRatio": 18.150977855111115
+      },
+      {
+        "face": 195,
+        "width": 0.014165655077674349,
+        "aspectRatio": 18.485354679548376
+      },
+      {
+        "face": 201,
+        "width": 0.007574121707587209,
+        "aspectRatio": 14.968998820930578
+      },
+      {
+        "face": 202,
+        "width": 0.007661616716810781,
+        "aspectRatio": 14.798054131537377
+      },
+      {
+        "face": 213,
+        "width": 0.0045890481096277445,
+        "aspectRatio": 14.091006104709361
+      },
+      {
+        "face": 214,
+        "width": 0.0045890481096277445,
+        "aspectRatio": 20.55530941378662
+      },
+      {
+        "face": 217,
+        "width": 0.004654299477616358,
+        "aspectRatio": 10.299997126355223
+      },
+      {
+        "face": 218,
+        "width": 0.004654299477616358,
+        "aspectRatio": 16.798632273546765
+      },
+      {
+        "face": 246,
+        "width": 0.005321466089450967,
+        "aspectRatio": 12.939696636258876
+      },
+      {
+        "face": 266,
+        "width": 0.0076690305339253,
+        "aspectRatio": 13.791612177499625
+      },
+      {
+        "face": 267,
+        "width": 0.009321871262581966,
+        "aspectRatio": 10.529043898978506
+      },
+      {
+        "face": 275,
+        "width": 0.01590038232479491,
+        "aspectRatio": 11.416601453643644
+      },
+      {
+        "face": 296,
+        "width": 0.007052902904228204,
+        "aspectRatio": 15.500954424892797
+      },
+      {
+        "face": 300,
+        "width": 0.004358876833868981,
+        "aspectRatio": 36.60235704070458
+      },
+      {
+        "face": 301,
+        "width": 0.004358876833868981,
+        "aspectRatio": 25.904896872621077
+      },
+      {
+        "face": 342,
+        "width": 0.0232671086027,
+        "aspectRatio": 30.78643120616918
+      },
+      {
+        "face": 346,
+        "width": 0.00959692968061616,
+        "aspectRatio": 20.204816232310076
+      },
+      {
+        "face": 347,
+        "width": 0.007322200082364753,
+        "aspectRatio": 15.092719572864972
+      },
+      {
+        "face": 350,
+        "width": 0.010231777741847884,
+        "aspectRatio": 10.130453014482034
+      },
+      {
+        "face": 354,
+        "width": 0.00974711101142914,
+        "aspectRatio": 10.634181097032089
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_002_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_003",
+    "region": "leftFenders",
+    "classification": "large",
+    "surfaceArea": 1.18448188277398,
+    "surfaceAreaPercent": 6.9673089303039015,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 11,
+        "width": 0.008217756966874984,
+        "aspectRatio": 16.686513138514666
+      },
+      {
+        "face": 22,
+        "width": 0.005609436890515751,
+        "aspectRatio": 12.473136171963032
+      },
+      {
+        "face": 36,
+        "width": 0.007963529974586018,
+        "aspectRatio": 33.15722579438454
+      },
+      {
+        "face": 37,
+        "width": 0.02262617613527387,
+        "aspectRatio": 11.93205070610782
+      },
+      {
+        "face": 39,
+        "width": 0.014381815218586818,
+        "aspectRatio": 18.772086612717782
+      },
+      {
+        "face": 61,
+        "width": 0.005609436890515751,
+        "aspectRatio": 11.000908504465686
+      },
+      {
+        "face": 212,
+        "width": 0.023589991671433358,
+        "aspectRatio": 11.385062265436808
+      },
+      {
+        "face": 213,
+        "width": 0.009968164176870098,
+        "aspectRatio": 26.2313366238584
+      },
+      {
+        "face": 216,
+        "width": 0.009596949108311405,
+        "aspectRatio": 35.393518801622385
+      },
+      {
+        "face": 217,
+        "width": 0.0073222255454888936,
+        "aspectRatio": 15.08526002338057
+      },
+      {
+        "face": 220,
+        "width": 0.010034697110636943,
+        "aspectRatio": 10.32941428381926
+      },
+      {
+        "face": 223,
+        "width": 0.007313983814285379,
+        "aspectRatio": 13.685244947731682
+      },
+      {
+        "face": 246,
+        "width": 0.05042357984340537,
+        "aspectRatio": 13.520676780220214
+      },
+      {
+        "face": 250,
+        "width": 0.06020996763312512,
+        "aspectRatio": 10.882987151910005
+      },
+      {
+        "face": 251,
+        "width": 0.06362289793140112,
+        "aspectRatio": 10.558096651048322
+      },
+      {
+        "face": 345,
+        "width": 0.009321851212813313,
+        "aspectRatio": 11.87053942706211
+      },
+      {
+        "face": 349,
+        "width": 0.014178465052018195,
+        "aspectRatio": 17.62538946499946
+      },
+      {
+        "face": 353,
+        "width": 0.06395862866853444,
+        "aspectRatio": 13.155225662859586
+      },
+      {
+        "face": 368,
+        "width": 0.06471387671720401,
+        "aspectRatio": 10.740215794616114
+      },
+      {
+        "face": 372,
+        "width": 0.013802114932538547,
+        "aspectRatio": 17.19406116617419
+      },
+      {
+        "face": 437,
+        "width": 0.008076602145665968,
+        "aspectRatio": 10.364741854795026
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_003_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_004",
+    "region": "leftDoors",
+    "classification": "large",
+    "surfaceArea": 1.007632416778506,
+    "surfaceAreaPercent": 5.927052526496278,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 9,
+        "width": 0.01060933674458771,
+        "aspectRatio": 34.90149511819265
+      },
+      {
+        "face": 12,
+        "width": 0.011363642310758652,
+        "aspectRatio": 10.338219938088631
+      },
+      {
+        "face": 14,
+        "width": 0.008521472858345633,
+        "aspectRatio": 12.844387030292483
+      },
+      {
+        "face": 54,
+        "width": 0.006834879635271814,
+        "aspectRatio": 14.15011817569698
+      },
+      {
+        "face": 56,
+        "width": 0.008669344153086548,
+        "aspectRatio": 11.74809252810741
+      },
+      {
+        "face": 70,
+        "width": 0.016369247166079393,
+        "aspectRatio": 22.651827630280277
+      },
+      {
+        "face": 72,
+        "width": 0.02410752910103907,
+        "aspectRatio": 15.665604502292389
+      },
+      {
+        "face": 158,
+        "width": 0.00607562801907925,
+        "aspectRatio": 21.90545809738426
+      },
+      {
+        "face": 159,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.667796285426839
+      },
+      {
+        "face": 160,
+        "width": 0.006075542654571151,
+        "aspectRatio": 21.905763432825548
+      },
+      {
+        "face": 161,
+        "width": 0.006075651932902186,
+        "aspectRatio": 11.667750360871334
+      },
+      {
+        "face": 162,
+        "width": 0.006075651932902186,
+        "aspectRatio": 10.043950734065309
+      },
+      {
+        "face": 164,
+        "width": 0.00607562801907925,
+        "aspectRatio": 10.043990267305112
+      },
+      {
+        "face": 168,
+        "width": 0.00880789223458136,
+        "aspectRatio": 17.654041696017977
+      },
+      {
+        "face": 176,
+        "width": 0.024389417845788186,
+        "aspectRatio": 15.150739313272247
+      },
+      {
+        "face": 180,
+        "width": 0.023321566753917403,
+        "aspectRatio": 13.788854689584516
+      },
+      {
+        "face": 181,
+        "width": 0.006075542654571151,
+        "aspectRatio": 11.610496466775027
+      },
+      {
+        "face": 191,
+        "width": 0.007963529974586018,
+        "aspectRatio": 48.50316157762316
+      },
+      {
+        "face": 192,
+        "width": 0.006085530097100366,
+        "aspectRatio": 11.59145756726011
+      },
+      {
+        "face": 195,
+        "width": 0.014381815218586818,
+        "aspectRatio": 53.676734306710465
+      },
+      {
+        "face": 229,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.520607436300606
+      },
+      {
+        "face": 230,
+        "width": 0.005620374421291002,
+        "aspectRatio": 12.453783340776585
+      },
+      {
+        "face": 231,
+        "width": 0.005620374421291002,
+        "aspectRatio": 10.54737871769689
+      },
+      {
+        "face": 232,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.29665273402647
+      },
+      {
+        "face": 233,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.265576614573506
+      },
+      {
+        "face": 239,
+        "width": 0.005944730591599704,
+        "aspectRatio": 10.160707094443605
+      },
+      {
+        "face": 254,
+        "width": 0.004535924388907439,
+        "aspectRatio": 68.27336343854579
+      },
+      {
+        "face": 264,
+        "width": 0.03679250259273197,
+        "aspectRatio": 10.837633844246442
+      },
+      {
+        "face": 269,
+        "width": 0.02368455076202959,
+        "aspectRatio": 14.583350637784784
+      },
+      {
+        "face": 304,
+        "width": 0.006358075118259512,
+        "aspectRatio": 16.199120677786386
+      },
+      {
+        "face": 305,
+        "width": 0.006655490206142197,
+        "aspectRatio": 15.475227658522416
+      },
+      {
+        "face": 311,
+        "width": 0.008896684323436602,
+        "aspectRatio": 11.447889299631337
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_004_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_005",
+    "region": "rightDoors",
+    "classification": "large",
+    "surfaceArea": 1.0067629444474733,
+    "surfaceAreaPercent": 5.921938153347346,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 4,
+        "width": 0.00676372245455022,
+        "aspectRatio": 14.298983920192285
+      },
+      {
+        "face": 5,
+        "width": 0.006646340570565453,
+        "aspectRatio": 14.551520132232538
+      },
+      {
+        "face": 34,
+        "width": 0.009191022290319427,
+        "aspectRatio": 11.558499774924073
+      },
+      {
+        "face": 35,
+        "width": 0.008971148784210105,
+        "aspectRatio": 11.841850038396998
+      },
+      {
+        "face": 44,
+        "width": 0.008521472858345633,
+        "aspectRatio": 12.83939169625131
+      },
+      {
+        "face": 48,
+        "width": 0.011143230987359148,
+        "aspectRatio": 10.542708271924136
+      },
+      {
+        "face": 50,
+        "width": 0.01060933674458771,
+        "aspectRatio": 34.89984702381785
+      },
+      {
+        "face": 110,
+        "width": 0.008896735539768155,
+        "aspectRatio": 11.209017772827073
+      },
+      {
+        "face": 111,
+        "width": 0.007052758704819947,
+        "aspectRatio": 14.139668030504298
+      },
+      {
+        "face": 119,
+        "width": 0.006358042503777928,
+        "aspectRatio": 16.199203931805933
+      },
+      {
+        "face": 160,
+        "width": 0.004189176432832113,
+        "aspectRatio": 12.38481294917823
+      },
+      {
+        "face": 167,
+        "width": 0.009360689387881546,
+        "aspectRatio": 18.667673844088053
+      },
+      {
+        "face": 198,
+        "width": 0.03144506954766018,
+        "aspectRatio": 10.66613786573631
+      },
+      {
+        "face": 200,
+        "width": 0.0044551536453785266,
+        "aspectRatio": 107.01604469569622
+      },
+      {
+        "face": 214,
+        "width": 0.005944751513183902,
+        "aspectRatio": 10.160673128752071
+      },
+      {
+        "face": 219,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.270020069648961
+      },
+      {
+        "face": 221,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.294348014862948
+      },
+      {
+        "face": 224,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.598464437579048
+      },
+      {
+        "face": 240,
+        "width": 0.007180349749369734,
+        "aspectRatio": 13.574192127214417
+      },
+      {
+        "face": 262,
+        "width": 0.00869727134377801,
+        "aspectRatio": 11.204371434120768
+      },
+      {
+        "face": 265,
+        "width": 0.008069226374970814,
+        "aspectRatio": 10.127533349519997
+      },
+      {
+        "face": 266,
+        "width": 0.0062717246908655004,
+        "aspectRatio": 12.203403825912654
+      },
+      {
+        "face": 267,
+        "width": 0.006646309387753024,
+        "aspectRatio": 10.964113509461503
+      },
+      {
+        "face": 273,
+        "width": 0.006075675809207395,
+        "aspectRatio": 10.043911263158572
+      },
+      {
+        "face": 274,
+        "width": 0.006075675809207395,
+        "aspectRatio": 11.667704508726246
+      },
+      {
+        "face": 275,
+        "width": 0.00607562801907925,
+        "aspectRatio": 10.043990267305112
+      },
+      {
+        "face": 276,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.667796285426839
+      },
+      {
+        "face": 278,
+        "width": 0.00607562801907925,
+        "aspectRatio": 10.979112592923611
+      },
+      {
+        "face": 281,
+        "width": 0.005944639828554604,
+        "aspectRatio": 11.777232830713572
+      },
+      {
+        "face": 312,
+        "width": 0.009131686733704899,
+        "aspectRatio": 21.140739223348426
+      },
+      {
+        "face": 314,
+        "width": 0.008173601447210925,
+        "aspectRatio": 10.80904898592336
+      },
+      {
+        "face": 317,
+        "width": 0.008978051896719632,
+        "aspectRatio": 25.286978749951007
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_005_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_006",
+    "region": "roof",
+    "classification": "large",
+    "surfaceArea": 0.7412853186579014,
+    "surfaceAreaPercent": 4.360356959190314,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.004981025753841618,
+        "aspectRatio": 24.06896112878727
+      },
+      {
+        "face": 2,
+        "width": 0.004680411157720973,
+        "aspectRatio": 25.65936047358076
+      },
+      {
+        "face": 3,
+        "width": 0.004680411157720973,
+        "aspectRatio": 25.543811144913228
+      },
+      {
+        "face": 5,
+        "width": 0.0050293843080239705,
+        "aspectRatio": 23.841754419045238
+      },
+      {
+        "face": 6,
+        "width": 0.0050293843080239705,
+        "aspectRatio": 23.785686658010487
+      },
+      {
+        "face": 8,
+        "width": 0.005241586268761291,
+        "aspectRatio": 22.878836727840138
+      },
+      {
+        "face": 9,
+        "width": 0.005241586268761291,
+        "aspectRatio": 22.95985425981408
+      },
+      {
+        "face": 11,
+        "width": 0.005089180242633752,
+        "aspectRatio": 23.659777543698596
+      },
+      {
+        "face": 12,
+        "width": 0.005089180242633752,
+        "aspectRatio": 23.466318941986913
+      },
+      {
+        "face": 14,
+        "width": 0.005423049189642824,
+        "aspectRatio": 22.13337630197584
+      },
+      {
+        "face": 27,
+        "width": 0.0036982072239379066,
+        "aspectRatio": 58.71835107223751
+      },
+      {
+        "face": 30,
+        "width": 0.004427919761635121,
+        "aspectRatio": 24.565070090562852
+      },
+      {
+        "face": 31,
+        "width": 0.004427919761635121,
+        "aspectRatio": 24.51071924370973
+      },
+      {
+        "face": 33,
+        "width": 0.004549252106611719,
+        "aspectRatio": 23.919032396715057
+      },
+      {
+        "face": 34,
+        "width": 0.004549252106611719,
+        "aspectRatio": 23.92489200117264
+      },
+      {
+        "face": 36,
+        "width": 0.0044279338571874185,
+        "aspectRatio": 24.53955803893187
+      },
+      {
+        "face": 37,
+        "width": 0.0044279338571874185,
+        "aspectRatio": 24.869168439833253
+      },
+      {
+        "face": 39,
+        "width": 0.012220761207087713,
+        "aspectRatio": 18.98378365489324
+      },
+      {
+        "face": 40,
+        "width": 0.0044278636999187885,
+        "aspectRatio": 27.659650605181028
+      },
+      {
+        "face": 41,
+        "width": 0.012387995088151823,
+        "aspectRatio": 18.91994290042848
+      },
+      {
+        "face": 42,
+        "width": 0.01607086506170741,
+        "aspectRatio": 14.584165744573792
+      },
+      {
+        "face": 43,
+        "width": 0.014991519770743977,
+        "aspectRatio": 15.593772306558435
+      },
+      {
+        "face": 46,
+        "width": 0.009888922029688418,
+        "aspectRatio": 10.88105821565451
+      },
+      {
+        "face": 47,
+        "width": 0.009968191252285532,
+        "aspectRatio": 13.173052423408139
+      },
+      {
+        "face": 48,
+        "width": 0.011833299756712075,
+        "aspectRatio": 10.679104381715364
+      },
+      {
+        "face": 49,
+        "width": 0.01184862984131871,
+        "aspectRatio": 10.659264535431545
+      },
+      {
+        "face": 51,
+        "width": 0.009367239056831896,
+        "aspectRatio": 13.52402590304863
+      },
+      {
+        "face": 52,
+        "width": 0.009367183907763085,
+        "aspectRatio": 13.5241055254242
+      },
+      {
+        "face": 53,
+        "width": 0.009367183907763085,
+        "aspectRatio": 11.382581412707092
+      },
+      {
+        "face": 55,
+        "width": 0.009367183907763085,
+        "aspectRatio": 11.382581412707092
+      },
+      {
+        "face": 56,
+        "width": 0.009367183907763085,
+        "aspectRatio": 11.332492172668823
+      },
+      {
+        "face": 57,
+        "width": 0.00994981206399249,
+        "aspectRatio": 10.66460098137452
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_006_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_007",
+    "region": "roof",
+    "classification": "large",
+    "surfaceArea": 0.7411546457497025,
+    "surfaceAreaPercent": 4.359588320569932,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 10,
+        "width": 0.009243582461106157,
+        "aspectRatio": 16.32137478591798
+      },
+      {
+        "face": 13,
+        "width": 0.009367128369992421,
+        "aspectRatio": 17.300761734298526
+      },
+      {
+        "face": 21,
+        "width": 0.006975132616362384,
+        "aspectRatio": 22.27348628640435
+      },
+      {
+        "face": 29,
+        "width": 0.009367239056831896,
+        "aspectRatio": 10.82745919815418
+      },
+      {
+        "face": 30,
+        "width": 0.009367239056831896,
+        "aspectRatio": 10.82745919815418
+      },
+      {
+        "face": 31,
+        "width": 0.00852846280491851,
+        "aspectRatio": 12.405128592848671
+      },
+      {
+        "face": 32,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.195075552707449
+      },
+      {
+        "face": 33,
+        "width": 0.009691116589007927,
+        "aspectRatio": 10.820935647441251
+      },
+      {
+        "face": 35,
+        "width": 0.009691116589007927,
+        "aspectRatio": 10.884418079003545
+      },
+      {
+        "face": 36,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.26075292486496
+      },
+      {
+        "face": 37,
+        "width": 0.008421346366860682,
+        "aspectRatio": 12.30876346500593
+      },
+      {
+        "face": 38,
+        "width": 0.009367239056831896,
+        "aspectRatio": 10.088332845051118
+      },
+      {
+        "face": 45,
+        "width": 0.00969107379409406,
+        "aspectRatio": 56.159306621318954
+      },
+      {
+        "face": 46,
+        "width": 0.009367239056831896,
+        "aspectRatio": 58.10078950589166
+      },
+      {
+        "face": 47,
+        "width": 0.012181008054650878,
+        "aspectRatio": 45.669759537503445
+      },
+      {
+        "face": 48,
+        "width": 0.009367239056831896,
+        "aspectRatio": 31.77820976939444
+      },
+      {
+        "face": 49,
+        "width": 0.00936728333120147,
+        "aspectRatio": 31.77805957000856
+      },
+      {
+        "face": 60,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.34925734902186
+      },
+      {
+        "face": 61,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.34925734902186
+      },
+      {
+        "face": 62,
+        "width": 0.00839284201731567,
+        "aspectRatio": 13.163129518152907
+      },
+      {
+        "face": 63,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.335973089184144
+      },
+      {
+        "face": 64,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.335973089184144
+      },
+      {
+        "face": 65,
+        "width": 0.00839284201731567,
+        "aspectRatio": 12.65206346659714
+      },
+      {
+        "face": 66,
+        "width": 0.009367239056831896,
+        "aspectRatio": 11.357165570523096
+      },
+      {
+        "face": 67,
+        "width": 0.009243654237802237,
+        "aspectRatio": 11.528625233564224
+      },
+      {
+        "face": 68,
+        "width": 0.0099498183140282,
+        "aspectRatio": 11.40363631797414
+      },
+      {
+        "face": 69,
+        "width": 0.009243654237802237,
+        "aspectRatio": 11.489674526978439
+      },
+      {
+        "face": 70,
+        "width": 0.00969107379409406,
+        "aspectRatio": 10.949329552707566
+      },
+      {
+        "face": 71,
+        "width": 0.0099498183140282,
+        "aspectRatio": 10.664592793773819
+      },
+      {
+        "face": 72,
+        "width": 0.00969107379409406,
+        "aspectRatio": 11.002159722299952
+      },
+      {
+        "face": 73,
+        "width": 0.009367128369992421,
+        "aspectRatio": 11.382649788891971
+      },
+      {
+        "face": 75,
+        "width": 0.009367128369992421,
+        "aspectRatio": 13.524185709941957
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_007_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_008",
+    "region": "leftFenders",
+    "classification": "large",
+    "surfaceArea": 0.6757971977276611,
+    "surfaceAreaPercent": 3.975145520820724,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 7,
+        "width": 0.01681798435239691,
+        "aspectRatio": 29.393884154874343
+      },
+      {
+        "face": 9,
+        "width": 0.0077322254506564155,
+        "aspectRatio": 16.602137890181893
+      },
+      {
+        "face": 10,
+        "width": 0.007461393200894268,
+        "aspectRatio": 16.905604631680827
+      },
+      {
+        "face": 17,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.030473222134079
+      },
+      {
+        "face": 30,
+        "width": 0.006085499384634918,
+        "aspectRatio": 11.358541024143463
+      },
+      {
+        "face": 31,
+        "width": 0.006085499384634918,
+        "aspectRatio": 11.358541024143463
+      },
+      {
+        "face": 35,
+        "width": 0.05919127652210751,
+        "aspectRatio": 12.920997922553248
+      },
+      {
+        "face": 36,
+        "width": 0.06888562221968525,
+        "aspectRatio": 11.116161079856518
+      },
+      {
+        "face": 37,
+        "width": 0.058909494319350844,
+        "aspectRatio": 12.9828030237258
+      },
+      {
+        "face": 39,
+        "width": 0.05577522532757684,
+        "aspectRatio": 13.670908407877304
+      },
+      {
+        "face": 40,
+        "width": 0.055881457277024045,
+        "aspectRatio": 13.644919693164953
+      },
+      {
+        "face": 44,
+        "width": 0.06140514088688731,
+        "aspectRatio": 12.333773003031993
+      },
+      {
+        "face": 47,
+        "width": 0.016785568022166866,
+        "aspectRatio": 29.556254682241438
+      },
+      {
+        "face": 54,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.354790230692146
+      },
+      {
+        "face": 68,
+        "width": 0.04167710307978683,
+        "aspectRatio": 17.805502219639113
+      },
+      {
+        "face": 69,
+        "width": 0.051433466330022985,
+        "aspectRatio": 14.50179030047369
+      },
+      {
+        "face": 87,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.331494029363064
+      },
+      {
+        "face": 88,
+        "width": 0.005769149503824803,
+        "aspectRatio": 10.312458081234064
+      },
+      {
+        "face": 89,
+        "width": 0.005769149503824803,
+        "aspectRatio": 10.315282731349818
+      },
+      {
+        "face": 91,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.334323893550252
+      },
+      {
+        "face": 92,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.246370634189823
+      },
+      {
+        "face": 95,
+        "width": 0.005944751513183902,
+        "aspectRatio": 11.78368700865987
+      },
+      {
+        "face": 97,
+        "width": 0.005758519750723157,
+        "aspectRatio": 12.164773971092
+      },
+      {
+        "face": 102,
+        "width": 0.007437036196516824,
+        "aspectRatio": 17.261043012422615
+      },
+      {
+        "face": 110,
+        "width": 0.0075420615657139775,
+        "aspectRatio": 16.770643482906625
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_008_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_009",
+    "region": "rightFenders",
+    "classification": "large",
+    "surfaceArea": 0.6750546651283003,
+    "surfaceAreaPercent": 3.9707778271600556,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 4,
+        "width": 0.05617955116145274,
+        "aspectRatio": 13.46131107729339
+      },
+      {
+        "face": 7,
+        "width": 0.006075675809207395,
+        "aspectRatio": 11.53246248674014
+      },
+      {
+        "face": 8,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.246370634189823
+      },
+      {
+        "face": 9,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.334323893550252
+      },
+      {
+        "face": 11,
+        "width": 0.0057691243195067965,
+        "aspectRatio": 10.315327761296523
+      },
+      {
+        "face": 13,
+        "width": 0.0057691243195067965,
+        "aspectRatio": 10.312503098850147
+      },
+      {
+        "face": 14,
+        "width": 0.005620263734625818,
+        "aspectRatio": 10.592698344033856
+      },
+      {
+        "face": 16,
+        "width": 0.005620263734625818,
+        "aspectRatio": 10.609513516362735
+      },
+      {
+        "face": 21,
+        "width": 0.005029409020358995,
+        "aspectRatio": 72.57136616388031
+      },
+      {
+        "face": 31,
+        "width": 0.05143342445681311,
+        "aspectRatio": 14.50180205363117
+      },
+      {
+        "face": 41,
+        "width": 0.004680326962009863,
+        "aspectRatio": 78.57552810209235
+      },
+      {
+        "face": 43,
+        "width": 0.004628363215569739,
+        "aspectRatio": 78.69828655210877
+      },
+      {
+        "face": 50,
+        "width": 0.005914028943508464,
+        "aspectRatio": 10.003956890486059
+      },
+      {
+        "face": 51,
+        "width": 0.05916369059994548,
+        "aspectRatio": 12.61139461567604
+      },
+      {
+        "face": 58,
+        "width": 0.005914028943508464,
+        "aspectRatio": 11.685944459937557
+      },
+      {
+        "face": 59,
+        "width": 0.006085530097100366,
+        "aspectRatio": 11.356613584284649
+      },
+      {
+        "face": 64,
+        "width": 0.061685386996402324,
+        "aspectRatio": 12.102937570288038
+      },
+      {
+        "face": 81,
+        "width": 0.007566080476116399,
+        "aspectRatio": 16.96664502555126
+      },
+      {
+        "face": 85,
+        "width": 0.007461393200894268,
+        "aspectRatio": 16.905604631680827
+      },
+      {
+        "face": 94,
+        "width": 0.007437078020478031,
+        "aspectRatio": 17.260945941342904
+      },
+      {
+        "face": 96,
+        "width": 0.01681799051736739,
+        "aspectRatio": 29.52251174368161
+      },
+      {
+        "face": 99,
+        "width": 0.007542102807267744,
+        "aspectRatio": 16.770552104115552
+      },
+      {
+        "face": 105,
+        "width": 0.005758519750723157,
+        "aspectRatio": 12.167624039577136
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_009_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_010",
+    "region": "leftFenders",
+    "classification": "large",
+    "surfaceArea": 0.3482824974198593,
+    "surfaceAreaPercent": 2.048652486654342,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.060577657132275205,
+        "aspectRatio": 12.524917501471792
+      },
+      {
+        "face": 3,
+        "width": 0.0673514289610158,
+        "aspectRatio": 11.213908569434139
+      },
+      {
+        "face": 4,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.568117378072106
+      },
+      {
+        "face": 5,
+        "width": 0.005944751513183902,
+        "aspectRatio": 10.23704901956366
+      },
+      {
+        "face": 6,
+        "width": 0.005944751513183902,
+        "aspectRatio": 11.604912993776555
+      },
+      {
+        "face": 7,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.354928883644156
+      },
+      {
+        "face": 8,
+        "width": 0.00607562801907925,
+        "aspectRatio": 10.948747450912933
+      },
+      {
+        "face": 13,
+        "width": 0.007534096029425022,
+        "aspectRatio": 91.15705501869257
+      },
+      {
+        "face": 14,
+        "width": 0.007661424398267736,
+        "aspectRatio": 89.64207836152423
+      },
+      {
+        "face": 15,
+        "width": 0.007661424398267736,
+        "aspectRatio": 97.94875428556445
+      },
+      {
+        "face": 17,
+        "width": 0.009728444275830597,
+        "aspectRatio": 77.67115211477753
+      },
+      {
+        "face": 19,
+        "width": 0.061577454858020075,
+        "aspectRatio": 12.226869091777006
+      },
+      {
+        "face": 20,
+        "width": 0.009728444275830597,
+        "aspectRatio": 11.51299725300225
+      },
+      {
+        "face": 22,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.349264102208412
+      },
+      {
+        "face": 23,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.422276229715882
+      },
+      {
+        "face": 24,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.42222363055139
+      },
+      {
+        "face": 25,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.03676623784702
+      },
+      {
+        "face": 27,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.036816891674555
+      },
+      {
+        "face": 28,
+        "width": 0.061836291624375775,
+        "aspectRatio": 12.175689385244889
+      },
+      {
+        "face": 29,
+        "width": 0.061836291624375775,
+        "aspectRatio": 11.807533963218388
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_010_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_011",
+    "region": "rightFenders",
+    "classification": "large",
+    "surfaceArea": 0.3481136925256578,
+    "surfaceAreaPercent": 2.0476595496884387,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.060569666760954016,
+        "aspectRatio": 18.71651793004835
+      },
+      {
+        "face": 2,
+        "width": 0.06063257473774246,
+        "aspectRatio": 18.69709902394719
+      },
+      {
+        "face": 3,
+        "width": 0.06321729613521938,
+        "aspectRatio": 17.906993616544767
+      },
+      {
+        "face": 4,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.327725818485701
+      },
+      {
+        "face": 5,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.692854733169202
+      },
+      {
+        "face": 6,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.036767241060526
+      },
+      {
+        "face": 7,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.391609535876277
+      },
+      {
+        "face": 8,
+        "width": 0.061403255547367204,
+        "aspectRatio": 18.23691806844716
+      },
+      {
+        "face": 9,
+        "width": 0.006085530097100366,
+        "aspectRatio": 18.404902412072495
+      },
+      {
+        "face": 13,
+        "width": 0.04315086064142918,
+        "aspectRatio": 17.417649187131293
+      },
+      {
+        "face": 15,
+        "width": 0.009495491933853737,
+        "aspectRatio": 79.58251523973486
+      },
+      {
+        "face": 16,
+        "width": 0.007933025255526756,
+        "aspectRatio": 95.25686698252133
+      },
+      {
+        "face": 17,
+        "width": 0.007933025255526756,
+        "aspectRatio": 86.57302657544699
+      },
+      {
+        "face": 18,
+        "width": 0.007534137314581802,
+        "aspectRatio": 91.15655550120955
+      },
+      {
+        "face": 23,
+        "width": 0.00607562801907925,
+        "aspectRatio": 18.820104979304794
+      },
+      {
+        "face": 24,
+        "width": 0.00607562801907925,
+        "aspectRatio": 11.332523735615869
+      },
+      {
+        "face": 25,
+        "width": 0.007534137314581802,
+        "aspectRatio": 15.760450528915879
+      },
+      {
+        "face": 26,
+        "width": 0.006075675809207395,
+        "aspectRatio": 11.332434596106365
+      },
+      {
+        "face": 28,
+        "width": 0.006075675809207395,
+        "aspectRatio": 10.01645165105356
+      },
+      {
+        "face": 29,
+        "width": 0.005758519750723157,
+        "aspectRatio": 10.568117437256193
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_011_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_012",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.2594285480445251,
+    "surfaceAreaPercent": 1.5259995664376917,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_013",
+    "region": "paintedBumpers",
+    "classification": "large",
+    "surfaceArea": 0.21965495310723782,
+    "surfaceAreaPercent": 1.2920450186924224,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": [
+      "PaintIsland_013_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_014",
+    "region": "rightFenders",
+    "classification": "large",
+    "surfaceArea": 0.21659628717316082,
+    "surfaceAreaPercent": 1.2740534640834125,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 68,
+        "width": 0.007205617745338831,
+        "aspectRatio": 12.099508273804922
+      },
+      {
+        "face": 69,
+        "width": 0.006966471397692532,
+        "aspectRatio": 12.520942717460851
+      },
+      {
+        "face": 70,
+        "width": 0.006966471397692532,
+        "aspectRatio": 12.920829291492765
+      },
+      {
+        "face": 78,
+        "width": 0.01019013570836149,
+        "aspectRatio": 10.248941405307617
+      },
+      {
+        "face": 80,
+        "width": 0.010058817916393719,
+        "aspectRatio": 20.671777191088488
+      },
+      {
+        "face": 83,
+        "width": 0.009992370770777297,
+        "aspectRatio": 20.809240123627333
+      },
+      {
+        "face": 84,
+        "width": 0.009992370770777297,
+        "aspectRatio": 10.478813525070644
+      },
+      {
+        "face": 97,
+        "width": 0.00696647735111707,
+        "aspectRatio": 22.56742541960671
+      },
+      {
+        "face": 98,
+        "width": 0.00696647735111707,
+        "aspectRatio": 23.381266677142232
+      },
+      {
+        "face": 99,
+        "width": 0.00723907356886161,
+        "aspectRatio": 22.5402467588427
+      },
+      {
+        "face": 101,
+        "width": 0.00723907356886161,
+        "aspectRatio": 21.084985290021276
+      },
+      {
+        "face": 102,
+        "width": 0.00723907356886161,
+        "aspectRatio": 21.084985290021276
+      },
+      {
+        "face": 104,
+        "width": 0.00723907356886161,
+        "aspectRatio": 50.967010002369776
+      },
+      {
+        "face": 105,
+        "width": 0.006826098163711179,
+        "aspectRatio": 54.25040700085914
+      },
+      {
+        "face": 141,
+        "width": 0.006609916687011719,
+        "aspectRatio": 68.27092730478888
+      },
+      {
+        "face": 148,
+        "width": 0.007940721291216764,
+        "aspectRatio": 59.02827555271202
+      },
+      {
+        "face": 149,
+        "width": 0.007940721291216764,
+        "aspectRatio": 20.905501839543508
+      },
+      {
+        "face": 154,
+        "width": 0.005500599676520447,
+        "aspectRatio": 61.9219588125584
+      },
+      {
+        "face": 157,
+        "width": 0.008500181011897234,
+        "aspectRatio": 37.86963693048023
+      },
+      {
+        "face": 159,
+        "width": 0.008500181011897234,
+        "aspectRatio": 41.99326219757107
+      },
+      {
+        "face": 160,
+        "width": 0.008599327083605224,
+        "aspectRatio": 41.44689934191079
+      },
+      {
+        "face": 162,
+        "width": 0.008599327083605224,
+        "aspectRatio": 22.25536312899921
+      },
+      {
+        "face": 182,
+        "width": 0.010436642407414015,
+        "aspectRatio": 19.794152973632535
+      },
+      {
+        "face": 185,
+        "width": 0.008091754776631986,
+        "aspectRatio": 19.545965368905833
+      },
+      {
+        "face": 187,
+        "width": 0.008091754776631986,
+        "aspectRatio": 20.541005328932293
+      },
+      {
+        "face": 188,
+        "width": 0.00974703834956899,
+        "aspectRatio": 16.162436705493942
+      },
+      {
+        "face": 189,
+        "width": 0.00974703834956899,
+        "aspectRatio": 17.11368002919974
+      },
+      {
+        "face": 196,
+        "width": 0.010436642407414015,
+        "aspectRatio": 18.323267685671883
+      },
+      {
+        "face": 259,
+        "width": 0.009045188192586295,
+        "aspectRatio": 12.072553596079642
+      },
+      {
+        "face": 260,
+        "width": 0.009210910998027486,
+        "aspectRatio": 11.855344087572838
+      },
+      {
+        "face": 261,
+        "width": 0.008731895794722283,
+        "aspectRatio": 12.293638159385889
+      },
+      {
+        "face": 262,
+        "width": 0.009210910998027486,
+        "aspectRatio": 14.417617500320175
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_014_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_015",
+    "region": "leftFenders",
+    "classification": "large",
+    "surfaceArea": 0.21513833015524142,
+    "surfaceAreaPercent": 1.2654775313497182,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.00859927631698811,
+        "aspectRatio": 33.878093247297834
+      },
+      {
+        "face": 1,
+        "width": 0.00859927631698811,
+        "aspectRatio": 36.172845468206404
+      },
+      {
+        "face": 24,
+        "width": 0.015219919317814813,
+        "aspectRatio": 21.12845744004147
+      },
+      {
+        "face": 25,
+        "width": 0.015219919317814813,
+        "aspectRatio": 10.424570698751603
+      },
+      {
+        "face": 26,
+        "width": 0.007653594127505775,
+        "aspectRatio": 20.27528497020379
+      },
+      {
+        "face": 28,
+        "width": 0.0065731837269756175,
+        "aspectRatio": 71.74324128590489
+      },
+      {
+        "face": 31,
+        "width": 0.006609916687011719,
+        "aspectRatio": 68.26968968008802
+      },
+      {
+        "face": 34,
+        "width": 0.022636882061979172,
+        "aspectRatio": 12.266790162755242
+      },
+      {
+        "face": 40,
+        "width": 0.0068260525962114535,
+        "aspectRatio": 54.25076884582021
+      },
+      {
+        "face": 41,
+        "width": 0.00723907356886161,
+        "aspectRatio": 50.967010002369776
+      },
+      {
+        "face": 77,
+        "width": 0.00723907356886161,
+        "aspectRatio": 21.084985290021276
+      },
+      {
+        "face": 78,
+        "width": 0.006957781415736204,
+        "aspectRatio": 21.935651777981036
+      },
+      {
+        "face": 79,
+        "width": 0.006957781415736204,
+        "aspectRatio": 23.4497546345522
+      },
+      {
+        "face": 85,
+        "width": 0.006966507038608035,
+        "aspectRatio": 29.846943860613695
+      },
+      {
+        "face": 87,
+        "width": 0.006966507038608035,
+        "aspectRatio": 14.896430459341628
+      },
+      {
+        "face": 90,
+        "width": 0.006966471397692532,
+        "aspectRatio": 12.920829291492765
+      },
+      {
+        "face": 92,
+        "width": 0.006966471397692532,
+        "aspectRatio": 12.51925016845383
+      },
+      {
+        "face": 94,
+        "width": 0.0074775925937542575,
+        "aspectRatio": 11.660817092772835
+      },
+      {
+        "face": 116,
+        "width": 0.0090451789419711,
+        "aspectRatio": 14.381698792475603
+      },
+      {
+        "face": 117,
+        "width": 0.0090451789419711,
+        "aspectRatio": 11.867843415200179
+      },
+      {
+        "face": 118,
+        "width": 0.008910390900258722,
+        "aspectRatio": 14.647199560070804
+      },
+      {
+        "face": 119,
+        "width": 0.009210910998027486,
+        "aspectRatio": 14.418062709465968
+      },
+      {
+        "face": 145,
+        "width": 0.010190194614816258,
+        "aspectRatio": 10.234246459391315
+      },
+      {
+        "face": 146,
+        "width": 0.010166467473007342,
+        "aspectRatio": 10.248314628540049
+      },
+      {
+        "face": 152,
+        "width": 0.010094736770137848,
+        "aspectRatio": 15.606924881141046
+      },
+      {
+        "face": 155,
+        "width": 0.010094736770137848,
+        "aspectRatio": 16.527422671084935
+      },
+      {
+        "face": 156,
+        "width": 0.007653594127505775,
+        "aspectRatio": 21.716957447465006
+      },
+      {
+        "face": 158,
+        "width": 0.010166467473007342,
+        "aspectRatio": 20.51359366726786
+      },
+      {
+        "face": 159,
+        "width": 0.013603294507219999,
+        "aspectRatio": 15.313908587987145
+      },
+      {
+        "face": 160,
+        "width": 0.013603294507219999,
+        "aspectRatio": 14.41230242919671
+      },
+      {
+        "face": 185,
+        "width": 0.00882150897461605,
+        "aspectRatio": 15.094280816116063
+      },
+      {
+        "face": 187,
+        "width": 0.009051787302494625,
+        "aspectRatio": 12.07396280350965
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_015_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_016",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.1990600988501683,
+    "surfaceAreaPercent": 1.1709028433072304,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_017",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.17640407476574183,
+    "surfaceAreaPercent": 1.0376365424678062,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.04823637374217465,
+        "aspectRatio": 17.958608561216067
+      },
+      {
+        "face": 1,
+        "width": 0.03965932175205363,
+        "aspectRatio": 21.277926919913945
+      },
+      {
+        "face": 2,
+        "width": 0.04279041263714906,
+        "aspectRatio": 20.24421128615577
+      },
+      {
+        "face": 3,
+        "width": 0.04279041263714906,
+        "aspectRatio": 20.244209678154782
+      },
+      {
+        "face": 4,
+        "width": 0.048236345987671514,
+        "aspectRatio": 17.958617467886402
+      },
+      {
+        "face": 5,
+        "width": 0.03965932175205363,
+        "aspectRatio": 21.277926919913945
+      },
+      {
+        "face": 6,
+        "width": 0.048251349191180876,
+        "aspectRatio": 17.489006298870258
+      },
+      {
+        "face": 7,
+        "width": 0.02226495762711596,
+        "aspectRatio": 36.63857347582983
+      },
+      {
+        "face": 8,
+        "width": 0.02226495762711596,
+        "aspectRatio": 36.63857675752156
+      },
+      {
+        "face": 9,
+        "width": 0.03230132070935243,
+        "aspectRatio": 25.254579938000308
+      },
+      {
+        "face": 10,
+        "width": 0.04825131541357459,
+        "aspectRatio": 17.489018541785587
+      },
+      {
+        "face": 11,
+        "width": 0.0323013599032872,
+        "aspectRatio": 25.25455155654411
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_018",
+    "region": "rear",
+    "classification": "large",
+    "surfaceArea": 0.16074806667893426,
+    "surfaceAreaPercent": 0.945545437873901,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 11,
+        "width": 0.01497949227352709,
+        "aspectRatio": 15.559384398321479
+      },
+      {
+        "face": 12,
+        "width": 0.01590045272119682,
+        "aspectRatio": 15.381458668597459
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_018_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_019",
+    "region": "rear",
+    "classification": "large",
+    "surfaceArea": 0.16063328232849017,
+    "surfaceAreaPercent": 0.9448702582518748,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 16,
+        "width": 0.007052926448230219,
+        "aspectRatio": 21.22746241169069
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_019_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_020",
+    "region": "paintedBumpers",
+    "classification": "large",
+    "surfaceArea": 0.14780246780719608,
+    "surfaceAreaPercent": 0.869397387035031,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.011828243812798294,
+        "aspectRatio": 10.725175428895474
+      },
+      {
+        "face": 2,
+        "width": 0.013531812342880097,
+        "aspectRatio": 11.407295038076846
+      },
+      {
+        "face": 5,
+        "width": 0.013531812342880097,
+        "aspectRatio": 11.407295038076846
+      },
+      {
+        "face": 6,
+        "width": 0.014402760205495684,
+        "aspectRatio": 10.7229559210972
+      },
+      {
+        "face": 7,
+        "width": 0.014402760205495684,
+        "aspectRatio": 10.7229559210972
+      },
+      {
+        "face": 8,
+        "width": 0.013854541698095635,
+        "aspectRatio": 11.143638336432254
+      },
+      {
+        "face": 9,
+        "width": 0.013854541698095635,
+        "aspectRatio": 11.143638336432254
+      },
+      {
+        "face": 14,
+        "width": 0.01354989892694848,
+        "aspectRatio": 11.392185521578437
+      },
+      {
+        "face": 15,
+        "width": 0.01354989892694848,
+        "aspectRatio": 11.392185521578437
+      },
+      {
+        "face": 16,
+        "width": 0.01461548078092989,
+        "aspectRatio": 10.568256235442355
+      },
+      {
+        "face": 17,
+        "width": 0.01461548078092989,
+        "aspectRatio": 10.568256235442355
+      },
+      {
+        "face": 18,
+        "width": 0.013428539250645756,
+        "aspectRatio": 11.494351987763133
+      },
+      {
+        "face": 19,
+        "width": 0.013428539250645756,
+        "aspectRatio": 11.494351987763133
+      },
+      {
+        "face": 21,
+        "width": 0.011828243812798294,
+        "aspectRatio": 10.725175428895474
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_020_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_021",
+    "region": "rear",
+    "classification": "large",
+    "surfaceArea": 0.14207947342219995,
+    "surfaceAreaPercent": 0.835733832981101,
+    "decision": "include-primary",
+    "reason": "Classified exterior panel, retained after bridge review.",
+    "processingStrategy": "local-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 67,
+        "width": 0.01118122587211715,
+        "aspectRatio": 31.50906327814777
+      },
+      {
+        "face": 68,
+        "width": 0.008378273933747566,
+        "aspectRatio": 42.06248855040428
+      },
+      {
+        "face": 69,
+        "width": 0.010237646480356839,
+        "aspectRatio": 34.42305339284622
+      },
+      {
+        "face": 71,
+        "width": 0.006966471295697892,
+        "aspectRatio": 49.52069501041303
+      },
+      {
+        "face": 106,
+        "width": 0.008493338759449905,
+        "aspectRatio": 10.732919765557376
+      },
+      {
+        "face": 125,
+        "width": 0.007971201643090151,
+        "aspectRatio": 11.288347721695363
+      },
+      {
+        "face": 183,
+        "width": 0.0060256738727525105,
+        "aspectRatio": 11.017182087379643
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_021_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_022",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.13800430204719305,
+    "surfaceAreaPercent": 0.8117630333204849,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_023",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.13798353029415011,
+    "surfaceAreaPercent": 0.8116408505985887,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_024",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.10280093218534603,
+    "surfaceAreaPercent": 0.6046912690476326,
+    "decision": "include-secondary",
+    "reason": "External medium panel candidate; retained as secondary macro coverage.",
+    "processingStrategy": "boundary-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 21,
+        "width": 0.007052802835801769,
+        "aspectRatio": 19.778664831091614
+      },
+      {
+        "face": 22,
+        "width": 0.007052802835801769,
+        "aspectRatio": 19.82733211045553
+      },
+      {
+        "face": 24,
+        "width": 0.007052835203450721,
+        "aspectRatio": 19.827241116676873
+      },
+      {
+        "face": 25,
+        "width": 0.007052835203450721,
+        "aspectRatio": 17.13294535569173
+      },
+      {
+        "face": 28,
+        "width": 0.0071635246118153095,
+        "aspectRatio": 16.58624514810579
+      },
+      {
+        "face": 30,
+        "width": 0.0071635246118153095,
+        "aspectRatio": 24.83347814723612
+      },
+      {
+        "face": 32,
+        "width": 0.009647112815057743,
+        "aspectRatio": 18.440256200490882
+      },
+      {
+        "face": 53,
+        "width": 0.020177603104594263,
+        "aspectRatio": 29.638657216387635
+      },
+      {
+        "face": 65,
+        "width": 0.015311141331751814,
+        "aspectRatio": 13.751572962055606
+      },
+      {
+        "face": 75,
+        "width": 0.005500675073161918,
+        "aspectRatio": 12.70357768415246
+      },
+      {
+        "face": 76,
+        "width": 0.005500675073161918,
+        "aspectRatio": 12.8552233245168
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_024_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_025",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.10264372842721059,
+    "surfaceAreaPercent": 0.6037665717906604,
+    "decision": "include-secondary",
+    "reason": "External medium panel candidate; retained as secondary macro coverage.",
+    "processingStrategy": "boundary-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 33,
+        "width": 0.007052802835801769,
+        "aspectRatio": 19.827331712076788
+      },
+      {
+        "face": 35,
+        "width": 0.007052835203450721,
+        "aspectRatio": 19.827240718299958
+      },
+      {
+        "face": 36,
+        "width": 0.007052835203450721,
+        "aspectRatio": 17.135572516179653
+      },
+      {
+        "face": 38,
+        "width": 0.0071718495068040285,
+        "aspectRatio": 16.85121375716799
+      },
+      {
+        "face": 39,
+        "width": 0.0071718495068040285,
+        "aspectRatio": 16.578104740212492
+      },
+      {
+        "face": 41,
+        "width": 0.007163472557246815,
+        "aspectRatio": 16.597491140600454
+      },
+      {
+        "face": 42,
+        "width": 0.007163472557246815,
+        "aspectRatio": 26.206668407328497
+      },
+      {
+        "face": 46,
+        "width": 0.02208194087755949,
+        "aspectRatio": 10.540124160508492
+      },
+      {
+        "face": 49,
+        "width": 0.020300417765367392,
+        "aspectRatio": 12.234488233331295
+      },
+      {
+        "face": 77,
+        "width": 0.01565890619893148,
+        "aspectRatio": 13.446167598238619
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_025_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_026",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.09645859126430878,
+    "surfaceAreaPercent": 0.5673846211530386,
+    "decision": "include-secondary",
+    "reason": "External medium panel candidate; retained as secondary macro coverage.",
+    "processingStrategy": "boundary-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 26,
+        "width": 0.010088801552297131,
+        "aspectRatio": 74.15584042874863
+      },
+      {
+        "face": 27,
+        "width": 0.010088801552297131,
+        "aspectRatio": 74.15584042874863
+      },
+      {
+        "face": 28,
+        "width": 0.03127352942498918,
+        "aspectRatio": 24.527383345767742
+      },
+      {
+        "face": 29,
+        "width": 0.025682564415374656,
+        "aspectRatio": 29.866871250702058
+      },
+      {
+        "face": 53,
+        "width": 0.013867778265988636,
+        "aspectRatio": 57.039241336291205
+      },
+      {
+        "face": 54,
+        "width": 0.01866984083455576,
+        "aspectRatio": 42.175228814339405
+      },
+      {
+        "face": 55,
+        "width": 0.013762364853970277,
+        "aspectRatio": 57.4761358026127
+      },
+      {
+        "face": 56,
+        "width": 0.01724085652912976,
+        "aspectRatio": 45.67086372967058
+      },
+      {
+        "face": 57,
+        "width": 0.02603795481779791,
+        "aspectRatio": 30.03157692424029
+      },
+      {
+        "face": 58,
+        "width": 0.031220773770873178,
+        "aspectRatio": 25.046171142308665
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_026_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_027",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.09639123323722742,
+    "surfaceAreaPercent": 0.5669884106322727,
+    "decision": "include-secondary",
+    "reason": "External medium panel candidate; retained as secondary macro coverage.",
+    "processingStrategy": "boundary-cleanup",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.02603795481779791,
+        "aspectRatio": 30.031573996798624
+      },
+      {
+        "face": 1,
+        "width": 0.031220745338931048,
+        "aspectRatio": 25.046191509749857
+      },
+      {
+        "face": 2,
+        "width": 0.01724085652912976,
+        "aspectRatio": 45.67086153437391
+      },
+      {
+        "face": 4,
+        "width": 0.01866984083455576,
+        "aspectRatio": 42.175226787070116
+      },
+      {
+        "face": 5,
+        "width": 0.013867796235801972,
+        "aspectRatio": 57.0391674251591
+      },
+      {
+        "face": 7,
+        "width": 0.013762364853970277,
+        "aspectRatio": 57.4761358026127
+      },
+      {
+        "face": 86,
+        "width": 0.010088801552297131,
+        "aspectRatio": 74.15584042874863
+      },
+      {
+        "face": 87,
+        "width": 0.010088801552297131,
+        "aspectRatio": 74.15584042874863
+      },
+      {
+        "face": 88,
+        "width": 0.03127352942498918,
+        "aspectRatio": 24.527383345767742
+      },
+      {
+        "face": 90,
+        "width": 0.025682564415374656,
+        "aspectRatio": 29.866871250702058
+      }
+    ],
+    "finalComponentIds": [
+      "PaintIsland_027_A"
+    ]
+  },
+  {
+    "id": "PaintIsland_028",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.09579284640494734,
+    "surfaceAreaPercent": 0.5634686050692214,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.04592132504981782,
+        "aspectRatio": 11.600934197139638
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_029",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.08727288957379642,
+    "surfaceAreaPercent": 0.5133528775272673,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 19,
+        "width": 0.007453355465095685,
+        "aspectRatio": 29.792806366998533
+      },
+      {
+        "face": 22,
+        "width": 0.007172023224750069,
+        "aspectRatio": 15.888208519451313
+      },
+      {
+        "face": 24,
+        "width": 0.007172023224750069,
+        "aspectRatio": 46.5769361519083
+      },
+      {
+        "face": 26,
+        "width": 0.0074533526833095495,
+        "aspectRatio": 44.87007238202244
+      },
+      {
+        "face": 54,
+        "width": 0.005171707353960011,
+        "aspectRatio": 25.038988676017585
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_030",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.08236958365887403,
+    "surfaceAreaPercent": 0.48451086011367595,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.059489071667982375,
+        "aspectRatio": 14.613202102433801
+      },
+      {
+        "face": 1,
+        "width": 0.059489071667982375,
+        "aspectRatio": 14.613201526158052
+      },
+      {
+        "face": 2,
+        "width": 0.01774233619272998,
+        "aspectRatio": 48.892627984849014
+      },
+      {
+        "face": 3,
+        "width": 0.01774233619272998,
+        "aspectRatio": 48.892627984849014
+      },
+      {
+        "face": 4,
+        "width": 0.01774233619272998,
+        "aspectRatio": 48.89262604849336
+      },
+      {
+        "face": 5,
+        "width": 0.01774233619272998,
+        "aspectRatio": 48.89262604849336
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_031",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.07528609408109332,
+    "surfaceAreaPercent": 0.44284465912678966,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.009295854289244784,
+        "aspectRatio": 37.57399643590636
+      },
+      {
+        "face": 3,
+        "width": 0.02948661730972333,
+        "aspectRatio": 12.123697295385368
+      },
+      {
+        "face": 6,
+        "width": 0.015247601222294066,
+        "aspectRatio": 25.92061205470028
+      },
+      {
+        "face": 20,
+        "width": 0.009131659611974709,
+        "aspectRatio": 12.832884965592129
+      },
+      {
+        "face": 21,
+        "width": 0.007044107386551729,
+        "aspectRatio": 16.635966903221846
+      },
+      {
+        "face": 22,
+        "width": 0.007044107386551729,
+        "aspectRatio": 16.32456906730573
+      },
+      {
+        "face": 25,
+        "width": 0.0070010047888871465,
+        "aspectRatio": 42.06895319028256
+      },
+      {
+        "face": 42,
+        "width": 0.0067904979744149675,
+        "aspectRatio": 63.42493581476003
+      },
+      {
+        "face": 44,
+        "width": 0.004981025753841618,
+        "aspectRatio": 24.3419342140659
+      },
+      {
+        "face": 45,
+        "width": 0.004303105226470503,
+        "aspectRatio": 71.63661567548199
+      },
+      {
+        "face": 46,
+        "width": 0.004303105226470503,
+        "aspectRatio": 28.165213510390526
+      },
+      {
+        "face": 48,
+        "width": 0.008151291486389711,
+        "aspectRatio": 29.832641481057077
+      },
+      {
+        "face": 49,
+        "width": 0.008151291486389711,
+        "aspectRatio": 12.398468603120637
+      },
+      {
+        "face": 50,
+        "width": 0.006536253829643035,
+        "aspectRatio": 36.47253691301992
+      },
+      {
+        "face": 52,
+        "width": 0.006536253829643035,
+        "aspectRatio": 18.54424119369103
+      },
+      {
+        "face": 53,
+        "width": 0.005914151740333906,
+        "aspectRatio": 20.49488630693195
+      },
+      {
+        "face": 54,
+        "width": 0.004303105226470503,
+        "aspectRatio": 28.165213510390526
+      },
+      {
+        "face": 55,
+        "width": 0.005566120127280288,
+        "aspectRatio": 64.07255904625049
+      },
+      {
+        "face": 56,
+        "width": 0.00653611725624806,
+        "aspectRatio": 18.522540707543605
+      },
+      {
+        "face": 57,
+        "width": 0.005566120127280288,
+        "aspectRatio": 17.42091479090499
+      },
+      {
+        "face": 58,
+        "width": 0.006619066450242011,
+        "aspectRatio": 14.64963453414881
+      },
+      {
+        "face": 59,
+        "width": 0.006619066450242011,
+        "aspectRatio": 14.061977293070788
+      },
+      {
+        "face": 60,
+        "width": 0.005218267435349319,
+        "aspectRatio": 17.7514893018063
+      },
+      {
+        "face": 61,
+        "width": 0.006203770805877201,
+        "aspectRatio": 15.18893375422737
+      },
+      {
+        "face": 62,
+        "width": 0.006203770805877201,
+        "aspectRatio": 16.44206554254197
+      },
+      {
+        "face": 63,
+        "width": 0.007856454221333372,
+        "aspectRatio": 12.603603465036043
+      },
+      {
+        "face": 68,
+        "width": 0.01780365400162746,
+        "aspectRatio": 22.315191493573387
+      },
+      {
+        "face": 77,
+        "width": 0.015219874231191517,
+        "aspectRatio": 23.406247253632237
+      },
+      {
+        "face": 79,
+        "width": 0.005914057009382137,
+        "aspectRatio": 20.424177088326935
+      },
+      {
+        "face": 80,
+        "width": 0.005229848614685821,
+        "aspectRatio": 43.770119415506606
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_032",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.07124102154830325,
+    "surfaceAreaPercent": 0.4190509055951342,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.0068348219339916414,
+        "aspectRatio": 43.09182383872733
+      },
+      {
+        "face": 3,
+        "width": 0.007044107386551729,
+        "aspectRatio": 16.32456906730573
+      },
+      {
+        "face": 5,
+        "width": 0.007044107386551729,
+        "aspectRatio": 16.635966903221846
+      },
+      {
+        "face": 6,
+        "width": 0.009131618577521502,
+        "aspectRatio": 12.832942632304022
+      },
+      {
+        "face": 23,
+        "width": 0.02948661730972333,
+        "aspectRatio": 12.135457217235809
+      },
+      {
+        "face": 26,
+        "width": 0.015219983227650405,
+        "aspectRatio": 23.428942511422093
+      },
+      {
+        "face": 28,
+        "width": 0.009038350211164064,
+        "aspectRatio": 38.64447276896218
+      },
+      {
+        "face": 30,
+        "width": 0.005218267435349319,
+        "aspectRatio": 43.812003348643586
+      },
+      {
+        "face": 31,
+        "width": 0.005758519750723157,
+        "aspectRatio": 20.975822793316247
+      },
+      {
+        "face": 34,
+        "width": 0.005229848614685821,
+        "aspectRatio": 17.71217975915295
+      },
+      {
+        "face": 35,
+        "width": 0.006609916618213975,
+        "aspectRatio": 14.081442702038144
+      },
+      {
+        "face": 36,
+        "width": 0.008889916190151281,
+        "aspectRatio": 10.46997070993151
+      },
+      {
+        "face": 37,
+        "width": 0.006609916618213975,
+        "aspectRatio": 14.669913412537413
+      },
+      {
+        "face": 38,
+        "width": 0.005566120127280288,
+        "aspectRatio": 17.42091479090499
+      },
+      {
+        "face": 39,
+        "width": 0.008151291486389711,
+        "aspectRatio": 12.398468603120637
+      },
+      {
+        "face": 43,
+        "width": 0.010331784263188383,
+        "aspectRatio": 35.259998670590626
+      },
+      {
+        "face": 45,
+        "width": 0.004303105226470503,
+        "aspectRatio": 56.43943486012441
+      },
+      {
+        "face": 46,
+        "width": 0.005914151740333906,
+        "aspectRatio": 20.559019804070054
+      },
+      {
+        "face": 47,
+        "width": 0.004303105226470503,
+        "aspectRatio": 28.245963229523063
+      },
+      {
+        "face": 48,
+        "width": 0.004303105226470503,
+        "aspectRatio": 28.245963229523063
+      },
+      {
+        "face": 49,
+        "width": 0.004981025753841618,
+        "aspectRatio": 24.411665207599164
+      },
+      {
+        "face": 52,
+        "width": 0.006790522401017925,
+        "aspectRatio": 63.424715307743305
+      },
+      {
+        "face": 71,
+        "width": 0.006203770805877201,
+        "aspectRatio": 16.44206554254197
+      },
+      {
+        "face": 72,
+        "width": 0.008076751283796651,
+        "aspectRatio": 11.346917550323525
+      },
+      {
+        "face": 73,
+        "width": 0.017759417516826023,
+        "aspectRatio": 22.370783232564335
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_033",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.0643446460026098,
+    "surfaceAreaPercent": 0.37848533880595603,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.0064335495645758654,
+        "aspectRatio": 53.91200728994385
+      },
+      {
+        "face": 1,
+        "width": 0.005577027348913891,
+        "aspectRatio": 61.87994159843235
+      },
+      {
+        "face": 3,
+        "width": 0.00551150109352635,
+        "aspectRatio": 16.939382939030338
+      },
+      {
+        "face": 7,
+        "width": 0.0054119504159616865,
+        "aspectRatio": 14.551108130866101
+      },
+      {
+        "face": 9,
+        "width": 0.005873061564226211,
+        "aspectRatio": 13.918025320142823
+      },
+      {
+        "face": 10,
+        "width": 0.005873061564226211,
+        "aspectRatio": 58.8793331026849
+      },
+      {
+        "face": 13,
+        "width": 0.005171735502420388,
+        "aspectRatio": 21.862330823208104
+      },
+      {
+        "face": 16,
+        "width": 0.0051834846994176535,
+        "aspectRatio": 12.846859292662808
+      },
+      {
+        "face": 19,
+        "width": 0.013224349537796725,
+        "aspectRatio": 26.089172185283907
+      },
+      {
+        "face": 21,
+        "width": 0.006232882427187701,
+        "aspectRatio": 15.647868945317507
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_034",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.0640946291077853,
+    "surfaceAreaPercent": 0.37701470006561655,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006433514081240051,
+        "aspectRatio": 53.91231298295461
+      },
+      {
+        "face": 2,
+        "width": 0.005576982746694814,
+        "aspectRatio": 61.88043648658909
+      },
+      {
+        "face": 4,
+        "width": 0.005511459673952252,
+        "aspectRatio": 16.939510241427218
+      },
+      {
+        "face": 7,
+        "width": 0.0051834846994176535,
+        "aspectRatio": 18.135695143213525
+      },
+      {
+        "face": 8,
+        "width": 0.0051834846994176535,
+        "aspectRatio": 12.846859292662808
+      },
+      {
+        "face": 14,
+        "width": 0.004944389771243856,
+        "aspectRatio": 22.815237934825756
+      },
+      {
+        "face": 15,
+        "width": 0.004944389771243856,
+        "aspectRatio": 46.79866278730275
+      },
+      {
+        "face": 16,
+        "width": 0.005041395216802404,
+        "aspectRatio": 22.376232019555374
+      },
+      {
+        "face": 17,
+        "width": 0.005873026256335588,
+        "aspectRatio": 39.98373198958076
+      },
+      {
+        "face": 18,
+        "width": 0.005873026256335588,
+        "aspectRatio": 13.918108907172076
+      },
+      {
+        "face": 19,
+        "width": 0.005411908234485095,
+        "aspectRatio": 14.55122037775045
+      },
+      {
+        "face": 20,
+        "width": 0.005411908234485095,
+        "aspectRatio": 17.05852981093012
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_035",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.06219504710952606,
+    "surfaceAreaPercent": 0.36584105966402536,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.006931622178877244,
+        "aspectRatio": 49.58658518757256
+      },
+      {
+        "face": 3,
+        "width": 0.013496066058880657,
+        "aspectRatio": 26.034975049869335
+      },
+      {
+        "face": 4,
+        "width": 0.013576702408331693,
+        "aspectRatio": 25.61453269545296
+      },
+      {
+        "face": 6,
+        "width": 0.006480491537105136,
+        "aspectRatio": 12.429801518275394
+      },
+      {
+        "face": 15,
+        "width": 0.006508445130301979,
+        "aspectRatio": 13.545516349566034
+      },
+      {
+        "face": 18,
+        "width": 0.008269334908976805,
+        "aspectRatio": 42.03489100254571
+      },
+      {
+        "face": 19,
+        "width": 0.008054309497789701,
+        "aspectRatio": 43.75444003460069
+      },
+      {
+        "face": 20,
+        "width": 0.008054309497789701,
+        "aspectRatio": 11.552065149804058
+      },
+      {
+        "face": 22,
+        "width": 0.006203670601554932,
+        "aspectRatio": 14.998202520912544
+      },
+      {
+        "face": 23,
+        "width": 0.006203670601554932,
+        "aspectRatio": 15.088826053277852
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_036",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.057823075985652395,
+    "surfaceAreaPercent": 0.3401244371496663,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_037",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.05782187799741223,
+    "surfaceAreaPercent": 0.34011739039421524,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.00697518320789719,
+        "aspectRatio": 45.43685507110972
+      },
+      {
+        "face": 1,
+        "width": 0.006281340759210696,
+        "aspectRatio": 50.40068536054448
+      },
+      {
+        "face": 4,
+        "width": 0.013265486880514389,
+        "aspectRatio": 23.86522877742018
+      },
+      {
+        "face": 6,
+        "width": 0.007971139174428252,
+        "aspectRatio": 39.58486988846135
+      },
+      {
+        "face": 10,
+        "width": 0.009243638741167256,
+        "aspectRatio": 34.147976027589785
+      },
+      {
+        "face": 11,
+        "width": 0.008414371015989236,
+        "aspectRatio": 37.49989641761754
+      },
+      {
+        "face": 13,
+        "width": 0.009367183907763085,
+        "aspectRatio": 77.59417531403962
+      },
+      {
+        "face": 15,
+        "width": 0.009367183907763085,
+        "aspectRatio": 28.384831354546694
+      },
+      {
+        "face": 18,
+        "width": 0.027623768544451432,
+        "aspectRatio": 11.411016828624515
+      },
+      {
+        "face": 26,
+        "width": 0.012000981668437757,
+        "aspectRatio": 26.704134594198692
+      },
+      {
+        "face": 27,
+        "width": 0.008807847612838893,
+        "aspectRatio": 36.53629027203115
+      },
+      {
+        "face": 28,
+        "width": 0.008807847612838893,
+        "aspectRatio": 41.591412160407295
+      },
+      {
+        "face": 29,
+        "width": 0.008669382339982405,
+        "aspectRatio": 42.29569260666194
+      },
+      {
+        "face": 30,
+        "width": 0.016731237054083272,
+        "aspectRatio": 21.93994734875426
+      },
+      {
+        "face": 31,
+        "width": 0.016731237054083272,
+        "aspectRatio": 21.625447055213268
+      },
+      {
+        "face": 32,
+        "width": 0.027623768544451432,
+        "aspectRatio": 13.3421261614127
+      },
+      {
+        "face": 33,
+        "width": 0.008414371015989236,
+        "aspectRatio": 42.91704089094143
+      },
+      {
+        "face": 34,
+        "width": 0.013603321969286005,
+        "aspectRatio": 26.829819199515217
+      },
+      {
+        "face": 35,
+        "width": 0.013603321969286005,
+        "aspectRatio": 23.195547954756012
+      },
+      {
+        "face": 36,
+        "width": 0.008669382339982405,
+        "aspectRatio": 42.099270125105306
+      },
+      {
+        "face": 37,
+        "width": 0.006281340759210696,
+        "aspectRatio": 58.153781484042035
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_038",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.057767269492615014,
+    "surfaceAreaPercent": 0.3397961745709279,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_039",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.05772991007506789,
+    "surfaceAreaPercent": 0.3395764205947021,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006348447968094884,
+        "aspectRatio": 50.19644201967179
+      },
+      {
+        "face": 2,
+        "width": 0.005500641095198126,
+        "aspectRatio": 58.26040885177907
+      },
+      {
+        "face": 3,
+        "width": 0.01947552040569323,
+        "aspectRatio": 16.185204870757534
+      },
+      {
+        "face": 4,
+        "width": 0.01947552040569323,
+        "aspectRatio": 18.881464430912036
+      },
+      {
+        "face": 6,
+        "width": 0.008151288989859302,
+        "aspectRatio": 32.91196201858364
+      },
+      {
+        "face": 19,
+        "width": 0.009367239056831896,
+        "aspectRatio": 23.968573750993095
+      },
+      {
+        "face": 21,
+        "width": 0.009367239056831896,
+        "aspectRatio": 77.59371848289783
+      },
+      {
+        "face": 22,
+        "width": 0.008151288989859302,
+        "aspectRatio": 89.15760513745228
+      },
+      {
+        "face": 24,
+        "width": 0.009243582461106157,
+        "aspectRatio": 34.1481837829444
+      },
+      {
+        "face": 25,
+        "width": 0.00841442030409034,
+        "aspectRatio": 37.49967675914801
+      },
+      {
+        "face": 29,
+        "width": 0.007971139174428252,
+        "aspectRatio": 39.584869871974576
+      },
+      {
+        "face": 33,
+        "width": 0.013265535421595205,
+        "aspectRatio": 23.865141450074397
+      },
+      {
+        "face": 36,
+        "width": 0.006975132616362384,
+        "aspectRatio": 97.80644245195852
+      },
+      {
+        "face": 38,
+        "width": 0.008392723247863776,
+        "aspectRatio": 43.48703730241967
+      },
+      {
+        "face": 39,
+        "width": 0.013603321969286005,
+        "aspectRatio": 26.829819199515217
+      },
+      {
+        "face": 40,
+        "width": 0.008392723247863776,
+        "aspectRatio": 82.0332433288368
+      },
+      {
+        "face": 42,
+        "width": 0.016731279236678418,
+        "aspectRatio": 21.93989203416035
+      },
+      {
+        "face": 43,
+        "width": 0.016731279236678418,
+        "aspectRatio": 21.62539253353175
+      },
+      {
+        "face": 44,
+        "width": 0.00841442030409034,
+        "aspectRatio": 42.916789548880175
+      },
+      {
+        "face": 46,
+        "width": 0.013603321969286005,
+        "aspectRatio": 23.19554794509526
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_040",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.057266836911367136,
+    "surfaceAreaPercent": 0.33685255133527503,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.01349604914407658,
+        "aspectRatio": 26.035007679900346
+      },
+      {
+        "face": 3,
+        "width": 0.006992458759633791,
+        "aspectRatio": 49.01701992070768
+      },
+      {
+        "face": 4,
+        "width": 0.006772618565630565,
+        "aspectRatio": 50.75075029402045
+      },
+      {
+        "face": 6,
+        "width": 0.006480443539458953,
+        "aspectRatio": 11.408488663873014
+      },
+      {
+        "face": 13,
+        "width": 0.007732206630805609,
+        "aspectRatio": 11.347582414081062
+      },
+      {
+        "face": 14,
+        "width": 0.007732206630805609,
+        "aspectRatio": 14.53249131392936
+      },
+      {
+        "face": 16,
+        "width": 0.008054309497789701,
+        "aspectRatio": 10.504413693974906
+      },
+      {
+        "face": 18,
+        "width": 0.006203623687490062,
+        "aspectRatio": 15.088939659295718
+      },
+      {
+        "face": 19,
+        "width": 0.008054309497789701,
+        "aspectRatio": 14.577787365629604
+      },
+      {
+        "face": 22,
+        "width": 0.008269297294356178,
+        "aspectRatio": 14.240792322119091
+      },
+      {
+        "face": 23,
+        "width": 0.004981017400257526,
+        "aspectRatio": 22.58144488105703
+      },
+      {
+        "face": 25,
+        "width": 0.006508397338805885,
+        "aspectRatio": 13.545615272888616
+      },
+      {
+        "face": 27,
+        "width": 0.006480443539458953,
+        "aspectRatio": 13.604045133292999
+      },
+      {
+        "face": 28,
+        "width": 0.004981017400257526,
+        "aspectRatio": 23.62811746822607
+      },
+      {
+        "face": 29,
+        "width": 0.006772618565630565,
+        "aspectRatio": 11.782990046286717
+      },
+      {
+        "face": 31,
+        "width": 0.013576719222652425,
+        "aspectRatio": 25.614504917763952
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_041",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.05136418994516134,
+    "surfaceAreaPercent": 0.3021322525124991,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_042",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.04677527226340317,
+    "surfaceAreaPercent": 0.27513951618658256,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 44,
+        "width": 0.00487041464051739,
+        "aspectRatio": 15.597567467809213
+      },
+      {
+        "face": 45,
+        "width": 0.00487041464051739,
+        "aspectRatio": 10.332031028522751
+      },
+      {
+        "face": 109,
+        "width": 0.03975380171926663,
+        "aspectRatio": 11.035127794953574
+      },
+      {
+        "face": 111,
+        "width": 0.04136510211055361,
+        "aspectRatio": 10.605274976353279
+      },
+      {
+        "face": 115,
+        "width": 0.004174709292836083,
+        "aspectRatio": 28.43400925290012
+      },
+      {
+        "face": 116,
+        "width": 0.004174709292836083,
+        "aspectRatio": 28.35070872140259
+      },
+      {
+        "face": 118,
+        "width": 0.006609857176695949,
+        "aspectRatio": 17.922756434377398
+      },
+      {
+        "face": 153,
+        "width": 0.010465654338596577,
+        "aspectRatio": 43.246647422878475
+      },
+      {
+        "face": 159,
+        "width": 0.018601485234899885,
+        "aspectRatio": 25.528541189971776
+      },
+      {
+        "face": 160,
+        "width": 0.013823905187793133,
+        "aspectRatio": 33.27876028968056
+      },
+      {
+        "face": 162,
+        "width": 0.007305701635503059,
+        "aspectRatio": 58.9521679864988
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_043",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.04443896687735105,
+    "surfaceAreaPercent": 0.26139700005620786,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_044",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.04440892697311938,
+    "surfaceAreaPercent": 0.26122030060975565,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.01287186148376929,
+        "aspectRatio": 12.479446838764742
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_045",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.04438785666570766,
+    "surfaceAreaPercent": 0.2610963617440551,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_046",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.04334910951729398,
+    "surfaceAreaPercent": 0.2549862874670884,
+    "decision": "film-shell-only",
+    "reason": "External small panel: preserve only thin foam coverage, not macro volume.",
+    "processingStrategy": "film-shell-only",
+    "possibleNarrowBridges": [
+      {
+        "face": 6,
+        "width": 0.036528353596611635,
+        "aspectRatio": 12.390497207434723
+      },
+      {
+        "face": 7,
+        "width": 0.035697188168763244,
+        "aspectRatio": 12.678994801810617
+      },
+      {
+        "face": 9,
+        "width": 0.004641452289529538,
+        "aspectRatio": 62.63079587458986
+      },
+      {
+        "face": 10,
+        "width": 0.018882407031144997,
+        "aspectRatio": 16.194686411290075
+      },
+      {
+        "face": 19,
+        "width": 0.004858032334023135,
+        "aspectRatio": 11.94963006578818
+      },
+      {
+        "face": 20,
+        "width": 0.005310275996920238,
+        "aspectRatio": 10.196828772015369
+      },
+      {
+        "face": 52,
+        "width": 0.010784566457614112,
+        "aspectRatio": 11.854570144754799
+      },
+      {
+        "face": 53,
+        "width": 0.004174709292836083,
+        "aspectRatio": 30.5994118528984
+      },
+      {
+        "face": 54,
+        "width": 0.004174709292836083,
+        "aspectRatio": 28.433995157710473
+      },
+      {
+        "face": 56,
+        "width": 0.006609857176695949,
+        "aspectRatio": 17.97531008787914
+      },
+      {
+        "face": 171,
+        "width": 0.00730563914071257,
+        "aspectRatio": 58.95266517852118
+      },
+      {
+        "face": 173,
+        "width": 0.008121538128495807,
+        "aspectRatio": 15.549249831649492
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_047",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.0376633378009501,
+    "surfaceAreaPercent": 0.2215416830108536,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 9,
+        "width": 0.040898462139824704,
+        "aspectRatio": 19.683366977705397
+      },
+      {
+        "face": 10,
+        "width": 0.03757882465982185,
+        "aspectRatio": 21.015609327452264
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_048",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.03359869054838782,
+    "surfaceAreaPercent": 0.19763278789547237,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 13,
+        "width": 0.007044290080858301,
+        "aspectRatio": 65.77154466172742
+      },
+      {
+        "face": 14,
+        "width": 0.00762977998475079,
+        "aspectRatio": 61.05540671578163
+      },
+      {
+        "face": 15,
+        "width": 0.02957057951343022,
+        "aspectRatio": 15.753472802564353
+      },
+      {
+        "face": 16,
+        "width": 0.005298866689254328,
+        "aspectRatio": 88.04199145246949
+      },
+      {
+        "face": 17,
+        "width": 0.0048455582945039636,
+        "aspectRatio": 97.21110980987454
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_049",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.03358101617050124,
+    "surfaceAreaPercent": 0.19752882442192532,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_050",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.03330771951004863,
+    "surfaceAreaPercent": 0.19592125043477884,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_051",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.033307716716080904,
+    "surfaceAreaPercent": 0.19592123400022077,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_052",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.032843024325302395,
+    "surfaceAreaPercent": 0.1931878401921762,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 6,
+        "width": 0.008016676497241335,
+        "aspectRatio": 11.59282701124132
+      },
+      {
+        "face": 7,
+        "width": 0.008158822172720098,
+        "aspectRatio": 11.724349352081399
+      },
+      {
+        "face": 8,
+        "width": 0.008203206431559078,
+        "aspectRatio": 11.974428578098392
+      },
+      {
+        "face": 9,
+        "width": 0.007978676093206913,
+        "aspectRatio": 12.55408165237038
+      },
+      {
+        "face": 10,
+        "width": 0.008977957368784048,
+        "aspectRatio": 11.342419769738617
+      },
+      {
+        "face": 11,
+        "width": 0.009158131966059978,
+        "aspectRatio": 11.123626486647911
+      },
+      {
+        "face": 21,
+        "width": 0.00791779187550578,
+        "aspectRatio": 13.806633697218047
+      },
+      {
+        "face": 22,
+        "width": 0.0065640299598099085,
+        "aspectRatio": 15.764787395355539
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_053",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.032836473990300874,
+    "surfaceAreaPercent": 0.1931493100903517,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.008977966612685018,
+        "aspectRatio": 11.303890478282426
+      },
+      {
+        "face": 1,
+        "width": 0.007879472503130713,
+        "aspectRatio": 12.66812693782125
+      },
+      {
+        "face": 2,
+        "width": 0.009177933784094271,
+        "aspectRatio": 11.099626746319453
+      },
+      {
+        "face": 13,
+        "width": 0.00791783644385977,
+        "aspectRatio": 13.806563513492586
+      },
+      {
+        "face": 14,
+        "width": 0.006564055246480504,
+        "aspectRatio": 15.764726664759756
+      },
+      {
+        "face": 15,
+        "width": 0.008203191269985803,
+        "aspectRatio": 11.974443197236528
+      },
+      {
+        "face": 16,
+        "width": 0.008313101667153955,
+        "aspectRatio": 11.506761890382004
+      },
+      {
+        "face": 17,
+        "width": 0.0078872996525382,
+        "aspectRatio": 11.739403717740263
+      },
+      {
+        "face": 18,
+        "width": 0.008890061029158458,
+        "aspectRatio": 10.019268010101692
+      },
+      {
+        "face": 19,
+        "width": 0.008449914054881944,
+        "aspectRatio": 10.176672589972428
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_054",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.028985237492179294,
+    "surfaceAreaPercent": 0.17049573063396165,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 47,
+        "width": 0.00996814963121717,
+        "aspectRatio": 10.543119383741331
+      },
+      {
+        "face": 49,
+        "width": 0.0047447995158266636,
+        "aspectRatio": 10.576671152271487
+      },
+      {
+        "face": 50,
+        "width": 0.009974146672449266,
+        "aspectRatio": 10.528400248104719
+      },
+      {
+        "face": 55,
+        "width": 0.007121258346970044,
+        "aspectRatio": 14.325598299918317
+      },
+      {
+        "face": 56,
+        "width": 0.00841430194730917,
+        "aspectRatio": 12.683471258120315
+      },
+      {
+        "face": 102,
+        "width": 0.00655486969780142,
+        "aspectRatio": 19.32033743978055
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_055",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.02891135167919856,
+    "surfaceAreaPercent": 0.17006112264874043,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 31,
+        "width": 0.006145026025684122,
+        "aspectRatio": 17.67790167802125
+      },
+      {
+        "face": 33,
+        "width": 0.0099680912373993,
+        "aspectRatio": 10.543181027394565
+      },
+      {
+        "face": 34,
+        "width": 0.009974198465516514,
+        "aspectRatio": 10.528345577231269
+      },
+      {
+        "face": 39,
+        "width": 0.007121258346970044,
+        "aspectRatio": 15.251284501750671
+      },
+      {
+        "face": 40,
+        "width": 0.009771899027724644,
+        "aspectRatio": 11.114353182729923
+      },
+      {
+        "face": 57,
+        "width": 0.007461498759845416,
+        "aspectRatio": 11.381923695781806
+      },
+      {
+        "face": 82,
+        "width": 0.0047447995158266636,
+        "aspectRatio": 10.57667089086908
+      },
+      {
+        "face": 103,
+        "width": 0.0048455582945039636,
+        "aspectRatio": 14.438964230331747
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_056",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.02573499083518982,
+    "surfaceAreaPercent": 0.15137726804853238,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.05952568099012616,
+        "aspectRatio": 14.604214730690687
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_057",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.02573498897254467,
+    "surfaceAreaPercent": 0.15137725709216035,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.05952568099012616,
+        "aspectRatio": 14.604214154769359
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_058",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.024953231728432,
+    "surfaceAreaPercent": 0.1467788378951693,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 5,
+        "width": 0.007205502580295241,
+        "aspectRatio": 17.34425594067891
+      },
+      {
+        "face": 9,
+        "width": 0.007172208113468595,
+        "aspectRatio": 35.37012171135065
+      },
+      {
+        "face": 10,
+        "width": 0.007172208113468595,
+        "aspectRatio": 15.170505497871083
+      },
+      {
+        "face": 11,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.171288230355659
+      },
+      {
+        "face": 13,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.050350848129675
+      },
+      {
+        "face": 14,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.050350848129675
+      },
+      {
+        "face": 16,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.025254130704045
+      },
+      {
+        "face": 20,
+        "width": 0.006905171597421282,
+        "aspectRatio": 32.971688749842855
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_059",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.02485992772199097,
+    "surfaceAreaPercent": 0.1462300090386339,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.00717183807763569,
+        "aspectRatio": 16.812372414739578
+      },
+      {
+        "face": 5,
+        "width": 0.00717183807763569,
+        "aspectRatio": 14.988483675676427
+      },
+      {
+        "face": 8,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.050359269649453
+      },
+      {
+        "face": 11,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.219518442127862
+      },
+      {
+        "face": 14,
+        "width": 0.006905531952343836,
+        "aspectRatio": 18.708276804473158
+      },
+      {
+        "face": 17,
+        "width": 0.006905531952343836,
+        "aspectRatio": 18.130885304075232
+      },
+      {
+        "face": 25,
+        "width": 0.007180269000359891,
+        "aspectRatio": 17.437147241321643
+      },
+      {
+        "face": 26,
+        "width": 0.00718064148916257,
+        "aspectRatio": 18.024624923948732
+      },
+      {
+        "face": 27,
+        "width": 0.00718064148916257,
+        "aspectRatio": 15.200859428961811
+      },
+      {
+        "face": 28,
+        "width": 0.00717183807763569,
+        "aspectRatio": 15.050359269649453
+      },
+      {
+        "face": 29,
+        "width": 0.00717183807763569,
+        "aspectRatio": 14.988483675676427
+      },
+      {
+        "face": 30,
+        "width": 0.006905171597421282,
+        "aspectRatio": 17.46163885405105
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_060",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.023634934797883034,
+    "surfaceAreaPercent": 0.13902440778476913,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_061",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.02287196882753051,
+    "surfaceAreaPercent": 0.1345365218187079,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 7,
+        "width": 0.040898462139824704,
+        "aspectRatio": 19.683366977705397
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_062",
+    "region": "unclassified",
+    "classification": "medium",
+    "surfaceArea": 0.022818339784862474,
+    "surfaceAreaPercent": 0.13422106734588,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 9,
+        "width": 0.003130965758185412,
+        "aspectRatio": 14.825126750647762
+      },
+      {
+        "face": 10,
+        "width": 0.0032819644060766975,
+        "aspectRatio": 14.14304315156304
+      },
+      {
+        "face": 18,
+        "width": 0.003496356840009449,
+        "aspectRatio": 20.593472908639384
+      },
+      {
+        "face": 38,
+        "width": 0.00376298248115611,
+        "aspectRatio": 11.760209830116427
+      },
+      {
+        "face": 41,
+        "width": 0.002826291602213503,
+        "aspectRatio": 15.40055349796182
+      },
+      {
+        "face": 56,
+        "width": 0.003598487200068504,
+        "aspectRatio": 15.468545855617892
+      },
+      {
+        "face": 71,
+        "width": 0.009520948330038905,
+        "aspectRatio": 14.200198058885382
+      },
+      {
+        "face": 73,
+        "width": 0.01137447323694786,
+        "aspectRatio": 11.338475242107702
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_063",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.020316026406362653,
+    "surfaceAreaPercent": 0.11950206606608793,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_064",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.020316020818427205,
+    "surfaceAreaPercent": 0.11950203319697181,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_065",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.020138323539867997,
+    "surfaceAreaPercent": 0.11845678982617683,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_066",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.019178288599505322,
+    "surfaceAreaPercent": 0.11280971315014716,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_067",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.019173384382156655,
+    "surfaceAreaPercent": 0.11278086577153679,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_068",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.018969933735206723,
+    "surfaceAreaPercent": 0.11158413703301807,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_069",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.018956242409331026,
+    "surfaceAreaPercent": 0.11150360249852774,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_070",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.018902905543654924,
+    "surfaceAreaPercent": 0.11118986665676946,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_071",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.01888530416181311,
+    "surfaceAreaPercent": 0.1110863325574509,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_072",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.017537656240165234,
+    "surfaceAreaPercent": 0.10315925529611433,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_073",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.017379298325977288,
+    "surfaceAreaPercent": 0.10222776911152023,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_074",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.01737475376285147,
+    "surfaceAreaPercent": 0.10220103727567593,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_075",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.017136906972154975,
+    "surfaceAreaPercent": 0.10080198500399166,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_076",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.017136022172053345,
+    "surfaceAreaPercent": 0.10079678047048272,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_077",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.017054716387065127,
+    "surfaceAreaPercent": 0.10031852704164419,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_078",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.017051653630915098,
+    "surfaceAreaPercent": 0.10030051142774095,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_079",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.016629324294626713,
+    "surfaceAreaPercent": 0.09781630377624,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_080",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.01659244205802679,
+    "surfaceAreaPercent": 0.09759935665347741,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_081",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.01600220613181591,
+    "surfaceAreaPercent": 0.09412749600327955,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_082",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.015390939312055707,
+    "surfaceAreaPercent": 0.09053192832592538,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_083",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.015361501486040652,
+    "surfaceAreaPercent": 0.09035877039834012,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_084",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.014779334887862206,
+    "surfaceAreaPercent": 0.08693437480613897,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.03757882465982185,
+        "aspectRatio": 21.015609327452264
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_085",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.014701686726766638,
+    "surfaceAreaPercent": 0.08647763609692728,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.006646440369976525,
+        "aspectRatio": 17.77185140979065
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_086",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.014687047543702647,
+    "surfaceAreaPercent": 0.08639152611721596,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 28,
+        "width": 0.006609916618213975,
+        "aspectRatio": 17.111688199226
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_087",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.012442647013813257,
+    "surfaceAreaPercent": 0.07318960882114445,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.014127128938955342,
+        "aspectRatio": 50.748603018441344
+      },
+      {
+        "face": 1,
+        "width": 0.02063136873650637,
+        "aspectRatio": 34.71952091554677
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_088",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.012422712985426188,
+    "surfaceAreaPercent": 0.07307235372757316,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.02063136873650637,
+        "aspectRatio": 34.77400759851522
+      },
+      {
+        "face": 1,
+        "width": 0.014071330357800216,
+        "aspectRatio": 50.98561081066106
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_089",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.012223228375660256,
+    "surfaceAreaPercent": 0.07189895384422046,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_090",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.012203634567413246,
+    "surfaceAreaPercent": 0.07178369997908043,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_091",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.010204965190496296,
+    "surfaceAreaPercent": 0.06002721201498752,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 4,
+        "width": 0.01865993006502833,
+        "aspectRatio": 12.35102613246598
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_092",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.010118212958332151,
+    "surfaceAreaPercent": 0.05951692172632096,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 7,
+        "width": 0.01742576573044143,
+        "aspectRatio": 10.177794937660476
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_093",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.009797070051718038,
+    "surfaceAreaPercent": 0.05762790858589523,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_094",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.009769597843842348,
+    "surfaceAreaPercent": 0.05746631273369089,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_095",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.009740030393004417,
+    "surfaceAreaPercent": 0.057292392332488146,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_096",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.009038579068146646,
+    "surfaceAreaPercent": 0.0531663451966641,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_097",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.009022366040881025,
+    "surfaceAreaPercent": 0.053070977617558135,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_098",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008497884962707758,
+    "surfaceAreaPercent": 0.049985897336571425,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.015007642530358004,
+        "aspectRatio": 33.88906659562956
+      },
+      {
+        "face": 1,
+        "width": 0.0184807832707897,
+        "aspectRatio": 27.52020786686993
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_099",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008373461663722992,
+    "surfaceAreaPercent": 0.04925401990158338,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.01798959741733228,
+        "aspectRatio": 28.271616387851644
+      },
+      {
+        "face": 1,
+        "width": 0.015007642530358004,
+        "aspectRatio": 33.88906659562956
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_100",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008298855274915695,
+    "surfaceAreaPercent": 0.04881517337589617,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_101",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008281365036964417,
+    "surfaceAreaPercent": 0.04871229304244126,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_102",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008257660083472729,
+    "surfaceAreaPercent": 0.04857285677367514,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_103",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00814574584364891,
+    "surfaceAreaPercent": 0.04791455959421423,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_104",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.008116672746837139,
+    "surfaceAreaPercent": 0.04774354706122904,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_105",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.008083732165687252,
+    "surfaceAreaPercent": 0.0475497853764344,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 8,
+        "width": 0.006386421742217354,
+        "aspectRatio": 13.616386965432035
+      },
+      {
+        "face": 9,
+        "width": 0.009071720852024845,
+        "aspectRatio": 10.240916516480624
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_106",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.007879644632339478,
+    "surfaceAreaPercent": 0.04634931037184628,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_107",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00780803058296442,
+    "surfaceAreaPercent": 0.04592806525784121,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_108",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.007687435019761324,
+    "surfaceAreaPercent": 0.045218703167395215,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_109",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.007645743666216731,
+    "surfaceAreaPercent": 0.04497346806157205,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.01789517145221718,
+        "aspectRatio": 27.83671449686832
+      },
+      {
+        "face": 1,
+        "width": 0.01590421816259341,
+        "aspectRatio": 31.907510796930044
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_110",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.007560940575785935,
+    "surfaceAreaPercent": 0.044474642931472026,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.01789517145221718,
+        "aspectRatio": 21.241637996549787
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_111",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.007009624474449083,
+    "surfaceAreaPercent": 0.041231714819081854,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_112",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0066157011315226555,
+    "surfaceAreaPercent": 0.03891459569303932,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_113",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0057802104274742305,
+    "surfaceAreaPercent": 0.03400010782441122,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_114",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.005115082876272936,
+    "surfaceAreaPercent": 0.03008772284438682,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 45,
+        "width": 0.0019054745169100422,
+        "aspectRatio": 11.334337027615335
+      },
+      {
+        "face": 47,
+        "width": 0.0019054309920585742,
+        "aspectRatio": 11.509558279117122
+      },
+      {
+        "face": 51,
+        "width": 0.0017044639767224107,
+        "aspectRatio": 11.055746137856934
+      },
+      {
+        "face": 65,
+        "width": 0.0038266181648705976,
+        "aspectRatio": 10.032600875046288
+      },
+      {
+        "face": 89,
+        "width": 0.002333680122556637,
+        "aspectRatio": 10.043246149229114
+      },
+      {
+        "face": 90,
+        "width": 0.0023337334412703893,
+        "aspectRatio": 10.04301669158965
+      },
+      {
+        "face": 91,
+        "width": 0.0023337334412703893,
+        "aspectRatio": 10.059804231279312
+      },
+      {
+        "face": 93,
+        "width": 0.0031502363783165303,
+        "aspectRatio": 14.431331251276388
+      },
+      {
+        "face": 97,
+        "width": 0.002144511146609084,
+        "aspectRatio": 18.90979516528745
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_115",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.005062025811639614,
+    "surfaceAreaPercent": 0.02977563283641665,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_116",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004963520186720416,
+    "surfaceAreaPercent": 0.029196207241001564,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_117",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0049435733089922,
+    "surfaceAreaPercent": 0.02907887656558253,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_118",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004867919971729862,
+    "surfaceAreaPercent": 0.02863387172424148,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_119",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.00485161405231338,
+    "surfaceAreaPercent": 0.028537957738878357,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 4,
+        "width": 0.01739454268755602,
+        "aspectRatio": 10.171954263599236
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_120",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.004401496611535549,
+    "surfaceAreaPercent": 0.02589029608155325,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_121",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.004401496611535549,
+    "surfaceAreaPercent": 0.02589029608155325,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_122",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.004388513974845409,
+    "surfaceAreaPercent": 0.025813930168434966,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_123",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004340541374403983,
+    "surfaceAreaPercent": 0.025531747779386785,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_124",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004304953443352133,
+    "surfaceAreaPercent": 0.025322413965645447,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_125",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004304953443352133,
+    "surfaceAreaPercent": 0.025322413965645447,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_126",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004286309645976871,
+    "surfaceAreaPercent": 0.025212748214031563,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_127",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004283031274098903,
+    "surfaceAreaPercent": 0.02519346431446804,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_128",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0042744747624965385,
+    "surfaceAreaPercent": 0.025143133566006285,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_129",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.004048771881571156,
+    "surfaceAreaPercent": 0.023815513683645616,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_130",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.003805308719165623,
+    "surfaceAreaPercent": 0.022383425029275057,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_131",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.003805308719165623,
+    "surfaceAreaPercent": 0.022383425029275057,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_132",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0038053017342463136,
+    "surfaceAreaPercent": 0.022383383942879906,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_133",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0038053016178309917,
+    "surfaceAreaPercent": 0.022383383258106654,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_134",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0031221152598845947,
+    "surfaceAreaPercent": 0.01836477353346132,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.00315041421669301,
+        "aspectRatio": 29.30382851334694
+      },
+      {
+        "face": 3,
+        "width": 0.002435207320258695,
+        "aspectRatio": 38.20729152556355
+      },
+      {
+        "face": 4,
+        "width": 0.002435207320258695,
+        "aspectRatio": 96.43603627280902
+      },
+      {
+        "face": 6,
+        "width": 0.005737569929964162,
+        "aspectRatio": 20.314509006211573
+      },
+      {
+        "face": 8,
+        "width": 0.0013916492257927792,
+        "aspectRatio": 10.611797552542235
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_135",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.003096519911196083,
+    "surfaceAreaPercent": 0.018214217662506103,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_136",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.003096519911196083,
+    "surfaceAreaPercent": 0.018214217662506103,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_137",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.003096478001680225,
+    "surfaceAreaPercent": 0.018213971144135206,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_138",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0030964778852649033,
+    "surfaceAreaPercent": 0.018213970459361954,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_139",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0030806088393546815,
+    "surfaceAreaPercent": 0.01812062623274807,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 3,
+        "width": 0.002435207320258695,
+        "aspectRatio": 38.20729170857883
+      },
+      {
+        "face": 4,
+        "width": 0.002435207320258695,
+        "aspectRatio": 142.0045512351138
+      },
+      {
+        "face": 5,
+        "width": 0.005737569929964162,
+        "aspectRatio": 61.24016742337832
+      },
+      {
+        "face": 7,
+        "width": 0.0013916492257927792,
+        "aspectRatio": 10.611797552542235
+      },
+      {
+        "face": 11,
+        "width": 0.002459934484009612,
+        "aspectRatio": 37.63080637208948
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_140",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0030305616091936827,
+    "surfaceAreaPercent": 0.017826240545040395,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_141",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.002900883702750434,
+    "surfaceAreaPercent": 0.01706345468164736,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 13,
+        "width": 0.005914057009382137,
+        "aspectRatio": 10.041717965400911
+      },
+      {
+        "face": 14,
+        "width": 0.005914057009382137,
+        "aspectRatio": 10.014271984438842
+      },
+      {
+        "face": 15,
+        "width": 0.005914057009382137,
+        "aspectRatio": 10.014271984438842
+      },
+      {
+        "face": 16,
+        "width": 0.005914057009382137,
+        "aspectRatio": 11.698466285244054
+      },
+      {
+        "face": 17,
+        "width": 0.006085499384634918,
+        "aspectRatio": 11.368893850840276
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_142",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.002824807055731071,
+    "surfaceAreaPercent": 0.01661595986566567,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006085530097100366,
+        "aspectRatio": 11.368836474284084
+      },
+      {
+        "face": 3,
+        "width": 0.005914028943508464,
+        "aspectRatio": 10.0495116904556
+      },
+      {
+        "face": 4,
+        "width": 0.005924253650683261,
+        "aspectRatio": 10.032167174109182
+      },
+      {
+        "face": 5,
+        "width": 0.005924253650683261,
+        "aspectRatio": 19.98519780725024
+      },
+      {
+        "face": 6,
+        "width": 0.006223324860046483,
+        "aspectRatio": 19.024779154521752
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_143",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0020370808197185397,
+    "surfaceAreaPercent": 0.011982430118506119,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.005566120127280288,
+        "aspectRatio": 63.51013058494788
+      },
+      {
+        "face": 1,
+        "width": 0.006536091861491661,
+        "aspectRatio": 54.50330541369964
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_144",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.0020329573890194297,
+    "surfaceAreaPercent": 0.011958175449902733,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_145",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0020246808417141438,
+    "surfaceAreaPercent": 0.011909491495516573,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_146",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.0018931029189843684,
+    "surfaceAreaPercent": 0.011135529437169977,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_147",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0016080043278634548,
+    "surfaceAreaPercent": 0.009458534635627,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_148",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.001608004269655794,
+    "surfaceAreaPercent": 0.009458534293240374,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_149",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0014359849010361359,
+    "surfaceAreaPercent": 0.008446689282692687,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_150",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.001435808269889094,
+    "surfaceAreaPercent": 0.008445650310475339,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 2,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.118667375806835
+      },
+      {
+        "face": 3,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.11871355000195
+      },
+      {
+        "face": 4,
+        "width": 0.006085499384634918,
+        "aspectRatio": 10.349264102208412
+      },
+      {
+        "face": 6,
+        "width": 0.006085530097100366,
+        "aspectRatio": 10.041320650454411
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_151",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0014256968861445785,
+    "surfaceAreaPercent": 0.008386173559259942,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_152",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0014185070322128013,
+    "surfaceAreaPercent": 0.008343881706395858,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006085530097100366,
+        "aspectRatio": 20.04950638142977
+      },
+      {
+        "face": 2,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.298377702638684
+      },
+      {
+        "face": 3,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.411995143738634
+      },
+      {
+        "face": 4,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.411995143738634
+      },
+      {
+        "face": 5,
+        "width": 0.00591408507512262,
+        "aspectRatio": 10.273472637273523
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_153",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0013288664631545544,
+    "surfaceAreaPercent": 0.007816601765351606,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_154",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.001315305707976222,
+    "surfaceAreaPercent": 0.007736835268261428,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_155",
+    "region": "unclassified",
+    "classification": "sliver",
+    "surfaceArea": 0.0011801453038060572,
+    "surfaceAreaPercent": 0.006941800490023314,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.005500554537247102,
+        "aspectRatio": 35.674489841349775
+      },
+      {
+        "face": 3,
+        "width": 0.0065731837269756175,
+        "aspectRatio": 29.91158647787333
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_156",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0009747568601596868,
+    "surfaceAreaPercent": 0.00573367332623145,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.00250866602986132,
+        "aspectRatio": 29.470315207432737
+      },
+      {
+        "face": 3,
+        "width": 0.0038896019555668083,
+        "aspectRatio": 20.869062483474845
+      },
+      {
+        "face": 4,
+        "width": 0.001391530031820072,
+        "aspectRatio": 58.33316162095267
+      },
+      {
+        "face": 5,
+        "width": 0.0025087321474347615,
+        "aspectRatio": 31.98622495716625
+      },
+      {
+        "face": 6,
+        "width": 0.0025087321474347615,
+        "aspectRatio": 32.353546344869
+      },
+      {
+        "face": 7,
+        "width": 0.002717121748422849,
+        "aspectRatio": 29.8634084408492
+      },
+      {
+        "face": 9,
+        "width": 0.0025086164518672883,
+        "aspectRatio": 29.347945473511142
+      },
+      {
+        "face": 10,
+        "width": 0.002359515475814426,
+        "aspectRatio": 30.99839937367058
+      },
+      {
+        "face": 11,
+        "width": 0.001391530031820072,
+        "aspectRatio": 52.912486754471175
+      },
+      {
+        "face": 12,
+        "width": 0.0013915896709304233,
+        "aspectRatio": 52.910219093462736
+      },
+      {
+        "face": 17,
+        "width": 0.002359515475814426,
+        "aspectRatio": 31.3332035360664
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_157",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0008710664841373728,
+    "surfaceAreaPercent": 0.005123750208492474,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.003746864629258964,
+        "aspectRatio": 19.743706975021112
+      },
+      {
+        "face": 2,
+        "width": 0.002717167521989282,
+        "aspectRatio": 29.871688492533607
+      },
+      {
+        "face": 3,
+        "width": 0.0013916492257927792,
+        "aspectRatio": 58.33673660991373
+      },
+      {
+        "face": 4,
+        "width": 0.002508632993080247,
+        "aspectRatio": 31.987488499060387
+      },
+      {
+        "face": 5,
+        "width": 0.0033185657596952736,
+        "aspectRatio": 22.291858191760834
+      },
+      {
+        "face": 9,
+        "width": 0.002359515475814426,
+        "aspectRatio": 30.998399253529765
+      },
+      {
+        "face": 10,
+        "width": 0.002227604739262076,
+        "aspectRatio": 33.04981165372452
+      },
+      {
+        "face": 12,
+        "width": 0.0024600440987015007,
+        "aspectRatio": 32.98023074315453
+      },
+      {
+        "face": 14,
+        "width": 0.002227586111240444,
+        "aspectRatio": 36.43692241584102
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_158",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0008669099715916673,
+    "surfaceAreaPercent": 0.0050993009472587,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.006085581221148803,
+        "aspectRatio": 57.9107195435283
+      },
+      {
+        "face": 2,
+        "width": 0.002459934484009612,
+        "aspectRatio": 143.26413554838956
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_159",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0008669098247082729,
+    "surfaceAreaPercent": 0.005099300083267448,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.006085472121120461,
+        "aspectRatio": 57.91033827331747
+      },
+      {
+        "face": 2,
+        "width": 0.002459934484009612,
+        "aspectRatio": 141.00145762993714
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_160",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.000807129021268338,
+    "surfaceAreaPercent": 0.004747659984988901,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_161",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0008071272750385106,
+    "surfaceAreaPercent": 0.004747649713390113,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_162",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0007334245601668954,
+    "surfaceAreaPercent": 0.004314118740075401,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_163",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0007189002353698015,
+    "surfaceAreaPercent": 0.004228684374774318,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_164",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0007189002353698015,
+    "surfaceAreaPercent": 0.004228684374774318,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_165",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0006829542689956725,
+    "surfaceAreaPercent": 0.004017244540894932,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_166",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0006390238486346789,
+    "surfaceAreaPercent": 0.0037588388915182243,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_167",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0006160942139104009,
+    "surfaceAreaPercent": 0.0036239631698153935,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_168",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0006147028179839253,
+    "surfaceAreaPercent": 0.0036157787599015684,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_169",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0006147028179839253,
+    "surfaceAreaPercent": 0.0036157787599015684,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_170",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0005994487437419593,
+    "surfaceAreaPercent": 0.0035260518934672183,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_171",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.000571059703361243,
+    "surfaceAreaPercent": 0.0033590630881136915,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_172",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0005528269495016502,
+    "surfaceAreaPercent": 0.00325181515917748,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.0019680049281205606,
+        "aspectRatio": 42.6498037023074
+      },
+      {
+        "face": 1,
+        "width": 0.001998427673101627,
+        "aspectRatio": 42.19454192192016
+      },
+      {
+        "face": 3,
+        "width": 0.001998427673101627,
+        "aspectRatio": 41.8483904616142
+      },
+      {
+        "face": 7,
+        "width": 0.0018734433590335494,
+        "aspectRatio": 32.69552910411525
+      },
+      {
+        "face": 8,
+        "width": 0.0017395257752130001,
+        "aspectRatio": 35.22679617961406
+      },
+      {
+        "face": 9,
+        "width": 0.0018733548199191836,
+        "aspectRatio": 32.710258238883455
+      },
+      {
+        "face": 10,
+        "width": 0.0022276791987571576,
+        "aspectRatio": 27.229050062151966
+      },
+      {
+        "face": 11,
+        "width": 0.0019679206434494102,
+        "aspectRatio": 42.84864865425132
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_173",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0005518670852779906,
+    "surfaceAreaPercent": 0.003246169086683977,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 1,
+        "width": 0.0019679206434494102,
+        "aspectRatio": 42.84864940410005
+      },
+      {
+        "face": 3,
+        "width": 0.0018733548199191836,
+        "aspectRatio": 32.70973084166126
+      },
+      {
+        "face": 4,
+        "width": 0.0019680470979856874,
+        "aspectRatio": 31.135907262180236
+      },
+      {
+        "face": 5,
+        "width": 0.0019680049281205606,
+        "aspectRatio": 30.817304398932276
+      },
+      {
+        "face": 6,
+        "width": 0.0018733991203418216,
+        "aspectRatio": 32.69630045837874
+      },
+      {
+        "face": 7,
+        "width": 0.0019679628151206044,
+        "aspectRatio": 42.65071625210911
+      },
+      {
+        "face": 8,
+        "width": 0.0019984692010139807,
+        "aspectRatio": 42.19366586358758
+      },
+      {
+        "face": 9,
+        "width": 0.001998427673101627,
+        "aspectRatio": 41.8483904616142
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_174",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0005415957275545225,
+    "surfaceAreaPercent": 0.0031857513433365924,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_175",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0004231077618896961,
+    "surfaceAreaPercent": 0.0024887864734504275,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006609857176695949,
+        "aspectRatio": 19.394335327056883
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_176",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0004219581314828247,
+    "surfaceAreaPercent": 0.0024820241663887225,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.006609857176695949,
+        "aspectRatio": 19.341779426535584
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_177",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0004153646295890212,
+    "surfaceAreaPercent": 0.0024432401501072016,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_178",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0004153646295890212,
+    "surfaceAreaPercent": 0.0024432401501072016,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_179",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0003873786408803426,
+    "surfaceAreaPercent": 0.0022786221581487984,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_180",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 0.0003873770183417946,
+    "surfaceAreaPercent": 0.002278612614121592,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_181",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00029307015938684344,
+    "surfaceAreaPercent": 0.001723884821200912,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.004641452289529538,
+        "aspectRatio": 27.226196668887294
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_182",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00029307015938684344,
+    "surfaceAreaPercent": 0.001723884821200912,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.004641452289529538,
+        "aspectRatio": 27.226196668887294
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_183",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.000292850483674556,
+    "surfaceAreaPercent": 0.001722592654073453,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.004981017400257526,
+        "aspectRatio": 23.62811746822607
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_184",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0002715843147598207,
+    "surfaceAreaPercent": 0.0015975017001738571,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_185",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00026512492331676185,
+    "surfaceAreaPercent": 0.0015595065426792108,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.004981017400257526,
+        "aspectRatio": 21.395348600461514
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_186",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00023866559786256403,
+    "surfaceAreaPercent": 0.0014038686243557042,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_187",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00023757516464684159,
+    "surfaceAreaPercent": 0.0013974545244928931,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_188",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0002145616081179469,
+    "surfaceAreaPercent": 0.0012620851615218786,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.005275879799164601,
+        "aspectRatio": 15.181282793029597
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_189",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00020818703342229128,
+    "surfaceAreaPercent": 0.0012245889094897944,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_190",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00020716276776511222,
+    "surfaceAreaPercent": 0.0012185640176243704,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_191",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0001316293673880864,
+    "surfaceAreaPercent": 0.0007742646639267058,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.002459934484009612,
+        "aspectRatio": 34.748163700198354
+      },
+      {
+        "face": 1,
+        "width": 0.004882880538460808,
+        "aspectRatio": 17.505692688740975
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_192",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.0001223640574607998,
+    "surfaceAreaPercent": 0.0007197646521179686,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.00315041421669301,
+        "aspectRatio": 24.991536508614402
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_193",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00010360155283706263,
+    "surfaceAreaPercent": 0.00060940064577818,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_194",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 0.00010234296496491879,
+    "surfaceAreaPercent": 0.0006019974337504675,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_195",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 7.807167276041582e-05,
+    "surfaceAreaPercent": 0.0004592298715059402,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_196",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 7.015285984834918e-05,
+    "surfaceAreaPercent": 0.00041265016714572107,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_197",
+    "region": "unclassified",
+    "classification": "small",
+    "surfaceArea": 6.980457374083926e-05,
+    "surfaceAreaPercent": 0.0004106014934239486,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_198",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 6.72126334393397e-05,
+    "surfaceAreaPercent": 0.00039535529247137694,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_199",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 6.52335729682818e-05,
+    "surfaceAreaPercent": 0.00038371414717895523,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_200",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 5.64722104172688e-05,
+    "surfaceAreaPercent": 0.00033217843318361406,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.001391530031820072,
+        "aspectRatio": 58.34173354654629
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_201",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 4.116750642424449e-05,
+    "surfaceAreaPercent": 0.00024215375458192084,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_202",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.671828017104417e-05,
+    "surfaceAreaPercent": 0.00021598270523309735,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_203",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.650573125923984e-05,
+    "surfaceAreaPercent": 0.00021473245906818974,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_204",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.2512685720575973e-05,
+    "surfaceAreaPercent": 0.00019124473650759775,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_205",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.153292345814407e-05,
+    "surfaceAreaPercent": 0.0001854816206171041,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_206",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.149180702166632e-05,
+    "surfaceAreaPercent": 0.0001852397672639884,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_207",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 3.146891322103329e-05,
+    "surfaceAreaPercent": 0.00018510510232405233,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_208",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 2.8936976377735846e-05,
+    "surfaceAreaPercent": 0.00017021185116012727,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_209",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.4393380297406111e-05,
+    "surfaceAreaPercent": 8.466412913680132e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_210",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.439307197870221e-05,
+    "surfaceAreaPercent": 8.466231555764043e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_211",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.3313255294633564e-05,
+    "surfaceAreaPercent": 7.831066380558216e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_212",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.3313254839886213e-05,
+    "surfaceAreaPercent": 7.831066113068664e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_213",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.3169127669243608e-05,
+    "surfaceAreaPercent": 7.746288242024665e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_214",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.3169125850254204e-05,
+    "surfaceAreaPercent": 7.746287172066458e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_215",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.2033401617372874e-05,
+    "surfaceAreaPercent": 7.078236296388643e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_216",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 8.473009074805304e-06,
+    "surfaceAreaPercent": 4.983957344723839e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.001254465267506809,
+        "aspectRatio": 15.282918277592795
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_217",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 8.473008165310603e-06,
+    "surfaceAreaPercent": 4.9839568097447355e-05,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [
+      {
+        "face": 0,
+        "width": 0.001254465267506809,
+        "aspectRatio": 15.282918277592795
+      }
+    ],
+    "finalComponentIds": []
+  },
+  {
+    "id": "PaintIsland_218",
+    "region": "unclassified",
+    "classification": "degenerate",
+    "surfaceArea": 1.8154378267354332e-07,
+    "surfaceAreaPercent": 1.0678691136248376e-06,
+    "decision": "exclude",
+    "reason": "Sliver, degenerate, or insufficient exterior area for safe macro processing.",
+    "processingStrategy": "exclude",
+    "possibleNarrowBridges": [],
+    "finalComponentIds": []
+  }
+]

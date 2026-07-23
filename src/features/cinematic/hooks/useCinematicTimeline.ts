@@ -13,7 +13,9 @@ export function useCinematicTimeline(enabled: boolean) {
     const context = gsap.context(() => {
       const hero = document.getElementById('hero')
       if (!hero) return
-      gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: '+=3600', pin: true, scrub: .8, invalidateOnRefresh: true, onUpdate: (self) => setSceneState('hero', self.progress) } })
+      // The foam story keeps the same deterministic 0–1 progress, but now
+      // consumes 1.7× more physical scroll (3600px → 6120px).
+      gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: '+=6120', pin: true, scrub: .8, invalidateOnRefresh: true, onUpdate: (self) => setSceneState('hero', self.progress) } })
     })
     ScrollTrigger.refresh()
     return () => context.revert()

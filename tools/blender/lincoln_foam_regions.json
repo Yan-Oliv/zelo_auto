@@ -1,0 +1,1361 @@
+{
+  "include": [
+    "PaintIsland_000",
+    "PaintIsland_001",
+    "PaintIsland_002",
+    "PaintIsland_003",
+    "PaintIsland_004",
+    "PaintIsland_005",
+    "PaintIsland_006",
+    "PaintIsland_007",
+    "PaintIsland_008",
+    "PaintIsland_009",
+    "PaintIsland_010",
+    "PaintIsland_011",
+    "PaintIsland_013",
+    "PaintIsland_014",
+    "PaintIsland_015",
+    "PaintIsland_018",
+    "PaintIsland_019",
+    "PaintIsland_020",
+    "PaintIsland_021"
+  ],
+  "exclude": [
+    "PaintIsland_012",
+    "PaintIsland_016",
+    "PaintIsland_017",
+    "PaintIsland_022",
+    "PaintIsland_023",
+    "PaintIsland_028",
+    "PaintIsland_030",
+    "PaintIsland_037",
+    "PaintIsland_039",
+    "PaintIsland_041",
+    "PaintIsland_044",
+    "PaintIsland_047",
+    "PaintIsland_048",
+    "PaintIsland_049",
+    "PaintIsland_056",
+    "PaintIsland_057",
+    "PaintIsland_060",
+    "PaintIsland_061",
+    "PaintIsland_063",
+    "PaintIsland_064",
+    "PaintIsland_065",
+    "PaintIsland_072",
+    "PaintIsland_079",
+    "PaintIsland_080",
+    "PaintIsland_081",
+    "PaintIsland_084",
+    "PaintIsland_087",
+    "PaintIsland_088",
+    "PaintIsland_095",
+    "PaintIsland_098",
+    "PaintIsland_099",
+    "PaintIsland_100",
+    "PaintIsland_101",
+    "PaintIsland_102",
+    "PaintIsland_103",
+    "PaintIsland_104",
+    "PaintIsland_106",
+    "PaintIsland_107",
+    "PaintIsland_108",
+    "PaintIsland_109",
+    "PaintIsland_110",
+    "PaintIsland_112",
+    "PaintIsland_115",
+    "PaintIsland_120",
+    "PaintIsland_121",
+    "PaintIsland_122",
+    "PaintIsland_130",
+    "PaintIsland_131",
+    "PaintIsland_132",
+    "PaintIsland_133",
+    "PaintIsland_135",
+    "PaintIsland_136",
+    "PaintIsland_137",
+    "PaintIsland_138",
+    "PaintIsland_140",
+    "PaintIsland_143",
+    "PaintIsland_144",
+    "PaintIsland_145",
+    "PaintIsland_146",
+    "PaintIsland_147",
+    "PaintIsland_148",
+    "PaintIsland_149",
+    "PaintIsland_151",
+    "PaintIsland_153",
+    "PaintIsland_154",
+    "PaintIsland_155",
+    "PaintIsland_158",
+    "PaintIsland_159",
+    "PaintIsland_160",
+    "PaintIsland_161",
+    "PaintIsland_162",
+    "PaintIsland_163",
+    "PaintIsland_164",
+    "PaintIsland_165",
+    "PaintIsland_166",
+    "PaintIsland_167",
+    "PaintIsland_168",
+    "PaintIsland_169",
+    "PaintIsland_170",
+    "PaintIsland_171",
+    "PaintIsland_174",
+    "PaintIsland_175",
+    "PaintIsland_176",
+    "PaintIsland_177",
+    "PaintIsland_178",
+    "PaintIsland_181",
+    "PaintIsland_182",
+    "PaintIsland_183",
+    "PaintIsland_184",
+    "PaintIsland_185",
+    "PaintIsland_186",
+    "PaintIsland_187",
+    "PaintIsland_188",
+    "PaintIsland_189",
+    "PaintIsland_190",
+    "PaintIsland_191",
+    "PaintIsland_192",
+    "PaintIsland_193",
+    "PaintIsland_194",
+    "PaintIsland_195",
+    "PaintIsland_198",
+    "PaintIsland_199",
+    "PaintIsland_200",
+    "PaintIsland_201",
+    "PaintIsland_202",
+    "PaintIsland_203",
+    "PaintIsland_204",
+    "PaintIsland_205",
+    "PaintIsland_206",
+    "PaintIsland_207",
+    "PaintIsland_208",
+    "PaintIsland_209",
+    "PaintIsland_210",
+    "PaintIsland_211",
+    "PaintIsland_212",
+    "PaintIsland_213",
+    "PaintIsland_214",
+    "PaintIsland_215",
+    "PaintIsland_216",
+    "PaintIsland_217",
+    "PaintIsland_218"
+  ],
+  "regions": {
+    "hood": [
+      "PaintIsland_000"
+    ],
+    "roof": [
+      "PaintIsland_006",
+      "PaintIsland_007"
+    ],
+    "leftDoors": [
+      "PaintIsland_004"
+    ],
+    "rightDoors": [
+      "PaintIsland_005"
+    ],
+    "leftFenders": [
+      "PaintIsland_003",
+      "PaintIsland_008",
+      "PaintIsland_010",
+      "PaintIsland_015"
+    ],
+    "rightFenders": [
+      "PaintIsland_002",
+      "PaintIsland_009",
+      "PaintIsland_011",
+      "PaintIsland_014"
+    ],
+    "rear": [
+      "PaintIsland_001",
+      "PaintIsland_018",
+      "PaintIsland_019",
+      "PaintIsland_021"
+    ],
+    "paintedBumpers": [
+      "PaintIsland_013",
+      "PaintIsland_020"
+    ],
+    "unclassified": [
+      "PaintIsland_024",
+      "PaintIsland_025",
+      "PaintIsland_026",
+      "PaintIsland_027",
+      "PaintIsland_029",
+      "PaintIsland_031",
+      "PaintIsland_032",
+      "PaintIsland_033",
+      "PaintIsland_034",
+      "PaintIsland_035",
+      "PaintIsland_036",
+      "PaintIsland_038",
+      "PaintIsland_040",
+      "PaintIsland_042",
+      "PaintIsland_043",
+      "PaintIsland_045",
+      "PaintIsland_046",
+      "PaintIsland_050",
+      "PaintIsland_051",
+      "PaintIsland_052",
+      "PaintIsland_053",
+      "PaintIsland_054",
+      "PaintIsland_055",
+      "PaintIsland_058",
+      "PaintIsland_059",
+      "PaintIsland_062",
+      "PaintIsland_066",
+      "PaintIsland_067",
+      "PaintIsland_068",
+      "PaintIsland_069",
+      "PaintIsland_070",
+      "PaintIsland_071",
+      "PaintIsland_073",
+      "PaintIsland_074",
+      "PaintIsland_075",
+      "PaintIsland_076",
+      "PaintIsland_077",
+      "PaintIsland_078",
+      "PaintIsland_082",
+      "PaintIsland_083",
+      "PaintIsland_085",
+      "PaintIsland_086",
+      "PaintIsland_089",
+      "PaintIsland_090",
+      "PaintIsland_091",
+      "PaintIsland_092",
+      "PaintIsland_093",
+      "PaintIsland_094",
+      "PaintIsland_096",
+      "PaintIsland_097",
+      "PaintIsland_105",
+      "PaintIsland_111",
+      "PaintIsland_113",
+      "PaintIsland_114",
+      "PaintIsland_116",
+      "PaintIsland_117",
+      "PaintIsland_118",
+      "PaintIsland_119",
+      "PaintIsland_123",
+      "PaintIsland_124",
+      "PaintIsland_125",
+      "PaintIsland_126",
+      "PaintIsland_127",
+      "PaintIsland_128",
+      "PaintIsland_129",
+      "PaintIsland_134",
+      "PaintIsland_139",
+      "PaintIsland_141",
+      "PaintIsland_142",
+      "PaintIsland_150",
+      "PaintIsland_152",
+      "PaintIsland_156",
+      "PaintIsland_157",
+      "PaintIsland_172",
+      "PaintIsland_173",
+      "PaintIsland_179",
+      "PaintIsland_180",
+      "PaintIsland_196",
+      "PaintIsland_197"
+    ]
+  },
+  "strategies": {
+    "PaintIsland_000": {
+      "region": "hood",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_006": {
+      "region": "roof",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_007": {
+      "region": "roof",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_004": {
+      "region": "leftDoors",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_005": {
+      "region": "rightDoors",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_003": {
+      "region": "leftFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_008": {
+      "region": "leftFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_010": {
+      "region": "leftFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_015": {
+      "region": "leftFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_002": {
+      "region": "rightFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_009": {
+      "region": "rightFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_011": {
+      "region": "rightFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_014": {
+      "region": "rightFenders",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_001": {
+      "region": "rear",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_018": {
+      "region": "rear",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_019": {
+      "region": "rear",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_021": {
+      "region": "rear",
+      "strategy": "localSubdivision",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_013": {
+      "region": "paintedBumpers",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_020": {
+      "region": "paintedBumpers",
+      "strategy": "manualCleanup",
+      "reason": "Preliminary mapping from deterministic island render; process separately with boundary falloff."
+    },
+    "PaintIsland_012": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_016": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_017": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_022": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_023": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_028": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_030": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_037": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_039": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_041": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_044": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_047": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_048": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_049": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_056": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_057": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_060": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_061": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_063": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_064": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_065": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_072": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_079": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_080": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_081": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_084": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_087": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_088": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_095": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_098": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_099": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_100": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_101": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_102": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_103": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_104": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_106": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_107": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_108": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_109": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_110": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_112": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_115": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_120": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_121": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_122": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_130": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_131": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_132": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_133": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_135": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_136": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_137": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_138": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_140": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_143": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_144": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_145": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_146": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_147": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_148": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_149": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_151": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_153": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_154": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_155": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_158": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_159": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_160": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_161": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_162": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_163": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_164": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_165": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_166": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_167": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_168": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_169": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_170": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_171": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_174": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_175": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_176": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_177": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_178": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_181": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_182": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_183": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_184": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_185": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_186": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_187": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_188": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_189": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_190": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_191": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_192": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_193": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_194": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_195": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_198": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_199": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_200": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_201": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_202": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_203": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_204": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_205": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_206": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_207": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_208": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_209": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_210": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_211": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_212": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_213": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_214": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_215": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_216": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_217": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_218": {
+      "region": "unclassified",
+      "strategy": "exclude",
+      "reason": "Sliver or degenerate diagnostic classification; retained in audit only."
+    },
+    "PaintIsland_024": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_025": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_026": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_027": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_029": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_031": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_032": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_033": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_034": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_035": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_036": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_038": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_040": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_042": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_043": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_045": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_046": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_050": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_051": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_052": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_053": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_054": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_055": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_058": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_059": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_062": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_066": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_067": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_068": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_069": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_070": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_071": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_073": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_074": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_075": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_076": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_077": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_078": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_082": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_083": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_085": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_086": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_089": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_090": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_091": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_092": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_093": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_094": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_096": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_097": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_105": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_111": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_113": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_114": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_116": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_117": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_118": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_119": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_123": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_124": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_125": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_126": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_127": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_128": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_129": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_134": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_139": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_141": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_142": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_150": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_152": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_156": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_157": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_172": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_173": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_179": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_180": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_196": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    },
+    "PaintIsland_197": {
+      "region": "unclassified",
+      "strategy": "manualCleanup",
+      "reason": "Not admitted to v3 until visual classification is approved."
+    }
+  }
+}

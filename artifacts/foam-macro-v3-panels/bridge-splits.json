@@ -1,0 +1,1693 @@
+{
+  "PaintIsland_000": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "hood",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_000_A",
+        "decision": "keep",
+        "region": "hood",
+        "surfaceArea": 2.5446507007109176
+      }
+    ],
+    "kept": [
+      "PaintIsland_000_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_001": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "rear",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_001_A",
+        "decision": "keep",
+        "region": "rear",
+        "surfaceArea": 1.5163955528387305
+      }
+    ],
+    "kept": [
+      "PaintIsland_001_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_002": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "rightFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_002_A",
+        "decision": "keep",
+        "region": "rightFenders",
+        "surfaceArea": 1.1913563489279113
+      }
+    ],
+    "kept": [
+      "PaintIsland_002_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_003": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 21,
+    "region": "leftFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_003_A",
+        "decision": "keep",
+        "region": "leftFenders",
+        "surfaceArea": 1.18448188277398
+      }
+    ],
+    "kept": [
+      "PaintIsland_003_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_004": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "leftDoors",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_004_A",
+        "decision": "keep",
+        "region": "leftDoors",
+        "surfaceArea": 1.007632416778506
+      }
+    ],
+    "kept": [
+      "PaintIsland_004_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_005": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "rightDoors",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_005_A",
+        "decision": "keep",
+        "region": "rightDoors",
+        "surfaceArea": 1.0067629444474733
+      }
+    ],
+    "kept": [
+      "PaintIsland_005_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_006": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "roof",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_006_A",
+        "decision": "keep",
+        "region": "roof",
+        "surfaceArea": 0.7412853186579014
+      }
+    ],
+    "kept": [
+      "PaintIsland_006_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_007": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "roof",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_007_A",
+        "decision": "keep",
+        "region": "roof",
+        "surfaceArea": 0.7411546457497025
+      }
+    ],
+    "kept": [
+      "PaintIsland_007_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_008": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 25,
+    "region": "leftFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_008_A",
+        "decision": "keep",
+        "region": "leftFenders",
+        "surfaceArea": 0.6757971977276611
+      }
+    ],
+    "kept": [
+      "PaintIsland_008_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_009": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 23,
+    "region": "rightFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_009_A",
+        "decision": "keep",
+        "region": "rightFenders",
+        "surfaceArea": 0.6750546651283003
+      }
+    ],
+    "kept": [
+      "PaintIsland_009_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_010": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 20,
+    "region": "leftFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_010_A",
+        "decision": "keep",
+        "region": "leftFenders",
+        "surfaceArea": 0.3482824974198593
+      }
+    ],
+    "kept": [
+      "PaintIsland_010_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_011": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 20,
+    "region": "rightFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_011_A",
+        "decision": "keep",
+        "region": "rightFenders",
+        "surfaceArea": 0.3481136925256578
+      }
+    ],
+    "kept": [
+      "PaintIsland_011_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_014": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "rightFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_014_A",
+        "decision": "keep",
+        "region": "rightFenders",
+        "surfaceArea": 0.21659628717316082
+      }
+    ],
+    "kept": [
+      "PaintIsland_014_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_015": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 32,
+    "region": "leftFenders",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_015_A",
+        "decision": "keep",
+        "region": "leftFenders",
+        "surfaceArea": 0.21513833015524142
+      }
+    ],
+    "kept": [
+      "PaintIsland_015_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_017": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 12,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_017_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.17640407476574183
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_017_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_018": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "rear",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_018_A",
+        "decision": "keep",
+        "region": "rear",
+        "surfaceArea": 0.16074806667893426
+      }
+    ],
+    "kept": [
+      "PaintIsland_018_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_019": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "rear",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_019_A",
+        "decision": "keep",
+        "region": "rear",
+        "surfaceArea": 0.16063328232849017
+      }
+    ],
+    "kept": [
+      "PaintIsland_019_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_020": {
+    "decision": "manual-review-required",
+    "wasSplit": false,
+    "candidateBridges": 14,
+    "region": "paintedBumpers",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_020_A",
+        "decision": "keep",
+        "region": "paintedBumpers",
+        "surfaceArea": 0.14780246780719608
+      }
+    ],
+    "kept": [
+      "PaintIsland_020_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_021": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 7,
+    "region": "rear",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_021_A",
+        "decision": "keep",
+        "region": "rear",
+        "surfaceArea": 0.14207947342219995
+      }
+    ],
+    "kept": [
+      "PaintIsland_021_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_024": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 11,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_024_A",
+        "decision": "keep",
+        "region": "unclassified",
+        "surfaceArea": 0.10280093218534603
+      }
+    ],
+    "kept": [
+      "PaintIsland_024_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_025": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_025_A",
+        "decision": "keep",
+        "region": "unclassified",
+        "surfaceArea": 0.10264372842721059
+      }
+    ],
+    "kept": [
+      "PaintIsland_025_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_026": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_026_A",
+        "decision": "keep",
+        "region": "unclassified",
+        "surfaceArea": 0.09645859126430878
+      }
+    ],
+    "kept": [
+      "PaintIsland_026_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_027": {
+    "decision": "preserve",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_027_A",
+        "decision": "keep",
+        "region": "unclassified",
+        "surfaceArea": 0.09639123323722742
+      }
+    ],
+    "kept": [
+      "PaintIsland_027_A"
+    ],
+    "excluded": [],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_028": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_028_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.09579284640494734
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_028_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_029": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_029_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.08727288957379642
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_029_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_030": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 6,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_030_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.08236958365887403
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_030_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_031": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 30,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_031_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.07528609408109332
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_031_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_032": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 25,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_032_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.07124102154830325
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_032_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_033": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_033_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0643446460026098
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_033_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_034": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 12,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_034_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0640946291077853
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_034_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_035": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_035_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.06219504710952606
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_035_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_037": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 21,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_037_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.05782187799741223
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_037_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_039": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 20,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_039_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.05772991007506789
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_039_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_040": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 16,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_040_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.057266836911367136
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_040_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_042": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 11,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_042_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.04677527226340317
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_042_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_044": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_044_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.04440892697311938
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_044_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_046": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 12,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_046_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.04334910951729398
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_046_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_047": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_047_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0376633378009501
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_047_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_048": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_048_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.03359869054838782
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_048_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_052": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_052_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.032843024325302395
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_052_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_053": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 10,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_053_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.032836473990300874
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_053_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_054": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 6,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_054_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.028985237492179294
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_054_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_055": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_055_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.02891135167919856
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_055_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_056": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_056_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.02573499083518982
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_056_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_057": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_057_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.02573498897254467
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_057_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_058": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_058_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.024953231728432
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_058_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_059": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 12,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_059_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.02485992772199097
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_059_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_061": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_061_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.02287196882753051
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_061_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_062": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_062_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.022818339784862474
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_062_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_084": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_084_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.014779334887862206
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_084_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_085": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_085_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.014701686726766638
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_085_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_086": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_086_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.014687047543702647
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_086_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_087": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_087_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.012442647013813257
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_087_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_088": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_088_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.012422712985426188
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_088_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_091": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_091_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.010204965190496296
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_091_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_092": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_092_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.010118212958332151
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_092_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_098": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_098_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.008497884962707758
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_098_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_099": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_099_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.008373461663722992
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_099_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_105": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_105_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.008083732165687252
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_105_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_109": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_109_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.007645743666216731
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_109_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_110": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_110_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.007560940575785935
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_110_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_114": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 9,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_114_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.005115082876272936
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_114_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_119": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_119_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.00485161405231338
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_119_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_134": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_134_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0031221152598845947
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_134_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_139": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_139_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0030806088393546815
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_139_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_141": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_141_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.002900883702750434
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_141_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_142": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_142_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.002824807055731071
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_142_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_143": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_143_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0020370808197185397
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_143_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_150": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 4,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_150_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.001435808269889094
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_150_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_152": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 5,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_152_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0014185070322128013
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_152_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_155": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_155_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0011801453038060572
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_155_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_156": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 11,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_156_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0009747568601596868
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_156_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_157": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 9,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_157_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0008710664841373728
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_157_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_158": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_158_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0008669099715916673
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_158_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_159": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_159_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0008669098247082729
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_159_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_172": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_172_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0005528269495016502
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_172_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_173": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 8,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_173_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0005518670852779906
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_173_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_175": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_175_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0004231077618896961
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_175_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_176": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_176_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0004219581314828247
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_176_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_181": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_181_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.00029307015938684344
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_181_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_182": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_182_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.00029307015938684344
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_182_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_183": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_183_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.000292850483674556
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_183_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_185": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_185_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.00026512492331676185
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_185_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_188": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_188_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0002145616081179469
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_188_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_191": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 2,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_191_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0001316293673880864
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_191_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_192": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_192_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 0.0001223640574607998
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_192_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_200": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_200_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 5.64722104172688e-05
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_200_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_216": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_216_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 8.473009074805304e-06
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_216_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  },
+  "PaintIsland_217": {
+    "decision": "exclude-secondary-component",
+    "wasSplit": false,
+    "candidateBridges": 1,
+    "region": "unclassified",
+    "resultComponents": [
+      {
+        "id": "PaintIsland_217_A",
+        "decision": "exclude",
+        "region": "unclassified",
+        "surfaceArea": 8.473008165310603e-06
+      }
+    ],
+    "kept": [],
+    "excluded": [
+      "PaintIsland_217_A"
+    ],
+    "reason": "Bridge faces reviewed against panel area/classification; no automatic destructive cut in headless preparation."
+  }
+}

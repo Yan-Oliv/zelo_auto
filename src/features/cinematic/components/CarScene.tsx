@@ -2,12 +2,17 @@ import { Suspense, useEffect, useMemo, useRef, useState, type MutableRefObject }
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, PerspectiveCamera, useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
-import { dirtFragment, foamFragment, foamVertex, layerVertex } from '../shaders/surfaceLayers'
-import { calculateCinematicState, type CinematicState } from '../utils/cinematicProgress'
+import { dirtFragment, foamFlowFragment, foamFlowVertex, foamFragment, foamVertex, layerVertex, wetFilmFragment, wetFilmVertex } from '../shaders/surfaceLayers'
+import { calculateCinematicState, type CinematicState, type FoamTimelinePreset } from '../utils/cinematicProgress'
 import { getSceneKeyframes, type SceneId } from '../data/cinematicKeyframes'
 
 const MODEL_URL = '/models/lincoln.glb'
 const FOAM_MACRO_MODEL_URL = '/models/lincoln_foam_macro.glb'
+// Kept deliberately visible in the diagnostic panel: it eliminates stale-preview
+// and cached-bundle ambiguity when validating the real render loop.
+const BUILD_ID = 'animation-production-playback-2026-07-23-01'
+const BUILD_TIMESTAMP = '2026-07-23T09:56:00-03:00'
+const JS_BUNDLE_HASH = import.meta.url.split('/').pop() ?? 'dev-module'
 // GLB audit: these are the only materials admitted to the paint FoamShell.
 // Everything else (Badges, Badges_IOR, Glass, Glass_IOR, Wheel) is excluded.
 const FOAM_MATERIAL_WHITELIST = new Set(['Body', 'Paint'])
@@ -15,17 +20,70 @@ const GLASS_MATERIAL_WHITELIST = new Set(['Glass', 'Glass_IOR'])
 
 type CarSceneProps = { reducedMotion: boolean; activeSection: string; activeSceneId: SceneId; sceneProgress: number; globalProgress: number; onReadyChange?: (ready: boolean) => void }
 
+type AnimationDebugData = {
+  frameCount: number; framesLastSecond: number; useFrameRunning: boolean; playbackTime: number; playbackDelta: number; shouldAnimate: boolean
+  cinematicProgress: number; foamVisualProgress: number; foamCatchUpActive: boolean; drainProgressTarget: number; drainProgressVisual: number; rinseProgressTarget: number; rinseProgressVisual: number; forcePlayback: boolean; probeY: number; drop0State: string; drop0Elapsed: number; drop0Y: number
+  drop0Visible: boolean; calculatedDropY: number; matrixDropY: number; dropMatrixUpdates: number; impactMatrixUpdates: number; rendererFrame: number
+  singleDropCycle: number; singleDropState: string; singleDropY: number; playbackEpoch: number; performanceNow: number; componentMountId: string
+  visibleFoamMaterialUUID: string; updatedFoamMaterialUUID: string; compiledFoamShaderExists: boolean; shaderMicroTime: number
+  visibleFlowMaterialUUID: string; updatedFlowMaterialUUID: string; visibleDropMeshUUID: string; updatedDropMeshUUID: string
+  visibleImpactMeshUUID: string; updatedImpactMeshUUID: string
+  filmMeshUuid: string; compiledShaderIdentity: string; filmDiagnosticEnabled: boolean
+}
+
+const createAnimationDebugData = (): AnimationDebugData => ({
+  frameCount: 0, framesLastSecond: 0, useFrameRunning: false, playbackTime: 0, playbackDelta: 0, shouldAnimate: false,
+  cinematicProgress: 0, foamVisualProgress: 0, foamCatchUpActive: false, drainProgressTarget: 0, drainProgressVisual: 0, rinseProgressTarget: 0, rinseProgressVisual: 0, forcePlayback: false, probeY: 0, drop0State: 'idle', drop0Elapsed: 0, drop0Y: 0,
+  drop0Visible: false, calculatedDropY: 0, matrixDropY: 0, dropMatrixUpdates: 0, impactMatrixUpdates: 0, rendererFrame: 0,
+  singleDropCycle: 0, singleDropState: 'off', singleDropY: 0, playbackEpoch: 0, performanceNow: 0, componentMountId: '',
+  visibleFoamMaterialUUID: '', updatedFoamMaterialUUID: '', compiledFoamShaderExists: false, shaderMicroTime: 0,
+  visibleFlowMaterialUUID: '', updatedFlowMaterialUUID: '', visibleDropMeshUUID: '', updatedDropMeshUUID: '', visibleImpactMeshUUID: '', updatedImpactMeshUUID: '',
+  filmMeshUuid: '', compiledShaderIdentity: '', filmDiagnosticEnabled: false,
+})
+
 export function CarScene({ reducedMotion, activeSection, activeSceneId, sceneProgress, globalProgress, onReadyChange }: CarSceneProps) {
   const lowQuality = activeSection !== 'hero'
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
   const debug = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('debugCinematic') === '1'
   const debugCompare = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('debugFoamCompare') === '1'
-  const [debugProgress, setDebugProgress] = useState<number | null>(null)
+  const queryCinematicProgress = typeof window === 'undefined' ? null : Number(new URLSearchParams(window.location.search).get('cinematicProgress'))
+  const [debugProgress, setDebugProgress] = useState<number | null>(() => debug && Number.isFinite(queryCinematicProgress) ? THREE.MathUtils.clamp(queryCinematicProgress!, 0, 1) : null)
   const [debugFoamPreset, setDebugFoamPreset] = useState<FoamComparePreset>(() => typeof window === 'undefined' ? 'balanced' : readFoamPreset(new URLSearchParams(window.location.search).get('foamPreset')))
+  const animationDebugRef = useRef<AnimationDebugData>(createAnimationDebugData())
+  const [animationDebugSnapshot, setAnimationDebugSnapshot] = useState<AnimationDebugData>(() => createAnimationDebugData())
   const displayProgress = debugProgress ?? (activeSceneId === 'hero' ? sceneProgress : 1)
   const debugState = calculateCinematicState(displayProgress)
+  useEffect(() => {
+    if (!debug) return
+    const expose = () => {
+      const snapshot = { ...animationDebugRef.current }
+      setAnimationDebugSnapshot(snapshot)
+      ;(window as typeof window & { __ZELO_ANIMATION_DEBUG__?: object }).__ZELO_ANIMATION_DEBUG__ = {
+        buildId: BUILD_ID,
+        buildTimestamp: BUILD_TIMESTAMP,
+        jsBundleHash: JS_BUNDLE_HASH,
+        ...snapshot,
+      }
+    }
+    expose()
+    const timer = window.setInterval(expose, 250)
+    return () => window.clearInterval(timer)
+  }, [debug])
   return <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-    <Canvas frameloop="demand" dpr={lowQuality || isMobile ? [0.7, 1] : [0.8, 1.35]} gl={{ alpha: true, antialias: false, powerPreference: 'high-performance' }} onCreated={({ gl }) => { gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = 1.18 }}>
+    <Canvas id="zelo-hero-canvas" data-canvas-id="zelo-hero-production" frameloop={activeSceneId === 'hero' || debug ? 'always' : 'demand'} dpr={lowQuality || isMobile ? [0.7, 1] : [0.8, 1.35]} gl={{ alpha: true, antialias: false, powerPreference: 'high-performance' }} onCreated={({ gl, scene, camera }) => {
+      gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = 1.18
+      const rendererUuid = crypto.randomUUID()
+      gl.domElement.id = 'zelo-hero-canvas'
+      gl.domElement.dataset.canvasId = 'zelo-hero-production'
+      gl.domElement.dataset.rendererUuid = rendererUuid
+      ;(window as typeof window & { __ZELO_VISIBLE_RENDERER__?: object }).__ZELO_VISIBLE_RENDERER__ = { canvas: gl.domElement, renderer: gl, scene, camera, rendererUuid }
+      window.setTimeout(() => {
+        const canvases = [...document.querySelectorAll('canvas')]
+        console.table(canvases.map((canvas, index) => { const rect = canvas.getBoundingClientRect(); const style = getComputedStyle(canvas); return { index, width: canvas.width, height: canvas.height, rectWidth: rect.width, rectHeight: rect.height, top: rect.top, left: rect.left, display: style.display, visibility: style.visibility, opacity: style.opacity, zIndex: style.zIndex, position: style.position, pointerEvents: style.pointerEvents, connected: canvas.isConnected, dataCanvasId: canvas.dataset.canvasId ?? '' } }))
+        const x = window.innerWidth * .5; const y = window.innerHeight * .62
+        console.log('[ZELO canvas audit] elementsFromPoint', document.elementsFromPoint(x, y).map((element) => ({ tag: element.tagName, className: element.className, id: element.id, canvasId: element instanceof HTMLCanvasElement ? element.dataset.canvasId : undefined })))
+      }, 0)
+    }}>
       <fog attach="fog" args={['#0D1B2A', 8.5, 21]} />
       <Suspense fallback={null}>
         <PerspectiveCamera makeDefault position={[0.35, 1.2, 5.8]} fov={34} />
@@ -33,16 +91,29 @@ export function CarScene({ reducedMotion, activeSection, activeSceneId, scenePro
         <directionalLight position={[4.6, 4.2, 4.2]} intensity={2.15} color="#f5f4ef" />
         <directionalLight position={[-5.4, 2.3, -4.8]} intensity={1.35} color="#D4AF37" />
         <Environment preset="night" resolution={64} />
-        <CinematicRig activeSceneId={activeSceneId} sceneProgress={sceneProgress} globalProgress={globalProgress} reducedMotion={reducedMotion} onReadyChange={onReadyChange} progressOverride={debugProgress} />
+        <CinematicRig activeSceneId={activeSceneId} sceneProgress={sceneProgress} globalProgress={globalProgress} reducedMotion={reducedMotion} onReadyChange={onReadyChange} progressOverride={debugProgress} animationDebug={animationDebugRef} />
       </Suspense>
     </Canvas>
     <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,27,42,.58),rgba(13,27,42,.04)_64%),linear-gradient(180deg,transparent,rgba(13,27,42,.14))]" />
-    {debug ? <aside className="pointer-events-auto fixed bottom-4 left-4 z-[100] w-72 border border-white/20 bg-[#07111bdd] p-3 font-mono text-[11px] text-white"><label>Progress {displayProgress.toFixed(2)}<input className="mt-2 w-full" type="range" min="0" max="1" step="0.01" value={displayProgress} onChange={(event) => setDebugProgress(Number(event.target.value))}/></label><div className="mt-3 grid grid-cols-2 gap-1 text-white/70"><span>dirt {debugState.dirtAmount.toFixed(2)}</span><span>foam {debugState.foamCoverage.toFixed(2)}</span><span>clean {debugState.cleaningMask.toFixed(2)}</span><span>wet {debugState.wetness.toFixed(2)}</span></div></aside> : null}
+    {debug ? <aside className="pointer-events-auto fixed bottom-4 left-4 z-[100] w-[22rem] border border-fuchsia-300/50 bg-[#07111bEE] p-3 font-mono text-[11px] text-white"><div className="text-fuchsia-200">BUILD {BUILD_ID}</div><div className="mt-1 break-all text-[9px] text-white/50">{BUILD_TIMESTAMP} · {JS_BUNDLE_HASH}</div><label className="mt-3 block">Progress {displayProgress.toFixed(2)}<input className="mt-2 w-full" type="range" min="0" max="1" step="0.01" value={displayProgress} onChange={(event) => setDebugProgress(Number(event.target.value))}/></label><div className="mt-3 grid grid-cols-2 gap-1 text-white/70"><span>apply {debugState.applicationProgress.toFixed(2)}</span><span>peak {debugState.peakDensity.toFixed(2)}</span><span>drain {debugState.drainProgress.toFixed(2)}</span><span>rinse {debugState.rinseProgress.toFixed(2)}</span><span>wet {debugState.wetness.toFixed(2)}</span><span>dry {debugState.dryProgress.toFixed(2)}</span></div><div className="mt-3 border-t border-white/15 pt-2 text-cyan-100"><div>target {animationDebugSnapshot.cinematicProgress.toFixed(3)} · visual {animationDebugSnapshot.foamVisualProgress.toFixed(3)} · catch-up {String(animationDebugSnapshot.foamCatchUpActive)}</div><div>drain {animationDebugSnapshot.drainProgressTarget.toFixed(2)} → {animationDebugSnapshot.drainProgressVisual.toFixed(2)} · rinse {animationDebugSnapshot.rinseProgressTarget.toFixed(2)} → {animationDebugSnapshot.rinseProgressVisual.toFixed(2)}</div><div>playback {animationDebugSnapshot.playbackTime.toFixed(2)} · shader {animationDebugSnapshot.shaderMicroTime.toFixed(2)} · diagnostic {String(animationDebugSnapshot.filmDiagnosticEnabled)}</div><div>epoch {animationDebugSnapshot.playbackEpoch.toFixed(0)} · now {animationDebugSnapshot.performanceNow.toFixed(0)}</div><div>drop y {animationDebugSnapshot.calculatedDropY.toFixed(2)} / matrix {animationDebugSnapshot.matrixDropY.toFixed(2)}</div><div>mount {animationDebugSnapshot.componentMountId.slice(0,8)} · film {animationDebugSnapshot.filmMeshUuid.slice(0,8)} · material {animationDebugSnapshot.visibleFoamMaterialUUID.slice(0,8)}</div><div>compiled {animationDebugSnapshot.compiledShaderIdentity} · alive {String(animationDebugSnapshot.compiledFoamShaderExists)}</div><div>drop matrix updates {animationDebugSnapshot.dropMatrixUpdates} · impacts {animationDebugSnapshot.impactMatrixUpdates}</div></div></aside> : null}
     {debugCompare ? <FoamComparePanel preset={debugFoamPreset} onPreset={setDebugFoamPreset} /> : null}
   </div>
 }
 
 type FoamComparePreset = FoamPreset | 'hybrid'
+type FlowPreset = 'legacy' | 'sparseSlow' | 'mediumSlow'
+type FoamMotionPreset = 'subtle' | 'production' | 'strong'
+const FOAM_MOTION_PRESETS: Record<FoamMotionPreset, { bubbleSpeed: number; bubbleActivity: number; bubbleHighlight: number }> = {
+  subtle: { bubbleSpeed: .075, bubbleActivity: .34, bubbleHighlight: .44 },
+  production: { bubbleSpeed: .12, bubbleActivity: .66, bubbleHighlight: .72 },
+  strong: { bubbleSpeed: .18, bubbleActivity: 1, bubbleHighlight: .88 },
+}
+const FLOW_PRESETS: Record<FlowPreset, { coverage: number; width: number; speed: number; alpha: number; verticality: number; lowerAccumulation: number; broad: number; medium: number; fine: number }> = {
+  legacy: { coverage: .58, width: .16, speed: .08, alpha: .58, verticality: 1, lowerAccumulation: .12, broad: .20, medium: .65, fine: .30 },
+  sparseSlow: { coverage: .09, width: .055, speed: .0045, alpha: .40, verticality: 1, lowerAccumulation: .045, broad: .08, medium: .62, fine: .34 },
+  mediumSlow: { coverage: .14, width: .075, speed: .0075, alpha: .46, verticality: 1, lowerAccumulation: .065, broad: .12, medium: .66, fine: .38 },
+}
+function readFoamMotionPreset(value: string | null | undefined): FoamMotionPreset { return value === 'subtle' || value === 'strong' ? value : 'production' }
 function FoamComparePanel({ preset, onPreset }: { preset: FoamComparePreset; onPreset: (preset: FoamComparePreset) => void }) {
   useEffect(() => {
     const update = (event: Event) => onPreset((event as CustomEvent<FoamComparePreset>).detail)
@@ -52,9 +123,12 @@ function FoamComparePanel({ preset, onPreset }: { preset: FoamComparePreset; onP
   return <aside className="pointer-events-auto fixed bottom-4 right-4 z-[100] w-56 border border-white/20 bg-[#07111bdd] p-3 font-mono text-[11px] text-white"><div>Foam PBR compare</div><div className="mt-1 text-cyan-200">active: {preset}</div><div className="mt-2 text-white/60">1 balanced · 2 hybrid</div></aside>
 }
 
-function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalProgress, reducedMotion, onReadyChange, progressOverride }: Omit<CarSceneProps, 'activeSection'> & { progressOverride: number | null }) {
+function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalProgress, reducedMotion, onReadyChange, progressOverride, animationDebug }: Omit<CarSceneProps, 'activeSection'> & { progressOverride: number | null; animationDebug: MutableRefObject<AnimationDebugData> }) {
   const gltf = useGLTF(MODEL_URL)
-  const debugParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null
+  // The URL is immutable during a normal visit. Keeping this object stable is
+  // essential: a debug-panel repaint must never recreate production materials.
+  const debugSearch = typeof window !== 'undefined' ? window.location.search : ''
+  const debugParams = useMemo(() => new URLSearchParams(debugSearch), [debugSearch])
   const debugFoamShell = debugParams?.get('debugFoamShell') === '1'
   const debugFoamStatic = debugParams?.get('debugFoamStatic') === '1'
   const debugFoamPBR = debugParams?.get('debugFoamPBR') === '1'
@@ -79,9 +153,44 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
   const macroMorph = readFoamMacroMorph(debugParams?.get('foamMorph'))
   const macroLayer = readFoamMacroLayer(debugParams?.get('foamLayer'))
   const macroDebugView = readFoamMacroDebugView(debugParams?.get('foamDebugView'))
+  const cinematicDebugView = readCinematicDebugView(debugParams?.get('foamDebugView'))
+  const forcePlayback = debugParams?.get('forcePlayback') === '1'
+  const requestedTimelinePreset = debugParams?.get('foamTimelinePreset')
+  const foamTimelinePreset: FoamTimelinePreset = requestedTimelinePreset === 'restored' || requestedTimelinePreset === 'extended' ? requestedTimelinePreset : 'extendedCatchUp'
+  const catchUpEnabled = foamTimelinePreset === 'extendedCatchUp'
+  const foamCatchUpTime = THREE.MathUtils.clamp(readDebugNumber(debugParams, 'foamCatchUpTime', .55), .35, 1.20)
+  const foamMaxForwardRate = THREE.MathUtils.clamp(readDebugNumber(debugParams, 'foamMaxForwardRate', .105), .07, .16)
+  const foamMaxBackwardRate = THREE.MathUtils.clamp(readDebugNumber(debugParams, 'foamMaxBackwardRate', .16), .10, .25)
+  const animationProbeEnabled = debugParams?.get('animationProbe') === '1'
+  const singleDropProbe = debugParams?.get('singleDropProbe') === '1'
+  const deterministicDrop = debugParams?.get('deterministicDrop') === '1'
+  const requestedFlowPreset = debugParams?.get('flowPreset')
+  const flowPreset: FlowPreset = requestedFlowPreset === 'legacy' || requestedFlowPreset === 'mediumSlow' ? requestedFlowPreset : 'sparseSlow'
+  const cinematicLayer = debugParams?.get('foamLayer')
+  const isolateFlow = debugParams?.get('debugCinematic') === '1' && cinematicLayer === 'flow'
+  const isolateFilm = debugParams?.get('debugCinematic') === '1' && cinematicLayer === 'film'
+  const isolateFilmFlow = debugParams?.get('debugCinematic') === '1' && cinematicLayer === 'film-flow'
+  const isolateDrops = debugParams?.get('debugCinematic') === '1' && cinematicLayer === 'drops'
+  const flowPresetValues = FLOW_PRESETS[flowPreset]
+  const flowSettings = useMemo(() => ({
+    coverage: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'flowCoverage', flowPresetValues.coverage), .04, .18),
+    width: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'flowWidth', flowPresetValues.width), .025, .10),
+    speed: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'flowSpeed', flowPresetValues.speed), .003, .009),
+    alpha: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'flowAlpha', flowPresetValues.alpha), .2, .58),
+    verticality: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'flowVerticality', 1), .3, 1),
+    lowerAccumulation: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'lowerAccumulation', flowPresetValues.lowerAccumulation), .02, .16),
+    broad: flowPresetValues.broad,
+    medium: flowPresetValues.medium,
+    fine: flowPresetValues.fine,
+  }), [debugParams, flowPresetValues])
+  const motionSettings = useMemo(() => ({
+    carPosition: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'carPositionDamping', 8), 4, 14),
+    carRotation: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'carRotationDamping', 7), 4, 14),
+    camera: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'cameraDamping', 7), 4, 14),
+  }), [debugParams])
   const macroEdgeEnabled = debugParams?.get('foamEdge') === '1'
   const testRigTransform = debugParams?.get('testRigTransform') === '1'
-  const validationSettings = {
+  const validationSettings = useMemo(() => ({
     shellOffset: readDebugNumber(debugParams, 'shellOffset', .003),
     polygonOffsetFactor: readDebugNumber(debugParams, 'polygonOffsetFactor', -1),
     polygonOffsetUnits: readDebugNumber(debugParams, 'polygonOffsetUnits', -1),
@@ -89,7 +198,7 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
     depthWrite: debugParams?.get('depthWrite') !== '0',
     side: debugParams?.get('side') === 'double' ? THREE.DoubleSide : THREE.FrontSide,
     renderOrder: readDebugNumber(debugParams, 'renderOrder', 20),
-  }
+  }), [debugParams])
   const staticState: FoamStaticState = {
     coverage: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'foamCoverage', .7), 0, 1),
     density: THREE.MathUtils.clamp(readDebugNumber(debugParams, 'density', .88), 0, 1),
@@ -122,7 +231,9 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
   useMemo(() => [foamDensityMap, dirtMap, foamPackedMap, foamNormalMap].forEach((map) => { map.wrapS = THREE.RepeatWrapping; map.wrapT = THREE.RepeatWrapping; map.minFilter = THREE.LinearMipmapLinearFilter; map.magFilter = THREE.LinearFilter; map.generateMipmaps = true; map.colorSpace = THREE.NoColorSpace }), [dirtMap, foamDensityMap, foamNormalMap, foamPackedMap])
   const originalCar = useMemo(() => cloneOriginalCar(gltf.scene), [gltf.scene])
   const dirtLayer = useMemo(() => makeSurfaceLayer(gltf.scene, 'dirt', 'paint', dirtMap), [dirtMap, gltf.scene])
-  const foamLayer = useMemo(() => makeSurfaceLayer(gltf.scene, 'foam', 'paint', foamDensityMap, debugFoamShell, foamSource, validationSettings), [debugFoamShell, foamDensityMap, foamSource, gltf.scene, validationSettings])
+  const foamLayer = useMemo(() => makeSurfaceLayer(gltf.scene, 'foam', 'paint', foamDensityMap, debugFoamShell, foamSource, validationSettings, { packed: foamPackedMap, normal: foamNormalMap, debugParams }), [debugFoamShell, foamDensityMap, foamNormalMap, foamPackedMap, foamSource, gltf.scene, validationSettings])
+  const foamFlowLayer = useMemo(() => makeSurfaceLayer(gltf.scene, 'flow', 'paint', foamDensityMap), [foamDensityMap, gltf.scene])
+  const wetFilmLayer = useMemo(() => makeSurfaceLayer(gltf.scene, 'wet', 'paint', foamDensityMap), [foamDensityMap, gltf.scene])
   const staticFoamLayer = useMemo(() => makeStaticFoamLayer(gltf.scene, foamDensityMap, staticState), [foamDensityMap, gltf.scene, staticState])
   const continuousConfig = debugFoamContinuous ? CONTINUOUS_PRESETS[continuousPreset] : null
   const pbrFoamLayer = useMemo(() => makePbrFoamLayer(gltf.scene, foamPackedMap, foamNormalMap, pbrState, continuousConfig, continuousDebugView), [continuousConfig, continuousDebugView, foamNormalMap, foamPackedMap, gltf.scene, pbrState])
@@ -132,9 +243,21 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
   const group = useRef<THREE.Group>(null)
   const sweepLight = useRef<THREE.PointLight>(null)
   const time = useRef(0)
+  // Deliberately independent from cinematicProgress: this is the real-time
+  // playback clock for bubbles, flow, drops, impacts and wetness.
+  const foamPlaybackTimeRef = useRef(0)
+  const foamPlaybackEpochRef = useRef<number | null>(null)
+  const mountIdRef = useRef(typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `cinematic-${Math.random().toString(36).slice(2)}`)
+  const targetCarPositionRef = useRef(new THREE.Vector3())
+  const targetCarQuaternionRef = useRef(new THREE.Quaternion())
+  const targetCarScaleRef = useRef(new THREE.Vector3(1.62, 1.62, 1.62))
+  const targetCameraPositionRef = useRef(new THREE.Vector3())
+  const motionInitializedRef = useRef(false)
+  const fpsWindowRef = useRef({ startedAt: 0, frames: 0 })
   const { camera, gl, invalidate, viewport } = useThree()
   const currentProgress = progressOverride ?? (activeSceneId === 'hero' ? sceneProgress : 1)
-  const state = calculateCinematicState(currentProgress)
+  const state = calculateCinematicState(currentProgress, foamTimelinePreset)
+  const foamVisualProgressRef = useRef<number | null>(null)
 
   useEffect(() => { onReadyChange?.(true); return () => onReadyChange?.(false) }, [onReadyChange])
   useEffect(() => {
@@ -152,7 +275,29 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
   useEffect(() => { invalidate() }, [invalidate, currentProgress, activeSceneId])
   useEffect(() => { [foamDensityMap, foamPackedMap, foamNormalMap].forEach((map) => { map.anisotropy = Math.min(gl.capabilities.getMaxAnisotropy(), 4); map.needsUpdate = true }) }, [foamDensityMap, foamNormalMap, foamPackedMap, gl])
 
-  useFrame((_, delta) => {
+  useFrame((frameState, rawDelta) => {
+    const delta = Math.min(rawDelta, 1 / 30)
+    const telemetry = animationDebug.current
+    telemetry.frameCount += 1
+    telemetry.useFrameRunning = true
+    telemetry.playbackDelta = delta
+    telemetry.rendererFrame = frameState.gl.info.render.frame
+    // This is the authoritative micro-animation clock. It deliberately has no
+    // dependency on scroll, R3F's scene clock, visibility gates or macro phase.
+    const now = performance.now()
+    if (foamPlaybackEpochRef.current === null) foamPlaybackEpochRef.current = now
+    foamPlaybackTimeRef.current = Math.max(0, (now - foamPlaybackEpochRef.current) / 1000)
+    telemetry.playbackTime = foamPlaybackTimeRef.current
+    telemetry.playbackEpoch = foamPlaybackEpochRef.current
+    telemetry.performanceNow = now
+    telemetry.componentMountId = mountIdRef.current
+    if (fpsWindowRef.current.startedAt === 0) fpsWindowRef.current.startedAt = now
+    fpsWindowRef.current.frames += 1
+    if (now - fpsWindowRef.current.startedAt >= 1000) {
+      telemetry.framesLastSecond = fpsWindowRef.current.frames
+      fpsWindowRef.current.frames = 0
+      fpsWindowRef.current.startedAt = now
+    }
     if (debugFoamStatic || debugFoamPBR || debugFoamHybrid || debugFoamContinuous || debugFoamCompare || debugFoamMacroAsset) {
       // This mode deliberately ignores scroll-driven scene state: it is one static frame.
       if (group.current) {
@@ -171,6 +316,8 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
       perspective.fov = 34
       perspective.updateProjectionMatrix()
       foamLayer.visible = false
+      foamFlowLayer.visible = false
+      wetFilmLayer.visible = false
       dirtLayer.visible = false
       glassDirtLayer.visible = false
       glassFoamLayer.visible = false
@@ -187,17 +334,98 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
       return
     }
     const effectiveProgress = progressOverride ?? (activeSceneId === 'hero' ? sceneProgress : 1)
-    const state = calculateCinematicState(effectiveProgress)
-    const active = activeSceneId === 'hero' && (state.dustAmount > .01 || state.foamCoverage > .01 && state.cleaningMask < .99)
-    if (active && !reducedMotion) time.current += Math.min(delta, .033)
-    updateLayer(dirtLayer, state, time.current)
-    updateLayer(foamLayer, state, time.current)
+    const state = calculateCinematicState(effectiveProgress, foamTimelinePreset)
+    if (foamVisualProgressRef.current === null) foamVisualProgressRef.current = effectiveProgress
+    const previousVisualProgress = foamVisualProgressRef.current
+    const shouldCatchUp = catchUpEnabled && (effectiveProgress >= .60 || previousVisualProgress >= .60)
+    if (shouldCatchUp) {
+      const difference = effectiveProgress - previousVisualProgress
+      const dampingAlpha = 1 - Math.exp(-delta / foamCatchUpTime)
+      const dampedStep = difference * dampingAlpha
+      const maxForwardStep = foamMaxForwardRate * delta
+      const maxBackwardStep = foamMaxBackwardRate * delta
+      foamVisualProgressRef.current = THREE.MathUtils.clamp(
+        previousVisualProgress + THREE.MathUtils.clamp(dampedStep, -maxBackwardStep, maxForwardStep),
+        Math.min(previousVisualProgress, effectiveProgress),
+        Math.max(previousVisualProgress, effectiveProgress),
+      )
+    } else {
+      foamVisualProgressRef.current = effectiveProgress
+    }
+    const foamVisualProgress = foamVisualProgressRef.current
+    const visualMacroState = calculateCinematicState(foamVisualProgress, foamTimelinePreset)
+    // Application remains scroll-immediate; only removal, residue and wetness
+    // consume the protected visual progress during a fast jump.
+    const foamState: CinematicState = {
+      ...state,
+      progress: foamVisualProgress,
+      drainProgress: visualMacroState.drainProgress,
+      rinseProgress: visualMacroState.rinseProgress,
+      wetnessProgress: visualMacroState.wetnessProgress,
+      dryProgress: visualMacroState.dryProgress,
+      cleaningMask: visualMacroState.cleaningMask,
+      dirtAmount: visualMacroState.dirtAmount,
+      wetness: visualMacroState.wetness,
+    }
+    // Macro progress is scroll-owned. This playback clock is never derived from
+    // scroll position and remains alive while that macro state is frozen.
+    const sceneVisible = typeof document === 'undefined' || document.visibilityState === 'visible'
+    const productionAnimationActive = sceneVisible && activeSceneId === 'hero' && effectiveProgress > .18 && effectiveProgress < .98
+    const shouldAnimate = !reducedMotion && (productionAnimationActive || animationProbeEnabled)
+    telemetry.shouldAnimate = productionAnimationActive
+    telemetry.cinematicProgress = effectiveProgress
+    telemetry.foamVisualProgress = foamVisualProgress
+    telemetry.foamCatchUpActive = Math.abs(effectiveProgress - foamVisualProgress) > .0005
+    telemetry.drainProgressTarget = state.drainProgress
+    telemetry.drainProgressVisual = foamState.drainProgress
+    telemetry.rinseProgressTarget = state.rinseProgress
+    telemetry.rinseProgressVisual = foamState.rinseProgress
+    telemetry.forcePlayback = forcePlayback
+    if (shouldAnimate) time.current += delta
+    // All visible production materials receive the same scroll-independent
+    // clock. They are not laboratory clones or debug-only uniform objects.
+    updateLayer(dirtLayer, foamState, time.current, 'final', undefined, foamPlaybackTimeRef.current, true)
+    updateLayer(foamLayer, foamState, foamPlaybackTimeRef.current, cinematicDebugView, undefined, foamPlaybackTimeRef.current, true)
+    updateLayer(foamFlowLayer, foamState, foamPlaybackTimeRef.current, cinematicDebugView, flowSettings, foamPlaybackTimeRef.current, true)
+    updateLayer(wetFilmLayer, foamState, foamPlaybackTimeRef.current, 'final', undefined, foamPlaybackTimeRef.current, true)
     updateLayer(glassDirtLayer, state, time.current)
-    updateLayer(glassFoamLayer, state, time.current)
-    foamLayer.visible = debugFoamShell || state.foamCoverage > .005 && state.cleaningMask < .995
-    dirtLayer.visible = !debugFoamShell && state.dirtAmount > .005
-    glassDirtLayer.visible = !debugFoamShell && state.dirtAmount > .005
-    glassFoamLayer.visible = !debugFoamShell && state.foamCoverage > .005 && state.cleaningMask < .995
+    const foamMaterial = foamLayer.userData.material as THREE.ShaderMaterial
+    const flowMaterial = foamFlowLayer.userData.material as THREE.ShaderMaterial
+    telemetry.visibleFoamMaterialUUID = foamMaterial?.uuid ?? ''
+    telemetry.updatedFoamMaterialUUID = foamMaterial?.uuid ?? ''
+    telemetry.compiledFoamShaderExists = Boolean(foamMaterial?.uniforms?.uFoamMicroTime)
+    telemetry.shaderMicroTime = Number(foamMaterial?.uniforms?.uFoamMicroTime?.value ?? 0)
+    let filmMeshUuid = ''
+    foamLayer.traverse((node) => {
+      if (!filmMeshUuid && node instanceof THREE.Mesh) filmMeshUuid = node.uuid
+    })
+    telemetry.filmMeshUuid = filmMeshUuid
+    telemetry.filmDiagnosticEnabled = Number(foamMaterial?.uniforms?.uFilmDiagnostic?.value ?? 0) > .5
+    telemetry.compiledShaderIdentity = String((foamMaterial as unknown as { program?: { id?: number } })?.program?.id ?? 'ShaderMaterial')
+    if (typeof window !== 'undefined') {
+      ;(window as typeof window & { __ZELO_FILM_SHADER__?: Record<string, unknown> }).__ZELO_FILM_SHADER__ = {
+        filmMeshUuid,
+        filmMaterialUuid: foamMaterial?.uuid,
+        compiledShaderIdentity: telemetry.compiledShaderIdentity,
+        uFoamMicroTimeJS: foamLayer.userData.uniforms?.uFoamMicroTime?.value,
+        uFoamMicroTimeShader: foamMaterial?.uniforms?.uFoamMicroTime?.value,
+        diagnostic: foamMaterial?.uniforms?.uFilmDiagnostic?.value,
+      }
+    }
+    telemetry.visibleFlowMaterialUUID = flowMaterial?.uuid ?? ''
+    telemetry.updatedFlowMaterialUUID = flowMaterial?.uuid ?? ''
+    // The shader owns regional removal. Do not hard-hide foam while its final
+    // residue band is still meant to be visible.
+    foamLayer.visible = !isolateFlow && !isolateDrops && (debugFoamShell || foamState.foamCoverage > .005 && foamVisualProgress < .999)
+    foamFlowLayer.visible = !debugFoamShell && !isolateFilm && !isolateDrops && foamState.drainProgress > .01 && foamVisualProgress < .999
+    if (isolateFilmFlow) { foamLayer.visible = true; foamFlowLayer.visible = true }
+    wetFilmLayer.visible = !debugFoamShell && !isolateFlow && !isolateFilm && !isolateFilmFlow && !isolateDrops && foamState.wetness > .012
+    dirtLayer.visible = !debugFoamShell && !isolateFlow && !isolateFilm && !isolateFilmFlow && !isolateDrops && foamState.dirtAmount > .005
+    glassDirtLayer.visible = !debugFoamShell && !isolateFlow && !isolateFilm && !isolateFilmFlow && !isolateDrops && foamState.dirtAmount > .005
+    // Production FoamFilmShell is intentionally Paint-only. Keep the original
+    // glass readable throughout the sequence; a separate glass foam pass is
+    // reserved for a future, independently approved treatment.
+    glassFoamLayer.visible = false
     staticFoamLayer.visible = false
     pbrFoamLayer.visible = false
     updateHybridFoamLayers(hybridLayers, 0, false, 'all')
@@ -206,23 +434,43 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
       const t = effectiveProgress; const compact = viewport.width < 9
       const carShift = interpolate(t, [[0,-.34],[.25,-.08],[.55,.12],[.8,.03],[1,0]])
       const carYaw = interpolate(t, [[0,-.1],[.3,.05],[.6,-.06],[1,.02]])
-      group.current.rotation.y = THREE.MathUtils.lerp(from.rotationY, to.rotationY, t) + carYaw
-      if ((debugFoamShell || debugFoamStatic) && foamView === 'front') group.current.rotation.y = 0
-      if ((debugFoamShell || debugFoamStatic) && foamView === 'rear') group.current.rotation.y = Math.PI
-      group.current.position.set(THREE.MathUtils.lerp(from.position[0],to.position[0],t)+carShift+(compact?-.58:0), THREE.MathUtils.lerp(from.position[1],to.position[1],t), THREE.MathUtils.lerp(from.position[2],to.position[2],t))
-      group.current.scale.setScalar(compact ? 1.12 : 1.62)
-      const perspective = camera as THREE.PerspectiveCamera; perspective.position.z = interpolate(t, [[0,6.3],[.3,5.9],[.65,6.15],[1,6.7]]); perspective.fov = THREE.MathUtils.lerp(from.fov,to.fov,t); perspective.updateProjectionMatrix()
+      const targetYaw = THREE.MathUtils.lerp(from.rotationY, to.rotationY, t) + carYaw
+      targetCarPositionRef.current.set(THREE.MathUtils.lerp(from.position[0],to.position[0],t)+carShift+(compact?-.58:0), THREE.MathUtils.lerp(from.position[1],to.position[1],t), THREE.MathUtils.lerp(from.position[2],to.position[2],t))
+      targetCarQuaternionRef.current.setFromEuler(new THREE.Euler(0, targetYaw, 0))
+      targetCarScaleRef.current.setScalar(compact ? 1.12 : 1.62)
+      const perspective = camera as THREE.PerspectiveCamera
+      targetCameraPositionRef.current.copy(perspective.position).setZ(interpolate(t, [[0,6.3],[.3,5.9],[.65,6.15],[1,6.7]]))
+      const positionAlpha = 1 - Math.exp(-motionSettings.carPosition * delta)
+      const rotationAlpha = 1 - Math.exp(-motionSettings.carRotation * delta)
+      const cameraAlpha = 1 - Math.exp(-motionSettings.camera * delta)
+      if (!motionInitializedRef.current) {
+        group.current.position.copy(targetCarPositionRef.current)
+        group.current.quaternion.copy(targetCarQuaternionRef.current)
+        group.current.scale.copy(targetCarScaleRef.current)
+        perspective.position.copy(targetCameraPositionRef.current)
+        motionInitializedRef.current = true
+      } else {
+        group.current.position.lerp(targetCarPositionRef.current, positionAlpha)
+        group.current.quaternion.slerp(targetCarQuaternionRef.current, rotationAlpha)
+        group.current.scale.lerp(targetCarScaleRef.current, positionAlpha)
+        perspective.position.lerp(targetCameraPositionRef.current, cameraAlpha)
+      }
+      perspective.fov = THREE.MathUtils.lerp(perspective.fov, THREE.MathUtils.lerp(from.fov,to.fov,t), cameraAlpha)
+      perspective.updateProjectionMatrix()
     }
     if (sweepLight.current) { sweepLight.current.intensity = state.shineSweep * 7; sweepLight.current.position.x = THREE.MathUtils.lerp(-3,3,state.progress) }
-    if (active) invalidate()
+    if (shouldAnimate) invalidate()
   })
 
   const showOriginalMacroCar = macroLayer === 'car' || macroLayer === 'film' || macroLayer === 'film-macro' || macroLayer === 'all' || macroLayer === 'edge'
   const showMacroAsset = macroLayer === 'macro' || macroLayer === 'film-macro' || macroLayer === 'all'
   return <group ref={group} position={[1.12,.02,-.1]} rotation={[0,-.62,0]} scale={2.04}>
+    <CarContactShadow visible={!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset} />
     <primitive object={originalCar} visible={debugFoamMacroAsset ? showOriginalMacroCar : !foamShellOnly} />
     <primitive object={dirtLayer} />
     <primitive object={foamLayer} />
+    <primitive object={foamFlowLayer} />
+    <primitive object={wetFilmLayer} />
     <primitive object={staticFoamLayer} />
     <primitive object={pbrFoamLayer} />
     <primitive object={hybridLayers.root} />
@@ -234,12 +482,43 @@ function CinematicRig({ activeSceneId, sceneProgress, globalProgress: _globalPro
     /> : null}
     <primitive object={glassDirtLayer} />
     <primitive object={glassFoamLayer} />
-    {!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset ? <FoamDrips state={state} time={time} /> : null}
+    {!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset && !isolateFlow && !isolateDrops ? <FoamDrips state={state} time={time} /> : null}
+    {!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset ? <FoamDropLayer state={state} microTime={foamPlaybackTimeRef} debug={animationDebug} singleProbe={singleDropProbe} deterministic={deterministicDrop} /> : null}
+    {!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset ? <FoamImpactLayer state={state} microTime={foamPlaybackTimeRef} debug={animationDebug} /> : null}
     {!debugFoamShell && !debugFoamStatic && !debugFoamPBR && !debugFoamHybrid && !debugFoamCompare && !debugFoamMacroAsset ? <DustParticles state={state} time={time} reducedMotion={reducedMotion} /> : null}
     {debugFoamShell ? <directionalLight position={[4, 6, 5]} intensity={1.4} color="#ffffff" /> : null}
     {(debugFoamPBR || debugFoamHybrid || debugFoamCompare) && foamPbrNeutralLight ? <directionalLight position={[4, 6, 5]} intensity={1.1} color="#ffffff" /> : null}
     <pointLight position={[0,1.05,.4]} color="#7f98aa" distance={2.8} intensity={.45} />
     <pointLight ref={sweepLight} position={[-3,1.4,1.4]} color="#f6df9b" distance={6} intensity={0} />
+    {animationProbeEnabled ? <AnimationProbe debug={animationDebug} /> : null}
+  </group>
+}
+
+function AnimationProbe({ debug }: { debug: MutableRefObject<AnimationDebugData> }) {
+  const probe = useRef<THREE.Mesh>(null)
+  useFrame((frameState) => {
+    if (!probe.current) return
+    const realTime = frameState.clock.getElapsedTime()
+    const y = .42 + Math.sin(realTime * 2) * .35
+    probe.current.position.y = y
+    probe.current.rotation.y = realTime * 1.7
+    debug.current.probeY = y
+  })
+  return <mesh ref={probe} position={[1.45,.42,.7]} renderOrder={100}><sphereGeometry args={[.18, 16, 16]} /><meshBasicMaterial color="#ff00ff" depthTest={false} /></mesh>
+}
+
+function CarContactShadow({ visible }: { visible: boolean }) {
+  const texture = useMemo(() => {
+    const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 128
+    const context = canvas.getContext('2d')!; const gradient = context.createRadialGradient(128, 64, 4, 128, 64, 118)
+    gradient.addColorStop(0, 'rgba(1,8,13,.62)'); gradient.addColorStop(.46, 'rgba(1,8,13,.28)'); gradient.addColorStop(1, 'rgba(1,8,13,0)')
+    context.fillStyle = gradient; context.fillRect(0, 0, 256, 128)
+    const result = new THREE.CanvasTexture(canvas); result.colorSpace = THREE.SRGBColorSpace; result.needsUpdate = true
+    return result
+  }, [])
+  return <group visible={visible} position={[0,-.79,.02]} rotation={[-Math.PI / 2,0,0]}>
+    <mesh scale={[2.05,.72,1]} renderOrder={-1}><planeGeometry args={[2,2]} /><meshBasicMaterial map={texture} transparent opacity={.34} depthWrite={false} color="#06101a" /></mesh>
+    <mesh position={[.12,.006,0]} scale={[1.36,.22,1]} renderOrder={-1}><planeGeometry args={[2,2]} /><meshBasicMaterial map={texture} transparent opacity={.18} depthWrite={false} color="#02080d" /></mesh>
   </group>
 }
 
@@ -402,14 +681,61 @@ function readFoamPreset(value: string | null | undefined): FoamPreset {
   return value === 'creamy' || value === 'balanced' || value === 'wet' || value === 'current' ? value : 'balanced'
 }
 
-function makeSurfaceLayer(source: THREE.Group, kind: 'dirt' | 'foam', target: 'paint' | 'glass', map: THREE.Texture, debugSolid = false, foamSource: 'paint' | 'body' | 'all' = 'all', validation?: FoamValidationSettings) {
+type SurfaceLayerKind = 'dirt' | 'foam' | 'flow' | 'wet'
+type CinematicDebugView = 'final' | 'presence' | 'gravity' | 'streaks' | 'rinse' | 'rinseEdge' | 'wetness'
+
+function readCinematicDebugView(value: string | null | undefined): CinematicDebugView {
+  return value === 'presence' || value === 'gravity' || value === 'streaks' || value === 'rinse' || value === 'rinseEdge' || value === 'wetness' ? value : 'final'
+}
+
+function makeSurfaceLayer(source: THREE.Group, kind: SurfaceLayerKind, target: 'paint' | 'glass', map: THREE.Texture, debugSolid = false, foamSource: 'paint' | 'body' | 'all' = 'all', validation?: FoamValidationSettings, pbr?: { packed: THREE.Texture; normal: THREE.Texture; debugParams: URLSearchParams | null }) {
   const root = new THREE.Group()
+  const motion = FOAM_MOTION_PRESETS[readFoamMotionPreset(pbr?.debugParams?.get('foamMotionPreset'))]
   const uniforms = kind === 'dirt'
     ? { uDirtAmount: { value: 1 }, uCleaningMask: { value: 0 }, uTime: { value: 0 }, uLayerOpacity: { value: target === 'glass' ? .42 : 1 }, uDirtMap: { value: map } }
-    : { uCoverage: { value: 0 }, uCleaningMask: { value: 0 }, uTime: { value: 0 }, uBubbleStrength: { value: .35 }, uMicroBubbleStrength: { value: .18 }, uLayerOpacity: { value: target === 'glass' ? .35 : 1 }, uFoamDensityMap: { value: map } }
+    : kind === 'foam'
+      ? {
+          uCoverage: { value: 0 }, uCleaningMask: { value: 0 }, uTime: { value: 0 }, uFoamMicroTime: { value: 0 }, uFoamLife: { value: 1 },
+          uFilmDiagnostic: { value: pbr?.debugParams?.get('filmShaderPulse') === '1' ? 1 : 0 }, uFilmVertexDiagnostic: { value: pbr?.debugParams?.get('filmVertexPulse') === '1' ? 1 : 0 },
+          uBubbleSpeed: { value: motion.bubbleSpeed }, uBubbleActivity: { value: motion.bubbleActivity }, uPeakDensity: { value: 0 }, uDrainProgress: { value: 0 }, uRinseProgress: { value: 0 }, uWetnessProgress: { value: 0 }, uDebugView: { value: 0 },
+          uBubbleStrength: { value: .48 }, uMicroBubbleStrength: { value: .14 }, uLayerOpacity: { value: target === 'glass' ? .35 : 1 },
+          uFoamDensityMap: { value: map }, uFoamPackedMap: { value: pbr?.packed ?? map }, uFoamNormalMap: { value: pbr?.normal ?? map },
+          uMediumNormalStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'mediumNormalStrength', .30), 0, .4) },
+          uMicroNormalStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'microNormalStrength', .16), 0, .16) },
+          uPeakDisplacement: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'peakDisplacement', .0016), 0, .0016) },
+          uDenseRoughness: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'denseRoughness', .74), .5, .95) },
+          uWetRoughness: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'wetRoughness', .24), .1, .7) },
+          uBubbleHighlightStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'bubbleHighlightStrength', motion.bubbleHighlight), .05, .9) },
+          uPaintGapStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'paintGapStrength', .07), 0, .08) },
+          uDrainEdgeSoftness: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'drainEdgeSoftness', .045), .015, .13) },
+          uDrainDistortion: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'drainDistortion', .58), .1, 1) },
+          uStreakLength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'streakLength', 1.25), .9, 1.55) },
+          uStreakWidth: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'streakWidth', .135), .04, .32) },
+          uStreakSpeed: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'streakSpeed', .0075), .0035, .014) },
+          uResidueStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'residueStrength', .34), .1, .9) },
+          uRegionalDrainDelay: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'regionalDrainDelay', .18), 0, .30) },
+          uRegionalDrainVariation: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'regionalDrainVariation', .20), 0, .35) },
+          uDrainCurveExponent: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'drainCurveExponent', 1.65), 1, 2.5) },
+          uResidualFoamStrength: { value: THREE.MathUtils.clamp(readDebugNumber(pbr?.debugParams ?? null, 'residualFoamStrength', .34), .1, .6) },
+        }
+      : kind === 'flow'
+        ? { uDrainProgress: { value: 0 }, uRinseProgress: { value: 0 }, uTime: { value: 0 }, uDebugView: { value: 0 }, uFlowCoverage: { value: .09 }, uFlowWidth: { value: .055 }, uFlowSpeed: { value: .008 }, uFlowAlpha: { value: .40 }, uFlowVerticality: { value: 1 }, uLowerAccumulation: { value: .045 }, uBroadTrailStrength: { value: .08 }, uMediumTrailStrength: { value: .62 }, uFineTrailStrength: { value: .34 } }
+        : { uWetness: { value: 0 }, uRinseProgress: { value: 0 }, uTime: { value: 0 }, uFoamDensityMap: { value: map } }
   const material: THREE.Material = debugSolid && kind === 'foam'
     ? new THREE.MeshStandardMaterial({ color: 0xf5f8fa, metalness: 0, roughness: .82, transparent: false, opacity: 1, depthTest: validation?.depthTest ?? true, depthWrite: validation?.depthWrite ?? true, side: validation?.side ?? THREE.FrontSide, polygonOffset: true, polygonOffsetFactor: validation?.polygonOffsetFactor ?? -1, polygonOffsetUnits: validation?.polygonOffsetUnits ?? -1 })
-    : new THREE.ShaderMaterial({ vertexShader: kind === 'foam' ? foamVertex : layerVertex, fragmentShader: kind === 'dirt' ? dirtFragment : foamFragment, uniforms: uniforms as unknown as THREE.ShaderMaterialParameters['uniforms'], transparent: true, depthWrite: false, depthTest: kind !== 'foam', side: THREE.DoubleSide })
+    : new THREE.ShaderMaterial({
+      vertexShader: kind === 'foam' ? foamVertex : kind === 'flow' ? foamFlowVertex : kind === 'wet' ? wetFilmVertex : layerVertex,
+      fragmentShader: kind === 'dirt' ? dirtFragment : kind === 'foam' ? foamFragment : kind === 'flow' ? foamFlowFragment : wetFilmFragment,
+      uniforms: uniforms as unknown as THREE.ShaderMaterialParameters['uniforms'],
+      // Foam is a locally discarded opaque mass, never a globally faded overlay.
+      transparent: kind !== 'foam',
+      depthWrite: kind === 'foam',
+      depthTest: true,
+      side: kind === 'foam' ? THREE.FrontSide : THREE.DoubleSide,
+      polygonOffset: kind === 'foam',
+      polygonOffsetFactor: kind === 'foam' ? -1 : 0,
+      polygonOffsetUnits: kind === 'foam' ? -1 : 0,
+    })
   // Rebuild only the transform hierarchy needed by Body/Paint meshes; no glass, wheels or interior.
   const add = (node: THREE.Object3D, parent: THREE.Object3D) => {
     if (node instanceof THREE.Mesh) {
@@ -421,15 +747,21 @@ function makeSurfaceLayer(source: THREE.Group, kind: 'dirt' | 'foam', target: 'p
         return allowed ? [index] : []
       })
       if (!selectedIndices.length) return
-      // Each GLB primitive is material-scoped. We select whole primitives only;
-      // no triangle filtering or geometric classification happens in the browser.
-      const mesh = new THREE.Mesh(offsetGeometry(node.geometry, validation?.shellOffset ?? .003), material)
+      // Use the authoring-time GLB material groups exactly as exported. This is
+      // a material-index selection, not runtime geometric classification.
+      const selectedGeometry = geometryForMaterialIndices(node.geometry, selectedIndices)
+      if (!selectedGeometry) return
+      const mesh = new THREE.Mesh(offsetGeometry(selectedGeometry, validation?.shellOffset ?? .003), material)
       mesh.name = `Layer:${kind}:${target}:${node.name}`; mesh.position.copy(node.position); mesh.quaternion.copy(node.quaternion); mesh.scale.copy(node.scale); mesh.renderOrder = debugSolid ? validation?.renderOrder ?? 20 : target === 'glass' ? (kind === 'foam' ? 5 : 4) : (kind === 'foam' ? 3 : 2); parent.add(mesh); return
     }
     const branch = new THREE.Group(); branch.position.copy(node.position); branch.quaternion.copy(node.quaternion); branch.scale.copy(node.scale); parent.add(branch); node.children.forEach((child) => add(child, branch))
   }
   source.children.forEach((child) => add(child, root))
+  // Every descendant mesh uses this exact ShaderMaterial instance. Keeping the
+  // identity on the layer root lets the runtime panel prove that the uniform
+  // being updated belongs to the material currently rendered in production.
   root.userData.uniforms = uniforms
+  root.userData.material = material
   return root
 }
 
@@ -744,16 +1076,43 @@ function offsetGeometry(source: THREE.BufferGeometry, shellOffset: number) {
   position.needsUpdate = true; return geometry
 }
 
+function geometryForMaterialIndices(source: THREE.BufferGeometry, materialIndices: number[]) {
+  const geometry = source.clone()
+  const allowed = new Set(materialIndices)
+  if (!geometry.groups.length) return materialIndices.length === 1 ? geometry : null
+  const groups = geometry.groups.filter((group) => group.materialIndex !== undefined && allowed.has(group.materialIndex))
+  if (!groups.length) return null
+  geometry.clearGroups()
+  groups.forEach((group) => geometry.addGroup(group.start, group.count, 0))
+  return geometry
+}
+
 function readDebugNumber(params: URLSearchParams | null, key: string, fallback: number) {
   const value = Number(params?.get(key))
   return Number.isFinite(value) ? value : fallback
 }
 
-function updateLayer(layer: THREE.Group, state: CinematicState, time: number) {
+function updateLayer(layer: THREE.Group, state: CinematicState, time: number, debugView: CinematicDebugView = 'final', flowSettings?: { coverage: number; width: number; speed: number; alpha: number; verticality: number; lowerAccumulation: number; broad: number; medium: number; fine: number }, microTime = 0, foamLife = true) {
   const uniforms = layer.userData.uniforms as Record<string, { value: number }>
-  uniforms.uTime.value = time; uniforms.uCleaningMask.value = state.cleaningMask
+  uniforms.uTime.value = time
+  if ('uFoamMicroTime' in uniforms) { uniforms.uFoamMicroTime.value = microTime; uniforms.uFoamLife.value = foamLife ? 1 : 0 }
+  if ('uCleaningMask' in uniforms) uniforms.uCleaningMask.value = state.cleaningMask
   if ('uDirtAmount' in uniforms) uniforms.uDirtAmount.value = state.dirtAmount
-  if ('uCoverage' in uniforms) uniforms.uCoverage.value = state.foamCoverage
+  if ('uCoverage' in uniforms) {
+    uniforms.uCoverage.value = state.applicationProgress
+    uniforms.uPeakDensity.value = state.peakDensity
+    uniforms.uDrainProgress.value = state.drainProgress
+    uniforms.uRinseProgress.value = state.rinseProgress
+    uniforms.uWetnessProgress.value = state.wetnessProgress
+    uniforms.uDebugView.value = ({ final: 0, presence: 1, gravity: 2, streaks: 3, rinse: 4, rinseEdge: 5, wetness: 6 } as Record<CinematicDebugView, number>)[debugView]
+  }
+  if ('uDrainProgress' in uniforms && !('uCoverage' in uniforms)) {
+    uniforms.uDrainProgress.value = state.drainProgress
+    uniforms.uRinseProgress.value = state.rinseProgress
+    uniforms.uDebugView.value = ({ final: 0, presence: 1, gravity: 2, streaks: 3, rinse: 4, rinseEdge: 5, wetness: 6 } as Record<CinematicDebugView, number>)[debugView]
+    if (flowSettings) { uniforms.uFlowCoverage.value = flowSettings.coverage; uniforms.uFlowWidth.value = flowSettings.width; uniforms.uFlowSpeed.value = flowSettings.speed; uniforms.uFlowAlpha.value = flowSettings.alpha; uniforms.uFlowVerticality.value = flowSettings.verticality; uniforms.uLowerAccumulation.value = flowSettings.lowerAccumulation; uniforms.uBroadTrailStrength.value = flowSettings.broad; uniforms.uMediumTrailStrength.value = flowSettings.medium; uniforms.uFineTrailStrength.value = flowSettings.fine }
+  }
+  if ('uWetness' in uniforms) { uniforms.uWetness.value = state.wetness; uniforms.uRinseProgress.value = state.rinseProgress }
 }
 
 function interpolate(progress: number, points: Array<[number, number]>) {
@@ -772,11 +1131,66 @@ function DustParticles({ state, time, reducedMotion }: { state: CinematicState; 
 }
 
 function FoamDrips({ state, time }: { state: CinematicState; time: MutableRefObject<number> }) {
-  const compact = useThree((store) => store.viewport.width < 9); const count = compact ? 10 : 24
+  const compact = useThree((store) => store.viewport.width < 9); const count = compact ? 4 : 6
   const ref = useRef<THREE.Points>(null); const { invalidate } = useThree()
   const geometry = useMemo(() => { const values = new Float32Array(count * 3); for (let i=0;i<count;i++) { values[i*3] = -.8 + (i % 8) * .22; values[i*3+1] = -.18 - (i % 3) * .16; values[i*3+2] = .55 + ((i * 7) % 5) * .05 } const g = new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(values,3)); return g },[count])
-  useFrame(() => { const points = ref.current; if (!points) return; const active=state.foamCoverage>.35 && state.cleaningMask<.95; points.visible=active; const position=points.geometry.getAttribute('position') as THREE.BufferAttribute; for(let i=0;i<count;i++){ const phase=(time.current*.12+i*.173)%1; position.setY(i,-.14-(i%3)*.13-phase*.52) } position.needsUpdate=true; if(active) invalidate() })
-  return <points ref={ref} geometry={geometry}><pointsMaterial color="#eef8ff" transparent depthWrite={false} size={.024} sizeAttenuation opacity={.72}/></points>
+  useFrame(() => { const points = ref.current; if (!points) return; const active=state.drainProgress>.01 && state.rinseProgress<.98; points.visible=active; const position=points.geometry.getAttribute('position') as THREE.BufferAttribute; for(let i=0;i<count;i++){ const seed=i*.173; const fall=Math.min(.16+state.drainProgress*.32+((time.current*.035+seed)%1)*.08,.58); position.setY(i,-.14-(i%3)*.13-fall) } position.needsUpdate=true; if(active) invalidate() })
+  return <points ref={ref} geometry={geometry}><pointsMaterial color="#f3f8fa" transparent depthWrite={false} size={.018} sizeAttenuation opacity={.64}/></points>
+}
+
+function FoamDropLayer({ state, microTime, debug, singleProbe, deterministic }: { state: CinematicState; microTime: MutableRefObject<number>; debug: MutableRefObject<AnimationDebugData>; singleProbe: boolean; deterministic: boolean }) {
+  const compact = useThree((store) => store.viewport.width < 9); const count = singleProbe ? 1 : compact ? 4 : 8
+  const ref = useRef<THREE.InstancedMesh>(null); const { invalidate } = useThree()
+  const origins = useMemo(() => [[-.92,.22,.42],[-.48,.18,.64],[.12,-.08,.72],[.58,-.16,.62],[.9,.08,.44],[-.18,.02,-.54],[.72,-.08,-.38],[-.7,-.12,-.42]].map((v) => new THREE.Vector3(...v)), [])
+  const geometry = useMemo(() => makeFoamDropGeometry(), [])
+  useEffect(() => { if (ref.current) ref.current.instanceMatrix.setUsage(THREE.DynamicDrawUsage) }, [])
+  useFrame(() => {
+    const mesh=ref.current; if (!mesh) return
+    debug.current.visibleDropMeshUUID = mesh.uuid; debug.current.updatedDropMeshUUID = mesh.uuid
+    const active = deterministic || singleProbe || state.peakDensity > .12 && state.dryProgress < .98
+    mesh.visible = active; mesh.frustumCulled = false; mesh.renderOrder = 25
+    const matrix=new THREE.Matrix4(); const position=new THREE.Vector3(); const scale=new THREE.Vector3(); const rotation=new THREE.Quaternion()
+    for(let i=0;i<count;i++) {
+      const water=state.rinseProgress>.2; const origin=origins[i%origins.length]!; position.copy(singleProbe ? origins[2]! : origin)
+      if (deterministic && i === 0) {
+        const normalized = (microTime.current % 3) / 3
+        position.y = origin.y - normalized * 1.8
+        scale.set(.04, .10 + normalized * .08, .04)
+        matrix.compose(position, rotation.identity(), scale)
+        mesh.setMatrixAt(i, matrix)
+        debug.current.drop0State = 'deterministic-falling'
+        debug.current.drop0Elapsed = microTime.current % 3
+        debug.current.drop0Y = position.y
+        debug.current.calculatedDropY = position.y
+        debug.current.drop0Visible = true
+        continue
+      }
+      // Staggered 3.0–4.4s cycles keep each emitter sparse; falling remains
+      // quicker than a surface streak but long enough to be read in-frame.
+      const attached=.78+(i%3)*.16, stretching=.56+(i%2)*.14, falling=.92+(i%4)*.11, impact=.34, delay=.86+(i%4)*.26
+      const cycleDuration=attached+stretching+falling+impact+delay; const age=(microTime.current+i*.71)%cycleDuration; const width=.025+(i%3)*.006
+      let stateName='attached'
+      if(age<attached) { scale.set(width,.055,width) }
+      else if(age<attached+stretching) { stateName='stretching'; const t=(age-attached)/stretching; position.y-=t*.085; scale.set(width*(1-t*.34),.055+t*.115,width*(1-t*.34)) }
+      else if(age<attached+stretching+falling) { stateName='falling'; const t=age-attached-stretching; const gravity=water?.52:.36; const velocity=water?.16:.075; const fall=velocity*t+.5*gravity*t*t; position.y-=.085+fall; position.x+=Math.sin(i*12.7)*t*.008; scale.set(width*.60,.13+Math.min(fall*.12,.10),width*.60) }
+      else if(age<attached+stretching+falling+impact) { stateName='impact'; position.y=-.78; scale.set(0,0,0) }
+      else { stateName='delay'; scale.set(0,0,0) }
+      rotation.setFromAxisAngle(new THREE.Vector3(0,0,1),(i%2?-.12:.12)); matrix.compose(position,rotation,scale); mesh.setMatrixAt(i,matrix)
+      if(i===0){debug.current.drop0State=stateName;debug.current.drop0Elapsed=age;debug.current.drop0Y=position.y;debug.current.calculatedDropY=position.y;debug.current.drop0Visible=scale.y>0}
+    }
+    mesh.instanceMatrix.needsUpdate=true
+    const matrixReadback=new THREE.Matrix4();const matrixPosition=new THREE.Vector3();const matrixQuaternion=new THREE.Quaternion();const matrixScale=new THREE.Vector3();mesh.getMatrixAt(0,matrixReadback);matrixReadback.decompose(matrixPosition,matrixQuaternion,matrixScale);debug.current.matrixDropY=matrixPosition.y;debug.current.dropMatrixUpdates+=1
+    if(active) invalidate()
+  })
+  return <instancedMesh ref={ref} args={[undefined, undefined, count]} frustumCulled={false} renderOrder={25}><primitive object={geometry} attach="geometry" /><meshPhysicalMaterial color={singleProbe ? '#ff00ff' : deterministic ? '#dffbff' : '#f1f7f9'} roughness={.22} metalness={0} transmission={.05} thickness={.03} clearcoat={.35} clearcoatRoughness={.18} transparent opacity={.78} depthTest depthWrite={false} /></instancedMesh>
+}
+
+function makeFoamDropGeometry() { const points=[new THREE.Vector2(0,.50),new THREE.Vector2(.32,.30),new THREE.Vector2(.42,.04),new THREE.Vector2(.25,-.30),new THREE.Vector2(.08,-.48),new THREE.Vector2(0,-.56)]; const geometry=new THREE.LatheGeometry(points,7); geometry.rotateX(Math.PI); return geometry }
+
+function FoamImpactLayer({ state, microTime, debug }: { state: CinematicState; microTime: MutableRefObject<number>; debug: MutableRefObject<AnimationDebugData> }) {
+  const compact = useThree((store) => store.viewport.width < 9); const count = compact ? 3 : 6; const ref=useRef<THREE.InstancedMesh>(null); const { invalidate }=useThree()
+  useFrame(() => { const mesh=ref.current; if(!mesh)return; debug.current.visibleImpactMeshUUID=mesh.uuid;debug.current.updatedImpactMeshUUID=mesh.uuid;const active=state.drainProgress>.08&&state.dryProgress<.98;mesh.visible=active;const matrix=new THREE.Matrix4();const p=new THREE.Vector3();const s=new THREE.Vector3();for(let i=0;i<count;i++){const phase=(microTime.current+i*.63)%1.6;const expansion=Math.min(phase/.62,1);p.set(-.88+(i%3)*.72,-.80,.18+(i%2)*.36);s.set(.035+expansion*.075,.022+expansion*.035,1);matrix.compose(p,new THREE.Quaternion(),s);mesh.setMatrixAt(i,matrix)}mesh.instanceMatrix.needsUpdate=true;debug.current.impactMatrixUpdates+=1;if(active)invalidate() })
+  return <instancedMesh ref={ref} args={[undefined,undefined,count]} frustumCulled={false} renderOrder={1} rotation={[-Math.PI/2,0,0]}><planeGeometry args={[1,1]} /><meshBasicMaterial color="#1d2b34" transparent opacity={.24} depthWrite={false} /></instancedMesh>
 }
 
 useGLTF.preload(MODEL_URL)
