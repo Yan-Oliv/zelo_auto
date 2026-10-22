@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "scope": "ZE-03 user visual correction only",
+  "supersedesApproval": "240d4c2 and ZE-03-FINAL-* local visual approval, rejected by user",
+  "technicalReview": "PASS: shadow, contact and reflection anchored to one car container; mobile copy positioned independently; official company PNG used unchanged; existing intro and navigation retained",
+  "noxFinalVisual": "PASS: actual reference contact crop, mobile full screenshot and ultrawide logo crop inspected",
+  "rootFinalReview": "PASS",
+  "rootReviewEvidence": "Root opened final reference desktop, mobile and ultrawide: continuous tire/chassis contact, no bright gap, separated mobile slogans, original logo fully visible in original colors; no remaining impediment",
+  "grounding": "Contact at both tires, underbody occlusion and connected cast shadow overlap the car silhouette; reflection begins at the same baseline",
+  "room": "Selective receiving-floor treatment preserves architecture, top and side fades; luma supports visual inspection but is not acceptance by itself",
+  "logo": {
+    "source": "src/logos/zelo_logo_png_optimized.png via siteConfig.mainLogo",
+    "identityReference": "src/images/identidade_visual_zelo.jpeg",
+    "monochromeFilter": false,
+    "originalColors": "White ZELO and gold silhouette/subtitle over #0d1b2a support",
+    "inventedHeaderSVGRemoved": true
+  },
+  "mobile": "MAIS QUE ESTÉTICA. above vector ZELO; É VALORIZAÇÃO. below vector ZELO; no text/lettering overlap",
+  "approval": "Local QA/Nox/root review; not a claim of human user sign-off",
+  "limitations": ["Generative car/showroom assets are not pixel-identical", "Chromium emulation is not physical-device certification", "No-storage reload cannot persist document memory"],
+  "ze04Started": false,
+  "deploymentOrPush": false
+}

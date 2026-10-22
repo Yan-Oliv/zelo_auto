@@ -1,33 +1,30 @@
-# ZE-03 — Relatório final | 2026-10-22
+# ZE-03 — Correção visual final | 2026-10-22
 
-Estado: COMPLETED. Aprovação técnica local Nox/QA/review; não se atribui homologação humana ao usuário. ZE-04 permanece QUEUED e não foi iniciada. Sem deploy ou push.
+Estado: COMPLETED após a correção solicitada pelo usuário. Aprovação técnica/QA/Nox local, sem atribuir homologação humana ao usuário. A aprovação anterior do commit240d4c2 foi rejeitada e está substituída por esta rodada.
 
-## Entregas concluídas
+## Correções entregues
 
-1. Hero final reconstruída com a imagem anexada como fonte visual: showroom derivado da referência, carro frontal preto sem anéis nem badge R8, escala e enquadramento correspondentes em1672×940, ZELO contornado vetorial, slogans legíveis branco/dourado, fades claros, assinatura na parede, sombra e reflexo do carro. Background, carro, SVG, frases, hint e header são elementos independentes.
-2. Intro cinematográfica na primeira abertura: frases entram de lados opostos, carro faz fade com scale/deslocamento discretos, SVG é revelado por máscara. Inicia após decode dos assets. sessionStorage zelo:hero-intro:v3 é consumida no início da intro para que saída precoce/retorno não provoquem replay. Fallback em memória para storage bloqueado. Reduced-motion mostra a composição pronta.
+- Apoio do carro no piso: sombra de contato dos dois pneus, oclusão sob chassi, sombra projetada conectada e reflexo agora pertencem ao mesmo container do carro. A geometria acompanha sua escala e movimento, sem offsets de viewport independentes. Os recortes reais comprovam ausência da fresta luminosa que dava aspecto de flutuação. Reflexo parte da linha de contato e se dissolve no piso.
+- Cenário: ajuste localizado no piso central e saturação discreta, preservando laterais, arquitetura, iluminação dourada e fades. A escuridão vem da integração de sombras/reflexo, sem escurecer uniformemente toda a hero. Evidência de luminância acompanha a inspeção visual; médias de regiões são apoio, não substituem percepção ou garantem identidade pixel a pixel.
+- Mobile: MAIS QUE ESTÉTICA. fica acima do ZELO; É VALORIZAÇÃO. fica abaixo do ZELO e antes do carro, com margens próprias, sem sobreposição entre os textos e o lettering. Essa correção explícita substitui o critério anterior de sobreposição mobile.
+- Appbar: removeu-se completamente o desenho SVG/texto inventado. Usa a imagem oficial existente src/logos/zelo_logo_png_optimized.png (via siteConfig.mainLogo), com silhueta e subtítulo dourados e ZELO branco. Sem filtro monocromático ou geração de marca. Suporte discreto #0d1b2a segue a identidade fornecida em src/images/identidade_visual_zelo.jpeg. Largura máxima230px e proporção do suporte preservam o conteúdo inteiro em todas as telas, inclusive ultrawide.
 
-Header com orçamento/calendário, busca circular funcional por seções/serviços locais, menu e destinos reais preservados. Contraste do header depende de observer dedicado da hero, evitando o defeito em seções mobile altas. Não há linha separando header e hero.
+As duas entregas da ZE-03 permanecem hero final em camadas e animações/primeiro carregamento. Slogans, SVG, cenário, carro, sombras/reflexo, hint e header continuam elementos independentes. Destinos de navegação e outras seções foram preservados. Nenhuma mudança em ZE-04, backend, credenciais, ambiente ou produção.
 
-## Qualidade e fidelidade verificadas
+## Gates finais
 
-Assets WebP: cenário1672×940/189448 bytes, carro alpha1275×643/258408 bytes (total447856 bytes). Edição integrada image_gen a partir da referência, crop do alpha e conversão Sharp, sem upscale nem alegação4K. Prompts em ZE-03-Asset-Prompts.md e hashes em evidence/ZE-03-FINAL-asset-manifest.json.
+- npm run build: PASS, exit0. Aviso legado de chunk Three grande na rota debug lazy, não requisitada pela landing.
+- npm run lint: PASS, exit0; seis warnings legados em MotionSettings/CinematicContext/CarScene fora da hero, detalhados no quality.json.
+- QA local Chromium: 166/166 PASS, incluindo viewports1672×940,1440×900,2560×1080,768×1024,390×844 e360×740; intro real, persistência sessão/retorno/reload, reduced-motion, storage indisponível, navegação/busca/menu/orçamento/hint, proporções, conteúdo preservado, sem overflow/JS errors/Canvas/GLB/Three.
+- Inspeção visual real: seis screenshots completas mais recortes de contato pneus/piso e logo. QA verificou contato físico aparente, sombra conectada, reflexo, leitura do cenário, logo original inteira e frases mobile separadas. Nox e coordenador raiz abriram screenshots finais antes do fechamento.
+- A primeira rodada da correção passou nos testes funcionais, mas a inspeção identificou logo truncada em ultrawide; corrigida. A validação também refinou a faixa de sombra/reflexo central antes do último bundle congelado. O fechamento depende da revisão visual, não apenas da contagem de testes.
 
-Comparação visual real em1672×940 confirma carro frontal na escala e posição de referência, showroom quente, ZELO atrás do carro, slogans nos lados e hint inferior. Ultrawide preserva proporções com escala uniforme e fades adicionais; tablet/mobile adaptam o recorte sem overflow. Foram inspecionadas screenshots reais por QA e Nox, com segunda leitura do coordenador raiz.
+## Evidências e limites
 
-Limite declarado: reconstrução em camadas visualmente próxima, sem equivalência pixel a pixel. Há microdiferenças nos detalhes do carro, reflexo e preenchimento do interior por edição generativa. Os nomes/destinos das seções reais do menu foram preservados (Produtos/Instagram/Localização), em vez de inventar Sobre/Resultados/Depoimentos ausentes no projeto. Não se criou conteúdo comercial fora da ZE-03.
+Evidências atuais têm prefixo evidence/ZE-03-CORRECTION-: QA.md, qa.mjs, qa-results.json, quality.json, review.json, luminance.mjs/json, reference/desktop/ultrawide/tablet/mobile/compact.png e recortes *-tire-contact.png / *-logo.png. ZE-03-FINAL-* é histórico da aprovação anterior rejeitada, não o aceite atual.
 
-## Gates e correções de QA
+Assets de cena/carro continuam os mesmos WebP locais derivados da referência via image_gen:1672×940 e1275×643, sem upscale, com prompts e hashes em ZE-03-Asset-Prompts.md e evidence/ZE-03-FINAL-asset-manifest.json. Esta correção usa CSS/DOM e a marca oficial já existente; não gerou novo logo nem raster. Não se declara captura4K ou equivalência pixel a pixel. Microdetalhes da edição e nomes das seções reais do menu diferem da imagem conceitual.
 
-- npm run build: PASS, exit0. Aviso de chunk Three maior que500kB permanece na rota debug lazy; não é requisitado pela landing.
-- npm run lint: PASS, exit0. Seis warnings legados fora da hero: exports de MotionSettings/CinematicContext e dependências useMemo de CarScene.
-- Playwright Chromium local: 144/144 PASS. Viewports1672×940,1440×900,2560×1080,768×1024,390×844 e360×740; reduced-motion e storage bloqueado.
-- Verificados intro/keyframes, fades/reveal, persistência em reload/retorno, nova sessão, proporções car/SVG, overlap mobile, legibilidade/fades, ausência de overflow/Canvas/GLB/Three e exceções JS, menu/busca/CTA/hint e seções preservadas.
-- Iterações reais:126/128 no primeiro QA (contraste do header em2 viewports mobile); corrigido com observer dedicado. Review encontrou deformação ultrawide; corrigida com aspect-ratio e cover uniforme. QA visual adicional encontrou perda de overlap mobile e corte do fade ultrawide; ambos corrigidos e revalidados. Última rodada do bundle congelado está integralmente aprovada.
-- O endpoint /api/instagram-feed foi interceptado no teste para erro503 controlado; a integração oficial não é homologada nesta sprint. Mapas e links existentes continuam presentes. Não se alterou backend, credenciais, dados ou configuração de produção.
+API Instagram é interceptada no QA para erro503 controlado; sua integração externa não é certificada nesta sprint. Movimento reduzido mostra a composição pronta. Storage negado usa memória do documento e não consegue persistir após recarga completa sem armazenamento. Testes Chromium emulados não substituem hardware móvel físico.
 
-## Evidências e reversão
-
-evidence/ZE-03-FINAL-qa.mjs e -qa-results.json; -quality.json; -reference.png; -desktop.png; -ultrawide.png; -tablet.png; -mobile.png; -compact.png; -intro.png; -reduced.png; -review.json; -asset-manifest.json.
-
-Branch preservada work/ze-audi-redesign. Checkpoint anotado ZE-03-final-start-20261022 aponta9a557ef. Para rollback, criar branch nova a partir desse checkpoint em checkout isolado, preservando alterações do usuário; não usar reset hard/clean. src/planos/ não rastreado e .env foram preservados. Registro do commit final em Git e no log durável independente após commit.
+Branch work/ze-audi-redesign preservada; checkpoint ZE-03-correction-start-20261022 aponta240d4c2. Rollback por checkout isolado/branch nova preservando arquivos locais, sem reset hard/clean. .env e src/planos/ não rastreado preservados. Commit final registrado no Git e no contexto durável após criação. Sem deploy ou push; ZE-04 permanece QUEUED.

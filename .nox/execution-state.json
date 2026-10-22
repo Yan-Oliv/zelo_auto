@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "Objetivo ZE-03 concluído e aprovado localmente; ZE-04 QUEUED fora do escopo autorizado. Não iniciar nem publicar.",
+  "nextAction": "ZE-03 visual correction completed and locally approved; ZE-04 remains QUEUED outside authorization. No publish.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -124,8 +124,10 @@
           "required": true,
           "status": "PASS",
           "evidence": [
-            "evidence/ZE-03-FINAL-reference.png",
-            "evidence/ZE-03-FINAL-asset-manifest.json"
+            "ZE-03-Report.md",
+            "evidence/ZE-03-CORRECTION-qa-results.json",
+            "evidence/ZE-03-CORRECTION-quality.json",
+            "evidence/ZE-03-CORRECTION-review.json"
           ]
         },
         {
@@ -134,9 +136,10 @@
           "required": true,
           "status": "PASS",
           "evidence": [
-            "evidence/ZE-03-FINAL-qa-results.json",
-            "evidence/ZE-03-FINAL-mobile.png",
-            "evidence/ZE-03-FINAL-ultrawide.png"
+            "ZE-03-Report.md",
+            "evidence/ZE-03-CORRECTION-qa-results.json",
+            "evidence/ZE-03-CORRECTION-quality.json",
+            "evidence/ZE-03-CORRECTION-review.json"
           ]
         },
         {
@@ -145,9 +148,10 @@
           "required": true,
           "status": "PASS",
           "evidence": [
-            "evidence/ZE-03-FINAL-quality.json",
-            "evidence/ZE-03-FINAL-qa-results.json",
-            "evidence/ZE-03-FINAL-review.json"
+            "ZE-03-Report.md",
+            "evidence/ZE-03-CORRECTION-qa-results.json",
+            "evidence/ZE-03-CORRECTION-quality.json",
+            "evidence/ZE-03-CORRECTION-review.json"
           ]
         },
         {
@@ -157,11 +161,13 @@
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "00-Execution-Map.md",
-            "Git tag ZE-03-final-start-20261022"
+            "evidence/ZE-03-CORRECTION-qa-results.json",
+            "evidence/ZE-03-CORRECTION-quality.json",
+            "evidence/ZE-03-CORRECTION-review.json"
           ]
         }
-      ]
+      ],
+      "visualRevision": "User correction: grounding, floor realism, separated mobile copy, official logo"
     },
     {
       "id": "ZE-03-REWORK",

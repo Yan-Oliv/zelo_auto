@@ -160,11 +160,7 @@ export function LandingPage() {
       <header className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
           <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
-            <svg viewBox="0 0 440 60" aria-hidden="true" focusable="false">
-              <path d="M0 4H108V15L23 43H108V54H0V42L84 15H0ZM125 4H222V15H125ZM125 25H216V35H125ZM125 43H222V54H125ZM239 4H252V42H325V54H239Z" />
-              <rect x="342" y="9" width="90" height="40" rx="21" fill="none" stroke="currentColor" strokeWidth="11" />
-            </svg>
-            <span>AUTO ESTÉTICA</span>
+            <img src={siteConfig.mainLogo} alt={brandName} width={640} height={427} fetchPriority="high" />
           </a>
           <span className="zelo-header-divider" aria-hidden="true" />
           <nav className="zelo-header-nav" aria-label="Navegação principal">
@@ -260,8 +256,6 @@ export function LandingPage() {
             <img ref={backdropRef} className="zelo-hero-backdrop" src="/hero/showroom-reference.webp" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
           </div>
           <div className="zelo-showroom-sign" aria-hidden="true"><span>ZELO</span><small>AUTO ESTÉTICA</small></div>
-          <div className="zelo-hero-ground-shadow" aria-hidden="true" />
-          <div className="zelo-hero-reflection" aria-hidden="true"><img src="/hero/car-reference.webp" alt="" width={1275} height={643} /></div>
           <svg className="zelo-hero-wordmark" viewBox="416 191 825 286" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
             <defs>
               <linearGradient id="zelo-outline-gold" x1="0" y1="0" x2="0" y2="1">
@@ -278,7 +272,9 @@ export function LandingPage() {
             </g>
           </svg>
           <div className="zelo-hero-car" aria-hidden="true">
-            <img ref={carRef} src="/hero/car-reference.webp" alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
+            <div className="zelo-hero-reflection"><img src="/hero/car-reference.webp" alt="" width={1275} height={643} /></div>
+            <div className="zelo-hero-ground-shadow" />
+            <img className="zelo-hero-car-body" ref={carRef} src="/hero/car-reference.webp" alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
           </div>
           <div className="zelo-hero-edge-fade" aria-hidden="true" />
           <div className="zelo-hero-top-fade" aria-hidden="true" />

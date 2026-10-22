@@ -20,3 +20,7 @@ Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 ZE-03 foi reaberta e corrigida nesta execução; esta validação final substitui a aprovação visual das implementações anteriores ZE-03 e ZE-03-REWORK. O rework é parte da ZE-03, sem sprint adicional.
 
 Objetivo autorizado concluído: somente hero final e animações de primeira abertura. ZE-04 não iniciada. Nenhum CURRENT restante, nenhum bloqueador externo, nenhum deploy/push. Avaliações continuam exclusivamente Google. Produção e migrações exigem os gates próprios e autorização explícita.
+
+
+## Correção visual vinculante — 2026-10-22
+ZE-03 COMPLETED após correção de apoio do carro, piso/sombras, frases mobile separadas e logo oficial nas cores reais. Aprovação anterior240d4c2 rejeitada; aceite atual somente ZE-03-CORRECTION-*. ZE-04 não iniciada; sem deploy/push.

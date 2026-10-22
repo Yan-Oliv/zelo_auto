@@ -45,3 +45,11 @@
 - Hero corrigida segundo referência em camadas; assets sem fabricante, SVG/texto/DOM, intro v3 e reduced-motion.
 - Corrigidos contraste header mobile, proporções ultrawide, overlap mobile e fades; QA 144/144 PASS, build/lint PASS (6 warnings legados), review técnico PASS e inspeção visual real.
 - Evidências ZE-03-FINAL; aprovações anteriores substituídas. ZE-04 permanece QUEUED não iniciada, sem push/deploy, branch e src/planos/ preservados.
+
+## 2026-10-22 - ZE-03 visual correction REWORK
+User rejected previous result. Nox reopened only ZE-03: fix tire contact and underbody occlusion, central room contrast, separated mobile slogans and original logo asset. Previous approval superseded.
+
+## 2026-10-22 — ZE-03 correção visual COMPLETED
+- Rejeição do usuário reconciliada; aprovação240d4c2 superada. Corrigidos apoio/sombras/reflexo, piso seletivo, slogans mobile separados e logo oficial sem filtro sobre suporte de identidade.
+- Logo truncada ultrawide detectada visualmente e corrigida; QA final 166/166 PASS, build/lint PASS (6 warnings legados), recortes pneus/logo e screenshots revisados por QA/Nox/root.
+- Sem ZE-04, produção, push, credenciais ou alterações em src/planos/.

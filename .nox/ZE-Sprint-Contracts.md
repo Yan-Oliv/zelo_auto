@@ -21,7 +21,7 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 ## ZE-03 — Hero cinematográfico final Audi/Zelo
 
 - Entregas: hero fiel à referência em camadas independentes; animações de primeira abertura com persistência/reduced-motion.
-- Estado final: COMPLETED, QA 144/144, build/lint PASS, review técnico PASS. A execução anterior ZE-03-REWORK está incorporada e substituída pelo resultado final desta ZE-03.
+- Estado final: COMPLETED, QA 166/166, build/lint PASS, review técnico PASS. A execução anterior ZE-03-REWORK está incorporada e substituída pelo resultado final desta ZE-03.
 - Aceite: carro frontal sem fabricante, escala/posição da referência, showroom quente, ZELO SVG, slogans legíveis, fades e header sem divisor horizontal; desktop/ultrawide/tablet/mobile; navegação preservada e zero WebGL na landing.
 - Implementação: edição da referência via image_gen; WebP sem upscale, SVG/texto/DOM, CSS e sessionStorage zelo:hero-intro:v3. Evidências e limites reais em ZE-03-Report.md.
 - Limite do objetivo: ZE-04 não autorizada; sem deploy/push.
@@ -97,3 +97,6 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 - **Estado esperado:** Cloudflare Pages atualizado após autorização.
 - **Critério de aceite:** Site real, API, GA4, sitemap, links e rollback verificados.
 - **Melhor caminho:** Deploy rastreável somente com aprovação, smoke test e reversão preparada.
+
+## Retificação ZE-03 — correção visual final
+Aceite anterior240d4c2 rejeitado. Resultado atual exige pneus/chassi apoiados, reflexo/sombra conectados, piso integrado, textos mobile separados acima/abaixo ZELO e imagem oficial da marca com cores originais. Evidências atuais ZE-03-CORRECTION-*. ZE-04 não iniciada.

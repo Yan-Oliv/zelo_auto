@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-22T19:11:25.447Z",
+  "method": "Mean encoded RGB luma 0..255 using Rec.709 coefficients; aligned reference 1672x940 regions. Supporting evidence only, not automatic contact approval.",
+  "regions": {
+    "ceiling_center": [
+      640,
+      112,
+      392,
+      78
+    ],
+    "behind_car": [
+      670,
+      260,
+      330,
+      130
+    ],
+    "floor_left": [
+      250,
+      690,
+      205,
+      130
+    ],
+    "floor_right": [
+      1210,
+      690,
+      205,
+      130
+    ],
+    "floor_under_car": [
+      580,
+      756,
+      510,
+      56
+    ],
+    "tire_left": [
+      485,
+      734,
+      103,
+      45
+    ],
+    "tire_right": [
+      1072,
+      734,
+      108,
+      45
+    ]
+  },
+  "images": {
+    "reference": {
+      "width": 1672,
+      "height": 940,
+      "luma": {
+        "ceiling_center": 85.74,
+        "behind_car": 14.04,
+        "floor_left": 115.13,
+        "floor_right": 97.67,
+        "floor_under_car": 54.38,
+        "tire_left": 21.82,
+        "tire_right": 17.46
+      }
+    },
+    "superseded": {
+      "width": 1672,
+      "height": 940,
+      "luma": {
+        "ceiling_center": 73.37,
+        "behind_car": 8.04,
+        "floor_left": 121.89,
+        "floor_right": 106.06,
+        "floor_under_car": 67.21,
+        "tire_left": 33.23,
+        "tire_right": 34.72
+      }
+    },
+    "correction": {
+      "width": 1672,
+      "height": 940,
+      "luma": {
+        "ceiling_center": 73.35,
+        "behind_car": 8.04,
+        "floor_left": 113.59,
+        "floor_right": 98.58,
+        "floor_under_car": 55.46,
+        "tire_left": 22.48,
+        "tire_right": 21.24
+      }
+    }
+  }
+}
