@@ -1,0 +1,5003 @@
+{
+  "at": "2026-10-22T19:23:24.903Z",
+  "base": "http://127.0.0.1:4210/",
+  "scope": "ZE-03 intro v4 and transparent original logo correction; no ZE-04 or production actions",
+  "mock": "Only /api/instagram-feed returns controlled 503 JSON; official feed integration outside scope",
+  "visualResult": "PASS",
+  "checks": [
+    {
+      "name": "reference: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "reference: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -354.039, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -401.28, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-401.28px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 401.28, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(401.28px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "reference: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-401.28px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(401.28px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "reference: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "reference: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 63
+        },
+        {
+          "state": "playing",
+          "at": 187.40000009536743
+        },
+        {
+          "state": "settled",
+          "at": 3499.4000000953674
+        }
+      ]
+    },
+    {
+      "name": "reference: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "reference: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 108.671875,
+            "y": 473.28125,
+            "width": 405.03125,
+            "height": 25.84375
+          },
+          "font": "19.8968px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 1240.328125,
+            "y": 473.28125,
+            "width": 323,
+            "height": 25.84375
+          },
+          "font": "19.8968px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "reference: car reference bounds (within five CSS px)",
+      "pass": true,
+      "evidence": [
+        0.2858991851076555,
+        0.4286901595744681,
+        0.4234917015550239,
+        0.37987034574468087
+      ]
+    },
+    {
+      "name": "reference: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.9829781647923685,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "reference: outlined wordmark remains behind car",
+      "pass": true,
+      "evidence": {
+        "wordmark": {
+          "x": 416.046875,
+          "y": 191,
+          "width": 824.84375,
+          "height": 285.9375
+        },
+        "car": {
+          "x": 478.0234375,
+          "y": 402.96875,
+          "width": 708.078125,
+          "height": 357.078125
+        }
+      }
+    },
+    {
+      "name": "reference: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.8846994535519124,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "reference: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 14.943457031249999,
+          "y": 0.34417724609375,
+          "right": 207.84990234375,
+          "bottom": 73.70296630859374,
+          "imageWidth": 217.359375,
+          "imageHeight": 80.5,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "reference: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "reference: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "reference: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 14.943457031249999,
+        "y": 0.34417724609375,
+        "right": 207.84990234375,
+        "bottom": 73.70296630859374,
+        "imageWidth": 217.359375,
+        "imageHeight": 80.5,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "reference: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1672,
+          "height": 131.25
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "reference: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "reference: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/log.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/maps_api_js_slo/log",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps_api_js_slo/log",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "reference: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "reference: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "reference: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "reference: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "reference: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "reference: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 940,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 136,
+          "y": 0,
+          "width": 1400,
+          "height": 940,
+          "top": 0,
+          "right": 1536,
+          "bottom": 940,
+          "left": 136
+        }
+      }
+    },
+    {
+      "name": "reference: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "reference: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "reference: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "reference: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "desktop: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "desktop: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -304.914, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -355.242, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -345.6, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-345.6px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 345.6, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(345.6px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "desktop: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-345.6px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(345.6px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 53.699999928474426
+        },
+        {
+          "state": "playing",
+          "at": 191.59999990463257
+        },
+        {
+          "state": "settled",
+          "at": 3503
+        }
+      ]
+    },
+    {
+      "name": "desktop: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "desktop: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 93.59375,
+            "y": 453.140625,
+            "width": 348.828125,
+            "height": 22.28125
+          },
+          "font": "17.136px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 1068.234375,
+            "y": 453.140625,
+            "width": 278.171875,
+            "height": 22.28125
+          },
+          "font": "17.136px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "desktop: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.982979372015039,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "desktop: outlined wordmark remains behind car",
+      "pass": true,
+      "evidence": {
+        "wordmark": {
+          "x": 358.2734375,
+          "y": 182.875,
+          "width": 710.484375,
+          "height": 246.296875
+        },
+        "car": {
+          "x": 411.6953125,
+          "y": 385.828125,
+          "width": 609.828125,
+          "height": 307.53125
+        }
+      }
+    },
+    {
+      "name": "desktop: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.884666624373533,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "desktop: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 12.869140625,
+          "y": 0.297607421875,
+          "right": 178.998046875,
+          "bottom": 63.473388671875,
+          "imageWidth": 187.1875,
+          "imageHeight": 69.328125,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "desktop: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "desktop: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "desktop: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 12.869140625,
+        "y": 0.297607421875,
+        "right": 178.998046875,
+        "bottom": 63.473388671875,
+        "imageWidth": 187.1875,
+        "imageHeight": 69.328125,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "desktop: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 117.90625
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "desktop: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "desktop: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "desktop: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "desktop: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "desktop: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "desktop: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "desktop: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "desktop: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 900,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 20,
+          "y": 0,
+          "width": 1400,
+          "height": 900,
+          "top": 0,
+          "right": 1420,
+          "bottom": 900,
+          "left": 20
+        }
+      }
+    },
+    {
+      "name": "desktop: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "desktop: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "desktop: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "desktop: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "ultrawide: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "ultrawide: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -406.836, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -473.844, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -614.4, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-614.4px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 614.4, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(614.4px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ultrawide: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-614.4px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(614.4px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "ultrawide: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "ultrawide: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 55.799999952316284
+        },
+        {
+          "state": "playing",
+          "at": 207.19999992847443
+        },
+        {
+          "state": "settled",
+          "at": 3512.100000023842
+        }
+      ]
+    },
+    {
+      "name": "ultrawide: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "ultrawide: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 166.390625,
+            "y": 543.765625,
+            "width": 509,
+            "height": 32.5
+          },
+          "font": "25px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 1987.703125,
+            "y": 543.765625,
+            "width": 405.90625,
+            "height": 32.5
+          },
+          "font": "25px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "ultrawide: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.9829030538420531,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "ultrawide: outlined wordmark remains behind car",
+      "pass": true,
+      "evidence": {
+        "wordmark": {
+          "x": 794.625,
+          "y": 219.453125,
+          "width": 947.6875,
+          "height": 328.53125
+        },
+        "car": {
+          "x": 867.1328125,
+          "y": 462.984375,
+          "width": 813.671875,
+          "height": 410.34375
+        }
+      }
+    },
+    {
+      "name": "ultrawide: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.8846190430895082,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "ultrawide: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 15.8125,
+          "y": 0.359375,
+          "right": 219.9375,
+          "bottom": 77.984375,
+          "imageWidth": 230,
+          "imageHeight": 85.171875,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "ultrawide: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "ultrawide: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "ultrawide: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 15.8125,
+        "y": 0.359375,
+        "right": 219.9375,
+        "bottom": 77.984375,
+        "imageWidth": 230,
+        "imageHeight": 85.171875,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "ultrawide: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 2560,
+          "height": 143.484375
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "ultrawide: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "ultrawide: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "ultrawide: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "ultrawide: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "ultrawide: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "ultrawide: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "ultrawide: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "ultrawide: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 1080,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 580,
+          "y": 0,
+          "width": 1400,
+          "height": 1080,
+          "top": 0,
+          "right": 1980,
+          "bottom": 1080,
+          "left": 580
+        }
+      }
+    },
+    {
+      "name": "ultrawide: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "ultrawide: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "ultrawide: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "ultrawide: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "tablet: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "tablet: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -268.797, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -364.797, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -184.32, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-184.32px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 184.32, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(184.32px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tablet: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-184.32px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(184.32px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "tablet: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "tablet: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 55.60000002384186
+        },
+        {
+          "state": "playing",
+          "at": 170.39999997615814
+        },
+        {
+          "state": "settled",
+          "at": 3475.5
+        }
+      ]
+    },
+    {
+      "name": "tablet: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "tablet: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 38.390625,
+            "y": 409.59375,
+            "width": 187.46875,
+            "height": 16.890625
+          },
+          "font": "13px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 578.59375,
+            "y": 409.59375,
+            "width": 151.015625,
+            "height": 16.890625
+          },
+          "font": "13px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "tablet: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.9829404645265403,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "tablet: outlined wordmark remains behind car",
+      "pass": true,
+      "evidence": {
+        "wordmark": {
+          "x": 19.203125,
+          "y": 286.71875,
+          "width": 729.59375,
+          "height": 252.921875
+        },
+        "car": {
+          "x": 115.203125,
+          "y": 471.03125,
+          "width": 537.59375,
+          "height": 271.109375
+        }
+      }
+    },
+    {
+      "name": "tablet: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.8846605300549824,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "tablet: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 12.71875,
+          "y": 0.29296875,
+          "right": 176.90625,
+          "bottom": 62.73046875,
+          "imageWidth": 185,
+          "imageHeight": 68.515625,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "tablet: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "tablet: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "tablet: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 12.71875,
+        "y": 0.29296875,
+        "right": 176.90625,
+        "bottom": 62.73046875,
+        "imageWidth": 185,
+        "imageHeight": 68.515625,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "tablet: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 112.515625
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "tablet: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "tablet: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/maps/embed",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "tablet: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "tablet: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "tablet: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "tablet: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "tablet: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "tablet: mobile menu links",
+      "pass": true
+    },
+    {
+      "name": "tablet: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 1024,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 967.8125,
+          "top": 0,
+          "right": 768,
+          "bottom": 967.8125,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "tablet: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "tablet: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "tablet: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "tablet: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "mobile: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "mobile: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -183.297, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -179.398, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -93.6, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-93.6px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 93.6, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(93.6px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mobile: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-93.6px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(93.6px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 53.10000002384186
+        },
+        {
+          "state": "playing",
+          "at": 153.5
+        },
+        {
+          "state": "settled",
+          "at": 3462.100000023842
+        }
+      ]
+    },
+    {
+      "name": "mobile: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "mobile: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 0,
+            "y": 219.4375,
+            "width": 390,
+            "height": 15.203125
+          },
+          "font": "11.7px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 0,
+            "y": 395.5625,
+            "width": 390,
+            "height": 15.203125
+          },
+          "font": "11.7px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "mobile: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.9829276538201488,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "mobile: first slogan above ZELO without overlap",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 219.4375,
+          "width": 390,
+          "height": 15.203125
+        },
+        "wordmark": {
+          "x": 15.6015625,
+          "y": 253.1875,
+          "width": 358.796875,
+          "height": 124.375
+        }
+      }
+    },
+    {
+      "name": "mobile: second slogan below ZELO without overlap",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 395.5625,
+          "width": 390,
+          "height": 15.203125
+        },
+        "wordmark": {
+          "x": 15.6015625,
+          "y": 253.1875,
+          "width": 358.796875,
+          "height": 124.375
+        }
+      }
+    },
+    {
+      "name": "mobile: lower slogan stays above car",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 395.5625,
+          "width": 390,
+          "height": 15.203125
+        },
+        "car": {
+          "x": 11.703125,
+          "y": 472.625,
+          "width": 366.59375,
+          "height": 184.875
+        }
+      }
+    },
+    {
+      "name": "mobile: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.8847989949748745,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "mobile: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 8.3875,
+          "y": 0.1875,
+          "right": 116.6625,
+          "bottom": 41.3625,
+          "imageWidth": 122,
+          "imageHeight": 45.171875,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "mobile: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "mobile: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "mobile: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 8.3875,
+        "y": 0.1875,
+        "right": 116.6625,
+        "bottom": 41.3625,
+        "imageWidth": 122,
+        "imageHeight": 45.171875,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "mobile: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 89.171875
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "mobile: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "mobile: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zacs-atazOZij.jpg",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "mobile: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "mobile: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "mobile: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "mobile: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "mobile: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "mobile: mobile menu links",
+      "pass": true
+    },
+    {
+      "name": "mobile: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 844,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 1607.6875,
+          "top": 0,
+          "right": 390,
+          "bottom": 1607.6875,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "mobile: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "mobile: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "mobile: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "mobile: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "compact: HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "compact: four first-visit animations",
+      "pass": true,
+      "evidence": {
+        "car": {
+          "animation": "zelo-car-arrive",
+          "opacity": "0",
+          "transform": "matrix(0.985, 0, 0, 0.985, -169.195, 12)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-50%, 12px) scale(0.985)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(-50%) scale(1)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "wordmark": {
+          "animation": "zelo-outline-write",
+          "opacity": "0.15",
+          "transform": "matrix(1, 0, 0, 1, -165.594, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "0.15",
+              "clipPath": "inset(0px 100% 0px 0px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "clipPath": "inset(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "left": {
+          "animation": "zelo-copy-from-left",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, -86.4, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(-86.4px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        },
+        "right": {
+          "animation": "zelo-copy-from-right",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 86.4, 0)",
+          "keyframes": [
+            {
+              "offset": 0,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "0",
+              "transform": "translate(86.4px)",
+              "computedOffset": 0
+            },
+            {
+              "offset": 1,
+              "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+              "composite": "auto",
+              "opacity": "1",
+              "transform": "translate(0px)",
+              "computedOffset": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "compact: opposite slogan ingress",
+      "pass": true,
+      "evidence": {
+        "left": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-86.4px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ],
+        "right": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(86.4px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "compact: car fade and premium reveal",
+      "pass": true,
+      "evidence": {
+        "car": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "0",
+            "transform": "translate(-50%, 12px) scale(0.985)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "transform": "translate(-50%) scale(1)",
+            "computedOffset": 1
+          }
+        ],
+        "wordmark": [
+          {
+            "offset": 0,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "0.15",
+            "clipPath": "inset(0px 100% 0px 0px)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+            "composite": "auto",
+            "opacity": "1",
+            "clipPath": "inset(0px)",
+            "computedOffset": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "compact: first visit recorded and settled",
+      "pass": true,
+      "evidence": [
+        {
+          "state": "waiting",
+          "at": 52.39999997615814
+        },
+        {
+          "state": "playing",
+          "at": 158.59999990463257
+        },
+        {
+          "state": "settled",
+          "at": 3462.0999999046326
+        }
+      ]
+    },
+    {
+      "name": "compact: independent layers and four vector paths",
+      "pass": true,
+      "evidence": [
+        {
+          "s": ".zelo-hero-stage",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-backdrop",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-car",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-edge-fade",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-wordmark",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-left",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-slogan-right",
+          "count": 1
+        },
+        {
+          "s": ".zelo-hero-scroll-hint",
+          "count": 1
+        },
+        {
+          "s": "header",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "compact: slogans literal, visible and fit",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "MAIS QUE ESTÉTICA.",
+          "box": {
+            "x": 0,
+            "y": 192.390625,
+            "width": 360,
+            "height": 14.296875
+          },
+          "font": "11px",
+          "color": "rgb(255, 255, 255)",
+          "opacity": "1"
+        },
+        {
+          "text": "É VALORIZAÇÃO.",
+          "box": {
+            "x": 0,
+            "y": 354.796875,
+            "width": 360,
+            "height": 14.296875
+          },
+          "font": "11px",
+          "color": "rgb(220, 173, 75)",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "compact: car preserves natural aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 1.983060159326069,
+        "natural": 1.9828926905132194
+      }
+    },
+    {
+      "name": "compact: first slogan above ZELO without overlap",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 192.390625,
+          "width": 360,
+          "height": 14.296875
+        },
+        "wordmark": {
+          "x": 14.40625,
+          "y": 222,
+          "width": 331.1875,
+          "height": 114.796875
+        }
+      }
+    },
+    {
+      "name": "compact: second slogan below ZELO without overlap",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 354.796875,
+          "width": 360,
+          "height": 14.296875
+        },
+        "wordmark": {
+          "x": 14.40625,
+          "y": 222,
+          "width": 331.1875,
+          "height": 114.796875
+        }
+      }
+    },
+    {
+      "name": "compact: lower slogan stays above car",
+      "pass": true,
+      "evidence": {
+        "slogan": {
+          "x": 0,
+          "y": 354.796875,
+          "width": 360,
+          "height": 14.296875
+        },
+        "car": {
+          "x": 10.8046875,
+          "y": 414.390625,
+          "width": 338.390625,
+          "height": 170.640625
+        }
+      }
+    },
+    {
+      "name": "compact: vector lettering preserves aspect ratio",
+      "pass": true,
+      "evidence": {
+        "rendered": 2.884987069552198,
+        "natural": 2.8846153846153846
+      }
+    },
+    {
+      "name": "compact: appbar uses actual local logo image",
+      "pass": true,
+      "evidence": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 8.3875,
+          "y": 0.1875,
+          "right": 116.6625,
+          "bottom": 41.3625,
+          "imageWidth": 122,
+          "imageHeight": 45.171875,
+          "fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "compact: logo preserves original colors with image shadow only",
+      "pass": true,
+      "evidence": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)"
+    },
+    {
+      "name": "compact: transparent logo without background border or pseudo plate",
+      "pass": true,
+      "evidence": {
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "boxShadow": "none",
+        "before": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        "after": {
+          "content": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        }
+      }
+    },
+    {
+      "name": "compact: complete logo artwork fits without cropping",
+      "pass": true,
+      "evidence": {
+        "x": 8.3875,
+        "y": 0.1875,
+        "right": 116.6625,
+        "bottom": 41.3625,
+        "imageWidth": 122,
+        "imageHeight": 45.171875,
+        "fit": "cover"
+      }
+    },
+    {
+      "name": "compact: header without bottom line",
+      "pass": true,
+      "evidence": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 89.171875
+        },
+        "borderBottom": "0px",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "compact: existing business sections preserved",
+      "pass": true,
+      "evidence": {
+        "hero": true,
+        "servicos": true,
+        "marcas": true,
+        "instagram": true,
+        "localizacao": true,
+        "contato": true,
+        "parceiros": true
+      }
+    },
+    {
+      "name": "compact: no canvas or GLB/Three requests",
+      "pass": true,
+      "evidence": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ]
+    },
+    {
+      "name": "compact: no horizontal overflow",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "compact: reload immediately settled",
+      "pass": true,
+      "evidence": "settled"
+    },
+    {
+      "name": "compact: search opens, autofocus and accent-insensitive results",
+      "pass": true,
+      "evidence": "Higienização de Bancos\nHigienização de Carpete"
+    },
+    {
+      "name": "compact: Escape closes search and returns focus",
+      "pass": true
+    },
+    {
+      "name": "compact: search empty state",
+      "pass": true,
+      "evidence": "Nenhum resultado. Tente serviços ou contato."
+    },
+    {
+      "name": "compact: mobile menu links",
+      "pass": true
+    },
+    {
+      "name": "compact: navigation services",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "scrollY": 740,
+        "header": "zelo-site-header fixed inset-x-0 top-0 z-50 zelo-site-header-dark",
+        "section": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 1716.1875,
+          "top": 0,
+          "right": 360,
+          "bottom": 1716.1875,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "compact: return hero remains settled",
+      "pass": true
+    },
+    {
+      "name": "compact: scroll hint targets services",
+      "pass": true
+    },
+    {
+      "name": "compact: budget click reaches existing WhatsApp target",
+      "pass": true,
+      "evidence": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+    },
+    {
+      "name": "compact: no JS exceptions",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "reduced motion immediately complete without entrance",
+      "pass": true,
+      "evidence": {
+        "state": "settled",
+        "animation": "none",
+        "opacity": "1"
+      }
+    },
+    {
+      "name": "storage denied uses document fallback without replay",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "viewports": [
+    {
+      "name": "reference",
+      "viewport": {
+        "name": "reference",
+        "width": 1672,
+        "height": 940
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 63
+          },
+          {
+            "state": "playing",
+            "at": 187.40000009536743
+          },
+          {
+            "state": "settled",
+            "at": 3499.4000000953674
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1672,
+          "height": 940
+        },
+        "car": {
+          "x": 478.0234375,
+          "y": 402.96875,
+          "width": 708.078125,
+          "height": 357.078125
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 108.671875,
+              "y": 473.28125,
+              "width": 405.03125,
+              "height": 25.84375
+            },
+            "font": "19.8968px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 1240.328125,
+              "y": 473.28125,
+              "width": 323,
+              "height": 25.84375
+            },
+            "font": "19.8968px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1672,
+            "height": 131.25
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1688
+      },
+      "wordmark": {
+        "x": 416.046875,
+        "y": 191,
+        "width": 824.84375,
+        "height": 285.9375
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 14.943457031249999,
+          "y": 0.34417724609375,
+          "right": 207.84990234375,
+          "bottom": 73.70296630859374,
+          "imageWidth": 217.359375,
+          "imageHeight": 80.5,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/log.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/maps_api_js_slo/log",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps_api_js_slo/log",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-reference.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-reference-tire-contact.png"
+    },
+    {
+      "name": "desktop",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 53.699999928474426
+          },
+          {
+            "state": "playing",
+            "at": 191.59999990463257
+          },
+          {
+            "state": "settled",
+            "at": 3503
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "car": {
+          "x": 411.6953125,
+          "y": 385.828125,
+          "width": 609.828125,
+          "height": 307.53125
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 93.59375,
+              "y": 453.140625,
+              "width": 348.828125,
+              "height": 22.28125
+            },
+            "font": "17.136px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 1068.234375,
+              "y": 453.140625,
+              "width": 278.171875,
+              "height": 22.28125
+            },
+            "font": "17.136px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 117.90625
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1683
+      },
+      "wordmark": {
+        "x": 358.2734375,
+        "y": 182.875,
+        "width": 710.484375,
+        "height": 246.296875
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 12.869140625,
+          "y": 0.297607421875,
+          "right": 178.998046875,
+          "bottom": 63.473388671875,
+          "imageWidth": 187.1875,
+          "imageHeight": 69.328125,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-desktop.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-desktop-tire-contact.png"
+    },
+    {
+      "name": "ultrawide",
+      "viewport": {
+        "name": "ultrawide",
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 55.799999952316284
+          },
+          {
+            "state": "playing",
+            "at": 207.19999992847443
+          },
+          {
+            "state": "settled",
+            "at": 3512.100000023842
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 2560,
+          "height": 1080
+        },
+        "car": {
+          "x": 867.1328125,
+          "y": 462.984375,
+          "width": 813.671875,
+          "height": 410.34375
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 166.390625,
+              "y": 543.765625,
+              "width": 509,
+              "height": 32.5
+            },
+            "font": "25px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 1987.703125,
+              "y": 543.765625,
+              "width": 405.90625,
+              "height": 32.5
+            },
+            "font": "25px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 143.484375
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1683
+      },
+      "wordmark": {
+        "x": 794.625,
+        "y": 219.453125,
+        "width": 947.6875,
+        "height": 328.53125
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 15.8125,
+          "y": 0.359375,
+          "right": 219.9375,
+          "bottom": 77.984375,
+          "imageWidth": 230,
+          "imageHeight": 85.171875,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/assets/zacs-atazOZij.jpg",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-ultrawide.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-ultrawide-tire-contact.png"
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024,
+        "mobile": true
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 55.60000002384186
+          },
+          {
+            "state": "playing",
+            "at": 170.39999997615814
+          },
+          {
+            "state": "settled",
+            "at": 3475.5
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024
+        },
+        "car": {
+          "x": 115.203125,
+          "y": 471.03125,
+          "width": 537.59375,
+          "height": 271.109375
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 38.390625,
+              "y": 409.59375,
+              "width": 187.46875,
+              "height": 16.890625
+            },
+            "font": "13px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 578.59375,
+              "y": 409.59375,
+              "width": 151.015625,
+              "height": 16.890625
+            },
+            "font": "13px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 112.515625
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1683
+      },
+      "wordmark": {
+        "x": 19.203125,
+        "y": 286.71875,
+        "width": 729.59375,
+        "height": 252.921875
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 12.71875,
+          "y": 0.29296875,
+          "right": 176.90625,
+          "bottom": 62.73046875,
+          "imageWidth": 185,
+          "imageHeight": 68.515625,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps",
+        "/maps/embed",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/css",
+        "/css",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-tablet.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-tablet-tire-contact.png"
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844,
+        "mobile": true
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 53.10000002384186
+          },
+          {
+            "state": "playing",
+            "at": 153.5
+          },
+          {
+            "state": "settled",
+            "at": 3462.100000023842
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "car": {
+          "x": 11.703125,
+          "y": 472.625,
+          "width": 366.59375,
+          "height": 184.875
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 0,
+              "y": 219.4375,
+              "width": 390,
+              "height": 15.203125
+            },
+            "font": "11.7px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 0,
+              "y": 395.5625,
+              "width": 390,
+              "height": 15.203125
+            },
+            "font": "11.7px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 89.171875
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1683
+      },
+      "wordmark": {
+        "x": 15.6015625,
+        "y": 253.1875,
+        "width": 358.796875,
+        "height": 124.375
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 8.3875,
+          "y": 0.1875,
+          "right": 116.6625,
+          "bottom": 41.3625,
+          "imageWidth": 122,
+          "imageHeight": 45.171875,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps/embed",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zacs-atazOZij.jpg",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/models/lincoln-dirty-preview.png",
+        "/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy",
+        "/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp",
+        "/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn",
+        "/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN",
+        "/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ",
+        "/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-mobile.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-mobile-tire-contact.png"
+    },
+    {
+      "name": "compact",
+      "viewport": {
+        "name": "compact",
+        "width": 360,
+        "height": 740,
+        "mobile": true
+      },
+      "dom": {
+        "states": [
+          {
+            "state": "waiting",
+            "at": 52.39999997615814
+          },
+          {
+            "state": "playing",
+            "at": 158.59999990463257
+          },
+          {
+            "state": "settled",
+            "at": 3462.0999999046326
+          }
+        ],
+        "intro": "settled",
+        "stored": "complete",
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 740
+        },
+        "car": {
+          "x": 10.8046875,
+          "y": 414.390625,
+          "width": 338.390625,
+          "height": 170.640625
+        },
+        "carImage": [
+          1275,
+          643
+        ],
+        "background": [
+          1672,
+          940
+        ],
+        "wordmarkPaths": 4,
+        "layers": [
+          {
+            "s": ".zelo-hero-stage",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-backdrop",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-car",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-edge-fade",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-wordmark",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-left",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-slogan-right",
+            "count": 1
+          },
+          {
+            "s": ".zelo-hero-scroll-hint",
+            "count": 1
+          },
+          {
+            "s": "header",
+            "count": 1
+          }
+        ],
+        "slogans": [
+          {
+            "text": "MAIS QUE ESTÉTICA.",
+            "box": {
+              "x": 0,
+              "y": 192.390625,
+              "width": 360,
+              "height": 14.296875
+            },
+            "font": "11px",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1"
+          },
+          {
+            "text": "É VALORIZAÇÃO.",
+            "box": {
+              "x": 0,
+              "y": 354.796875,
+              "width": 360,
+              "height": 14.296875
+            },
+            "font": "11px",
+            "color": "rgb(220, 173, 75)",
+            "opacity": "1"
+          }
+        ],
+        "header": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 89.171875
+          },
+          "borderBottom": "0px",
+          "shadow": "none"
+        },
+        "sections": {
+          "hero": true,
+          "servicos": true,
+          "marcas": true,
+          "instagram": true,
+          "localizacao": true,
+          "contato": true,
+          "parceiros": true
+        },
+        "services": 4,
+        "instagram": 9,
+        "whatsapp": 2,
+        "canvas": 0,
+        "overflow": 0,
+        "heroBytes": [
+          {
+            "name": "/hero/showroom-reference.webp",
+            "bytes": 189748
+          },
+          {
+            "name": "/hero/car-reference.webp",
+            "bytes": 258708
+          }
+        ],
+        "totalTransferKB": 1683
+      },
+      "wordmark": {
+        "x": 14.40625,
+        "y": 222,
+        "width": 331.1875,
+        "height": 114.796875
+      },
+      "logo": {
+        "imageCount": 1,
+        "svgCount": 0,
+        "textContent": "",
+        "src": "http://127.0.0.1:4210/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "naturalWidth": 640,
+        "naturalHeight": 427,
+        "filter": "drop-shadow(rgb(23, 33, 45) 0px 0px 0.55px) drop-shadow(rgba(13, 27, 42, 0.9) 0px 1px 0.65px)",
+        "renderedArtwork": {
+          "x": 8.3875,
+          "y": 0.1875,
+          "right": 116.6625,
+          "bottom": 41.3625,
+          "imageWidth": 122,
+          "imageHeight": 45.171875,
+          "fit": "cover"
+        }
+      },
+      "errors": [],
+      "requests": [
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/zelo_logo_png_optimized-BFbIag5O.png",
+        "/hero/showroom-reference.webp",
+        "/hero/car-reference.webp",
+        "/assets/Montserrat-SemiBold-dyWvyMsO.otf",
+        "/assets/Montserrat-Regular-C6kjPh4t.otf",
+        "/assets/Montserrat-Bold-BjShDyFo.otf",
+        "/maps",
+        "/api/instagram-feed",
+        "/maps/embed",
+        "/assets/zelo_icon_png_optimized-iPJTs0CD.png",
+        "/assets/zacs-atazOZij.jpg",
+        "/maps-api-v3/embed/js/66/11a/init_embed.js",
+        "/maps/api/js",
+        "/maps-api-v3/api/js/66/11a/search.js",
+        "/maps-api-v3/api/js/66/11a/geometry.js",
+        "/maps-api-v3/api/js/66/11a/main.js",
+        "/maps/api/mapsjs/gen_204",
+        "/maps-api-v3/api/js/66/11a/common.js",
+        "/maps-api-v3/api/js/66/11a/util.js",
+        "/maps-api-v3/api/js/66/11a/map.js",
+        "/maps-api-v3/api/js/66/11a/controls.js",
+        "/maps-api-v3/api/js/66/11a/places_impl.js",
+        "/maps-api-v3/api/js/66/11a/places.js",
+        "/maps/api/js/StaticMapService.GetMapImage",
+        "/maps-api-v3/api/js/66/11a/onion.js",
+        "/maps-api-v3/api/js/66/11a/search_impl.js",
+        "/5564996161968",
+        "/",
+        "/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png",
+        "/assets/index-DFRsOQ8v.js",
+        "/assets/index-B4llcAPF.css",
+        "/assets/rolldown-runtime-CNC7AqOf.js",
+        "/assets/motion-DDe7tyIV.js",
+        "/assets/react-CjJZYGaA.js"
+      ],
+      "screenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-compact.png",
+      "tireContactScreenshot": "B:\\OmnyaTech Project's\\Projetos\\zelo_autoestica\\.nox\\evidence\\ZE-03-INTRO-compact-tire-contact.png"
+    }
+  ],
+  "result": "PASS",
+  "visualReviewedAt": "2026-10-22T19:26:49.416Z",
+  "visualReview": {
+    "viewports": [
+      "reference",
+      "desktop",
+      "ultrawide",
+      "tablet",
+      "mobile",
+      "compact"
+    ],
+    "result": "Original transparent logo readable without plate; contact/floor and mobile text separation preserved; actual desktop/mobile intro frames inspected and progressive",
+    "framesResult": "38/38 PASS; two real WebM recordings",
+    "rootReview": "Root independently approved transparent logo and real desktop intermediate frames"
+  }
+}

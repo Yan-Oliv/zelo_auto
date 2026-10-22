@@ -53,3 +53,11 @@ User rejected previous result. Nox reopened only ZE-03: fix tire contact and und
 - Rejeição do usuário reconciliada; aprovação240d4c2 superada. Corrigidos apoio/sombras/reflexo, piso seletivo, slogans mobile separados e logo oficial sem filtro sobre suporte de identidade.
 - Logo truncada ultrawide detectada visualmente e corrigida; QA final 166/166 PASS, build/lint PASS (6 warnings legados), recortes pneus/logo e screenshots revisados por QA/Nox/root.
 - Sem ZE-04, produção, push, credenciais ou alterações em src/planos/.
+
+## 2026-10-22 - ZE-03 transparent logo and intro REWORK
+Remove logo plate by user correction; version consumed intro once to v4 and verify real intermediate frames/video after assets and paint readiness. Preserve tire contact and separated mobile copy.
+
+## 2026-10-22 — ZE-03 transparência/intro v4 COMPLETED
+- Placa removida, alpha oficial preservado, contraste por contorno da imagem. Chave v4 migra uma vez a revisão da intro já consumida; readiness/visibilidade/doubleRAF e stagger real.
+- QA 172/172, frames/vídeo 38/38, build/lint e revisão visual Nox/root PASS. Contato piso e slogans mobile preservados.
+- Sem ZE-04/push/deploy; src/planos/ e new_interface/ preservados fora do commit.

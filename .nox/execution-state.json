@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "ZE-03 visual correction completed and locally approved; ZE-04 remains QUEUED outside authorization. No publish.",
+  "nextAction": "ZE-03 v4 completed and locally approved; ZE-04 remains QUEUED outside authorization. No deploy/push.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -125,9 +125,10 @@
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "evidence/ZE-03-CORRECTION-qa-results.json",
-            "evidence/ZE-03-CORRECTION-quality.json",
-            "evidence/ZE-03-CORRECTION-review.json"
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
           ]
         },
         {
@@ -137,9 +138,10 @@
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "evidence/ZE-03-CORRECTION-qa-results.json",
-            "evidence/ZE-03-CORRECTION-quality.json",
-            "evidence/ZE-03-CORRECTION-review.json"
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
           ]
         },
         {
@@ -149,9 +151,10 @@
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "evidence/ZE-03-CORRECTION-qa-results.json",
-            "evidence/ZE-03-CORRECTION-quality.json",
-            "evidence/ZE-03-CORRECTION-review.json"
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
           ]
         },
         {
@@ -161,13 +164,14 @@
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "evidence/ZE-03-CORRECTION-qa-results.json",
-            "evidence/ZE-03-CORRECTION-quality.json",
-            "evidence/ZE-03-CORRECTION-review.json"
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
           ]
         }
       ],
-      "visualRevision": "User correction: grounding, floor realism, separated mobile copy, official logo"
+      "visualRevision": "Transparent official logo without plate and visible once-per-session intro v4"
     },
     {
       "id": "ZE-03-REWORK",

@@ -24,3 +24,7 @@ Objetivo autorizado concluído: somente hero final e animações de primeira abe
 
 ## Correção visual vinculante — 2026-10-22
 ZE-03 COMPLETED após correção de apoio do carro, piso/sombras, frases mobile separadas e logo oficial nas cores reais. Aprovação anterior240d4c2 rejeitada; aceite atual somente ZE-03-CORRECTION-*. ZE-04 não iniciada; sem deploy/push.
+
+
+## Revisão vigente — transparência e intro v4
+ZE-03 COMPLETED. Logo oficial transparente sem placa; intro v4 real comprovada por vídeos/frames. Apoio do carro e mobile preservados. Aceite atual ZE-03-INTRO-*; placa/intro anteriores substituídas. ZE-04 não iniciada; sem produção/push.

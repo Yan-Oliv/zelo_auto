@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-22",
+  "scope": "ZE-03 transparent company logo and visible v4 first-open intro",
+  "rootVisualLogo": "PASS: desktop/mobile original white/gold PNG integrated transparently, no plate, readable shape contour",
+  "rootVisualIntro": "PASS: opened actual desktop frames 02 at ~900ms and 03 at ~1600ms; real changes in car opacity, partial ZELO mask and entering slogans",
+  "noxVisual": "PASS: opened desktop intermediate frames and mobile intermediate/final; entry clearly visible and prior floor/mobile corrections preserved",
+  "sourceLogo": "Original src/logos/zelo_logo_png_optimized.png unchanged with alpha; no invented SVG, recolor or background plate",
+  "timing": "After image/logo decode and document.fonts.ready, wait for visible document and two animation frames. Guard duplicate scheduling, clean up requestAnimationFrame/listeners in effect cleanup. Persist v4 complete only on settled completion or explicit exit to another section.",
+  "migration": "Static version zelo:hero-intro:v4 runs once even if v3 is complete; no timestamp/per-visit key",
+  "validation": "Real elapsed-time samples/PNG frames and WebM, not paused or synthetic animation progress",
+  "limits": "Hidden-document test simulates Visibility API; not OS-tab certification. Chromium emulation, not physical mobile hardware. Storage-denied fallback is document memory.",
+  "ze04Started": false,
+  "pushOrDeployment": false
+}

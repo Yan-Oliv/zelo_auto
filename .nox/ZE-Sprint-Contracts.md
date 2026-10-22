@@ -100,3 +100,6 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 
 ## Retificação ZE-03 — correção visual final
 Aceite anterior240d4c2 rejeitado. Resultado atual exige pneus/chassi apoiados, reflexo/sombra conectados, piso integrado, textos mobile separados acima/abaixo ZELO e imagem oficial da marca com cores originais. Evidências atuais ZE-03-CORRECTION-*. ZE-04 não iniciada.
+
+## Retificação vigente ZE-03 — logo e entrada
+Marca oficial deve ser transparente sem suporte/placa. Intro v4 estável exibida uma vez por sessão após assets/fontes/paint visível, comprovada por frames reais/vídeo; entrada de cenário, lettering, carro, frases, header e hint. Critério mobile/piso anterior permanece. Evidências vigentes ZE-03-INTRO-*.

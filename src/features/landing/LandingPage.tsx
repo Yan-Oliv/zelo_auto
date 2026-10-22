@@ -58,7 +58,7 @@ const headerLinks = [
   { label: 'Contato', href: '#contato' },
 ]
 const observedSectionIds = [...headerLinks.map(({ href }) => href.slice(1)), 'parceiros']
-const heroIntroKey = 'zelo:hero-intro:v3'
+const heroIntroKey = 'zelo:hero-intro:v4'
 let introConsumedInDocument = false
 
 function hasSeenHeroIntro() {
@@ -75,6 +75,7 @@ function rememberHeroIntro() {
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [onHero, setOnHero] = useState(true)
   const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
   const heroReducedMotion = reducedMotion || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
@@ -83,6 +84,7 @@ export function LandingPage() {
   )
   const backdropRef = useRef<HTMLImageElement>(null)
   const carRef = useRef<HTMLImageElement>(null)
+  const headerLogoRef = useRef<HTMLImageElement>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const searchPanelRef = useRef<HTMLDivElement>(null)
@@ -97,21 +99,55 @@ export function LandingPage() {
       setHeroIntro('settled')
       return
     }
+    if (!onHero) {
+      if (heroIntro === 'playing') {
+        rememberHeroIntro()
+        setHeroIntro('settled')
+      }
+      return
+    }
     if (heroIntro !== 'waiting') return
     let cancelled = false
-    // Start only after both independent visual layers can be painted.
-    void Promise.allSettled([backdropRef.current?.decode(), carRef.current?.decode()]).then(() => {
+    let firstFrame = 0
+    let secondFrame = 0
+    let startScheduled = false
+    const startWhenVisible = () => {
+      if (cancelled || startScheduled || document.visibilityState !== 'visible') return
+      startScheduled = true
+      // Commit a waiting frame after decoded images/fonts, then reveal together.
+      firstFrame = window.requestAnimationFrame(() => {
+        secondFrame = window.requestAnimationFrame(() => {
+          if (cancelled) return
+          if (document.visibilityState !== 'visible') { startScheduled = false; return }
+          if (hasSeenHeroIntro()) { setHeroIntro('settled'); return }
+          introConsumedInDocument = true
+          setHeroIntro('playing')
+        })
+      })
+    }
+    // A cold/slow load must never spend the intro before the artwork is visible.
+    void Promise.allSettled([
+      backdropRef.current?.decode(), carRef.current?.decode(),
+      headerLogoRef.current?.decode(), document.fonts.ready,
+    ]).then(() => {
       if (cancelled) return
-      if (hasSeenHeroIntro()) { setHeroIntro('settled'); return }
-      rememberHeroIntro()
-      setHeroIntro('playing')
+      document.addEventListener('visibilitychange', startWhenVisible)
+      startWhenVisible()
     })
-    return () => { cancelled = true }
-  }, [heroIntro, heroReducedMotion])
+    return () => {
+      cancelled = true
+      window.cancelAnimationFrame(firstFrame)
+      window.cancelAnimationFrame(secondFrame)
+      document.removeEventListener('visibilitychange', startWhenVisible)
+    }
+  }, [heroIntro, heroReducedMotion, onHero])
 
   useEffect(() => {
     if (heroIntro !== 'playing') return
-    const timer = window.setTimeout(() => setHeroIntro('settled'), 2600)
+    const timer = window.setTimeout(() => {
+      rememberHeroIntro()
+      setHeroIntro('settled')
+    }, 3300)
     return () => window.clearTimeout(timer)
   }, [heroIntro])
 
@@ -141,7 +177,6 @@ export function LandingPage() {
 
   // The contact transition now follows the visible section, not a 3D timeline.
   const contactActive = activeSection === 'contato'
-  const [onHero, setOnHero] = useState(true)
   useEffect(() => {
     const hero = document.getElementById('hero')
     if (!hero) return
@@ -157,10 +192,10 @@ export function LandingPage() {
 
   return (
     <div className="min-h-screen bg-brand-navy text-brand-white">
-      <header className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
+      <header data-intro={onHero && !heroReducedMotion ? heroIntro : 'settled'} className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
           <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
-            <img src={siteConfig.mainLogo} alt={brandName} width={640} height={427} fetchPriority="high" />
+            <img ref={headerLogoRef} src={siteConfig.mainLogo} alt={brandName} width={640} height={427} fetchPriority="high" />
           </a>
           <span className="zelo-header-divider" aria-hidden="true" />
           <nav className="zelo-header-nav" aria-label="Navegação principal">
