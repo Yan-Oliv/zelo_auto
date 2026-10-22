@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "project": "zelo_autoestica",
+  "status": "IN_PROGRESS",
+  "currentSprint": "ZE-02",
+  "currentStep": null,
+  "allowedStopReasons": [
+    "WAITING_USER_ACTION",
+    "BLOCKED_EXTERNAL",
+    "PAYMENT_REQUIRED"
+  ],
+  "stopReason": null,
+  "nextAction": "ZE-01 COMPLETED. ZE-02 QUEUED, a executar em solicitação específica; sem alteração de produção.",
+  "sprints": [
+    {
+      "id": "ZE-01",
+      "title": "Segurança e baseline",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-01-C01",
+          "description": "Checkpoint Git e cópias do estado inicial recuperáveis",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "checkpoints/ZE-01-tracked-source-20261022.zip",
+            "checkpoints/ZE-01-untracked-planos-20261022.zip",
+            "evidence/ZE-01-restore-verification.json",
+            "Git tag ZE-01-baseline-20261022"
+          ]
+        },
+        {
+          "id": "ZE-01-C02",
+          "description": "Branch isolada, sem alteração de produção ou de código funcional",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "Branch work/ze-audi-redesign",
+            "ZE-01-Report.md",
+            "evidence/ZE-01-production-baseline.json"
+          ]
+        },
+        {
+          "id": "ZE-01-C03",
+          "description": "Baseline de build, lint, assets, produção e navegação desktop/mobile",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-01-quality-results.json",
+            "evidence/ZE-01-browser-results.json",
+            "evidence/ZE-01-production-baseline.json"
+          ]
+        },
+        {
+          "id": "ZE-01-C04",
+          "description": "Validação de integridade e confidencialidade, mapa e procedimento de rollback",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-01-restore-verification.json",
+            "ZE-01-Report.md",
+            "ZE-Sprint-Contracts.md",
+            "00-Execution-Map.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-02",
+      "title": "Desacoplamento do 3D",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-03",
+      "title": "Hero cinematográfico Audi/Zelo",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-04",
+      "title": "Reestruturação visual",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-05",
+      "title": "Performance e acessibilidade",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-06",
+      "title": "Instagram funcional",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-07",
+      "title": "SEO técnico local",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-08",
+      "title": "Google Analytics e mensuração",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-09",
+      "title": "Reputação Google",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-10",
+      "title": "Experiência e confiabilidade das avaliações Google",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-11",
+      "title": "Homologação local",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-12",
+      "title": "Publicação controlada",
+      "status": "QUEUED",
+      "criteria": []
+    }
+  ]
+}
