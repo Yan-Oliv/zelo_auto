@@ -1,3 +1,5 @@
+> HISTÓRICO SUPERADO: aprovação visual anterior substituída pela ZE-03 final de 2026-10-22. Consultar ZE-03-Report.md; não usar este relatório como aceite atual.
+
 # ZE-03-REWORK — Relatório técnico | 2026-10-22
 
 ## Escopo: exatamente duas entregas

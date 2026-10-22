@@ -2,6 +2,9 @@ import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'rea
 import {
   ArrowUpRight,
   Camera,
+  CalendarDays,
+  ChevronDown,
+  Search,
   MapPin,
   Menu,
   MessageCircle,
@@ -18,7 +21,6 @@ import {
   locationInfo,
   partnerLogos,
   productBrands,
-  sectionLinks,
   services,
   siteConfig,
 } from './data/site'
@@ -47,30 +49,91 @@ const verseReference = '1 Tim\u00f3teo 1:17'
 const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reservados.'
 const transparentPixel =
   'data:image/gif;base64,R0lGODlhAQABAAAAACw='
-const observedSectionIds = ['hero', ...sectionLinks.map(({ href }) => href.slice(1)), 'contato', 'parceiros']
+const headerLinks = [
+  { label: 'Início', href: '#hero' },
+  { label: 'Serviços', href: '#servicos' },
+  { label: 'Produtos', href: '#marcas' },
+  { label: 'Instagram', href: '#instagram' },
+  { label: 'Localização', href: '#localizacao' },
+  { label: 'Contato', href: '#contato' },
+]
+const observedSectionIds = [...headerLinks.map(({ href }) => href.slice(1)), 'parceiros']
+const heroIntroKey = 'zelo:hero-intro:v3'
+let introConsumedInDocument = false
+
+function hasSeenHeroIntro() {
+  if (introConsumedInDocument) return true
+  try { return window.sessionStorage.getItem(heroIntroKey) === 'complete' }
+  catch { return false }
+}
+
+function rememberHeroIntro() {
+  introConsumedInDocument = true
+  try { window.sessionStorage.setItem(heroIntroKey, 'complete') }
+  catch { /* In-memory fallback also prevents replay when storage is blocked. */ }
+}
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
   const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
   const heroReducedMotion = reducedMotion || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
-  // Run the layered intro just once per tab session; keep full composition on return.
-  const [heroIntroPlayed, setHeroIntroPlayed] = useState(() => {
-    try { return sessionStorage.getItem('zelo:hero-intro:v2') === 'complete' }
-    catch { return false }
-  })
+  const [heroIntro, setHeroIntro] = useState<'waiting' | 'playing' | 'settled'>(() =>
+    hasSeenHeroIntro() || heroReducedMotion ? 'settled' : 'waiting',
+  )
+  const backdropRef = useRef<HTMLImageElement>(null)
+  const carRef = useRef<HTMLImageElement>(null)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const searchPanelRef = useRef<HTMLDivElement>(null)
+  const searchButtonRef = useRef<HTMLButtonElement>(null)
+  const searchResults = [...headerLinks, ...services.map(({ title }) => ({ label: title, href: '#servicos' }))]
+    .filter(({ label }) => label.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .includes(searchQuery.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()))
+
   useEffect(() => {
-    if (heroIntroPlayed) return
     if (heroReducedMotion) {
-      try { sessionStorage.setItem('zelo:hero-intro:v2', 'complete') } catch { /* storage disabled */ }
+      rememberHeroIntro()
+      setHeroIntro('settled')
       return
     }
-    const id = window.setTimeout(() => {
-      try { sessionStorage.setItem('zelo:hero-intro:v2', 'complete') } catch { /* storage disabled */ }
-      setHeroIntroPlayed(true)
-    }, 2900)
-    return () => window.clearTimeout(id)
-  }, [heroIntroPlayed, heroReducedMotion])
+    if (heroIntro !== 'waiting') return
+    let cancelled = false
+    // Start only after both independent visual layers can be painted.
+    void Promise.allSettled([backdropRef.current?.decode(), carRef.current?.decode()]).then(() => {
+      if (cancelled) return
+      if (hasSeenHeroIntro()) { setHeroIntro('settled'); return }
+      rememberHeroIntro()
+      setHeroIntro('playing')
+    })
+    return () => { cancelled = true }
+  }, [heroIntro, heroReducedMotion])
+
+  useEffect(() => {
+    if (heroIntro !== 'playing') return
+    const timer = window.setTimeout(() => setHeroIntro('settled'), 2600)
+    return () => window.clearTimeout(timer)
+  }, [heroIntro])
+
+  useEffect(() => {
+    if (!searchOpen) return
+    const closeOutside = (event: PointerEvent) => {
+      if (!searchPanelRef.current?.contains(event.target as Node)
+        && !searchButtonRef.current?.contains(event.target as Node)) setSearchOpen(false)
+    }
+    const closeWithEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSearchOpen(false)
+        searchButtonRef.current?.focus()
+      }
+    }
+    document.addEventListener('pointerdown', closeOutside)
+    document.addEventListener('keydown', closeWithEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeOutside)
+      document.removeEventListener('keydown', closeWithEscape)
+    }
+  }, [searchOpen])
   const instagramFeed = useInstagramFeed()
   const instagramSectionNear = useNearViewport(instagramRef, '1100px')
   const activeSection = useActiveSection(observedSectionIds)
@@ -78,63 +141,66 @@ export function LandingPage() {
 
   // The contact transition now follows the visible section, not a 3D timeline.
   const contactActive = activeSection === 'contato'
-  const onHero = activeSection === 'hero'
+  const [onHero, setOnHero] = useState(true)
+  useEffect(() => {
+    const hero = document.getElementById('hero')
+    if (!hero) return
+    // Tall sections can never reach the shared navigation observer's threshold.
+    // Header contrast depends only on whether the hero is behind the header.
+    const observer = new IntersectionObserver(([entry]) => setOnHero(entry.isIntersecting), {
+      rootMargin: '-100px 0px 0px 0px',
+      threshold: 0,
+    })
+    observer.observe(hero)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="min-h-screen bg-brand-navy text-brand-white">
-      <header
-        className={clsx(
-          'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
-          !onHero
-            ? 'border-white/10 bg-brand-navy/86 backdrop-blur-xl'
-            : 'zelo-hero-header border-transparent',
-        )}
-      >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 lg:px-8">
-          <a href="#hero" className="flex items-center gap-4">
-            <img
-              src={siteConfig.mainLogo}
-              alt={brandName}
-              className={clsx("brand-mark brand-mark-header", onHero && "zelo-hero-header-logo")}
-              width={888}
-              height={334}
-              fetchPriority="high"
-            />
+      <header className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
+        <div className="zelo-header-inner">
+          <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
+            <svg viewBox="0 0 440 60" aria-hidden="true" focusable="false">
+              <path d="M0 4H108V15L23 43H108V54H0V42L84 15H0ZM125 4H222V15H125ZM125 25H216V35H125ZM125 43H222V54H125ZM239 4H252V42H325V54H239Z" />
+              <rect x="342" y="9" width="90" height="40" rx="21" fill="none" stroke="currentColor" strokeWidth="11" />
+            </svg>
+            <span>AUTO ESTÉTICA</span>
           </a>
-
-          <nav className="hidden items-center gap-8 font-['Eurostile_Extended','Montserrat',sans-serif] md:flex">
-            {sectionLinks.map((link) => {
-              const sectionId = link.href.replace('#', '')
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={clsx(
-                    'text-[11px] uppercase tracking-[0.28em] transition-colors duration-300',
-                    activeSection === sectionId
-                      ? (onHero ? 'text-[#9f7623]' : 'text-brand-gold')
-                      : (onHero ? 'text-[#262626] hover:text-[#9f7623]' : 'text-brand-silver hover:text-brand-white'),
-                  )}
-                >
-                  {link.label}
-                </a>
-              )
-            })}
-            <a href={siteConfig.whatsappLink} className="button-primary text-[11px]">
-              {budgetLabel}
-            </a>
+          <span className="zelo-header-divider" aria-hidden="true" />
+          <nav className="zelo-header-nav" aria-label="Navegação principal">
+            {headerLinks.map((link) => (
+              <a key={link.href} href={link.href} aria-current={(link.href === '#hero' ? onHero : activeSection === link.href.slice(1)) ? 'location' : undefined}>
+                {link.label}
+              </a>
+            ))}
           </nav>
-
-          <button
-            type="button"
-            aria-label="Abrir menu"
-            className={clsx("inline-flex h-10 w-10 items-center justify-center border text-brand-gold md:hidden", onHero ? "border-black/15 bg-white/80" : "border-white/10 bg-brand-graphite/75")}
-            onClick={() => setMenuOpen(true)}
-          >
-            <Menu size={18} />
-          </button>
+          <div className="zelo-header-actions">
+            <a href={siteConfig.whatsappLink} className="zelo-header-budget" aria-label={budgetLabel}>
+              <CalendarDays aria-hidden="true" size={23} strokeWidth={1.5} />
+              <span>ORÇAMENTO</span>
+            </a>
+            <button ref={searchButtonRef} type="button" className="zelo-header-search" aria-label="Buscar no site" aria-expanded={searchOpen} aria-controls="zelo-site-search" onClick={() => setSearchOpen((open) => !open)}>
+              <Search aria-hidden="true" size={23} strokeWidth={1.6} />
+            </button>
+            <button type="button" aria-label="Abrir menu" aria-expanded={menuOpen} aria-controls="zelo-mobile-menu" className="zelo-header-menu" onClick={() => { setMenuOpen(true); setSearchOpen(false) }}>
+              <Menu aria-hidden="true" size={23} />
+            </button>
+          </div>
         </div>
-        </header>
+        {searchOpen && (
+          <div ref={searchPanelRef} id="zelo-site-search" className="zelo-search-panel" role="region" aria-label="Busca no site">
+            <label htmlFor="zelo-search-input">O que você procura?</label>
+            <div className="zelo-search-field">
+              <Search size={18} aria-hidden="true" />
+              <input id="zelo-search-input" type="search" autoFocus value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} placeholder="Serviços, localização, contato…" />
+              <button type="button" aria-label="Fechar busca" onClick={() => { setSearchOpen(false); searchButtonRef.current?.focus() }}><X size={18} /></button>
+            </div>
+            <div className="zelo-search-results" aria-live="polite">
+              {searchResults.length ? searchResults.map((link) => <a key={`${link.href}-${link.label}`} href={link.href} onClick={() => setSearchOpen(false)}>{link.label}<ArrowUpRight size={15} aria-hidden="true" /></a>) : <p>Nenhum resultado. Tente serviços ou contato.</p>}
+            </div>
+          </div>
+        )}
+      </header>
 
       <AnimatePresence>
         {menuOpen ? (
@@ -142,7 +208,7 @@ export function LandingPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl md:hidden"
+            id="zelo-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl zelo-mobile-menu"
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -164,7 +230,7 @@ export function LandingPage() {
               </div>
 
               <div className="flex flex-1 flex-col gap-6">
-                {sectionLinks.map((link) => (
+                {headerLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
@@ -188,57 +254,41 @@ export function LandingPage() {
       </AnimatePresence>
 
       <main className="relative z-10">
-        <section
-          id="hero"
-          className="zelo-hero"
-          data-intro={heroIntroPlayed || heroReducedMotion ? 'settled' : 'playing'}
-          aria-labelledby="zelo-hero-title"
-        >
-          <h1 id="zelo-hero-title" className="sr-only">
-            Mais que estética. É valorização. Zelo Estética Automotiva em Catalão - GO.
-          </h1>
+        <section id="hero" className="zelo-hero" data-intro={heroReducedMotion ? 'settled' : heroIntro} aria-labelledby="zelo-hero-title">
+          <h1 id="zelo-hero-title" className="sr-only">Mais que estética. É valorização. Zelo Estética Automotiva em Catalão — GO.</h1>
           <div className="zelo-hero-stage" aria-hidden="true">
-            <img
-              className="zelo-hero-backdrop"
-              src="/hero/showroom-4k.webp"
-              alt=""
-              width={4096}
-              height={2304}
-              fetchPriority="high"
-              decoding="async"
-            />
-            <div className="zelo-hero-edge-fade" />
-            <div className="zelo-hero-top-fade" />
+            <img ref={backdropRef} className="zelo-hero-backdrop" src="/hero/showroom-reference.webp" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
           </div>
-          <svg
-            className="zelo-hero-wordmark"
-            viewBox="0 0 1200 360"
-            aria-hidden="true"
-            focusable="false"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <text x="600" y="290" textAnchor="middle">ZELO</text>
+          <div className="zelo-showroom-sign" aria-hidden="true"><span>ZELO</span><small>AUTO ESTÉTICA</small></div>
+          <div className="zelo-hero-ground-shadow" aria-hidden="true" />
+          <div className="zelo-hero-reflection" aria-hidden="true"><img src="/hero/car-reference.webp" alt="" width={1275} height={643} /></div>
+          <svg className="zelo-hero-wordmark" viewBox="416 191 825 286" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="zelo-outline-gold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#efe9d9" stopOpacity=".92" />
+                <stop offset=".48" stopColor="#c49b58" stopOpacity=".87" />
+                <stop offset="1" stopColor="#d4b67a" stopOpacity=".48" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#zelo-outline-gold)" strokeWidth="1.15">
+              <path d="M443 192H630V230L488 418H630L608 474H416V420L550 242H416Z" />
+              <path d="M663 192H828L848 242H722V294H805L773 346H722V400H883V474H663Z" />
+              <path d="M883 192H942V401H1039L1013 474H883Z" />
+              <path fillRule="evenodd" d="M1149 191C1201 191 1241 231 1241 284V384C1241 436 1201 477 1149 477C1096 477 1057 437 1057 384V284C1057 231 1097 191 1149 191ZM1149 247C1129 247 1116 264 1116 286V383C1116 406 1129 421 1149 421C1169 421 1183 406 1183 383V286C1183 264 1169 247 1149 247Z" />
+            </g>
           </svg>
           <div className="zelo-hero-car" aria-hidden="true">
-            <picture>
-              <source media="(max-width: 767px)" srcSet="/hero/car-mobile.webp" />
-              <img
-                src="/hero/car-4k.webp"
-                alt=""
-                width={4096}
-                height={2304}
-                decoding="async"
-                fetchPriority="high"
-              />
-            </picture>
+            <img ref={carRef} src="/hero/car-reference.webp" alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
           </div>
+          <div className="zelo-hero-edge-fade" aria-hidden="true" />
+          <div className="zelo-hero-top-fade" aria-hidden="true" />
           <div className="zelo-hero-slogan" aria-hidden="true">
             <span className="zelo-hero-slogan-left">MAIS QUE ESTÉTICA.</span>
             <span className="zelo-hero-slogan-right">É VALORIZAÇÃO.</span>
           </div>
           <a className="zelo-hero-scroll-hint" href="#servicos" aria-label="Explorar nossos serviços">
             <span>ROLE PARA EXPLORAR</span>
-            <span className="zelo-hero-chevron" aria-hidden="true">⌄</span>
+            <ChevronDown className="zelo-hero-chevron" size={26} strokeWidth={1.3} aria-hidden="true" />
           </a>
         </section>
 

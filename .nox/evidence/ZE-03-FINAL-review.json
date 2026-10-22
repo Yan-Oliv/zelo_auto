@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "scope": "ZE-03 only",
+  "technicalReviewer": "omnya-reviewer via Nox bounded delegation",
+  "technicalResult": "PASS",
+  "initialFinding": "P1: independent width/height and object-fit fill deformed car/backdrop/SVG outside reference aspect ratio",
+  "correction": "Natural car aspect ratio, uniform cover background, vector preserveAspectRatio and proportional bounds; local hero observer restores header contrast after navigation",
+  "verifiedRatios": {
+    "carAsset": 1.98289,
+    "reference": 1.98298,
+    "ultrawide": 1.98290,
+    "mobile": 1.98293
+  },
+  "visualQA": "PASS: screenshots in six viewports inspected by QA",
+  "noxVisual": "PASS: final reference, mobile and ultrawide screenshots opened and compared with supplied reference",
+  "rootSecondRead": "PASS: final reference, mobile and ultrawide inspected; no new blocker",
+  "limitations": [
+    "Visual reconstruction in layers, no assertion of pixel-identical generative assets",
+    "Menu labels correspond to existing functional sections rather than nonexistent reference sections",
+    "Chromium emulation, not physical-device certification",
+    "Unavailable sessionStorage falls back to document memory; a full reload without storage may replay intro"
+  ],
+  "approval": "Local technical/QA/Nox approval; not a claim of human user sign-off",
+  "productionActions": false,
+  "ze04Started": false
+}

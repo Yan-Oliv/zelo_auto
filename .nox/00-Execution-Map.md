@@ -1,35 +1,22 @@
 # Mapa de execução — Zelo Autoestética
 
-Data-base: 2026-10-22 | Projeto local: `B:\OmnyaTech Project's\Projetos\zelo_autoestica`
+Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\Projetos\zelo_autoestica.
 
-## Decisões aprovadas
+| ID | Atividade | Estado | Dependência | Próxima ação |
+| --- | --- | --- | --- | --- |
+| ZE-01 | Segurança e baseline | COMPLETED | - | Preservado |
+| ZE-02 | Desacoplamento do 3D | COMPLETED | ZE-01 | Preservado |
+| ZE-03 | Hero cinematográfica final fiel à referência, camadas e intro única | COMPLETED | ZE-02 | Aceite local evidenciado no relatório final |
+| ZE-04 | Reestruturação visual | QUEUED | ZE-03 | Fora do objetivo ativo; não executar |
+| ZE-05 | Performance e acessibilidade | QUEUED | ZE-04 | Fora do objetivo ativo; não executar |
+| ZE-06 | Instagram funcional | QUEUED | ZE-05 | Fora do objetivo ativo; não executar |
+| ZE-07 | SEO técnico local | QUEUED | ZE-06 | Fora do objetivo ativo; não executar |
+| ZE-08 | Google Analytics e mensuração | QUEUED | ZE-07 | Fora do objetivo ativo; não executar |
+| ZE-09 | Reputação Google | QUEUED | ZE-08 | Fora do objetivo ativo; não executar |
+| ZE-10 | Confiabilidade de avaliações Google | QUEUED | ZE-09 | Fora do objetivo ativo; não executar |
+| ZE-11 | Homologação geral local | QUEUED | ZE-10 | Fora do objetivo ativo; não executar |
+| ZE-12 | Publicação controlada | QUEUED | ZE-11 | Fora do objetivo ativo; não executar |
 
-- Visual: inspiração Audi / AURA-MOTION com identidade Zelo, base branca, lettering transparente e detalhes dourados.
-- Avaliações: **somente Google**. Sem comentários próprios, sem KV/SQL/GitHub para avaliações.
-- Cada sprint: até duas entregas; registrar estado atual, esperado, aceite e melhor caminho antes de começar.
-- Produção somente após homologação local e aprovação explícita. Não causar regressões.
+ZE-03 foi reaberta e corrigida nesta execução; esta validação final substitui a aprovação visual das implementações anteriores ZE-03 e ZE-03-REWORK. O rework é parte da ZE-03, sem sprint adicional.
 
-## Roadmap
-
-- ✅ **ZE-01 — Segurança e baseline** | Checkpoint Git e preservação dos arquivos locais; registrar baseline de build, performance e fluxos
-- ✅ **ZE-02 — Desacoplamento do 3D** | Remover dependência obrigatória de CarScene; eliminar travamento da navegação/scroll
-- ✅ **ZE-03 — Hero cinematográfico Audi/Zelo** | Cena 2D AVIF aprovada com carro central, gradiente branco–preto–branco, ZELO contornado, slogan minimalista, responsividade e animação sutil
-- ✅ **ZE-03-REWORK — Hero em camadas e resolução 4K** | Carro, cena, slogan e ZELO em camadas; introdução única; 71/71 QA
-- ⬜ **ZE-04 — Reestruturação visual** | Redesenhar serviços e blocos comerciais; modernizar navegação e rodapé
-- ⬜ **ZE-05 — Performance e acessibilidade** | Retirar carga 3D da produção e otimizar assets; medir performance e acessibilidade
-- ⬜ **ZE-06 — Instagram funcional** | Restabelecer conector oficial; exibir feed autêntico com fallback adequado
-- ⬜ **ZE-07 — SEO técnico local** | Corrigir domínio canônico e sitemap; atualizar SEO local e dados estruturados
-- ⬜ **ZE-08 — Google Analytics e mensuração** | Instalar GA4 G-E9SKGKCQXX; validar eventos, Search Console e Perfil da Empresa
-- ⬜ **ZE-09 — Reputação Google** | Exibir avaliações Google quando tecnicamente viável; direcionar avaliação ao Google
-- ⬜ **ZE-10 — Experiência e confiabilidade das avaliações Google** | Tratar falhas/estados vazios de avaliações Google; validar acessibilidade e links
-- ⬜ **ZE-11 — Homologação local** | Executar testes regressivos em desktop/mobile; aprovação visual e funcional
-- ⬜ **ZE-12 — Publicação controlada** | Implantar após aprovação explícita; validar produção e rollback
-
-## Gate ZE-01
-
-1. Checkpoint recuperável do HEAD original e cópia segura de arquivos locais não rastreados.
-2. Branch de trabalho separada de `main`; nenhuma alteração em produção.
-3. Baseline comparável de build/lint, assets, tempos e navegação, com achados reais documentados.
-4. Integridade do checkpoint, rollback documentado e revisão de segurança.
-
-ZE-01, ZE-02 e ZE-03 concluídas e validadas. ZE-04 permanece `QUEUED`; produção intacta. A homologação geral e o deploy só ocorrerão nas sprints apropriadas.
+Objetivo autorizado concluído: somente hero final e animações de primeira abertura. ZE-04 não iniciada. Nenhum CURRENT restante, nenhum bloqueador externo, nenhum deploy/push. Avaliações continuam exclusivamente Google. Produção e migrações exigem os gates próprios e autorização explícita.

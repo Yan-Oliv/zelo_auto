@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "IN_PROGRESS",
-  "currentSprint": "ZE-04",
+  "status": "QUEUED",
+  "currentSprint": null,
   "currentStep": null,
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "ZE-03-REWORK concluída. ZE-04 permanece QUEUED. Nenhuma alteração em produção.",
+  "nextAction": "Objetivo ZE-03 concluído e aprovado localmente; ZE-04 QUEUED fora do escopo autorizado. Não iniciar nem publicar.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -120,47 +120,45 @@
       "criteria": [
         {
           "id": "ZE-03-C01",
-          "description": "Hero sem texto comercial excessivo, centralizada, branco-preto-branco, ZELO contornado, frase fina e navegação do menu preservada",
+          "description": "Composição fiel em camadas e carro frontal sem fabricante",
           "required": true,
           "status": "PASS",
           "evidence": [
-            "evidence/ZE-03-desktop.png",
-            "evidence/ZE-03-ultrawide.png",
-            "src/features/landing/LandingPage.tsx",
-            "src/features/landing/CinematicHero.css"
+            "evidence/ZE-03-FINAL-reference.png",
+            "evidence/ZE-03-FINAL-asset-manifest.json"
           ]
         },
         {
           "id": "ZE-03-C02",
-          "description": "Ativo cinematográfico AVIF leve e local, sem WebGL ou modelos; responsivo e reduced-motion",
+          "description": "Intro única, sessão/retorno, reduced-motion e proporções responsivas",
           "required": true,
           "status": "PASS",
           "evidence": [
-            "public/hero-zelo-approved.avif",
-            "evidence/ZE-03-qa-results.json"
+            "evidence/ZE-03-FINAL-qa-results.json",
+            "evidence/ZE-03-FINAL-mobile.png",
+            "evidence/ZE-03-FINAL-ultrawide.png"
           ]
         },
         {
           "id": "ZE-03-C03",
-          "description": "Build/lint, desktop/mobile, seções/links/SEO acessível e regressão funcionais aprovados",
+          "description": "Build/lint e regressão de navegação/header/CTA/seções aprovados",
           "required": true,
           "status": "PASS",
           "evidence": [
-            "evidence/ZE-03-quality.json",
-            "evidence/ZE-03-qa-results.json",
-            "evidence/ZE-03-mobile.png",
-            "evidence/ZE-03-tablet.png"
+            "evidence/ZE-03-FINAL-quality.json",
+            "evidence/ZE-03-FINAL-qa-results.json",
+            "evidence/ZE-03-FINAL-review.json"
           ]
         },
         {
           "id": "ZE-03-C04",
-          "description": "Documentação e checkpoint de rollback; nenhuma alteração em produção ou dados sensíveis",
+          "description": "Relatório e contexto Nox reconciliados; branch preservada e sem deploy",
           "required": true,
           "status": "PASS",
           "evidence": [
             "ZE-03-Report.md",
-            "Git tag ZE-03-start-20261022",
-            "00-Execution-Map.md"
+            "00-Execution-Map.md",
+            "Git tag ZE-03-final-start-20261022"
           ]
         }
       ]
@@ -169,51 +167,9 @@
       "id": "ZE-03-REWORK",
       "title": "Hero em camadas com imagens 4K e introdução única",
       "status": "COMPLETED",
-      "criteria": [
-        {
-          "id": "ZE-03-RW-C01",
-          "description": "Camadas de carro/cenário/slogan/lettering SVG independentes com animações próprias",
-          "required": true,
-          "status": "PASS",
-          "evidence": [
-            "src/features/landing/LandingPage.tsx",
-            "src/features/landing/CinematicHero.css",
-            "evidence/ZE-03-RW-regression-results.json"
-          ]
-        },
-        {
-          "id": "ZE-03-RW-C02",
-          "description": "Intro na primeira visita por sessão, reload pronto e reduced-motion adequado",
-          "required": true,
-          "status": "PASS",
-          "evidence": [
-            "evidence/ZE-03-RW-regression-results.json"
-          ]
-        },
-        {
-          "id": "ZE-03-RW-C03",
-          "description": "Assets separados 4096x2304 de maior qualidade, mobile adaptado e marca de fabricante ausente",
-          "required": true,
-          "status": "PASS",
-          "evidence": [
-            "evidence/ZE-03-RW-asset-manifest.json",
-            "public/hero/showroom-4k.webp",
-            "public/hero/car-4k.webp",
-            "public/hero/car-mobile.webp"
-          ]
-        },
-        {
-          "id": "ZE-03-RW-C04",
-          "description": "Build/lint e QA responsive validados, checkpoint seguro e produção preservada",
-          "required": true,
-          "status": "PASS",
-          "evidence": [
-            "evidence/ZE-03-RW-quality.json",
-            "evidence/ZE-03-RW-regression-results.json",
-            "ZE-03-REWORK-Report.md"
-          ]
-        }
-      ]
+      "criteria": [],
+      "supersededBy": "ZE-03 final, 2026-10-22",
+      "note": "Registro histórico incorporado à ZE-03 final; não é um aceite independente."
     },
     {
       "id": "ZE-04",
@@ -269,5 +225,6 @@
       "status": "QUEUED",
       "criteria": []
     }
-  ]
+  ],
+  "lastCompletedSprint": "ZE-03"
 }

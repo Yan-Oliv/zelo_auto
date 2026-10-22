@@ -36,3 +36,12 @@
 - Imagens geradas originalmente 1672x941 e ampliadas para 4K; sem alegar nativo 4K. Arquivos de 300690/491110 bytes; mobile 188078.
 - QA primeiro 65/66 reduced-motion, corrigido matchMedia inicial. Depois 66/66 e 71/71 PASS com teste explícito de quatro animações.
 - Build/lint PASS; nada publicado. ZE-03-REWORK COMPLETED; ZE-04 QUEUED.
+
+## 2026-10-22 ? ZE-03 final reference
+- Nox reabre ZE-03: aprova??es anteriores n?o comprovam fidelidade ? refer?ncia atual. Estado CURRENT, ZE-04 QUEUED fora do escopo. Branch e src/planos/ preservados.
+- Entregas: composi??o final fiel em camadas e anima??es de primeira abertura. Assets editados via imagegen a partir da refer?ncia, sem fabricante. Frontend bounded delegado; QA independente ser? executado. Sem produ??o.
+
+## 2026-10-22 — ZE-03 final COMPLETED
+- Hero corrigida segundo referência em camadas; assets sem fabricante, SVG/texto/DOM, intro v3 e reduced-motion.
+- Corrigidos contraste header mobile, proporções ultrawide, overlap mobile e fades; QA 144/144 PASS, build/lint PASS (6 warnings legados), review técnico PASS e inspeção visual real.
+- Evidências ZE-03-FINAL; aprovações anteriores substituídas. ZE-04 permanece QUEUED não iniciada, sem push/deploy, branch e src/planos/ preservados.

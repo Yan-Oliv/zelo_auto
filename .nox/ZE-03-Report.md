@@ -1,37 +1,33 @@
-# ZE-03 — Hero cinematográfico Audi/Zelo (2026-10-22)
+# ZE-03 — Relatório final | 2026-10-22
 
-## Entregas (limite de 2)
-1. Hero editorial aprovada: carro central; cenário escuro com gradiente branco–preto–branco; ZELO contornado ao fundo; frase fina “Mais que estética. É valorização.” atravessando a imagem; menu real e orçamento preservados; sem textos promocionais adicionais.
-2. Ativo responsivo: imagem AVIF leve, animação CSS sutil, adaptação mobile e suporte a reduced-motion. Sem Canvas, modelo 3D nem scroll pin.
+Estado: COMPLETED. Aprovação técnica local Nox/QA/review; não se atribui homologação humana ao usuário. ZE-04 permanece QUEUED e não foi iniciada. Sem deploy ou push.
 
-## Antes e depois
-- Antes: fallback WebP de ZE-02 e hero escura ainda com cópia comercial.
-- Depois: layout audiovisual inspirado na Audi, mas com identidade Zelo; h1 semântico acessível para serviço/localização Catalão-GO; header claro, logo com contraste escuro, link de orçamento.
-- A arte aprovada foi recortada para eliminar seu menu ilustrativo, preservando carro, lettering e slogan.
-- Imagem local AVIF 1200x611 de 12786 bytes. SHA256: 5e0f455f98b0f1d63898af1f856be1ac77ca70c9382ce57d22a43ae1a3e7c243
+## Entregas concluídas
 
-## Arquivos
-- src/features/landing/LandingPage.tsx
-- src/features/landing/CinematicHero.css
-- public/hero-zelo-approved.avif
-- .nox/ZE-03-Report.md, execution-state.json, mapa, Execution-Log.md
-- Evidências locais em .nox/evidence
+1. Hero final reconstruída com a imagem anexada como fonte visual: showroom derivado da referência, carro frontal preto sem anéis nem badge R8, escala e enquadramento correspondentes em1672×940, ZELO contornado vetorial, slogans legíveis branco/dourado, fades claros, assinatura na parede, sombra e reflexo do carro. Background, carro, SVG, frases, hint e header são elementos independentes.
+2. Intro cinematográfica na primeira abertura: frases entram de lados opostos, carro faz fade com scale/deslocamento discretos, SVG é revelado por máscara. Inicia após decode dos assets. sessionStorage zelo:hero-intro:v3 é consumida no início da intro para que saída precoce/retorno não provoquem replay. Fallback em memória para storage bloqueado. Reduced-motion mostra a composição pronta.
 
-## Qualidade
-- npm run build: PASS (TypeScript + Vite)
-- npm run lint: PASS (zero erros, seis avisos preexistentes fora da landing)
-- Playwright Chromium: 45/45 testes PASS em 1440x900, 1920x1080, 768x1024, 390x844 e 360x740.
-- Asset servido, decodificado e exibido nos cinco viewports; menu mobile e navegação desktop, quatro serviços, Instagram, WhatsApp e demais seções intactos.
-- Sem Canvas, requisições GLB/Three na landing, overflow horizontal ou erros JS nos cenários.
-- reduced-motion elimina animações, com imagem estática acessível.
-- Screenshots: evidence/ZE-03-desktop.png, ultrawide.png, tablet.png, mobile.png e compact-mobile.png, com prefixo ZE-03-.
-- Warning de chunk grande do Three permanece no build apenas para rotas debug lazy, não carregadas pela landing; redução total do bundle será abordada em ZE-05.
-- Métricas capturadas em preview local, não equivalem a Core Web Vitals de produção.
+Header com orçamento/calendário, busca circular funcional por seções/serviços locais, menu e destinos reais preservados. Contraste do header depende de observer dedicado da hero, evitando o defeito em seções mobile altas. Não há linha separando header e hero.
 
-## Integridade
-- Tag de rollback ZE-03-start-20261022 aponta para o commit a335543, sem reescrever histórico.
-- Produção, Cloudflare, .env, cinco JPEGs não rastreados e backend não alterados. Sem push/deploy.
-- Para rollback: criar nova branch da tag em cópia separada; nunca limpar ou dar reset --hard em arquivos de trabalho.
+## Qualidade e fidelidade verificadas
 
-## Fora de escopo
-ZE-04: todas as seções abaixo da hero na identidade Audi/Zelo; ZE-05: performance global e remoção dos resíduos 3D. Instagram/SEO/Analytics/Google seguem ZE-06 até ZE-10. Homologação geral ZE-11; publicação autorizada ZE-12.
+Assets WebP: cenário1672×940/189448 bytes, carro alpha1275×643/258408 bytes (total447856 bytes). Edição integrada image_gen a partir da referência, crop do alpha e conversão Sharp, sem upscale nem alegação4K. Prompts em ZE-03-Asset-Prompts.md e hashes em evidence/ZE-03-FINAL-asset-manifest.json.
+
+Comparação visual real em1672×940 confirma carro frontal na escala e posição de referência, showroom quente, ZELO atrás do carro, slogans nos lados e hint inferior. Ultrawide preserva proporções com escala uniforme e fades adicionais; tablet/mobile adaptam o recorte sem overflow. Foram inspecionadas screenshots reais por QA e Nox, com segunda leitura do coordenador raiz.
+
+Limite declarado: reconstrução em camadas visualmente próxima, sem equivalência pixel a pixel. Há microdiferenças nos detalhes do carro, reflexo e preenchimento do interior por edição generativa. Os nomes/destinos das seções reais do menu foram preservados (Produtos/Instagram/Localização), em vez de inventar Sobre/Resultados/Depoimentos ausentes no projeto. Não se criou conteúdo comercial fora da ZE-03.
+
+## Gates e correções de QA
+
+- npm run build: PASS, exit0. Aviso de chunk Three maior que500kB permanece na rota debug lazy; não é requisitado pela landing.
+- npm run lint: PASS, exit0. Seis warnings legados fora da hero: exports de MotionSettings/CinematicContext e dependências useMemo de CarScene.
+- Playwright Chromium local: 144/144 PASS. Viewports1672×940,1440×900,2560×1080,768×1024,390×844 e360×740; reduced-motion e storage bloqueado.
+- Verificados intro/keyframes, fades/reveal, persistência em reload/retorno, nova sessão, proporções car/SVG, overlap mobile, legibilidade/fades, ausência de overflow/Canvas/GLB/Three e exceções JS, menu/busca/CTA/hint e seções preservadas.
+- Iterações reais:126/128 no primeiro QA (contraste do header em2 viewports mobile); corrigido com observer dedicado. Review encontrou deformação ultrawide; corrigida com aspect-ratio e cover uniforme. QA visual adicional encontrou perda de overlap mobile e corte do fade ultrawide; ambos corrigidos e revalidados. Última rodada do bundle congelado está integralmente aprovada.
+- O endpoint /api/instagram-feed foi interceptado no teste para erro503 controlado; a integração oficial não é homologada nesta sprint. Mapas e links existentes continuam presentes. Não se alterou backend, credenciais, dados ou configuração de produção.
+
+## Evidências e reversão
+
+evidence/ZE-03-FINAL-qa.mjs e -qa-results.json; -quality.json; -reference.png; -desktop.png; -ultrawide.png; -tablet.png; -mobile.png; -compact.png; -intro.png; -reduced.png; -review.json; -asset-manifest.json.
+
+Branch preservada work/ze-audi-redesign. Checkpoint anotado ZE-03-final-start-20261022 aponta9a557ef. Para rollback, criar branch nova a partir desse checkpoint em checkout isolado, preservando alterações do usuário; não usar reset hard/clean. src/planos/ não rastreado e .env foram preservados. Registro do commit final em Git e no log durável independente após commit.

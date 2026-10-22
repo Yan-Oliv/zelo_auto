@@ -1,0 +1,23 @@
+{
+  "tool": "image_gen built-in",
+  "source": "user attached reference",
+  "resampled": false,
+  "assets": [
+    {
+      "file": "public/hero/showroom-reference.webp",
+      "bytes": 189448,
+      "width": 1672,
+      "height": 940,
+      "alpha": false,
+      "sha256": "d25e7ce5f169cb7c7abe0103b1b396d8a1bdfcafc6047ff9ee832904dc534065"
+    },
+    {
+      "file": "public/hero/car-reference.webp",
+      "bytes": 258408,
+      "width": 1275,
+      "height": 643,
+      "alpha": true,
+      "sha256": "6fa5fe1646dc069a205fea46c923c2c40fd28dd31de68e8915aee7ae96198a1c"
+    }
+  ]
+}

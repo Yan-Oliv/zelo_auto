@@ -18,22 +18,13 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 - **Critério de aceite:** Nenhum WebGL obrigatório; navegação, serviços e CTA preservados.
 - **Melhor caminho:** Extrair UI dos estados 3D, retirar Canvas e reduzir dependências do bundle.
 
-## ZE-03 — Hero cinematográfico Audi/Zelo
+## ZE-03 — Hero cinematográfico final Audi/Zelo
 
-- **Entregas (2):** 1) Composição cinematográfica minimalista aprovada: carro central, gradiente branco–preto–branco, ZELO contornado e frase fina única, preservando o menu e o acesso ao orçamento; 2) Ativo local leve e comportamento responsivo, com transições sutis e movimento reduzido.
-- **Estado atual:** ZE-02 retirou a cena WebGL e colocou uma imagem de fallback temporária.
-- **Estado esperado:** Primeira dobra com o visual Audi/Zelo aprovado, sem excesso de textos e sem WebGL.
-- **Critério de aceite:** Imagem real carregada, contraste adequado, desktop/mobile sem overflow, header funcional e SEO acessível; build/lint e regressão sem falhas.
-- **Melhor caminho:** Usar AVIF otimizado a partir da referência visual aprovada, React/CSS simples e testes em diferentes viewports; sem reinstalar renderização 3D.
-
-## ZE-03-REWORK — Hero individual e alta resolução
-
-- **Entregas (máximo duas):** 1) Separar carro, cenário, ZELO e fragmentos do slogan em elementos independentes, com intro e persistência; 2) Entregar recursos 4K responsivos, com maior qualidade visual sem WebGL.
-- **Estado atual:** ZE-03 usa uma única imagem AVIF de 1200x611 e 12,8 KB, pouco nítida e semelhante a screenshot.
-- **Estado esperado:** Camadas independentes com entradas próprias somente no primeiro acesso da sessão, reaparecendo prontas.
-- **Critério de aceite:** Lettering SVG desenhado por etapas, textos deslizando em direções opostas e carro fade/scale; recursos 4096x2304 e mobile legíveis; reduced-motion, build, lint e regressões PASS; sem alterar produção.
-- **Melhor caminho:** React e sessionStorage, CSS keyframes e SVG vetorial, WebP dimensionado e testes Playwright.
-- **Qualidade real:** As fontes de imagem foram geradas em 1672x941 e reamostradas a 4096x2304 com Lanczos3/sharpen; 4K refere-se ao arquivo entregue, não a uma captura nativa em 4K.
+- Entregas: hero fiel à referência em camadas independentes; animações de primeira abertura com persistência/reduced-motion.
+- Estado final: COMPLETED, QA 144/144, build/lint PASS, review técnico PASS. A execução anterior ZE-03-REWORK está incorporada e substituída pelo resultado final desta ZE-03.
+- Aceite: carro frontal sem fabricante, escala/posição da referência, showroom quente, ZELO SVG, slogans legíveis, fades e header sem divisor horizontal; desktop/ultrawide/tablet/mobile; navegação preservada e zero WebGL na landing.
+- Implementação: edição da referência via image_gen; WebP sem upscale, SVG/texto/DOM, CSS e sessionStorage zelo:hero-intro:v3. Evidências e limites reais em ZE-03-Report.md.
+- Limite do objetivo: ZE-04 não autorizada; sem deploy/push.
 
 ## ZE-04 — Reestruturação visual
 
