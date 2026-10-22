@@ -12,7 +12,7 @@ Data-base: 2026-10-22 | Projeto local: `B:\OmnyaTech Project's\Projetos\zelo_aut
 ## Roadmap
 
 - ✅ **ZE-01 — Segurança e baseline** | Checkpoint Git e preservação dos arquivos locais; registrar baseline de build, performance e fluxos
-- ⬜ **ZE-02 — Desacoplamento do 3D** | Remover dependência obrigatória de CarScene; eliminar travamento da navegação/scroll
+- ✅ **ZE-02 — Desacoplamento do 3D** | Remover dependência obrigatória de CarScene; eliminar travamento da navegação/scroll
 - ⬜ **ZE-03 — Hero cinematográfico Audi/Zelo** | Carrossel leve e responsivo; aplicar lettering e microinterações Audi/Zelo
 - ⬜ **ZE-04 — Reestruturação visual** | Redesenhar serviços e blocos comerciais; modernizar navegação e rodapé
 - ⬜ **ZE-05 — Performance e acessibilidade** | Retirar carga 3D da produção e otimizar assets; medir performance e acessibilidade
@@ -31,4 +31,4 @@ Data-base: 2026-10-22 | Projeto local: `B:\OmnyaTech Project's\Projetos\zelo_aut
 3. Baseline comparável de build/lint, assets, tempos e navegação, com achados reais documentados.
 4. Integridade do checkpoint, rollback documentado e revisão de segurança.
 
-ZE-02 permanece `QUEUED`; este pedido autoriza apenas ZE-01.
+ZE-01 e ZE-02 concluídas e validadas. ZE-03 permanece `QUEUED`; produção intacta. A aprovação humana e o deploy só ocorrerão nas sprints apropriadas.

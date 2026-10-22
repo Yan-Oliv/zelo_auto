@@ -16,3 +16,10 @@
 - Produção: HTTP 200 na página, 400 no feed do Instagram; canonical e sitemap antigos, GA4 ausente. Apenas consulta HTTP.
 - QA/Review Nox: Git, Security, Performance e documentação — critérios C01 a C04 **PASS**. ZE-01 marcada `COMPLETED`; ZE-02 e posteriores `QUEUED`.
 - Nenhuma alteração em `src/`, `public/`, `index.html` ou produção. ZIPs de backup e logs excluídos de Git.
+
+## 2026-10-22 — ZE-02
+- Nox sequencial: Frontend, QA, Performance, Security, Reviewer e Git.
+- Checkpoint ZE-02-start-20261022. Componente 3D e loading gate retirados da landing; pin GSAP de 6120px removido.
+- QA inicial 19/20: teste do menu mobile verificou desmontagem antes de terminar a animação. Ajustado o teste para aguardar a saída real. Revalidação 20/20 PASS.
+- WebP temporário versionável gerado: 19714 bytes de PNG com 1733083 bytes. Build/lint exit 0; debug smoke 2/2 PASS.
+- Sem Canvas, requisições GLB/Three ou alterações na produção. C01 a C04 PASS; ZE-02 COMPLETED; ZE-03 QUEUED.

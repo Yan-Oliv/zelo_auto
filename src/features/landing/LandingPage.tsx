@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
 import {
   ArrowDown,
   ArrowUpRight,
@@ -27,9 +27,6 @@ import {
 import { LogoCarousel } from './components/LogoCarousel'
 import { ServiceCard } from './components/ServiceCard'
 import { useInstagramFeed } from './hooks/useInstagramFeed'
-import { CarScene } from '@features/cinematic/components/CarScene'
-import { useCinematicState } from '@features/cinematic/context/CinematicContext'
-import { useCinematicTimeline } from '@features/cinematic/hooks/useCinematicTimeline'
 import { Reveal } from '@shared/components/Reveal'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
@@ -46,103 +43,32 @@ const instagramEmpty = 'Nenhuma publica\u00e7\u00e3o encontrada ainda.'
 const instagramPending =
   'Perfil conectado. As \u00faltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'
 const mapTitle = 'Mapa Zelo Est\u00e9tica Automotiva'
-const loadingExperienceLabel = 'Preparando a experi\u00eancia 3D'
 const verse =
   '"Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja honra e gl\u00f3ria para todo o sempre. Am\u00e9m."'
 const verseReference = '1 Tim\u00f3teo 1:17'
 const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reservados.'
 const transparentPixel =
   'data:image/gif;base64,R0lGODlhAQABAAAAACw='
+const observedSectionIds = ['hero', ...sectionLinks.map(({ href }) => href.slice(1)), 'contato', 'parceiros']
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [sceneReady, setSceneReady] = useState(false)
-  const [loadingGateReleased, setLoadingGateReleased] = useState(false)
   const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
   const instagramFeed = useInstagramFeed()
   const instagramSectionNear = useNearViewport(instagramRef, '1100px')
-  const { activeSceneId, sceneProgress, globalProgress } = useCinematicState()
-  const activeSection = useActiveSection([
-    'hero',
-    ...sectionLinks.map((link) => link.href.replace('#', '')),
-    'contato',
-    'parceiros',
-  ])
+  const activeSection = useActiveSection(observedSectionIds)
   const instagramImagesReady = instagramSectionNear || activeSection === 'instagram'
 
-  useCinematicTimeline(true)
-
-  useEffect(() => {
-    if (sceneReady) {
-      setLoadingGateReleased(true)
-    }
-  }, [sceneReady])
-
-  const heroTextVisible = activeSceneId !== 'hero' || sceneProgress <= 0.15
-  const contactActive = activeSceneId === 'contato' && sceneProgress >= 0.38
-
-  const serviceSpotlight = useMemo(() => {
-    const rawProgress = activeSceneId === 'servicos' ? sceneProgress : 0
-    const focusPosition = Math.min(services.length - 1, rawProgress * (services.length - 1))
-    const focusedIndex = Math.min(services.length - 1, Math.floor(rawProgress * services.length))
-
-    return services.map((_, index) => {
-      const distance = Math.abs(index - focusPosition)
-      const linearFocus = Math.max(0, 1 - distance)
-      const focus = linearFocus * linearFocus * (3 - 2 * linearFocus)
-
-      return {
-        focus,
-        focused: index === focusedIndex,
-      }
-    })
-  }, [activeSceneId, sceneProgress])
+  // The contact transition now follows the visible section, not a 3D timeline.
+  const contactActive = activeSection === 'contato'
 
   return (
     <div className="min-h-screen bg-brand-navy text-brand-white">
-      <Suspense fallback={null}>
-        <CarScene
-          reducedMotion={reducedMotion}
-          activeSection={activeSection}
-          activeSceneId={activeSceneId}
-          sceneProgress={sceneProgress}
-          globalProgress={globalProgress}
-          onReadyChange={setSceneReady}
-        />
-      </Suspense>
-
-      <div
-        className={clsx(
-          'pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-brand-navy transition-opacity duration-700',
-          loadingGateReleased ? 'invisible opacity-0' : 'visible opacity-100',
-        )}
-        aria-hidden={loadingGateReleased}
-      >
-        <div className="flex flex-col items-center gap-5 px-6 text-center">
-          <img src={siteConfig.mainLogo} alt={brandName} className="brand-mark brand-mark-loader" />
-          <div className="h-[2px] w-28 overflow-hidden rounded-full bg-white/8">
-            <motion.div
-              className="h-full w-1/2 bg-brand-gold"
-              animate={{ x: ['-100%', '220%'] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.2, ease: 'easeInOut' }}
-            />
-          </div>
-          <p className="max-w-sm text-[11px] uppercase tracking-[0.28em] text-brand-silver">{loadingExperienceLabel}</p>
-        </div>
-      </div>
-
-      <div
-        className={clsx(
-          'transition-opacity duration-700',
-          loadingGateReleased ? 'opacity-100' : 'pointer-events-none opacity-0',
-        )}
-        aria-hidden={!loadingGateReleased}
-      >
-        <header
+      <header
         className={clsx(
           'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
-          globalProgress > 0.02
+          activeSection !== 'hero'
             ? 'border-white/10 bg-brand-navy/86 backdrop-blur-xl'
             : 'border-transparent bg-transparent',
         )}
@@ -194,7 +120,7 @@ export function LandingPage() {
         </header>
 
       <AnimatePresence>
-        {sceneReady && menuOpen ? (
+        {menuOpen ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -246,14 +172,16 @@ export function LandingPage() {
 
       <main className="relative z-10">
         <section id="hero" className="scene-shell hero-shell">
+          {/* Temporary 2D fallback. The Audi/Zelo cinematic carousel arrives in ZE-03. */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+            <img src="/hero-static-fallback.webp" alt="" decoding="async"
+              className="absolute inset-0 h-full w-full object-cover object-left opacity-45" />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/30 via-brand-navy/70 to-brand-navy/95" />
+          </div>
           <div className="hero-layout">
             <motion.div
               initial={reducedMotion ? false : { opacity: 0, y: 28 }}
-              animate={{
-                opacity: heroTextVisible ? 1 : 0,
-                y: heroTextVisible ? 0 : -20,
-                filter: heroTextVisible ? 'blur(0px)' : 'blur(12px)',
-              }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="hero-copy"
             >
@@ -311,8 +239,8 @@ export function LandingPage() {
                 key={service.title}
                 service={service}
                 index={index}
-                focus={serviceSpotlight[index]?.focus ?? 0}
-                focused={serviceSpotlight[index]?.focused ?? false}
+                focus={1}
+                focused={false}
               />
             ))}
           </div>
@@ -502,7 +430,6 @@ export function LandingPage() {
           {String.fromCharCode(169)} {new Date().getFullYear()} {copyrightNotice}
         </div>
       </footer>
-      </div>
     </div>
   )
 }

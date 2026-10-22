@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "zelo_autoestica",
   "status": "IN_PROGRESS",
-  "currentSprint": "ZE-02",
+  "currentSprint": "ZE-03",
   "currentStep": null,
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "ZE-01 COMPLETED. ZE-02 QUEUED, a executar em solicitação específica; sem alteração de produção.",
+  "nextAction": "ZE-02 validada e concluída. ZE-03 na fila; produção não alterada.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -68,8 +68,50 @@
     {
       "id": "ZE-02",
       "title": "Desacoplamento do 3D",
-      "status": "QUEUED",
-      "criteria": []
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-02-C01",
+          "description": "Landing renderiza independentemente de WebGL e sem loading gate; conteúdo e navegação responsiva presentes",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "evidence/ZE-02-desktop.png",
+            "evidence/ZE-02-mobile.png"
+          ]
+        },
+        {
+          "id": "ZE-02-C02",
+          "description": "Nenhum preloading/requests de GLB ou bundle 3D na landing; debug pages isoladas",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "evidence/ZE-02-debug-smoke.json"
+          ]
+        },
+        {
+          "id": "ZE-02-C03",
+          "description": "Hero sem ScrollTrigger de 6120 px, rolagem contínua e menus/CTAs/cards/Instagram/mapa preservados",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "src/features/landing/LandingPage.tsx"
+          ]
+        },
+        {
+          "id": "ZE-02-C04",
+          "description": "Build, lint, testes desktop/mobile, revisão e rollback validáveis; produção intacta",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-quality-final.json",
+            "ZE-02-Report.md"
+          ]
+        }
+      ]
     },
     {
       "id": "ZE-03",
