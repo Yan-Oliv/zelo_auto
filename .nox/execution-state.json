@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "ZE-03 concluída. ZE-04 na fila, sem mudança em produção.",
+  "nextAction": "ZE-03-REWORK concluída. ZE-04 permanece QUEUED. Nenhuma alteração em produção.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -161,6 +161,56 @@
             "ZE-03-Report.md",
             "Git tag ZE-03-start-20261022",
             "00-Execution-Map.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-03-REWORK",
+      "title": "Hero em camadas com imagens 4K e introdução única",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-03-RW-C01",
+          "description": "Camadas de carro/cenário/slogan/lettering SVG independentes com animações próprias",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "src/features/landing/LandingPage.tsx",
+            "src/features/landing/CinematicHero.css",
+            "evidence/ZE-03-RW-regression-results.json"
+          ]
+        },
+        {
+          "id": "ZE-03-RW-C02",
+          "description": "Intro na primeira visita por sessão, reload pronto e reduced-motion adequado",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-03-RW-regression-results.json"
+          ]
+        },
+        {
+          "id": "ZE-03-RW-C03",
+          "description": "Assets separados 4096x2304 de maior qualidade, mobile adaptado e marca de fabricante ausente",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-03-RW-asset-manifest.json",
+            "public/hero/showroom-4k.webp",
+            "public/hero/car-4k.webp",
+            "public/hero/car-mobile.webp"
+          ]
+        },
+        {
+          "id": "ZE-03-RW-C04",
+          "description": "Build/lint e QA responsive validados, checkpoint seguro e produção preservada",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-03-RW-quality.json",
+            "evidence/ZE-03-RW-regression-results.json",
+            "ZE-03-REWORK-Report.md"
           ]
         }
       ]

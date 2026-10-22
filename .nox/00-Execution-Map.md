@@ -14,6 +14,7 @@ Data-base: 2026-10-22 | Projeto local: `B:\OmnyaTech Project's\Projetos\zelo_aut
 - ✅ **ZE-01 — Segurança e baseline** | Checkpoint Git e preservação dos arquivos locais; registrar baseline de build, performance e fluxos
 - ✅ **ZE-02 — Desacoplamento do 3D** | Remover dependência obrigatória de CarScene; eliminar travamento da navegação/scroll
 - ✅ **ZE-03 — Hero cinematográfico Audi/Zelo** | Cena 2D AVIF aprovada com carro central, gradiente branco–preto–branco, ZELO contornado, slogan minimalista, responsividade e animação sutil
+- ✅ **ZE-03-REWORK — Hero em camadas e resolução 4K** | Carro, cena, slogan e ZELO em camadas; introdução única; 71/71 QA
 - ⬜ **ZE-04 — Reestruturação visual** | Redesenhar serviços e blocos comerciais; modernizar navegação e rodapé
 - ⬜ **ZE-05 — Performance e acessibilidade** | Retirar carga 3D da produção e otimizar assets; medir performance e acessibilidade
 - ⬜ **ZE-06 — Instagram funcional** | Restabelecer conector oficial; exibir feed autêntico com fallback adequado

@@ -29,3 +29,10 @@
 - Retomada e correção TS6133; arte aprovada incorporada como AVIF 12786 bytes com SHA verificado; menu fictício recortado.
 - Corrigido contraste do logo no header claro. Build/lint PASS e Chromium Playwright 45/45 PASS em 5 tamanhos; screenshots arquivadas.
 - ZE-03 C01..C04 PASS, status COMPLETED. ZE-04 QUEUED. Zero alterações em produção.
+
+## 2026-10-22 — ZE-03-REWORK
+- Papéis Nox: Design/Frontend, Performance, QA, Accessibility, Security, Git.
+- Tag ZE-03-REWORK-start-20261022 no commit 0176403; intro DOM/CSS com sessionStorage e assets 4096x2304 separados.
+- Imagens geradas originalmente 1672x941 e ampliadas para 4K; sem alegar nativo 4K. Arquivos de 300690/491110 bytes; mobile 188078.
+- QA primeiro 65/66 reduced-motion, corrigido matchMedia inicial. Depois 66/66 e 71/71 PASS com teste explícito de quatro animações.
+- Build/lint PASS; nada publicado. ZE-03-REWORK COMPLETED; ZE-04 QUEUED.

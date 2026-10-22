@@ -53,6 +53,24 @@ export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
   const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
+  const heroReducedMotion = reducedMotion || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  // Run the layered intro just once per tab session; keep full composition on return.
+  const [heroIntroPlayed, setHeroIntroPlayed] = useState(() => {
+    try { return sessionStorage.getItem('zelo:hero-intro:v2') === 'complete' }
+    catch { return false }
+  })
+  useEffect(() => {
+    if (heroIntroPlayed) return
+    if (heroReducedMotion) {
+      try { sessionStorage.setItem('zelo:hero-intro:v2', 'complete') } catch { /* storage disabled */ }
+      return
+    }
+    const id = window.setTimeout(() => {
+      try { sessionStorage.setItem('zelo:hero-intro:v2', 'complete') } catch { /* storage disabled */ }
+      setHeroIntroPlayed(true)
+    }, 2900)
+    return () => window.clearTimeout(id)
+  }, [heroIntroPlayed, heroReducedMotion])
   const instagramFeed = useInstagramFeed()
   const instagramSectionNear = useNearViewport(instagramRef, '1100px')
   const activeSection = useActiveSection(observedSectionIds)
@@ -170,25 +188,58 @@ export function LandingPage() {
       </AnimatePresence>
 
       <main className="relative z-10">
-        <section id="hero" className="zelo-hero" aria-labelledby="zelo-hero-title">
+        <section
+          id="hero"
+          className="zelo-hero"
+          data-intro={heroIntroPlayed || heroReducedMotion ? 'settled' : 'playing'}
+          aria-labelledby="zelo-hero-title"
+        >
           <h1 id="zelo-hero-title" className="sr-only">
             Mais que estética. É valorização. Zelo Estética Automotiva em Catalão - GO.
           </h1>
-          <div className="zelo-hero-scene" aria-hidden="true">
+          <div className="zelo-hero-stage" aria-hidden="true">
             <img
-              className={clsx('zelo-hero-image', !reducedMotion && 'zelo-hero-image--motion')}
-              src="/hero-zelo-approved.avif"
+              className="zelo-hero-backdrop"
+              src="/hero/showroom-4k.webp"
               alt=""
-              width={1200}
-              height={611}
+              width={4096}
+              height={2304}
               fetchPriority="high"
               decoding="async"
             />
+            <div className="zelo-hero-edge-fade" />
+            <div className="zelo-hero-top-fade" />
           </div>
-          <div className="zelo-hero-mobile-statement" aria-hidden="true">
-            <span>MAIS QUE ESTÉTICA.</span>
-            <span>É VALORIZAÇÃO.</span>
+          <svg
+            className="zelo-hero-wordmark"
+            viewBox="0 0 1200 360"
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text x="600" y="290" textAnchor="middle">ZELO</text>
+          </svg>
+          <div className="zelo-hero-car" aria-hidden="true">
+            <picture>
+              <source media="(max-width: 767px)" srcSet="/hero/car-mobile.webp" />
+              <img
+                src="/hero/car-4k.webp"
+                alt=""
+                width={4096}
+                height={2304}
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
           </div>
+          <div className="zelo-hero-slogan" aria-hidden="true">
+            <span className="zelo-hero-slogan-left">MAIS QUE ESTÉTICA.</span>
+            <span className="zelo-hero-slogan-right">É VALORIZAÇÃO.</span>
+          </div>
+          <a className="zelo-hero-scroll-hint" href="#servicos" aria-label="Explorar nossos serviços">
+            <span>ROLE PARA EXPLORAR</span>
+            <span className="zelo-hero-chevron" aria-hidden="true">⌄</span>
+          </a>
         </section>
 
         <section id="servicos" className="scene-shell scene-panel">

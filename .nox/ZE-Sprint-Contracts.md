@@ -26,6 +26,15 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 - **Critério de aceite:** Imagem real carregada, contraste adequado, desktop/mobile sem overflow, header funcional e SEO acessível; build/lint e regressão sem falhas.
 - **Melhor caminho:** Usar AVIF otimizado a partir da referência visual aprovada, React/CSS simples e testes em diferentes viewports; sem reinstalar renderização 3D.
 
+## ZE-03-REWORK — Hero individual e alta resolução
+
+- **Entregas (máximo duas):** 1) Separar carro, cenário, ZELO e fragmentos do slogan em elementos independentes, com intro e persistência; 2) Entregar recursos 4K responsivos, com maior qualidade visual sem WebGL.
+- **Estado atual:** ZE-03 usa uma única imagem AVIF de 1200x611 e 12,8 KB, pouco nítida e semelhante a screenshot.
+- **Estado esperado:** Camadas independentes com entradas próprias somente no primeiro acesso da sessão, reaparecendo prontas.
+- **Critério de aceite:** Lettering SVG desenhado por etapas, textos deslizando em direções opostas e carro fade/scale; recursos 4096x2304 e mobile legíveis; reduced-motion, build, lint e regressões PASS; sem alterar produção.
+- **Melhor caminho:** React e sessionStorage, CSS keyframes e SVG vetorial, WebP dimensionado e testes Playwright.
+- **Qualidade real:** As fontes de imagem foram geradas em 1672x941 e reamostradas a 4096x2304 com Lanczos3/sharpen; 4K refere-se ao arquivo entregue, não a uma captura nativa em 4K.
+
 ## ZE-04 — Reestruturação visual
 
 - **Entregas (2):** 1) Redesenhar serviços e seções; 2) Modernizar cabeçalho, parceiros, contato e rodapé.

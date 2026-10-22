@@ -1,105 +1,182 @@
-/* ZE-03: minimal cinematic composition approved by the client.
-   The wide scene is a single AVIF; no Canvas, WebGL or scroll pin. */
+/* ZE-03-REWORK — composited premium hero: actual independent layers, no baked-in text. */
 .zelo-hero {
   position: relative;
-  width: 100%;
-  min-height: 100svh;
   isolation: isolate;
+  height: 100svh;
+  min-height: 680px;
   overflow: clip;
-  background: #fafafa;
-  color: #151515;
+  background: #f9f9f7;
+  color: #1c1a18;
 }
-
-.zelo-hero-scene {
+.zelo-hero-stage,
+.zelo-hero-backdrop,
+.zelo-hero-edge-fade,
+.zelo-hero-top-fade {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: linear-gradient(90deg, #fafafa 0%, #f4f3f1 12%, #2a2927 50%, #f2f1ef 88%, #fafafa 100%);
-}
-
-.zelo-hero-image {
-  display: block;
   width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.zelo-hero-stage { z-index: 0; overflow: hidden; }
+.zelo-hero-backdrop { object-fit: cover; object-position: center 54%; }
+.zelo-hero-edge-fade {
+  background: linear-gradient(90deg,
+    #fafaf9 0%, rgba(250,250,249,.97) 4%,
+    rgba(250,250,249,.67) 12%, rgba(250,250,249,0) 27%,
+    rgba(250,250,249,0) 73%, rgba(250,250,249,.65) 88%,
+    rgba(250,250,249,.97) 96%, #fafaf9 100%);
+}
+.zelo-hero-top-fade {
+  background: linear-gradient(180deg,#fff 0%, rgba(255,255,255,.95) 4%,
+    rgba(255,255,255,0) 20%, rgba(255,255,255,0) 77%,
+    rgba(250,250,249,.42) 89%, #fafaf9 100%);
+}
+.zelo-hero-wordmark {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 50%;
+  width: min(86vw, 1390px);
   height: auto;
-  max-height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  overflow: visible;
+}
+.zelo-hero-wordmark text {
+  fill: transparent;
+  stroke: rgba(215,180,121,.78);
+  stroke-width: 1.6px;
+  paint-order: stroke;
+  letter-spacing: -.035em;
+  font-family: 'Montserrat','Arial',sans-serif;
+  font-weight: 800;
+  font-size: 360px;
+}
+.zelo-hero-car {
+  position: absolute;
+  z-index: 3;
+  bottom: 4.5%;
+  left: 50%;
+  width: min(64vw, 1320px);
+  max-width: none;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.zelo-hero-car img,
+.zelo-hero-car picture { display: block; width: 100%; height: auto; }
+.zelo-hero-car img {
   object-fit: contain;
-  object-position: center center;
-  animation: zelo-image-appear 1.1s ease-out both;
-  will-change: auto;
+  filter: drop-shadow(0 28px 36px rgba(0,0,0,.22));
 }
-
-.zelo-hero-image--motion {
-  animation: zelo-image-appear 1.1s ease-out both, zelo-cinematic-breathe 19s ease-in-out 1.1s infinite alternate;
+.zelo-hero-slogan {
+  position: absolute;
+  z-index: 4;
+  top: 46%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: clamp(2rem, 6vw, 7.2rem);
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: 'Montserrat',system-ui,sans-serif;
+  font-weight: 400;
+  font-size: clamp(.65rem, 1.06vw, 1rem);
+  letter-spacing: .32em;
 }
-
+.zelo-hero-slogan-left { color: #1b1a19; }
+.zelo-hero-slogan-right { color: #a9782d; }
+.zelo-hero-scroll-hint {
+  position: absolute;
+  z-index: 5;
+  bottom: clamp(1.3rem, 2.7svh, 2.5rem);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  transform: translateX(-50%);
+  font-family: 'Montserrat',system-ui,sans-serif;
+  color: #282523;
+  font-size: .56rem;
+  letter-spacing: .3em;
+  text-decoration: none;
+  text-align: center;
+}
+.zelo-hero-chevron { font-size: 1.65rem; line-height: .7; font-weight: 200; }
 .zelo-hero-header {
-  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.76) 72%, rgba(255,255,255,0));
+  background: linear-gradient(180deg,rgba(255,255,255,.97),rgba(255,255,255,.8) 72%,transparent);
   backdrop-filter: blur(6px);
 }
+.brand-mark-header.zelo-hero-header-logo { filter: brightness(0) drop-shadow(0 5px 12px rgba(0,0,0,.04)); }
 
-.brand-mark-header.zelo-hero-header-logo {
-  /* Override the dark-theme logo's default drop-shadow with a readable ink treatment. */
-  filter: brightness(0) drop-shadow(0 5px 12px rgba(0,0,0,.04));
+/* Entrance plays once per tab, while subsequent navigation is immediately settled. */
+.zelo-hero[data-intro="playing"] .zelo-hero-wordmark {
+  animation: zelo-outline-write 2s steps(24,end) .15s both;
 }
-
-.zelo-hero-mobile-statement { display:none; }
-
-@keyframes zelo-image-appear {
-  from { opacity: 0; filter: blur(7px); }
-  to { opacity: 1; filter: blur(0); }
+.zelo-hero[data-intro="playing"] .zelo-hero-car {
+  animation: zelo-car-arrive 1.65s cubic-bezier(.16,1,.3,1) .55s both;
 }
-@keyframes zelo-cinematic-breathe {
-  from { transform: scale(1); }
-  to { transform: scale(1.016); }
+.zelo-hero[data-intro="playing"] .zelo-hero-slogan-left {
+  animation: zelo-copy-from-left 1.35s cubic-bezier(.16,1,.3,1) .35s both;
 }
-
+.zelo-hero[data-intro="playing"] .zelo-hero-slogan-right {
+  animation: zelo-copy-from-right 1.35s cubic-bezier(.16,1,.3,1) .5s both;
+}
+@keyframes zelo-outline-write {
+  from { opacity: .3; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+@keyframes zelo-car-arrive {
+  from { opacity: 0; transform: translateX(-50%) scale(.89) translateY(32px); }
+  to { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
+}
+@keyframes zelo-copy-from-left {
+  from { opacity: 0; transform: translateX(-110vw); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes zelo-copy-from-right {
+  from { opacity: 0; transform: translateX(110vw); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (max-width: 1024px) {
+  .zelo-hero-car { width: 100vw; bottom: 9%; }
+  .zelo-hero-wordmark { width: 99vw; top: 25%; }
+  .zelo-hero-slogan { padding-inline: 2rem; font-size: .65rem; letter-spacing: .21em; top: 58%; }
+}
 @media (max-width: 767px) {
-  .zelo-hero {
-    min-height: min(790px, 100svh);
-    background: #fafafa;
+  .zelo-hero { min-height: 660px; height: 100svh; max-height: 860px; }
+  .zelo-hero-backdrop { object-position: center 48%; }
+  .zelo-hero-top-fade {
+    background: linear-gradient(180deg,#fff 0%,rgba(255,255,255,.95) 10%,transparent 26%,transparent 75%,#fafaf9 94%);
   }
-  .zelo-hero-scene {
-    align-items: center;
-    background: linear-gradient(180deg, #fafafa 0%, #fafafa 9%, #ddd9d2 22%, #181717 51%, #f5f4f1 87%, #fafafa 100%);
+  .zelo-hero-edge-fade {
+    background: linear-gradient(90deg,rgba(249,249,247,.5) 0%,transparent 18%,transparent 82%,rgba(249,249,247,.5) 100%);
   }
-  .zelo-hero-image {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    width: auto;
-    height: 68%;
-    max-height: none;
-    max-width: none;
-    transform: translateX(-50%);
-    object-fit: cover;
-  }
-  .zelo-hero-image--motion {
-    animation: zelo-image-appear 1s ease-out both;
-  }
-  .zelo-hero-mobile-statement {
-    position: absolute;
-    z-index: 2;
-    inset-inline: 1.5rem;
-    bottom: clamp(2rem, 7svh, 4rem);
-    display: flex;
+  .zelo-hero-wordmark { width: 122vw; top: 23%; }
+  .zelo-hero-wordmark text { stroke-width: 2.2px; }
+  .zelo-hero-car { width: max(107vw, 410px); bottom: 22%; }
+  .zelo-hero-slogan {
+    top: auto;
+    bottom: 11%;
     flex-direction: column;
-    gap: .65rem;
-    align-items: center;
-    color: #26211c;
-    text-align: center;
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-size: clamp(.62rem, 2.6vw, .9rem);
-    font-weight: 600;
-    letter-spacing: .26em;
+    justify-content: center;
+    gap: .75rem;
+    white-space: normal;
+    padding-inline: .8rem;
+    letter-spacing: .28em;
+    font-size: clamp(.64rem, 2.4vw, .84rem);
   }
-  .zelo-hero-mobile-statement span:last-child { color: #94691c; }
+  .zelo-hero-scroll-hint { bottom: 2.1%; font-size: .48rem; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .zelo-hero-image, .zelo-hero-image--motion { animation: none; transform: none; filter: none; }
-  @media (max-width: 767px) {
-    .zelo-hero-image, .zelo-hero-image--motion { transform: translateX(-50%); }
+  .zelo-hero[data-intro="playing"] .zelo-hero-wordmark,
+  .zelo-hero[data-intro="playing"] .zelo-hero-car,
+  .zelo-hero[data-intro="playing"] .zelo-hero-slogan-left,
+  .zelo-hero[data-intro="playing"] .zelo-hero-slogan-right {
+    animation: none !important;
   }
 }
