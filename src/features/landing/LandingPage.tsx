@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
 import {
-  ArrowDown,
   ArrowUpRight,
   Camera,
   MapPin,
@@ -15,7 +14,6 @@ import {
   contactCards,
   contactSectionCopy,
   footerLinks,
-  heroCopy,
   instagramCopy,
   locationInfo,
   partnerLogos,
@@ -30,10 +28,10 @@ import { useInstagramFeed } from './hooks/useInstagramFeed'
 import { Reveal } from '@shared/components/Reveal'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
+import './CinematicHero.css'
 
 const brandName = 'Zelo Est\u00e9tica Automotiva'
 const budgetLabel = 'Fa\u00e7a seu or\u00e7amento'
-const servicesLabel = 'Nossos servi\u00e7os'
 const serviceEyebrow = 'EXCEL\u00caNCIA EM CADA DETALHE'
 const serviceDescription =
   'Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado que voc\u00ea tem pelo seu ve\u00edculo.'
@@ -62,15 +60,16 @@ export function LandingPage() {
 
   // The contact transition now follows the visible section, not a 3D timeline.
   const contactActive = activeSection === 'contato'
+  const onHero = activeSection === 'hero'
 
   return (
     <div className="min-h-screen bg-brand-navy text-brand-white">
       <header
         className={clsx(
           'fixed inset-x-0 top-0 z-50 border-b transition-all duration-500',
-          activeSection !== 'hero'
+          !onHero
             ? 'border-white/10 bg-brand-navy/86 backdrop-blur-xl'
-            : 'border-transparent bg-transparent',
+            : 'zelo-hero-header border-transparent',
         )}
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 lg:px-8">
@@ -78,7 +77,7 @@ export function LandingPage() {
             <img
               src={siteConfig.mainLogo}
               alt={brandName}
-              className="brand-mark brand-mark-header"
+              className={clsx("brand-mark brand-mark-header", onHero && "zelo-hero-header-logo")}
               width={888}
               height={334}
               fetchPriority="high"
@@ -95,8 +94,8 @@ export function LandingPage() {
                   className={clsx(
                     'text-[11px] uppercase tracking-[0.28em] transition-colors duration-300',
                     activeSection === sectionId
-                      ? 'text-brand-gold'
-                      : 'text-brand-silver hover:text-brand-white',
+                      ? (onHero ? 'text-[#9f7623]' : 'text-brand-gold')
+                      : (onHero ? 'text-[#262626] hover:text-[#9f7623]' : 'text-brand-silver hover:text-brand-white'),
                   )}
                 >
                   {link.label}
@@ -111,7 +110,7 @@ export function LandingPage() {
           <button
             type="button"
             aria-label="Abrir menu"
-            className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-brand-graphite/75 text-brand-gold md:hidden"
+            className={clsx("inline-flex h-10 w-10 items-center justify-center border text-brand-gold md:hidden", onHero ? "border-black/15 bg-white/80" : "border-white/10 bg-brand-graphite/75")}
             onClick={() => setMenuOpen(true)}
           >
             <Menu size={18} />
@@ -171,59 +170,24 @@ export function LandingPage() {
       </AnimatePresence>
 
       <main className="relative z-10">
-        <section id="hero" className="scene-shell hero-shell">
-          {/* Temporary 2D fallback. The Audi/Zelo cinematic carousel arrives in ZE-03. */}
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-            <img src="/hero-static-fallback.webp" alt="" decoding="async"
-              className="absolute inset-0 h-full w-full object-cover object-left opacity-45" />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/30 via-brand-navy/70 to-brand-navy/95" />
+        <section id="hero" className="zelo-hero" aria-labelledby="zelo-hero-title">
+          <h1 id="zelo-hero-title" className="sr-only">
+            Mais que estética. É valorização. Zelo Estética Automotiva em Catalão - GO.
+          </h1>
+          <div className="zelo-hero-scene" aria-hidden="true">
+            <img
+              className={clsx('zelo-hero-image', !reducedMotion && 'zelo-hero-image--motion')}
+              src="/hero-zelo-approved.avif"
+              alt=""
+              width={1200}
+              height={611}
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
-          <div className="hero-layout">
-            <motion.div
-              initial={reducedMotion ? false : { opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="hero-copy"
-            >
-              <div className="eyebrow">SHOWROOM DE CUIDADO AUTOMOTIVO</div>
-              <h1 className="hero-title mt-5">
-                {heroCopy.titleLines.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
-              </h1>
-              <p className="hero-description mt-5">
-                {heroCopy.description}
-              </p>
-
-              <div className="hero-actions mt-8 flex flex-col gap-4 sm:flex-row">
-                <a href={siteConfig.whatsappLink} className="button-primary">
-                  {budgetLabel}
-                </a>
-                <a href="#servicos" className="button-secondary">
-                  {servicesLabel}
-                </a>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="pointer-events-none absolute inset-x-0 bottom-8 flex justify-center">
-            <motion.a
-              href="#servicos"
-              animate={reducedMotion ? undefined : { y: [0, 6, 0] }}
-              transition={{
-                repeat: Number.POSITIVE_INFINITY,
-                duration: 1.8,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="inline-flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.36em] text-brand-silver"
-            >
-              {'role a tela'}
-              <span className="inline-flex h-9 w-9 items-center justify-center border border-brand-gold/35 text-brand-gold">
-                <ArrowDown size={14} />
-              </span>
-            </motion.a>
+          <div className="zelo-hero-mobile-statement" aria-hidden="true">
+            <span>MAIS QUE ESTÉTICA.</span>
+            <span>É VALORIZAÇÃO.</span>
           </div>
         </section>
 

@@ -20,11 +20,11 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 
 ## ZE-03 — Hero cinematográfico Audi/Zelo
 
-- **Entregas (2):** 1) Carrossel com zoom/parallax leve; 2) Lettering outline e botões premium.
-- **Estado atual:** Hero depende de cena WebGL pesada.
-- **Estado esperado:** Primeira dobra branca e dourada com carro em imagens leves e tipografia contornada.
-- **Critério de aceite:** Sem WebGL; bom desktop/mobile; transições acessíveis e CTA visível.
-- **Melhor caminho:** Aproveitar AURA / MOTION e fotos da Zelo; WebP/AVIF responsivo.
+- **Entregas (2):** 1) Composição cinematográfica minimalista aprovada: carro central, gradiente branco–preto–branco, ZELO contornado e frase fina única, preservando o menu e o acesso ao orçamento; 2) Ativo local leve e comportamento responsivo, com transições sutis e movimento reduzido.
+- **Estado atual:** ZE-02 retirou a cena WebGL e colocou uma imagem de fallback temporária.
+- **Estado esperado:** Primeira dobra com o visual Audi/Zelo aprovado, sem excesso de textos e sem WebGL.
+- **Critério de aceite:** Imagem real carregada, contraste adequado, desktop/mobile sem overflow, header funcional e SEO acessível; build/lint e regressão sem falhas.
+- **Melhor caminho:** Usar AVIF otimizado a partir da referência visual aprovada, React/CSS simples e testes em diferentes viewports; sem reinstalar renderização 3D.
 
 ## ZE-04 — Reestruturação visual
 

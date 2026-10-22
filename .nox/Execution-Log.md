@@ -23,3 +23,9 @@
 - QA inicial 19/20: teste do menu mobile verificou desmontagem antes de terminar a animação. Ajustado o teste para aguardar a saída real. Revalidação 20/20 PASS.
 - WebP temporário versionável gerado: 19714 bytes de PNG com 1733083 bytes. Build/lint exit 0; debug smoke 2/2 PASS.
 - Sem Canvas, requisições GLB/Three ou alterações na produção. C01 a C04 PASS; ZE-02 COMPLETED; ZE-03 QUEUED.
+
+## 2026-10-22 — ZE-03
+- Nox sequencial: Design/Frontend, Performance, QA, Accessibility, Security, Git.
+- Retomada e correção TS6133; arte aprovada incorporada como AVIF 12786 bytes com SHA verificado; menu fictício recortado.
+- Corrigido contraste do logo no header claro. Build/lint PASS e Chromium Playwright 45/45 PASS em 5 tamanhos; screenshots arquivadas.
+- ZE-03 C01..C04 PASS, status COMPLETED. ZE-04 QUEUED. Zero alterações em produção.

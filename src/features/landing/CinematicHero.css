@@ -1,0 +1,105 @@
+/* ZE-03: minimal cinematic composition approved by the client.
+   The wide scene is a single AVIF; no Canvas, WebGL or scroll pin. */
+.zelo-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  isolation: isolate;
+  overflow: clip;
+  background: #fafafa;
+  color: #151515;
+}
+
+.zelo-hero-scene {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, #fafafa 0%, #f4f3f1 12%, #2a2927 50%, #f2f1ef 88%, #fafafa 100%);
+}
+
+.zelo-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  animation: zelo-image-appear 1.1s ease-out both;
+  will-change: auto;
+}
+
+.zelo-hero-image--motion {
+  animation: zelo-image-appear 1.1s ease-out both, zelo-cinematic-breathe 19s ease-in-out 1.1s infinite alternate;
+}
+
+.zelo-hero-header {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.76) 72%, rgba(255,255,255,0));
+  backdrop-filter: blur(6px);
+}
+
+.brand-mark-header.zelo-hero-header-logo {
+  /* Override the dark-theme logo's default drop-shadow with a readable ink treatment. */
+  filter: brightness(0) drop-shadow(0 5px 12px rgba(0,0,0,.04));
+}
+
+.zelo-hero-mobile-statement { display:none; }
+
+@keyframes zelo-image-appear {
+  from { opacity: 0; filter: blur(7px); }
+  to { opacity: 1; filter: blur(0); }
+}
+@keyframes zelo-cinematic-breathe {
+  from { transform: scale(1); }
+  to { transform: scale(1.016); }
+}
+
+@media (max-width: 767px) {
+  .zelo-hero {
+    min-height: min(790px, 100svh);
+    background: #fafafa;
+  }
+  .zelo-hero-scene {
+    align-items: center;
+    background: linear-gradient(180deg, #fafafa 0%, #fafafa 9%, #ddd9d2 22%, #181717 51%, #f5f4f1 87%, #fafafa 100%);
+  }
+  .zelo-hero-image {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: auto;
+    height: 68%;
+    max-height: none;
+    max-width: none;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+  .zelo-hero-image--motion {
+    animation: zelo-image-appear 1s ease-out both;
+  }
+  .zelo-hero-mobile-statement {
+    position: absolute;
+    z-index: 2;
+    inset-inline: 1.5rem;
+    bottom: clamp(2rem, 7svh, 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+    align-items: center;
+    color: #26211c;
+    text-align: center;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: clamp(.62rem, 2.6vw, .9rem);
+    font-weight: 600;
+    letter-spacing: .26em;
+  }
+  .zelo-hero-mobile-statement span:last-child { color: #94691c; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zelo-hero-image, .zelo-hero-image--motion { animation: none; transform: none; filter: none; }
+  @media (max-width: 767px) {
+    .zelo-hero-image, .zelo-hero-image--motion { transform: translateX(-50%); }
+  }
+}
