@@ -3,14 +3,14 @@
     "project":  "zelo_autoestica",
     "status":  "WAITING_USER_ACTION",
     "currentSprint":  "ZE-06",
-    "currentStep":  "Owner Instagram Login authorization",
+    "currentStep":  "Owner Instagram Login reauthorization and account-role check",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner to complete official Instagram Login authorization, confirm numeric account ID, and set server-only Pages variables; then re-run real feed verification.",
+    "nextAction":  "Owner to freshly authorize the intended professional Instagram account via Instagram Login, check Development Mode role/tester access if applicable, then configure server-only variables and repeat live-feed QA.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -332,7 +332,7 @@
                         "criteria":  [
                                          {
                                              "evidence":  [
-                                                              "Public endpoint: HTTP 400, OAuthException code 190; sanitized diagnosis documented in ZE-06-Report.md"
+                                                              "Public endpoint: HTTP 400/OAuthException 190; local graph.instagram.com/me and /ID/media: HTTP 401/OAuthException 190; secret-safe evidence documented in ZE-06-Report.md"
                                                           ],
                                              "status":  "PENDING",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",

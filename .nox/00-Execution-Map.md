@@ -9,7 +9,7 @@ Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 | ZE-03 | Hero cinematográfica final fiel à referência, camadas e intro única | COMPLETED | ZE-02 | Aceite local evidenciado no relatório final |
 | ZE-04 | Reestruturação visual | COMPLETED | ZE-03 | Preservado |
 | ZE-05 | Performance e acessibilidade | COMPLETED | ZE-04 | Concluída tecnicamente; metas mobile não atingidas documentadas em `.nox/ZE-05-Report.md` |
-| ZE-06 | Instagram funcional | WAITING_USER_ACTION | ZE-05 | Owner to authorize Instagram Login and configure server-only account credentials; then verify live posts |
+| ZE-06 | Instagram funcional | WAITING_USER_ACTION | ZE-05 | Owner to reauthorize the intended IG account via Instagram Login, check its app role, then rerun real-feed QA |
 | ZE-07 | SEO técnico local | QUEUED | ZE-06 | Fora do objetivo ativo; não executar |
 | ZE-08 | Google Analytics e mensuração | QUEUED | ZE-07 | Fora do objetivo ativo; não executar |
 | ZE-09 | Reputação Google | QUEUED | ZE-08 | Fora do objetivo ativo; não executar |
@@ -19,7 +19,7 @@ Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 
 ZE-03 foi reaberta e corrigida nesta execução; esta validação final substitui a aprovação visual das implementações anteriores ZE-03 e ZE-03-REWORK. O rework é parte da ZE-03, sem sprint adicional.
 
-ZE-05 concluída tecnicamente em 2026-10-23 com exatamente duas entregas. Lighthouse final mobile 89/100 e LCP 3,531 ms ficaram abaixo das metas 90/2,5 s; a análise atribuiu o atraso cold-start à espera intencional da intro cinematográfica preservada e não encontrou oportunidade segura dentro do escopo para encurtá-la. Desktop 99/100; acessibilidade 100; sem CLS ou GLB/Three requests na landing. Root/Nox fez revisão visual técnica; aprovação humana do proprietário não declarada. ZE-06 local implementation and deterministic QA are complete, but its live Meta criterion is pending owner-issued Instagram Login authorization. ZE-06 is WAITING_USER_ACTION; ZE-07+ remain QUEUED; no production mutation, push, or deploy.
+ZE-05 concluída tecnicamente em 2026-10-23 com exatamente duas entregas. Lighthouse final mobile 89/100 e LCP 3,531 ms ficaram abaixo das metas 90/2,5 s; a análise atribuiu o atraso cold-start à espera intencional da intro cinematográfica preservada e não encontrou oportunidade segura dentro do escopo para encurtá-la. Desktop 99/100; acessibilidade 100; sem CLS ou GLB/Three requests na landing. Root/Nox fez revisão visual técnica; aprovação humana do proprietário não declarada. ZE-06 remains WAITING_USER_ACTION after secret-safe local checks confirmed configured ID/token names but missing explicit Instagram Login mode and Meta returning sanitized 401/OAuthException 190 for local read-only calls. No values were output; current failures do not establish why feed worked historically. Facebook Test Users creation is separate from Instagram Login; Development Mode Instagram-role access may still need checking. ZE-07+ remain QUEUED; no environment, production, push, or deploy changes.
 
 
 ## Correção visual vinculante — 2026-10-22
