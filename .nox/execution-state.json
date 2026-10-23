@@ -363,9 +363,14 @@
                                          },
                                          {
                                              "evidence":  [
-                                                              "Build, lint, API/UI QA pass; final scoped commit and reconciliation pending"
+                                                              "npm run build",
+                                                              "npm run lint",
+                                                              "node --experimental-strip-types --test functions/api/_instagram-feed.test.mjs",
+                                                              "node .nox/evidence/ze06-qa-2026-10-23/playwright.mjs (exit 0)",
+                                                              "git diff --cached --check",
+                                                              "commit 3e2ea2b"
                                                           ],
-                                             "status":  "PENDING",
+                                             "status":  "PASS",
                                              "description":  "Build, lint, API/E2E, visual/performance regression, review, docs, and scoped local commit",
                                              "id":  "ZE-06-C04",
                                              "required":  true
