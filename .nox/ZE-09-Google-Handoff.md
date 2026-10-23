@@ -5,7 +5,7 @@
 A ficha foi localizada por nome, site e telefone coincidentes; o link Maps antigo aponta somente para o endereço. Acesso público não comprova propriedade nem verificação. A interface Google abriu autenticação ao acionar Avaliar, sem login nem publicação. A API não foi autenticada, pois não há variáveis Google no ambiente local.
 
 1. Entre na conta Google proprietária e abra o Perfil da Empresa Zelo Estética Automotiva em Catalão. Confira telefone (64) 99616-1968, site zelo.omnyatech.com.br e rua Antônio Horácio Pereira; confirme o número 1485, que não aparece na ficha pública observada.
-2. Confirme que é proprietário/administrador e que a ficha está verificada. Em **Ler avaliações > Receba mais avaliações**, copie o link gerado pelo Google. Esse link é público e pode ser enviado; não envie senha ou tokens no chat.
+2. Os links públicos de avaliação e compartilhamento já foram recebidos do proprietário e incorporados. Não é necessário enviá-los novamente. Confirme que é proprietário/administrador e que a ficha está verificada; confirme manualmente que o link abre o fluxo correto quando o desafio anti-bot impedir a automação. Não envie senha ou tokens no chat.
 3. No Google Cloud, selecione projeto da própria empresa autorizado para Business Profile APIs. Confirme aprovação de acesso; possuir a ficha não concede automaticamente API. Siga o setup oficial abaixo. Não habilite cobrança: se o painel pedir faturamento, pare e registre essa dependência.
 4. Habilite somente APIs necessárias após conferir acesso: Business Profile Account Management, Business Information e Google My Business v4 (reviews). Crie cliente OAuth sob o projeto aprovado e autorize a conta proprietária com escopo `https://www.googleapis.com/auth/business.manage`. O Google não oferece escopo somente leitura para reviews; o adaptador executa apenas GET de localização/avaliações e POST de renovação OAuth, nunca edição de ficha ou publicação.
 5. Obtenha Account ID pela lista oficial de contas, e Location ID pela lista de localizações dessa conta. Não use Place ID nem identificador hexadecimal de endereço em seu lugar. Confira título, cidade, telefone e metadata.mapsUri/newReviewUri da localização autorizada. Faça o OAuth offline com seu próprio cliente e guarde refresh token em arquivo local ignorado; não envie no chat.
@@ -29,3 +29,7 @@ Fontes oficiais consultadas em 2026-10-23:
 - https://developers.google.com/maps/documentation/places/web-service/policies
 - https://support.google.com/business/answer/16816815?hl=pt-BR
 - https://developers.cloudflare.com/pages/functions/bindings/
+
+
+## Retomada com links do proprietário
+2026-10-23 — ZE-09 retomada com links públicos fornecidos pelo proprietário: search lrd CID0x14e35d89087019ae ação3 e share.google/3PlTHI5FF8L4JCmS0 cujo redirecionamento kgmid/g/11zxzxp9sv corresponde à ficha encontrada. CTAs públicos independentes de OAuth implementados; fragmento de escrita preservado. Browser Google retornou desafio anti-bot, sem contorno; fluxo final manual continua PENDING. Fonte/nota/total/reviews reais ainda dependem OAuth/projeto aprovado. WAITING_USER_ACTION mantido; sem produção/custos/ZE10/rework.

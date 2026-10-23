@@ -63,23 +63,23 @@ try {
     await near(page); await state(page, expected)
     assert.equal(await page.locator('#avaliacoes .ze4-review-score').count(), 0)
     if (expected === 'unavailable') {
-      assert.equal(await page.locator('#avaliacoes [data-analytics-review]').count(), 0)
+      assert.equal(await page.locator('#avaliacoes [data-analytics-review="write"]').count(), 1)
       assert.equal(await page.locator('#avaliacoes .ze4-review-unavailable').count(), 3)
       assert.match(await page.locator('#avaliacoes').innerText(), /indispon/)
     }
     await page.close()
   })
-  await note('Optional write link hidden', async () => {
+  await note('Owner-approved fallback when API write link absent', async () => {
     const {reviewActionUrl, ...without} = fixture
     const { page } = await pageFor(without)
     await near(page); await state(page, 'verified')
-    assert.equal(await page.locator('#avaliacoes [data-analytics-review="write"]').count(), 0)
+    assert.match(await page.locator('#avaliacoes [data-analytics-review="write"]').getAttribute('href'), /#lrd=0x94a667c8105c5275:0x14e35d89087019ae,3/)
     await page.close()
   })
-  await note('Invalid write target hidden', async () => {
+  await note('Owner-approved fallback when API write target invalid', async () => {
     const { page } = await pageFor({...fixture, reviewActionUrl: 'https://www.google.com/maps?cid=123'})
     await near(page); await state(page, 'verified')
-    assert.equal(await page.locator('#avaliacoes [data-analytics-review="write"]').count(), 0)
+    assert.match(await page.locator('#avaliacoes [data-analytics-review="write"]').getAttribute('href'), /#lrd=0x94a667c8105c5275:0x14e35d89087019ae,3/)
     await page.close()
   })
   for (const consent of [false, true]) await note(`Analytics consent ${consent}`, async () => {

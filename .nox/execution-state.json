@@ -10,7 +10,7 @@
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Proprietário configura OAuth GBP server-only, confirma ficha/número1485 e link Receba mais avaliações; depois retomar API real/CTAs.",
+  "nextAction": "Proprietário configura OAuth GBP server-only e confirma ficha/número1485; links públicos já fornecidos e incorporados. Confirmar fluxo manual caso Google anti-bot persista; retomar dados reais.",
   "sprints": [
     {
       "id": "ZE-01",

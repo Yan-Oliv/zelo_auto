@@ -3,6 +3,7 @@ import { m, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, Film, Images, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
 import { locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
+import { googleReviewLinks } from '../../data/googleReviewLinks'
 import { useInstagramFeed, type InstagramFeedPost } from '../../hooks/useInstagramFeed'
 import { useGoogleReviews, type VerifiedGoogleReviews } from '../../hooks/useGoogleReviews'
 export type { VerifiedGoogleReview, VerifiedGoogleReviews } from '../../hooks/useGoogleReviews'
@@ -82,6 +83,8 @@ export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGo
   const feed = useGoogleReviews(!suppliedData)
   const data = suppliedData ?? feed.data
   const status = suppliedData ? (suppliedData.total === 0 ? 'empty' : 'verified') : feed.status
+  const reviewActionUrl = data?.reviewActionUrl || googleReviewLinks.reviewActionUrl
+  const sourceUrl = data?.sourceUrl || googleReviewLinks.sourceUrl
   const loading = status === 'loading'
   const unavailableCards = [
     { icon: <Camera size={23} />, title: 'Acompanhe o nosso dia a dia', description: 'Bastidores e cuidados no perfil oficial.', action: 'Abrir Instagram', href: siteConfig.instagramLink },
@@ -104,8 +107,8 @@ export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGo
     </div>
     <p className="ze4-reviews-status" role="status">{loading ? 'Carregando avaliações do Google…' : data ? data.total === 0 ? 'Nenhuma avaliação disponível no Google no momento.' : 'Avaliações de clientes. Fonte: Google.' : 'As avaliações do Google estão indisponíveis no momento.'}</p>
     <CommunityReveal className="ze4-reviews-actions" delay={0.2}>
-      {data?.reviewActionUrl && <a data-analytics-review="write" href={data.reviewActionUrl} className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
-      <a data-analytics-review={data ? 'view' : undefined} href={data?.sourceUrl || locationInfo.mapsLink} className="ze4-button-outline" target="_blank" rel="noopener noreferrer">{data ? 'VER TODAS AS AVALIAÇÕES' : 'VER LOCALIZAÇÃO NO GOOGLE MAPS'}<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
+      {reviewActionUrl && <a data-analytics-review="write" href={reviewActionUrl} className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
+      <a data-analytics-review="view" href={sourceUrl} className="ze4-button-outline" target="_blank" rel="noopener noreferrer">VER TODAS AS AVALIAÇÕES<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
     </CommunityReveal>
   </section>
 }

@@ -34,11 +34,11 @@
       "status": "PASS"
     },
     {
-      "name": "Optional write link hidden",
+      "name": "Owner-approved fallback when API write link absent",
       "status": "PASS"
     },
     {
-      "name": "Invalid write target hidden",
+      "name": "Owner-approved fallback when API write target invalid",
       "status": "PASS"
     },
     {

@@ -29,3 +29,7 @@ QA browser:18 grupos PASS no build atual com casos de loading, dados válidos, e
 Seguir `.nox/ZE-09-Google-Handoff.md`: proprietário confirma ficha verificada, projeto aprovado, OAuth e configura cinco variáveis server-only no `.env` ignorado; fornece link público Receba mais avaliações, sem tokens no chat. Retomar testes reais da API e ambos CTAs. Sem publicação autorizada.
 
 Rollback local: checkpoint `ZE-09-start-20261023` recupera fontes anteriores; aplicar reversão do commit ZE09 quando criado em trabalho limpo, preservando `.env`, `new_interface/` e `src/planos/`. Não executar reset/clean destrutivo. A atividade futura ZE-03-REWORK pósZE09 está distinta do histórico já concluído e precede ZE10 na fila; nenhuma iniciada.
+
+
+## Retomada com links do proprietário
+2026-10-23 — ZE-09 retomada com links públicos fornecidos pelo proprietário: search lrd CID0x14e35d89087019ae ação3 e share.google/3PlTHI5FF8L4JCmS0 cujo redirecionamento kgmid/g/11zxzxp9sv corresponde à ficha encontrada. CTAs públicos independentes de OAuth implementados; fragmento de escrita preservado. Browser Google retornou desafio anti-bot, sem contorno; fluxo final manual continua PENDING. Fonte/nota/total/reviews reais ainda dependem OAuth/projeto aprovado. WAITING_USER_ACTION mantido; sem produção/custos/ZE10/rework.

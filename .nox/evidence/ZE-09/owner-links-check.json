@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "write",
+    "initial": "https://www.google.com/search?q=zelo+auto+est%C3%A9tica&ie=UTF-8#lrd=0x94a667c8105c5275:0x14e35d89087019ae,3,,,,",
+    "finalHost": "www.google.com",
+    "challenge": true,
+    "identityMatches": "Known business CID 0x14e35d89087019ae",
+    "reviewFlow": "PENDING: Google anti-bot challenge; no bypass/login/publication"
+  },
+  {
+    "kind": "share",
+    "initial": "https://share.google/3PlTHI5FF8L4JCmS0",
+    "finalHost": "www.google.com",
+    "challenge": true,
+    "identityMatches": "Redirect kgmid /g/11zxzxp9sv matches discovered business",
+    "reviewFlow": "PENDING: Google anti-bot challenge; no bypass/login/publication"
+  }
+]

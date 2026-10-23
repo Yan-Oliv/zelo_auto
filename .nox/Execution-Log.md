@@ -113,3 +113,7 @@ ZE-06 scoped local commit recorded: 3e2ea2b - feat(instagram): secure feed and h
 
 
 2026-10-23 — ZE-09 WAITING_USER_ACTION após todo trabalho interno: adaptador GBP OAuth/Pages+Vite, hook lazy, CTAs oficiais condicionais, analytics view/write; API10 e UI18 grupos determinísticos PASS, seis viewports MOCK e indisponível real, build/lint PASS (6 warnings legados), revisão Nox estrutural PASS com limites. Ficha pública identificada por nome/site/telefone/cidade, endereço número1485/propriedade/verificação/OAuth/API autorizada e reviews/nota/total/link compartilhável real PENDING. Lighthouse mobile baseline91/final91 após repetição (amostra89 registrada), CLS0; contraste legado97 a11y mantido. Configuração local Google ausente; seguir .nox/ZE-09-Google-Handoff.md. Sem custo/Places/deploy/push; ZE-03-REWORK pósZE09 próxima, ZE10+ bloqueadas, não executadas.
+
+
+## Retomada com links do proprietário
+2026-10-23 — ZE-09 retomada com links públicos fornecidos pelo proprietário: search lrd CID0x14e35d89087019ae ação3 e share.google/3PlTHI5FF8L4JCmS0 cujo redirecionamento kgmid/g/11zxzxp9sv corresponde à ficha encontrada. CTAs públicos independentes de OAuth implementados; fragmento de escrita preservado. Browser Google retornou desafio anti-bot, sem contorno; fluxo final manual continua PENDING. Fonte/nota/total/reviews reais ainda dependem OAuth/projeto aprovado. WAITING_USER_ACTION mantido; sem produção/custos/ZE10/rework.

@@ -117,3 +117,7 @@ Exatamente duas entregas: (1) GA4 G-E9SKGKCQXX, consentimento b?sico e eventos c
 
 ## ZE-09 — Contrato vigente 2026-10-23
 Duas entregas: fonte oficial GBP e fluxo oficial de avaliação. Implementação local não fecha sprint: exige reviews/nota/total autênticos, perfil autorizado e dois destinos homologados. Estado WAITING_USER_ACTION; mocks só lógica/layout, nunca aceite real. Sem Places/custos/deploy/ZE10/hero rework. Próxima ZE-03-REWORK pósZE09 distinta do histórico concluído. Ver ZE-09-Report.md e ZE-09-Google-Handoff.md.
+
+
+## Retomada com links do proprietário
+2026-10-23 — ZE-09 retomada com links públicos fornecidos pelo proprietário: search lrd CID0x14e35d89087019ae ação3 e share.google/3PlTHI5FF8L4JCmS0 cujo redirecionamento kgmid/g/11zxzxp9sv corresponde à ficha encontrada. CTAs públicos independentes de OAuth implementados; fragmento de escrita preservado. Browser Google retornou desafio anti-bot, sem contorno; fluxo final manual continua PENDING. Fonte/nota/total/reviews reais ainda dependem OAuth/projeto aprovado. WAITING_USER_ACTION mantido; sem produção/custos/ZE10/rework.
