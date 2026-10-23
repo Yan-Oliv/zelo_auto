@@ -7,9 +7,6 @@ import vintexLogo from '@assets/produtos/vintex.png'
 import vonixxLogo from '@assets/produtos/vonixx.png'
 import zacsLogo from '@assets/produtos/zacs.jpg'
 
-const dirtyCarImage = '/models/lincoln-dirty-preview.png'
-const civicImage =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn'
 
 export const siteConfig = {
   horizontalLogo,
@@ -17,7 +14,6 @@ export const siteConfig = {
   mainLogo,
   instagramHandle: '@zelo_autoestetica',
   instagramLink: 'https://www.instagram.com/zelo_autoestetica/',
-  instagramFeedEndpoint: import.meta.env.VITE_INSTAGRAM_FEED_ENDPOINT?.trim() || null,
   whatsappLink:
     'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
 }
@@ -105,78 +101,6 @@ export const productBrands: CarouselLogoItem[] = [
 export const partnerLogos: CarouselLogoItem[] = [
   { name: 'OmnyaTech', logo: omnyatechLogo, style: 'partner' },
   { name: 'SKG', logo: skgLogo, style: 'partner' },
-]
-
-export const instagramPosts = [
-  {
-    id: '1',
-    image: dirtyCarImage,
-    alt: 'Ve\u00edculo coberto por barro passando por processo de lavagem detalhada.',
-    postUrl: siteConfig.instagramLink,
-    className: 'object-center',
-  },
-  {
-    id: '2',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA1HTNZKOKjt0KDg5Dwausnlxr8ksomaohZ6yZbgTk-34b0uA78a_cKKQgpcjSVxMwRabnlZ3QXlm08MlbfrNhoxxsLNGmM-6KB3as0MS-KTO9iLOwf3Su0gFJBk-60bnUTH-boIDyi0-wT5VGSCishbKai--gyLdm0eA2cfPmUVGdC3U99NV9EJwR_B4-UuqyYgcAHxh20ix1C-n7GKK3TOfXQmD8qXpfj1IBwTu7fRDcOgxXVBbNy',
-    alt: 'Cap\u00f4 com reflexos intensos de est\u00fadio, evidenciando acabamento premium.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '3',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDztBSxGjlhXIkkhz59RmnBdp0i4hPEJBvS0WqE387G22d-FJpIH8fP1Jlt13nHwusSCiUYkCWAPfeqkJpChico6TjyuQgifv3PfW8vkhQd1LxjYbZHaUUW2Tsiy3LMm8BVNLu0mqX-mOYoCWFOA-KDQkTGK4HxULQfj0NLCqQCIxI-Vp9UL-RUx-OQTWwSAyYZ4cYhz_hNaF6RT4Ek0eMuHR72pkfPiUgsIQqh7LPNk7ojDidD92jp',
-    alt: 'Interior limpo com foco em bancos e painel revitalizados.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '4',
-    image: civicImage,
-    alt: 'Honda Civic preto com acabamento brilhante visto de cima.',
-    postUrl: siteConfig.instagramLink,
-    className: 'object-top',
-  },
-  {
-    id: '5',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDPQZhI285JZ7CTdD8udbP3mYvCT2FtlBacmbdvC19hQ2-aEK5lTRXIHtjSLMKTWcwh6zOiiJpg8C596zGB8cU4Ax4TczeiGTsxraHmXMoYLqry-n3ZbiGA0znq_ZN2LAg0MYXhRIxHV3V7zSf6WL4UZylzzYngCTy7w3QKdmht6pQuldp64be3GMQsDs3OYYgkQ99ycE673QTk_Hws0uUEuxjew7XQfWCtzkiN_2WKhEby7rWjIITN',
-    alt: 'Roda met\u00e1lica detalhada com acabamento limpo e contraste alto.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '6',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA_V3G6ehvDBm0uIZ8RUtOOL9iLyz_XdlcUK8cCmYmwN2I5fFFrZzwU2Bb2fUWcyGyMAcK8BtTgSJ3UNU0o0PsFZoVEPHK3QVfMWXIwwrHopDLqdNje7OuZI840IsnytwHkIf3gVVYrPNCv_6L4nPQ06LYK21vA0s14xzPHKpR8Uosz7RQlSNJ3eZ6W7gyVaW28GFL4cxdmfkksF3xQNNmRAus-Ubp8RxitaQNOzc3g-w_6FIK2X8EZ',
-    alt: 'Produtos de est\u00e9tica automotiva organizados em bancada premium.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '7',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD3iRQJDqfbBxBAbBhAnL-i5xxsPGNObgoVZ1o_4W1odulUeCZuPQbQp8_76nogUXZMzVK5h26Nkoci-MR45mrVvr-xZtBl771qNKam8PLxQkozUzSrqyMKHD8lLo7a5cTPnNCW8KTPxjI2-yRAgBe34FqIpOZW4-Wj1LtIuCncYcmJ8X1EehCcuFvSaqtu7-bhIpGEYA93uEnsdzNnkdPMhmKWuVBCHJpt2h9h9nJPjM8eOSHH87rF',
-    alt: 'Lavagem t\u00e9cnica de carro cl\u00e1ssico em ambiente escuro e controlado.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '8',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAGaVGiUPz11VGe2kkbd_IK_zXuxMPSsYrWU-GuINiWdW_iEhOkRzev0U_NkwRcWPwOKOOg50_Fmo5BmnHnt3mlRoJQClFWK_mq9yhvZznKHTwB2otwrFuq-qrg3ZqNOOJqQ9PV4zB8LRnyxNVwQwoONwr-Nmzw3tj00C0BQJdmEsOU7R_MOKfxRup5m-rQ94aqUfU1JqctxjvOwhpoVnSoXlCehQAYGJ3sbosoQCVfRIzdVxvi7RWn',
-    alt: 'Carro azul com pintura refletiva e sem marcas de swirl.',
-    postUrl: siteConfig.instagramLink,
-    className: '',
-  },
-  {
-    id: '9',
-    image: civicImage,
-    alt: 'Carro com acabamento refinado em enquadramento superior.',
-    postUrl: siteConfig.instagramLink,
-    className: 'object-center',
-  },
 ]
 
 export const locationInfo = {

@@ -1,19 +1,19 @@
-﻿import type { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
-import { instagramPosts, locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
+import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, Film, Images, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
+import { locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
 import { useInstagramFeed, type InstagramFeedPost } from '../../hooks/useInstagramFeed'
 import { NearImage } from './NearImage'
 import './CommunityContact.css'
 
 const editorialPosts: InstagramFeedPost[] = [
-  { id: 'editorial-wash', image: '/editorial/service-wash.webp', alt: 'Imagem editorial de cuidado com a pintura automotiva.', postUrl: siteConfig.instagramLink, className: '' },
-  { id: 'editorial-interior', image: '/editorial/service-interior.webp', alt: 'Imagem editorial de detalhamento do interior de um veículo.', postUrl: siteConfig.instagramLink, className: '' },
-  { id: 'editorial-seats', image: '/editorial/service-seats.webp', alt: 'Imagem editorial de cuidado com os bancos.', postUrl: siteConfig.instagramLink, className: '' },
-  { id: 'editorial-carpet', image: '/editorial/service-carpet.webp', alt: 'Imagem editorial de higienização de carpete automotivo.', postUrl: siteConfig.instagramLink, className: '' },
-  { id: 'editorial-detail', image: '/editorial/process-detail.webp', alt: 'Imagem editorial de acabamento automotivo.', postUrl: siteConfig.instagramLink, className: '' },
-  { id: 'editorial-delivery', image: '/editorial/process-delivery.webp', alt: 'Imagem editorial de um veículo com acabamento detalhado.', postUrl: siteConfig.instagramLink, className: '' },
+  { id: 'editorial-wash', image: '/editorial/service-wash.webp', alt: 'Imagem editorial de cuidado com a pintura automotiva.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
+  { id: 'editorial-interior', image: '/editorial/service-interior.webp', alt: 'Imagem editorial de detalhamento do interior de um veículo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
+  { id: 'editorial-seats', image: '/editorial/service-seats.webp', alt: 'Imagem editorial de cuidado com os bancos.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
+  { id: 'editorial-carpet', image: '/editorial/service-carpet.webp', alt: 'Imagem editorial de higienização de carpete automotivo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
+  { id: 'editorial-detail', image: '/editorial/process-detail.webp', alt: 'Imagem editorial de acabamento automotivo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
+  { id: 'editorial-delivery', image: '/editorial/process-delivery.webp', alt: 'Imagem editorial de um veículo com acabamento detalhado.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
 ]
 
 function CommunityReveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
@@ -25,14 +25,31 @@ function CommunityEyebrow({ children }: { children: ReactNode }) {
   return <p className="ze4-community-eyebrow">{children}<span aria-hidden="true" /></p>
 }
 
+function InstagramTile({ post, official }: { post: InstagramFeedPost; official: boolean }) {
+  const [imageFailed, setImageFailed] = useState(false)
+  const MediaIcon = post.mediaType === 'VIDEO' ? Film : post.mediaType === 'CAROUSEL_ALBUM' ? Images : Camera
+  return <a key={post.id} href={official && !imageFailed ? post.postUrl : siteConfig.instagramLink} target="_blank" rel="noopener noreferrer" className={`ze4-instagram-tile${imageFailed ? ' is-image-failed' : ''}`} aria-label={official && !imageFailed ? `Abrir publicação no Instagram: ${post.alt}` : 'Abrir perfil oficial da Zelo no Instagram'}>
+    {!imageFailed ? <NearImage src={post.image} alt={official ? post.alt : `Imagem ilustrativa: ${post.alt}`} width={520} height={520} loading="lazy" decoding="async" className={post.className} onError={() => setImageFailed(true)} /> : <span className="ze4-instagram-image-fallback"><Camera size={30} aria-hidden="true" /><span>Imagem indisponível</span><small>Abrir perfil oficial</small></span>}
+    {official && !imageFailed && <MediaIcon className="ze4-instagram-media-icon" size={21} aria-label={post.mediaType === 'VIDEO' ? 'Vídeo' : post.mediaType === 'CAROUSEL_ALBUM' ? 'Carrossel' : 'Foto'} />}
+    <span className="ze4-instagram-hover" aria-hidden="true"><Camera size={27} /><span>{official ? 'Abrir publicação' : 'Abrir perfil oficial'}</span></span>
+  </a>
+}
+
 function InstagramSection() {
-  const { posts, loading, error, configured } = useInstagramFeed()
-  // The existing hook deliberately falls back to demo posts. Keep its integration,
-  // but never describe those placeholders as current official publications.
-  const isLegacyFallback = posts === instagramPosts || posts.every((post) => instagramPosts.some((demo) => demo.id === post.id && demo.image === post.image))
-  const hasOfficialPosts = configured && !error && !loading && posts.length > 0 && !isLegacyFallback
-  const visiblePosts = hasOfficialPosts ? posts.slice(0, 6) : editorialPosts
-  const status = loading ? 'Carregando publicações do perfil oficial…' : error ? 'As publicações estão indisponíveis no momento. Acompanhe o perfil oficial.' : configured && !hasOfficialPosts ? 'Nenhuma publicação disponível aqui no momento. Visite o perfil oficial.' : !configured ? 'Publicações atuais disponíveis no perfil oficial.' : 'Publicações do perfil oficial.'
+  const { posts, status, error, source } = useInstagramFeed()
+  const officialPosts = status === 'official' ? posts.slice(0, 6) : []
+  const illustrativeFill = status === 'loading' ? [] : editorialPosts.slice(0, Math.max(0, 6 - officialPosts.length))
+  const tiles = [
+    ...officialPosts.map((post) => ({ post, official: true })),
+    ...illustrativeFill.map((post) => ({ post, official: false })),
+  ]
+  const statusMessage = status === 'loading'
+    ? 'Carregando publicações do perfil oficial…'
+    : status === 'official'
+      ? 'Publicações atuais do perfil oficial.'
+      : status === 'empty'
+        ? 'O perfil não tem publicações disponíveis para exibir agora.'
+        : error ?? 'Publicações indisponíveis no momento.'
 
   return <section id="instagram" className="ze4-instagram" aria-labelledby="ze4-instagram-title">
     <CommunityReveal>
@@ -41,14 +58,12 @@ function InstagramSection() {
       <p className="ze4-community-description">Bastidores e cuidado em cada detalhe. Acompanhe de perto a rotina da Zelo e converse com a nossa equipe.</p>
     </CommunityReveal>
     <CommunityReveal className="ze4-instagram-gallery" delay={0.08}>
-      <div className="ze4-instagram-grid" aria-busy={loading} data-feed-source={hasOfficialPosts ? 'official' : 'editorial'}>
-        {visiblePosts.map((post) => <a key={post.id} href={post.postUrl || siteConfig.instagramLink} target="_blank" rel="noopener noreferrer" className="ze4-instagram-tile" aria-label={hasOfficialPosts ? `Abrir publicação no Instagram: ${post.alt}` : `Abrir perfil oficial da Zelo — ${post.alt}`}>
-          <NearImage src={post.image} alt={post.alt} width={520} height={520} loading="lazy" decoding="async" className={post.className} />
-          <Camera className="ze4-instagram-media-icon" size={21} aria-hidden="true" />
-          <span className="ze4-instagram-hover" aria-hidden="true"><Camera size={27} /><span>Abrir Instagram</span></span>
-        </a>)}
+      <div className="ze4-instagram-grid" aria-busy={status === 'loading'} aria-describedby="ze4-instagram-status" data-feed-source={status === 'official' ? source : 'editorial'}>
+        {status === 'loading'
+          ? Array.from({ length: 6 }, (_, index) => <div key={index} className="ze4-instagram-skeleton" aria-hidden="true" />)
+          : tiles.map(({ post, official }) => <InstagramTile key={post.id} post={post} official={official} />)}
       </div>
-      <p className="ze4-feed-caption" aria-live="polite">{!hasOfficialPosts && <strong>Galeria ilustrativa. </strong>}{status}</p>
+      <p id="ze4-instagram-status" className="ze4-feed-caption" aria-live="polite">{(status === 'empty' || status === 'unavailable') && <strong>Galeria ilustrativa. </strong>}{statusMessage}{status === 'official' && officialPosts.length < 6 && ' As demais imagens são ilustrativas.'}</p>
     </CommunityReveal>
     <CommunityReveal className="ze4-instagram-actions" delay={0.12}>
       <a className="ze4-button" href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer"><Camera size={22} aria-hidden="true" /><span>VER NOSSO INSTAGRAM</span><ArrowRight size={21} aria-hidden="true" /></a>
@@ -56,7 +71,6 @@ function InstagramSection() {
     </CommunityReveal>
   </section>
 }
-
 export type VerifiedGoogleReview = {
   id: string
   author: string

@@ -46,9 +46,10 @@ Visual aprovado: Audi/AURA-MOTION + identidade Zelo (branco, dourado). Avaliaç�
 
 - **Entregas (2):** 1) Corrigir backend e credenciais de integração; 2) Exibir feed autêntico e fallback confiável.
 - **Estado atual:** Pages Function /api/instagram-feed retorna HTTP 400; fallback usa imagens estáticas.
-- **Estado esperado:** Posts reais quando permissões oficiais funcionarem e fallback honesto quando indisponível.
-- **Critério de aceite:** Permalinks reais, API segura, tokens somente servidor e erros observáveis.
-- **Melhor caminho:** Revisar Graph API, Cloudflare Secrets e hook do React com cache/timeout.
+- **Estado após ZE-06 local:** End-to-end handler e UI implementados; mock QA PASS; live feed awaits owner-issued Instagram Login authorization. Public endpoint returned HTTP 400, OAuthException code 190 (sanitized); token issuer/account compatibility remains unknown.
+- **Critério de aceite:** Local behavior, normalization, cache/error security, exact post permalinks, honest fallback and responsive/accessibility QA PASS. Real permalink feed remains pending until owner provisions valid Instagram Login credentials and matching numeric account ID as server-only Cloudflare variables.
+- **Owner action:** Complete Meta's official Instagram Login authorization with `instagram_business_basic`, confirm the professional account's numeric Instagram user ID, and add `INSTAGRAM_API_MODE=instagram-login`, `INSTAGRAM_GRAPH_USER_ID`, and `INSTAGRAM_ACCESS_TOKEN` to Pages server-side variables. Do not send token through chat. If the token uses Facebook Login, explicitly resolve app/flow choice first; ZE-06 implementation deliberately fails closed instead of guessing.
+- **Boundaries:** Production unchanged, no deploy/push, no Google Reviews changes, ZE-07+ remain queued.
 
 ## ZE-07 — SEO técnico local
 

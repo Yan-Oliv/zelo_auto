@@ -279,3 +279,11 @@
   .ze4-footer-brand p { font-size: 14px; }
   .ze4-footer-bottom { font-size: 12px; }
 }
+.ze4-instagram-image-fallback { display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #e6dccb; background: linear-gradient(145deg, #292722, #45413a); font-size: 11px; text-align: center; }
+.ze4-instagram-image-fallback small { color: #c8b48e; font-size: 9px; }
+.ze4-instagram-tile.is-image-failed:hover > .ze4-instagram-image-fallback, .ze4-instagram-tile.is-image-failed:focus-visible > .ze4-instagram-image-fallback { transform: none; }
+
+
+.ze4-instagram-skeleton { aspect-ratio: 1; border-radius: 8px; background: linear-gradient(100deg, #e9e5de 25%, #f4f1ec 45%, #e9e5de 65%); background-size: 220% 100%; animation: ze4-instagram-loading 1.4s ease-in-out infinite; }
+@keyframes ze4-instagram-loading { to { background-position-x: -220%; } }
+@media (prefers-reduced-motion: reduce) { .ze4-instagram-skeleton { animation: none; } }

@@ -1,181 +1,85 @@
 import { useEffect, useState } from 'react'
-import { instagramPosts, siteConfig } from '../data/site'
 
 export type InstagramFeedPost = {
   id: string
   image: string
   alt: string
   postUrl: string
+  mediaType: 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM'
   className: string
 }
 
-type RawInstagramPost = {
-  id?: string
-  caption?: string
-  media_url?: string
-  mediaUrl?: string
-  thumbnail_url?: string
-  thumbnailUrl?: string
-  permalink?: string
-  postUrl?: string
-  media_type?: string
-  mediaType?: string
-  children?: {
-    data?: RawInstagramChild[]
-  }
-}
-
-type RawInstagramChild = {
-  id?: string
-  media_url?: string
-  mediaUrl?: string
-  thumbnail_url?: string
-  thumbnailUrl?: string
-  media_type?: string
-  mediaType?: string
-}
+export type InstagramFeedStatus = 'loading' | 'official' | 'empty' | 'unavailable'
 
 type FeedResponse = {
   data?: unknown
-  error?: {
-    message?: string
-  }
-}
-
-function getMediaType(mediaType?: string) {
-  return mediaType?.toUpperCase()
-}
-
-function getDisplayImage(media: {
-  media_url?: string
-  mediaUrl?: string
-  thumbnail_url?: string
-  thumbnailUrl?: string
-  media_type?: string
-  mediaType?: string
-}) {
-  const mediaType = getMediaType(media.media_type ?? media.mediaType)
-  const mediaUrl = media.media_url ?? media.mediaUrl ?? ''
-  const thumbnailUrl = media.thumbnail_url ?? media.thumbnailUrl ?? ''
-
-  if (mediaType === 'VIDEO') {
-    return thumbnailUrl || mediaUrl
-  }
-
-  return mediaUrl || thumbnailUrl
+  error?: { category?: string; message?: string }
 }
 
 function normalizePosts(payload: unknown): InstagramFeedPost[] {
-  const rawItems = Array.isArray(payload)
-    ? payload
-    : typeof payload === 'object' && payload !== null && 'data' in payload
-      ? (payload as FeedResponse).data
-      : []
+  if (typeof payload !== 'object' || payload === null || !('data' in payload)) return []
+  const data = (payload as FeedResponse).data
+  if (!Array.isArray(data)) return []
 
-  if (!Array.isArray(rawItems)) {
-    return []
-  }
+  return data.flatMap((value): InstagramFeedPost[] => {
+    if (typeof value !== 'object' || value === null) return []
+    const post = value as Record<string, unknown>
+    const id = typeof post.id === 'string' ? post.id : ''
+    const mediaType = typeof post.media_type === 'string' ? post.media_type.toUpperCase() : ''
+    const image = typeof post.media_url === 'string' ? post.media_url : ''
+    const postUrl = typeof post.permalink === 'string' ? post.permalink : ''
+    if (!id || !image || !['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM'].includes(mediaType)) return []
 
-  return rawItems
-    .flatMap((item, index) => {
-      const post = item as RawInstagramPost
-      const postUrl = post.permalink ?? post.postUrl ?? siteConfig.instagramLink
-      const alt = post.caption?.slice(0, 140) ?? `Post ${index + 1} da Zelo no Instagram.`
-      const parentMediaType = getMediaType(post.media_type ?? post.mediaType)
-      const parentImage = getDisplayImage(post)
-      const children = post.children?.data ?? []
-      const childTiles = children
-        .map((childPost, childIndex) => {
-          const childMediaType = getMediaType(childPost.media_type ?? childPost.mediaType)
-          const childImage = getDisplayImage(childPost)
+    try {
+      const mediaUrl = new URL(image)
+      const permalink = new URL(postUrl)
+      if (mediaUrl.protocol !== 'https:' || mediaUrl.username || mediaUrl.password) return []
+      if (permalink.protocol !== 'https:' || !['instagram.com', 'www.instagram.com'].includes(permalink.hostname)) return []
+    } catch {
+      return []
+    }
 
-          if (!childImage) {
-            return null
-          }
-
-          return {
-            id: `${post.id ?? `instagram-post-${index}`}-${childPost.id ?? childIndex}`,
-            image: childImage,
-            alt,
-            postUrl,
-            className: childMediaType === 'VIDEO' ? 'object-center' : '',
-          }
-        })
-        .filter((childPost): childPost is InstagramFeedPost => childPost !== null)
-
-      if (parentMediaType === 'CAROUSEL_ALBUM' && childTiles.length > 0) {
-        return childTiles
-      }
-
-      if (!parentImage) {
-        return childTiles
-      }
-
-      return {
-        id: post.id ?? `instagram-post-${index}`,
-        image: parentImage,
-        alt,
-        postUrl,
-        className: parentMediaType === 'VIDEO' ? 'object-center' : '',
-      }
-    })
-    .slice(0, 9)
+    const caption = typeof post.caption === 'string' ? post.caption.trim() : ''
+    return [{
+      id,
+      image,
+      alt: caption ? caption.slice(0, 140) : `Publicação da Zelo no Instagram (${mediaType.toLowerCase()}).`,
+      postUrl,
+      mediaType: mediaType as InstagramFeedPost['mediaType'],
+      className: mediaType === 'VIDEO' ? 'object-center' : '',
+    }]
+  }).slice(0, 6)
 }
 
 export function useInstagramFeed() {
-  const feedUrl = siteConfig.instagramFeedEndpoint
-  const [posts, setPosts] = useState<InstagramFeedPost[]>(instagramPosts)
-  const [loading, setLoading] = useState(false)
+  const [posts, setPosts] = useState<InstagramFeedPost[]>([])
+  const [status, setStatus] = useState<InstagramFeedStatus>('loading')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!feedUrl) {
-      setPosts(instagramPosts)
-      setLoading(false)
-      setError(null)
-      return
-    }
-
-    const currentFeedUrl = feedUrl
     const controller = new AbortController()
-
     async function loadFeed() {
-      setLoading(true)
+      setStatus('loading')
       setError(null)
-
       try {
-        const response = await fetch(currentFeedUrl, { signal: controller.signal })
-        const payload = (await response.json()) as FeedResponse
-
-        if (!response.ok) {
-          throw new Error(payload.error?.message ?? `Instagram feed returned ${response.status}`)
-        }
-
+        const response = await fetch('/api/instagram-feed', { signal: controller.signal, headers: { accept: 'application/json' } })
+        const payload = await response.json() as FeedResponse
+        if (!response.ok) throw new Error(payload.error?.message ?? 'Publicações indisponíveis no momento.')
         const normalizedPosts = normalizePosts(payload)
-        setPosts(normalizedPosts.length > 0 ? normalizedPosts : instagramPosts)
+        setPosts(normalizedPosts)
+        setStatus(normalizedPosts.length > 0 ? 'official' : 'empty')
       } catch (feedError) {
         if (!controller.signal.aborted) {
-          setPosts(instagramPosts)
-          setError(feedError instanceof Error ? feedError.message : 'Instagram feed unavailable')
-        }
-      } finally {
-        if (!controller.signal.aborted) {
-          setLoading(false)
+          setPosts([])
+          setStatus('unavailable')
+          setError(feedError instanceof Error ? feedError.message : 'Publicações indisponíveis no momento.')
         }
       }
     }
 
     void loadFeed()
+    return () => controller.abort()
+  }, [])
 
-    return () => {
-      controller.abort()
-    }
-  }, [feedUrl])
-
-  return {
-    posts,
-    loading,
-    error,
-    configured: Boolean(feedUrl),
-  }
+  return { posts, status, error, source: 'instagram-login' as const }
 }

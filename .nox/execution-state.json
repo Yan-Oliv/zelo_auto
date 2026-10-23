@@ -1,16 +1,16 @@
-﻿{
+{
     "schemaVersion":  1,
     "project":  "zelo_autoestica",
-    "status":  "COMPLETED",
-    "currentSprint":  "ZE-05",
-    "currentStep":  null,
+    "status":  "WAITING_USER_ACTION",
+    "currentSprint":  "ZE-06",
+    "currentStep":  "Owner Instagram Login authorization",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
-    "stopReason":  null,
-    "nextAction":  "ZE-05 technical objective complete; ZE-06 remains QUEUED and requires its own authorization.",
+    "stopReason":  "WAITING_USER_ACTION",
+    "nextAction":  "Owner to complete official Instagram Login authorization, confirm numeric account ID, and set server-only Pages variables; then re-run real feed verification.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -328,9 +328,48 @@
                     {
                         "id":  "ZE-06",
                         "title":  "Instagram funcional",
-                        "status":  "QUEUED",
+                        "status":  "WAITING_USER_ACTION",
                         "criteria":  [
-
+                                         {
+                                             "evidence":  [
+                                                              "Public endpoint: HTTP 400, OAuthException code 190; sanitized diagnosis documented in ZE-06-Report.md"
+                                                          ],
+                                             "status":  "PENDING",
+                                             "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
+                                             "id":  "ZE-06-C01",
+                                             "required":  true
+                                         },
+                                         {
+                                             "evidence":  [
+                                                              "functions/api/_instagram-feed.test.mjs",
+                                                              "evidence/ze06-qa-2026-10-23/api-edge-cases.mjs",
+                                                              "ZE-06-Report.md"
+                                                          ],
+                                             "status":  "PASS",
+                                             "description":  "Secure resilient normalized API behavior with cache, errors, and official media handling",
+                                             "id":  "ZE-06-C02",
+                                             "required":  true
+                                         },
+                                         {
+                                             "evidence":  [
+                                                              "evidence/ze06-qa-2026-10-23/playwright-report.json",
+                                                              "evidence/ze06-qa-2026-10-23/success-desktop.png",
+                                                              "evidence/ze06-qa-2026-10-23/broken-media.png"
+                                                          ],
+                                             "status":  "PASS",
+                                             "description":  "Preserve the approved Instagram grid with honest states, accessibility, and responsive behavior",
+                                             "id":  "ZE-06-C03",
+                                             "required":  true
+                                         },
+                                         {
+                                             "evidence":  [
+                                                              "Build, lint, API/UI QA pass; final scoped commit and reconciliation pending"
+                                                          ],
+                                             "status":  "PENDING",
+                                             "description":  "Build, lint, API/E2E, visual/performance regression, review, docs, and scoped local commit",
+                                             "id":  "ZE-06-C04",
+                                             "required":  true
+                                         }
                                      ]
                     },
                     {
