@@ -1,16 +1,16 @@
 {
     "schemaVersion":  1,
     "project":  "zelo_autoestica",
-    "status":  "WAITING_USER_ACTION",
-    "currentSprint":  "ZE-06",
-    "currentStep":  "ZE-06 public Instagram feed verification requires an authorized Pages runtime update; ZE-07 remains queued behind the unfinished predecessor",
+    "status":  "CURRENT",
+    "currentSprint":  "ZE-07",
+    "currentStep":  "Execute exactly two authorized SEO technical/local deliveries; phase A audit/preflight is complete",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
-    "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner-approved local gallery validation is recorded, but ZE-06 completion requires public feed verification under the project contract. The public endpoint last returned HTTP 400 / OAuthException 190. Authorize a separate ZE-06 Pages runtime update and public verification; do not deploy ZE-07 or mark ZE-06 complete without evidence.",
+    "stopReason":  null,
+    "nextAction":  "ZE-06 is owner-approved and COMPLETED for its local real-feed scope. Public Pages runtime remains unverified and no deployment was authorized; keep that caveat separate from ZE-07. Begin ZE-07 implementation and validation; do not start ZE-08.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -328,7 +328,7 @@
                     {
                         "id":  "ZE-06",
                         "title":  "Instagram funcional",
-                        "status":  "WAITING_USER_ACTION",
+                        "status":  "COMPLETED",
                         "criteria":  [
                                          {
                                              "evidence":  [
@@ -385,7 +385,7 @@
                     {
                         "id":  "ZE-07",
                         "title":  "SEO tÃ©cnico local",
-                        "status":  "QUEUED",
+                        "status":  "CURRENT",
                         "criteria":  [
 
                                      ]

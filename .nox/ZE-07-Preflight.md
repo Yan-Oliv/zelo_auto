@@ -1,10 +1,10 @@
 # ZE-07 preflight — dependency gate
 
-**State: PREPARATION ONLY; ZE-07 remains QUEUED.** Branch `work/ze-audi-redesign`; baseline commit `abac1a4` was the latest recoverable Git checkpoint before this preflight. No product files were changed. This audit is independent, read-only preparation permitted by the ZE-07 request. The strict predecessor gate remains ZE-06.
+**State: PRELIMINARY AUDIT COMPLETE; ZE-07 is CURRENT under owner clarification, implementation now authorized.** Branch `work/ze-audi-redesign`; baseline commit `abac1a4` was the latest recoverable Git checkpoint before this preflight. No product files were changed. This audit is independent, read-only preparation permitted by the ZE-07 request. The strict predecessor gate remains ZE-06.
 
 ## Nox dependency decision
 
-The current request explicitly says not to mark ZE-06 complete to release ZE-07, and requires the public runtime to be verified. Although the owner approved the local gallery, local API success does not establish the public Pages runtime. The last read-only public Instagram endpoint check was HTTP 400 / OAuthException 190. No Pages deployment is authorized. Therefore ZE-06 is restored to `WAITING_USER_ACTION`; ZE-07 stays `QUEUED` and no ZE-07 implementation starts until the public prerequisite is resolved.
+The owner clarified that ZE-06 was already finalized and approved after the real local feed validation. Nox records ZE-06 COMPLETED for the approved local scope. Public Pages remains unverified (last GET HTTP 400 / OAuthException 190), with no deployment authorized; this limitation is documented separately and does not block the current ZE-07 objective.
 
 ## Read-only repository baseline
 
@@ -24,4 +24,4 @@ The current request explicitly says not to mark ZE-06 complete to release ZE-07,
 
 ## Independent preparation vs blocker
 
-The static SEO files and React content audit do not depend on Instagram feed code. However, Nox's ordered execution map sets ZE-07 dependent on ZE-06, and the active request requires that predecessor be genuinely complete. No source edit, canonical change, robots change, sitemap change, debug routing change, build, deploy, or ZE-08 work was started. Next gate: owner authorization for the separate ZE-06 Pages runtime update and public feed verification, then resume ZE-07.
+The static SEO files and React content audit do not depend on Instagram feed code. However, Nox's ordered execution map sets ZE-07 dependent on ZE-06, and the active request requires that predecessor be genuinely complete. No product source change had been made as of this preflight. ZE-07 implementation is now authorized. Public runtime/deployment remains outside scope; ZE-08 must not start.

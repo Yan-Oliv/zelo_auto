@@ -1,6 +1,6 @@
 # ZE-06 — Instagram funcional (checkpoint)
 
-**Status: WAITING_USER_ACTION — public runtime verification.** The owner visually approved the local gallery, and local real-feed verification, deterministic QA, build, and lint pass. The ZE-07 execution request requires public ZE-06 verification before treating the predecessor as complete. The last public GET returned HTTP 400 / OAuthException 190; a separate ZE-06 runtime update is not authorized.
+**Status: COMPLETED — owner-approved local integration, 2026-10-23.** The owner confirmed ZE-06 was finalized and approved after local visual verification of real Instagram posts. Local API/UI, build, lint, and deterministic QA pass. The public Pages runtime was not deployed or verified (last GET HTTP 400 / OAuthException 190); this production follow-up is explicitly not claimed as passing or changed.
 
 ## Deliveries
 
@@ -35,9 +35,9 @@ The earlier owner-provided Cloudflare screenshot showed VITE-prefixed token/acco
 - Deterministic synthetic timeout maps to sanitized 504/no-store; 403 maps to sanitized authentication 502/no-store; browser requests contain no secret-like markers; built assets contain no `INSTAGRAM_ACCESS_TOKEN`, `VITE_INSTAGRAM`, test markers, or Bearer token strings.
 - Browser, edge-case scripts, JSON reports, mock screenshots, and live-local gallery screenshot: `.nox/evidence/ze06-qa-2026-10-23/`. The live-local screenshot is not committed and contains no captions or displayed permalinks.
 
-Local real Meta integration is verified with six posts and the owner approved the local visual experience. ZE-06 is not marked complete because public runtime verification remains required by the active ZE-07 request: latest public GET was HTTP 400 / OAuthException 190. No production deploy/push was authorized or performed.
+Local real Meta integration is verified with six posts and the owner approved the local visual experience. ZE-06 is completed for the owner-approved local integration scope. Public runtime remains unverified (latest GET HTTP 400 / OAuthException 190); no production deploy/push was authorized or performed.
 
 
 ## Owner acceptance — 2026-10-23
 
-The owner explicitly approved the local Instagram gallery after confirming that posts load correctly. This is local visual approval only. Public Pages behavior remains unverified and the active ZE-07 request requires it before ZE-06 may be marked complete; ZE-07 was not started.
+The owner explicitly approved the local Instagram gallery after confirming that posts load correctly. This is owner acceptance of the local ZE-06 deliverable. Public Pages behavior remains unverified and no deployment occurred; that caveat is separate from the approved local sprint. ZE-07 is now authorized and CURRENT.
