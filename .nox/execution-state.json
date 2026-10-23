@@ -3,14 +3,14 @@
     "project":  "zelo_autoestica",
     "status":  "WAITING_USER_ACTION",
     "currentSprint":  "ZE-06",
-    "currentStep":  "Owner Cloudflare Pages secret propagation and public endpoint verification",
+    "currentStep":  "Await owner confirmation of current Pages server-side variable names/runtime and public feed verification",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner to revoke/rotate the token exposed in chat, configure fresh server-only INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_GRAPH_USER_ID names, then explicitly authorize a production update and verify the public endpoint; Nox must not deploy or change production.",
+    "nextAction":  "Owner confirms current server-only variable names and whether Pages runtime needs refresh; latest public GET after the reported update returned HTTP 400 / OAuthException 190. Do not request or record credential values; no production mutation or deployment was made.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -334,7 +334,7 @@
                                              "evidence":  [
                                                               "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
                                                               "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
-                                                              "Public GET: HTTP 400 after Meta session invalidation; Cloudflare screenshot has only VITE_ token/account names, mismatching server function; rotate exposed token and configure correct server-only names"
+                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Earlier screenshot may be stale; current production variable names/runtime not inspected. Owner to confirm current server-only names/runtime. No credentials recorded; no production mutation/deploy."
                                                           ],
                                              "status":  "PASS",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
