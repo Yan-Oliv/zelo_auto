@@ -1,0 +1,67 @@
+import { chromium } from 'playwright'
+import { readFile, writeFile, mkdir } from 'node:fs/promises'
+import assert from 'node:assert/strict'
+const base='http://127.0.0.1:4175'
+const out='.nox/evidence/ZE-07'
+await mkdir(out,{recursive:true})
+const html=await (await fetch(base)).text()
+assert.equal((html.match(/rel="canonical"/g)||[]).length,1)
+assert.match(html,/rel="canonical" href="https:\/\/zelo\.omnyatech\.com\.br\/"/)
+assert.match(html,/property="og:url" content="https:\/\/zelo\.omnyatech\.com\.br\/"/)
+assert.match(html,/name="twitter:image"/)
+const jsonld=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])
+assert.equal(jsonld['@type'],'AutoWash'); assert.equal(jsonld.url,'https://zelo.omnyatech.com.br/')
+assert.equal(jsonld.telephone,'+5564996161968'); assert.equal(jsonld.openingHoursSpecification.length,2)
+assert.equal(jsonld.hasOfferCatalog.itemListElement.length,4)
+const socialImage=await fetch(base+'/og/zelo-estetica-automotiva-catalao.jpg')
+assert.equal(socialImage.status,200); assert.match(socialImage.headers.get('content-type'),/image\/jpeg/)
+const sitemap=await (await fetch(base+'/sitemap.xml')).text()
+assert.match(sitemap,/<loc>https:\/\/zelo\.omnyatech\.com\.br\/<\/loc>/)
+assert.doesNotMatch(sitemap,/pages\.dev|debug-|instagram-feed|lastmod|changefreq|priority/)
+const robots=await (await fetch(base+'/robots.txt')).text()
+assert.match(robots,/Sitemap: https:\/\/zelo\.omnyatech\.com\.br\/sitemap\.xml/)
+const browser=await chromium.launch({headless:true})
+const sizes=[['ultrawide',1920,1080],['desktop',1440,900],['notebook',1366,768],['tablet',768,1024],['mobile',390,844],['mobile-compact',360,740]]
+const result={metadata:'PASS',jsonld:'PASS',sitemap:'PASS',robots:'PASS',viewports:[],debug:[]}
+for(const [name,width,height] of sizes){
+ const page=await browser.newPage({viewport:{width,height}, reducedMotion:'reduce'})
+ const pageErrors=[]; page.on('pageerror',e=>pageErrors.push(e.message))
+ await page.goto(base,{waitUntil:'networkidle'})
+ const measure=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,innerWidth,hero:!!document.querySelector('#hero'),title:document.title,images:[...document.images].filter(i=>i.complete&&!i.naturalWidth).map(i=>i.src)}))
+ assert.equal(measure.scrollWidth,measure.innerWidth,`${name} horizontal overflow`)
+ assert.equal(measure.hero,true)
+ assert.deepEqual(measure.images,[])
+ if(pageErrors.length) throw new Error(`${name}: ${pageErrors.join('; ')}`)
+ await page.screenshot({path:`${out}/${name}.png`,fullPage:true,animations:'disabled'})
+ result.viewports.push({name,width,height,overflow:false,brokenImages:0,consoleErrors:pageErrors.length})
+ await page.close()
+}
+for(const route of ['/debug-model','/debug-crossfade']){
+ const page=await browser.newPage()
+ await page.goto(base+route,{waitUntil:'networkidle'})
+ const robots=await page.locator('meta[name="robots"]').getAttribute('content')
+ assert.match(robots,/noindex/)
+ result.debug.push({route,robots})
+ await page.close()
+}
+const page=await browser.newPage({viewport:{width:1440,height:900}})
+await page.goto(base,{waitUntil:'networkidle'})
+await page.getByRole('button',{name:'Buscar no site'}).click()
+const search=page.getByPlaceholder('Serviços, localização, contato…')
+await search.fill('lavagem')
+assert.equal(await page.getByRole('region',{name:'Busca no site'}).getByRole('link',{name:/Lavagem Completa/}).count(),1)
+await page.getByRole('button',{name:'Fechar busca'}).click()
+await page.getByLabel('Navegação principal').getByRole('link',{name:'Serviços'}).click()
+assert.equal(new URL(page.url()).hash,'#servicos')
+assert.equal(await page.locator('input[type="range"]').count(),3)
+await page.locator('input[type="range"]').first().fill('25')
+assert.equal(await page.locator('input[type="range"]').first().inputValue(),'25')
+await page.evaluate(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=Math.max(400,innerHeight*0.7)){scrollTo(0,y);await new Promise(resolve=>setTimeout(resolve,150))}})
+await page.waitForFunction(()=>[...document.images].filter(img=>img.currentSrc.includes('fbcdn.net')).length===6)
+await page.waitForFunction(()=>[...document.images].filter(img=>img.currentSrc.includes('fbcdn.net')).every(img=>img.complete&&img.naturalWidth>0))
+assert.ok(await page.locator('a[href^="https://wa.me/5564996161968"]').count()>0)
+assert.ok(await page.locator('a[href^="https://maps.app.goo.gl/"]').count()>0)
+result.interactions={search:'PASS',navigationAnchor:'PASS',beforeAfterComparators:'PASS',instagramSixImages:'PASS',whatsappAndMapsLinks:'PASS'}
+await page.close(); await browser.close()
+await writeFile(`${out}/qa-results.json`,JSON.stringify(result,null,2))
+console.log(JSON.stringify(result,null,2))

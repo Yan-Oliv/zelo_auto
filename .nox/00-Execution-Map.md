@@ -1,6 +1,6 @@
 # Mapa de execução — Zelo Autoestética
 
-Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\Projetos\zelo_autoestica.
+Atualizado em 2026-10-23. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\Projetos\zelo_autoestica.
 
 | ID | Atividade | Estado | Dependência | Próxima ação |
 | --- | --- | --- | --- | --- |
@@ -10,7 +10,7 @@ Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 | ZE-04 | Reestruturação visual | COMPLETED | ZE-03 | Preservado |
 | ZE-05 | Performance e acessibilidade | COMPLETED | ZE-04 | Concluída tecnicamente; metas mobile não atingidas documentadas em `.nox/ZE-05-Report.md` |
 | ZE-06 | Instagram funcional | COMPLETED | ZE-05 | Aprovada pelo proprietário após validação visual local real; runtime público não publicado nesta sprint |
-| ZE-07 | SEO técnico local | CURRENT | ZE-06 | Duas entregas autorizadas; fase de auditoria concluída, implementação em andamento |
+| ZE-07 | SEO técnico local | COMPLETED | ZE-06 | Concluída tecnicamente; relatório e evidências em `.nox/ZE-07-Report.md` e `.nox/evidence/ZE-07/` |
 | ZE-08 | Google Analytics e mensuração | QUEUED | ZE-07 | Fora do objetivo ativo; não executar |
 | ZE-09 | Reputação Google | QUEUED | ZE-08 | Fora do objetivo ativo; não executar |
 | ZE-10 | Confiabilidade de avaliações Google | QUEUED | ZE-09 | Fora do objetivo ativo; não executar |

@@ -135,7 +135,7 @@ export function LocationSection() {
     <span className="ze4-location-wordmark" aria-hidden="true">ZELO</span>
     <div className="ze4-container ze4-location-layout">
       <div className="ze4-location-copy">
-        <CommunityReveal><CommunityEyebrow>NOSSA <span className="ze4-location-eyebrow-gold">LOCALIZAÇÃO</span></CommunityEyebrow><h2 id="ze4-location-title">VENHA VIVER<br />A EXPERIÊNCIA<br /><span>ZELO EM<br />CATALÃO – GO</span></h2><p className="ze4-location-description">Mais que estética, cuidado em cada detalhe para o seu carro. Estamos prontos para receber você.</p></CommunityReveal>
+        <CommunityReveal><CommunityEyebrow>NOSSA <span className="ze4-location-eyebrow-gold">LOCALIZAÇÃO</span></CommunityEyebrow><h2 id="ze4-location-title">VENHA VIVER<br />A EXPERIÊNCIA<br /><span>ZELO EM<br />CATALÃO – GO</span></h2><p className="ze4-location-description">Em Catalão–GO, cuidamos do seu veículo com lavagem completa, limpeza interna e higienização de bancos e carpetes.</p></CommunityReveal>
         <div id="contato" className="ze4-location-info">
           <CommunityReveal className="ze4-location-info-row" delay={0.08}><span className="ze4-location-icon"><MapPin size={28} aria-hidden="true" /></span><div><h3>ENDEREÇO</h3><address>{locationInfo.address}</address></div></CommunityReveal>
           <CommunityReveal className="ze4-location-info-row" delay={0.16}><span className="ze4-location-icon"><MessageCircle size={28} aria-hidden="true" /></span><div><h3>ATENDIMENTO VIA WHATSAPP</h3><a href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer">{locationInfo.phoneLabel.replace('WhatsApp: ', '')}</a><p>Fale com nossa equipe</p></div></CommunityReveal>

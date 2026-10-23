@@ -1,0 +1,73 @@
+{
+  "metadata": "PASS",
+  "jsonld": "PASS",
+  "sitemap": "PASS",
+  "robots": "PASS",
+  "viewports": [
+    {
+      "name": "ultrawide",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    },
+    {
+      "name": "notebook",
+      "width": 1366,
+      "height": 768,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    },
+    {
+      "name": "mobile-compact",
+      "width": 360,
+      "height": 740,
+      "overflow": false,
+      "brokenImages": 0,
+      "consoleErrors": 0
+    }
+  ],
+  "debug": [
+    {
+      "route": "/debug-model",
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/debug-crossfade",
+      "robots": "noindex, nofollow, noarchive"
+    }
+  ],
+  "interactions": {
+    "search": "PASS",
+    "navigationAnchor": "PASS",
+    "beforeAfterComparators": "PASS",
+    "instagramSixImages": "PASS",
+    "whatsappAndMapsLinks": "PASS"
+  }
+}

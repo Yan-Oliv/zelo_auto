@@ -1,16 +1,16 @@
 {
     "schemaVersion":  1,
     "project":  "zelo_autoestica",
-    "status":  "CURRENT",
-    "currentSprint":  "ZE-07",
-    "currentStep":  "Execute exactly two authorized SEO technical/local deliveries; phase A audit/preflight is complete",
+    "status":  "QUEUED",
+    "currentSprint":  null,
+    "currentStep":  "ZE-07 concluída; ZE-08 permanece na fila e não foi iniciada",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  null,
-    "nextAction":  "ZE-06 is owner-approved and COMPLETED for its local real-feed scope. Public Pages runtime remains unverified and no deployment was authorized; keep that caveat separate from ZE-07. Begin ZE-07 implementation and validation; do not start ZE-08.",
+    "nextAction":  "Aguardar autorização explícita para ZE-08. Produção da ZE-07 permanece sem deploy.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -385,10 +385,13 @@
                     {
                         "id":  "ZE-07",
                         "title":  "SEO tÃ©cnico local",
-                        "status":  "CURRENT",
+                        "status":  "COMPLETED",
                         "criteria":  [
-
-                                     ]
+                    {"id":"ZE-07-C01","description":"Canonical oficial, OG URL, robots, sitemap e noindex para diagnósticos","required":true,"status":"PASS","evidence":["index.html","public/robots.txt","public/sitemap.xml","public/_headers","evidence/ZE-07/qa-results.json"]},
+                    {"id":"ZE-07-C02","description":"JSON-LD local consistente com fatos publicados","required":true,"status":"PASS","evidence":["index.html JSON-LD AutoWash, NAP, horários, Instagram e quatro serviços","evidence/ZE-07/qa-results.json"]},
+                    {"id":"ZE-07-C03","description":"Metadados locais e sociais, imagem OG e conteúdo geográfico real","required":true,"status":"PASS","evidence":["public/og/zelo-estetica-automotiva-catalao.jpg","evidence/ZE-07/qa-results.json"]},
+                    {"id":"ZE-07-C04","description":"Build, lint, SEO, regressão funcional e visual em seis resoluções; produção intacta","required":true,"status":"PASS","evidence":["npm run build PASS","npm run lint exit 0; seis warnings legados","evidence/ZE-07/qa-results.json","evidence/ZE-07/lighthouse-pre-seo-baseline.json","evidence/ZE-07/lighthouse-mobile-390.json","evidence/ZE-07/lighthouse-desktop-production-build.json","sem deploy/push"]}
+                  ]
                     },
                     {
                         "id":  "ZE-08",
