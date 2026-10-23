@@ -1,0 +1,15 @@
+{
+  "reviewer": "Root/Nox read-only technical review",
+  "status": "PASS",
+  "sizes": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "scope": "All five visual references; desktop8sections, tablet services/process/Instagram/results, mobile hero/results/process/location/footer; final whitespace fix reviewed",
+  "openFindings": [],
+  "humanVisualApproval": false,
+  "performance": "Measured limits documented, no target improvement claimed",
+  "production": "No push/deploy"
+}

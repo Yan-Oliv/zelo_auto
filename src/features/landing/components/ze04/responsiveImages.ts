@@ -46,20 +46,22 @@ export const responsiveImages: Record<string, {width:number;variants:string[];sr
     "srcSet": "/editorial/responsive/comparison-carpet-before-420.webp 420w, /editorial/responsive/comparison-carpet-before-640.webp 640w, /editorial/comparison-carpet-before.webp 834w"
   },
   "/editorial/comparison-paint-after.webp": {
-    "width": 834,
+    "width": 1200,
     "variants": [
       "/editorial/responsive/comparison-paint-after-420.webp 420w",
-      "/editorial/responsive/comparison-paint-after-640.webp 640w"
+      "/editorial/responsive/comparison-paint-after-640.webp 640w",
+      "/editorial/responsive/comparison-paint-after-960.webp 960w"
     ],
-    "srcSet": "/editorial/responsive/comparison-paint-after-420.webp 420w, /editorial/responsive/comparison-paint-after-640.webp 640w, /editorial/comparison-paint-after.webp 834w"
+    "srcSet": "/editorial/responsive/comparison-paint-after-420.webp 420w, /editorial/responsive/comparison-paint-after-640.webp 640w, /editorial/responsive/comparison-paint-after-960.webp 960w, /editorial/comparison-paint-after.webp 1200w"
   },
   "/editorial/comparison-paint-before.webp": {
-    "width": 834,
+    "width": 1200,
     "variants": [
       "/editorial/responsive/comparison-paint-before-420.webp 420w",
-      "/editorial/responsive/comparison-paint-before-640.webp 640w"
+      "/editorial/responsive/comparison-paint-before-640.webp 640w",
+      "/editorial/responsive/comparison-paint-before-960.webp 960w"
     ],
-    "srcSet": "/editorial/responsive/comparison-paint-before-420.webp 420w, /editorial/responsive/comparison-paint-before-640.webp 640w, /editorial/comparison-paint-before.webp 834w"
+    "srcSet": "/editorial/responsive/comparison-paint-before-420.webp 420w, /editorial/responsive/comparison-paint-before-640.webp 640w, /editorial/responsive/comparison-paint-before-960.webp 960w, /editorial/comparison-paint-before.webp 1200w"
   },
   "/editorial/comparison-seats-after.webp": {
     "width": 834,

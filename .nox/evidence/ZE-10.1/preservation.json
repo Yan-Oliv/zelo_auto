@@ -1,0 +1,252 @@
+{
+  "baseline": "00e44b2",
+  "files": [
+    {
+      "file": "functions/api/_instagram-feed.test.mjs",
+      "sha256": "e26ae37477f558c66aeff00e4fcb6ad60cbefdec146eff8a7b51fa706f1ba0e3",
+      "unchanged": true
+    },
+    {
+      "file": "functions/api/_instagram-feed.ts",
+      "sha256": "510cc878983723642a2a9748045423115236b4db70c585fb04c0639b3dcbd62c",
+      "unchanged": true
+    },
+    {
+      "file": "functions/api/google-reviews.ts",
+      "sha256": "028766a244f2b2ab19fd35003a385fd36549fb03731fa901bcf836b0b2091150",
+      "unchanged": true
+    },
+    {
+      "file": "functions/api/instagram-feed.ts",
+      "sha256": "a45e3f741c5c9522e7ef6e5736364cff134a6b683696871bea6614644ca0aee9",
+      "unchanged": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "1030b66cd162f943e51c1ddbd4c7c22f74a7e001a00f2756166cd8923e2a814d",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/comparison-carpet-after.webp",
+      "sha256": "842de181c3bdc10988d91b2844ab8c8393b71ab9b70f68beb55af82cfabc3d9d",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/comparison-carpet-before.webp",
+      "sha256": "e57b546ed0d647dbee1367547622c65087de45144597670574e5b80d5621d2be",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/comparison-seats-after.webp",
+      "sha256": "2e81620c646edae17c28216d9474ffb4abab2d0b8ca51a02892111dba5e6f204",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/comparison-seats-before.webp",
+      "sha256": "19b0f269cc64ce0813704789fdff878abf7259b0091c0faa5fd391224f255f65",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-carpet-after-420.webp",
+      "sha256": "c2d2e88b723e19c5f8f201288217ef2ff6dccf673711162b8bafeb1bd2c9297a",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-carpet-after-640.webp",
+      "sha256": "78fcaf0724148508d04ac012d3fca05f107f58e7b388ae95ce1e0acbacb385c7",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-carpet-before-420.webp",
+      "sha256": "08654ea8fbfea4762b05c92a4f91c3a9676aec291d8956f5f2a634b6764594ce",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-carpet-before-640.webp",
+      "sha256": "36072edc04f35adab1d250e6336fd39eb1490dacc52d8b0bb834333bf24ab662",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-seats-after-420.webp",
+      "sha256": "99e366eed572ec6be3724c555b36ab28c6d7087dd03c1f74c9bf292785e42c4a",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-seats-after-640.webp",
+      "sha256": "b9f97b0181ee95ee6b25dd755efd8a4b8052d89ac4f45cfb56abe20ca365a0cf",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-seats-before-420.webp",
+      "sha256": "c6df923cee2307d255d93166c1574a1b48928a1c39bf1f0b5815bf9ba3376884",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/comparison-seats-before-640.webp",
+      "sha256": "c9ebad9613cd1772c5f529af42de6f2520a63d8922cf3b49472681ef48cf4c6f",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/service-carpet-420.webp",
+      "sha256": "7314cdd1b7018d22c2f4192c51bf062940662443ee6bf759bf458807997179c5",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/service-carpet-640.webp",
+      "sha256": "e0ae749bb4e1c60d29b6d3f2e463534e753a5fd34d072e69c0bf7c292d3b3195",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/service-seats-420.webp",
+      "sha256": "9d7b868cb964b822a6edfedc809b9f0fd544a6f9523ee229f27aeb8fdb68ab93",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/responsive/service-seats-640.webp",
+      "sha256": "403a54c438151741b973e21eb93a8bbc668d6ecb4fb585fc9b85a0ecf8be6652",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/service-carpet.webp",
+      "sha256": "3df69d3f9590590dc3959bcf9ff3fafd8b7938c4cbd898e88c4a0d0dbe579aa7",
+      "unchanged": true
+    },
+    {
+      "file": "public/editorial/service-seats.webp",
+      "sha256": "cdc932f0c2a4e71740c5c78248b14d41bc957e73d6595abdd8c4bdd1619ea23b",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/car-4k.webp",
+      "sha256": "581e5c4af19c0c980cf93ac8a2ad881df752bf2da3710a0c36b3b32716bf8d1c",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/car-final.webp",
+      "sha256": "1846dba280f892afbc638665a4a39126e7affd09111704b469703f0450781852",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/car-mobile.webp",
+      "sha256": "1613e32725bff4715d47d905b03be9d2a31a3b521740df1d72b4f2474be91c8a",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/car-reference.webp",
+      "sha256": "6fa5fe1646dc069a205fea46c923c2c40fd28dd31de68e8915aee7ae96198a1c",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-4k-1280.webp",
+      "sha256": "272fc26a9e552d3957ef9ec2abfa693a8f0a234a53b79843c15375d2eabdd48c",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-4k-1920.webp",
+      "sha256": "4dca22b37ada021bafbb020e86d0f4199c0ff4064ff80316a0902f64a19129af",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-4k-2560.webp",
+      "sha256": "a75fb3e69eb9c848832314b0c78239f60aaa2098cebd9d559e02c47e46ca1d36",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-4k-640.webp",
+      "sha256": "23542a98b201f7b7ac06e845478e7c87966af414db4504b40c796627ddf82cf2",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-4k-960.webp",
+      "sha256": "ff88b352293d1d1ac544170dab60dd46427d8b7916b6104d7de6d5f2eb8501fe",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-final-420.webp",
+      "sha256": "9babf278064a89a53b5b362551ea8ffeb13f395e041815a541bad0c057c8837b",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-final-640.webp",
+      "sha256": "25ea2af1b1b415065615a8730fa4a9b217936b5f5d4524c459ffb36496aa8a4f",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-reference-1024.webp",
+      "sha256": "9aa94c72d3b2c8553764645a3668e50981b3b5bc6253fd54bb14b5b3191332c9",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-reference-420.webp",
+      "sha256": "3dd0355c1a4c680a66a63a4ea99def5f65fde4cb6343a8ac481ca66754e2850b",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-reference-640.webp",
+      "sha256": "0710e82b2d4dba9b5160c7cff0a96c0df890d831c48eaa6b3c2bfc5bcd8a78cf",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/car-reference-840.webp",
+      "sha256": "37c522295e9129629c312525eac1677670cad96bb05e5d3d524efd8d33929dd4",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/showroom-final-1280.webp",
+      "sha256": "21367c250247861926b3015ff8afc11ad828a66ffc779553a2b306b9fb1f552e",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/showroom-final-840.webp",
+      "sha256": "7149bff9b09334f471fe209e76ade9f894a01c50909a3f2f220d4b01e2508d00",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/showroom-reference-1280.webp",
+      "sha256": "29c76f093a44be5a723e27c06cca1525e0d0d252a37a2e4be0a2d61ecbf4216c",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/showroom-reference-840.webp",
+      "sha256": "a86e148256bd20093fa8e3f8d5ffe51a108e9b436e3cf3c77ed290a6354da06b",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/responsive/zelo-logo-480.webp",
+      "sha256": "62b80ce3878f591d8de6f13edd1559062b7ed57c4a88903ad5b896ca3e3618f3",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/showroom-4k.webp",
+      "sha256": "9b146af33d730eb269298c4dcb4947da1a253002efdd458e4d17e563b241dec6",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/showroom-final.webp",
+      "sha256": "2cfce7087af6480eab0b41fc6962c0a5ca8f032dc911719426b48c9ca140a53e",
+      "unchanged": true
+    },
+    {
+      "file": "public/hero/showroom-reference.webp",
+      "sha256": "d25e7ce5f169cb7c7abe0103b1b396d8a1bdfcafc6047ff9ee832904dc534065",
+      "unchanged": true
+    },
+    {
+      "file": "public/robots.txt",
+      "sha256": "d1b66face37ff2b6c404024c9a84a2a4c1e6313d5cb957499a0f67e27961919e",
+      "unchanged": true
+    },
+    {
+      "file": "public/sitemap.xml",
+      "sha256": "e807f46b7d8283a322ffbcf52e10e261182019eab8f6aca3f719882e0c0530a2",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/landing/data/site.ts",
+      "sha256": "72bceb8eb28fdd2e9cb9c1393e35f2c063c8a2a2fde0d3cf1ae98f787aa0e137",
+      "unchanged": true
+    }
+  ],
+  "originalPhotosAndDerivatives": "SHA256 verified",
+  "pendingGates": "ZE-09 and final hero owner acceptance unchanged"
+}

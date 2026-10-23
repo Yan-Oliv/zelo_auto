@@ -324,3 +324,34 @@
 
 .zelo-hero[data-intro='playing'] .zelo-hero-car { animation-duration: 1.4s; animation-delay: .5s; }
 .zelo-hero[data-intro='playing'] .zelo-hero-stage { animation-duration: 1.4s; }
+
+/* ZE-10.1: controls stay usable as the navigation collapses. Artwork is unchanged. */
+.zelo-header-nav a { min-height:44px; display:inline-flex; align-items:center; font-size:clamp(12px,.85vw,15px); }
+.zelo-search-panel { max-height:calc(100svh - 110px); overflow-y:auto; }
+.zelo-search-field input { font-size:16px; }
+.zelo-search-field button { min-width:44px; min-height:44px; align-items:center; justify-content:center; }
+.zelo-search-results a { min-height:44px; }
+.zelo-mobile-menu>div { overflow-y:auto; overscroll-behavior:contain; }
+.zelo-mobile-menu button,.zelo-mobile-menu a { min-height:44px; }
+@media(max-width:1200px) {
+  .zelo-header-nav,.zelo-header-divider { display:none; }
+  .zelo-header-menu { display:inline-flex; }
+}
+@media(max-width:600px) {
+  .zelo-header-inner { gap:8px; padding:14px 4%; }
+  .zelo-header-brand { flex:1 1 110px; max-width:150px; min-width:0; }
+  .zelo-header-actions { gap:6px; flex-shrink:0; }
+  .zelo-header-search,.zelo-header-menu { width:44px; height:44px; }
+  .zelo-header-budget { min-height:44px; font-size:10px; padding-inline:10px; }
+  .zelo-mobile-menu .mb-12 { margin-bottom:20px; }
+}
+@media(max-width:359px) {
+  .zelo-header-inner { padding-inline:3%; gap:5px; }
+  .zelo-header-actions { gap:4px; }
+  .zelo-header-budget { padding-inline:7px; font-size:10px; }
+}
+@media(max-height:500px) {
+  .zelo-mobile-menu>div { padding-block:14px; }
+  .zelo-mobile-menu .mb-12 { margin-bottom:12px; }
+  .zelo-mobile-menu .gap-6 { gap:4px; }
+}

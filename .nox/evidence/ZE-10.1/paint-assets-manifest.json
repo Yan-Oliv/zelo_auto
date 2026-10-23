@@ -1,0 +1,79 @@
+{
+  "treatment": "EXIF orientation normalization, proportional downsample and WebP only. Full 4:3 frames preserve wheel arch, body and tire. Different camera angles are disclosed; no geometric warping, exposure, color or synthetic cleanup.",
+  "assets": [
+    {
+      "source": "B:/Downloads/Zelo/Pintura/Sujo.jpeg",
+      "sha256": "9643ca1ee7d5f963959dde819ac22c8bf8bca307d049c8e3b0588adb2aadca0b",
+      "width": 5712,
+      "height": 4284,
+      "orientation": 1,
+      "derivatives": [
+        {
+          "path": "public/editorial/responsive/comparison-paint-before-420.webp",
+          "width": 420,
+          "height": 315,
+          "bytes": 23412,
+          "sha256": "a6b49c2cd77caa7d23dabfed99cb555ca378719aa49d303ebcf3adae12a9f643"
+        },
+        {
+          "path": "public/editorial/responsive/comparison-paint-before-640.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 45626,
+          "sha256": "ec63755fcb5b05ddab85577ff170a8ebbc845286557429da0d84ca2003e8ee8b"
+        },
+        {
+          "path": "public/editorial/responsive/comparison-paint-before-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 83366,
+          "sha256": "4d55c85b1286ef6cd40faa7beb2daa76bbd730297c925f18d8e1464c2cc541d6"
+        },
+        {
+          "path": "public/editorial/comparison-paint-before.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 122226,
+          "sha256": "1481f74de977f809163514415421a3208f17b7a376c34f08fb2157b2617787d2"
+        }
+      ]
+    },
+    {
+      "source": "B:/Downloads/Zelo/Pintura/Limpo.jpeg",
+      "sha256": "3263ad1c1c1263af91e32a3d82ee700d2f14ba4ac03ec6092d7c4aacfef87c3e",
+      "width": 5712,
+      "height": 4284,
+      "orientation": 1,
+      "derivatives": [
+        {
+          "path": "public/editorial/responsive/comparison-paint-after-420.webp",
+          "width": 420,
+          "height": 315,
+          "bytes": 22812,
+          "sha256": "c76416f0c049c30bf3e2ae4ac8c97d13246cc2fc99e57f72715fa37034792c6d"
+        },
+        {
+          "path": "public/editorial/responsive/comparison-paint-after-640.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 37880,
+          "sha256": "39f50305f4d35f2a8382a62608fcdcab18e246502a1a61cb6362d5fe551532eb"
+        },
+        {
+          "path": "public/editorial/responsive/comparison-paint-after-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 61308,
+          "sha256": "675d5a35d14f8ef4f0312f5ca1d3b713380006351f4f8e426deec8edb848157d"
+        },
+        {
+          "path": "public/editorial/comparison-paint-after.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 83862,
+          "sha256": "5fa63d340d3644fc4eeff161b6fa19b84972170da9e57e14b8439d4bf90504d5"
+        }
+      ]
+    }
+  ]
+}

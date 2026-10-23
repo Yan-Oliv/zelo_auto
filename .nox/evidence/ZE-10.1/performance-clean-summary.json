@@ -1,0 +1,52 @@
+{
+  "baselineCommit": "00e44b2",
+  "conditions": "Lighthouse default simulated throttling; fresh Chrome per run; static builds; no saved consent; APIs deterministic503; one justified clean desktop comparison after QA host contention; original observations retained",
+  "runs": [
+    {
+      "phase": "baseline",
+      "mode": "desktop",
+      "score": 56.99999999999999,
+      "accessibility": 100,
+      "LCP": 6551.737349999999,
+      "CLS": 0,
+      "TBT": 26,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 20,
+        "transferSize": 1378046
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 361552
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    },
+    {
+      "phase": "final",
+      "mode": "desktop",
+      "score": 56.99999999999999,
+      "accessibility": 100,
+      "LCP": 6620.35505,
+      "CLS": 0,
+      "TBT": 16.5,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 20,
+        "transferSize": 1387562
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 362874
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    }
+  ]
+}

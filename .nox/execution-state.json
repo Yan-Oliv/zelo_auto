@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "project": "zelo_autoestica",
   "status": "COMPLETED",
-  "currentSprint": "ZE-10",
-  "currentStep": "Independent technical scope accepted; preserved external and owner gates",
+  "currentSprint": "ZE-10.1",
+  "currentStep": "Exactly two deliveries technically accepted; human visual approval separate",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "Await ZE-09 client/Profile/API/OAuth and final hero owner visual acceptance. ZE-11 remains QUEUED and unauthorized.",
+  "nextAction": "Await owner ZE-09 authorization and final hero visual acceptance; do not initiate ZE-10.2/11/12",
   "sprints": [
     {
       "id": "ZE-01",
@@ -684,6 +684,67 @@
       "noAutomaticAdvance": true
     },
     {
+      "id": "ZE-10.1",
+      "title": "Global responsiveness and real photographs",
+      "status": "COMPLETED",
+      "dependencies": [
+        "ZE-10"
+      ],
+      "exception": "Explicit independence from pending ZE-09 and hero visual acceptance",
+      "criteria": [
+        {
+          "id": "ZE-10.1-C01",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-10.1-Report.md",
+            ".nox/evidence/ZE-10.1/qa-global.json",
+            ".nox/evidence/ZE-10.1/preservation.json",
+            ".nox/evidence/ZE-10.1/review.json"
+          ],
+          "description": "Responsive eleven-size composition and preserved reference identity"
+        },
+        {
+          "id": "ZE-10.1-C02",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-10.1-Report.md",
+            ".nox/evidence/ZE-10.1/qa-global.json",
+            ".nox/evidence/ZE-10.1/preservation.json",
+            ".nox/evidence/ZE-10.1/review.json"
+          ],
+          "description": "Authentic owner paint photo derivation and honest illustrative distinctions"
+        },
+        {
+          "id": "ZE-10.1-C03",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-10.1-Report.md",
+            ".nox/evidence/ZE-10.1/qa-global.json",
+            ".nox/evidence/ZE-10.1/preservation.json",
+            ".nox/evidence/ZE-10.1/review.json"
+          ],
+          "description": "Motion, session, reduced motion, touch and keyboard UX"
+        },
+        {
+          "id": "ZE-10.1-C04",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-10.1-Report.md",
+            ".nox/evidence/ZE-10.1/qa-global.json",
+            ".nox/evidence/ZE-10.1/preservation.json",
+            ".nox/evidence/ZE-10.1/review.json"
+          ],
+          "description": "Build/lint, regression, evidence, Nox review and scoped commit"
+        }
+      ],
+      "humanVisualApproval": false,
+      "technicalApproval": "PASS_WITH_DISCLOSED_PERFORMANCE_LIMITS"
+    },
+    {
       "id": "ZE-11",
       "title": "HomologaÃ§Ã£o local",
       "status": "QUEUED",
@@ -696,5 +757,6 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-10"
+  "lastCompletedSprint": "ZE-10",
+  "currentApprovedSprint": "ZE-10.1"
 }

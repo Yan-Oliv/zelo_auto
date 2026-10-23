@@ -67,27 +67,31 @@ export function ServicesSection() {
   )
 }
 
-export type ComparisonPair = { before: string; after: string; beforeAlt: string; afterAlt: string }
+export type ComparisonPair = { before: string; after: string; beforeAlt: string; afterAlt: string; source?: 'real' | 'illustrative'; note?: string }
 
 export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { title: string; analyticsId?: string; preview: string; pair?: ComparisonPair }) {
   const [position, setPosition] = useState(50)
+  const [loaded, setLoaded] = useState({ before: false, after: false })
+  const [imageFailed, setImageFailed] = useState(false)
   const labelId = useId()
   const noteId = useId()
   return (
-    <figure className={`ze4-comparison${pair ? ' ze4-comparison-ready' : ''}`} style={{ '--ze4-comparison-position': `${position}%` } as CSSProperties}>
+    <figure data-comparison-source={pair?.source ?? 'illustrative'} className={`ze4-comparison${pair ? ' ze4-comparison-ready' : ''}`} style={{ '--ze4-comparison-position': `${position}%` } as CSSProperties}>
       <figcaption id={labelId} className="ze4-comparison-title">{title}</figcaption>
+      <div className="ze4-comparison-stage">
       {pair ? <>
-        <NearImage src={pair.after} alt={pair.afterAlt} width="680" height="360" loading="lazy" decoding="async" />
-        <div className="ze4-comparison-before"><NearImage src={pair.before} alt={pair.beforeAlt} width="680" height="360" loading="lazy" decoding="async" /></div>
+        <NearImage src={pair.after} alt={pair.afterAlt} width="680" height="360" loading="lazy" decoding="async" onError={() => setImageFailed(true)} onLoad={event => { if (!event.currentTarget.currentSrc.startsWith('data:')) setLoaded(value => ({ ...value, after: true })) }} />
+        <div className="ze4-comparison-before"><NearImage src={pair.before} alt={pair.beforeAlt} width="680" height="360" loading="lazy" decoding="async" onError={() => setImageFailed(true)} onLoad={event => { if (!event.currentTarget.currentSrc.startsWith('data:')) setLoaded(value => ({ ...value, before: true })) }} /></div>
+        {(imageFailed || !loaded.before || !loaded.after) && <span className="ze4-comparison-status" role="status">{imageFailed ? 'Foto indisponível. Recarregue a página para tentar novamente.' : 'Carregando fotografias…'}</span>}
         <div className="ze4-comparison-divider" aria-hidden="true"><span><ChevronLeft size={14} /><ChevronRight size={14} /></span></div>
-        <input data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-describedby={noteId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
+        <input disabled={imageFailed} data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-describedby={noteId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
         <span className="ze4-comparison-label ze4-comparison-label-before">Antes</span><span className="ze4-comparison-label ze4-comparison-label-after">Depois</span>
-        <p id={noteId} className="ze4-comparison-note">Demonstração ilustrativa — não é resultado real da Zelo.</p>
       </> : <>
         <NearImage src={preview} alt="Imagem ilustrativa; comparação de atendimento real ainda indisponível." width="680" height="360" loading="lazy" decoding="async" />
         <div className="ze4-comparison-empty"><Sparkles size={22} strokeWidth={1.2} aria-hidden="true" /><span>O cuidado faz a diferença</span><small>Comparação real indisponível</small></div>
-        <p id={noteId} className="ze4-comparison-note">Imagem ilustrativa — sem comparação de atendimento real.</p>
       </>}
+      </div>
+      <p id={noteId} className="ze4-comparison-note">{pair ? pair.note ?? 'Demonstração ilustrativa — não é resultado real da Zelo.' : 'Imagem ilustrativa — sem comparação de atendimento real.'}</p>
     </figure>
   )
 }
@@ -98,7 +102,7 @@ export function ResultsSection() {
       <div className="ze4-container ze4-results-main">
         <CommercialReveal className="ze4-results-copy">
           <Eyebrow>Antes / Depois</Eyebrow>
-          <h2 id="ze4-results-title">A diferença<br />está <span>nos detalhes</span></h2>
+          <h2 id="ze4-results-title">A diferença<br />{' '}está <span>nos detalhes</span></h2>
           <p>Conheça nosso cuidado com a pintura, os bancos e os detalhes do interior.</p>
         </CommercialReveal>
         <div className="ze4-results-grid">
@@ -106,7 +110,7 @@ export function ResultsSection() {
             { key: 'paint', title: 'Pintura', preview: 'service-wash' },
             { key: 'seats', title: 'Bancos', preview: 'service-seats' },
             { key: 'carpet', title: 'Carpete', preview: 'service-carpet' },
-          ].map(({ key, title, preview }) => <BeforeAfterComparison analyticsId={key} key={key} title={title} preview={editorial(preview)} pair={{ before: editorial(`comparison-${key}-before`), after: editorial(`comparison-${key}-after`), beforeAlt: `${title} antes da limpeza, em uma demonstração ilustrativa.`, afterAlt: `${title} depois da limpeza, em uma demonstração ilustrativa.` }} />)}
+          ].map(({ key, title, preview }, index) => <CommercialReveal key={key} className="ze4-comparison-reveal" delay={index * 0.1}><BeforeAfterComparison analyticsId={key} title={title} preview={editorial(preview)} pair={{ before: editorial(`comparison-${key}-before`), after: editorial(`comparison-${key}-after`), source: key === 'paint' ? 'real' : 'illustrative', note: key === 'paint' ? 'Fotos reais cedidas pela Zelo. Limpeza da caixa de roda e lataria; ângulos diferentes.' : 'Demonstração ilustrativa — não é resultado real da Zelo.', beforeAlt: key === 'paint' ? 'Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.' : `${title} antes da limpeza, em uma demonstração ilustrativa.`, afterAlt: key === 'paint' ? 'Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.' : `${title} depois da limpeza, em uma demonstração ilustrativa.` }} /></CommercialReveal>)}
         </div>
       </div>
       <div className="ze4-container ze4-results-actions">

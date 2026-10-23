@@ -24,8 +24,8 @@ function editorialSize(src: string) {
   if (/showroom/.test(src)) return '80vw'
   if (/process-detail|quality-products|location-scene/.test(src)) return '(max-width: 900px) 100vw, 75vw'
   if (/process-/.test(src)) return '(max-width: 600px) 80vw, 22vw'
-  if (/comparison-/.test(src)) return '(max-width: 600px) max(90vw, 510px), (min-width: 1600px) max(22vw, 500px), (max-width: 1100px) max(30vw, 430px), max(22vw, 440px)'
-  return '(max-width: 540px) 640px, (max-width: 900px) 44vw, 23vw'
+  if (/comparison-/.test(src)) return '(max-width: 600px) 90vw, (max-width: 900px) 44vw, (max-width: 1100px) 29vw, (min-width: 1600px) 350px, 22vw'
+  return '(max-width: 600px) 90vw, (max-width: 1100px) 44vw, 23vw'
 }
 export function NearImage({ src, srcSet, sizes, original = false, ...props }: ImgHTMLAttributes<HTMLImageElement> & { original?: boolean }) {
   const ref = useRef<HTMLImageElement>(null)

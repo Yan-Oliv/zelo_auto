@@ -253,6 +253,7 @@ export function LandingPage() {
             transition={{ duration: heroReducedMotion ? 0 : 0.2 }}
             id="zelo-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl zelo-mobile-menu"
             ref={menuPanelRef}
+            onClick={(event) => { if (event.target === event.currentTarget) setMenuOpen(false) }}
           >
             <m.div
               initial={heroReducedMotion ? false : { x: '100%' }}

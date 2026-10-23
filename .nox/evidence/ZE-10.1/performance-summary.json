@@ -1,0 +1,68 @@
+{
+  "baselineCommit": "00e44b2",
+  "conditions": "Lighthouse default simulated throttling; fresh Chrome per run; static builds; no saved consent; APIs deterministic503; one run per viewport per build",
+  "runs": [
+    {
+      "phase": "baseline",
+      "mode": "mobile",
+      "score": 70,
+      "LCP": 6119.276000000001,
+      "CLS": 0,
+      "TBT": 24
+    },
+    {
+      "phase": "baseline",
+      "mode": "desktop",
+      "score": 56.99999999999999,
+      "LCP": 6549.16075,
+      "CLS": 0,
+      "TBT": 24
+    },
+    {
+      "phase": "final",
+      "mode": "mobile",
+      "score": 69,
+      "accessibility": 100,
+      "LCP": 6191.625599999999,
+      "CLS": 0,
+      "TBT": 26.5,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 17,
+        "transferSize": 1315421
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 362874
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    },
+    {
+      "phase": "final",
+      "mode": "desktop",
+      "score": 56.99999999999999,
+      "accessibility": 100,
+      "LCP": 8334.995200000001,
+      "CLS": 0,
+      "TBT": 41,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 20,
+        "transferSize": 1387562
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 362874
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    }
+  ]
+}

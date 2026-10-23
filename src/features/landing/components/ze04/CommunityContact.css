@@ -319,3 +319,46 @@
 .ze4-google-reviews :is(a,button):focus-visible { outline: 2px solid #805e1e; outline-offset: 4px; }
 .ze4-review-no-snippets { color: #56514a; line-height: 1.7; }
 @media (prefers-reduced-motion: reduce) { .ze4-google-reviews *, .ze4-google-reviews *::before { animation: none !important; transition: none !important; } }
+
+/* ZE-10.1: retain editorial scenes and give narrow columns their own rhythm. */
+.ze4-community-eyebrow { font-size:11px; letter-spacing:.22em; flex-wrap:wrap; }
+.ze4-footer h2,.ze4-footer-statement,.ze4-footer-partners h2 { font-size:11px !important; }
+.ze4-footer-statement { letter-spacing:.12em; }
+.ze4-footer :is(a,button) { min-height:44px; display:inline-flex; align-items:center; }
+.ze4-footer :is(.ze4-footer-brand>a) { display:block; }
+.ze4-footer-contact,.ze4-footer-social,.ze4-footer-nav { min-width:0; }
+.ze4-footer-contact a { overflow-wrap:anywhere; }
+.ze4-instagram-handle { white-space:normal; overflow-wrap:anywhere; }
+.ze4-location-map-column { min-width:0; }
+.ze4-location-info-row>div { min-width:0; }
+.ze4-location-info-row address,.ze4-location-info-row a { overflow-wrap:anywhere; }
+@media(max-width:1000px) {
+  .ze4-community-columns { grid-template-columns:1fr; gap:48px; }
+  .ze4-community-description { min-height:0; }
+  .ze4-google-reviews::before { display:none; }
+  .ze4-instagram-actions { flex-direction:row; flex-wrap:wrap; }
+  .ze4-instagram-actions .ze4-button { flex:0 1 310px; }
+  .ze4-instagram-handle { border:0; padding:0; }
+  .ze4-location-layout { grid-template-columns:minmax(0,1fr); gap:32px; }
+  .ze4-location-copy { max-width:700px; }
+  .ze4-location h2 { font-size:clamp(34px,5vw,48px); }
+  .ze4-location-actions { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  .ze4-instagram-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .ze4-community-title { font-size:clamp(27px,7.3vw,42px); }
+  .ze4-community-description { font-size:16px; }
+  .ze4-community-eyebrow { font-size:11px; letter-spacing:.15em; }
+  .ze4-location-actions { grid-template-columns:minmax(0,1fr); }
+  .ze4-location-info-row h3 { font-size:11px; }
+  .ze4-location-schedule>div { flex-wrap:wrap; }
+  .ze4-footer-main { gap:24px; }
+  .ze4-footer-brand>div { padding-left:14px; }
+  .ze4-footer-bottom>span { white-space:normal; }
+  .ze4-google-letter { min-width:44px; width:58px; font-size:50px; padding-right:12px; }
+  .ze4-review-summary { gap:12px; padding:18px 14px; }
+  .ze4-review-score { padding-right:12px; }
+  .ze4-review-summary strong { letter-spacing:.04em; }
+  .ze4-instagram-actions { align-items:stretch; flex-direction:column; }
+  .ze4-instagram-actions .ze4-button { flex:auto; }
+}
