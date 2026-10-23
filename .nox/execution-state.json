@@ -1,16 +1,16 @@
 {
     "schemaVersion":  1,
     "project":  "zelo_autoestica",
-    "status":  "WAITING_USER_ACTION",
+    "status":  "COMPLETED",
     "currentSprint":  "ZE-06",
-    "currentStep":  "Await owner authorization to publish/deploy the ZE-06 Pages runtime, then verify the public feed",
+    "currentStep":  "ZE-06 owner-approved after local real-feed visual validation; do not deploy or start ZE-07 without a new explicit objective",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
-    "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Latest screenshot shows expected unprefixed core server-side names; Root's read-only public GET after the correction still returned HTTP 400 / OAuthException 190 with old/raw deployed response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is required before public recheck. No credentials inspected or recorded; no production mutation/deployment by Nox.",
+    "stopReason":  null,
+    "nextAction":  "ZE-06 accepted by owner based on local live-feed rendering. Public Pages runtime remains unverified (last read-only GET HTTP 400 / OAuthException 190); production deployment is outside the approved scope and was not performed. ZE-07 remains queued.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -328,13 +328,15 @@
                     {
                         "id":  "ZE-06",
                         "title":  "Instagram funcional",
-                        "status":  "WAITING_USER_ACTION",
+                        "status":  "COMPLETED",
                         "criteria":  [
                                          {
                                              "evidence":  [
                                                               "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
                                                               "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
-                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Latest screenshot shows expected unprefixed core server-side names, but does not prove the new handler is deployed. Second post-correction public GET still HTTP 400 / OAuthException 190 with old/raw response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is the pending gate. No credentials recorded; no production mutation/deploy."
+                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Latest screenshot shows expected unprefixed core server-side names, but does not prove the new handler is deployed. Second post-correction public GET still HTTP 400 / OAuthException 190 with old/raw response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is the pending gate. No credentials recorded; no production mutation/deploy.",
+                                                              "Owner approval 2026-10-23: Instagram posts load correctly; local visual acceptance. Public runtime remains unverified and is not represented as passing.",
+                                                              "Public production endpoint last read-only check: HTTP 400 / OAuthException 190; deployment not authorized/performed and excluded from owner-approved local acceptance."
                                                           ],
                                              "status":  "PASS",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
