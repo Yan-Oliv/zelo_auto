@@ -10,7 +10,7 @@
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner to update server-only Cloudflare Pages variables with the locally validated Instagram Login credentials and verify the public endpoint; no deploy or production change performed by Nox.",
+    "nextAction":  "Owner to revoke/rotate the token exposed in chat, configure fresh server-only INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_GRAPH_USER_ID names, then explicitly authorize a production update and verify the public endpoint; Nox must not deploy or change production.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -334,7 +334,7 @@
                                              "evidence":  [
                                                               "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
                                                               "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
-                                                              "Public endpoint retains earlier HTTP 400 until owner updates Cloudflare server secret"
+                                                              "Public GET: HTTP 400 after Meta session invalidation; Cloudflare screenshot has only VITE_ token/account names, mismatching server function; rotate exposed token and configure correct server-only names"
                                                           ],
                                              "status":  "PASS",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
