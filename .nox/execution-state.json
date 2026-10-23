@@ -3,14 +3,14 @@
     "project":  "zelo_autoestica",
     "status":  "WAITING_USER_ACTION",
     "currentSprint":  "ZE-06",
-    "currentStep":  "Await owner confirmation of current Pages server-side variable names/runtime and public feed verification",
+    "currentStep":  "Await owner authorization to publish/deploy the ZE-06 Pages runtime, then verify the public feed",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner confirms current server-only variable names and whether Pages runtime needs refresh; latest public GET after the reported update returned HTTP 400 / OAuthException 190. Do not request or record credential values; no production mutation or deployment was made.",
+    "nextAction":  "Latest screenshot shows expected unprefixed core server-side names; Root's read-only public GET after the correction still returned HTTP 400 / OAuthException 190 with old/raw deployed response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is required before public recheck. No credentials inspected or recorded; no production mutation/deployment by Nox.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -334,7 +334,7 @@
                                              "evidence":  [
                                                               "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
                                                               "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
-                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Earlier screenshot may be stale; current production variable names/runtime not inspected. Owner to confirm current server-only names/runtime. No credentials recorded; no production mutation/deploy."
+                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Latest screenshot shows expected unprefixed core server-side names, but does not prove the new handler is deployed. Second post-correction public GET still HTTP 400 / OAuthException 190 with old/raw response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is the pending gate. No credentials recorded; no production mutation/deploy."
                                                           ],
                                              "status":  "PASS",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
