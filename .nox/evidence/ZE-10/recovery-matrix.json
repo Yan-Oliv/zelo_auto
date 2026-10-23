@@ -1,0 +1,213 @@
+{
+  "kind": "MOCKED UI CONTRACT TESTS - NOT REAL GOOGLE DATA",
+  "groups": [
+    {
+      "name": "Mandatory recovery reduce",
+      "status": "PASS"
+    },
+    {
+      "name": "Mandatory recovery no-preference",
+      "status": "PASS"
+    },
+    {
+      "name": "Policy 401 {}",
+      "status": "PASS"
+    },
+    {
+      "name": "Policy 429 {\"retry-after\":\"120\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Policy 429 {\"retry-after\":\"Fri, 23 Oct 2026 19:07:27 GMT\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Policy 503 {}",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 2560x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 2560x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 2560x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 2560x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 2560x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 1920x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 1920x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 1920x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 1920x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 1920x1080 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 1440x900 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 1440x900 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 1440x900 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 1440x900 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 1440x900 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 1366x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 1366x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 1366x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 1366x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 1366x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 1024x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 1024x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 1024x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 1024x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 1024x768 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 768x1024 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 768x1024 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 768x1024 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 768x1024 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 768x1024 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 390x844 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 390x844 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 390x844 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 390x844 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 390x844 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 360x740 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 360x740 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 360x740 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 360x740 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 360x740 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "loading 320x568 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "verified 320x568 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "empty 320x568 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable 320x568 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "retrying 320x568 MOCK",
+      "status": "PASS"
+    },
+    {
+      "name": "Frontend timeout abort and manual recovery",
+      "status": "PASS"
+    }
+  ]
+}

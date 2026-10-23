@@ -1,0 +1,10 @@
+{
+  "results": [
+    "StrictMode dedupe PASS",
+    "Unmount abort/remount recovery PASS",
+    "Old response cannot overwrite newer result PASS",
+    "Remount success no duplicate fetch PASS",
+    "No React errors PASS"
+  ],
+  "errors": []
+}

@@ -81,6 +81,7 @@ function CommunityStars({ rating }: { rating: number }) {
 
 export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGoogleReviews }) {
   const feed = useGoogleReviews(!suppliedData)
+  const [hasRetried, setHasRetried] = useState(false)
   const data = suppliedData ?? feed.data
   const status = suppliedData ? (suppliedData.total === 0 ? 'empty' : 'verified') : feed.status
   const reviewActionUrl = data?.reviewActionUrl || googleReviewLinks.reviewActionUrl
@@ -99,16 +100,20 @@ export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGo
     </CommunityReveal>
     <div className="ze4-review-content" aria-busy={loading}>
     <CommunityReveal className="ze4-review-summary" delay={0.05}>
-      {loading ? <div className="ze4-review-skeleton ze4-review-skeleton-summary" aria-hidden="true" /> : data && data.average !== null ? <><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div><strong>{data.total} avaliações</strong><p>Opiniões de clientes no Google.</p><a data-analytics-review="view" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google <ArrowUpRight size={14} aria-hidden="true" /></a></div></> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>Acompanhe nossos canais oficiais.</p><span className="ze4-review-availability">{status === 'empty' ? 'Ainda sem avalia\u00e7\u00f5es no Google.' : 'Avalia\u00e7\u00f5es indispon\u00edveis nesta p\u00e1gina.'}</span></div></>}
+      {loading ? <div className="ze4-review-skeleton ze4-review-skeleton-summary" aria-hidden="true" /> : data && data.average !== null ? <><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div><strong>{data.total} avaliações</strong><p>Opiniões de clientes no Google.</p><a data-analytics-review="view" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google <ArrowUpRight size={14} aria-hidden="true" /></a></div></> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>Acompanhe nossos canais oficiais.</p><span className="ze4-review-availability">{status === 'empty' ? 'Ainda não há avaliações disponíveis no Google.' : 'Não foi possível carregar as avaliações agora.'}</span></div></>}
     </CommunityReveal>
     <div className="ze4-review-list">
+      {data && data.total > 0 && data.reviews.length === 0 && <p className="ze4-review-no-snippets">A nota e o total estão disponíveis. Consulte os comentários diretamente no Google.</p>}
       {loading ? Array.from({ length: 3 }, (_, index) => <div key={index} className="ze4-review-card ze4-review-skeleton" aria-hidden="true" />) : data ? data.reviews.slice(0, 3).map((review, index) => <CommunityReveal key={review.id} delay={0.1 + index * 0.08} className="ze4-review-card"><span className="ze4-review-avatar" aria-hidden="true">{review.author.slice(0, 1)}</span><div><h3>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</h3><div className="ze4-review-meta"><CommunityStars rating={review.rating} /><span>{review.dateLabel}</span></div>{review.comment && <p className="ze4-review-comment">{review.comment}</p>}<a data-analytics-review="view" href={review.sourceUrl} target="_blank" rel="noopener noreferrer">Ler no Google <ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>) : unavailableCards.map((card, index) => <CommunityReveal key={card.title} delay={0.1 + index * 0.08} className="ze4-review-card ze4-review-unavailable"><span className="ze4-review-info-icon" aria-hidden="true">{card.icon}</span><div><h3>{card.title}</h3><p>{card.description}</p><a href={card.href} target="_blank" rel="noopener noreferrer">{card.action}<ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>)}
     </div>
     </div>
     <p className="ze4-reviews-status" role="status">{loading ? 'Carregando avaliações do Google…' : data ? data.total === 0 ? 'Nenhuma avaliação disponível no Google no momento.' : 'Avaliações de clientes. Fonte: Google.' : 'As avaliações do Google estão indisponíveis no momento.'}</p>
+    {!suppliedData && (hasRetried || status === 'unavailable' && feed.retryable) && <button type="button" className="ze4-review-retry ze4-button-outline" aria-disabled={loading || status !== 'unavailable' || !feed.retryable || feed.retrySeconds > 0} onClick={() => { setHasRetried(true); feed.retry() }}>
+      {loading ? 'CARREGANDO…' : status === 'verified' || status === 'empty' ? 'ATUALIZADO' : feed.retrySeconds > 0 ? `TENTAR NOVAMENTE EM ${feed.retrySeconds}s` : 'TENTAR NOVAMENTE'}
+    </button>}
     <CommunityReveal className="ze4-reviews-actions" delay={0.2}>
-      {reviewActionUrl && <a data-analytics-review="write" href={reviewActionUrl} className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
-      <a data-analytics-review="view" href={sourceUrl} className="ze4-button-outline" target="_blank" rel="noopener noreferrer">VER TODAS AS AVALIAÇÕES<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
+      {reviewActionUrl && <a data-analytics-review="write" href={reviewActionUrl} aria-label="Avaliar no Google (abre em nova aba)" className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
+      <a data-analytics-review="view" href={sourceUrl} aria-label="Ver todas as avaliações no Google (abre em nova aba)" className="ze4-button-outline" target="_blank" rel="noopener noreferrer">VER TODAS AS AVALIAÇÕES<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
     </CommunityReveal>
   </section>
 }

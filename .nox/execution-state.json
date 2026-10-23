@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "WAITING_USER_ACTION",
-  "currentSprint": "ZE-03-REWORK-POST-ZE09",
-  "currentStep": "Owner visual acceptance of technically reviewed implementation",
+  "status": "COMPLETED",
+  "currentSprint": "ZE-10",
+  "currentStep": "Independent technical scope accepted; preserved external and owner gates",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
-  "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Owner validates new hero visually. ZE-09 remains separately waiting on client/Profile/API/OAuth; ZE-10+ queued.",
+  "stopReason": null,
+  "nextAction": "Await ZE-09 client/Profile/API/OAuth and final hero owner visual acceptance. ZE-11 remains QUEUED and unauthorized.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -602,8 +602,86 @@
     {
       "id": "ZE-10",
       "title": "ExperiÃªncia e confiabilidade das avaliaÃ§Ãµes Google",
-      "status": "QUEUED",
-      "criteria": []
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-10-C01",
+          "description": "Reliability, controlled retry, timeout, deduplication and valid data",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10-Report.md",
+            "evidence/ZE-10/api-tests-result.txt",
+            "evidence/ZE-10/qa-browser.json",
+            "evidence/ZE-10/hook-lifecycle.json",
+            "evidence/ZE-10/recovery-matrix.json",
+            "evidence/ZE-10/performance-summary.json",
+            "evidence/ZE-10/review-security.md"
+          ]
+        },
+        {
+          "id": "ZE-10-C02",
+          "description": "Reference4 UX, honest states and animations",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10-Report.md",
+            "evidence/ZE-10/api-tests-result.txt",
+            "evidence/ZE-10/qa-browser.json",
+            "evidence/ZE-10/hook-lifecycle.json",
+            "evidence/ZE-10/recovery-matrix.json",
+            "evidence/ZE-10/performance-summary.json",
+            "evidence/ZE-10/review-security.md"
+          ]
+        },
+        {
+          "id": "ZE-10-C03",
+          "description": "Accessibility, secure links, keyboard, responsive/reduced motion",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10-Report.md",
+            "evidence/ZE-10/api-tests-result.txt",
+            "evidence/ZE-10/qa-browser.json",
+            "evidence/ZE-10/hook-lifecycle.json",
+            "evidence/ZE-10/recovery-matrix.json",
+            "evidence/ZE-10/performance-summary.json",
+            "evidence/ZE-10/review-security.md"
+          ]
+        },
+        {
+          "id": "ZE-10-C04",
+          "description": "Build/lint, API/hook/E2E, visual/performance/security and scoped commit",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10-Report.md",
+            "evidence/ZE-10/api-tests-result.txt",
+            "evidence/ZE-10/qa-browser.json",
+            "evidence/ZE-10/hook-lifecycle.json",
+            "evidence/ZE-10/recovery-matrix.json",
+            "evidence/ZE-10/performance-summary.json",
+            "evidence/ZE-10/review-security.md"
+          ]
+        }
+      ],
+      "dependsOn": "ZE-09",
+      "dependencyException": {
+        "approvedBy": "owner",
+        "date": "2026-10-23",
+        "contract": "attachment ed20ef22-84e5-4df4-8343-0403f3612f4a/Pasted text.txt",
+        "limitedTo": "ZE-10 independent criteria",
+        "preservedStates": [
+          "ZE-09 WAITING_USER_ACTION",
+          "ZE-03-REWORK-POST-ZE09 WAITING_USER_ACTION"
+        ]
+      },
+      "externalValidation": {
+        "status": "PENDING",
+        "scope": "Real Google reviews/rating/count and actual submission flow remain gated by ZE-09; not required for independent deterministic ZE-10 acceptance."
+      },
+      "technicalApproval": "PASS_INDEPENDENT_SCOPE",
+      "noAutomaticAdvance": true
     },
     {
       "id": "ZE-11",
@@ -618,5 +696,5 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-08"
+  "lastCompletedSprint": "ZE-10"
 }

@@ -1,0 +1,14 @@
+{
+  "sourceChanges": [
+    "functions/api/google-reviews.ts",
+    "src/features/landing/components/ze04/CommunityContact.css",
+    "src/features/landing/components/ze04/CommunityContact.tsx",
+    "src/features/landing/hooks/useGoogleReviews.ts"
+  ],
+  "heroServicesProcessLocationSourcePreservation": "PASS only Google review hook/API/CSS/JSX touched; Instagram source preserved",
+  "ZE09DirtyDocumentsIdenticalToCheckpoint": true,
+  "rootReview": "PASS source safety and structural visual reference4 comparison. Existing editorial composition preserved; safe plain text, stars, cards, CTAs. MOCK clearly labeled. No human visual approval inferred.",
+  "realGoogle": "PENDING ZE09; no mock production content. Owner links preserved, effective Google login/antibot flow still manual pending ZE09.",
+  "security": "No environment files read/copied, no secret logging, no storage, no billing/API/project edits. Deterministic tests only.",
+  "WCAGScope": "Keyboard/focus/status/stars/reduced motion and review zoom checked. No full WCAG certification. Global CSS zoom overflow observed outside Google component and documented."
+}

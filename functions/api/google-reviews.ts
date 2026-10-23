@@ -15,22 +15,25 @@ const text = (value: unknown) => typeof value === 'string' ? value : ''
 const normalized = (value: unknown) => text(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 const stars: Record<string, number> = { ONE: 1, TWO: 2, THREE: 3, FOUR: 4, FIVE: 5 }
 
-function json(body: unknown, status = 200) {
+function json(body: unknown, status = 200, retryAfter?: string) {
   return Response.json(body, { status, headers: {
     'cache-control': 'private, no-store, max-age=0',
     'cdn-cache-control': 'no-store',
     'cloudflare-cdn-cache-control': 'no-store',
     'x-content-type-options': 'nosniff',
+    ...(retryAfter ? { 'retry-after': retryAfter } : {}),
   } })
 }
 
 class UpstreamError extends Error {
   status: number
   category: string
-  constructor(status: number, category: string) {
+  retryAfter?: string
+  constructor(status: number, category: string, retryAfter?: string) {
     super(category)
     this.status = status
     this.category = category
+    this.retryAfter = retryAfter
   }
 }
 
@@ -79,7 +82,7 @@ async function upstream(url: string, init: RequestInit): Promise<Json> {
   if (!response.ok) {
     await response.body?.cancel()
     throw new UpstreamError(response.status === 429 ? 429 : 502,
-      response.status === 429 ? 'rate_limited' : [400, 401].includes(response.status) ? 'authentication' : response.status === 403 ? 'permission' : response.status === 404 ? 'location' : 'upstream')
+      response.status === 429 ? 'rate_limited' : [400, 401].includes(response.status) ? 'authentication' : response.status === 403 ? 'permission' : response.status === 404 ? 'location' : 'upstream', response.status === 429 ? response.headers.get('retry-after') || '60' : undefined)
   }
   return readJson(response)
 }
@@ -125,7 +128,7 @@ export async function handleGoogleReviews(env: GoogleReviewsEnv, request: Reques
       const review = object(value), reviewer = object(review.reviewer)
       const id = text(review.reviewId), rating = stars[text(review.starRating)]
       const date = text(review.updateTime) || text(review.createTime)
-      if (!id || id.length > 256 || !rating || !date || Number.isNaN(Date.parse(date)) || typeof review.comment !== 'undefined' && typeof review.comment !== 'string') throw new UpstreamError(502, 'invalid_response')
+      if (!id || id.length > 256 || text(reviewer.displayName).length > 512 || text(review.comment).length > 50000 || !rating || !date || Number.isNaN(Date.parse(date)) || typeof review.comment !== 'undefined' && typeof review.comment !== 'string') throw new UpstreamError(502, 'invalid_response')
       return {
         id, author: text(reviewer.displayName) || 'Usuário do Google', rating,
         comment: text(review.comment),
@@ -133,11 +136,11 @@ export async function handleGoogleReviews(env: GoogleReviewsEnv, request: Reques
         sourceUrl,
       }
     })
-    if (reviews.length > Number(total) || Number(total) > 0 && reviews.length === 0) throw new UpstreamError(502, 'invalid_response')
+    if (reviews.length > Number(total) || new Set(reviews.map(review => review.id)).size !== reviews.length) throw new UpstreamError(502, 'invalid_response')
     return json({ source: 'google_business_profile', average, total, reviews, sourceUrl, ...(reviewActionUrl ? { reviewActionUrl } : {}) })
   } catch (error) {
     const timeout = signal.aborted && !request.signal.aborted
-    return json({ error: { category: timeout ? 'timeout' : error instanceof UpstreamError ? error.category : 'unavailable', message: 'Avaliações indisponíveis no momento.' } }, timeout ? 504 : error instanceof UpstreamError ? error.status : 502)
+    return json({ error: { category: timeout ? 'timeout' : error instanceof UpstreamError ? error.category : 'unavailable', message: 'Avaliações indisponíveis no momento.' } }, timeout ? 504 : error instanceof UpstreamError ? error.status : 502, error instanceof UpstreamError ? error.retryAfter : undefined)
   }
 }
 

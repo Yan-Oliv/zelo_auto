@@ -1,0 +1,14 @@
+{
+  "kind": "Deterministic simulated unavailable API",
+  "focus": {
+    "active": true,
+    "outline": "solid",
+    "height": 48
+  },
+  "zoom200ReviewsOverflow": false,
+  "globalCssZoomOverflow": true,
+  "externalLinkRel": "PASS",
+  "falseStars": 0,
+  "pageerrors": [],
+  "source": "No credentials read; no customer data logged; 44px retry, visible focus; live Google review flow remains ZE09 pending"
+}
