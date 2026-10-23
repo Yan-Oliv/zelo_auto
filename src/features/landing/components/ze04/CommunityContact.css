@@ -1,0 +1,281 @@
+.ze4-community {
+  position: relative;
+  padding: clamp(38px, 3.5vw, 64px) 0 clamp(64px, 4.6vw, 84px);
+  background: radial-gradient(ellipse at 4% 66%, #c7b89d19, transparent 42%), radial-gradient(ellipse at 99% 56%, #bca67b16, transparent 45%), var(--ze4-canvas, #fafaf8);
+  color: var(--ze4-ink, #161719);
+}
+.ze4-community-columns { display: grid; grid-template-columns: 1.19fr 1fr; gap: 6.8%; }
+.ze4-instagram, .ze4-google-reviews { min-width: 0; scroll-margin-top: 120px; }
+.ze4-google-reviews { position: relative; }
+.ze4-google-reviews::before { content: ''; position: absolute; left: -8%; top: 0; bottom: 0; width: 1px; background: linear-gradient(#b88b394d, #b88b3930); }
+.ze4-community-eyebrow { display: flex; align-items: center; gap: 20px; margin: 0 0 22px; font-size: clamp(9px, .73vw, 12px); line-height: 1.6; font-weight: 500; letter-spacing: .36em; color: #8b6224; }
+.ze4-community-eyebrow > span:empty { width: 70px; height: 1px; flex: 0 1 70px; background: var(--ze4-gold, #b88b39); }
+.ze4-community-title { margin: 0; font-family: 'Eurostile Extended', 'Zelo Hero', 'Montserrat', sans-serif; font-size: clamp(30px, 3.04vw, 51px); line-height: 1.04; letter-spacing: -.055em; font-weight: 500; }
+.ze4-community-title > span { color: var(--ze4-gold, #b88b39); }
+.ze4-community-description { min-height: 3.3em; margin: 19px 0 25px; max-width: 660px; font-family: 'Zelo Hero', 'Montserrat', sans-serif; font-size: clamp(13px, 1.13vw, 18px); line-height: 1.52; color: #57565b; }
+.ze4-instagram-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.ze4-instagram-tile { position: relative; display: block; overflow: hidden; border-radius: 8px; aspect-ratio: 1; background: #292722; }
+.ze4-instagram-tile > img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ze4-ease, ease); }
+.ze4-instagram-media-icon { position: absolute; top: 12px; right: 12px; color: #fff; filter: drop-shadow(0 1px 3px #000b); }
+.ze4-instagram-hover { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #0008; opacity: 0; color: #fff; transition: opacity .3s; font-size: 10px; letter-spacing: .1em; }
+.ze4-instagram-tile:hover > img, .ze4-instagram-tile:focus-visible > img { transform: scale(1.03); }
+.ze4-instagram-tile:hover .ze4-instagram-hover, .ze4-instagram-tile:focus-visible .ze4-instagram-hover { opacity: 1; }
+.ze4-feed-caption { margin: 12px 0 0; min-height: 2.6em; color: #68635c; font-family: 'Zelo Hero', sans-serif; font-size: 10px; line-height: 1.5; }
+.ze4-feed-caption strong { font-weight: 600; }
+.ze4-instagram-actions { display: flex; align-items: center; gap: 22px; margin-top: 17px; }
+.ze4-instagram-actions .ze4-button { flex: 0 1 310px; gap: 14px; padding: 20px 23px; font-size: 10px; letter-spacing: .08em; }
+.ze4-instagram-actions .ze4-button > svg:last-child { margin-left: auto; }
+.ze4-instagram-handle { padding-left: 21px; border-left: 1px solid #b88b3966; color: #34332f; font-size: clamp(9px, .8vw, 12px); font-weight: 600; white-space: nowrap; }
+.ze4-instagram-handle small { display: block; margin-top: 8px; color: #68635c; font-size: 8px; font-weight: 400; letter-spacing: .12em; }
+.ze4-review-summary { min-height: 130px; display: flex; align-items: center; gap: 28px; padding: 24px 29px; border: 1px solid #fff; border-radius: 12px; background: linear-gradient(105deg, #fff 40%, #f3efe8d9); box-shadow: 0 9px 35px #3027190c; }
+.ze4-google-letter { display: flex; align-items: center; justify-content: center; width: 115px; min-width: 80px; color: var(--ze4-gold, #b88b39); border-right: 1px solid #b88b3977; font-family: Arial, sans-serif; font-weight: 500; font-size: 76px; line-height: 1; padding-right: 27px; }
+.ze4-review-summary > div:last-child { min-width: 0; }
+.ze4-review-summary strong { display: block; font-size: clamp(11px, .92vw, 15px); letter-spacing: .12em; }
+.ze4-review-summary p { font-family: 'Zelo Hero', sans-serif; font-size: 13px; line-height: 1.5; color: #656368; margin: 10px 0 5px; }
+.ze4-review-availability { display: block; font-family: 'Zelo Hero', sans-serif; font-size: 11px; line-height: 1.5; color: #74716d; }
+.ze4-review-list { display: grid; gap: 13px; margin-top: 19px; }
+.ze4-review-card { min-height: 103px; display: flex; align-items: flex-start; gap: 17px; padding: 20px 20px; border: 1px solid #fff; border-radius: 12px; background: #ffffffeb; box-shadow: 0 7px 24px #30271909; transition: box-shadow .3s, transform .3s; }
+.ze4-review-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px #30271912; }
+.ze4-review-info-icon, .ze4-review-avatar { display: flex; align-items: center; justify-content: center; flex: 0 0 43px; height: 43px; border-radius: 50%; color: #9d742e; background: #f1ece3; border: 1px solid #b88b3922; }
+.ze4-review-card h3 { margin: 0 0 8px; font-size: 12px; line-height: 1.4; font-weight: 600; color: #242323; }
+.ze4-review-card p { font-family: 'Zelo Hero', sans-serif; font-size: clamp(11px, .82vw, 13px); line-height: 1.55; margin: 0; color: #68656b; }
+.ze4-review-meta { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-bottom: 7px; font-size: 10px; color: #767373; }
+.ze4-review-stars { display: inline-flex; color: #a87923; gap: 2px; }
+.ze4-review-score { padding-right: 24px; border-right: 1px solid #b88b3977; }
+.ze4-review-score > strong { font-size: 52px; color: var(--ze4-gold, #b88b39); line-height: 1; letter-spacing: -.02em; margin-bottom: 10px; }
+.ze4-review-card a, .ze4-review-summary a { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; font-size: 10px; color: #8b6224; }
+.ze4-reviews-actions { display: flex; align-items: center; gap: 18px; margin-top: 20px; }
+.ze4-reviews-actions .ze4-button-outline { padding: 17px 19px; gap: 16px; font-size: 9px; letter-spacing: .08em; white-space: normal; }
+.ze4-reviews-source { display: inline-flex; align-items: center; gap: 7px; max-width: 110px; font-size: 8px; line-height: 1.5; letter-spacing: .08em; color: #775828; }
+.ze4-reviews-source svg { flex-shrink: 0; }
+.ze4-location { position: relative; isolation: isolate; overflow: hidden; background: var(--ze4-dark, #101110); color: #f4f2ed; min-height: 650px; padding: clamp(62px, 4.5vw, 86px) 0 49px; scroll-margin-top: 90px; }
+.ze4-location-scene { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%; }
+.ze4-location::before { content: ''; position: absolute; z-index: -2; inset: 0; background: linear-gradient(90deg, #0d0e0ef2 0%, #131313d9 27%, #11111191 49%, #11111113 82%), linear-gradient(0deg, #101110e8, transparent 44%); }
+.ze4-location-wordmark { position: absolute; z-index: -1; top: -30px; left: 34%; font-family: 'Eurostile Extended', 'Montserrat', sans-serif; font-size: clamp(200px, 26vw, 460px); font-weight: 700; line-height: 1; letter-spacing: -.065em; color: transparent; -webkit-text-stroke: 1px #c5a26465; pointer-events: none; }
+.ze4-location-layout { display: grid; grid-template-columns: 32.5% 46.5% 1fr; gap: 3%; align-items: end; }
+.ze4-location-copy { min-width: 0; }
+.ze4-location .ze4-community-eyebrow { margin-bottom: 22px; color: #f2efe8; gap: 12px; letter-spacing: .32em; }
+.ze4-location .ze4-community-eyebrow > span:empty { display: none; }
+.ze4-location .ze4-location-eyebrow-gold { color: #d3ab63; letter-spacing: .38em; }
+.ze4-location h2 { margin: 0; font-family: 'Eurostile Extended', 'Zelo Hero', sans-serif; font-size: clamp(30px, 2.65vw, 45px); line-height: 1.13; font-weight: 400; letter-spacing: -.035em; }
+.ze4-location h2 > span { color: #d1ab63; }
+.ze4-location-description { font-family: 'Zelo Hero', sans-serif; margin: 17px 0 23px; max-width: 420px; color: #c7c6c3; line-height: 1.55; font-size: clamp(12px, 1vw, 16px); }
+.ze4-location-info { display: grid; gap: 16px; scroll-margin-top: 130px; }
+.ze4-location-info-row { display: flex; gap: 20px; align-items: flex-start; }
+.ze4-location-icon { flex: 0 0 52px; height: 52px; display: flex; align-items: center; justify-content: center; color: #d6b16a; border: 1px solid #c29a56; border-radius: 9px; background: #1111116b; }
+.ze4-location-info-row h3 { margin: 2px 0 6px; color: #e3e0da; font-size: 8px; line-height: 1.5; letter-spacing: .23em; font-weight: 400; }
+.ze4-location-info-row address { font-family: 'Zelo Hero', sans-serif; max-width: 310px; font-size: 12px; font-style: normal; line-height: 1.6; color: #f2f0ea; }
+.ze4-location-info-row a { font-size: 13px; font-weight: 500; }
+.ze4-location-info-row p { font-family: 'Zelo Hero', sans-serif; font-size: 12px; color: #c4c3bf; margin: 5px 0 0; }
+.ze4-location-schedule { margin: 0; font-family: 'Zelo Hero', sans-serif; font-size: 11px; line-height: 1.7; color: #e0ded9; }
+.ze4-location-schedule > div { display: flex; gap: 16px; justify-content: space-between; }
+.ze4-location-schedule dd { margin: 0; white-space: nowrap; }
+.ze4-location-map-column { min-width: 0; padding-bottom: 0; }
+.ze4-location-map { position: relative; height: clamp(280px, 23vw, 386px); border: 1px solid #cda45c; border-radius: 23px; overflow: hidden; background: #242623; box-shadow: 0 18px 50px #0005; }
+.ze4-location-map-label { position: absolute; z-index: 1; top: 16px; left: 18px; display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid #bda0668a; border-radius: 9px; background: #151512e8; color: #fff; font-size: 9px; letter-spacing: .2em; pointer-events: none; }
+.ze4-location-map-label svg { color: #d0a455; }
+.ze4-location-map iframe { display: block; width: 100%; height: 100%; border: 0; color-scheme: normal; }
+.ze4-location-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 17px; }
+.ze4-location-actions .ze4-button, .ze4-location-actions .ze4-button-outline { display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 55px; padding: 12px 13px; font-size: 8px; line-height: 1.5; white-space: normal; letter-spacing: .1em; }
+.ze4-location-actions svg { flex: 0 0 17px; width: 17px; }
+.ze4-location .ze4-button-outline { color: #f5f1e9; border-color: #c2b7a1; background: #1414146b; }
+.ze4-location-side-note { border-left: 1px solid #c7a35f; padding-left: 22px; margin: 0 0 28px auto; font-size: 9px; letter-spacing: .35em; line-height: 2.3; color: #e2ded6; }
+.ze4-location-scene-caption { position: absolute; right: 5%; bottom: 13px; margin: 0; font-family: 'Zelo Hero', sans-serif; font-size: 9px; color: #e9e4d2bd; letter-spacing: .06em; }
+.ze4-footer { position: relative; background: linear-gradient(120deg, #121312, #090a09); border-top: 1px solid #b88b39; color: #c9c8c4; }
+.ze4-footer-main { display: grid; grid-template-columns: 2.25fr 1fr .8fr 1fr; gap: 3.2%; padding: 30px 0 24px; }
+.ze4-footer h2 { margin: 0 0 17px; color: #f2f0eb; font-size: 8px; line-height: 1.6; font-weight: 500; letter-spacing: .25em; }
+.ze4-footer-brand { display: grid; grid-template-columns: 44% 1fr; gap: 23px; align-items: center; }
+.ze4-footer-brand > a { display: block; }
+.ze4-footer-brand img { display: block; width: 100%; height: auto; max-height: 115px; object-fit: contain; }
+.ze4-footer-brand > div { padding-left: 24px; border-left: 1px solid #b88b3977; }
+.ze4-footer-statement { font-size: 8px !important; line-height: 2 !important; letter-spacing: .24em; margin: 0 0 10px !important; color: #f0eee8; }
+.ze4-footer-statement > span { color: #d0a455; }
+.ze4-footer-brand p { margin: 0; font-family: 'Zelo Hero', sans-serif; font-size: clamp(10px, .75vw, 12px); line-height: 1.65; }
+.ze4-footer-nav > div { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; row-gap: 10px; }
+.ze4-footer a { font-family: 'Zelo Hero', sans-serif; font-size: clamp(10px, .75vw, 12px); line-height: 1.5; transition: color .25s; }
+.ze4-footer a:hover { color: #e4bd73; }
+.ze4-footer-social > a, .ze4-footer-contact > a { display: flex; align-items: center; gap: 11px; margin-top: 11px; }
+.ze4-footer-contact svg { color: #d0a455; }
+.ze4-footer-institutional { display: grid; grid-template-columns: 1fr auto; gap: 35px; padding: 18px 0; align-items: center; border-top: 1px solid #b88b3930; }
+.ze4-footer-verse p { max-width: 790px; margin: 0; font-family: 'Zelo Hero', sans-serif; font-size: 10px; line-height: 1.7; color: #b8b6b1; }
+.ze4-footer-verse > span { display: block; margin-top: 7px; font-size: 8px; letter-spacing: .16em; color: #c29a56; }
+.ze4-footer-partners { min-width: 210px; scroll-margin-top: 120px; }
+.ze4-footer-partners h2 { margin-bottom: 8px; font-size: 7px; color: #bdb8ac; }
+.ze4-footer-partners > div { display: flex; align-items: center; gap: 23px; }
+.ze4-footer-partners img { width: 86px; height: 34px; object-fit: contain; }
+.ze4-footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 17px 0 20px; border-top: 1px solid #b88b3945; font-family: 'Zelo Hero', sans-serif; font-size: 8px; line-height: 1.6; letter-spacing: .055em; color: #a6a5a0; }
+.ze4-footer-bottom p { margin: 0; }
+.ze4-footer-bottom > span { white-space: nowrap; }
+.ze4-footer-bottom p > span { margin: 0 10px; color: #9f803e; }
+.ze4-community a:focus-visible, .ze4-location a:focus-visible, .ze4-footer a:focus-visible { outline: 2px solid #bb8e3b; outline-offset: 5px; }
+@media (min-width: 1750px) {
+  .ze4-review-summary { min-height: 145px; }
+  .ze4-review-card { min-height: 120px; padding-block: 24px; }
+  .ze4-review-card p { font-size: 13px; }
+  .ze4-review-card h3 { font-size: 14px; }
+  .ze4-location { min-height: 730px; }
+  .ze4-location-info-row address, .ze4-location-info-row a, .ze4-location-info-row p { font-size: 14px; }
+  .ze4-location-schedule { font-size: 13px; }
+}
+@media (max-width: 1100px) {
+  .ze4-community-columns { gap: 6%; grid-template-columns: 1.1fr 1fr; }
+  .ze4-community-title { font-size: clamp(26px, 3vw, 34px); }
+  .ze4-community-eyebrow { font-size: 8px; letter-spacing: .22em; gap: 12px; }
+  .ze4-community-description { min-height: 5em; }
+  .ze4-instagram-actions { flex-direction: column; align-items: stretch; gap: 16px; }
+  .ze4-instagram-actions .ze4-button { flex: auto; justify-content: center; }
+  .ze4-instagram-handle { padding: 0; border: 0; }
+  .ze4-review-summary { padding: 18px; gap: 17px; min-height: 110px; }
+  .ze4-google-letter { font-size: 60px; width: 80px; min-width: 60px; padding-right: 15px; }
+  .ze4-review-summary strong { font-size: 10px; }
+  .ze4-review-summary p { font-size: 11px; }
+  .ze4-review-card { gap: 12px; padding: 16px; }
+  .ze4-review-info-icon { flex-basis: 34px; height: 34px; }
+  .ze4-reviews-actions { flex-wrap: wrap; }
+  .ze4-location-layout { grid-template-columns: 39% 58%; gap: 3%; }
+  .ze4-location-side-note { display: none; }
+  .ze4-location h2 { font-size: 31px; }
+  .ze4-location-map { height: 330px; }
+  .ze4-location .ze4-community-eyebrow { font-size: 8px; letter-spacing: .18em; gap: 8px; }
+  .ze4-location-info-row { gap: 13px; }
+  .ze4-location-icon { flex-basis: 44px; height: 44px; }
+  .ze4-footer-main { grid-template-columns: 2fr 1.1fr 1fr; gap: 30px; }
+  .ze4-footer-brand { grid-column: 1 / -1; grid-template-columns: 180px 1fr; max-width: 560px; }
+  .ze4-footer-brand img { max-height: 85px; }
+  .ze4-footer-contact { min-width: 0; }
+}
+@media (max-width: 700px) {
+  .ze4-community { padding: 54px 0; }
+  .ze4-community-columns { grid-template-columns: 1fr; gap: 51px; }
+  .ze4-community-title { font-size: clamp(29px, 8vw, 45px); }
+  .ze4-community-eyebrow { font-size: 8px; margin-bottom: 18px; letter-spacing: .24em; }
+  .ze4-community-description { min-height: 0; margin: 16px 0 23px; font-size: 13px; }
+  .ze4-instagram-grid { gap: 6px; }
+  .ze4-instagram-tile { border-radius: 6px; }
+  .ze4-instagram-media-icon { width: 17px; height: 17px; top: 8px; right: 8px; }
+  .ze4-instagram-actions { margin-top: 14px; }
+  .ze4-instagram-actions .ze4-button { min-height: 53px; padding: 16px 20px; }
+  .ze4-instagram-handle { text-align: center; font-size: 11px; }
+  .ze4-google-reviews { padding-top: 40px; border-top: 1px solid #b88b3940; }
+  .ze4-google-reviews::before { display: none; }
+  .ze4-review-summary { min-height: 119px; padding: 22px; gap: 23px; }
+  .ze4-google-letter { width: 79px; min-width: 65px; font-size: 66px; }
+  .ze4-review-summary strong { font-size: 11px; }
+  .ze4-review-summary p { font-size: 12px; }
+  .ze4-review-availability { font-size: 10px; }
+  .ze4-review-card { min-height: 112px; padding: 20px 17px; }
+  .ze4-review-card h3 { font-size: 12px; }
+  .ze4-review-card p { font-size: 11px; }
+  .ze4-reviews-actions { justify-content: space-between; gap: 10px; }
+  .ze4-reviews-actions .ze4-button-outline { padding: 16px 14px; font-size: 8px; gap: 8px; }
+  .ze4-reviews-source { font-size: 7px; max-width: 77px; }
+  .ze4-location { padding: 52px 0 42px; min-height: 0; }
+  .ze4-location-scene { object-position: 73% 50%; opacity: .65; }
+  .ze4-location::before { background: linear-gradient(90deg, #101110f2, #101110b5), linear-gradient(0deg, #101110f5, transparent 70%); }
+  .ze4-location-wordmark { top: 18px; left: 15%; font-size: 210px; opacity: .6; }
+  .ze4-location-layout { grid-template-columns: 1fr; gap: 31px; }
+  .ze4-location h2 { font-size: clamp(32px, 8.1vw, 44px); line-height: 1.13; }
+  .ze4-location-description { font-size: 13px; margin: 20px 0 27px; }
+  .ze4-location-info { gap: 21px; }
+  .ze4-location-icon { flex-basis: 48px; height: 48px; }
+  .ze4-location-info-row { gap: 18px; }
+  .ze4-location-info-row h3 { font-size: 8px; }
+  .ze4-location-info-row address, .ze4-location-info-row p { font-size: 12px; }
+  .ze4-location-info-row a { font-size: 14px; }
+  .ze4-location-schedule { font-size: 12px; }
+  .ze4-location-map { height: 300px; border-radius: 16px; }
+  .ze4-location-map-label { left: 13px; top: 13px; font-size: 8px; padding: 11px 13px; }
+  .ze4-location-actions { grid-template-columns: 1fr; gap: 12px; margin-top: 15px; }
+  .ze4-location-actions .ze4-button, .ze4-location-actions .ze4-button-outline { min-height: 54px; font-size: 10px; gap: 15px; }
+  .ze4-location-actions svg { width: 20px; flex-basis: 20px; }
+  .ze4-location-scene-caption { right: 5%; bottom: 12px; font-size: 8px; }
+  .ze4-footer-main { grid-template-columns: 1fr 1fr; gap: 30px 23px; padding: 28px 0; }
+  .ze4-footer-brand { grid-template-columns: 1fr; gap: 11px; }
+  .ze4-footer-brand > a { max-width: 190px; }
+  .ze4-footer-brand img { max-height: 110px; }
+  .ze4-footer-brand > div { padding-left: 17px; }
+  .ze4-footer-brand p { font-size: 11px; }
+  .ze4-footer h2 { font-size: 8px; margin-bottom: 15px; }
+  .ze4-footer a { font-size: 10px; }
+  .ze4-footer-nav > div { grid-template-columns: 1fr; gap: 12px; }
+  .ze4-footer-contact { grid-column: 1 / -1; }
+  .ze4-footer-contact > a { font-size: 12px; }
+  .ze4-footer-institutional { grid-template-columns: 1fr; gap: 24px; padding: 24px 0; }
+  .ze4-footer-verse p { font-size: 10px; }
+  .ze4-footer-partners img { width: 100px; height: 40px; }
+  .ze4-footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 0 23px; font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ze4-community *, .ze4-location *, .ze4-footer * { animation: none !important; transition-duration: 0s !important; }
+  .ze4-instagram-tile:hover > img, .ze4-instagram-tile:focus-visible > img, .ze4-review-card:hover { transform: none; }
+}
+
+/* Readable editorial body type at every viewport; display faces stay in headings. */
+.ze4-community, .ze4-location, .ze4-footer { font-family: 'Zelo Hero', 'Montserrat', Arial, sans-serif; font-weight: 400; }
+.ze4-community-description, .ze4-location-description, .ze4-location-info-row address, .ze4-location-info-row p, .ze4-location-schedule { font-family: 'Zelo Hero', 'Montserrat', Arial, sans-serif; font-weight: 400; font-size: 16px; }
+.ze4-location h2 { font-size: clamp(40px, 3.35vw, 56px); line-height: 1.04; }
+.ze4-location-info { gap: 18px; }
+.ze4-location-info-row h3 { font-size: 10px; letter-spacing: .2em; }
+.ze4-location-info-row a { font-size: 17px; }
+.ze4-location-schedule { line-height: 1.65; }
+.ze4-location-icon { flex-basis: 58px; height: 58px; }
+.ze4-location-map-column { padding-bottom: 0; }
+.ze4-location-actions .ze4-button, .ze4-location-actions .ze4-button-outline { min-height: 60px; font-family: 'Zelo Hero', 'Montserrat', Arial, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .055em; }
+.ze4-page .ze4-location-actions :is(.ze4-button, .ze4-button-outline), .ze4-page .ze4-instagram-actions .ze4-button, .ze4-page .ze4-reviews-actions .ze4-button-outline { font-size: 12px; }
+.ze4-location-actions { gap: 13px; }
+.ze4-location-scene-caption { font-size: 12px; }
+.ze4-feed-caption { font-size: 12px; }
+.ze4-review-card p, .ze4-review-summary p, .ze4-review-availability { font-size: 14px; font-weight: 400; }
+.ze4-review-card h3 { font-size: 14px; }
+.ze4-review-card a { font-size: 12px; }
+.ze4-review-summary strong { font-size: 13px; }
+.ze4-review-card { padding-block: 18px; }
+.ze4-instagram-actions .ze4-button, .ze4-reviews-actions .ze4-button-outline { font-size: 12px; letter-spacing: .045em; }
+.ze4-instagram-handle { font-size: 13px; }
+.ze4-instagram-handle small, .ze4-reviews-source { font-size: 10px; }
+.ze4-footer-main { padding-block: 33px; }
+.ze4-footer h2 { font-size: 10px; }
+.ze4-footer-brand { grid-template-columns: 40% 1fr; gap: 18px; }
+.ze4-footer-brand > div { padding-left: 18px; }
+.ze4-footer-brand p { font-size: 13px; }
+.ze4-footer-statement { font-size: 10px !important; letter-spacing: .15em; }
+.ze4-footer a { font-size: 14px; font-weight: 400; }
+.ze4-footer-nav > div { column-gap: 12px; }
+.ze4-footer-verse p, .ze4-footer-bottom { font-size: 12px; }
+.ze4-footer-verse > span, .ze4-footer-partners h2 { font-size: 10px; }
+.ze4-footer-partners img { width: 100px; height: 40px; }
+@media (max-width: 1200px) and (min-width: 701px) {
+  .ze4-location h2 { font-size: clamp(36px, 3.8vw, 44px); }
+  .ze4-location-actions { grid-template-columns: 1fr; }
+  .ze4-location-actions .ze4-button, .ze4-location-actions .ze4-button-outline { min-height: 54px; }
+  .ze4-location-info-row { gap: 12px; }
+  .ze4-location-info-row address, .ze4-location-schedule { font-size: 16px; }
+  .ze4-community-columns { grid-template-columns: 1fr 1fr; }
+  .ze4-instagram-actions .ze4-button { padding-inline: 14px; }
+  .ze4-footer-brand { grid-template-columns: 180px 1fr; }
+}
+@media (max-width: 700px) {
+  .ze4-community { padding-top: 40px; }
+  .ze4-location h2 { font-size: clamp(34px, 9.1vw, 45px); }
+  .ze4-location-info-row h3 { font-size: 10px; letter-spacing: .12em; }
+  .ze4-location-info-row a { font-size: 17px; }
+  .ze4-location-info-row { gap: 14px; }
+  .ze4-location-icon { flex-basis: 46px; height: 50px; }
+  .ze4-location-info-row address { font-size: 16px; }
+  .ze4-location-schedule { font-size: 16px; }
+  .ze4-location-schedule > div { gap: 10px; }
+  .ze4-location-actions .ze4-button, .ze4-location-actions .ze4-button-outline { font-size: 13px; }
+  .ze4-location-scene-caption { font-size: 11px; }
+  .ze4-review-summary { gap: 15px; padding-inline: 18px; }
+  .ze4-review-summary strong { font-size: 12px; letter-spacing: .06em; }
+  .ze4-review-card { gap: 12px; }
+  .ze4-review-card p { font-size: 14px; }
+  .ze4-instagram-actions .ze4-button, .ze4-reviews-actions .ze4-button-outline { font-size: 12px; }
+  .ze4-reviews-actions { flex-direction: column; align-items: stretch; gap: 14px; }
+  .ze4-reviews-source { max-width: none; justify-content: center; font-size: 10px; }
+  .ze4-footer-brand { grid-template-columns: 1fr; }
+  .ze4-footer a { font-size: 14px; }
+  .ze4-footer-contact > a { font-size: 16px; }
+  .ze4-footer-brand p { font-size: 14px; }
+  .ze4-footer-bottom { font-size: 12px; }
+}

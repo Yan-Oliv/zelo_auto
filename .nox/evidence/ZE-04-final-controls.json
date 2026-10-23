@@ -1,0 +1,625 @@
+{
+  "at": "2026-10-23T01:04:58.414Z",
+  "scope": "ZE-04 control and anchor regression, local-only, external navigation blocked at transport",
+  "checks": [
+    {
+      "name": "1920: navigation Início reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#hero",
+        "top": 0,
+        "header": 133.75,
+        "current": "#hero",
+        "dark": false
+      }
+    },
+    {
+      "name": "1920: navigation Início active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#hero",
+        "top": 0,
+        "header": 133.75,
+        "current": "#hero",
+        "dark": false
+      }
+    },
+    {
+      "name": "1920: navigation Serviços reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "top": 150,
+        "header": 133.75,
+        "current": "#servicos",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Serviços active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "top": 150,
+        "header": 133.75,
+        "current": "#servicos",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Sobre reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#processo",
+        "top": 149.59375,
+        "header": 133.75,
+        "current": "#processo",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Sobre active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#processo",
+        "top": 149.59375,
+        "header": 133.75,
+        "current": "#processo",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Resultados reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#resultados",
+        "top": 149.59375,
+        "header": 133.75,
+        "current": "#resultados",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Resultados active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#resultados",
+        "top": 149.59375,
+        "header": 133.75,
+        "current": "#resultados",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Avaliações reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#avaliacoes",
+        "top": 150.1875,
+        "header": 133.75,
+        "current": "#avaliacoes",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Avaliações active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#avaliacoes",
+        "top": 150.1875,
+        "header": 133.75,
+        "current": "#avaliacoes",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Contato reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#contato",
+        "top": 219.953125,
+        "header": 133.75,
+        "current": "#contato",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: navigation Contato active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#contato",
+        "top": 219.953125,
+        "header": 133.75,
+        "current": "#contato",
+        "dark": true
+      }
+    },
+    {
+      "name": "1920: all outgoing links use existing real channels",
+      "pass": true,
+      "evidence": [
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Faça seu orçamento",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Lavagem Completa",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Limpeza Interna",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Higienização de Bancos",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Higienização de Carpete",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de cuidado com a pintura automotiva.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de detalhamento do interior de um veículo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de cuidado com os bancos.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de higienização de carpete automotivo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de acabamento automotivo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de um veículo com acabamento detalhado.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "VER NOSSO INSTAGRAM",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir Instagram",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Falar no WhatsApp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "Como chegar",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "VER LOCALIZAÇÃO NO GOOGLE MAPS",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "(64) 99616-1968",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "SOLICITAR ORÇAMENTO",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "VER ROTA NO MAPS",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Instagram",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "Google Maps",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "(64) 99616-1968",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Falar no WhatsApp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "name": "1920: four service actions open real WhatsApp URL",
+      "pass": true,
+      "evidence": [
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+      ]
+    },
+    {
+      "name": "1920: search navigation lands location and closes",
+      "pass": true
+    },
+    {
+      "name": "1920: keyboard focus visible",
+      "pass": true,
+      "evidence": {
+        "outline": "solid",
+        "width": "2px"
+      }
+    },
+    {
+      "name": "390: navigation Início reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#hero",
+        "top": 0,
+        "header": 89.171875,
+        "current": "#hero",
+        "dark": false
+      }
+    },
+    {
+      "name": "390: navigation Início active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#hero",
+        "top": 0,
+        "header": 89.171875,
+        "current": "#hero",
+        "dark": false
+      }
+    },
+    {
+      "name": "390: navigation Serviços reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "top": 105,
+        "header": 89.171875,
+        "current": "#servicos",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Serviços active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#servicos",
+        "top": 105,
+        "header": 89.171875,
+        "current": "#servicos",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Sobre reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#processo",
+        "top": 105.640625,
+        "header": 89.171875,
+        "current": "#processo",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Sobre active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#processo",
+        "top": 105.640625,
+        "header": 89.171875,
+        "current": "#processo",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Resultados reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#resultados",
+        "top": 105.140625,
+        "header": 89.171875,
+        "current": "#resultados",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Resultados active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#resultados",
+        "top": 105.140625,
+        "header": 89.171875,
+        "current": "#resultados",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Avaliações reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#avaliacoes",
+        "top": 105.59375,
+        "header": 89.171875,
+        "current": "#avaliacoes",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Avaliações active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#avaliacoes",
+        "top": 105.59375,
+        "header": 89.171875,
+        "current": "#avaliacoes",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Contato reaches accessible section",
+      "pass": true,
+      "evidence": {
+        "hash": "#contato",
+        "top": 104.765625,
+        "header": 89.171875,
+        "current": "#contato",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: navigation Contato active aria-current",
+      "pass": true,
+      "evidence": {
+        "hash": "#contato",
+        "top": 104.765625,
+        "header": 89.171875,
+        "current": "#contato",
+        "dark": true
+      }
+    },
+    {
+      "name": "390: all outgoing links use existing real channels",
+      "pass": true,
+      "evidence": [
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Faça seu orçamento",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Lavagem Completa",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Limpeza Interna",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Higienização de Bancos",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento: Higienização de Carpete",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Solicitar orçamento",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de cuidado com a pintura automotiva.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de detalhamento do interior de um veículo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de cuidado com os bancos.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de higienização de carpete automotivo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de acabamento automotivo.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir perfil oficial da Zelo — Imagem editorial de um veículo com acabamento detalhado.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "VER NOSSO INSTAGRAM",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Abrir Instagram",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Falar no WhatsApp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "Como chegar",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "VER LOCALIZAÇÃO NO GOOGLE MAPS",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "(64) 99616-1968",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "SOLICITAR ORÇAMENTO",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "VER ROTA NO MAPS",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/zelo_autoestetica/",
+          "label": "Instagram",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+          "label": "Google Maps",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "(64) 99616-1968",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "label": "Falar no WhatsApp",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "name": "390: four service actions open real WhatsApp URL",
+      "pass": true,
+      "evidence": [
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+        "https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+      ]
+    },
+    {
+      "name": "390: search navigation lands location and closes",
+      "pass": true
+    },
+    {
+      "name": "390: mobile menu Escape closes and restores focus",
+      "pass": true,
+      "evidence": {
+        "menuCount": 0
+      }
+    },
+    {
+      "name": "390: keyboard focus visible",
+      "pass": true,
+      "evidence": {
+        "outline": "solid",
+        "width": "2px"
+      }
+    }
+  ],
+  "summary": {
+    "pass": 33,
+    "fail": 0
+  }
+}

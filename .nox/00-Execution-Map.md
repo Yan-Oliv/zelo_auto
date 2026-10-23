@@ -7,7 +7,7 @@ Atualizado em 2026-10-22. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 | ZE-01 | Segurança e baseline | COMPLETED | - | Preservado |
 | ZE-02 | Desacoplamento do 3D | COMPLETED | ZE-01 | Preservado |
 | ZE-03 | Hero cinematográfica final fiel à referência, camadas e intro única | COMPLETED | ZE-02 | Aceite local evidenciado no relatório final |
-| ZE-04 | Reestruturação visual | QUEUED | ZE-03 | Fora do objetivo ativo; não executar |
+| ZE-04 | Reestruturação visual | COMPLETED | ZE-03 | Fora do objetivo ativo; não executar |
 | ZE-05 | Performance e acessibilidade | QUEUED | ZE-04 | Fora do objetivo ativo; não executar |
 | ZE-06 | Instagram funcional | QUEUED | ZE-05 | Fora do objetivo ativo; não executar |
 | ZE-07 | SEO técnico local | QUEUED | ZE-06 | Fora do objetivo ativo; não executar |
@@ -28,3 +28,9 @@ ZE-03 COMPLETED após correção de apoio do carro, piso/sombras, frases mobile 
 
 ## Revisão vigente — transparência e intro v4
 ZE-03 COMPLETED. Logo oficial transparente sem placa; intro v4 real comprovada por vídeos/frames. Apoio do carro e mobile preservados. Aceite atual ZE-03-INTRO-*; placa/intro anteriores substituídas. ZE-04 não iniciada; sem produção/push.
+
+## ZE-04 authorized objective, 2026-10-22
+ZE-03 completed at b2bbfda. ZE-04 COMPLETED technically, exactly two deliverables: commercial sections; navigation/contact/identity. Sources new_interface1..5, real site.ts data wins factual conflicts. ZE-05+ outside authorization. No push/deploy.
+
+## ZE-04 technical completion
+Two deliverables implemented and reviewed. Build/lint PASS; QA332 resolved PASS, no open failures; independent review and root/Nox rendered comparison PASS. Owner visual approval not claimed. ZE-05 and successors QUEUED outside authorization. No push/deploy.

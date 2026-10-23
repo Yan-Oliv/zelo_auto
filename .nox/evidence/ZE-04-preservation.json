@@ -1,0 +1,20 @@
+{
+  "baseline": "b2bbfda",
+  "heroSectionSame": true,
+  "preserved": [
+    {
+      "file": "src/features/landing/CinematicHero.css",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/landing/hooks/useInstagramFeed.ts",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/landing/data/site.ts",
+      "unchanged": true
+    }
+  ],
+  "heroIntroKey": "zelo:hero-intro:v4",
+  "dependenciesChanged": false
+}

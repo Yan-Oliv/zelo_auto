@@ -103,3 +103,6 @@ Aceite anterior240d4c2 rejeitado. Resultado atual exige pneus/chassi apoiados, r
 
 ## Retificação vigente ZE-03 — logo e entrada
 Marca oficial deve ser transparente sem suporte/placa. Intro v4 estável exibida uma vez por sessão após assets/fontes/paint visível, comprovada por frames reais/vídeo; entrada de cenário, lettering, carro, frases, header e hint. Critério mobile/piso anterior permanece. Evidências vigentes ZE-03-INTRO-*.
+
+## ZE-04 ? Executed contract, 2026-10-22
+Two deliveries completed technically: commercial sections (PNG2/3/4) and navigation/contact/identity (PNG5, hero integration). Before/after uses labeled interactive demonstrations; Google/Instagram unknown data unavailable honestly. Cadastro site.ts prevails. QA332/0 open, build/lint/review/visual technical PASS. Human owner review separate. ZE-05+ not authorized; no production actions.

@@ -1,0 +1,119 @@
+{
+  "generation": "Built-in image_gen; reference-guided editorial only; no actual customer or business proof",
+  "upscaled": false,
+  "totalBytes": 1524644,
+  "assets": [
+    {
+      "file": "public/editorial/comparison-carpet-after.webp",
+      "bytes": 70400,
+      "width": 834,
+      "height": 311,
+      "sha256": "842de181c3bdc10988d91b2844ab8c8393b71ab9b70f68beb55af82cfabc3d9d"
+    },
+    {
+      "file": "public/editorial/comparison-carpet-before.webp",
+      "bytes": 99310,
+      "width": 834,
+      "height": 311,
+      "sha256": "e57b546ed0d647dbee1367547622c65087de45144597670574e5b80d5621d2be"
+    },
+    {
+      "file": "public/editorial/comparison-paint-after.webp",
+      "bytes": 63758,
+      "width": 834,
+      "height": 311,
+      "sha256": "355b083533d448289d43e35479a2dd8986db28b0673aa352b3da83c1aa26ade8"
+    },
+    {
+      "file": "public/editorial/comparison-paint-before.webp",
+      "bytes": 112286,
+      "width": 834,
+      "height": 311,
+      "sha256": "44ee8301d6a13fe95af987b864a36abdd68e7b5042b6c458d06f681981a420e0"
+    },
+    {
+      "file": "public/editorial/comparison-seats-after.webp",
+      "bytes": 49042,
+      "width": 834,
+      "height": 311,
+      "sha256": "2e81620c646edae17c28216d9474ffb4abab2d0b8ca51a02892111dba5e6f204"
+    },
+    {
+      "file": "public/editorial/comparison-seats-before.webp",
+      "bytes": 75492,
+      "width": 834,
+      "height": 311,
+      "sha256": "19b0f269cc64ce0813704789fdff878abf7259b0091c0faa5fd391224f255f65"
+    },
+    {
+      "file": "public/editorial/location-scene.webp",
+      "bytes": 157198,
+      "width": 1672,
+      "height": 941,
+      "sha256": "bb4aa2b1371c5829fc1772bc75f7b154d895710d0f2bcc30d8f8fdfc93619374"
+    },
+    {
+      "file": "public/editorial/process-delivery.webp",
+      "bytes": 67384,
+      "width": 834,
+      "height": 468,
+      "sha256": "5f53e709597ea1d78ff2a5499954241ba54b96ac89422e3045161bbb3181a67a"
+    },
+    {
+      "file": "public/editorial/process-detail.webp",
+      "bytes": 170976,
+      "width": 1672,
+      "height": 940,
+      "sha256": "a369e55c927552886d75fe94e7562c08e2d65da260ddb0da6d8fdab297f648d9"
+    },
+    {
+      "file": "public/editorial/process-evaluation.webp",
+      "bytes": 59810,
+      "width": 834,
+      "height": 468,
+      "sha256": "dd42c2f9004e62bc5115e41b37f49be32dc5d5af0b5dad4e76f8cbb5a3e51a45"
+    },
+    {
+      "file": "public/editorial/process-execution.webp",
+      "bytes": 56272,
+      "width": 834,
+      "height": 468,
+      "sha256": "4be6fcc90f59ab67db2039ff0e7bf78b4cf30a2d3408243ee63b6eafb7677cb7"
+    },
+    {
+      "file": "public/editorial/quality-products.webp",
+      "bytes": 150890,
+      "width": 1673,
+      "height": 940,
+      "sha256": "fd9369dba746ecea9f146041a79160127d3721d382db7229e89ef355d5636468"
+    },
+    {
+      "file": "public/editorial/service-carpet.webp",
+      "bytes": 120986,
+      "width": 834,
+      "height": 468,
+      "sha256": "3df69d3f9590590dc3959bcf9ff3fafd8b7938c4cbd898e88c4a0d0dbe579aa7"
+    },
+    {
+      "file": "public/editorial/service-interior.webp",
+      "bytes": 52112,
+      "width": 834,
+      "height": 468,
+      "sha256": "4ab158225154cf34cf535171cfc85e2b2f398806fb403b30e9e3acb0cca190c8"
+    },
+    {
+      "file": "public/editorial/service-seats.webp",
+      "bytes": 74712,
+      "width": 834,
+      "height": 468,
+      "sha256": "cdc932f0c2a4e71740c5c78248b14d41bc957e73d6595abdd8c4bdd1619ea23b"
+    },
+    {
+      "file": "public/editorial/service-wash.webp",
+      "bytes": 144016,
+      "width": 834,
+      "height": 468,
+      "sha256": "f32da1069b09d2d53d324e0e737a0044249d6939f3e58fd622a66a943e6596d2"
+    }
+  ]
+}

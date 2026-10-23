@@ -1,63 +1,27 @@
-import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
-import {
-  ArrowUpRight,
-  Camera,
-  CalendarDays,
-  ChevronDown,
-  Search,
-  MapPin,
-  Menu,
-  MessageCircle,
-  Phone,
-  X,
-} from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { ArrowUpRight, CalendarDays, ChevronDown, Search, Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import clsx from 'clsx'
-import {
-  contactCards,
-  contactSectionCopy,
-  footerLinks,
-  instagramCopy,
-  locationInfo,
-  partnerLogos,
-  productBrands,
-  services,
-  siteConfig,
-} from './data/site'
-import { LogoCarousel } from './components/LogoCarousel'
-import { ServiceCard } from './components/ServiceCard'
-import { useInstagramFeed } from './hooks/useInstagramFeed'
-import { Reveal } from '@shared/components/Reveal'
+import { services, siteConfig } from './data/site'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
+import { ServicesSection, ResultsSection, ProcessSection, QualitySection } from './components/ze04/CommercialSections'
+import { CommunitySection, LocationSection, PremiumFooter } from './components/ze04/CommunityContact'
 import './CinematicHero.css'
+import './EditorialLanding.css'
 
 const brandName = 'Zelo Est\u00e9tica Automotiva'
 const budgetLabel = 'Fa\u00e7a seu or\u00e7amento'
-const serviceEyebrow = 'EXCEL\u00caNCIA EM CADA DETALHE'
-const serviceDescription =
-  'Utilizamos tecnologia de ponta e os melhores produtos do mercado, com o mesmo cuidado que voc\u00ea tem pelo seu ve\u00edculo.'
-const instagramLoading = 'Carregando \u00faltimas postagens...'
-const instagramError = 'N\u00e3o foi poss\u00edvel carregar o feed agora.'
-const instagramEmpty = 'Nenhuma publica\u00e7\u00e3o encontrada ainda.'
-const instagramPending =
-  'Perfil conectado. As \u00faltimas postagens aparecem aqui assim que o feed oficial estiver configurado.'
-const mapTitle = 'Mapa Zelo Est\u00e9tica Automotiva'
-const verse =
-  '"Ora, ao Rei dos s\u00e9culos, imortal, invis\u00edvel, ao Deus \u00fanico, s\u00e1bio, seja honra e gl\u00f3ria para todo o sempre. Am\u00e9m."'
-const verseReference = '1 Tim\u00f3teo 1:17'
-const copyrightNotice = 'Zelo Est\u00e9tica Automotiva. Todos os direitos reservados.'
-const transparentPixel =
-  'data:image/gif;base64,R0lGODlhAQABAAAAACw='
 const headerLinks = [
-  { label: 'Início', href: '#hero' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Produtos', href: '#marcas' },
-  { label: 'Instagram', href: '#instagram' },
-  { label: 'Localização', href: '#localizacao' },
+  { label: 'In\u00edcio', href: '#hero' },
+  { label: 'Servi\u00e7os', href: '#servicos' },
+  { label: 'Sobre', href: '#processo' },
+  { label: 'Resultados', href: '#resultados' },
+  { label: 'Avalia\u00e7\u00f5es', href: '#avaliacoes' },
   { label: 'Contato', href: '#contato' },
 ]
-const observedSectionIds = [...headerLinks.map(({ href }) => href.slice(1)), 'parceiros']
+const searchLinks = [...headerLinks, { label: 'Instagram', href: '#instagram' }, { label: 'Produtos', href: '#marcas' }, { label: 'Localiza\u00e7\u00e3o', href: '#localizacao' }]
+const observedSectionIds = ['hero', 'servicos', 'resultados', 'processo', 'marcas', 'instagram', 'avaliacoes', 'localizacao', 'contato', 'parceiros']
 const heroIntroKey = 'zelo:hero-intro:v4'
 let introConsumedInDocument = false
 
@@ -75,8 +39,9 @@ function rememberHeroIntro() {
 
 export function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const menuPanelRef = useRef<HTMLDivElement>(null)
   const [onHero, setOnHero] = useState(true)
-  const instagramRef = useRef<HTMLElement | null>(null)
   const { reducedMotion } = useMotionSettings()
   const heroReducedMotion = reducedMotion || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const [heroIntro, setHeroIntro] = useState<'waiting' | 'playing' | 'settled'>(() =>
@@ -89,9 +54,30 @@ export function LandingPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const searchPanelRef = useRef<HTMLDivElement>(null)
   const searchButtonRef = useRef<HTMLButtonElement>(null)
-  const searchResults = [...headerLinks, ...services.map(({ title }) => ({ label: title, href: '#servicos' }))]
+  const searchResults = [...searchLinks, ...services.map(({ title }) => ({ label: title, href: '#servicos' }))]
     .filter(({ label }) => label.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
       .includes(searchQuery.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()))
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    menuPanelRef.current?.querySelector<HTMLButtonElement>('button')?.focus()
+    const keydown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { event.preventDefault(); setMenuOpen(false); return }
+      if (event.key !== 'Tab') return
+      const controls = Array.from(menuPanelRef.current?.querySelectorAll<HTMLElement>('a[href],button:not([disabled])') ?? [])
+      const first = controls[0], last = controls.at(-1)
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus() }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus() }
+    }
+    document.addEventListener('keydown', keydown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', keydown)
+      menuButtonRef.current?.focus()
+    }
+  }, [menuOpen])
 
   useEffect(() => {
     if (heroReducedMotion) {
@@ -170,28 +156,36 @@ export function LandingPage() {
       document.removeEventListener('keydown', closeWithEscape)
     }
   }, [searchOpen])
-  const instagramFeed = useInstagramFeed()
-  const instagramSectionNear = useNearViewport(instagramRef, '1100px')
   const activeSection = useActiveSection(observedSectionIds)
-  const instagramImagesReady = instagramSectionNear || activeSection === 'instagram'
-
-  // The contact transition now follows the visible section, not a 3D timeline.
-  const contactActive = activeSection === 'contato'
   useEffect(() => {
     const hero = document.getElementById('hero')
-    if (!hero) return
+    const header = document.querySelector('header')
+    if (!hero || !header) return
     // Tall sections can never reach the shared navigation observer's threshold.
     // Header contrast depends only on whether the hero is behind the header.
-    const observer = new IntersectionObserver(([entry]) => setOnHero(entry.isIntersecting), {
-      rootMargin: '-100px 0px 0px 0px',
-      threshold: 0,
-    })
-    observer.observe(hero)
-    return () => observer.disconnect()
+    let frame = 0
+    const update = () => {
+      frame = 0
+      const headerHeight = header.getBoundingClientRect().height
+      document.documentElement.style.setProperty('--zelo-nav-height', `${headerHeight}px`)
+      setOnHero(hero.getBoundingClientRect().bottom > headerHeight + 32)
+    }
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
+    const resize = new ResizeObserver(schedule)
+    resize.observe(header)
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    update()
+    return () => {
+      resize.disconnect()
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+    }
   }, [])
 
   return (
-    <div className="min-h-screen bg-brand-navy text-brand-white">
+    <div className="ze4-page min-h-screen">
       <header data-intro={onHero && !heroReducedMotion ? heroIntro : 'settled'} className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
           <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
@@ -213,7 +207,7 @@ export function LandingPage() {
             <button ref={searchButtonRef} type="button" className="zelo-header-search" aria-label="Buscar no site" aria-expanded={searchOpen} aria-controls="zelo-site-search" onClick={() => setSearchOpen((open) => !open)}>
               <Search aria-hidden="true" size={23} strokeWidth={1.6} />
             </button>
-            <button type="button" aria-label="Abrir menu" aria-expanded={menuOpen} aria-controls="zelo-mobile-menu" className="zelo-header-menu" onClick={() => { setMenuOpen(true); setSearchOpen(false) }}>
+            <button ref={menuButtonRef} type="button" aria-label="Abrir menu" aria-expanded={menuOpen} aria-controls="zelo-mobile-menu" className="zelo-header-menu" onClick={() => { setMenuOpen(true); setSearchOpen(false) }}>
               <Menu aria-hidden="true" size={23} />
             </button>
           </div>
@@ -240,6 +234,7 @@ export function LandingPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             id="zelo-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl zelo-mobile-menu"
+            ref={menuPanelRef}
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -323,257 +318,15 @@ export function LandingPage() {
           </a>
         </section>
 
-        <section id="servicos" className="scene-shell scene-panel">
-          <Reveal className="section-intro section-intro-wide">
-            <div className="eyebrow">{serviceEyebrow}</div>
-            <p className="section-description mt-6">{serviceDescription}</p>
-          </Reveal>
-
-          <div className="services-spotlight-grid mt-16">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={service.title}
-                service={service}
-                index={index}
-                focus={1}
-                focused={false}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section id="marcas" className="brand-scene-shell">
-          <div className="brand-scene-content">
-            <Reveal className="section-intro">
-              <div className="eyebrow">PRODUTOS QUE UTILIZAMOS</div>
-            </Reveal>
-            <LogoCarousel items={productBrands} variant="products" className="mt-7" />
-          </div>
-        </section>
-
-        <section id="instagram" ref={instagramRef} className="scene-shell scene-panel">
-          <div className="grid gap-14 xl:grid-cols-[0.34fr_0.66fr] xl:items-start">
-            <Reveal className="section-intro">
-              <div className="eyebrow">ACOMPANHE NOSSO TRABALHO</div>
-              <p className="section-description mt-6">{instagramCopy.description}</p>
-              <a
-                href={siteConfig.instagramLink}
-                className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-brand-gold"
-              >
-                {siteConfig.instagramHandle}
-                <ArrowUpRight size={15} />
-              </a>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              {instagramFeed.posts.length > 0 ? (
-                <div className="instagram-grid">
-                  {instagramFeed.posts.map((post) => (
-                    <a
-                      key={post.id}
-                      href={post.postUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="instagram-tile"
-                    >
-                      <img
-                        key={`${post.id}-${instagramImagesReady ? 'image' : 'placeholder'}`}
-                        src={instagramImagesReady ? post.image : transparentPixel}
-                        data-src={post.image}
-                        alt={post.alt}
-                        className={clsx('h-full w-full object-cover', post.className)}
-                        width={800}
-                        height={800}
-                        loading={instagramImagesReady ? 'eager' : 'lazy'}
-                        decoding="async"
-                      />
-                      <span className="instagram-overlay">
-                        <Camera size={16} />
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              ) : (
-                <div className="instagram-empty">
-                  <Camera size={26} />
-                  <p>
-                    {instagramFeed.loading
-                      ? instagramLoading
-                      : instagramFeed.error
-                        ? instagramError
-                        : instagramFeed.configured
-                          ? instagramEmpty
-                          : instagramPending}
-                  </p>
-                  <a href={siteConfig.instagramLink} target="_blank" rel="noreferrer" className="button-secondary">
-                    {'Abrir Instagram'}
-                  </a>
-                </div>
-              )}
-            </Reveal>
-          </div>
-        </section>
-
-        <section id="caminho" className="scene-shell scene-panel">
-          <div className="grid gap-14">
-            <div id="localizacao" className="grid gap-10 xl:grid-cols-[0.38fr_0.62fr] xl:items-start">
-              <Reveal className="section-intro">
-                <div className="eyebrow">ONDE ESTAMOS</div>
-                <div className="mt-8 space-y-6 border-l border-brand-gold/25 pl-5">
-                  <InfoLine icon={<MapPin size={16} />} value={locationInfo.address} />
-                  <InfoLine icon={<Phone size={16} />} value={locationInfo.phoneLabel} />
-                  <InfoLine icon={<Camera size={16} />} value={siteConfig.instagramHandle} />
-                </div>
-                <a href={locationInfo.mapsLink} className="button-secondary mt-8">
-                  {'Como chegar'}
-                </a>
-              </Reveal>
-
-              <Reveal className="map-frame">
-                <iframe
-                  title={mapTitle}
-                  src={locationInfo.embedUrl}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="h-[420px] w-full"
-                />
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        <section id="contato" className="scene-shell scene-panel">
-          <Reveal className="section-intro">
-            <div className="eyebrow">ENTRE EM CONTATO</div>
-            <h2 className="mt-5 font-['Eurostile_Extended','Montserrat',sans-serif] text-[2rem] uppercase leading-[0.98] tracking-[0.08em] text-brand-white md:text-[2.65rem]">
-              {contactSectionCopy.headline}
-            </h2>
-            <p className="section-description mt-6">{contactSectionCopy.description}</p>
-          </Reveal>
-
-          <div className="mt-14 grid gap-5 lg:grid-cols-2">
-            {contactCards.map((card, index) => (
-              <motion.article
-                key={card.title}
-                initial={{ opacity: 0, y: 18 }}
-                animate={contactActive ? { opacity: 1, y: 0 } : { opacity: 0.86, y: 10 }}
-                transition={{
-                  duration: 0.75,
-                  delay: index * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className={clsx('contact-card', contactActive && 'contact-card-live')}
-              >
-                <div className="contact-icon">
-                  {card.type === 'whatsapp' ? <MessageCircle size={24} /> : <Camera size={24} />}
-                </div>
-                <h3 className="mt-7 text-[1.4rem] uppercase tracking-[0.14em] text-brand-white">
-                  {card.title}
-                </h3>
-                <p className="mt-4 max-w-md text-sm leading-7 text-brand-silver">{card.description}</p>
-                <a href={card.href} className="button-secondary mt-8">
-                  {card.buttonLabel}
-                </a>
-              </motion.article>
-            ))}
-          </div>
-        </section>
-
-        <section id="parceiros">
-          <div className="section-shell partners-shell">
-            <Reveal className="section-intro">
-              <div className="eyebrow">PARCEIROS DA EMPRESA</div>
-            </Reveal>
-            <LogoCarousel items={partnerLogos} variant="partners" className="mt-10" />
-          </div>
-        </section>
+        <ServicesSection />
+        <ResultsSection />
+        <ProcessSection />
+        <QualitySection />
+        <CommunitySection />
+        <LocationSection />
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 bg-brand-navy/70 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-[1400px] gap-4 px-5 py-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
-          <div>
-            <img
-              src={siteConfig.horizontalLogo}
-              alt={brandName}
-              className="brand-mark brand-mark-footer"
-              width={573}
-              height={127}
-              loading="lazy"
-              decoding="async"
-            />
-            <p className="mt-2 max-w-md text-sm leading-6 text-brand-silver">{'Mais que limpeza. Cuidado.'}</p>
-          </div>
-
-          <div className="grid gap-2 md:justify-self-end md:text-right">
-            {footerLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-brand-silver transition-colors duration-300 hover:text-brand-white"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="border-t border-white/10 px-5 py-4 text-center lg:px-8">
-          <p className="mx-auto max-w-4xl text-sm leading-6 text-brand-silver md:text-[15px]">{verse}</p>
-          <p className="mt-2 text-[11px] uppercase tracking-[0.24em] text-brand-gold">{verseReference}</p>
-        </div>
-
-        <div className="border-t border-white/10 bg-brand-navy/52 px-5 py-2.5 text-center text-[11px] uppercase tracking-[0.22em] text-brand-silver lg:px-8">
-          {String.fromCharCode(169)} {new Date().getFullYear()} {copyrightNotice}
-        </div>
-      </footer>
+      <PremiumFooter />
     </div>
   )
-}
-
-function InfoLine({
-  icon,
-  value,
-}: {
-  icon: ReactNode
-  value: string
-}) {
-  return (
-    <div className="flex items-start gap-3">
-      <div className="mt-1 inline-flex h-8 w-8 items-center justify-center border border-brand-gold/20 text-brand-gold">
-        {icon}
-      </div>
-      <div className="text-sm leading-7 text-brand-white">{value}</div>
-    </div>
-  )
-}
-
-function useNearViewport<T extends Element>(ref: RefObject<T | null>, rootMargin: string) {
-  const [isNear, setIsNear] = useState(false)
-
-  useEffect(() => {
-    if (isNear) {
-      return
-    }
-
-    const element = ref.current
-    if (!element || typeof IntersectionObserver === 'undefined') {
-      setIsNear(true)
-      return
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setIsNear(true)
-          observer.disconnect()
-        }
-      },
-      { rootMargin },
-    )
-
-    observer.observe(element)
-    return () => observer.disconnect()
-  }, [isNear, ref, rootMargin])
-
-  return isNear
 }

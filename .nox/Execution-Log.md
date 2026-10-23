@@ -61,3 +61,12 @@ Remove logo plate by user correction; version consumed intro once to v4 and veri
 - Placa removida, alpha oficial preservado, contraste por contorno da imagem. Chave v4 migra uma vez a revisão da intro já consumida; readiness/visibilidade/doubleRAF e stagger real.
 - QA 172/172, frames/vídeo 38/38, build/lint e revisão visual Nox/root PASS. Contato piso e slogans mobile preservados.
 - Sem ZE-04/push/deploy; src/planos/ e new_interface/ preservados fora do commit.
+
+## 2026-10-22 - ZE-04 CURRENT
+Full contract read, five PNGs individually inspected, complementary design system read. Checkpoint ZE-04-start-20261022 and local ZIP preserve untracked refs/plans. Two disjoint component implementers delegated; Nox owns assets/tokens/integration. Hero v4 untouched.
+
+## 2026-10-22 ? ZE-04 COMPLETED technically
+- Two approved deliverables: reference-driven commercial sections; navigation/contact/identity. Hero v4 and factual data/API preserved.
+- Build/lint PASS (6 legacy warnings); QA332 PASS/0 open, 2 historical methodology failures explicitly superseded. Independent review and root/Nox visual comparison PASS, not user approval.
+- Corrected header/anchor/active state, mobile menu keyboard/focus, products fade, utility typography, benefit/CTA contrast and obstructive Maps badge.
+- Google reviews and official feed remain honest unavailable states; illustrative before/after labeled. No later sprint/push/deploy.

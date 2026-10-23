@@ -1,0 +1,39 @@
+{
+  "baseline": "b2bbfdab98153e0922969b86bf275f7953012ccf",
+  "branch": "work/ze-audi-redesign",
+  "tag": "ZE-04-start-20261022",
+  "backup": ".nox/checkpoints/ZE-04-user-references-20261022.zip",
+  "refs": [
+    {
+      "file": "new_interface/1.png",
+      "bytes": 1837983,
+      "sha256": "edae77d1de72293eda8eaaafbd91148a32cf0873bd669fbeecd91aee1e25448b"
+    },
+    {
+      "file": "new_interface/2.png",
+      "bytes": 2204852,
+      "sha256": "ba57ac1c86311ba388da6931069a4b534c466d271c150c1a6aedfbe8f32b4494"
+    },
+    {
+      "file": "new_interface/3.png",
+      "bytes": 1974671,
+      "sha256": "fbf80eaddb5c9fa5cc3c4561399bd60c241c5f373049037899de43b709dda6a7"
+    },
+    {
+      "file": "new_interface/4.png",
+      "bytes": 1936027,
+      "sha256": "1a901c7ecacf2449329007b0d97ad65b2a19b0a011c26b9e22061eef81432bdd"
+    },
+    {
+      "file": "new_interface/5.png",
+      "bytes": 1994843,
+      "sha256": "4c1b8455ad58329ebb55fe188582b46a9eef73c335442d8fda7c0df89ad4fc72"
+    }
+  ],
+  "untouched": [
+    "src/planos/",
+    "new_interface/",
+    ".env"
+  ],
+  "scope": "ZE-04 only; no ZE-05+, push or deploy"
+}
