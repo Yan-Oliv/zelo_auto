@@ -1,0 +1,57 @@
+{
+  "scope": "Production build under locally routed official browser origin; no deployment or real GA receipt",
+  "results": [
+    {
+      "failure": "adblock",
+      "result": "PASS",
+      "tagRequests": 1,
+      "tagAsync": true,
+      "configCount": 1,
+      "pageviewCount": 1,
+      "sanitized": true,
+      "revocationStops": true,
+      "cookiesRemoved": true,
+      "reactErrors": 0,
+      "realAnalyticsRequests": 0
+    },
+    {
+      "failure": "tag-download-failure",
+      "result": "PASS",
+      "tagRequests": 1,
+      "tagAsync": true,
+      "configCount": 1,
+      "pageviewCount": 1,
+      "sanitized": true,
+      "revocationStops": true,
+      "cookiesRemoved": true,
+      "reactErrors": 0,
+      "realAnalyticsRequests": 0
+    },
+    {
+      "failure": "google-unavailable",
+      "result": "PASS",
+      "tagRequests": 1,
+      "tagAsync": true,
+      "configCount": 1,
+      "pageviewCount": 1,
+      "sanitized": true,
+      "revocationStops": true,
+      "cookiesRemoved": true,
+      "reactErrors": 0,
+      "realAnalyticsRequests": 0
+    },
+    {
+      "failure": "tag-timeout",
+      "result": "PASS",
+      "tagRequests": 1,
+      "tagAsync": true,
+      "configCount": 1,
+      "pageviewCount": 1,
+      "sanitized": true,
+      "revocationStops": true,
+      "cookiesRemoved": true,
+      "reactErrors": 0,
+      "realAnalyticsRequests": 0
+    }
+  ]
+}

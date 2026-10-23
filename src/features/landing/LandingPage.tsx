@@ -7,6 +7,9 @@ import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
 import { ServicesSection, ResultsSection, ProcessSection, QualitySection } from './components/ze04/CommercialSections'
 import { CommunitySection, LocationSection, PremiumFooter } from './components/ze04/CommunityContact'
+import { ConsentControls } from '@shared/analytics/ConsentControls'
+import { useCommercialAnalytics } from '@shared/analytics/useCommercialAnalytics'
+import { track } from '@shared/analytics/analytics'
 import './CinematicHero.css'
 import './EditorialLanding.css'
 
@@ -40,6 +43,7 @@ function rememberHeroIntro() {
 }
 
 export function LandingPage() {
+  useCommercialAnalytics()
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   const menuPanelRef = useRef<HTMLDivElement>(null)
@@ -211,7 +215,7 @@ export function LandingPage() {
             ))}
           </nav>
           <div className="zelo-header-actions">
-            <a href={siteConfig.whatsappLink} className="zelo-header-budget" aria-label={budgetLabel}>
+            <a href={siteConfig.whatsappLink} data-analytics-quote className="zelo-header-budget" aria-label={budgetLabel}>
               <CalendarDays aria-hidden="true" size={23} strokeWidth={1.5} />
               <span>ORÇAMENTO</span>
             </a>
@@ -232,7 +236,7 @@ export function LandingPage() {
               <button type="button" aria-label="Fechar busca" onClick={() => { setSearchOpen(false); searchButtonRef.current?.focus() }}><X size={18} /></button>
             </div>
             <div className="zelo-search-results" aria-live="polite">
-              {searchResults.length ? searchResults.map((link) => <a key={`${link.href}-${link.label}`} href={link.href} onClick={() => setSearchOpen(false)}>{link.label}<ArrowUpRight size={15} aria-hidden="true" /></a>) : <p>Nenhum resultado. Tente serviços ou contato.</p>}
+              {searchResults.length ? searchResults.map((link) => <a key={`${link.href}-${link.label}`} href={link.href} onClick={() => { if (searchQuery.trim()) track('internal_search', { result_count: searchResults.length, selected_section: link.href.slice(1) }); setSearchOpen(false) }}>{link.label}<ArrowUpRight size={15} aria-hidden="true" /></a>) : <p>Nenhum resultado. Tente serviços ou contato.</p>}
             </div>
           </div>
         )}
@@ -282,7 +286,7 @@ export function LandingPage() {
 
               <a
                 href={siteConfig.whatsappLink}
-                className="button-primary mt-10 justify-center text-center text-sm"
+                data-analytics-quote className="button-primary mt-10 justify-center text-center text-sm"
               >
                 {budgetLabel}
               </a>
@@ -339,6 +343,7 @@ export function LandingPage() {
       </main>
 
       <PremiumFooter />
+      <ConsentControls />
     </div>
   )
 }

@@ -1,0 +1,554 @@
+[
+  {
+    "name": "ultrawide",
+    "baselineDimensions": [
+      1920,
+      5126
+    ],
+    "finalDimensions": [
+      1920,
+      5170
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 16.884,
+        "meanChannelDifference": 8.071
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 17.716,
+        "meanChannelDifference": 7.723
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 5000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5000,
+        "toY": 5126,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  },
+  {
+    "name": "desktop",
+    "baselineDimensions": [
+      1440,
+      4698
+    ],
+    "finalDimensions": [
+      1440,
+      4743
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 6.133,
+        "meanChannelDifference": 2.368
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 4698,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  },
+  {
+    "name": "notebook",
+    "baselineDimensions": [
+      1366,
+      4527
+    ],
+    "finalDimensions": [
+      1366,
+      4572
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 4527,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  },
+  {
+    "name": "tablet",
+    "baselineDimensions": [
+      768,
+      5700
+    ],
+    "finalDimensions": [
+      768,
+      5744
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 5000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5000,
+        "toY": 5500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5500,
+        "toY": 5700,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  },
+  {
+    "name": "mobile",
+    "baselineDimensions": [
+      390,
+      8878
+    ],
+    "finalDimensions": [
+      390,
+      8923
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 5000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5000,
+        "toY": 5500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5500,
+        "toY": 6000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 6000,
+        "toY": 6500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 6500,
+        "toY": 7000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 7000,
+        "toY": 7500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 7500,
+        "toY": 8000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 8000,
+        "toY": 8500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 8500,
+        "toY": 8878,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  },
+  {
+    "name": "mobile-compact",
+    "baselineDimensions": [
+      360,
+      8913
+    ],
+    "finalDimensions": [
+      360,
+      8958
+    ],
+    "bands": [
+      {
+        "fromY": 0,
+        "toY": 500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 500,
+        "toY": 1000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1000,
+        "toY": 1500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 1500,
+        "toY": 2000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2000,
+        "toY": 2500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 2500,
+        "toY": 3000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3000,
+        "toY": 3500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 3500,
+        "toY": 4000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4000,
+        "toY": 4500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 4500,
+        "toY": 5000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5000,
+        "toY": 5500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 5500,
+        "toY": 6000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 6000,
+        "toY": 6500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 6500,
+        "toY": 7000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 7000,
+        "toY": 7500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 7500,
+        "toY": 8000,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 8000,
+        "toY": 8500,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      },
+      {
+        "fromY": 8500,
+        "toY": 8913,
+        "changedPercent": 0,
+        "meanChannelDifference": 0
+      }
+    ]
+  }
+]

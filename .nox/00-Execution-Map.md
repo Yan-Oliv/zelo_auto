@@ -11,7 +11,7 @@ Atualizado em 2026-10-23. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 | ZE-05 | Performance e acessibilidade | COMPLETED | ZE-04 | Concluída tecnicamente; metas mobile não atingidas documentadas em `.nox/ZE-05-Report.md` |
 | ZE-06 | Instagram funcional | COMPLETED | ZE-05 | Aprovada pelo proprietário após validação visual local real; runtime público não publicado nesta sprint |
 | ZE-07 | SEO técnico local | COMPLETED | ZE-06 | Concluída tecnicamente; relatório e evidências em `.nox/ZE-07-Report.md` e `.nox/evidence/ZE-07/` |
-| ZE-08 | Google Analytics e mensuração | QUEUED | ZE-07 | Fora do objetivo ativo; não executar |
+| ZE-08 | Google Analytics e mensuração | COMPLETED | ZE-07 | Duas entregas aprovadas tecnicamente; pain?is Google PENDING conforme relat?rio |
 | ZE-09 | Reputação Google | QUEUED | ZE-08 | Fora do objetivo ativo; não executar |
 | ZE-10 | Confiabilidade de avaliações Google | QUEUED | ZE-09 | Fora do objetivo ativo; não executar |
 | ZE-11 | Homologação geral local | QUEUED | ZE-10 | Fora do objetivo ativo; não executar |
@@ -37,3 +37,7 @@ Two deliverables implemented and reviewed. Build/lint PASS; QA332 resolved PASS,
 
 ## ZE-05 authorized objective, 2026-10-22
 ZE-04 commit3271073 is the baseline. ZE-05 CURRENT: delivery1 initial JS/assets; delivery2 mobile performance/accessibility. Checkpoint ZE-05-start-20261022. No redesign, keyv4/layouts preserved. ZE-06+ QUEUED outside authorization.
+
+| ZE-03-REWORK | Corre??o visual da hero p?s ZE-09 | QUEUED | ZE-09 | N?o executar na ZE-08 |
+
+2026-10-23 ? ZE-08 COMPLETED tecnicamente em duas entregas. GA4 G-E9SKGKCQXX b?sico opt-in, eventos tipados, UI revog?vel e Search Console preparado. Build/lint PASS (6 warnings legados), QA20grupos PASS, seis viewports/revis?o Nox PASS. Lighthouse cold desktop99/mobile81 sem regress?o score/CLS; mobile LCP4734/TBT32/CLS0 versus baseline4808/38/0. GA4 recebimento/Enhanced Measurement/Key Events e propriedade/sitemap Search Console PENDING externos explicitamente, sem envio nem acesso Google. Checkpoint ZE-08-start-20261023. ZE-09 e p?sZE09 ZE-03-REWORK apenas QUEUED. Sem deploy/push; untracked preservados.

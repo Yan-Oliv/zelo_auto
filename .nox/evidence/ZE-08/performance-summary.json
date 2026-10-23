@@ -1,0 +1,73 @@
+{
+  "note": "Local Chromium/Lighthouse simulated lab, no field data. Unset before/after cold CLI comparable. Persisted consent scenarios warm storage (disableStorageReset), local collection always disabled; not comparable as cold-start improvements.",
+  "lighthouse-baseline-desktop.json": {
+    "performance": 99,
+    "accessibility": 100,
+    "LCP": 932.5387,
+    "CLS": 0,
+    "TBT": 0,
+    "mainThread": 145.32000000000014,
+    "jsTransfer": 115184,
+    "analyticsRequests": 0
+  },
+  "lighthouse-baseline-mobile.json": {
+    "performance": 81,
+    "accessibility": 100,
+    "LCP": 4807.9026,
+    "CLS": 0,
+    "TBT": 38,
+    "mainThread": 532.892000000001,
+    "jsTransfer": 115184,
+    "analyticsRequests": 0
+  },
+  "lighthouse-final-denied-mobile.json": {
+    "performance": 92,
+    "accessibility": 97,
+    "LCP": 3378.5847000000003,
+    "CLS": 0,
+    "TBT": 29,
+    "mainThread": 1640.091999999993,
+    "jsTransfer": 716,
+    "analyticsRequests": 0
+  },
+  "lighthouse-final-granted-mobile.json": {
+    "performance": 91,
+    "accessibility": 97,
+    "LCP": 3453.424,
+    "CLS": 0,
+    "TBT": 33,
+    "mainThread": 1851.5319999999967,
+    "jsTransfer": 716,
+    "analyticsRequests": 0
+  },
+  "lighthouse-final-unset-desktop.json": {
+    "performance": 99,
+    "accessibility": 100,
+    "LCP": 926.0273,
+    "CLS": 0,
+    "TBT": 0,
+    "mainThread": 136.9160000000002,
+    "jsTransfer": 118454,
+    "analyticsRequests": 0
+  },
+  "lighthouse-final-unset-mobile.json": {
+    "performance": 81,
+    "accessibility": 100,
+    "LCP": 4733.0808,
+    "CLS": 0,
+    "TBT": 48,
+    "mainThread": 620.0080000000011,
+    "jsTransfer": 118454,
+    "analyticsRequests": 0
+  },
+  "lighthouse-final-build-mobile.json": {
+    "performance": 81,
+    "accessibility": 100,
+    "LCP": 4734.4741,
+    "CLS": 0,
+    "TBT": 32,
+    "mainThread": 484.8320000000007,
+    "jsTransfer": 118481,
+    "analyticsRequests": 0
+  }
+}

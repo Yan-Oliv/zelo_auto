@@ -1,0 +1,16 @@
+.zelo-privacy-access { display:block; margin:0 auto; padding:14px 20px; background:#101113; color:#e4d3ac; font-size:11px; letter-spacing:.06em; text-decoration:underline; width:100%; }
+.zelo-consent { position:fixed; z-index:70; bottom:20px; left:20px; width:min(520px, calc(100% - 40px)); padding:22px; border:1px solid #b6975e; border-radius:8px; background:#faf9f6; color:#242424; box-shadow:0 8px 36px #0003; }
+.zelo-consent h2,.zelo-privacy-panel h2 { font-size:17px; font-weight:600; margin:0 0 10px; letter-spacing:.02em; }
+.zelo-consent p,.zelo-privacy-panel p { font-size:12px; line-height:1.7; margin:0 0 14px; }
+.zelo-consent-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.zelo-consent-actions button { padding:10px 12px; min-height:44px; border:1px solid #8c713e; border-radius:4px; color:#27241e; font-size:11px; font-weight:600; background:#f7f2e8; }
+.zelo-consent-actions button:last-child { background:transparent; }
+.zelo-consent button:focus-visible,.zelo-privacy-panel :focus-visible,.zelo-privacy-access:focus-visible { outline:3px solid #987628; outline-offset:3px; }
+.zelo-privacy-backdrop { position:fixed; inset:0; z-index:80; background:#0009; display:grid; place-items:center; padding:20px; }
+.zelo-privacy-panel { position:relative; width:min(620px,100%); max-height:85svh; overflow:auto; padding:30px; border:1px solid #b6975e; border-radius:8px; background:#faf9f6; color:#242424; }
+.zelo-privacy-panel a { text-decoration:underline; }
+.zelo-privacy-close { float:right; font-size:26px; width:44px; height:44px; }
+.zelo-privacy-choice { display:flex; align-items:center; gap:12px; margin:18px 0; font-size:13px; }
+.zelo-privacy-choice input { width:20px; height:20px; accent-color:#8b6a31; }
+@media (max-width:600px) { .zelo-consent { bottom:12px; left:12px; width:calc(100% - 24px); padding:16px; } .zelo-privacy-panel { padding:20px; } }
+@media (prefers-reduced-motion:reduce) { .zelo-consent { transform:none!important; opacity:1!important; transition:none!important; } }

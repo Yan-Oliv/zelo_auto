@@ -34,7 +34,7 @@ function PremiumServiceCard({ service, index }: { service: ServiceItem; index: n
         <p>{service.description}</p>
         <span className="ze4-service-rule" aria-hidden="true" />
       </div>
-      <a className="ze4-service-action" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar orçamento: ${service.title}`}><ArrowRight size={19} strokeWidth={1.4} /></a>
+      <a data-analytics-quote data-analytics-service={({ wash: 'lavagem_completa', interior: 'limpeza_interna', seats: 'higienizacao_bancos', carpet: 'higienizacao_carpete' } as const)[service.icon]} className="ze4-service-action" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar orçamento: ${service.title}`}><ArrowRight size={19} strokeWidth={1.4} /></a>
     </m.article>
   )
 }
@@ -69,7 +69,7 @@ export function ServicesSection() {
 
 export type ComparisonPair = { before: string; after: string; beforeAlt: string; afterAlt: string }
 
-export function BeforeAfterComparison({ title, preview, pair }: { title: string; preview: string; pair?: ComparisonPair }) {
+export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { title: string; analyticsId?: string; preview: string; pair?: ComparisonPair }) {
   const [position, setPosition] = useState(50)
   const labelId = useId()
   const noteId = useId()
@@ -80,7 +80,7 @@ export function BeforeAfterComparison({ title, preview, pair }: { title: string;
         <NearImage src={pair.after} alt={pair.afterAlt} width="680" height="360" loading="lazy" decoding="async" />
         <div className="ze4-comparison-before"><NearImage src={pair.before} alt={pair.beforeAlt} width="680" height="360" loading="lazy" decoding="async" /></div>
         <div className="ze4-comparison-divider" aria-hidden="true"><span><ChevronLeft size={14} /><ChevronRight size={14} /></span></div>
-        <input type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-describedby={noteId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
+        <input data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-describedby={noteId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
         <span className="ze4-comparison-label ze4-comparison-label-before">Antes</span><span className="ze4-comparison-label ze4-comparison-label-after">Depois</span>
         <p id={noteId} className="ze4-comparison-note">Demonstração ilustrativa — não é resultado real da Zelo.</p>
       </> : <>
@@ -106,11 +106,11 @@ export function ResultsSection() {
             { key: 'paint', title: 'Pintura', preview: 'service-wash' },
             { key: 'seats', title: 'Bancos', preview: 'service-seats' },
             { key: 'carpet', title: 'Carpete', preview: 'service-carpet' },
-          ].map(({ key, title, preview }) => <BeforeAfterComparison key={key} title={title} preview={editorial(preview)} pair={{ before: editorial(`comparison-${key}-before`), after: editorial(`comparison-${key}-after`), beforeAlt: `${title} antes da limpeza, em uma demonstração ilustrativa.`, afterAlt: `${title} depois da limpeza, em uma demonstração ilustrativa.` }} />)}
+          ].map(({ key, title, preview }) => <BeforeAfterComparison analyticsId={key} key={key} title={title} preview={editorial(preview)} pair={{ before: editorial(`comparison-${key}-before`), after: editorial(`comparison-${key}-after`), beforeAlt: `${title} antes da limpeza, em uma demonstração ilustrativa.`, afterAlt: `${title} depois da limpeza, em uma demonstração ilustrativa.` }} />)}
         </div>
       </div>
       <div className="ze4-container ze4-results-actions">
-        <a className="ze4-button" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer">Solicitar orçamento<ArrowRight size={16} aria-hidden="true" /></a>
+        <a data-analytics-quote className="ze4-button" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer">Solicitar orçamento<ArrowRight size={16} aria-hidden="true" /></a>
         <a className="ze4-button-outline" href="#servicos">Conhecer todos os serviços<ArrowRight size={16} aria-hidden="true" /></a>
       </div>
     </section>

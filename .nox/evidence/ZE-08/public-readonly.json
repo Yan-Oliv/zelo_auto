@@ -1,0 +1,20 @@
+{
+  "/": {
+    "status": 200,
+    "canonical": "https://zelo-auto.pages.dev/",
+    "sitemapOfficial": false,
+    "hasVerification": true
+  },
+  "/robots.txt": {
+    "status": 200,
+    "canonical": null,
+    "sitemapOfficial": false,
+    "hasVerification": false
+  },
+  "/sitemap.xml": {
+    "status": 200,
+    "canonical": null,
+    "sitemapOfficial": false,
+    "hasVerification": false
+  }
+}

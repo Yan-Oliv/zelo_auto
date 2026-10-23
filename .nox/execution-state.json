@@ -1,438 +1,505 @@
 {
-    "schemaVersion":  1,
-    "project":  "zelo_autoestica",
-    "status":  "QUEUED",
-    "currentSprint":  null,
-    "currentStep":  "ZE-07 concluída; ZE-08 permanece na fila e não foi iniciada",
-    "allowedStopReasons":  [
-                               "WAITING_USER_ACTION",
-                               "BLOCKED_EXTERNAL",
-                               "PAYMENT_REQUIRED"
-                           ],
-    "stopReason":  null,
-    "nextAction":  "Aguardar autorização explícita para ZE-08. Produção da ZE-07 permanece sem deploy.",
-    "sprints":  [
-                    {
-                        "id":  "ZE-01",
-                        "title":  "SeguranÃ§a e baseline",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "id":  "ZE-01-C01",
-                                             "description":  "Checkpoint Git e cÃ³pias do estado inicial recuperÃ¡veis",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "checkpoints/ZE-01-tracked-source-20261022.zip",
-                                                              "checkpoints/ZE-01-untracked-planos-20261022.zip",
-                                                              "evidence/ZE-01-restore-verification.json",
-                                                              "Git tag ZE-01-baseline-20261022"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-01-C02",
-                                             "description":  "Branch isolada, sem alteraÃ§Ã£o de produÃ§Ã£o ou de cÃ³digo funcional",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "Branch work/ze-audi-redesign",
-                                                              "ZE-01-Report.md",
-                                                              "evidence/ZE-01-production-baseline.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-01-C03",
-                                             "description":  "Baseline de build, lint, assets, produÃ§Ã£o e navegaÃ§Ã£o desktop/mobile",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-01-quality-results.json",
-                                                              "evidence/ZE-01-browser-results.json",
-                                                              "evidence/ZE-01-production-baseline.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-01-C04",
-                                             "description":  "ValidaÃ§Ã£o de integridade e confidencialidade, mapa e procedimento de rollback",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-01-restore-verification.json",
-                                                              "ZE-01-Report.md",
-                                                              "ZE-Sprint-Contracts.md",
-                                                              "00-Execution-Map.md"
-                                                          ]
-                                         }
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-02",
-                        "title":  "Desacoplamento do 3D",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "id":  "ZE-02-C01",
-                                             "description":  "Landing renderiza independentemente de WebGL e sem loading gate; conteÃºdo e navegaÃ§Ã£o responsiva presentes",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-02-regression-results.json",
-                                                              "evidence/ZE-02-desktop.png",
-                                                              "evidence/ZE-02-mobile.png"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-02-C02",
-                                             "description":  "Nenhum preloading/requests de GLB ou bundle 3D na landing; debug pages isoladas",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-02-regression-results.json",
-                                                              "evidence/ZE-02-debug-smoke.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-02-C03",
-                                             "description":  "Hero sem ScrollTrigger de 6120 px, rolagem contÃ­nua e menus/CTAs/cards/Instagram/mapa preservados",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-02-regression-results.json",
-                                                              "src/features/landing/LandingPage.tsx"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-02-C04",
-                                             "description":  "Build, lint, testes desktop/mobile, revisÃ£o e rollback validÃ¡veis; produÃ§Ã£o intacta",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "evidence/ZE-02-quality-final.json",
-                                                              "ZE-02-Report.md"
-                                                          ]
-                                         }
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-03",
-                        "title":  "Hero cinematogrÃ¡fico Audi/Zelo",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "id":  "ZE-03-C01",
-                                             "description":  "ComposiÃ§Ã£o fiel em camadas e carro frontal sem fabricante",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "ZE-03-Report.md",
-                                                              "evidence/ZE-03-INTRO-qa-results.json",
-                                                              "evidence/ZE-03-INTRO-frames-results.json",
-                                                              "evidence/ZE-03-INTRO-quality.json",
-                                                              "evidence/ZE-03-INTRO-review.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-03-C02",
-                                             "description":  "Intro Ãºnica, sessÃ£o/retorno, reduced-motion e proporÃ§Ãµes responsivas",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "ZE-03-Report.md",
-                                                              "evidence/ZE-03-INTRO-qa-results.json",
-                                                              "evidence/ZE-03-INTRO-frames-results.json",
-                                                              "evidence/ZE-03-INTRO-quality.json",
-                                                              "evidence/ZE-03-INTRO-review.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-03-C03",
-                                             "description":  "Build/lint e regressÃ£o de navegaÃ§Ã£o/header/CTA/seÃ§Ãµes aprovados",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "ZE-03-Report.md",
-                                                              "evidence/ZE-03-INTRO-qa-results.json",
-                                                              "evidence/ZE-03-INTRO-frames-results.json",
-                                                              "evidence/ZE-03-INTRO-quality.json",
-                                                              "evidence/ZE-03-INTRO-review.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-03-C04",
-                                             "description":  "RelatÃ³rio e contexto Nox reconciliados; branch preservada e sem deploy",
-                                             "required":  true,
-                                             "status":  "PASS",
-                                             "evidence":  [
-                                                              "ZE-03-Report.md",
-                                                              "evidence/ZE-03-INTRO-qa-results.json",
-                                                              "evidence/ZE-03-INTRO-frames-results.json",
-                                                              "evidence/ZE-03-INTRO-quality.json",
-                                                              "evidence/ZE-03-INTRO-review.json"
-                                                          ]
-                                         }
-                                     ],
-                        "visualRevision":  "Transparent official logo without plate and visible once-per-session intro v4"
-                    },
-                    {
-                        "id":  "ZE-03-REWORK",
-                        "title":  "Hero em camadas com imagens 4K e introduÃ§Ã£o Ãºnica",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-
-                                     ],
-                        "supersededBy":  "ZE-03 final, 2026-10-22",
-                        "note":  "Registro histÃ³rico incorporado Ã  ZE-03 final; nÃ£o Ã© um aceite independente."
-                    },
-                    {
-                        "id":  "ZE-04",
-                        "title":  "ReestruturaÃ§Ã£o visual",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "id":  "ZE-04-C01",
-                                             "description":  "Reference2/3 commercial sections and honest interactive comparison",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              "ZE-04-Report.md",
-                                                              "evidence/ZE-04-final-QA.md",
-                                                              "evidence/ZE-04-final-qa-aggregate.json",
-                                                              "evidence/ZE-04-quality.json",
-                                                              "evidence/ZE-04-review.json",
-                                                              "evidence/ZE-04-preservation.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-04-C02",
-                                             "description":  "Reference4/5 community, navigation, real contact and institutional footer",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              "ZE-04-Report.md",
-                                                              "evidence/ZE-04-final-QA.md",
-                                                              "evidence/ZE-04-final-qa-aggregate.json",
-                                                              "evidence/ZE-04-quality.json",
-                                                              "evidence/ZE-04-review.json",
-                                                              "evidence/ZE-04-preservation.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-04-C03",
-                                             "description":  "Six viewports, actual animations/reduced motion, hero regression, build/lint and visual review",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              "ZE-04-Report.md",
-                                                              "evidence/ZE-04-final-QA.md",
-                                                              "evidence/ZE-04-final-qa-aggregate.json",
-                                                              "evidence/ZE-04-quality.json",
-                                                              "evidence/ZE-04-review.json",
-                                                              "evidence/ZE-04-preservation.json"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-04-C04",
-                                             "description":  "Nox documentation, checkpoint and local scoped commit without deployment",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              "ZE-04-Report.md",
-                                                              "evidence/ZE-04-final-QA.md",
-                                                              "evidence/ZE-04-final-qa-aggregate.json",
-                                                              "evidence/ZE-04-quality.json",
-                                                              "evidence/ZE-04-review.json",
-                                                              "evidence/ZE-04-preservation.json"
-                                                          ]
-                                         }
-                                     ],
-                        "technicalApproval":  "PASS",
-                        "humanVisualApproval":  false
-                    },
-                    {
-                        "id":  "ZE-05",
-                        "title":  "Performance e acessibilidade",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "id":  "ZE-05-C01",
-                                             "description":  "JavaScript graph and real landing requests",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              ".nox/ZE-05-Report.md",
-                                                              ".nox/evidence/ZE-05-final-benchmark.json",
-                                                              ".nox/evidence/ZE-05-final-cdp.json",
-                                                              ".nox/evidence/ZE-05-qa.json",
-                                                              ".nox/evidence/ZE-05-axe-classified.json",
-                                                              ".nox/evidence/ZE-05-resilience.json",
-                                                              ".nox/evidence/ZE-05-build-final.log",
-                                                              ".nox/evidence/ZE-05-lint-final.log"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-05-C02",
-                                             "description":  "Responsive images, fonts and rendering",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              ".nox/ZE-05-Report.md",
-                                                              ".nox/evidence/ZE-05-final-benchmark.json",
-                                                              ".nox/evidence/ZE-05-final-cdp.json",
-                                                              ".nox/evidence/ZE-05-qa.json",
-                                                              ".nox/evidence/ZE-05-axe-classified.json",
-                                                              ".nox/evidence/ZE-05-resilience.json",
-                                                              ".nox/evidence/ZE-05-build-final.log",
-                                                              ".nox/evidence/ZE-05-lint-final.log"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-05-C03",
-                                             "description":  "Comparable baseline/final performance",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              ".nox/ZE-05-Report.md",
-                                                              ".nox/evidence/ZE-05-final-benchmark.json",
-                                                              ".nox/evidence/ZE-05-final-cdp.json",
-                                                              ".nox/evidence/ZE-05-qa.json",
-                                                              ".nox/evidence/ZE-05-axe-classified.json",
-                                                              ".nox/evidence/ZE-05-resilience.json",
-                                                              ".nox/evidence/ZE-05-build-final.log",
-                                                              ".nox/evidence/ZE-05-lint-final.log"
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "ZE-05-C04",
-                                             "description":  "Accessibility and visual/functional regression",
-                                             "status":  "PASS",
-                                             "required":  true,
-                                             "evidence":  [
-                                                              ".nox/ZE-05-Report.md",
-                                                              ".nox/evidence/ZE-05-final-benchmark.json",
-                                                              ".nox/evidence/ZE-05-final-cdp.json",
-                                                              ".nox/evidence/ZE-05-qa.json",
-                                                              ".nox/evidence/ZE-05-axe-classified.json",
-                                                              ".nox/evidence/ZE-05-resilience.json",
-                                                              ".nox/evidence/ZE-05-build-final.log",
-                                                              ".nox/evidence/ZE-05-lint-final.log"
-                                                          ]
-                                         }
-                                     ],
-                        "technicalApproval":  "PASS_WITH_DOCUMENTED_MOBILE_TARGET_LIMITS",
-                        "humanVisualApproval":  false,
-                        "unmetTargets":  [
-                                             "Mobile Lighthouse Performance 89; target \u003e=90.",
-                                             "Mobile LCP 3531 ms; target \u003c=2500 ms. Preserved first-visit hero intro; see ZE-05-Report.md."
-                                         ]
-                    },
-                    {
-                        "id":  "ZE-06",
-                        "title":  "Instagram funcional",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                                         {
-                                             "evidence":  [
-                                                              "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
-                                                              "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
-                                                              "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Latest screenshot shows expected unprefixed core server-side names, but does not prove the new handler is deployed. Second post-correction public GET still HTTP 400 / OAuthException 190 with old/raw response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is the pending gate. No credentials recorded; no production mutation/deploy.",
-                                                              "Owner approval 2026-10-23: Instagram posts load correctly; local visual acceptance. Public runtime remains unverified and is not represented as passing.",
-                                                              "Public production endpoint last read-only check: HTTP 400 / OAuthException 190; deployment not authorized/performed and excluded from owner-approved local acceptance.",
-                                                              "Owner-approved local visual validation closes only the local gallery check; the ZE-07 request explicitly requires public validation before ZE-06 can be treated as complete."
-                                                          ],
-                                             "status":  "PASS",
-                                             "description":  "Diagnose the public HTTP 400 and validate Instagram API integration locally and on the public Pages runtime",
-                                             "id":  "ZE-06-C01",
-                                             "required":  true
-                                         },
-                                         {
-                                             "evidence":  [
-                                                              "functions/api/_instagram-feed.test.mjs",
-                                                              "evidence/ze06-qa-2026-10-23/api-edge-cases.mjs",
-                                                              "ZE-06-Report.md"
-                                                          ],
-                                             "status":  "PASS",
-                                             "description":  "Secure resilient normalized API behavior with cache, errors, and official media handling",
-                                             "id":  "ZE-06-C02",
-                                             "required":  true
-                                         },
-                                         {
-                                             "evidence":  [
-                                                              "evidence/ze06-qa-2026-10-23/playwright-report.json",
-                                                              "evidence/ze06-qa-2026-10-23/success-desktop.png",
-                                                              "evidence/ze06-qa-2026-10-23/broken-media.png"
-                                                          ],
-                                             "status":  "PASS",
-                                             "description":  "Preserve the approved Instagram grid with honest states, accessibility, and responsive behavior",
-                                             "id":  "ZE-06-C03",
-                                             "required":  true
-                                         },
-                                         {
-                                             "evidence":  [
-                                                              "npm run build",
-                                                              "npm run lint",
-                                                              "node --experimental-strip-types --test functions/api/_instagram-feed.test.mjs",
-                                                              "node .nox/evidence/ze06-qa-2026-10-23/playwright.mjs (exit 0)",
-                                                              "git diff --cached --check",
-                                                              "commit 3e2ea2b"
-                                                          ],
-                                             "status":  "PASS",
-                                             "description":  "Build, lint, API/E2E, visual/performance regression, review, docs, and scoped local commit",
-                                             "id":  "ZE-06-C04",
-                                             "required":  true
-                                         }
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-07",
-                        "title":  "SEO tÃ©cnico local",
-                        "status":  "COMPLETED",
-                        "criteria":  [
-                    {"id":"ZE-07-C01","description":"Canonical oficial, OG URL, robots, sitemap e noindex para diagnósticos","required":true,"status":"PASS","evidence":["index.html","public/robots.txt","public/sitemap.xml","public/_headers","evidence/ZE-07/qa-results.json"]},
-                    {"id":"ZE-07-C02","description":"JSON-LD local consistente com fatos publicados","required":true,"status":"PASS","evidence":["index.html JSON-LD AutoWash, NAP, horários, Instagram e quatro serviços","evidence/ZE-07/qa-results.json"]},
-                    {"id":"ZE-07-C03","description":"Metadados locais e sociais, imagem OG e conteúdo geográfico real","required":true,"status":"PASS","evidence":["public/og/zelo-estetica-automotiva-catalao.jpg","evidence/ZE-07/qa-results.json"]},
-                    {"id":"ZE-07-C04","description":"Build, lint, SEO, regressão funcional e visual em seis resoluções; produção intacta","required":true,"status":"PASS","evidence":["npm run build PASS","npm run lint exit 0; seis warnings legados","evidence/ZE-07/qa-results.json","evidence/ZE-07/lighthouse-pre-seo-baseline.json","evidence/ZE-07/lighthouse-mobile-390.json","evidence/ZE-07/lighthouse-desktop-production-build.json","sem deploy/push"]}
-                  ]
-                    },
-                    {
-                        "id":  "ZE-08",
-                        "title":  "Google Analytics e mensuraÃ§Ã£o",
-                        "status":  "QUEUED",
-                        "criteria":  [
-
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-09",
-                        "title":  "ReputaÃ§Ã£o Google",
-                        "status":  "QUEUED",
-                        "criteria":  [
-
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-10",
-                        "title":  "ExperiÃªncia e confiabilidade das avaliaÃ§Ãµes Google",
-                        "status":  "QUEUED",
-                        "criteria":  [
-
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-11",
-                        "title":  "HomologaÃ§Ã£o local",
-                        "status":  "QUEUED",
-                        "criteria":  [
-
-                                     ]
-                    },
-                    {
-                        "id":  "ZE-12",
-                        "title":  "PublicaÃ§Ã£o controlada",
-                        "status":  "QUEUED",
-                        "criteria":  [
-
-                                     ]
-                    }
-                ],
-    "lastCompletedSprint":  "ZE-05"
+  "schemaVersion": 1,
+  "project": "zelo_autoestica",
+  "status": "QUEUED",
+  "currentSprint": null,
+  "currentStep": "ZE-08 conclu?da tecnicamente; ZE-09 n?o iniciada",
+  "allowedStopReasons": [
+    "WAITING_USER_ACTION",
+    "BLOCKED_EXTERNAL",
+    "PAYMENT_REQUIRED"
+  ],
+  "stopReason": null,
+  "nextAction": "Aguardar objetivo ZE-09. Antes de futura publica??o, propriet?rio configura e valida GA4/Search Console conforme handoff.",
+  "sprints": [
+    {
+      "id": "ZE-01",
+      "title": "SeguranÃ§a e baseline",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-01-C01",
+          "description": "Checkpoint Git e cÃ³pias do estado inicial recuperÃ¡veis",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "checkpoints/ZE-01-tracked-source-20261022.zip",
+            "checkpoints/ZE-01-untracked-planos-20261022.zip",
+            "evidence/ZE-01-restore-verification.json",
+            "Git tag ZE-01-baseline-20261022"
+          ]
+        },
+        {
+          "id": "ZE-01-C02",
+          "description": "Branch isolada, sem alteraÃ§Ã£o de produÃ§Ã£o ou de cÃ³digo funcional",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "Branch work/ze-audi-redesign",
+            "ZE-01-Report.md",
+            "evidence/ZE-01-production-baseline.json"
+          ]
+        },
+        {
+          "id": "ZE-01-C03",
+          "description": "Baseline de build, lint, assets, produÃ§Ã£o e navegaÃ§Ã£o desktop/mobile",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-01-quality-results.json",
+            "evidence/ZE-01-browser-results.json",
+            "evidence/ZE-01-production-baseline.json"
+          ]
+        },
+        {
+          "id": "ZE-01-C04",
+          "description": "ValidaÃ§Ã£o de integridade e confidencialidade, mapa e procedimento de rollback",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-01-restore-verification.json",
+            "ZE-01-Report.md",
+            "ZE-Sprint-Contracts.md",
+            "00-Execution-Map.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-02",
+      "title": "Desacoplamento do 3D",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-02-C01",
+          "description": "Landing renderiza independentemente de WebGL e sem loading gate; conteÃºdo e navegaÃ§Ã£o responsiva presentes",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "evidence/ZE-02-desktop.png",
+            "evidence/ZE-02-mobile.png"
+          ]
+        },
+        {
+          "id": "ZE-02-C02",
+          "description": "Nenhum preloading/requests de GLB ou bundle 3D na landing; debug pages isoladas",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "evidence/ZE-02-debug-smoke.json"
+          ]
+        },
+        {
+          "id": "ZE-02-C03",
+          "description": "Hero sem ScrollTrigger de 6120 px, rolagem contÃ­nua e menus/CTAs/cards/Instagram/mapa preservados",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-regression-results.json",
+            "src/features/landing/LandingPage.tsx"
+          ]
+        },
+        {
+          "id": "ZE-02-C04",
+          "description": "Build, lint, testes desktop/mobile, revisÃ£o e rollback validÃ¡veis; produÃ§Ã£o intacta",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-02-quality-final.json",
+            "ZE-02-Report.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-03",
+      "title": "Hero cinematogrÃ¡fico Audi/Zelo",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-03-C01",
+          "description": "ComposiÃ§Ã£o fiel em camadas e carro frontal sem fabricante",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-Report.md",
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
+          ]
+        },
+        {
+          "id": "ZE-03-C02",
+          "description": "Intro Ãºnica, sessÃ£o/retorno, reduced-motion e proporÃ§Ãµes responsivas",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-Report.md",
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
+          ]
+        },
+        {
+          "id": "ZE-03-C03",
+          "description": "Build/lint e regressÃ£o de navegaÃ§Ã£o/header/CTA/seÃ§Ãµes aprovados",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-Report.md",
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
+          ]
+        },
+        {
+          "id": "ZE-03-C04",
+          "description": "RelatÃ³rio e contexto Nox reconciliados; branch preservada e sem deploy",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-Report.md",
+            "evidence/ZE-03-INTRO-qa-results.json",
+            "evidence/ZE-03-INTRO-frames-results.json",
+            "evidence/ZE-03-INTRO-quality.json",
+            "evidence/ZE-03-INTRO-review.json"
+          ]
+        }
+      ],
+      "visualRevision": "Transparent official logo without plate and visible once-per-session intro v4"
+    },
+    {
+      "id": "ZE-03-REWORK",
+      "title": "Hero em camadas com imagens 4K e introduÃ§Ã£o Ãºnica",
+      "status": "COMPLETED",
+      "criteria": [],
+      "supersededBy": "ZE-03 final, 2026-10-22",
+      "note": "Registro histÃ³rico incorporado Ã  ZE-03 final; nÃ£o Ã© um aceite independente."
+    },
+    {
+      "id": "ZE-04",
+      "title": "ReestruturaÃ§Ã£o visual",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-04-C01",
+          "description": "Reference2/3 commercial sections and honest interactive comparison",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            "ZE-04-Report.md",
+            "evidence/ZE-04-final-QA.md",
+            "evidence/ZE-04-final-qa-aggregate.json",
+            "evidence/ZE-04-quality.json",
+            "evidence/ZE-04-review.json",
+            "evidence/ZE-04-preservation.json"
+          ]
+        },
+        {
+          "id": "ZE-04-C02",
+          "description": "Reference4/5 community, navigation, real contact and institutional footer",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            "ZE-04-Report.md",
+            "evidence/ZE-04-final-QA.md",
+            "evidence/ZE-04-final-qa-aggregate.json",
+            "evidence/ZE-04-quality.json",
+            "evidence/ZE-04-review.json",
+            "evidence/ZE-04-preservation.json"
+          ]
+        },
+        {
+          "id": "ZE-04-C03",
+          "description": "Six viewports, actual animations/reduced motion, hero regression, build/lint and visual review",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            "ZE-04-Report.md",
+            "evidence/ZE-04-final-QA.md",
+            "evidence/ZE-04-final-qa-aggregate.json",
+            "evidence/ZE-04-quality.json",
+            "evidence/ZE-04-review.json",
+            "evidence/ZE-04-preservation.json"
+          ]
+        },
+        {
+          "id": "ZE-04-C04",
+          "description": "Nox documentation, checkpoint and local scoped commit without deployment",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            "ZE-04-Report.md",
+            "evidence/ZE-04-final-QA.md",
+            "evidence/ZE-04-final-qa-aggregate.json",
+            "evidence/ZE-04-quality.json",
+            "evidence/ZE-04-review.json",
+            "evidence/ZE-04-preservation.json"
+          ]
+        }
+      ],
+      "technicalApproval": "PASS",
+      "humanVisualApproval": false
+    },
+    {
+      "id": "ZE-05",
+      "title": "Performance e acessibilidade",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-05-C01",
+          "description": "JavaScript graph and real landing requests",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-05-Report.md",
+            ".nox/evidence/ZE-05-final-benchmark.json",
+            ".nox/evidence/ZE-05-final-cdp.json",
+            ".nox/evidence/ZE-05-qa.json",
+            ".nox/evidence/ZE-05-axe-classified.json",
+            ".nox/evidence/ZE-05-resilience.json",
+            ".nox/evidence/ZE-05-build-final.log",
+            ".nox/evidence/ZE-05-lint-final.log"
+          ]
+        },
+        {
+          "id": "ZE-05-C02",
+          "description": "Responsive images, fonts and rendering",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-05-Report.md",
+            ".nox/evidence/ZE-05-final-benchmark.json",
+            ".nox/evidence/ZE-05-final-cdp.json",
+            ".nox/evidence/ZE-05-qa.json",
+            ".nox/evidence/ZE-05-axe-classified.json",
+            ".nox/evidence/ZE-05-resilience.json",
+            ".nox/evidence/ZE-05-build-final.log",
+            ".nox/evidence/ZE-05-lint-final.log"
+          ]
+        },
+        {
+          "id": "ZE-05-C03",
+          "description": "Comparable baseline/final performance",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-05-Report.md",
+            ".nox/evidence/ZE-05-final-benchmark.json",
+            ".nox/evidence/ZE-05-final-cdp.json",
+            ".nox/evidence/ZE-05-qa.json",
+            ".nox/evidence/ZE-05-axe-classified.json",
+            ".nox/evidence/ZE-05-resilience.json",
+            ".nox/evidence/ZE-05-build-final.log",
+            ".nox/evidence/ZE-05-lint-final.log"
+          ]
+        },
+        {
+          "id": "ZE-05-C04",
+          "description": "Accessibility and visual/functional regression",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            ".nox/ZE-05-Report.md",
+            ".nox/evidence/ZE-05-final-benchmark.json",
+            ".nox/evidence/ZE-05-final-cdp.json",
+            ".nox/evidence/ZE-05-qa.json",
+            ".nox/evidence/ZE-05-axe-classified.json",
+            ".nox/evidence/ZE-05-resilience.json",
+            ".nox/evidence/ZE-05-build-final.log",
+            ".nox/evidence/ZE-05-lint-final.log"
+          ]
+        }
+      ],
+      "technicalApproval": "PASS_WITH_DOCUMENTED_MOBILE_TARGET_LIMITS",
+      "humanVisualApproval": false,
+      "unmetTargets": [
+        "Mobile Lighthouse Performance 89; target >=90.",
+        "Mobile LCP 3531 ms; target <=2500 ms. Preserved first-visit hero intro; see ZE-05-Report.md."
+      ]
+    },
+    {
+      "id": "ZE-06",
+      "title": "Instagram funcional",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "evidence": [
+            "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
+            "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
+            "Latest read-only public GET after owner-reported Cloudflare update: HTTP 400 / OAuthException 190. Response indicated Meta session invalidation after a password/security event; current cause is not established. Latest screenshot shows expected unprefixed core server-side names, but does not prove the new handler is deployed. Second post-correction public GET still HTTP 400 / OAuthException 190 with old/raw response shape. Owner authorization to publish/deploy ZE-06 Pages runtime is the pending gate. No credentials recorded; no production mutation/deploy.",
+            "Owner approval 2026-10-23: Instagram posts load correctly; local visual acceptance. Public runtime remains unverified and is not represented as passing.",
+            "Public production endpoint last read-only check: HTTP 400 / OAuthException 190; deployment not authorized/performed and excluded from owner-approved local acceptance.",
+            "Owner-approved local visual validation closes only the local gallery check; the ZE-07 request explicitly requires public validation before ZE-06 can be treated as complete."
+          ],
+          "status": "PASS",
+          "description": "Diagnose the public HTTP 400 and validate Instagram API integration locally and on the public Pages runtime",
+          "id": "ZE-06-C01",
+          "required": true
+        },
+        {
+          "evidence": [
+            "functions/api/_instagram-feed.test.mjs",
+            "evidence/ze06-qa-2026-10-23/api-edge-cases.mjs",
+            "ZE-06-Report.md"
+          ],
+          "status": "PASS",
+          "description": "Secure resilient normalized API behavior with cache, errors, and official media handling",
+          "id": "ZE-06-C02",
+          "required": true
+        },
+        {
+          "evidence": [
+            "evidence/ze06-qa-2026-10-23/playwright-report.json",
+            "evidence/ze06-qa-2026-10-23/success-desktop.png",
+            "evidence/ze06-qa-2026-10-23/broken-media.png"
+          ],
+          "status": "PASS",
+          "description": "Preserve the approved Instagram grid with honest states, accessibility, and responsive behavior",
+          "id": "ZE-06-C03",
+          "required": true
+        },
+        {
+          "evidence": [
+            "npm run build",
+            "npm run lint",
+            "node --experimental-strip-types --test functions/api/_instagram-feed.test.mjs",
+            "node .nox/evidence/ze06-qa-2026-10-23/playwright.mjs (exit 0)",
+            "git diff --cached --check",
+            "commit 3e2ea2b"
+          ],
+          "status": "PASS",
+          "description": "Build, lint, API/E2E, visual/performance regression, review, docs, and scoped local commit",
+          "id": "ZE-06-C04",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "ZE-07",
+      "title": "SEO tÃ©cnico local",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-07-C01",
+          "description": "Canonical oficial, OG URL, robots, sitemap e noindex para diagnósticos",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "index.html",
+            "public/robots.txt",
+            "public/sitemap.xml",
+            "public/_headers",
+            "evidence/ZE-07/qa-results.json"
+          ]
+        },
+        {
+          "id": "ZE-07-C02",
+          "description": "JSON-LD local consistente com fatos publicados",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "index.html JSON-LD AutoWash, NAP, horários, Instagram e quatro serviços",
+            "evidence/ZE-07/qa-results.json"
+          ]
+        },
+        {
+          "id": "ZE-07-C03",
+          "description": "Metadados locais e sociais, imagem OG e conteúdo geográfico real",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "public/og/zelo-estetica-automotiva-catalao.jpg",
+            "evidence/ZE-07/qa-results.json"
+          ]
+        },
+        {
+          "id": "ZE-07-C04",
+          "description": "Build, lint, SEO, regressão funcional e visual em seis resoluções; produção intacta",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "npm run build PASS",
+            "npm run lint exit 0; seis warnings legados",
+            "evidence/ZE-07/qa-results.json",
+            "evidence/ZE-07/lighthouse-pre-seo-baseline.json",
+            "evidence/ZE-07/lighthouse-mobile-390.json",
+            "evidence/ZE-07/lighthouse-desktop-production-build.json",
+            "sem deploy/push"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-08",
+      "title": "Google Analytics e mensuraÃ§Ã£o",
+      "status": "COMPLETED",
+      "criteria": [
+        {
+          "id": "ZE-08-C01",
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-08/qa-production-simulation.json"
+          ],
+          "external": "Recebimento GA4 PENDING; nenhuma afirma??o de painel"
+        },
+        {
+          "id": "ZE-08-C02",
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-08/qa-events.json",
+            "evidence/ZE-08/qa-browser-results.json"
+          ]
+        },
+        {
+          "id": "ZE-08-C03",
+          "status": "PASS",
+          "evidence": [
+            "ZE-08-Google-Handoff.md",
+            "evidence/ZE-08/qa-additional.json"
+          ],
+          "external": "Propriedade Search Console e envio sitemap PENDING externos; prepara??o local PASS"
+        },
+        {
+          "id": "ZE-08-C04",
+          "status": "PASS",
+          "evidence": [
+            "ZE-08-Report.md",
+            "evidence/ZE-08/qa-report.md",
+            "evidence/ZE-08/performance-summary.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-09",
+      "title": "ReputaÃ§Ã£o Google",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-10",
+      "title": "ExperiÃªncia e confiabilidade das avaliaÃ§Ãµes Google",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-11",
+      "title": "HomologaÃ§Ã£o local",
+      "status": "QUEUED",
+      "criteria": []
+    },
+    {
+      "id": "ZE-12",
+      "title": "PublicaÃ§Ã£o controlada",
+      "status": "QUEUED",
+      "criteria": []
+    }
+  ],
+  "lastCompletedSprint": "ZE-05"
 }

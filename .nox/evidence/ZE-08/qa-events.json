@@ -1,0 +1,67 @@
+[
+  {
+    "event": "page_view",
+    "params": {
+      "page_location": "https://zelo.omnyatech.com.br/",
+      "page_title": "Zelo Estética Automotiva em Catalão – GO"
+    }
+  },
+  {
+    "event": "quote_click",
+    "params": {
+      "cta_location": "header"
+    }
+  },
+  {
+    "event": "whatsapp_click",
+    "params": {
+      "cta_location": "header"
+    }
+  },
+  {
+    "event": "select_service",
+    "params": {
+      "service_name": "lavagem_completa"
+    }
+  },
+  {
+    "event": "quote_click",
+    "params": {
+      "cta_location": "services",
+      "service_context": "lavagem_completa"
+    }
+  },
+  {
+    "event": "whatsapp_click",
+    "params": {
+      "cta_location": "services",
+      "service_context": "lavagem_completa"
+    }
+  },
+  {
+    "event": "instagram_click",
+    "params": {
+      "cta_location": "instagram_grid",
+      "link_type": "profile"
+    }
+  },
+  {
+    "event": "directions_click",
+    "params": {
+      "cta_location": "location"
+    }
+  },
+  {
+    "event": "internal_search",
+    "params": {
+      "result_count": 1,
+      "selected_section": "servicos"
+    }
+  },
+  {
+    "event": "before_after_interaction",
+    "params": {
+      "comparator_id": "paint"
+    }
+  }
+]
