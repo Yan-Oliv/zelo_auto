@@ -1,8 +1,10 @@
 ﻿import type { ReactNode } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
 import { instagramPosts, locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
 import { useInstagramFeed, type InstagramFeedPost } from '../../hooks/useInstagramFeed'
+import { NearImage } from './NearImage'
 import './CommunityContact.css'
 
 const editorialPosts: InstagramFeedPost[] = [
@@ -16,7 +18,7 @@ const editorialPosts: InstagramFeedPost[] = [
 
 function CommunityReveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reducedMotion = useReducedMotion()
-  return <motion.div className={className} initial={reducedMotion ? false : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: reducedMotion ? 0 : 0.7, delay: reducedMotion ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}>{children}</motion.div>
+  return <m.div className={className} initial={reducedMotion ? false : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: reducedMotion ? 0 : 0.7, delay: reducedMotion ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}>{children}</m.div>
 }
 
 function CommunityEyebrow({ children }: { children: ReactNode }) {
@@ -41,7 +43,7 @@ function InstagramSection() {
     <CommunityReveal className="ze4-instagram-gallery" delay={0.08}>
       <div className="ze4-instagram-grid" aria-busy={loading} data-feed-source={hasOfficialPosts ? 'official' : 'editorial'}>
         {visiblePosts.map((post) => <a key={post.id} href={post.postUrl || siteConfig.instagramLink} target="_blank" rel="noopener noreferrer" className="ze4-instagram-tile" aria-label={hasOfficialPosts ? `Abrir publicação no Instagram: ${post.alt}` : `Abrir perfil oficial da Zelo — ${post.alt}`}>
-          <img src={post.image} alt={post.alt} width={520} height={520} loading="lazy" decoding="async" className={post.className} />
+          <NearImage src={post.image} alt={post.alt} width={520} height={520} loading="lazy" decoding="async" className={post.className} />
           <Camera className="ze4-instagram-media-icon" size={21} aria-hidden="true" />
           <span className="ze4-instagram-hover" aria-hidden="true"><Camera size={27} /><span>Abrir Instagram</span></span>
         </a>)}
@@ -103,8 +105,19 @@ export function CommunitySection({ googleReviews }: { googleReviews?: VerifiedGo
 
 export function LocationSection() {
   const reducedMotion = useReducedMotion()
+  const mapRef = useRef<HTMLDivElement>(null)
+  const [mapReady, setMapReady] = useState(false)
+  useEffect(() => {
+    if (!mapRef.current) return
+    if (!('IntersectionObserver' in window)) { setMapReady(true); return }
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { setMapReady(true); observer.disconnect() }
+    }, { rootMargin: '700px 0px' })
+    observer.observe(mapRef.current)
+    return () => observer.disconnect()
+  }, [])
   return <section id="localizacao" className="ze4-location" aria-labelledby="ze4-location-title">
-    <img className="ze4-location-scene" src="/editorial/location-scene.webp" alt="" width={1672} height={940} loading="lazy" decoding="async" />
+    <NearImage original className="ze4-location-scene" src="/editorial/location-scene.webp" alt="" width={1672} height={940} loading="lazy" decoding="async" />
     <span className="ze4-location-wordmark" aria-hidden="true">ZELO</span>
     <div className="ze4-container ze4-location-layout">
       <div className="ze4-location-copy">
@@ -116,9 +129,9 @@ export function LocationSection() {
         </div>
       </div>
       <div className="ze4-location-map-column">
-        <motion.div className="ze4-location-map" initial={reducedMotion ? false : { opacity: 0, scale: 0.985 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: reducedMotion ? 0 : 0.9, ease: [0.16, 1, 0.3, 1] }}>
-          <iframe title="Mapa e endereço da Zelo Estética Automotiva em Catalão" src={locationInfo.embedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
-        </motion.div>
+        <m.div ref={mapRef} className="ze4-location-map" initial={reducedMotion ? false : { opacity: 0, scale: 0.985 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: reducedMotion ? 0 : 0.9, ease: [0.16, 1, 0.3, 1] }}>
+          {mapReady ? <iframe title="Mapa e endereço da Zelo Estética Automotiva em Catalão" src={locationInfo.embedUrl} loading="eager" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /> : <div className="ze4-location-map-placeholder"><span>O mapa carrega automaticamente ao se aproximar. <a href={locationInfo.mapsLink} target="_blank" rel="noopener noreferrer">Abrir localização no Google Maps</a></span></div>}
+        </m.div>
         <CommunityReveal className="ze4-location-actions" delay={0.16}><a href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" className="ze4-button"><CalendarDays size={21} aria-hidden="true" />SOLICITAR ORÇAMENTO<ArrowRight size={21} aria-hidden="true" /></a><a href={locationInfo.mapsLink} target="_blank" rel="noopener noreferrer" className="ze4-button-outline"><Navigation size={21} aria-hidden="true" />VER ROTA NO MAPS<ArrowRight size={21} aria-hidden="true" /></a></CommunityReveal>
       </div>
       <div className="ze4-location-side-note" aria-hidden="true">CUIDADO<br />QUE<br />TE LEVA<br />MAIS LONGE.</div>
@@ -137,14 +150,14 @@ export function PremiumFooter() {
   return <footer className="ze4-footer">
     <div className="ze4-container">
       <div className="ze4-footer-main">
-        <div className="ze4-footer-brand"><a href="#hero" aria-label="Zelo Estética Automotiva — início"><img src={siteConfig.horizontalLogo} alt="Zelo Estética Automotiva" width={640} height={427} loading="lazy" decoding="async" /></a><div><p className="ze4-footer-statement">MAIS QUE ESTÉTICA.<br /><span>É VALORIZAÇÃO.</span></p><p>Mais que limpeza. Cuidado.<br />Estética automotiva em Catalão – GO.<br />Seu veículo no seu melhor brilho.</p></div></div>
+        <div className="ze4-footer-brand"><a href="#hero" aria-label="Zelo Estética Automotiva — início"><NearImage src={siteConfig.horizontalLogo} alt="Zelo Estética Automotiva" width={640} height={427} loading="lazy" decoding="async" /></a><div><p className="ze4-footer-statement">MAIS QUE ESTÉTICA.<br /><span>É VALORIZAÇÃO.</span></p><p>Mais que limpeza. Cuidado.<br />Estética automotiva em Catalão – GO.<br />Seu veículo no seu melhor brilho.</p></div></div>
         <nav className="ze4-footer-nav" aria-label="Navegação do rodapé"><h2>NAVEGAÇÃO</h2><div>{footerNavigation.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}</div></nav>
         <div className="ze4-footer-social"><h2>NOSSAS REDES</h2><a href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer"><Camera size={19} aria-hidden="true" />Instagram</a><a href={locationInfo.mapsLink} target="_blank" rel="noopener noreferrer"><MapPin size={19} aria-hidden="true" />Google Maps</a></div>
         <div className="ze4-footer-contact"><h2>CONTATO RÁPIDO</h2><a href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer"><MessageCircle size={23} aria-hidden="true" />{locationInfo.phoneLabel.replace('WhatsApp: ', '')}</a><a href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer"><Navigation size={23} aria-hidden="true" />Falar no WhatsApp</a></div>
       </div>
       <div className="ze4-footer-institutional">
         <div className="ze4-footer-verse"><p>“Ora, ao Rei dos séculos, imortal, invisível, ao Deus único, sábio, seja honra e glória para todo o sempre. Amém.”</p><span>1 TIMÓTEO 1:17</span></div>
-        <div id="parceiros" className="ze4-footer-partners"><h2>PARCEIROS DA EMPRESA</h2><div>{partnerLogos.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} width={140} height={56} loading="lazy" decoding="async" />)}</div></div>
+        <div id="parceiros" className="ze4-footer-partners"><h2>PARCEIROS DA EMPRESA</h2><div>{partnerLogos.map((partner) => <NearImage key={partner.name} src={partner.logo} alt={partner.name} width={140} height={56} loading="lazy" decoding="async" />)}</div></div>
       </div>
       <div className="ze4-footer-bottom"><p>© 2026 Zelo Estética Automotiva. Todos os direitos reservados.</p><span>Catalão – GO</span><p>Estética automotiva <span aria-hidden="true">|</span> Cuidado em cada detalhe.</p></div>
     </div>

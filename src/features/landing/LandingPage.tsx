@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, CalendarDays, ChevronDown, Search, Menu, X } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import clsx from 'clsx'
 import { services, siteConfig } from './data/site'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
@@ -23,6 +23,8 @@ const headerLinks = [
 const searchLinks = [...headerLinks, { label: 'Instagram', href: '#instagram' }, { label: 'Produtos', href: '#marcas' }, { label: 'Localiza\u00e7\u00e3o', href: '#localizacao' }]
 const observedSectionIds = ['hero', 'servicos', 'resultados', 'processo', 'marcas', 'instagram', 'avaliacoes', 'localizacao', 'contato', 'parceiros']
 const heroIntroKey = 'zelo:hero-intro:v4'
+const heroCarSources = '/hero/responsive/car-reference-420.webp 420w, /hero/responsive/car-reference-640.webp 640w, /hero/responsive/car-reference-840.webp 840w, /hero/responsive/car-reference-1024.webp 1024w, /hero/car-reference.webp 1275w'
+const heroCarSizes = '(max-width: 600px) 94vw, (max-width: 1050px) 70vw, min(42.35vw, 75.34svh)'
 let introConsumedInDocument = false
 
 function hasSeenHeroIntro() {
@@ -60,6 +62,7 @@ export function LandingPage() {
 
   useEffect(() => {
     if (!menuOpen) return
+    const trigger = menuButtonRef.current
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     menuPanelRef.current?.querySelector<HTMLButtonElement>('button')?.focus()
@@ -75,7 +78,7 @@ export function LandingPage() {
     return () => {
       document.body.style.overflow = previousOverflow
       document.removeEventListener('keydown', keydown)
-      menuButtonRef.current?.focus()
+      trigger?.focus()
     }
   }, [menuOpen])
 
@@ -164,17 +167,24 @@ export function LandingPage() {
     // Tall sections can never reach the shared navigation observer's threshold.
     // Header contrast depends only on whether the hero is behind the header.
     let frame = 0
+    let headerHeight = 0
+    const measureHeader = () => {
+      const nextHeight = header.getBoundingClientRect().height
+      if (nextHeight !== headerHeight) {
+        headerHeight = nextHeight
+        document.documentElement.style.setProperty('--zelo-nav-height', `${headerHeight}px`)
+      }
+    }
     const update = () => {
       frame = 0
-      const headerHeight = header.getBoundingClientRect().height
-      document.documentElement.style.setProperty('--zelo-nav-height', `${headerHeight}px`)
       setOnHero(hero.getBoundingClientRect().bottom > headerHeight + 32)
     }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
-    const resize = new ResizeObserver(schedule)
+    const resize = new ResizeObserver(() => { measureHeader(); schedule() })
     resize.observe(header)
     window.addEventListener('scroll', schedule, { passive: true })
     window.addEventListener('resize', schedule)
+    measureHeader()
     update()
     return () => {
       resize.disconnect()
@@ -186,10 +196,11 @@ export function LandingPage() {
 
   return (
     <div className="ze4-page min-h-screen">
+      <a className="zelo-skip-link" href="#main-content">Pular para o conteúdo</a>
       <header data-intro={onHero && !heroReducedMotion ? heroIntro : 'settled'} className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
           <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
-            <img ref={headerLogoRef} src={siteConfig.mainLogo} alt={brandName} width={640} height={427} fetchPriority="high" />
+            <img ref={headerLogoRef} src="/hero/responsive/zelo-logo-480.webp" alt={brandName} width={640} height={427} fetchPriority="high" />
           </a>
           <span className="zelo-header-divider" aria-hidden="true" />
           <nav className="zelo-header-nav" aria-label="Navegação principal">
@@ -229,18 +240,19 @@ export function LandingPage() {
 
       <AnimatePresence>
         {menuOpen ? (
-          <motion.div
-            initial={{ opacity: 0 }}
+          <m.div
+            initial={heroReducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={heroReducedMotion ? undefined : { opacity: 0 }}
+            transition={{ duration: heroReducedMotion ? 0 : 0.2 }}
             id="zelo-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl zelo-mobile-menu"
             ref={menuPanelRef}
           >
-            <motion.div
-              initial={{ x: '100%' }}
+            <m.div
+              initial={heroReducedMotion ? false : { x: '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              exit={heroReducedMotion ? undefined : { x: '100%' }}
+              transition={{ duration: heroReducedMotion ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="ml-auto flex h-full w-[84%] max-w-sm flex-col border-l border-white/10 bg-brand-graphite px-6 pb-10 pt-6"
             >
               <div className="mb-12 flex items-center justify-between">
@@ -274,16 +286,16 @@ export function LandingPage() {
               >
                 {budgetLabel}
               </a>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         ) : null}
       </AnimatePresence>
 
-      <main className="relative z-10">
+      <main id="main-content" tabIndex={-1} className="relative z-10">
         <section id="hero" className="zelo-hero" data-intro={heroReducedMotion ? 'settled' : heroIntro} aria-labelledby="zelo-hero-title">
           <h1 id="zelo-hero-title" className="sr-only">Mais que estética. É valorização. Zelo Estética Automotiva em Catalão — GO.</h1>
           <div className="zelo-hero-stage" aria-hidden="true">
-            <img ref={backdropRef} className="zelo-hero-backdrop" src="/hero/showroom-reference.webp" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
+            <img ref={backdropRef} className="zelo-hero-backdrop" src="/hero/showroom-reference.webp" srcSet="/hero/responsive/showroom-reference-840.webp 840w, /hero/responsive/showroom-reference-1280.webp 1280w, /hero/showroom-reference.webp 1672w" sizes="max(100vw, 177.87svh)" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
           </div>
           <div className="zelo-showroom-sign" aria-hidden="true"><span>ZELO</span><small>AUTO ESTÉTICA</small></div>
           <svg className="zelo-hero-wordmark" viewBox="416 191 825 286" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
@@ -302,9 +314,9 @@ export function LandingPage() {
             </g>
           </svg>
           <div className="zelo-hero-car" aria-hidden="true">
-            <div className="zelo-hero-reflection"><img src="/hero/car-reference.webp" alt="" width={1275} height={643} /></div>
+            <div className="zelo-hero-reflection"><img src="/hero/car-reference.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={1275} height={643} /></div>
             <div className="zelo-hero-ground-shadow" />
-            <img className="zelo-hero-car-body" ref={carRef} src="/hero/car-reference.webp" alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
+            <img className="zelo-hero-car-body" ref={carRef} src="/hero/car-reference.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
           </div>
           <div className="zelo-hero-edge-fade" aria-hidden="true" />
           <div className="zelo-hero-top-fade" aria-hidden="true" />
@@ -312,7 +324,7 @@ export function LandingPage() {
             <span className="zelo-hero-slogan-left">MAIS QUE ESTÉTICA.</span>
             <span className="zelo-hero-slogan-right">É VALORIZAÇÃO.</span>
           </div>
-          <a className="zelo-hero-scroll-hint" href="#servicos" aria-label="Explorar nossos serviços">
+          <a className="zelo-hero-scroll-hint" href="#servicos" aria-label="Role para explorar nossos serviços">
             <span>ROLE PARA EXPLORAR</span>
             <ChevronDown className="zelo-hero-chevron" size={26} strokeWidth={1.3} aria-hidden="true" />
           </a>

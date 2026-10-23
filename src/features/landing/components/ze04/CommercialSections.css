@@ -1,4 +1,4 @@
-@font-face { font-family:'Montserrat'; src:url('../../../../fontes/montserrat/Montserrat-Regular.otf') format('opentype'); font-style:normal; font-weight:400; font-display:swap; }
+@font-face { font-family:'Montserrat'; src:url('../../../../fontes/montserrat/Montserrat-Regular-latin.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
 .ze4-services,.ze4-process,.ze4-quality,.ze4-results { position:relative; isolation:isolate; scroll-margin-top:100px; font-family:'Montserrat',sans-serif; font-weight:400; }
 .ze4-services,.ze4-process,.ze4-quality { color:var(--ze4-ink,#161719); background:var(--ze4-canvas,#fafaf8); }
 .ze4-commercial-eyebrow { display:flex; align-items:center; gap:20px; margin:0 0 22px; font-size:10px; font-weight:600; letter-spacing:.45em; line-height:1.4; text-transform:uppercase; }

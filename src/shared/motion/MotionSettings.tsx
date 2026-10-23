@@ -23,8 +23,8 @@ export function MotionSettingsProvider({ children }: { children: ReactNode }) {
   const [forceAnimations, setForceAnimations] = useState(false)
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY)
-    setForceAnimations(stored === 'true')
+    try { setForceAnimations(window.localStorage.getItem(STORAGE_KEY) === 'true') }
+    catch { /* Private/blocked storage keeps the in-memory preference. */ }
   }, [])
 
   const value = useMemo<MotionSettingsValue>(
@@ -34,7 +34,8 @@ export function MotionSettingsProvider({ children }: { children: ReactNode }) {
       toggleForceAnimations: () => {
         setForceAnimations((current) => {
           const next = !current
-          window.localStorage.setItem(STORAGE_KEY, String(next))
+          try { window.localStorage.setItem(STORAGE_KEY, String(next)) }
+          catch { /* Motion controls also work when persistence is unavailable. */ }
           return next
         })
       },

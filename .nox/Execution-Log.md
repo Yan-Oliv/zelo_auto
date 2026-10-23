@@ -70,3 +70,14 @@ Full contract read, five PNGs individually inspected, complementary design syste
 - Build/lint PASS (6 legacy warnings); QA332 PASS/0 open, 2 historical methodology failures explicitly superseded. Independent review and root/Nox visual comparison PASS, not user approval.
 - Corrected header/anchor/active state, mobile menu keyboard/focus, products fade, utility typography, benefit/CTA contrast and obstructive Maps badge.
 - Google reviews and official feed remain honest unavailable states; illustrative before/after labeled. No later sprint/push/deploy.
+
+2026-10-22: ZE-05 CURRENT. Full contract loaded, Git3271073 checked, checkpoint ZE-05-start-20261022 created. User references/plans preserved. Baseline production build PASS. Chrome DevTools MCP unavailable; free local Lighthouse/CDP equivalent selected per authorization to resolve tool gaps. No product edits before baseline.
+
+## 2026-10-23 — ZE-05 COMPLETED tecnicamente
+- Entregas (2): redução de JavaScript/assets iniciais; performance mobile e acessibilidade com regressão funcional/visual.
+- Build PASS (2750 módulos); lint exit 0, 6 warnings legados. Three chunk (~1.025 MB) continua emitido só para debug; Lighthouse e regressão confirmam zero request Three/GLB na landing.
+- Lighthouse 13.5 / Chrome 149, três amostras frias no preview local: mobile mediana Performance89/Accessibility100, FCP1956 ms, LCP3531 ms, CLS0, TBT32 ms, transfer649512 B (JS116133, imagens435232, fontes78596); desktop99/100, FCP446 ms, LCP865 ms, CLS0, TBT0, transfer791738 B (JS116133, imagens577458, fontes78596).
+- Baseline comparável: mobile60/96, FCP6308 ms, LCP11709 ms, CLS0, TBT20 ms, transfer3277714 B; desktop90/96, FCP1119 ms, LCP1785 ms, CLS0.00012, TBT0, transfer4204986 B. Carga de JS, imagens e fontes e ambas as métricas Core Web Vitals melhoraram.
+- CDP Network/CPU: cold LCP mobile6304 ms/transfer647792 B; warm732 ms/3856 B; desktop cold3956 ms/790114 B; warm244 ms/4756 B. Cold LCP é `.zelo-hero-car-body`; imagem discoverable, fetchpriority high, request concluído cedo. O atraso acompanha a primeira intro (waiting até decode/fonts, then sequência cinematográfica); não reduzir duração/alterar a apresentação aprovada. Lighthouse e CDP medem setups distintos; não inferir INP de campo.
+- Regressão Chromium 307/307 PASS nos seis viewports, interações/teclado/touch sob CPU4x, reduced motion, persistência v4, six screenshots; axe25 scans, zero violações do produto e zero críticas/sérias; 6 ocorrências moderate no iframe Google externas; 34 checks incompletos permanecem limitações. Root/Nox revisou visualmente referências capturadas e aprovou tecnicamente, sem afirmar aprovação do proprietário.
+- Metas mobile Performance90 e LCP2.5 s não alcançadas; limitações e hipótese de follow-up registradas no relatório. Preservados hero/layouts/animações/key v4; `new_interface/` e `src/planos/` mantidos não rastreados; produção intacta. Sem push/deploy/ZE-06.

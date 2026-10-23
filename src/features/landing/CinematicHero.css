@@ -1,6 +1,6 @@
 ﻿@font-face {
   font-family: 'Zelo Hero';
-  src: url('../../fontes/montserrat/Montserrat-Regular.otf') format('opentype');
+  src: url('../../fontes/montserrat/Montserrat-Regular-latin.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -163,8 +163,9 @@
 .zelo-header-nav a[aria-current] { font-weight: 700; }
 .zelo-header-nav a[aria-current]::after { content: ''; position: absolute; height: 2px; left: 0; right: 0; bottom: -7px; background: #ac7b1b; }
 .zelo-header-actions { margin-left: auto; display: flex; align-items: center; gap: 1.2vw; }
-.zelo-header-budget { display: inline-flex; align-items: center; justify-content: center; gap: 1vw; min-height: 45px; padding: 10px 1.35vw; border-radius: 17px; background: linear-gradient(180deg,#d0a34f,#966818); color: #fff; font-size: clamp(10px,.8vw,15px); font-weight: 600; letter-spacing: .055em; white-space: nowrap; text-decoration: none; }
-.zelo-header-search,.zelo-header-menu { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; flex-shrink: 0; border: 0; border-radius: 50%; background: rgba(112,112,112,.42); color: #fff; cursor: pointer; }
+.zelo-header-budget { display: inline-flex; align-items: center; justify-content: center; gap: 1vw; min-height: 45px; padding: 10px 1.35vw; border-radius: 17px; background: linear-gradient(180deg,#947022,#83591a); color: #fff; font-size: clamp(10px,.8vw,15px); font-weight: 600; letter-spacing: .055em; white-space: nowrap; text-decoration: none; }
+.zelo-header-search,.zelo-header-menu { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; flex-shrink: 0; border: 0; border-radius: 50%; background: #858585; color: #fff; cursor: pointer; }
+.zelo-site-header-dark .zelo-header-nav a:hover { color: #e5bf76; }
 .zelo-header-menu { display: none; }
 .zelo-site-header :is(a,button,input):focus-visible,.zelo-hero-scroll-hint:focus-visible { outline: 2px solid #a77721; outline-offset: 5px; }
 .zelo-search-panel { position: absolute; right: 5.9%; top: calc(100% + 4px); width: min(390px,88vw); padding: 20px; border-radius: 12px; background: #fffffff5; color: #252525; box-shadow: 0 14px 45px #0003; font-family: 'Zelo Hero',Arial,sans-serif; }

@@ -14,7 +14,7 @@
   src:
     local('Montserrat SemiBold'),
     local('Montserrat-SemiBold'),
-    url('./fontes/montserrat/Montserrat-SemiBold.otf') format('opentype');
+    url('./fontes/montserrat/Montserrat-SemiBold-latin.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
   src:
     local('Montserrat Bold'),
     local('Montserrat-Bold'),
-    url('./fontes/montserrat/Montserrat-Bold.otf') format('opentype');
+    url('./fontes/montserrat/Montserrat-Bold-latin.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
