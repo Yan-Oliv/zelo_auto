@@ -3,14 +3,14 @@
     "project":  "zelo_autoestica",
     "status":  "WAITING_USER_ACTION",
     "currentSprint":  "ZE-06",
-    "currentStep":  "Owner Instagram Login reauthorization and account-role check",
+    "currentStep":  "Owner Cloudflare Pages secret propagation and public endpoint verification",
     "allowedStopReasons":  [
                                "WAITING_USER_ACTION",
                                "BLOCKED_EXTERNAL",
                                "PAYMENT_REQUIRED"
                            ],
     "stopReason":  "WAITING_USER_ACTION",
-    "nextAction":  "Owner to freshly authorize the intended professional Instagram account via Instagram Login, check Development Mode role/tester access if applicable, then configure server-only variables and repeat live-feed QA.",
+    "nextAction":  "Owner to update server-only Cloudflare Pages variables with the locally validated Instagram Login credentials and verify the public endpoint; no deploy or production change performed by Nox.",
     "sprints":  [
                     {
                         "id":  "ZE-01",
@@ -332,9 +332,11 @@
                         "criteria":  [
                                          {
                                              "evidence":  [
-                                                              "Public endpoint: HTTP 400/OAuthException 190; local graph.instagram.com/me and /ID/media: HTTP 401/OAuthException 190; secret-safe evidence documented in ZE-06-Report.md"
+                                                              "Fresh Vite local API returned HTTP 200 with six official posts; 6/6 links and images validated without recording post data",
+                                                              "evidence/ze06-qa-2026-10-23/live-instagram-local.png",
+                                                              "Public endpoint retains earlier HTTP 400 until owner updates Cloudflare server secret"
                                                           ],
-                                             "status":  "PENDING",
+                                             "status":  "PASS",
                                              "description":  "Diagnose HTTP 400 and validate the authorized Instagram API integration",
                                              "id":  "ZE-06-C01",
                                              "required":  true
