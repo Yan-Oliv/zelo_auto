@@ -1,0 +1,37 @@
+{
+  "baseline-denied": {
+    "performance": 0.91,
+    "accessibility": 0.97,
+    "lcp": 3454.4653,
+    "cls": 0,
+    "runtimeError": null
+  },
+  "baseline-granted": {
+    "performance": 0.91,
+    "accessibility": 0.97,
+    "lcp": 3453.4193,
+    "cls": 0,
+    "runtimeError": null
+  },
+  "final-denied": {
+    "performance": 0.89,
+    "accessibility": 0.97,
+    "lcp": 3753.5082999999995,
+    "cls": 0,
+    "runtimeError": null
+  },
+  "final-granted": {
+    "performance": 0.91,
+    "accessibility": 0.97,
+    "lcp": 3453.7563,
+    "cls": 0,
+    "runtimeError": null
+  },
+  "repeat-denied": {
+    "performance": 0.91,
+    "accessibility": 0.97,
+    "lcp": 3453.3046999999997,
+    "cls": 0,
+    "runtimeError": null
+  }
+}

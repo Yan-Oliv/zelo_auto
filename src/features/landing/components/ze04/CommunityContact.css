@@ -287,3 +287,23 @@
 .ze4-instagram-skeleton { aspect-ratio: 1; border-radius: 8px; background: linear-gradient(100deg, #e9e5de 25%, #f4f1ec 45%, #e9e5de 65%); background-size: 220% 100%; animation: ze4-instagram-loading 1.4s ease-in-out infinite; }
 @keyframes ze4-instagram-loading { to { background-position-x: -220%; } }
 @media (prefers-reduced-motion: reduce) { .ze4-instagram-skeleton { animation: none; } }
+/* ZE-09: independent rating fill, bounded comments and reserved loading layout. */
+.ze4-review-star { position: relative; display: inline-block; width: 16px; height: 16px; flex: 0 0 16px; }
+.ze4-review-star > svg { position: absolute; inset: 0; }
+.ze4-review-star > span { position: absolute; inset: 0 auto 0 0; overflow: hidden; }
+.ze4-review-star > span > svg { display: block; max-width: none; }
+.ze4-review-card > div { min-width: 0; }
+.ze4-review-card h3, .ze4-review-card p { overflow-wrap: anywhere; }
+.ze4-review-card h3 > a { margin: 0; font: inherit; color: inherit; }
+.ze4-review-comment { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; white-space: pre-line; }
+.ze4-review-content { min-height: 550px; }
+.ze4-review-list { min-height: 360px; align-content: start; }
+.ze4-review-skeleton { background: linear-gradient(100deg, #e9e5de 25%, #f4f1ec 45%, #e9e5de 65%); background-size: 220% 100%; animation: ze4-instagram-loading 1.4s ease-in-out infinite; }
+.ze4-review-skeleton-summary { width: 100%; height: 80px; border-radius: 8px; }
+.ze4-reviews-status { min-height: 2.7em; font-size: 12px; line-height: 1.4; color: #68656b; margin: 12px 0 0; }
+.ze4-reviews-actions { flex-wrap: wrap; gap: 12px; }
+.ze4-review-write { padding: 17px 19px; gap: 12px; font-size: 12px; letter-spacing: .045em; white-space: normal; }
+.ze4-reviews-actions > a { max-width: 100%; justify-content: center; text-align: center; min-height: 48px; }
+.ze4-reviews-actions > a svg { flex-shrink: 0; }
+.ze4-google-reviews .ze4-review-score > strong { font-size: 52px; letter-spacing: -.02em; }
+@media (prefers-reduced-motion: reduce) { .ze4-review-skeleton { animation: none; } }

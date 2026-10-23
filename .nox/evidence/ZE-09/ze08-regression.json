@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "name": "No analytics before choice",
+      "result": "PASS",
+      "detail": "No diagnostic event, tag, or analytics request"
+    },
+    {
+      "name": "Refusal persists",
+      "result": "PASS",
+      "detail": "Reload retains refusal; no events or tag"
+    },
+    {
+      "name": "One pageview after consent",
+      "result": "PASS",
+      "detail": "Acceptance and anchor/scroll do not duplicate pageview"
+    },
+    {
+      "name": "Budget has no duplicate event names",
+      "result": "PASS",
+      "detail": "Exactly one quote_click and one whatsapp_click; separate dimensions, never summed as contacts"
+    },
+    {
+      "name": "Service, Instagram, search, comparator events",
+      "result": "PASS",
+      "detail": "Sanitized fixed taxonomy; no search text, messages, outbound URL, sale or lead"
+    },
+    {
+      "name": "Revocation blocks new tracking",
+      "result": "PASS",
+      "detail": "Subsequent CTA does not emit; local diagnostics make zero network requests"
+    },
+    {
+      "name": "Preview disabled by default; diagnostic opt-in",
+      "result": "PASS",
+      "detail": "No requests either way; diagnostic produces one page_view per real reload"
+    },
+    {
+      "name": "Storage blocked",
+      "result": "PASS",
+      "detail": "In-memory consent works; next document fails closed without errors"
+    },
+    {
+      "name": "Debug route excluded",
+      "result": "PASS",
+      "detail": "No event or tag; noindex preserved"
+    },
+    {
+      "name": "Six viewports",
+      "result": "PASS",
+      "detail": "Screenshots with/without banner; no overflow or browser errors"
+    },
+    {
+      "name": "SEO regression",
+      "result": "PASS",
+      "detail": "Canonical, verification, structured data, sitemap, robots preserved locally"
+    }
+  ],
+  "viewports": [
+    {
+      "name": "ultrawide",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    },
+    {
+      "name": "notebook",
+      "width": 1366,
+      "height": 768,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    },
+    {
+      "name": "mobile-compact",
+      "width": 360,
+      "height": 740,
+      "overflow": false,
+      "consentWithinViewport": true,
+      "browserErrors": 0
+    }
+  ],
+  "external": {
+    "ga4Reception": "PENDING: Google account not accessed",
+    "searchConsole": "PENDING: Google account not accessed"
+  },
+  "status": "PASS"
+}

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, Film, Images, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
 import { locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
 import { useInstagramFeed, type InstagramFeedPost } from '../../hooks/useInstagramFeed'
+import { useGoogleReviews, type VerifiedGoogleReviews } from '../../hooks/useGoogleReviews'
+export type { VerifiedGoogleReview, VerifiedGoogleReviews } from '../../hooks/useGoogleReviews'
 import { NearImage } from './NearImage'
 import './CommunityContact.css'
 
@@ -71,45 +73,40 @@ function InstagramSection() {
     </CommunityReveal>
   </section>
 }
-export type VerifiedGoogleReview = {
-  id: string
-  author: string
-  rating: number
-  comment: string
-  dateLabel: string
-  sourceUrl: string
-}
-
-export type VerifiedGoogleReviews = {
-  average: number
-  total: number
-  reviews: VerifiedGoogleReview[]
-  sourceUrl: string
-}
-
 function CommunityStars({ rating }: { rating: number }) {
-  return <span className="ze4-review-stars" aria-label={`${rating} de 5 estrelas`}>{Array.from({ length: 5 }, (_, i) => <Star key={i} size={16} fill={i < Math.round(rating) ? 'currentColor' : 'none'} aria-hidden="true" />)}</span>
+  const reducedMotion = useReducedMotion()
+  return <span className="ze4-review-stars" role="img" aria-label={`${rating.toLocaleString('pt-BR')} de 5 estrelas`}>{Array.from({ length: 5 }, (_, i) => <m.span className="ze4-review-star" key={i} aria-hidden="true" initial={reducedMotion ? false : { opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: reducedMotion ? 0 : 0.4, delay: reducedMotion ? 0 : i * 0.06 }}><Star size={16} /><span style={{ width: `${Math.max(0, Math.min(1, rating - i)) * 100}%` }}><Star size={16} fill="currentColor" /></span></m.span>)}</span>
 }
 
-export function GoogleReviewsSection({ data }: { data?: VerifiedGoogleReviews }) {
+export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGoogleReviews }) {
+  const feed = useGoogleReviews(!suppliedData)
+  const data = suppliedData ?? feed.data
+  const status = suppliedData ? (suppliedData.total === 0 ? 'empty' : 'verified') : feed.status
+  const loading = status === 'loading'
   const unavailableCards = [
     { icon: <Camera size={23} />, title: 'Acompanhe o nosso dia a dia', description: 'Bastidores e cuidados no perfil oficial.', action: 'Abrir Instagram', href: siteConfig.instagramLink },
     { icon: <MessageCircle size={23} />, title: 'Converse com a nossa equipe', description: 'Tire dúvidas e encontre o cuidado para seu carro.', action: 'Falar no WhatsApp', href: siteConfig.whatsappLink },
     { icon: <MapPin size={23} />, title: 'Conheça a Zelo de perto', description: 'Estamos esperando você em Catalão – GO.', action: 'Como chegar', href: locationInfo.mapsLink },
   ]
-  return <section id="avaliacoes" className="ze4-google-reviews" aria-labelledby="ze4-reviews-title" data-reviews-state={data ? 'verified' : 'unavailable'}>
+  return <section ref={feed.ref} id="avaliacoes" className="ze4-google-reviews" aria-labelledby="ze4-reviews-title" data-reviews-state={status}>
     <CommunityReveal>
       <CommunityEyebrow>CONFIANÇA QUE GERA HISTÓRIAS</CommunityEyebrow>
       <h2 id="ze4-reviews-title" className="ze4-community-title">AVALIAÇÕES<br /><span>GOOGLE</span></h2>
       <p className="ze4-community-description">A sua experiência é o que nos move. Valorizamos a confiança de quem escolhe a Zelo Auto Estética.</p>
     </CommunityReveal>
+    <div className="ze4-review-content" aria-busy={loading}>
     <CommunityReveal className="ze4-review-summary" delay={0.05}>
-      {data ? <><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div><strong>{data.total} avaliações</strong><p>Opiniões de clientes no Google.</p><a data-analytics-review href={data.sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google <ArrowUpRight size={14} aria-hidden="true" /></a></div></> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>Acompanhe nossos canais oficiais.</p><span className="ze4-review-availability">Avaliações indisponíveis nesta página.</span></div></>}
+      {loading ? <div className="ze4-review-skeleton ze4-review-skeleton-summary" aria-hidden="true" /> : data && data.average !== null ? <><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div><strong>{data.total} avaliações</strong><p>Opiniões de clientes no Google.</p><a data-analytics-review="view" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google <ArrowUpRight size={14} aria-hidden="true" /></a></div></> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>Acompanhe nossos canais oficiais.</p><span className="ze4-review-availability">{status === 'empty' ? 'Ainda sem avalia\u00e7\u00f5es no Google.' : 'Avalia\u00e7\u00f5es indispon\u00edveis nesta p\u00e1gina.'}</span></div></>}
     </CommunityReveal>
     <div className="ze4-review-list">
-      {data ? data.reviews.slice(0, 3).map((review, index) => <CommunityReveal key={review.id} delay={0.1 + index * 0.08} className="ze4-review-card"><span className="ze4-review-avatar" aria-hidden="true">{review.author.slice(0, 1)}</span><div><h3>{review.author}</h3><div className="ze4-review-meta"><CommunityStars rating={review.rating} /><span>{review.dateLabel}</span></div><p>{review.comment}</p><a data-analytics-review href={review.sourceUrl} target="_blank" rel="noopener noreferrer">Ler no Google <ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>) : unavailableCards.map((card, index) => <CommunityReveal key={card.title} delay={0.1 + index * 0.08} className="ze4-review-card ze4-review-unavailable"><span className="ze4-review-info-icon" aria-hidden="true">{card.icon}</span><div><h3>{card.title}</h3><p>{card.description}</p><a href={card.href} target="_blank" rel="noopener noreferrer">{card.action}<ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>)}
+      {loading ? Array.from({ length: 3 }, (_, index) => <div key={index} className="ze4-review-card ze4-review-skeleton" aria-hidden="true" />) : data ? data.reviews.slice(0, 3).map((review, index) => <CommunityReveal key={review.id} delay={0.1 + index * 0.08} className="ze4-review-card"><span className="ze4-review-avatar" aria-hidden="true">{review.author.slice(0, 1)}</span><div><h3>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</h3><div className="ze4-review-meta"><CommunityStars rating={review.rating} /><span>{review.dateLabel}</span></div>{review.comment && <p className="ze4-review-comment">{review.comment}</p>}<a data-analytics-review="view" href={review.sourceUrl} target="_blank" rel="noopener noreferrer">Ler no Google <ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>) : unavailableCards.map((card, index) => <CommunityReveal key={card.title} delay={0.1 + index * 0.08} className="ze4-review-card ze4-review-unavailable"><span className="ze4-review-info-icon" aria-hidden="true">{card.icon}</span><div><h3>{card.title}</h3><p>{card.description}</p><a href={card.href} target="_blank" rel="noopener noreferrer">{card.action}<ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>)}
     </div>
-    <CommunityReveal className="ze4-reviews-actions" delay={0.2}><a data-analytics-review={data ? true : undefined} href={data?.sourceUrl || locationInfo.mapsLink} className="ze4-button-outline" target="_blank" rel="noopener noreferrer">{data ? 'VER AVALIAÇÕES NO GOOGLE' : 'VER LOCALIZAÇÃO NO GOOGLE MAPS'}<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> CANAIS OFICIAIS</span></CommunityReveal>
+    </div>
+    <p className="ze4-reviews-status" role="status">{loading ? 'Carregando avaliações do Google…' : data ? data.total === 0 ? 'Nenhuma avaliação disponível no Google no momento.' : 'Avaliações de clientes. Fonte: Google.' : 'As avaliações do Google estão indisponíveis no momento.'}</p>
+    <CommunityReveal className="ze4-reviews-actions" delay={0.2}>
+      {data?.reviewActionUrl && <a data-analytics-review="write" href={data.reviewActionUrl} className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
+      <a data-analytics-review={data ? 'view' : undefined} href={data?.sourceUrl || locationInfo.mapsLink} className="ze4-button-outline" target="_blank" rel="noopener noreferrer">{data ? 'VER TODAS AS AVALIAÇÕES' : 'VER LOCALIZAÇÃO NO GOOGLE MAPS'}<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
+    </CommunityReveal>
   </section>
 }
 

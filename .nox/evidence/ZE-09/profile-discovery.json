@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-23T16:42:09.364Z",
+  "method": "Public Google Maps UI read-only, no API calls/billing/authentication",
+  "existingMapsLink": "https://maps.app.goo.gl/9twSEgWic6k4YYyf7",
+  "existingLinkResult": "Address point, not branded business profile",
+  "businessMapsUrl": "https://www.google.com/maps/search/Zelo+Est%C3%A9tica+Automotiva+Catal%C3%A3o/",
+  "name": "Zelo Est?tica Automotiva",
+  "phone": "(64) 99616-1968",
+  "website": "zelo.omnyatech.com.br",
+  "publicAddress": "R. Ant?nio Hor?cio Pereira - Catal?o, GO, 75705-150",
+  "category": "Servi?o de limpeza completa de autom?veis",
+  "identityMatches": [
+    "name",
+    "phone",
+    "official website",
+    "city",
+    "street",
+    "postal code"
+  ],
+  "unconfirmed": [
+    "street number 1485 not present on public business sheet",
+    "owner verified status",
+    "OAuth permissions",
+    "official shareable write-review URL",
+    "review data and rating"
+  ],
+  "reviewActionTest": "Public Avaliar button opened Google sign-in popup; no login and no review submitted",
+  "authDestinationHost": "accounts.google.com",
+  "reviewDataDisplayed": false,
+  "notes": "Public Maps limited view did not display rating, count, or reviews. No Place ID inferred from existing address link."
+}

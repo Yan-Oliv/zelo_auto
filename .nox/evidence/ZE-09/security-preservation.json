@@ -1,0 +1,6 @@
+{
+  "scope": "tracked diff + public JS",
+  "forbiddenUnrelatedChanges": [],
+  "secretMatches": [],
+  "envTracked": false
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "MOCKED UI CONTRACT TESTS - NOT REAL GOOGLE DATA",
+  "groups": [
+    {
+      "name": "Lazy fetch / skeleton / dedup / safe text / fractional stars",
+      "status": "PASS"
+    },
+    {
+      "name": "unconfigured",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed",
+      "status": "PASS"
+    },
+    {
+      "name": "untrusted URL",
+      "status": "PASS"
+    },
+    {
+      "name": "google redirect rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "inconsistent empty",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid review rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "empty",
+      "status": "PASS"
+    },
+    {
+      "name": "Optional write link hidden",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid write target hidden",
+      "status": "PASS"
+    },
+    {
+      "name": "Analytics consent false",
+      "status": "PASS"
+    },
+    {
+      "name": "Analytics consent true",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock ultrawide",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock notebook",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive mock mobile-compact",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "QUEUED",
-  "currentSprint": null,
-  "currentStep": "ZE-08 conclu?da tecnicamente; ZE-09 n?o iniciada",
+  "status": "WAITING_USER_ACTION",
+  "currentSprint": "ZE-09",
+  "currentStep": "Implementação interna e QA concluídos; integração real Google pendente",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
-  "stopReason": null,
-  "nextAction": "Aguardar objetivo ZE-09. Antes de futura publica??o, propriet?rio configura e valida GA4/Search Console conforme handoff.",
+  "stopReason": "WAITING_USER_ACTION",
+  "nextAction": "Proprietário configura OAuth GBP server-only, confirma ficha/número1485 e link Receba mais avaliações; depois retomar API real/CTAs.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -479,8 +479,65 @@
     {
       "id": "ZE-09",
       "title": "ReputaÃ§Ã£o Google",
+      "status": "WAITING_USER_ACTION",
+      "criteria": [
+        {
+          "id": "ZE-09-C01",
+          "description": "Fonte oficial autenticada e avaliações/nota/total reais",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-09-Report.md",
+            "ZE-09-Google-Handoff.md",
+            "evidence/ZE-09/qa-browser.json",
+            "evidence/ZE-09/api-tests-result.txt"
+          ]
+        },
+        {
+          "id": "ZE-09-C02",
+          "description": "Interface com dados reais e referência4",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-09-Report.md",
+            "ZE-09-Google-Handoff.md",
+            "evidence/ZE-09/qa-browser.json",
+            "evidence/ZE-09/api-tests-result.txt"
+          ]
+        },
+        {
+          "id": "ZE-09-C03",
+          "description": "Link oficial de avaliação e consulta homologados",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-09-Report.md",
+            "ZE-09-Google-Handoff.md",
+            "evidence/ZE-09/qa-browser.json",
+            "evidence/ZE-09/api-tests-result.txt"
+          ]
+        },
+        {
+          "id": "ZE-09-C04",
+          "description": "Build/lint/segurança/QA e documentação",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-09-Report.md",
+            "ZE-09-Google-Handoff.md",
+            "evidence/ZE-09/qa-browser.json",
+            "evidence/ZE-09/api-tests-result.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZE-03-REWORK-POST-ZE09",
+      "title": "ZE-03-REWORK — correção visual pós-ZE-09",
       "status": "QUEUED",
-      "criteria": []
+      "dependsOn": "ZE-09",
+      "criteria": [],
+      "note": "Atividade futura distinta do histórico ZE-03-REWORK concluído; não executar agora."
     },
     {
       "id": "ZE-10",
@@ -501,5 +558,5 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-05"
+  "lastCompletedSprint": "ZE-08"
 }

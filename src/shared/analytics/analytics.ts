@@ -10,7 +10,7 @@ type Events = {
   select_service: { service_name: Service },
   instagram_click: { cta_location: Location; link_type: 'profile' | 'post' },
   directions_click: { cta_location: Location },
-  google_reviews_click: { cta_location: Location },
+  google_reviews_click: { cta_location: Location; review_action: 'view' | 'write' },
   internal_search: { result_count: number; selected_section: string },
   before_after_interaction: { comparator_id: string },
 }
@@ -32,7 +32,7 @@ const allowed: Record<string, Record<string, readonly string[] | 'count'>> = {
   whatsapp_click: { cta_location: locations, service_context: services },
   select_service: { service_name: services },
   instagram_click: { cta_location: locations, link_type: ['profile', 'post'] },
-  directions_click: { cta_location: locations }, google_reviews_click: { cta_location: locations },
+  directions_click: { cta_location: locations }, google_reviews_click: { cta_location: locations, review_action: ['view', 'write'] },
   internal_search: { result_count: 'count', selected_section: sections },
   before_after_interaction: { comparator_id: ['paint', 'seats', 'carpet'] },
 }

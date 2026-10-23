@@ -25,7 +25,7 @@ export function useCommercialAnalytics() {
         if (service_context) track('select_service', { service_name: service_context })
         if (anchor.hasAttribute('data-analytics-quote')) track('quote_click', { cta_location, service_context })
         track('whatsapp_click', { cta_location, service_context })
-      } else if (anchor.hasAttribute('data-analytics-review')) track('google_reviews_click', { cta_location })
+      } else if (anchor.hasAttribute('data-analytics-review')) track('google_reviews_click', { cta_location, review_action: anchor.dataset.analyticsReview === 'write' ? 'write' : 'view' })
       else if (href === locationInfo.mapsLink) track('directions_click', { cta_location })
       else {
         try {

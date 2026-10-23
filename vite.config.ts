@@ -2,6 +2,31 @@ import { defineConfig, loadEnv, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'
 import { handleInstagramFeed, type InstagramFeedEnv } from './functions/api/_instagram-feed.js'
+import { handleGoogleReviews, type GoogleReviewsEnv } from './functions/api/google-reviews.js'
+import type { IncomingMessage, ServerResponse } from 'node:http'
+
+function googleReviewsDevPlugin(mode: string): Plugin {
+  const env = loadEnv(mode, process.cwd(), '') as GoogleReviewsEnv
+  const handler = async (req: IncomingMessage, res: ServerResponse) => {
+    if (req.method !== 'GET') { res.writeHead(405, { Allow: 'GET' }); res.end(); return }
+    const abort = new AbortController()
+    res.on('close', () => abort.abort())
+    const headers = new Headers()
+    for (const [name, value] of Object.entries(req.headers)) {
+      if (value) headers.set(name, Array.isArray(value) ? value.join(', ') : value)
+    }
+    const request = new Request(`http://${req.headers.host ?? 'localhost'}/api/google-reviews`, { headers, signal: abort.signal })
+    const response = await handleGoogleReviews(env, request)
+    res.statusCode = response.status
+    response.headers.forEach((value, name) => res.setHeader(name, value))
+    res.end(await response.text())
+  }
+  return {
+    name: 'google-reviews-dev-endpoint',
+    configureServer(server) { server.middlewares.use('/api/google-reviews', handler) },
+    configurePreviewServer(server) { server.middlewares.use('/api/google-reviews', handler) },
+  }
+}
 
 function instagramFeedDevPlugin(mode: string): Plugin {
   const env = loadEnv(mode, process.cwd(), '') as InstagramFeedEnv
@@ -32,7 +57,7 @@ function instagramFeedDevPlugin(mode: string): Plugin {
 }
 
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), instagramFeedDevPlugin(mode)],
+  plugins: [react(), instagramFeedDevPlugin(mode), googleReviewsDevPlugin(mode)],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

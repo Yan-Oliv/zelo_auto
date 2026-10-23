@@ -113,3 +113,7 @@ Exactly two deliveries completed: (1) reduce initial JS/assets; (2) validate mob
 
 ## ZE-08 ? contrato vigente 2026-10-23
 Exatamente duas entregas: (1) GA4 G-E9SKGKCQXX, consentimento b?sico e eventos comerciais; (2) Search Console, privacidade e QA. Crit?rios C01?C04: integra??o ?nica/tipada, bloqueio pr?-consentimento, deduplica??o, eventos sem PII/vendas fict?cias, controles revog?veis, SEO preservado, seis viewports, build/lint/tests/performance/documenta??o/commit. Pain?is e recebimento Google somente PASS com prova externa; pend?ncias permitidas explicitamente registradas no relat?rio/handoff. Sem deploy/push/ZE-09. ZE-03-REWORK somente ap?s ZE-09, preservada na fila.
+
+
+## ZE-09 — Contrato vigente 2026-10-23
+Duas entregas: fonte oficial GBP e fluxo oficial de avaliação. Implementação local não fecha sprint: exige reviews/nota/total autênticos, perfil autorizado e dois destinos homologados. Estado WAITING_USER_ACTION; mocks só lógica/layout, nunca aceite real. Sem Places/custos/deploy/ZE10/hero rework. Próxima ZE-03-REWORK pósZE09 distinta do histórico concluído. Ver ZE-09-Report.md e ZE-09-Google-Handoff.md.
