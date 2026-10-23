@@ -1,0 +1,2 @@
+﻿import fs from 'node:fs';import {execFileSync} from 'node:child_process';
+const files=['src/features/landing/LandingPage.tsx','src/features/landing/CinematicHero.css'];const current=files.map(p=>fs.readFileSync(p));try{for(const p of files)fs.writeFileSync(p,execFileSync('git',['show',`HEAD:${p}`]));execFileSync('node',['.nox/evidence/ZE-03-REWORK-POST-ZE09/baseline.mjs'],{stdio:'inherit'});}finally{files.forEach((p,i)=>fs.writeFileSync(p,current[i]))}

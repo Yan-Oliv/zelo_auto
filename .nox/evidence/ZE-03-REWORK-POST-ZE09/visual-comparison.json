@@ -1,0 +1,76 @@
+{
+  "method": "Mean absolute RGB error at native 1672x940 (diagnostic only; logo official, inpaint hidden areas and badge retouches differ intentionally)",
+  "images": {
+    "baseline": {
+      "meanAbsoluteError": 20.81395916047372
+    },
+    "final": {
+      "meanAbsoluteError": 8.762145390070922
+    }
+  },
+  "landmarks": [
+    {
+      "name": "carLeft",
+      "target": 478,
+      "actual": 477.9921875,
+      "deviationPercent": 0.0004672547846889952,
+      "under2Percent": true
+    },
+    {
+      "name": "carTop",
+      "target": 400,
+      "actual": 399.984375,
+      "deviationPercent": 0.0016622340425531915,
+      "under2Percent": true
+    },
+    {
+      "name": "carWidth",
+      "target": 710,
+      "actual": 709.984375,
+      "deviationPercent": 0.0009345095693779904,
+      "under2Percent": true
+    },
+    {
+      "name": "carBase",
+      "target": 760,
+      "actual": 759.96875,
+      "deviationPercent": 0.003324468085106383,
+      "under2Percent": true
+    },
+    {
+      "name": "wordmarkLeft",
+      "target": 416,
+      "actual": 416.046875,
+      "deviationPercent": 0.002803528708133971,
+      "under2Percent": true
+    },
+    {
+      "name": "wordmarkTop",
+      "target": 191,
+      "actual": 191,
+      "deviationPercent": 0,
+      "under2Percent": true
+    },
+    {
+      "name": "wordmarkWidth",
+      "target": 825,
+      "actual": 824.84375,
+      "deviationPercent": 0.009345095693779904,
+      "under2Percent": true
+    },
+    {
+      "name": "wordmarkBase",
+      "target": 477,
+      "actual": 476.9375,
+      "deviationPercent": 0.006648936170212766,
+      "under2Percent": true
+    },
+    {
+      "name": "sloganTop",
+      "target": 476,
+      "actual": 473.28125,
+      "deviationPercent": 0.2892287234042553,
+      "under2Percent": true
+    }
+  ]
+}

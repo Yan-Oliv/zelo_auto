@@ -1,0 +1,11 @@
+{
+  "reviewer": "root Nox",
+  "technicalVisual": "PASS",
+  "ownerVisual": "PENDING",
+  "notes": [
+    "Same source car recovered; original RGB outside two badge patches preserved losslessly before WebP export",
+    "Scene uses source sides with feathered central inpaint, original pixels under foreground are unrecoverable",
+    "Floor reflection reduced and header raised after independent review",
+    "Performance 1-point delta documented; no claim of absolute improvement"
+  ]
+}

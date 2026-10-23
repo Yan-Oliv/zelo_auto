@@ -1,0 +1,82 @@
+[
+  {
+    "file": "lighthouse-baseline-desktop.json",
+    "performance": 67,
+    "accessibility": 100,
+    "LCP": 4956.7167,
+    "CLS": 0,
+    "TBT": 32,
+    "jsTransferred": 119755,
+    "imagesTransferred": 577458
+  },
+  {
+    "file": "lighthouse-baseline-mobile.json",
+    "performance": 81,
+    "accessibility": 100,
+    "LCP": 4807.5664,
+    "CLS": 0,
+    "TBT": 34,
+    "jsTransferred": 119755,
+    "imagesTransferred": 544978
+  },
+  {
+    "file": "lighthouse-final-approved-desktop.json",
+    "performance": 66,
+    "accessibility": 100,
+    "LCP": 5333.145,
+    "CLS": 0,
+    "TBT": 44,
+    "jsTransferred": 119788,
+    "imagesTransferred": 786278
+  },
+  {
+    "file": "lighthouse-final-approved-mobile.json",
+    "performance": 80,
+    "accessibility": 100,
+    "LCP": 5033.631600000001,
+    "CLS": 0,
+    "TBT": 30,
+    "jsTransferred": 119788,
+    "imagesTransferred": 713834
+  },
+  {
+    "file": "lighthouse-final-desktop.json",
+    "performance": 65,
+    "accessibility": 100,
+    "LCP": 6389.8322,
+    "CLS": 0,
+    "TBT": 36,
+    "jsTransferred": 119803,
+    "imagesTransferred": 791714
+  },
+  {
+    "file": "lighthouse-final-fixed-desktop.json",
+    "performance": 66,
+    "accessibility": 100,
+    "LCP": 5331.5571,
+    "CLS": 0,
+    "TBT": 55,
+    "jsTransferred": 119787,
+    "imagesTransferred": 786278
+  },
+  {
+    "file": "lighthouse-final-fixed-mobile.json",
+    "performance": 80,
+    "accessibility": 100,
+    "LCP": 5031.2536,
+    "CLS": 0,
+    "TBT": 33,
+    "jsTransferred": 119787,
+    "imagesTransferred": 713834
+  },
+  {
+    "file": "lighthouse-final-mobile.json",
+    "performance": 76,
+    "accessibility": 100,
+    "LCP": 6090.5206,
+    "CLS": 0,
+    "TBT": 31,
+    "jsTransferred": 119803,
+    "imagesTransferred": 759234
+  }
+]

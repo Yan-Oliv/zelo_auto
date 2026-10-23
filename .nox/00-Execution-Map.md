@@ -7,13 +7,14 @@ Atualizado em 2026-10-23. Coordenação: Nox. Workspace: B:\OmnyaTech Project's\
 | ZE-01 | Segurança e baseline | COMPLETED | - | Preservado |
 | ZE-02 | Desacoplamento do 3D | COMPLETED | ZE-01 | Preservado |
 | ZE-03 | Hero cinematográfica final fiel à referência, camadas e intro única | COMPLETED | ZE-02 | Aceite local evidenciado no relatório final |
+| ZE-03-REWORK | Historical rework incorporated into ZE-03 | COMPLETED | ZE-03 | Preserve history; no independent acceptance |
 | ZE-04 | Reestruturação visual | COMPLETED | ZE-03 | Preservado |
 | ZE-05 | Performance e acessibilidade | COMPLETED | ZE-04 | Concluída tecnicamente; metas mobile não atingidas documentadas em `.nox/ZE-05-Report.md` |
 | ZE-06 | Instagram funcional | COMPLETED | ZE-05 | Aprovada pelo proprietário após validação visual local real; runtime público não publicado nesta sprint |
 | ZE-07 | SEO técnico local | COMPLETED | ZE-06 | Concluída tecnicamente; relatório e evidências em `.nox/ZE-07-Report.md` e `.nox/evidence/ZE-07/` |
 | ZE-08 | Google Analytics e mensuração | COMPLETED | ZE-07 | Duas entregas aprovadas tecnicamente; pain?is Google PENDING conforme relat?rio |
 | ZE-09 | Reputação Google | WAITING_USER_ACTION | ZE-08 | OAuth proprietário/projeto aprovado e dados/links reais; ver handoff |
-| ZE-03-REWORK | Correção visual da hero pós-ZE-09 | QUEUED | ZE-09 | Aguardar conclusão e autorização; histórico anterior preservado |
+| ZE-03-REWORK-POST-ZE09 | Final hero correction | WAITING_USER_ACTION | ZE-09 (explicit limited exception) | Owner visual acceptance; technical checks reviewed with performance limits |
 | ZE-10 | Confiabilidade de avaliações Google | QUEUED | ZE-09 | Fora do objetivo ativo; não executar |
 | ZE-11 | Homologação geral local | QUEUED | ZE-10 | Fora do objetivo ativo; não executar |
 | ZE-12 | Publicação controlada | QUEUED | ZE-11 | Fora do objetivo ativo; não executar |
@@ -46,3 +47,13 @@ ZE-04 commit3271073 is the baseline. ZE-05 CURRENT: delivery1 initial JS/assets;
 2026-10-23 — ZE-09 CURRENT autorizada: duas entregas (fonte oficial GBP e fluxo oficial). ZE-08 COMPLETED em fc2a62e. Sem variáveis GOOGLE/BUSINESS/PLACES no .env (nomes apenas); OAuth/conta/localização e vínculo oficial ainda dependem do proprietário. Sem produção/push/custos. Hero/rework/ZE-10 preservados.
 
 2026-10-23 — ZE-09 WAITING_USER_ACTION após todo trabalho interno: adaptador GBP OAuth/Pages+Vite, hook lazy, CTAs oficiais condicionais, analytics view/write; API10 e UI18 grupos determinísticos PASS, seis viewports MOCK e indisponível real, build/lint PASS (6 warnings legados), revisão Nox estrutural PASS com limites. Ficha pública identificada por nome/site/telefone/cidade, endereço número1485/propriedade/verificação/OAuth/API autorizada e reviews/nota/total/link compartilhável real PENDING. Lighthouse mobile baseline91/final91 após repetição (amostra89 registrada), CLS0; contraste legado97 a11y mantido. Configuração local Google ausente; seguir .nox/ZE-09-Google-Handoff.md. Sem custo/Places/deploy/push; ZE-03-REWORK pósZE09 próxima, ZE10+ bloqueadas, não executadas.
+
+
+## 2026-10-23 - Explicit exception: ZE-03-REWORK-POST-ZE09 CURRENT
+Owner contract explicitly authorizes only this hero correction while ZE-09 stays WAITING_USER_ACTION. Nominal dependency retained; exception limited to this activity. ZE-09 criteria and pending client/Profile/API/OAuth gates unchanged. Google Cloud zelo-integracoes / 878742106609 exists; API approval not established. ZE-10/11/12 stay QUEUED. Historical ZE-03-REWORK stays COMPLETED; the ambiguous future short label is reconciled to its existing POST-ZE09 ID, without a third sprint.
+Exactly two deliveries: (1) visual fidelity/assets/layers/AppBar; (2) animations/responsiveness/validation. Binding reference new_interface/1.png; other sections and integrations preserved. Human visual approval requires explicit owner acceptance.
+Checkpoint tag ZE-03-REWORK-POST-ZE09-start-20261023 at 49e44926bac6f2b30d76e17ce309653633a0f16d; branch work/ze-audi-redesign. Four pre-existing dirty ZE-09 documents backed up in ignored .nox/checkpoints/ZE-03-REWORK-POST-ZE09-start-20261023/. new_interface/ and src/planos/ preserved. No push/deploy/cost. QA pending; no advance PASS.
+
+
+## 2026-10-23 - ZE-03-REWORK-POST-ZE09 WAITING_USER_ACTION
+Exactly two deliveries implemented and reviewed. Technical visual review PASS; no owner visual approval claimed. Reference car pixels recovered outside two badge masks, original scene sides retained with central inpaint; see dedicated report for honest reconstruction limits. Responsive65/12viewports, animation13, smoke33 and reviews18MOCK groups PASS; build/lint exit0 with six legacy warnings. MAE20.81->8.76 diagnostic;9landmarks<0.29%. Lighthouse observed mobile81->80/LCP4808->5034 and desktop67->66/LCP4957->5333, CLS0; image transfer increased, no improvement/full performance PASS claimed. Sole remaining hero acceptance action is owner visual review. ZE-09 criteria and WAITING_USER_ACTION preserved; resume after client/Profile/API/OAuth approval. ZE10+QUEUED, historical rework preserved. No push/deploy/cost. Evidence/report: .nox/evidence/ZE-03-REWORK-POST-ZE09/ and .nox/ZE-03-REWORK-POST-ZE09-Report.md. Scoped commit pending parent Git operation; checkpoint ZE-03-REWORK-POST-ZE09-start-20261023 retained.

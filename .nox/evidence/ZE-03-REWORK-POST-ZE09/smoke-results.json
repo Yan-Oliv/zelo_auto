@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "name": "1440 search autofocus/results",
+      "pass": true
+    },
+    {
+      "name": "1440 search focus return",
+      "pass": true
+    },
+    {
+      "name": "1440 section servicos",
+      "pass": true
+    },
+    {
+      "name": "1440 section resultados",
+      "pass": true
+    },
+    {
+      "name": "1440 section processo",
+      "pass": true
+    },
+    {
+      "name": "1440 section marcas",
+      "pass": true
+    },
+    {
+      "name": "1440 section instagram",
+      "pass": true
+    },
+    {
+      "name": "1440 section avaliacoes",
+      "pass": true
+    },
+    {
+      "name": "1440 section localizacao",
+      "pass": true
+    },
+    {
+      "name": "1440 section contato",
+      "pass": true
+    },
+    {
+      "name": "1440 WhatsApp destination",
+      "pass": true
+    },
+    {
+      "name": "1440 maps preserved",
+      "pass": true
+    },
+    {
+      "name": "1440 official Google CTAs",
+      "pass": true
+    },
+    {
+      "name": "1440 consent dialog",
+      "pass": true
+    },
+    {
+      "name": "1440 no canvas/glb/Three",
+      "pass": true
+    },
+    {
+      "name": "1440 no browser exceptions",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "390 search autofocus/results",
+      "pass": true
+    },
+    {
+      "name": "390 search focus return",
+      "pass": true
+    },
+    {
+      "name": "mobile menu escape/focus",
+      "pass": true
+    },
+    {
+      "name": "390 section servicos",
+      "pass": true
+    },
+    {
+      "name": "390 section resultados",
+      "pass": true
+    },
+    {
+      "name": "390 section processo",
+      "pass": true
+    },
+    {
+      "name": "390 section marcas",
+      "pass": true
+    },
+    {
+      "name": "390 section instagram",
+      "pass": true
+    },
+    {
+      "name": "390 section avaliacoes",
+      "pass": true
+    },
+    {
+      "name": "390 section localizacao",
+      "pass": true
+    },
+    {
+      "name": "390 section contato",
+      "pass": true
+    },
+    {
+      "name": "390 WhatsApp destination",
+      "pass": true
+    },
+    {
+      "name": "390 maps preserved",
+      "pass": true
+    },
+    {
+      "name": "390 official Google CTAs",
+      "pass": true
+    },
+    {
+      "name": "390 consent dialog",
+      "pass": true
+    },
+    {
+      "name": "390 no canvas/glb/Three",
+      "pass": true
+    },
+    {
+      "name": "390 no browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ]
+}

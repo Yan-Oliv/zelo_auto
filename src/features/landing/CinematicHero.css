@@ -268,3 +268,59 @@
   .zelo-hero .zelo-hero-ground-shadow { opacity: 1 !important; }
   .zelo-site-header { transition: none; }
 }
+
+/* POST-ZE09: reference plane is 1672 × 940, preserved instead of viewport cropping. */
+@media (min-width: 1051px) {
+  .zelo-hero { height: auto; min-height: 0; aspect-ratio: 1672 / 940; }
+  .zelo-hero-car { left: 49.82%; top: 42.553%; width: 42.464%; aspect-ratio: 710 / 360; }
+}
+.zelo-hero-backdrop { filter: none; object-fit: fill; }
+.zelo-hero-car-body { filter: none; }
+.zelo-hero-edge-fade,.zelo-hero-top-fade { background: none; }
+.zelo-hero-stage::after { background: radial-gradient(ellipse 28% 27% at 50% 34%,rgba(0,0,0,.5),transparent 100%); }
+.zelo-hero-car::before { bottom: -4%; height: 16%; }
+.zelo-hero-ground-shadow { bottom: -1%; height: 11%; }
+.zelo-hero-reflection { opacity: .32; }
+.zelo-header-budget { background: linear-gradient(180deg,#cba452,#95691d); }
+.zelo-header-search,.zelo-header-menu { background: #aaa; }
+@media (max-width: 1050px) and (min-aspect-ratio: 1/1) {
+  .zelo-hero { height: auto; min-height: 0; aspect-ratio: 1672 / 940; }
+  .zelo-hero-backdrop { object-fit: fill; }
+  .zelo-hero-car { left: 49.82%; top: 42.553%; width: 42.464%; }
+  .zelo-hero-wordmark { top: 20.32%; width: 49.34%; }
+  .zelo-hero-slogan { top: 50.35%; padding-inline: 6.5%; font-size: 1.19vw; letter-spacing: .55em; }
+  .zelo-hero-scroll-hint { bottom: 3.65%; font-size: 8px; }
+  .zelo-hero-scroll-hint::before { height: 15px; margin-bottom: 0; }
+  .zelo-header-inner { padding-block: 15px; }
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 1050px) {
+  .zelo-hero { height: 100svh; min-height: 560px; max-height: none; aspect-ratio: auto; }
+  .zelo-hero-backdrop { object-fit: cover; object-position: center; }
+  .zelo-hero-top-fade { background: linear-gradient(180deg,rgba(255,255,255,.9),transparent 23%,transparent 77%,rgba(255,255,255,.9)); }
+  .zelo-hero-wordmark { left: 50%; top: 30%; width: min(88vw,46svh); }
+  .zelo-hero-car { left: 50%; top: 56%; width: min(88vw,60svh); }
+  .zelo-hero-slogan { display: contents; font-size: clamp(11px,2.8vw,16px); letter-spacing: .25em; }
+  .zelo-hero-slogan::before,.zelo-hero-slogan::after { display: none; }
+  .zelo-hero-slogan-left,.zelo-hero-slogan-right { position: absolute; z-index: 4; left: 0; width: 100%; text-align: center; }
+  .zelo-hero-slogan-left { top: calc(30% - 36px); }
+  .zelo-hero-slogan-right { top: calc(30% + min(30.51vw,15.95svh) + 18px); }
+  .zelo-hero-scroll-hint { bottom: 4%; }
+}
+@media (max-height: 500px) and (min-aspect-ratio: 1/1) {
+  .zelo-hero { min-height: 430px; }
+  .zelo-hero-wordmark { top: 23%; }
+  .zelo-hero-slogan { top: 51%; }
+  .zelo-hero-scroll-hint::before { display: none; }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 1050px) { .zelo-hero-car { width: min(88vw,58svh); } }
+
+.zelo-hero-stage::after { background: none; }
+
+/* Keep the floor quieter than the body; light streaks remain the dominant reflection. */
+.zelo-hero-reflection { opacity: .18; mask-image: linear-gradient(#000,rgba(0,0,0,.25) 15%,transparent 45%); }
+@media (min-width: 1051px) { .zelo-header-inner { padding-top: 8px; } }
+@media (prefers-reduced-motion: reduce) { .zelo-hero .zelo-hero-reflection { opacity: .18 !important; } }
+
+.zelo-hero[data-intro='playing'] .zelo-hero-car { animation-duration: 1.4s; animation-delay: .5s; }
+.zelo-hero[data-intro='playing'] .zelo-hero-stage { animation-duration: 1.4s; }

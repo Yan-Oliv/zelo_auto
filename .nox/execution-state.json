@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "project": "zelo_autoestica",
   "status": "WAITING_USER_ACTION",
-  "currentSprint": "ZE-09",
-  "currentStep": "Implementação interna e QA concluídos; integração real Google pendente",
+  "currentSprint": "ZE-03-REWORK-POST-ZE09",
+  "currentStep": "Owner visual acceptance of technically reviewed implementation",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Proprietário configura OAuth GBP server-only e confirma ficha/número1485; links públicos já fornecidos e incorporados. Confirmar fluxo manual caso Google anti-bot persista; retomar dados reais.",
+  "nextAction": "Owner validates new hero visually. ZE-09 remains separately waiting on client/Profile/API/OAuth; ZE-10+ queued.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -534,10 +534,70 @@
     {
       "id": "ZE-03-REWORK-POST-ZE09",
       "title": "ZE-03-REWORK — correção visual pós-ZE-09",
-      "status": "QUEUED",
+      "status": "WAITING_USER_ACTION",
       "dependsOn": "ZE-09",
-      "criteria": [],
-      "note": "Atividade futura distinta do histórico ZE-03-REWORK concluído; não executar agora."
+      "criteria": [
+        {
+          "id": "ZE-03-RW-C01",
+          "description": "Rendered fidelity to new_interface/1.png; independent layers; unbranded reference car",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-03-REWORK-POST-ZE09-Report.md",
+            "evidence/ZE-03-REWORK-POST-ZE09/visual-comparison.json"
+          ],
+          "technicalApproval": "PASS",
+          "pendingAction": "Owner visually accepts the new implementation; reference approval alone is insufficient."
+        },
+        {
+          "id": "ZE-03-RW-C02",
+          "description": "Responsive composition across 11 contractual viewports; no collisions/overflow",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-REWORK-POST-ZE09-Report.md",
+            "evidence/ZE-03-REWORK-POST-ZE09/responsive.json"
+          ],
+          "technicalApproval": "PASS"
+        },
+        {
+          "id": "ZE-03-RW-C03",
+          "description": "Real intro frames/video; once per session; return and reduced motion",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-REWORK-POST-ZE09-Report.md",
+            "evidence/ZE-03-REWORK-POST-ZE09/animation-results.json"
+          ],
+          "technicalApproval": "PASS"
+        },
+        {
+          "id": "ZE-03-RW-C04",
+          "description": "Build/lint/E2E, accessibility, compared performance, regression, Git/Nox, production unchanged",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-03-REWORK-POST-ZE09-Report.md",
+            "evidence/ZE-03-REWORK-POST-ZE09/review.json"
+          ],
+          "technicalApproval": "PASS_WITH_DOCUMENTED_PERFORMANCE_LIMITS"
+        }
+      ],
+      "note": "Owner explicitly authorized this limited exception 2026-10-23 while ZE-09 waits on external approval. Historical rework preserved.",
+      "dependencyException": {
+        "approvedBy": "owner",
+        "date": "2026-10-23",
+        "limitedTo": "ZE-03-REWORK-POST-ZE09",
+        "predecessorStatePreserved": "ZE-09 WAITING_USER_ACTION",
+        "contract": "attachment 84bdb9ad-ec19-444c-9596-9aa33647b2ca/Pasted text.txt"
+      },
+      "humanVisualApproval": false,
+      "technicalApproval": "PASS_WITH_DOCUMENTED_PERFORMANCE_LIMITS",
+      "performanceLimits": {
+        "mobile": "81 -> 80; LCP4808 -> 5034ms",
+        "desktop": "67 -> 66; LCP4957 -> 5333ms",
+        "note": "Observed samples, higher image transfer; no improvement or full performance PASS claimed."
+      }
     },
     {
       "id": "ZE-10",

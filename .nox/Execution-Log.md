@@ -117,3 +117,24 @@ ZE-06 scoped local commit recorded: 3e2ea2b - feat(instagram): secure feed and h
 
 ## Retomada com links do proprietário
 2026-10-23 — ZE-09 retomada com links públicos fornecidos pelo proprietário: search lrd CID0x14e35d89087019ae ação3 e share.google/3PlTHI5FF8L4JCmS0 cujo redirecionamento kgmid/g/11zxzxp9sv corresponde à ficha encontrada. CTAs públicos independentes de OAuth implementados; fragmento de escrita preservado. Browser Google retornou desafio anti-bot, sem contorno; fluxo final manual continua PENDING. Fonte/nota/total/reviews reais ainda dependem OAuth/projeto aprovado. WAITING_USER_ACTION mantido; sem produção/custos/ZE10/rework.
+
+2026-10-23 — Checkpoint ZE-09: proprietário solicitou preview visual local. Vite ativo http://127.0.0.1:5173/ (sem publicação); browser sem mocks confirmou reviews indisponível por falta OAuth, dois CTAs públicos presentes, Instagram oficial instagram-login com6imagens carregadas e zero pageerrors. Evidência local-owner-preview.json. WAITING_USER_ACTION mantido para integração Google real; nenhum custo/API externa habilitada.
+
+
+2026-10-23 — Proprietário confirmou: solicitou acesso ao Perfil da Empresa e aguarda aprovação do cliente; não existe projeto Google Cloud para a integração. ZE-09 WAITING_USER_ACTION. Próxima ação: cliente aprova proprietário/administrador da ficha; usuário cria projeto Google Cloud (pode antecipar criação), depois confere ficha verificada ativa há60dias/site e solicita acesso às Business Profile APIs. Não usar conta aleatória nem habilitar faturamento. Preview local preservado http://127.0.0.1:5173/; código/produção/APIs/custos intactos.
+
+
+2026-10-23 — Screenshot do proprietário confirma projeto Google Cloud criado: nome Zelo Integrações, ID visível zelo-integracoes (URL project=zelo-integracoes). Número do projeto não confirmado na imagem pequena; copiar como texto apenas quando necessário ao formulário. Aprovação do acesso ao Perfil da Empresa pelo cliente segue pendente no último estado informado. ZE-09 WAITING_USER_ACTION para acesso ao perfil, aprovação Business Profile APIs e OAuth. Nenhuma alteração remota/código/teste/custo realizada neste checkpoint.
+
+
+2026-10-23 — Proprietário confirmou por texto os identificadores públicos do projeto Google Cloud: Project ID zelo-integracoes; Project Number 878742106609. Projeto criado; solicitação/aprovação de acesso à API não foi comprovada nem realizada por Nox. ZE-09 WAITING_USER_ACTION: cliente aprova acesso ao Perfil da Empresa, depois solicitar acesso básico GBP API para esse projeto e configurar OAuth. Sem alteração Cloud, código, teste, deploy ou custo.
+
+
+## 2026-10-23 - Explicit exception: ZE-03-REWORK-POST-ZE09 CURRENT
+Owner contract explicitly authorizes only this hero correction while ZE-09 stays WAITING_USER_ACTION. Nominal dependency retained; exception limited to this activity. ZE-09 criteria and pending client/Profile/API/OAuth gates unchanged. Google Cloud zelo-integracoes / 878742106609 exists; API approval not established. ZE-10/11/12 stay QUEUED. Historical ZE-03-REWORK stays COMPLETED; the ambiguous future short label is reconciled to its existing POST-ZE09 ID, without a third sprint.
+Exactly two deliveries: (1) visual fidelity/assets/layers/AppBar; (2) animations/responsiveness/validation. Binding reference new_interface/1.png; other sections and integrations preserved. Human visual approval requires explicit owner acceptance.
+Checkpoint tag ZE-03-REWORK-POST-ZE09-start-20261023 at 49e44926bac6f2b30d76e17ce309653633a0f16d; branch work/ze-audi-redesign. Four pre-existing dirty ZE-09 documents backed up in ignored .nox/checkpoints/ZE-03-REWORK-POST-ZE09-start-20261023/. new_interface/ and src/planos/ preserved. No push/deploy/cost. QA pending; no advance PASS.
+
+
+## 2026-10-23 - ZE-03-REWORK-POST-ZE09 WAITING_USER_ACTION
+Exactly two deliveries implemented and reviewed. Technical visual review PASS; no owner visual approval claimed. Reference car pixels recovered outside two badge masks, original scene sides retained with central inpaint; see dedicated report for honest reconstruction limits. Responsive65/12viewports, animation13, smoke33 and reviews18MOCK groups PASS; build/lint exit0 with six legacy warnings. MAE20.81->8.76 diagnostic;9landmarks<0.29%. Lighthouse observed mobile81->80/LCP4808->5034 and desktop67->66/LCP4957->5333, CLS0; image transfer increased, no improvement/full performance PASS claimed. Sole remaining hero acceptance action is owner visual review. ZE-09 criteria and WAITING_USER_ACTION preserved; resume after client/Profile/API/OAuth approval. ZE10+QUEUED, historical rework preserved. No push/deploy/cost. Evidence/report: .nox/evidence/ZE-03-REWORK-POST-ZE09/ and .nox/ZE-03-REWORK-POST-ZE09-Report.md. Scoped commit pending parent Git operation; checkpoint ZE-03-REWORK-POST-ZE09-start-20261023 retained.

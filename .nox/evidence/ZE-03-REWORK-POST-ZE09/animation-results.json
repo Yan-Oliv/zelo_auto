@@ -1,0 +1,282 @@
+{
+  "checks": [
+    {
+      "name": "waiting before decoded artwork",
+      "pass": true
+    },
+    {
+      "name": "car opacity grows in rendered frames",
+      "pass": true,
+      "data": [
+        {
+          "time": 0,
+          "data": {
+            "stage": {
+              "opacity": 0,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 0.15,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "inset(0px 100% 0px 0px)"
+            },
+            "car": {
+              "opacity": 0,
+              "transform": "matrix(0.985, 0, 0, 0.985, -354.992, 12)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -401.28, 0)",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, 401.28, 0)",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -86, 10)",
+              "clip": "none"
+            }
+          }
+        },
+        {
+          "time": 400,
+          "data": {
+            "stage": {
+              "opacity": 0.426302,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 0.343747,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "inset(0px 77.2062% 0px 0px)"
+            },
+            "car": {
+              "opacity": 0,
+              "transform": "matrix(0.985, 0, 0, 0.985, -354.992, 12)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -401.28, 0)",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, 401.28, 0)",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -86, 10)",
+              "clip": "none"
+            }
+          }
+        },
+        {
+          "time": 800,
+          "data": {
+            "stage": {
+              "opacity": 0.757851,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 0.750065,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "inset(0px 29.4041% 0px 0px)"
+            },
+            "car": {
+              "opacity": 0.529294,
+              "transform": "matrix(0.992939, 0, 0, 0.992939, -354.992, 5.64847)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 0.195573,
+              "transform": "matrix(1, 0, 0, 1, -322.801, 0)",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, 401.28, 0)",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -86, 10)",
+              "clip": "none"
+            }
+          }
+        },
+        {
+          "time": 1200,
+          "data": {
+            "stage": {
+              "opacity": 0.961214,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 0.900831,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "inset(0px 11.6669% 0px 0px)"
+            },
+            "car": {
+              "opacity": 0.864788,
+              "transform": "matrix(0.997972, 0, 0, 0.997972, -354.992, 1.62254)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 0.732036,
+              "transform": "matrix(1, 0, 0, 1, -107.529, 0)",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 0.505922,
+              "transform": "matrix(1, 0, 0, 1, 198.264, 0)",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -86, 10)",
+              "clip": "none"
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "data": {
+            "stage": {
+              "opacity": 1,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 0.983661,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "inset(0px 1.92228% 0px 0px)"
+            },
+            "car": {
+              "opacity": 0.997649,
+              "transform": "matrix(0.999965, 0, 0, 0.999965, -354.992, 0.0282084)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 0.980468,
+              "transform": "matrix(1, 0, 0, 1, -7.83766, 0)",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 0.940264,
+              "transform": "matrix(1, 0, 0, 1, 23.9708, 0)",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 0,
+              "transform": "matrix(1, 0, 0, 1, -86, 10)",
+              "clip": "none"
+            }
+          }
+        },
+        {
+          "time": 3400,
+          "data": {
+            "stage": {
+              "opacity": 1,
+              "transform": "none",
+              "clip": "none"
+            },
+            "wordmark": {
+              "opacity": 1,
+              "transform": "matrix(1, 0, 0, 1, -412.422, 0)",
+              "clip": "none"
+            },
+            "car": {
+              "opacity": 1,
+              "transform": "matrix(1, 0, 0, 1, -354.992, 0)",
+              "clip": "none"
+            },
+            "slogan-left": {
+              "opacity": 1,
+              "transform": "none",
+              "clip": "none"
+            },
+            "slogan-right": {
+              "opacity": 1,
+              "transform": "none",
+              "clip": "none"
+            },
+            "scroll-hint": {
+              "opacity": 1,
+              "transform": "matrix(1, 0, 0, 1, -86, 0)",
+              "clip": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "wordmark progressively clipped",
+      "pass": true
+    },
+    {
+      "name": "slogans render motion",
+      "pass": true
+    },
+    {
+      "name": "waiting playing settled observed",
+      "pass": true,
+      "data": [
+        {
+          "state": "waiting",
+          "at": 261.10000002384186
+        },
+        {
+          "state": "playing",
+          "at": 396.10000002384186
+        },
+        {
+          "state": "settled",
+          "at": 3730.899999976158
+        }
+      ]
+    },
+    {
+      "name": "reload immediately settled",
+      "pass": true
+    },
+    {
+      "name": "anchor return settled",
+      "pass": true
+    },
+    {
+      "name": "reduced settles",
+      "pass": true
+    },
+    {
+      "name": "storage-blocked settles",
+      "pass": true
+    },
+    {
+      "name": "asset-error settles",
+      "pass": true
+    },
+    {
+      "name": "error fallback car decoded",
+      "pass": true
+    },
+    {
+      "name": "error fallback scene decoded",
+      "pass": true
+    },
+    {
+      "name": "slow-art settles",
+      "pass": true
+    }
+  ]
+}

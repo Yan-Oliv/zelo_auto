@@ -26,8 +26,8 @@ const headerLinks = [
 const searchLinks = [...headerLinks, { label: 'Instagram', href: '#instagram' }, { label: 'Produtos', href: '#marcas' }, { label: 'Localiza\u00e7\u00e3o', href: '#localizacao' }]
 const observedSectionIds = ['hero', 'servicos', 'resultados', 'processo', 'marcas', 'instagram', 'avaliacoes', 'localizacao', 'contato', 'parceiros']
 const heroIntroKey = 'zelo:hero-intro:v4'
-const heroCarSources = '/hero/responsive/car-reference-420.webp 420w, /hero/responsive/car-reference-640.webp 640w, /hero/responsive/car-reference-840.webp 840w, /hero/responsive/car-reference-1024.webp 1024w, /hero/car-reference.webp 1275w'
-const heroCarSizes = '(max-width: 600px) 94vw, (max-width: 1050px) 70vw, min(42.35vw, 75.34svh)'
+const heroCarSources = '/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.webp 640w, /hero/car-final.webp 710w'
+const heroCarSizes = '(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw'
 let introConsumedInDocument = false
 
 function hasSeenHeroIntro() {
@@ -119,6 +119,7 @@ export function LandingPage() {
       })
     }
     // A cold/slow load must never spend the intro before the artwork is visible.
+    const assetTimeout = window.setTimeout(startWhenVisible, 1800)
     void Promise.allSettled([
       backdropRef.current?.decode(), carRef.current?.decode(),
       headerLogoRef.current?.decode(), document.fonts.ready,
@@ -129,6 +130,7 @@ export function LandingPage() {
     })
     return () => {
       cancelled = true
+      window.clearTimeout(assetTimeout)
       window.cancelAnimationFrame(firstFrame)
       window.cancelAnimationFrame(secondFrame)
       document.removeEventListener('visibilitychange', startWhenVisible)
@@ -299,9 +301,8 @@ export function LandingPage() {
         <section id="hero" className="zelo-hero" data-intro={heroReducedMotion ? 'settled' : heroIntro} aria-labelledby="zelo-hero-title">
           <h1 id="zelo-hero-title" className="sr-only">Mais que estética. É valorização. Zelo Estética Automotiva em Catalão — GO.</h1>
           <div className="zelo-hero-stage" aria-hidden="true">
-            <img ref={backdropRef} className="zelo-hero-backdrop" src="/hero/showroom-reference.webp" srcSet="/hero/responsive/showroom-reference-840.webp 840w, /hero/responsive/showroom-reference-1280.webp 1280w, /hero/showroom-reference.webp 1672w" sizes="max(100vw, 177.87svh)" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
+            <img ref={backdropRef} className="zelo-hero-backdrop" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/showroom-reference.webp')) { image.srcset = ''; image.src = '/hero/showroom-reference.webp' } }} src="/hero/showroom-final.webp" srcSet="/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w" sizes="(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
           </div>
-          <div className="zelo-showroom-sign" aria-hidden="true"><span>ZELO</span><small>AUTO ESTÉTICA</small></div>
           <svg className="zelo-hero-wordmark" viewBox="416 191 825 286" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
             <defs>
               <linearGradient id="zelo-outline-gold" x1="0" y1="0" x2="0" y2="1">
@@ -318,9 +319,9 @@ export function LandingPage() {
             </g>
           </svg>
           <div className="zelo-hero-car" aria-hidden="true">
-            <div className="zelo-hero-reflection"><img src="/hero/car-reference.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={1275} height={643} /></div>
+            <div className="zelo-hero-reflection"><img src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} /></div>
             <div className="zelo-hero-ground-shadow" />
-            <img className="zelo-hero-car-body" ref={carRef} src="/hero/car-reference.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={1275} height={643} decoding="async" fetchPriority="high" />
+            <img className="zelo-hero-car-body" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/car-reference.webp')) { image.srcset = ''; image.src = '/hero/car-reference.webp' } }} ref={carRef} src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} decoding="async" fetchPriority="high" />
           </div>
           <div className="zelo-hero-edge-fade" aria-hidden="true" />
           <div className="zelo-hero-top-fade" aria-hidden="true" />
