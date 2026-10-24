@@ -1,0 +1,22 @@
+{
+  "source": "src\\fontes\\eurostile-extended\\EurostileExtendedBlack.ttf",
+  "sourceSHA256": "482faf0cb3aeada79b2144da9fac57dc0469f5e78163ecc2a010a2215789fe16",
+  "sourceBytes": 32692,
+  "target": ".nox\\evidence\\ZE-09.1\\eurostile-repaired.woff2",
+  "targetSHA256": "56efb0372ccb92eebe5e91a31dd85f31fac7f307a206a97186008fa8832b01d9",
+  "targetBytes": 16876,
+  "fontTools": "4.67.0",
+  "recipe": "Correct supplied cmap format4 declared length672 to bounded410 bytes, then lossless WOFF2 recompilation with Brotli1.2.1; original untouched. No new typeface downloaded.",
+  "glyphs": 232,
+  "glyphOutlinesAndMetricsSHA256": "71b8ac4408471533013cf3ec165d2d83ca0c2529ba69cd818018a307fbed1fe6",
+  "originalGlyphOutlinesAndMetricsIdentical": true,
+  "requiredPortugueseHeadingGlyphs": "PASS",
+  "ChromiumFontFaceLoad": "PASS; no OTS errors",
+  "metadata": {
+    "0": "Copyright (c) 1991 Digital Typeface Corp.",
+    "1": "Eurostile Extended",
+    "2": "Bold",
+    "5": "Version 1",
+    "6": "EurostileExtended-Black"
+  }
+}

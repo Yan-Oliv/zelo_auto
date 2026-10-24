@@ -1,0 +1,90 @@
+{
+  "conditions": "Isolated equivalent cold static builds; deterministic503; single baseline/final per profile, one justified final repeat after font deferred; initial samples preserved.",
+  "metrics": [
+    {
+      "phase": "baseline",
+      "mode": "mobile",
+      "score": 69,
+      "accessibility": 100,
+      "LCP": 6209.2716,
+      "TBT": 32.5,
+      "CLS": 0,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 17,
+        "transferSize": 1315425
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 362878
+      }
+    },
+    {
+      "phase": "final",
+      "mode": "mobile",
+      "score": 68,
+      "accessibility": 100,
+      "LCP": 6260.3012,
+      "TBT": 17,
+      "CLS": 0,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 17,
+        "transferSize": 1331765
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 365989
+      }
+    },
+    {
+      "phase": "baseline",
+      "mode": "desktop",
+      "score": 57,
+      "accessibility": 100,
+      "LCP": 6629.129325,
+      "TBT": 38.5,
+      "CLS": 0,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 20,
+        "transferSize": 1387566
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 362878
+      }
+    },
+    {
+      "phase": "final",
+      "mode": "desktop",
+      "score": 56,
+      "accessibility": 100,
+      "LCP": 8491.416,
+      "TBT": 43,
+      "CLS": 0,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 20,
+        "transferSize": 1403906
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 365989
+      }
+    }
+  ],
+  "conclusion": "Comparison completed; performance preservation is NOT claimed. Mobile69→68 LCP6209→6260, desktop57→56 LCP6629→8491; CLS0/a11y100. Critical request counts restored17/20; JS+3111bytes, total+16340bytes. Simulated desktop LCP remains a disclosed limitation; no improvement/field-CWV/full target PASS."
+}

@@ -1,0 +1,5 @@
+// TEST DATA ONLY. No customer content; imported exclusively by local QA scripts.
+export const sourceUrl='https://www.google.com/maps?cid=123';
+export const review=(i=1,extra={})=>({id:`TEST-DATA-${i}`,author:`TEST DATA — Pessoa ${i}`,rating:5-i%3,comment:'TEST DATA — Relato simulado para validar a apresentação. Não corresponde a cliente ou avaliação real.',dateLabel:'23 de outubro de 2026',sourceUrl,...extra});
+export const fixture=(average=4.7,total=37,count=3)=>({source:'google_business_profile',average,total,sourceUrl,reviewActionUrl:'https://search.google.com/local/writereview?placeid=TEST_DATA',reviews:Array.from({length:count},(_,i)=>review(i+1))});
+export const instagram={data:['service-wash','service-interior','service-seats','service-carpet','process-detail','process-delivery'].map((name,i)=>({id:`TEST-DATA-IG-${i}`,media_url:`https://test-data.invalid/${name}.webp`,permalink:`https://www.instagram.com/p/TEST_DATA_${i}/`,media_type:i%3===0?'VIDEO':i%3===1?'CAROUSEL_ALBUM':'IMAGE',caption:'TEST DATA — imagem editorial usada exclusivamente em QA isolado.'}))};

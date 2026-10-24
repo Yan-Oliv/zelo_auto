@@ -1,0 +1,74 @@
+[
+  {
+    "width": 1440,
+    "overflow": 0,
+    "boxes": [
+      {
+        "class": "ze4-container ze4-community-columns",
+        "x": 72,
+        "width": 1296,
+        "height": 933.84375
+      },
+      {
+        "class": "ze4-instagram",
+        "x": 72,
+        "width": 656.328125,
+        "height": 933.84375
+      },
+      {
+        "class": "ze4-instagram-grid",
+        "x": 72,
+        "width": 656.328125,
+        "height": 434.875
+      },
+      {
+        "class": "ze4-google-reviews",
+        "x": 816.453125,
+        "width": 551.546875,
+        "height": 933.84375
+      },
+      {
+        "class": "ze4-review-summary",
+        "x": 816.453125,
+        "width": 551.546875,
+        "height": 130
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "overflow": 0,
+    "boxes": [
+      {
+        "class": "ze4-container ze4-community-columns",
+        "x": 19.5,
+        "width": 351,
+        "height": 1989.234375
+      },
+      {
+        "class": "ze4-instagram",
+        "x": 19.5,
+        "width": 351,
+        "height": 905.90625
+      },
+      {
+        "class": "ze4-instagram-grid",
+        "x": 19.5,
+        "width": 351,
+        "height": 531.5
+      },
+      {
+        "class": "ze4-google-reviews",
+        "x": 19.5,
+        "width": 351,
+        "height": 1035.328125
+      },
+      {
+        "class": "ze4-review-summary",
+        "x": 19.5,
+        "width": 351,
+        "height": 134
+      }
+    ]
+  }
+]

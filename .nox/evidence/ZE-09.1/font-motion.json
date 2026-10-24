@@ -1,0 +1,25 @@
+{
+  "kind": "TEST DATA isolated fixture video, not real integration",
+  "fontBeforeSection": 0,
+  "googleBeforeSection": 0,
+  "fontNearSection": 1,
+  "googleNearSection": 1,
+  "externalFontRequests": 0,
+  "displayReady": true,
+  "during": [
+    "0.00831301",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "settled": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+  ]
+}

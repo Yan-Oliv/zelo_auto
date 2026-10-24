@@ -1,0 +1,19 @@
+{
+  "reviewer": "Root/Nox read-only technical rendered/source review",
+  "status": "PASS_WITH_DISCLOSED_PERFORMANCE_LIMITS",
+  "sizes": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "states": [
+    "verified TEST DATA",
+    "unavailable"
+  ],
+  "openVisualFindings": [],
+  "humanVisualApproval": false,
+  "realGoogle": "PENDING ZE-09",
+  "performancePreserved": false,
+  "production": "No push/deploy"
+}

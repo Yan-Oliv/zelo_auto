@@ -1,0 +1,15 @@
+{
+  "label": "TEST DATA ONLY — isolated lifecycle, no real Google validation",
+  "source": "src/features/landing/hooks/useGoogleReviews.ts",
+  "results": [
+    "A: lazy unavailable configuration; manual 60 s cooldown; no automatic permanent-error storm PASS",
+    "B: backend activation via same mounted hook; no React edits/reload/build PASS",
+    "C: 5 min controlled revalidation, focus/visibility/reentry dedup, stable old data, changed rating/count/cards PASS",
+    "D: temporary refresh failure disclosed; bounded old data retained; same-page recovery PASS",
+    "Hard 15 min expiry; no interval request polling PASS",
+    "StrictMode dedup, true unmount abort, old response isolation, fresh remount reuse PASS",
+    "HTTP 401/403/429 Retry-After/500 cooldown and recovery PASS",
+    "10 s timeout abort, temporary failure and recovery PASS",
+    "Typed normalized contract: 5/4.7/4.2, snippets absent, empty, long/empty comments, absent author, blank date, unsafe links, duplicate IDs PASS"
+  ]
+}

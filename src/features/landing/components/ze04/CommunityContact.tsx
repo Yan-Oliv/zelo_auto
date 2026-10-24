@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, Film, Images, MapPin, MessageCircle, Navigation, Star } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, CalendarDays, Camera, Check, Clock3, Film, Images, MapPin, MessageCircle, Navigation, Star, Users } from 'lucide-react'
 import { locationInfo, partnerLogos, scheduleRows, siteConfig } from '../../data/site'
 import { googleReviewLinks } from '../../data/googleReviewLinks'
 import { useInstagramFeed, type InstagramFeedPost } from '../../hooks/useInstagramFeed'
@@ -28,14 +28,15 @@ function CommunityEyebrow({ children }: { children: ReactNode }) {
   return <p className="ze4-community-eyebrow">{children}<span aria-hidden="true" /></p>
 }
 
-function InstagramTile({ post, official }: { post: InstagramFeedPost; official: boolean }) {
+function InstagramTile({ post, official, index }: { post: InstagramFeedPost; official: boolean; index: number }) {
   const [imageFailed, setImageFailed] = useState(false)
+  const reducedMotion = useReducedMotion()
   const MediaIcon = post.mediaType === 'VIDEO' ? Film : post.mediaType === 'CAROUSEL_ALBUM' ? Images : Camera
-  return <a key={post.id} href={official && !imageFailed ? post.postUrl : siteConfig.instagramLink} target="_blank" rel="noopener noreferrer" className={`ze4-instagram-tile${imageFailed ? ' is-image-failed' : ''}`} aria-label={official && !imageFailed ? `Abrir publicação no Instagram: ${post.alt}` : 'Abrir perfil oficial da Zelo no Instagram'}>
+  return <m.a href={official && !imageFailed ? post.postUrl : siteConfig.instagramLink} target="_blank" rel="noopener noreferrer" className={`ze4-instagram-tile${imageFailed ? ' is-image-failed' : ''}`} aria-label={official && !imageFailed ? `Abrir publicação no Instagram: ${post.alt}` : 'Abrir perfil oficial da Zelo no Instagram'} initial={reducedMotion ? false : { opacity: 0, y: 12, scale: 0.985 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.22 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}>
     {!imageFailed ? <NearImage src={post.image} alt={official ? post.alt : `Imagem ilustrativa: ${post.alt}`} width={520} height={520} loading="lazy" decoding="async" className={post.className} onError={() => setImageFailed(true)} /> : <span className="ze4-instagram-image-fallback"><Camera size={30} aria-hidden="true" /><span>Imagem indisponível</span><small>Abrir perfil oficial</small></span>}
     {official && !imageFailed && <MediaIcon className="ze4-instagram-media-icon" size={21} aria-label={post.mediaType === 'VIDEO' ? 'Vídeo' : post.mediaType === 'CAROUSEL_ALBUM' ? 'Carrossel' : 'Foto'} />}
     <span className="ze4-instagram-hover" aria-hidden="true"><Camera size={27} /><span>{official ? 'Abrir publicação' : 'Abrir perfil oficial'}</span></span>
-  </a>
+  </m.a>
 }
 
 function InstagramSection() {
@@ -55,23 +56,23 @@ function InstagramSection() {
         : error ?? 'Publicações indisponíveis no momento.'
 
   return <section id="instagram" className="ze4-instagram" aria-labelledby="ze4-instagram-title">
-    <CommunityReveal>
-      <CommunityEyebrow>NOSSO DIA A DIA</CommunityEyebrow>
-      <h2 id="ze4-instagram-title" className="ze4-community-title">ACOMPANHE A<br /><span>ZELO NO INSTAGRAM</span></h2>
-      <p className="ze4-community-description">Bastidores e cuidado em cada detalhe. Acompanhe de perto a rotina da Zelo e converse com a nossa equipe.</p>
-    </CommunityReveal>
-    <CommunityReveal className="ze4-instagram-gallery" delay={0.08}>
+    <header className="ze4-community-heading">
+      <CommunityReveal><CommunityEyebrow>NOSSO DIA A DIA</CommunityEyebrow></CommunityReveal>
+      <CommunityReveal delay={0.08}><h2 id="ze4-instagram-title" className="ze4-community-title">ACOMPANHE A<br /><span>ZELO NO INSTAGRAM</span></h2></CommunityReveal>
+      <CommunityReveal delay={0.16}><p className="ze4-community-description">Bastidores, transformações reais, detalhes que fazem a diferença e um pouco da nossa rotina com os carros que passam por aqui.</p></CommunityReveal>
+    </header>
+    <div className="ze4-instagram-gallery">
       <div className="ze4-instagram-grid" aria-busy={status === 'loading'} aria-describedby="ze4-instagram-status" data-feed-source={status === 'official' ? source : 'editorial'}>
         {status === 'loading'
           ? Array.from({ length: 6 }, (_, index) => <div key={index} className="ze4-instagram-skeleton" aria-hidden="true" />)
-          : tiles.map(({ post, official }) => <InstagramTile key={post.id} post={post} official={official} />)}
+          : tiles.map(({ post, official }, index) => <InstagramTile key={post.id} post={post} official={official} index={index} />)}
       </div>
-      <p id="ze4-instagram-status" className="ze4-feed-caption" aria-live="polite">{(status === 'empty' || status === 'unavailable') && <strong>Galeria ilustrativa. </strong>}{statusMessage}{status === 'official' && officialPosts.length < 6 && ' As demais imagens são ilustrativas.'}</p>
-    </CommunityReveal>
-    <CommunityReveal className="ze4-instagram-actions" delay={0.12}>
+    </div>
+    <CommunityReveal className="ze4-instagram-actions" delay={0.24}>
       <a className="ze4-button" href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer"><Camera size={22} aria-hidden="true" /><span>VER NOSSO INSTAGRAM</span><ArrowRight size={21} aria-hidden="true" /></a>
-      <span className="ze4-instagram-handle">{siteConfig.instagramHandle}<small>O PERFIL OFICIAL DA ZELO</small></span>
+      <div className="ze4-instagram-metadata"><span>CONTEÚDO<small>OFICIAL</small></span><span>CUIDADO<small>EM CADA DETALHE</small></span><span>BASTIDORES<small>REAIS</small></span></div>
     </CommunityReveal>
+    <CommunityReveal delay={0.3}><p id="ze4-instagram-status" className="ze4-feed-caption" aria-live="polite">{(status === 'empty' || status === 'unavailable') && <strong>Galeria ilustrativa. </strong>}{statusMessage}{status === 'official' && officialPosts.length < 6 && ' As demais imagens são ilustrativas.'} <a href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer">{siteConfig.instagramHandle}</a></p></CommunityReveal>
   </section>
 }
 function CommunityStars({ rating }: { rating: number }) {
@@ -93,33 +94,52 @@ export function GoogleReviewsSection({ data: suppliedData }: { data?: VerifiedGo
     { icon: <MapPin size={23} />, title: 'Conheça a Zelo de perto', description: 'Estamos esperando você em Catalão – GO.', action: 'Como chegar', href: locationInfo.mapsLink },
   ]
   return <section ref={feed.ref} id="avaliacoes" className="ze4-google-reviews" aria-labelledby="ze4-reviews-title" data-reviews-state={status}>
-    <CommunityReveal>
-      <CommunityEyebrow>CONFIANÇA QUE GERA HISTÓRIAS</CommunityEyebrow>
-      <h2 id="ze4-reviews-title" className="ze4-community-title">AVALIAÇÕES<br /><span>GOOGLE</span></h2>
-      <p className="ze4-community-description">A sua experiência é o que nos move. Valorizamos a confiança de quem escolhe a Zelo Auto Estética.</p>
-    </CommunityReveal>
+    <header className="ze4-community-heading">
+      <CommunityReveal><CommunityEyebrow>CONFIANÇA QUE GERA HISTÓRIAS</CommunityEyebrow></CommunityReveal>
+      <CommunityReveal delay={0.08}><h2 id="ze4-reviews-title" className="ze4-community-title">AVALIAÇÕES<br /><span>GOOGLE</span></h2></CommunityReveal>
+      <CommunityReveal delay={0.16}><p className="ze4-community-description">A satisfação dos nossos clientes é o que nos move. Confira o que eles dizem sobre a experiência na Zelo Auto Estética.</p></CommunityReveal>
+    </header>
     <div className="ze4-review-content" aria-busy={loading}>
     <CommunityReveal className="ze4-review-summary" delay={0.05}>
-      {loading ? <div className="ze4-review-skeleton ze4-review-skeleton-summary" aria-hidden="true" /> : data && data.average !== null ? <><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div><strong>{data.total} avaliações</strong><p>Opiniões de clientes no Google.</p><a data-analytics-review="view" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google <ArrowUpRight size={14} aria-hidden="true" /></a></div></> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>Acompanhe nossos canais oficiais.</p><span className="ze4-review-availability">{status === 'empty' ? 'Ainda não há avaliações disponíveis no Google.' : 'Não foi possível carregar as avaliações agora.'}</span></div></>}
+      {loading ? <div className="ze4-review-skeleton ze4-review-skeleton-summary" aria-hidden="true" /> : data && data.average !== null ? <CommunityReveal className="ze4-review-summary-data"><div className="ze4-review-score"><strong>{data.average.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</strong><CommunityStars rating={data.average} /></div><div className="ze4-review-total"><strong>{data.total.toLocaleString('pt-BR')}</strong><span>AVALIAÇÕES NO GOOGLE</span><p>Experiências compartilhadas por nossos clientes.</p></div></CommunityReveal> : <><span className="ze4-google-letter" aria-hidden="true">G</span><div><strong>CONFIANÇA EM CADA DETALHE</strong><p>{status === 'empty' ? 'Ainda não há avaliações disponíveis no Google.' : 'As avaliações estão indisponíveis aqui no momento.'}</p><span className="ze4-review-availability">Consulte as opiniões na fonte oficial.</span></div></>}
     </CommunityReveal>
     <div className="ze4-review-list">
       {data && data.total > 0 && data.reviews.length === 0 && <p className="ze4-review-no-snippets">A nota e o total estão disponíveis. Consulte os comentários diretamente no Google.</p>}
-      {loading ? Array.from({ length: 3 }, (_, index) => <div key={index} className="ze4-review-card ze4-review-skeleton" aria-hidden="true" />) : data ? data.reviews.slice(0, 3).map((review, index) => <CommunityReveal key={review.id} delay={0.1 + index * 0.08} className="ze4-review-card"><span className="ze4-review-avatar" aria-hidden="true">{review.author.slice(0, 1)}</span><div><h3>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</h3><div className="ze4-review-meta"><CommunityStars rating={review.rating} /><span>{review.dateLabel}</span></div>{review.comment && <p className="ze4-review-comment">{review.comment}</p>}<a data-analytics-review="view" href={review.sourceUrl} target="_blank" rel="noopener noreferrer">Ler no Google <ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>) : unavailableCards.map((card, index) => <CommunityReveal key={card.title} delay={0.1 + index * 0.08} className="ze4-review-card ze4-review-unavailable"><span className="ze4-review-info-icon" aria-hidden="true">{card.icon}</span><div><h3>{card.title}</h3><p>{card.description}</p><a href={card.href} target="_blank" rel="noopener noreferrer">{card.action}<ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>)}
+      {loading ? Array.from({ length: 3 }, (_, index) => <div key={index} className="ze4-review-card ze4-review-skeleton" aria-hidden="true" />) : data && data.total > 0 ? data.reviews.slice(0, 3).map((review, index) => <CommunityReveal key={review.id} delay={0.1 + index * 0.1} className="ze4-review-card"><span className="ze4-review-avatar" aria-hidden="true">{review.author.slice(0, 1)}</span><div><h3>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</h3><div className="ze4-review-meta"><CommunityStars rating={review.rating} /><span>{review.dateLabel}</span></div>{review.comment && <p className="ze4-review-comment">{review.comment}</p>}<a data-analytics-review="view" href={review.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`Ler avaliação completa de ${review.author} no Google`}>Ler no Google <ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>) : unavailableCards.map((card, index) => <CommunityReveal key={card.title} delay={0.1 + index * 0.1} className="ze4-review-card ze4-review-unavailable"><span className="ze4-review-info-icon" aria-hidden="true">{card.icon}</span><div><span className="ze4-review-editorial-label">CANAL INSTITUCIONAL DA ZELO</span><h3>{card.title}</h3><p>{card.description}</p><a href={card.href} target="_blank" rel="noopener noreferrer">{card.action}<ArrowUpRight size={13} aria-hidden="true" /></a></div></CommunityReveal>)}
     </div>
     </div>
-    <p className="ze4-reviews-status" role="status">{loading ? 'Carregando avaliações do Google…' : data ? data.total === 0 ? 'Nenhuma avaliação disponível no Google no momento.' : 'Avaliações de clientes. Fonte: Google.' : 'As avaliações do Google estão indisponíveis no momento.'}</p>
-    {!suppliedData && (hasRetried || status === 'unavailable' && feed.retryable) && <button type="button" className="ze4-review-retry ze4-button-outline" aria-disabled={loading || status !== 'unavailable' || !feed.retryable || feed.retrySeconds > 0} onClick={() => { setHasRetried(true); feed.retry() }}>
-      {loading ? 'CARREGANDO…' : status === 'verified' || status === 'empty' ? 'ATUALIZADO' : feed.retrySeconds > 0 ? `TENTAR NOVAMENTE EM ${feed.retrySeconds}s` : 'TENTAR NOVAMENTE'}
-    </button>}
     <CommunityReveal className="ze4-reviews-actions" delay={0.2}>
-      {reviewActionUrl && <a data-analytics-review="write" href={reviewActionUrl} aria-label="Avaliar no Google (abre em nova aba)" className="ze4-button ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={20} aria-hidden="true" /></a>}
-      <a data-analytics-review="view" href={sourceUrl} aria-label="Ver todas as avaliações no Google (abre em nova aba)" className="ze4-button-outline" target="_blank" rel="noopener noreferrer">VER TODAS AS AVALIAÇÕES<ArrowRight size={20} aria-hidden="true" /></a><span className="ze4-reviews-source"><Check size={19} aria-hidden="true" /> {data ? 'FONTE: GOOGLE' : 'CANAIS OFICIAIS'}</span>
+      <a data-analytics-review="view" href={sourceUrl} aria-label="Ver todas as avaliações no Google (abre em nova aba)" className="ze4-button-outline" target="_blank" rel="noopener noreferrer">VER TODAS AS AVALIAÇÕES<ArrowRight size={20} aria-hidden="true" /></a>
+      {reviewActionUrl && <a data-analytics-review="write" href={reviewActionUrl} aria-label="Avaliar no Google (abre em nova aba)" className="ze4-review-write" target="_blank" rel="noopener noreferrer">AVALIAR NO GOOGLE<ArrowUpRight size={16} aria-hidden="true" /></a>}
     </CommunityReveal>
+    <CommunityReveal className="ze4-reviews-attribution" delay={0.26}><span className="ze4-reviews-source"><Check size={22} aria-hidden="true" />AVALIAÇÕES<br />DO GOOGLE</span><span><Users size={23} aria-hidden="true" />EXPERIÊNCIAS<br />COMPARTILHADAS</span><a data-analytics-review="view" href={sourceUrl} target="_blank" rel="noopener noreferrer">Fonte: Google<ArrowUpRight size={14} aria-hidden="true" /></a></CommunityReveal>
+    <div className="ze4-reviews-feedback">
+      <p className="ze4-reviews-status" role="status">{feed.refreshing ? 'Atualizando avaliações…' : feed.refreshError ? 'Não foi possível atualizar agora. As últimas avaliações carregadas continuam visíveis.' : loading ? 'Carregando avaliações do Google…' : data ? data.total === 0 ? 'Nenhuma avaliação disponível no Google no momento.' : 'Avaliações de clientes. Fonte: Google.' : 'As avaliações do Google estão indisponíveis no momento.'}</p>
+      {!suppliedData && !loading && <button type="button" className="ze4-review-retry" aria-disabled={feed.refreshing || feed.retrySeconds > 0} onClick={() => { setHasRetried(true); feed.refresh() }}>{feed.refreshing ? 'ATUALIZANDO…' : status === 'unavailable' ? feed.retrySeconds > 0 ? `TENTAR NOVAMENTE EM ${feed.retrySeconds}s` : 'TENTAR NOVAMENTE' : hasRetried ? 'ATUALIZAR NOVAMENTE' : 'ATUALIZAR AVALIAÇÕES'}</button>}
+    </div>
   </section>
 }
 
 export function CommunitySection({ googleReviews }: { googleReviews?: VerifiedGoogleReviews }) {
-  return <div className="ze4-community"><div className="ze4-container ze4-community-columns"><InstagramSection /><GoogleReviewsSection data={googleReviews} /></div></div>
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const [displayReady, setDisplayReady] = useState(false)
+  useEffect(() => {
+    let active = true
+    const prepareDisplay = () => {
+      // The self-hosted display face is needed only when this section is near.
+      // Wait for it before switching families; the critical hero never waits.
+      void document.fonts?.load('400 44px "Michroma Community"').then(() => {
+        if (active) setDisplayReady(true)
+      }).catch(() => { /* Readable system/project fallback remains visible. */ })
+    }
+    if (!('IntersectionObserver' in window)) { prepareDisplay(); return () => { active = false } }
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); prepareDisplay() }
+    }, { rootMargin: '700px 0px' })
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => { active = false; observer.disconnect() }
+  }, [])
+  return <div ref={sectionRef} className="ze4-community" data-display-font={displayReady ? 'ready' : 'deferred'}><NearImage original className="ze4-community-scene" src="/editorial/responsive/location-scene-1280.webp" alt="" width={1280} height={720} loading="lazy" decoding="async" /><div className="ze4-container ze4-community-columns"><InstagramSection /><GoogleReviewsSection data={googleReviews} /></div></div>
 }
 
 export function LocationSection() {

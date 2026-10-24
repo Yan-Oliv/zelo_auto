@@ -1,0 +1,47 @@
+﻿[
+    {
+        "name":  "GOOGLE_BUSINESS_ACCOUNT_ID",
+        "present":  false,
+        "nonempty":  false
+    },
+    {
+        "name":  "GOOGLE_BUSINESS_LOCATION_ID",
+        "present":  false,
+        "nonempty":  false
+    },
+    {
+        "name":  "GOOGLE_BUSINESS_CLIENT_ID",
+        "present":  false,
+        "nonempty":  false
+    },
+    {
+        "name":  "GOOGLE_BUSINESS_CLIENT_SECRET",
+        "present":  false,
+        "nonempty":  false
+    },
+    {
+        "name":  "GOOGLE_BUSINESS_REFRESH_TOKEN",
+        "present":  false,
+        "nonempty":  false
+    },
+    {
+        "name":  "INSTAGRAM_API_MODE",
+        "present":  true,
+        "nonempty":  true
+    },
+    {
+        "name":  "INSTAGRAM_ACCESS_TOKEN",
+        "present":  true,
+        "nonempty":  true
+    },
+    {
+        "name":  "INSTAGRAM_GRAPH_USER_ID",
+        "present":  true,
+        "nonempty":  true
+    },
+    {
+        "name":  "INSTAGRAM_FEED_ENDPOINT",
+        "present":  false,
+        "nonempty":  false
+    }
+]

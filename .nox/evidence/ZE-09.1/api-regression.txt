@@ -1,0 +1,26 @@
+✔ missing/invalid server configuration and origin fail closed without outbound calls (21.0922ms)
+✔ OAuth refresh + authenticated profile + verified reviews, official order and safe projection (16.203ms)
+✔ wrong location, phone, locality, title and verification are blocked before reviews (2.9924ms)
+✔ mismatched configured review/action URLs cannot redirect to another business (0.5643ms)
+✔ empty official response has no invented score/reviews, absent action remains absent (1.1146ms)
+✔ optional author/comment/avatar absence and long special text remain text (1.479ms)
+✔ invalid ratings/count/date/comment payload and malformed JSON fail closed (5.9437ms)
+✔ Google 400/401/403/404/429/500 at every stage are sanitized and uncached (5.1566ms)
+✔ network and abort failures are sanitized (0.6179ms)
+✔ actual overall deadline aborts upstream and returns HTTP504 without leaking errors (8000.3914ms)
+✔ aggregate-only partial response preserves real score/count without invented reviews (1.2354ms)
+✔ upstream rate limits carry retry-after and do not perform automatic retries (2.3493ms)
+✔ oversized fields, duplicate IDs and count mismatch fail closed (3.0969ms)
+✔ blank, malformed and oversized resource IDs never reach Google (1.4315ms)
+✔ authenticated identity requires matching street or official website (0.796ms)
+✔ cross-site fetch metadata fails closed even without an Origin header (0.2299ms)
+✔ caller cancellation aborts upstream without being mislabeled deadline timeout (0.5445ms)
+✔ malformed OAuth/profile JSON and unusable access tokens fail closed (3.1976ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8174.1898

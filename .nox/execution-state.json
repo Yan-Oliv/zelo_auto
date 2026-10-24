@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "project": "zelo_autoestica",
   "status": "COMPLETED",
-  "currentSprint": "ZE-10.1",
-  "currentStep": "Exactly two deliveries technically accepted; human visual approval separate",
+  "currentSprint": "ZE-09.1",
+  "currentStep": "Exactly two deliveries completed; technical review PASS with measured performance limitations",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": null,
-  "nextAction": "Await owner ZE-09 authorization and final hero visual acceptance; do not initiate ZE-10.2/11/12",
+  "nextAction": "Continue separately authorized owner UX observations; ZE-09 remains external Google gate",
   "sprints": [
     {
       "id": "ZE-01",
@@ -532,6 +532,80 @@
       ]
     },
     {
+      "id": "ZE-09.1",
+      "title": "Reference4 reputation interface and dynamic data readiness",
+      "status": "COMPLETED",
+      "dependsOn": "ZE-09",
+      "dependencyException": {
+        "approvedBy": "owner",
+        "contract": "6a80a498-d491-4bdf-9c12-130cf8b69fc2",
+        "limitedTo": "ZE-09.1 independent technical acceptance",
+        "predecessorStatePreserved": "WAITING_USER_ACTION"
+      },
+      "deliveries": [
+        "Visual fidelity and responsive motion",
+        "Automatic official-data readiness, QA and handoff"
+      ],
+      "criteria": [
+        {
+          "id": "ZE-09.1-C01",
+          "description": "Visual fidelity",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-09.1-Report.md",
+            "evidence/ZE-09.1/qa-browser.json",
+            "evidence/ZE-09.1/activation.json",
+            "evidence/ZE-09.1/preservation.json",
+            "evidence/ZE-09.1/review.json"
+          ]
+        },
+        {
+          "id": "ZE-09.1-C02",
+          "description": "Motion and UX",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-09.1-Report.md",
+            "evidence/ZE-09.1/qa-browser.json",
+            "evidence/ZE-09.1/activation.json",
+            "evidence/ZE-09.1/preservation.json",
+            "evidence/ZE-09.1/review.json"
+          ]
+        },
+        {
+          "id": "ZE-09.1-C03",
+          "description": "Dynamic data readiness",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-09.1-Report.md",
+            "evidence/ZE-09.1/qa-browser.json",
+            "evidence/ZE-09.1/activation.json",
+            "evidence/ZE-09.1/preservation.json",
+            "evidence/ZE-09.1/review.json"
+          ]
+        },
+        {
+          "id": "ZE-09.1-C04",
+          "description": "Quality, evidence and Nox",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-09.1-Report.md",
+            "evidence/ZE-09.1/qa-browser.json",
+            "evidence/ZE-09.1/activation.json",
+            "evidence/ZE-09.1/preservation.json",
+            "evidence/ZE-09.1/review.json"
+          ]
+        }
+      ],
+      "humanVisualApproval": false,
+      "technicalApproval": "PASS_WITH_DISCLOSED_PERFORMANCE_LIMITS",
+      "externalGoogleValidation": "PENDING in ZE-09",
+      "performancePreserved": false
+    },
+    {
       "id": "ZE-03-REWORK-POST-ZE09",
       "title": "ZE-03-REWORK — correção visual pós-ZE-09",
       "status": "WAITING_USER_ACTION",
@@ -757,6 +831,6 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-10",
-  "currentApprovedSprint": "ZE-10.1"
+  "lastCompletedSprint": "ZE-09.1",
+  "currentApprovedSprint": "ZE-09.1"
 }

@@ -1,0 +1,900 @@
+{
+  "kind": "Isolated TEST DATA/route fixtures; never live Google verification",
+  "groups": [
+    {
+      "name": "Lazy first fetch, stable loading, contract and fractional stars",
+      "status": "PASS",
+      "evidence": {
+        "loadingHeight": 535,
+        "verifiedHeight": 535
+      }
+    },
+    {
+      "name": "Dynamic score 5/3; 3 snippets",
+      "status": "PASS"
+    },
+    {
+      "name": "Dynamic score 4.7/37; 2 snippets",
+      "status": "PASS"
+    },
+    {
+      "name": "Dynamic score 4.2/1; 1 snippets",
+      "status": "PASS"
+    },
+    {
+      "name": "Dynamic score 4.9/18; 0 snippets",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject malformed missing author",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject malformed invalid date label",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject malformed invalid URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject malformed duplicate IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject malformed invalid score",
+      "status": "PASS"
+    },
+    {
+      "name": "Long and empty comments preserved as safe text",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty, no false stars or testimonials",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP401 honest fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP403 honest fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP429 honest fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP500 honest fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP503 honest fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "Rendered 1920×1080",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 130.9375,
+          "y": 135.078125,
+          "w": 838.78125,
+          "h": 928.53125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 1087.765625,
+          "y": 135.078125,
+          "w": 701.28125,
+          "h": 974,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 130.9375,
+          "y": 385.078125,
+          "w": 838.78125,
+          "h": 556.53125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 1087.765625,
+          "y": 385.078125,
+          "w": 701.28125,
+          "h": 150,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 1440×900",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 98.203125,
+          "y": 67.5,
+          "w": 629.09375,
+          "h": 742.03125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 815.828125,
+          "y": 67.5,
+          "w": 525.953125,
+          "h": 909.3125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 98.203125,
+          "y": 270.8125,
+          "w": 629.09375,
+          "h": 416.71875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 815.828125,
+          "y": 270.8125,
+          "w": 525.953125,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 1366×768",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 93.15625,
+          "y": 2.421875,
+          "w": 596.75,
+          "h": 711.15625,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 773.890625,
+          "y": 2.421875,
+          "w": 498.921875,
+          "h": 900,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 93.15625,
+          "y": 196.421875,
+          "w": 596.75,
+          "h": 395.15625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 773.890625,
+          "y": 196.421875,
+          "w": 498.921875,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 1024×768",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 69.84375,
+          "y": -68.3125,
+          "w": 447.34375,
+          "h": 687.359375,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 580.140625,
+          "y": -68.3125,
+          "w": 374.015625,
+          "h": 1066.140625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 69.84375,
+          "y": 151.6875,
+          "w": 447.34375,
+          "h": 295.5625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 580.140625,
+          "y": 151.6875,
+          "w": 374.015625,
+          "h": 163.796875,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 768×1024",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 38.40625,
+          "y": -726.09375,
+          "w": 691.1875,
+          "h": 787.34375,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 38.40625,
+          "y": 111.25,
+          "w": 691.1875,
+          "h": 956.21875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 38.40625,
+          "y": -516.875,
+          "w": 691.1875,
+          "h": 458.125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 38.40625,
+          "y": 361.46875,
+          "w": 691.1875,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 430×932",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 21.5,
+          "y": -1098.65625,
+          "w": 387,
+          "h": 997.03125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 21.5,
+          "y": -51.625,
+          "w": 387,
+          "h": 1228.984375,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 21.5,
+          "y": -853.015625,
+          "w": 387,
+          "h": 585,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 21.5,
+          "y": 201.359375,
+          "w": 387,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 390×844",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 19.5,
+          "y": -1137.84375,
+          "w": 351,
+          "h": 970.046875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 19.5,
+          "y": -117.796875,
+          "w": 351,
+          "h": 1283.53125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 19.5,
+          "y": -879.1875,
+          "w": 351,
+          "h": 531,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 19.5,
+          "y": 128.9375,
+          "w": 351,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 360×740",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 18,
+          "y": -1174.03125,
+          "w": 324,
+          "h": 940.46875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 18,
+          "y": -183.5625,
+          "w": 324,
+          "h": 1301.203125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 18,
+          "y": -922.453125,
+          "w": 324,
+          "h": 490.5,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 18,
+          "y": 80.84375,
+          "w": 324,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 320×640",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 16,
+          "y": -1172.90625,
+          "w": 288,
+          "h": 886.1875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 16,
+          "y": -236.71875,
+          "w": 288,
+          "h": 1301.015625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 16,
+          "y": -921.609375,
+          "w": 288,
+          "h": 436.5,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 16,
+          "y": 27.5,
+          "w": 288,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Rendered 844×390",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "instagram",
+          "x": 42.203125,
+          "y": -1107.203125,
+          "w": 759.59375,
+          "h": 841.15625,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 42.203125,
+          "y": -216.046875,
+          "w": 759.59375,
+          "h": 964.4375,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 42.203125,
+          "y": -889.765625,
+          "w": 759.59375,
+          "h": 503.71875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 42.203125,
+          "y": 42.390625,
+          "w": 759.59375,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "Keyboard, focus, secure links, hover, reduced motion",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing analytics consent false",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing analytics consent true",
+      "status": "PASS"
+    },
+    {
+      "name": "Motion video, individual stagger, settled section returns",
+      "status": "PASS",
+      "evidence": {
+        "during": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "settled": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "Global navigation, SEO and source preservation smoke",
+      "status": "PASS"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 130.9375,
+          "y": 135.078125,
+          "w": 838.78125,
+          "h": 928.53125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 1087.765625,
+          "y": 135.078125,
+          "w": 701.28125,
+          "h": 974,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 130.9375,
+          "y": 385.078125,
+          "w": 838.78125,
+          "h": 556.53125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 1087.765625,
+          "y": 385.078125,
+          "w": 701.28125,
+          "h": 150,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 98.203125,
+          "y": 67.5,
+          "w": 629.09375,
+          "h": 742.03125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 815.828125,
+          "y": 67.5,
+          "w": 525.953125,
+          "h": 909.3125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 98.203125,
+          "y": 270.8125,
+          "w": 629.09375,
+          "h": 416.71875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 815.828125,
+          "y": 270.8125,
+          "w": 525.953125,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 93.15625,
+          "y": 2.421875,
+          "w": 596.75,
+          "h": 711.15625,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 773.890625,
+          "y": 2.421875,
+          "w": 498.921875,
+          "h": 900,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 93.15625,
+          "y": 196.421875,
+          "w": 596.75,
+          "h": 395.15625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 773.890625,
+          "y": 196.421875,
+          "w": 498.921875,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 69.84375,
+          "y": -68.3125,
+          "w": 447.34375,
+          "h": 687.359375,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 580.140625,
+          "y": -68.3125,
+          "w": 374.015625,
+          "h": 1066.140625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 69.84375,
+          "y": 151.6875,
+          "w": 447.34375,
+          "h": 295.5625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 580.140625,
+          "y": 151.6875,
+          "w": 374.015625,
+          "h": 163.796875,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 38.40625,
+          "y": -726.09375,
+          "w": 691.1875,
+          "h": 787.34375,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 38.40625,
+          "y": 111.25,
+          "w": 691.1875,
+          "h": 956.21875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 38.40625,
+          "y": -516.875,
+          "w": 691.1875,
+          "h": 458.125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 38.40625,
+          "y": 361.46875,
+          "w": 691.1875,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 21.5,
+          "y": -1098.65625,
+          "w": 387,
+          "h": 997.03125,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 21.5,
+          "y": -51.625,
+          "w": 387,
+          "h": 1228.984375,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 21.5,
+          "y": -853.015625,
+          "w": 387,
+          "h": 585,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 21.5,
+          "y": 201.359375,
+          "w": 387,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 19.5,
+          "y": -1137.84375,
+          "w": 351,
+          "h": 970.046875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 19.5,
+          "y": -117.796875,
+          "w": 351,
+          "h": 1283.53125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 19.5,
+          "y": -879.1875,
+          "w": 351,
+          "h": 531,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 19.5,
+          "y": 128.9375,
+          "w": 351,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 18,
+          "y": -1174.03125,
+          "w": 324,
+          "h": 940.46875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 18,
+          "y": -183.5625,
+          "w": 324,
+          "h": 1301.203125,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 18,
+          "y": -922.453125,
+          "w": 324,
+          "h": 490.5,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 18,
+          "y": 80.84375,
+          "w": 324,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 16,
+          "y": -1172.90625,
+          "w": 288,
+          "h": 886.1875,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 16,
+          "y": -236.71875,
+          "w": 288,
+          "h": 1301.015625,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 16,
+          "y": -921.609375,
+          "w": 288,
+          "h": 436.5,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 16,
+          "y": 27.5,
+          "w": 288,
+          "h": 180,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "boxes": [
+        {
+          "name": "instagram",
+          "x": 42.203125,
+          "y": -1107.203125,
+          "w": 759.59375,
+          "h": 841.15625,
+          "overflow": false
+        },
+        {
+          "name": "avaliacoes",
+          "x": 42.203125,
+          "y": -216.046875,
+          "w": 759.59375,
+          "h": 964.4375,
+          "overflow": false
+        },
+        {
+          "name": "ze4-instagram-grid",
+          "x": 42.203125,
+          "y": -889.765625,
+          "w": 759.59375,
+          "h": 503.71875,
+          "overflow": false
+        },
+        {
+          "name": "ze4-review-summary",
+          "x": 42.203125,
+          "y": 42.390625,
+          "w": 759.59375,
+          "h": 132,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "timings": [
+    {
+      "name": "First section reveal",
+      "durationMs": 2183,
+      "includesScreenshotDelay": true
+    },
+    {
+      "name": "Response to rendered 5",
+      "durationMs": 185
+    },
+    {
+      "name": "Response to rendered 4.7",
+      "durationMs": 184
+    },
+    {
+      "name": "Response to rendered 4.2",
+      "durationMs": 201
+    },
+    {
+      "name": "Response to rendered 4.9",
+      "durationMs": 181
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "label": "TEST DATA ONLY — mocked endpoint, real Chromium and React lifecycle",
+  "results": [
+    "Real React StrictMode lazy request dedup PASS",
+    "A: no false data, cooldown, no automatic config-error storm PASS",
+    "B: same-page API activation via retry without code/reload/build PASS",
+    "C: fresh cooldown + stale focus/visibility/reentry dedup + stable refreshed data PASS",
+    "D: temporary failure retains bounded data, error announced, controlled recovery PASS",
+    "15 min hard expiry without request polling PASS",
+    "Suspended refresh cannot display data beyond retention deadline; valid response recovers PASS",
+    "Actual React unmount abort/remount and old response isolation PASS",
+    "No React/browser errors PASS"
+  ],
+  "errors": [],
+  "expectedHttpErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "calls": 9
+}

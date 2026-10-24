@@ -1,0 +1,12 @@
+{
+  "label": "TEST DATA isolated E2E; not real Google verification",
+  "results": [
+    "A unavailable configuration; no invented data PASS",
+    "B same mounted React receives authorized-contract TEST DATA without reload/rebuild PASS",
+    "C stale controlled focus updates average/count/snippets, preserves card DOM, IG and hero PASS",
+    "D temporary refresh error disclosed; bounded previous data, controlled same-page recovery PASS",
+    "No request loops, no errors; hard data expiry delegated to hook deterministic tests PASS"
+  ],
+  "calls": 6,
+  "errors": []
+}

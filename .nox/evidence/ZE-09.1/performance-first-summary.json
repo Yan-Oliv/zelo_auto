@@ -1,0 +1,52 @@
+{
+  "baselineCommit": "bcddcc8",
+  "conditions": "Lighthouse default simulated throttling; fresh Chrome per run; static builds; no saved consent; APIs deterministic503; one run per viewport per build",
+  "runs": [
+    {
+      "phase": "final",
+      "mode": "mobile",
+      "score": 68,
+      "accessibility": 100,
+      "LCP": 6346.4498,
+      "CLS": 0,
+      "TBT": 20,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 18,
+        "transferSize": 1351119
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 365523
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    },
+    {
+      "phase": "final",
+      "mode": "desktop",
+      "score": 56.00000000000001,
+      "accessibility": 100,
+      "LCP": 8561.1454,
+      "CLS": 0,
+      "TBT": 53,
+      "requests": {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 21,
+        "transferSize": 1423260
+      },
+      "scripts": {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 365523
+      },
+      "consoleErrors": null,
+      "runWarnings": []
+    }
+  ]
+}

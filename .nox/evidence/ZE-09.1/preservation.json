@@ -1,0 +1,16 @@
+{
+  "baseline": "bcddcc8",
+  "scope": [
+    "src/features/landing/components/ze04/CommunityContact.tsx",
+    "src/features/landing/components/ze04/CommunityContact.css",
+    "src/features/landing/hooks/useGoogleReviews.ts"
+  ],
+  "locationFooterTSXIdentical": true,
+  "preexistingCSSUnchanged": true,
+  "preexistingOwnerDocsPatchIdentical": true,
+  "heroCommercialPaintInstagramAPIAnalyticsSEONavigationUntouched": true,
+  "ZE09": "WAITING_USER_ACTION",
+  "ZE101": "COMPLETED",
+  "production": "No push/deploy/Cloud/API/billing mutations",
+  "secrets": "No .env reads or secret values; deterministic fixtures only"
+}

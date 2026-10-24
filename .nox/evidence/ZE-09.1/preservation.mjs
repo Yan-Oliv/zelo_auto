@@ -1,0 +1,9 @@
+import fs from'node:fs';import{execFileSync}from'node:child_process';import assert from'node:assert/strict';
+const baseline='bcddcc8',paths=execFileSync('git',['diff','--name-only',baseline],{encoding:'utf8'}).trim().split('\n');
+const allowed=['src/features/landing/components/ze04/CommunityContact.tsx','src/features/landing/components/ze04/CommunityContact.css','src/features/landing/hooks/useGoogleReviews.ts'];assert.ok(paths.filter(p=>!p.startsWith('.nox/')).every(p=>allowed.includes(p)),paths.join('\n'));
+const read=p=>fs.readFileSync(p,'utf8').replaceAll('\r\n','\n'),old=p=>execFileSync('git',['show',`${baseline}:${p}`],{encoding:'utf8'}).replaceAll('\r\n','\n');
+const tsx=allowed[0],css=allowed[1],suffix=s=>s.slice(s.indexOf('export function LocationSection'));
+assert.equal(suffix(read(tsx)),suffix(old(tsx)));assert.ok(read(css).startsWith(old(css).trimEnd()));
+const current=execFileSync('git',['diff','--binary','--','.nox/ZE-09-Google-Handoff.md','.nox/ZE-09-Report.md']);assert.equal(current.toString().replaceAll('\r\n','\n'),fs.readFileSync('.nox/evidence/ZE-09.1/preexisting-docs.patch','utf8').replaceAll('\r\n','\n'));
+const state=JSON.parse(read('.nox/execution-state.json'));assert.equal(state.sprints.find(s=>s.id==='ZE-09').status,'WAITING_USER_ACTION');assert.equal(state.sprints.find(s=>s.id==='ZE-10.1').status,'COMPLETED');
+fs.writeFileSync('.nox/evidence/ZE-09.1/preservation.json',JSON.stringify({baseline,scope:allowed,locationFooterTSXIdentical:true,preexistingCSSUnchanged:true,preexistingOwnerDocsPatchIdentical:true,heroCommercialPaintInstagramAPIAnalyticsSEONavigationUntouched:true,ZE09:'WAITING_USER_ACTION',ZE101:'COMPLETED',production:'No push/deploy/Cloud/API/billing mutations',secrets:'No .env reads or secret values; deterministic fixtures only'},null,2));console.log('Preservation PASS');

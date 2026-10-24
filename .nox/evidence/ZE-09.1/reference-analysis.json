@@ -1,0 +1,33 @@
+{
+  "reference": "new_interface/4.png",
+  "width": 1672,
+  "height": 940,
+  "measurements": {
+    "marginLeft": 114,
+    "instagramWidth": 738,
+    "googleLeft": 956,
+    "googleWidth": 617,
+    "columnGap": 104,
+    "separatorX": 901,
+    "eyebrowY": 56,
+    "titleY": 98,
+    "instagramGridY": 292,
+    "tileSize": 242,
+    "tileGap": 8,
+    "summaryY": 285,
+    "summaryHeight": 140,
+    "reviewCardYs": [
+      445,
+      588,
+      717
+    ],
+    "reviewCardHeights": [
+      130,
+      115,
+      125
+    ],
+    "instagramCtaY": 813,
+    "googleCtaY": 859
+  },
+  "policy": "Geometry derives responsive ratios; truthfulness, legibility, official source attribution and adaptation may add space. Reference example metrics/authors never production data."
+}

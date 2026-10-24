@@ -1,0 +1,80 @@
+{
+  "kind": "Scoped WCAG2.2AA automated checks + text200; TEST DATA; manual keyboard/reduced-motion in qa-browser",
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 40
+        }
+      ],
+      "text200": {
+        "client": 1440,
+        "scroll": 1440,
+        "offenders": [
+          {
+            "scroll": 25,
+            "client": 18,
+            "tag": "SPAN",
+            "class": "",
+            "parent": "ze4-review-star",
+            "text": "",
+            "x": 967.34375,
+            "right": 984.84375,
+            "width": 17.5
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 40
+        }
+      ],
+      "text200": {
+        "client": 390,
+        "scroll": 390,
+        "offenders": [
+          {
+            "scroll": 17,
+            "client": 12,
+            "tag": "SPAN",
+            "class": "",
+            "parent": "ze4-review-star",
+            "text": "",
+            "x": 123.296875,
+            "right": 135.1875,
+            "width": 11.890625
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 40
+        }
+      ],
+      "text200": {
+        "client": 320,
+        "scroll": 320,
+        "offenders": []
+      }
+    }
+  ]
+}
