@@ -71,5 +71,17 @@
     "Zoom200 test reflow equivalent720CSSpx for1440desktop, plus actual computed text sizes doubled at720390320; native OS toolbar zoom not automated.",
     "404 verified realPagesHTTP404. Direct500/503templatesHTTP200, syntheticReactboundary does not retroactively alterHTTPstatus; no Cloudflareinfrastructurefaultinterception asserted.",
     "No external website publishing/actions, deploy, push, billing, GoogleCloud change or credential mutation performed by QA."
-  ]
+  ],
+  "latestOwnerVisualApproval": {
+    "date": "2026-10-24",
+    "statement": "Aprovado visualmente",
+    "approvedBy": "owner",
+    "scope": "Current ZE-11 landing candidate visually accepted",
+    "candidateCommit": "85e80732088b62e05a25c7bdde139b106b01ba20",
+    "doesNotApprove": [
+      "Google official integration/OAuth/authentic data",
+      "Exception for unmet mobile performance targets",
+      "Deployment/push/ZE-12"
+    ]
+  }
 }

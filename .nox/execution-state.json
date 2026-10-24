@@ -3,14 +3,14 @@
   "project": "zelo_autoestica",
   "status": "WAITING_USER_ACTION",
   "currentSprint": "ZE-11",
-  "currentStep": "Independent homologation and all internal fixes complete; Google, full visual acceptance and performance tradeoff remain pending",
+  "currentStep": "Independent homologation and owner visual acceptance complete; official Google and performance tradeoff remain pending",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Owner validates preview and decides unmet performance tradeoff; configure authorized Google source after approval. Do not execute ZE-12.",
+  "nextAction": "Confirm official Google approval/OAuth/authentic data and explicitly decide unmet mobile performance tradeoff. ZE-12 remains blocked.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -980,9 +980,10 @@
             "ZE-11-Report.md",
             "evidence/ZE-11/qa-matrix/qa-global.json",
             "evidence/ZE-11/qa-affected/results.json",
-            "evidence/ZE-11/review.json"
+            "evidence/ZE-11/review.json",
+            "evidence/ZE-11/owner-visual-approval.json"
           ],
-          "limits": "Human full-page acceptance remains separate"
+          "limits": "Owner explicitly accepted current candidate visually; technical review and evidence remain preserved"
         },
         {
           "id": "ZE-11-C03",
@@ -1007,9 +1008,15 @@
           "evidence": [
             "ZE-11-Report.md",
             "evidence/ZE-11/hero-owner-approval.json",
-            "evidence/ZE-11/qa-summary.json"
+            "evidence/ZE-11/qa-summary.json",
+            "evidence/ZE-11/owner-visual-approval.json"
           ],
-          "pendingAction": "Confirm Google approval and authentic data; explicitly accept entire landing and measured performance tradeoff before ZE-12"
+          "pendingAction": "Confirm Google approval/authentic data and explicitly resolve unmet mobile performance before ZE-12",
+          "subgates": {
+            "humanVisualAcceptance": "PASS - owner explicit statement",
+            "officialGoogleIntegration": "PENDING",
+            "performanceTradeoffDecision": "PENDING"
+          }
         }
       ],
       "dependencies": [
@@ -1027,12 +1034,11 @@
       ],
       "exception": "Owner explicitly authorizes independent validation while ZE-09 Google remains pending",
       "technicalApproval": "Independent functional/visual checks PASS; mobile performance targets NOT MET",
-      "humanVisualApproval": false,
+      "humanVisualApproval": true,
       "performanceApproval": false,
       "externalGoogleApproval": false,
       "remainingActions": [
         "Owner confirms Google approval/OAuth/server configuration and real data",
-        "Owner accepts full current landing and errors",
         "Owner decides explicitly on unmet mobile performance tradeoff"
       ],
       "performance": {
@@ -1059,6 +1065,18 @@
         "CLS": 0,
         "targetsMet": false,
         "evidence": "evidence/ZE-11/performance-final-summary.json"
+      },
+      "ownerVisualApproval": {
+        "date": "2026-10-24",
+        "statement": "Aprovado visualmente",
+        "approvedBy": "owner",
+        "scope": "Current ZE-11 landing candidate visually accepted",
+        "candidateCommit": "85e80732088b62e05a25c7bdde139b106b01ba20",
+        "doesNotApprove": [
+          "Google official integration/OAuth/authentic data",
+          "Exception for unmet mobile performance targets",
+          "Deployment/push/ZE-12"
+        ]
       }
     },
     {

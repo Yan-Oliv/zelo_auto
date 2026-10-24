@@ -1,9 +1,15 @@
 {
-  "reviewer":"Nox with independent Root source/rendered review",
-  "date":"2026-10-24",
-  "technicalVisualReview":"PASS within independent scope",
-  "fiveReferencesOpened":["new_interface/1.png","new_interface/2.png","new_interface/3.png","new_interface/4.png","new_interface/5.png"],
-  "reviewedCorrections":[
+  "reviewer": "Nox with independent Root source/rendered review",
+  "date": "2026-10-24",
+  "technicalVisualReview": "PASS within independent scope",
+  "fiveReferencesOpened": [
+    "new_interface/1.png",
+    "new_interface/2.png",
+    "new_interface/3.png",
+    "new_interface/4.png",
+    "new_interface/5.png"
+  ],
+  "reviewedCorrections": [
     "Existing licensed geometric face improves editorial reference fidelity; hero face remains unchanged",
     "Location headline restored to four normal lines and enlarged text reflows without clipping",
     "Continuous white service fade keeps photo presence and restores body/title contrast",
@@ -12,8 +18,29 @@
     "Instagram StrictMode request starts once and aborted payloads cannot mutate unmounted/new state",
     "Quality brand collection has supported group semantics; official URLs and circular logos retained"
   ],
-  "actualEvidence":{"instagram":"HTTP200 six official posts, one request per mount", "map":"REAL-map-mobile-scroll.png contains streets, marker, Google attribution and two-finger interaction hint; vertical page scroll verified", "pages":"Root independently checked final index SHA256 matches dist and unknown route HTTP404"},
-  "openInternalFindings":[],
-  "notApproved":["Authentic Google reviews integration","Human full-landing/error-page visual acceptance","Mobile Performance90+/LCP2500 targets","Production publication or ZE-12"],
-  "limits":"Technical rendered/source review is not owner acceptance. Targeted contrast and axe are not full WCAG certification. Overview map frames may be transient blank; separate dedicated map image establishes rendered source. Fixtures remain labeled."
+  "actualEvidence": {
+    "instagram": "HTTP200 six official posts, one request per mount",
+    "map": "REAL-map-mobile-scroll.png contains streets, marker, Google attribution and two-finger interaction hint; vertical page scroll verified",
+    "pages": "Root independently checked final index SHA256 matches dist and unknown route HTTP404"
+  },
+  "openInternalFindings": [],
+  "notApproved": [
+    "Authentic Google reviews integration",
+    "Human full-landing/error-page visual acceptance",
+    "Mobile Performance90+/LCP2500 targets",
+    "Production publication or ZE-12"
+  ],
+  "limits": "Technical rendered/source review is not owner acceptance. Targeted contrast and axe are not full WCAG certification. Overview map frames may be transient blank; separate dedicated map image establishes rendered source. Fixtures remain labeled.",
+  "latestOwnerVisualApproval": {
+    "date": "2026-10-24",
+    "statement": "Aprovado visualmente",
+    "approvedBy": "owner",
+    "scope": "Current ZE-11 landing candidate visually accepted",
+    "candidateCommit": "85e80732088b62e05a25c7bdde139b106b01ba20",
+    "doesNotApprove": [
+      "Google official integration/OAuth/authentic data",
+      "Exception for unmet mobile performance targets",
+      "Deployment/push/ZE-12"
+    ]
+  }
 }

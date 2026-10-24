@@ -21,8 +21,8 @@
     },
     {
       "file": ".nox/evidence/ZE-11/findings.json",
-      "bytes": 6180,
-      "sha256": "d415447d1c7691c9d30528c213425ccef60378580bcf0a7e1fe66f5f88d40f8e"
+      "bytes": 6808,
+      "sha256": "eacd0c581be9ca2bb5077ad9f60049c63c159854086d1b63ff9491a2690a6651"
     },
     {
       "file": ".nox/evidence/ZE-11/font-diagnosis.mjs",
@@ -43,6 +43,11 @@
       "file": ".nox/evidence/ZE-11/lint-final.txt",
       "bytes": 2772,
       "sha256": "c123f5e49eba96204adfbcbc374157c5f85a4e848f8b393fad5c04d42fdde7c7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/owner-visual-approval.json",
+      "bytes": 385,
+      "sha256": "f4d126cd1e75e610f61e1ec279e1a10d78a3cc8230de46dfb9077af0040540b3"
     },
     {
       "file": ".nox/evidence/ZE-11/package-evidence.mjs",
@@ -596,8 +601,8 @@
     },
     {
       "file": ".nox/evidence/ZE-11/qa-findings.json",
-      "bytes": 4806,
-      "sha256": "e3adaeb6013a9150a6f5d181513d95d2d4412ab8687f24057a67349c9371929c"
+      "bytes": 5246,
+      "sha256": "3a9d0efdcb1d1a4705bef7483f5b76c130cc1cd79c7a0f920fdaa7350843b9bc"
     },
     {
       "file": ".nox/evidence/ZE-11/qa-font-update.mjs",
@@ -871,8 +876,8 @@
     },
     {
       "file": ".nox/evidence/ZE-11/qa-summary.json",
-      "bytes": 5926,
-      "sha256": "57076049d1ea3ce078b3c803a049a7782755ae5d18a1dd5fdfcdd76ab2dea0d7"
+      "bytes": 6389,
+      "sha256": "a0ff938eb5c9d9480eab27d1625e40f1763f16b6170661145f8a9e5dc5cb54d8"
     },
     {
       "file": ".nox/evidence/ZE-11/qa-update-current.mjs",
@@ -880,9 +885,14 @@
       "sha256": "3819c9389025cb9bfe308afdf4ffef49e57aca6ca9fcffcfdf50f92c1ff4ecbd"
     },
     {
+      "file": ".nox/evidence/ZE-11/record-visual-approval.mjs",
+      "bytes": 5463,
+      "sha256": "22d497bc8f90059de274ce0f3d70701e7609480f5fe9ed969a77d3c75c2f3717"
+    },
+    {
       "file": ".nox/evidence/ZE-11/review.json",
-      "bytes": 1822,
-      "sha256": "e981c3b8799fb7832ebae726e85aa49cc8b6e555e0637dfa241e0188175bb606"
+      "bytes": 2340,
+      "sha256": "4e9ec914ced0f85806994c2e9fa2cc1328b8a359edbd5b32715d2b99771eb127"
     },
     {
       "file": ".nox/evidence/ZE-11/security-preservation.json",

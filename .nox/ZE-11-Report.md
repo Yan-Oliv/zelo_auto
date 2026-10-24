@@ -1,6 +1,6 @@
 # ZE-11 — Homologação geral local
 
-Estado: **WAITING_USER_ACTION**. Duas entregas formais: regressão completa; homologação visual/funcional e handoff. Todo trabalho interno executável e seus retestes foram concluídos. Restam Google oficial, aceite visual global e decisão explícita sobre metas de performance não atingidas. ZE-11 não está COMPLETED nem liberada para ZE-12.
+Estado: **WAITING_USER_ACTION**. Duas entregas formais: regressão completa; homologação visual/funcional e handoff. Todo trabalho interno executável e seus retestes foram concluídos. O aceite visual global foi recebido em2026-10-24. Restam Google oficial e decisão explícita sobre metas de performance não atingidas. ZE-11 não está COMPLETED nem liberada para ZE-12.
 
 ## Autoridade, baseline e aceite da hero
 
@@ -52,7 +52,7 @@ Os overviews podem mostrar iframe momentaneamente vazio, inclusive com rede libe
 | WhatsApp/menu/busca/âncoras/sliders | PASS, teclado/touch/mensagens individuais/consentimento |
 | Maps | Mapa real e scroll comprovados; fallback oficial preservado |
 | Google real | PENDING — HTTP503 configuration, OAuth/API não configurados |
-| Aprovação humana global | PENDING |
+| Aprovação humana global | PASS — proprietário: “Aprovado visualmente”, candidato85e8073 |
 
 SEO: title/description/canonical/robots/sitemap/OG/JSON-LD AutoWash e dados de Catalão verificados; sem `aggregateRating` fictício. Debug e erros noindex. Analytics valida consentimento unset/denied/granted, deduplicação e parâmetros permitidos em diagnóstico local; nenhum recebimento no painel GA4 ou publicação externa é alegado. Segurança inclui revisão de handlers, status/JSON sanitizados, scan de assinaturas no bundle e preservação de ativos/dados. Nenhum valor de `.env` foi lido, exibido, modificado ou commitado.
 
@@ -82,9 +82,9 @@ A limpeza após término natural da animação antecipou a pintura observada em1
 | Critério | Estado | Fundamentação |
 | --- | --- | --- |
 | ZE-11-C01 — Regressão funcional | PASS no estado autorizado | APIs reais separadas de fixtures; Instagram e mapas atuais comprovados; Google indisponível corretamente representado, sem homologar fonte real |
-| ZE-11-C02 — Visual e responsividade | PASS técnico | Cinco referências comparadas, onze viewports, texto ampliado, motion/teclado/touch; Root/Nox revisou correções; aceite humano global separado |
+| ZE-11-C02 — Visual e responsividade | PASS técnico | Cinco referências comparadas, onze viewports, texto ampliado, motion/teclado/touch; Root/Nox revisou correções; proprietário aprovou visualmente o candidato85e8073 |
 | ZE-11-C03 — Qualidade técnica | PENDING, subgate performance FAIL | Build/lint/SEO/analytics/segurança/acessibilidade testados; metas mobile não atingidas e decisão do proprietário necessária |
-| ZE-11-C04 — Aprovação/handoff integrado | PENDING | Fonte Google real e aceite global ainda ausentes; pacote, evidências, rollback e commit preparados |
+| ZE-11-C04 — Aprovação/handoff integrado | PENDING | Aceite visual global PASS; fonte Google real e decisão sobre metas de performance ainda pendentes |
 
 Nenhum finding interno corrigível permanece aberto. O ledger preserva falhas iniciais de produto e divergências dos harnesses separadas, com correção e reteste. Root aprovou tecnicamente fonte/fade dos serviços, título de localização em quatro linhas e reforço estreito das sombras dos slogans. O reforço de contraste não revoga a declaração anterior do proprietário nem cria uma aprovação global inexistente.
 
@@ -92,8 +92,13 @@ Nenhum finding interno corrigível permanece aberto. O ledger preserva falhas in
 
 - ZE-09: WAITING_USER_ACTION, confirmação da aprovação no e-mail `omnyatech@gmail.com`, OAuth autorizado/identificadores/segredos server-side e dados autênticos. O e-mail Meta não confirma Google. Projeto `zelo-integracoes`, número878742106609, protocolo1-7339000042113.
 - Hero final: COMPLETED por aceite explícito. ZE-10.2 permanece COMPLETED tecnicamente.
-- ZE-11: validação independente e pacote de aceite; não COMPLETED enquanto Google, aprovação global e decisão de performance estiverem pendentes. ZE-12 permanece QUEUED e bloqueada.
+- ZE-11: validação independente e pacote de aceite; não COMPLETED enquanto Google e decisão de performance estiverem pendentes. ZE-12 permanece QUEUED e bloqueada.
 - Preview: `http://127.0.0.1:5173/` com Instagram real e Google indisponível; `http://127.0.0.1:8888/pagina-inexistente`, `/500`, `/503` para erros/HTTP compatível Pages. O runtime8888 usa configuração deliberadamente vazia nas APIs e não comprova Instagram real.
 - Rollback: reverter apenas o commit ZE-11 após revisão, preservando mudanças posteriores; recuperar baseline pela tag `ZE-11-start-20261024` quando necessário. Nunca reset/clean destrutivo. O commit que contém este relatório é o candidato local ZE-11; seu hash será informado no handoff após a operação Git. Os dois documentos ZE-09 preexistentes e os diretórios do proprietário ficam fora do staging.
 
 Produção permanece intacta. Sem deploy, push, alterações Cloud/OAuth, custos, faturamento ou execução ZE-12.
+
+
+## Aceite visual do proprietário — 2026-10-24
+
+Declaração explícita: **“Aprovado visualmente”**. O gate visual da landing atual está aprovado para o candidato `85e80732088b62e05a25c7bdde139b106b01ba20`; evidência `evidence/ZE-11/owner-visual-approval.json`. A declaração não resolve Google nem aceita automaticamente a exceção das metas mobile não atingidas. ZE-11 permanece WAITING_USER_ACTION, com C03 performance não atendida e C04 Google/decisão de performance PENDING. ZE-12 não foi iniciada; nenhuma publicação foi autorizada ou realizada.

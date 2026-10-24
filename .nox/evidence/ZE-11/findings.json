@@ -114,8 +114,12 @@
       "severity": "BLOCKER",
       "type": "human approval",
       "finding": "Implemented hero explicitly accepted; full current landing/error pages not yet accepted",
-      "status": "PENDING",
-      "action": "Owner reviews stable local candidate and explicitly accepts complete landing/error pages; separate decision on unmet performance tradeoff"
+      "status": "RESOLVED",
+      "action": "Owner reviews stable local candidate and explicitly accepts complete landing/error pages; separate decision on unmet performance tradeoff",
+      "resolution": "Owner explicitly accepted visual candidate85e8073; performance tradeoff remains separately pending",
+      "evidence": [
+        "owner-visual-approval.json"
+      ]
     },
     {
       "id": "ZE11-TEXT200",
@@ -141,5 +145,17 @@
       ]
     }
   ],
-  "limits": "Targeted pixel contrast is complementary sampling, not complete WCAG certification. Runtime cleanup pixel proof precedes intentional slogan shadow correction, so it proves only the cleanup effect's unchanged final frame. Fixtures prove component behavior only, never authentic Google integration."
+  "limits": "Targeted pixel contrast is complementary sampling, not complete WCAG certification. Runtime cleanup pixel proof precedes intentional slogan shadow correction, so it proves only the cleanup effect's unchanged final frame. Fixtures prove component behavior only, never authentic Google integration.",
+  "latestOwnerVisualApproval": {
+    "date": "2026-10-24",
+    "statement": "Aprovado visualmente",
+    "approvedBy": "owner",
+    "scope": "Current ZE-11 landing candidate visually accepted",
+    "candidateCommit": "85e80732088b62e05a25c7bdde139b106b01ba20",
+    "doesNotApprove": [
+      "Google official integration/OAuth/authentic data",
+      "Exception for unmet mobile performance targets",
+      "Deployment/push/ZE-12"
+    ]
+  }
 }

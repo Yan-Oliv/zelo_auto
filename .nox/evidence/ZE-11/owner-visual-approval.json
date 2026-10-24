@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-24",
+  "statement": "Aprovado visualmente",
+  "approvedBy": "owner",
+  "scope": "Current ZE-11 landing candidate visually accepted",
+  "candidateCommit": "85e80732088b62e05a25c7bdde139b106b01ba20",
+  "doesNotApprove": [
+    "Google official integration/OAuth/authentic data",
+    "Exception for unmet mobile performance targets",
+    "Deployment/push/ZE-12"
+  ]
+}
