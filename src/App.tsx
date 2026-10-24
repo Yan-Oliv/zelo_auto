@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { LandingPage } from '@features/landing/LandingPage'
+import { ErrorPage } from '@shared/errors/ErrorPage'
 
 const DebugCrossfadePage = lazy(async () => {
   const module = await import('@features/debug/pages/DebugCrossfadePage')
@@ -12,7 +13,8 @@ const DebugModelPage = lazy(async () => {
 })
 
 function App() {
-  const pathname = window.location.pathname
+  // Only these known routes accept one trailing slash. Unknown URLs never render the landing.
+  const pathname = window.location.pathname.replace(/\/$/, '') || '/'
 
   if (pathname === '/debug-model') {
     return (
@@ -30,7 +32,7 @@ function App() {
     )
   }
 
-  return <LandingPage />
+  return pathname === '/' ? <LandingPage /> : <ErrorPage code={404} />
 }
 
 export default App

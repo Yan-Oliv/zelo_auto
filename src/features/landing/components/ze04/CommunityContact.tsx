@@ -181,7 +181,7 @@ export function PremiumFooter() {
       </div>
       <div className="ze4-footer-institutional">
         <div className="ze4-footer-verse"><p>“Ora, ao Rei dos séculos, imortal, invisível, ao Deus único, sábio, seja honra e glória para todo o sempre. Amém.”</p><span>1 TIMÓTEO 1:17</span></div>
-        <div id="parceiros" className="ze4-footer-partners"><h2>PARCEIROS DA EMPRESA</h2><div>{partnerLogos.map((partner) => <NearImage key={partner.name} src={partner.logo} alt={partner.name} width={140} height={56} loading="lazy" decoding="async" />)}</div></div>
+        <div id="parceiros" className="ze4-footer-partners"><h2>PARCEIROS DA EMPRESA</h2><div>{partnerLogos.map((partner) => <span key={partner.name}>{partner.href ? <a href={partner.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar ${partner.name} no Instagram (abre em nova aba)`}><NearImage src={partner.logo} alt={partner.name} width={140} height={56} loading="lazy" decoding="async" /></a> : <NearImage src={partner.logo} alt={partner.name} width={140} height={56} loading="lazy" decoding="async" />}</span>)}</div></div>
       </div>
       <div className="ze4-footer-bottom"><p>© 2026 Zelo Estética Automotiva. Todos os direitos reservados.</p><span>Catalão – GO</span><p>Estética automotiva <span aria-hidden="true">|</span> Cuidado em cada detalhe.</p></div>
     </div>

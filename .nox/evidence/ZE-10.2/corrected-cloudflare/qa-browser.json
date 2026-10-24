@@ -1,0 +1,1540 @@
+{
+  "kind": "Local Chromium QA; intercepted test-only React faults; no actual API approval asserted",
+  "base": "http://127.0.0.1:8888",
+  "groups": [
+    {
+      "name": "Static 404 responsive 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "width": 2560,
+        "scroll": 2560,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "34px",
+            "box": {
+              "x": 930,
+              "y": 903.265625,
+              "width": 700,
+              "height": 51,
+              "top": 903.265625,
+              "right": 1630,
+              "bottom": 954.265625,
+              "left": 930
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 1040.078125,
+            "right": 1263.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 1293.015625,
+            "right": 1519.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "width": 1920,
+        "scroll": 1920,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "34px",
+            "box": {
+              "x": 610,
+              "y": 723.265625,
+              "width": 700,
+              "height": 51,
+              "top": 723.265625,
+              "right": 1310,
+              "bottom": 774.265625,
+              "left": 610
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 720.078125,
+            "right": 943.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 973.015625,
+            "right": 1199.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1366,
+        "scroll": 1366,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "34px",
+            "box": {
+              "x": 333,
+              "y": 671.65625,
+              "width": 700,
+              "height": 51,
+              "top": 671.65625,
+              "right": 1033,
+              "bottom": 722.65625,
+              "left": 333
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 443.078125,
+            "right": 666.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 696.015625,
+            "right": 922.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "25.6px",
+            "box": {
+              "x": 162,
+              "y": 609.09375,
+              "width": 700,
+              "height": 38.390625,
+              "top": 609.09375,
+              "right": 862,
+              "bottom": 647.484375,
+              "left": 162
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 272.078125,
+            "right": 495.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 525.015625,
+            "right": 751.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "width": 768,
+        "scroll": 768,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "20px",
+            "box": {
+              "x": 34,
+              "y": 666.453125,
+              "width": 700,
+              "height": 30,
+              "top": 666.453125,
+              "right": 734,
+              "bottom": 696.453125,
+              "left": 34
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 144.078125,
+            "right": 367.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 397.015625,
+            "right": 623.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 430x932",
+      "status": "PASS",
+      "evidence": {
+        "width": 430,
+        "scroll": 430,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 507.40625,
+              "width": 382,
+              "height": 30,
+              "top": 507.40625,
+              "right": 406,
+              "bottom": 537.40625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 390x844",
+      "status": "PASS",
+      "evidence": {
+        "width": 390,
+        "scroll": 390,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 453.65625,
+              "width": 342,
+              "height": 30,
+              "top": 453.65625,
+              "right": 366,
+              "bottom": 483.65625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 360x740",
+      "status": "PASS",
+      "evidence": {
+        "width": 360,
+        "scroll": 360,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 416.28125,
+              "width": 312,
+              "height": 30,
+              "top": 416.28125,
+              "right": 336,
+              "bottom": 446.28125,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 320x640",
+      "status": "PASS",
+      "evidence": {
+        "width": 320,
+        "scroll": 320,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 396.78125,
+              "width": 272,
+              "height": 30,
+              "top": 396.78125,
+              "right": 296,
+              "bottom": 426.78125,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 404 responsive 844x390",
+      "status": "PASS",
+      "evidence": {
+        "width": 844,
+        "scroll": 844,
+        "h1": [
+          {
+            "text": "Página não encontrada",
+            "font": "21.1px",
+            "box": {
+              "x": 72,
+              "y": 367.390625,
+              "width": 700,
+              "height": 31.640625,
+              "top": 367.390625,
+              "right": 772,
+              "bottom": 399.03125,
+              "left": 72
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Voltar ao início →",
+            "w": 222.9375,
+            "h": 52,
+            "left": 182.078125,
+            "right": 405.015625
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 435.015625,
+            "right": 661.921875
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "width": 2560,
+        "scroll": 2560,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "34px",
+            "box": {
+              "x": 930,
+              "y": 903.265625,
+              "width": 700,
+              "height": 51,
+              "top": 903.265625,
+              "right": 1630,
+              "bottom": 954.265625,
+              "left": 930
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 1037.484375,
+            "right": 1274.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 1304.5,
+            "right": 1522.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "width": 1920,
+        "scroll": 1920,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "34px",
+            "box": {
+              "x": 610,
+              "y": 723.265625,
+              "width": 700,
+              "height": 51,
+              "top": 723.265625,
+              "right": 1310,
+              "bottom": 774.265625,
+              "left": 610
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 717.484375,
+            "right": 954.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 984.5,
+            "right": 1202.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1366,
+        "scroll": 1366,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "34px",
+            "box": {
+              "x": 333,
+              "y": 671.65625,
+              "width": 700,
+              "height": 51,
+              "top": 671.65625,
+              "right": 1033,
+              "bottom": 722.65625,
+              "left": 333
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 440.484375,
+            "right": 677.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 707.5,
+            "right": 925.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "25.6px",
+            "box": {
+              "x": 162,
+              "y": 609.09375,
+              "width": 700,
+              "height": 38.390625,
+              "top": 609.09375,
+              "right": 862,
+              "bottom": 647.484375,
+              "left": 162
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 269.484375,
+            "right": 506.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 536.5,
+            "right": 754.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "width": 768,
+        "scroll": 768,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "20px",
+            "box": {
+              "x": 34,
+              "y": 666.453125,
+              "width": 700,
+              "height": 30,
+              "top": 666.453125,
+              "right": 734,
+              "bottom": 696.453125,
+              "left": 34
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 141.484375,
+            "right": 378.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 408.5,
+            "right": 626.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 430x932",
+      "status": "PASS",
+      "evidence": {
+        "width": 430,
+        "scroll": 430,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 507.40625,
+              "width": 382,
+              "height": 30,
+              "top": 507.40625,
+              "right": 406,
+              "bottom": 537.40625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 390x844",
+      "status": "PASS",
+      "evidence": {
+        "width": 390,
+        "scroll": 390,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 453.65625,
+              "width": 342,
+              "height": 30,
+              "top": 453.65625,
+              "right": 366,
+              "bottom": 483.65625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 360x740",
+      "status": "PASS",
+      "evidence": {
+        "width": 360,
+        "scroll": 360,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 398.6875,
+              "width": 312,
+              "height": 30,
+              "top": 398.6875,
+              "right": 336,
+              "bottom": 428.6875,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 320x640",
+      "status": "PASS",
+      "evidence": {
+        "width": 320,
+        "scroll": 320,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 379.1875,
+              "width": 272,
+              "height": 30,
+              "top": 379.1875,
+              "right": 296,
+              "bottom": 409.1875,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 500 responsive 844x390",
+      "status": "PASS",
+      "evidence": {
+        "width": 844,
+        "scroll": 844,
+        "h1": [
+          {
+            "text": "Algo saiu do percurso",
+            "font": "21.1px",
+            "box": {
+              "x": 72,
+              "y": 367.390625,
+              "width": 700,
+              "height": 31.640625,
+              "top": 367.390625,
+              "right": 772,
+              "bottom": 399.03125,
+              "left": 72
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 179.484375,
+            "right": 416.5
+          },
+          {
+            "text": "Voltar ao início ↗",
+            "w": 218,
+            "h": 52,
+            "left": 446.5,
+            "right": 664.5
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "width": 2560,
+        "scroll": 2560,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "34px",
+            "box": {
+              "x": 930,
+              "y": 877.765625,
+              "width": 700,
+              "height": 102,
+              "top": 877.765625,
+              "right": 1630,
+              "bottom": 979.765625,
+              "left": 930
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 1033.03125,
+            "right": 1270.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 1300.046875,
+            "right": 1526.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "width": 1920,
+        "scroll": 1920,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "34px",
+            "box": {
+              "x": 610,
+              "y": 697.765625,
+              "width": 700,
+              "height": 102,
+              "top": 697.765625,
+              "right": 1310,
+              "bottom": 799.765625,
+              "left": 610
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 713.03125,
+            "right": 950.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 980.046875,
+            "right": 1206.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1366,
+        "scroll": 1366,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "34px",
+            "box": {
+              "x": 333,
+              "y": 671.65625,
+              "width": 700,
+              "height": 102,
+              "top": 671.65625,
+              "right": 1033,
+              "bottom": 773.65625,
+              "left": 333
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 436.03125,
+            "right": 673.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 703.046875,
+            "right": 929.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "25.6px",
+            "box": {
+              "x": 162,
+              "y": 609.09375,
+              "width": 700,
+              "height": 38.390625,
+              "top": 609.09375,
+              "right": 862,
+              "bottom": 647.484375,
+              "left": 162
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 265.03125,
+            "right": 502.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 532.046875,
+            "right": 758.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "width": 768,
+        "scroll": 768,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "20px",
+            "box": {
+              "x": 34,
+              "y": 654.203125,
+              "width": 700,
+              "height": 30,
+              "top": 654.203125,
+              "right": 734,
+              "bottom": 684.203125,
+              "left": 34
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 137.03125,
+            "right": 374.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 404.046875,
+            "right": 630.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 430x932",
+      "status": "PASS",
+      "evidence": {
+        "width": 430,
+        "scroll": 430,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 492.40625,
+              "width": 382,
+              "height": 60,
+              "top": 492.40625,
+              "right": 406,
+              "bottom": 552.40625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 330,
+            "h": 52,
+            "left": 58,
+            "right": 388
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 390x844",
+      "status": "PASS",
+      "evidence": {
+        "width": 390,
+        "scroll": 390,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "20px",
+            "box": {
+              "x": 24,
+              "y": 438.65625,
+              "width": 342,
+              "height": 60,
+              "top": 438.65625,
+              "right": 366,
+              "bottom": 498.65625,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 330,
+            "h": 52,
+            "left": 38,
+            "right": 368
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 360x740",
+      "status": "PASS",
+      "evidence": {
+        "width": 360,
+        "scroll": 360,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "17px",
+            "box": {
+              "x": 24,
+              "y": 398.6875,
+              "width": 312,
+              "height": 51,
+              "top": 398.6875,
+              "right": 336,
+              "bottom": 449.6875,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 312,
+            "h": 52,
+            "left": 32,
+            "right": 344
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 320x640",
+      "status": "PASS",
+      "evidence": {
+        "width": 320,
+        "scroll": 320,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "17px",
+            "box": {
+              "x": 24,
+              "y": 379.1875,
+              "width": 272,
+              "height": 51,
+              "top": 379.1875,
+              "right": 296,
+              "bottom": 430.1875,
+              "left": 24
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 272,
+            "h": 52,
+            "left": 32,
+            "right": 304
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Static 503 responsive 844x390",
+      "status": "PASS",
+      "evidence": {
+        "width": 844,
+        "scroll": 844,
+        "h1": [
+          {
+            "text": "Serviço temporariamente indisponível",
+            "font": "21.1px",
+            "box": {
+              "x": 72,
+              "y": 367.390625,
+              "width": 700,
+              "height": 31.640625,
+              "top": 367.390625,
+              "right": 772,
+              "bottom": 399.03125,
+              "left": 72
+            }
+          }
+        ],
+        "actions": [
+          {
+            "text": "Tentar novamente ↻",
+            "w": 237.015625,
+            "h": 52,
+            "left": 175.03125,
+            "right": 412.046875
+          },
+          {
+            "text": "Falar com a Zelo ↗",
+            "w": 226.90625,
+            "h": 52,
+            "left": 442.046875,
+            "right": 668.953125
+          }
+        ],
+        "logo": [
+          {
+            "ok": true,
+            "src": "/hero/responsive/zelo-logo-480.webp"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CSS reveal changes frames, controls immediately available, settles",
+      "status": "PASS",
+      "evidence": {
+        "early": {
+          "running": 8,
+          "number": "none",
+          "wordmark": "inset(0px 100% 0px 0px)",
+          "copy": "1"
+        },
+        "middle": {
+          "running": 8,
+          "number": "none",
+          "wordmark": "inset(0px 49.0163% 0px 0px)",
+          "copy": "1"
+        },
+        "late": {
+          "running": 8,
+          "number": "none",
+          "wordmark": "inset(0px 0% 0px 0px)",
+          "copy": "1"
+        }
+      }
+    },
+    {
+      "name": "Actual text doubled at 640 CSSpx",
+      "status": "PASS",
+      "evidence": {
+        "before": "20px",
+        "after": "40px",
+        "layout": {
+          "width": 640,
+          "scroll": 640,
+          "h1": [
+            {
+              "text": "Serviço temporariamente indisponível",
+              "font": "40px",
+              "box": {
+                "x": 24,
+                "y": 513.546875,
+                "width": 592,
+                "height": 120,
+                "top": 513.546875,
+                "right": 616,
+                "bottom": 633.546875,
+                "left": 24
+              }
+            }
+          ],
+          "actions": [
+            {
+              "text": "Tentar novamente ↻",
+              "w": 388.375,
+              "h": 66,
+              "left": 125.8125,
+              "right": 514.1875
+            },
+            {
+              "text": "Falar com a Zelo ↗",
+              "w": 369.15625,
+              "h": 66,
+              "left": 135.421875,
+              "right": 504.578125
+            }
+          ],
+          "logo": [
+            {
+              "ok": true,
+              "src": "/hero/responsive/zelo-logo-480.webp"
+            }
+          ]
+        },
+        "scope": "All error semantic text selectors font-size computed then doubled, fixed px included"
+      }
+    },
+    {
+      "name": "Actual text doubled at 320 CSSpx",
+      "status": "PASS",
+      "evidence": {
+        "before": "17px",
+        "after": "34px",
+        "layout": {
+          "width": 320,
+          "scroll": 320,
+          "h1": [
+            {
+              "text": "Serviço temporariamente indisponível",
+              "font": "34px",
+              "box": {
+                "x": 24,
+                "y": 445.53125,
+                "width": 272,
+                "height": 204,
+                "top": 445.53125,
+                "right": 296,
+                "bottom": 649.53125,
+                "left": 24
+              }
+            }
+          ],
+          "actions": [
+            {
+              "text": "Tentar novamente ↻",
+              "w": 272,
+              "h": 102,
+              "left": 32,
+              "right": 304
+            },
+            {
+              "text": "Falar com a Zelo ↗",
+              "w": 272,
+              "h": 102,
+              "left": 32,
+              "right": 304
+            }
+          ],
+          "logo": [
+            {
+              "ok": true,
+              "src": "/hero/responsive/zelo-logo-480.webp"
+            }
+          ]
+        },
+        "scope": "All error semantic text selectors font-size computed then doubled, fixed px included"
+      }
+    },
+    {
+      "name": "Static 404 JavaScript disabled; native recovery/contact",
+      "status": "PASS"
+    },
+    {
+      "name": "Static 500 JavaScript disabled; native recovery/contact",
+      "status": "PASS"
+    },
+    {
+      "name": "Static 503 JavaScript disabled; native recovery/contact",
+      "status": "PASS"
+    },
+    {
+      "name": "Landing boot recovery nojs",
+      "status": "PASS",
+      "evidence": {
+        "robots": "index, follow,noindex, nofollow, noarchive",
+        "canonicalRetainedForNoJsRoot": true
+      }
+    },
+    {
+      "name": "Landing boot recovery blocked-main",
+      "status": "PASS",
+      "evidence": {
+        "robots": "noindex, nofollow, noarchive",
+        "canonicalRetainedForNoJsRoot": false
+      }
+    }
+  ]
+}

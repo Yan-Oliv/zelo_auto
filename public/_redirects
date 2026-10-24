@@ -1,0 +1,5 @@
+# Explicit React routes only. Root 404.html keeps all other unknown paths as HTTP 404.
+/debug-model / 200
+/debug-model/ /debug-model 301
+/debug-crossfade / 200
+/debug-crossfade/ /debug-crossfade 301

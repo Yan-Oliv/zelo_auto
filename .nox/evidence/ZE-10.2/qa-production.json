@@ -1,0 +1,49 @@
+{
+  "kind": "Actual source boundary + exact src/main rootOptions copied and compiled production; local-only synthetic sentinel faults",
+  "groups": [
+    {
+      "name": "Production render secret safety and retry recovery",
+      "status": "PASS",
+      "logs": [
+        {
+          "type": "error",
+          "text": "[Zelo] APP_RENDER_FAILED"
+        }
+      ],
+      "uncaughtErrors": []
+    },
+    {
+      "name": "Production provider secret safety",
+      "status": "PASS",
+      "logs": [
+        {
+          "type": "error",
+          "text": "[Zelo] APP_RENDER_FAILED"
+        }
+      ],
+      "uncaughtErrors": []
+    },
+    {
+      "name": "Production lazy secret safety",
+      "status": "PASS",
+      "logs": [
+        {
+          "type": "error",
+          "text": "[Zelo] APP_RENDER_FAILED"
+        }
+      ],
+      "uncaughtErrors": []
+    },
+    {
+      "name": "Production root secret safety",
+      "status": "PASS",
+      "logs": [
+        {
+          "type": "error",
+          "text": "[Zelo] APP_ROOT_FAILED"
+        }
+      ],
+      "uncaughtErrors": []
+    }
+  ]
+}

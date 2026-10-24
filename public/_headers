@@ -21,3 +21,27 @@
 
 /debug-crossfade
   X-Robots-Tag: noindex, nofollow, noarchive
+
+/debug-model/
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/debug-crossfade/
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/404
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/404.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/500
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/500.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/503
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/503.html
+  X-Robots-Tag: noindex, nofollow, noarchive

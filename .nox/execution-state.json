@@ -3,14 +3,14 @@
   "project": "zelo_autoestica",
   "status": "WAITING_USER_ACTION",
   "currentSprint": "ZE-09",
-  "currentStep": "Authorized UI work completed; Google approval in correct account and local OAuth/server configuration unconfirmed",
+  "currentStep": "Google approval/OAuth and prior hero owner visual gates remain external; ZE-10.2 and SKG work technically complete",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Owner verifies original Google request mailbox/project quota and authorized configuration; local preview5173 running. No ZE-11/12 advance.",
+  "nextAction": "Owner visual review locally; verify Google approval in omnyatech Gmail and configure authorized server secrets. Do not advance ZE-11/12.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -867,6 +867,86 @@
       "technicalApproval": "PASS_WITH_DISCLOSED_PERFORMANCE_LIMITS"
     },
     {
+      "id": "ZE-10.2",
+      "title": "Error pages and global recovery",
+      "status": "COMPLETED",
+      "dependsOn": "ZE-10.1",
+      "exception": "Explicit owner authorization independent of Google and prior human visual gates",
+      "deliveries": [
+        "Error interfaces and HTTP routing",
+        "Global recovery, accessibility and homologation"
+      ],
+      "criteria": [
+        {
+          "id": "ZE-10.2-C01",
+          "description": "Error interfaces",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10.2-Report.md",
+            "evidence/ZE-10.2/review-final.json",
+            "evidence/ZE-10.2/http.json",
+            "evidence/ZE-10.2/performance-corrected-summary.json"
+          ]
+        },
+        {
+          "id": "ZE-10.2-C02",
+          "description": "Routing and HTTP",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10.2-Report.md",
+            "evidence/ZE-10.2/review-final.json",
+            "evidence/ZE-10.2/http.json",
+            "evidence/ZE-10.2/performance-corrected-summary.json"
+          ]
+        },
+        {
+          "id": "ZE-10.2-C03",
+          "description": "Resilience and recovery",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10.2-Report.md",
+            "evidence/ZE-10.2/review-final.json",
+            "evidence/ZE-10.2/http.json",
+            "evidence/ZE-10.2/performance-corrected-summary.json"
+          ]
+        },
+        {
+          "id": "ZE-10.2-C04",
+          "description": "QA and regression",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-10.2-Report.md",
+            "evidence/ZE-10.2/review-final.json",
+            "evidence/ZE-10.2/http.json",
+            "evidence/ZE-10.2/performance-corrected-summary.json"
+          ]
+        }
+      ],
+      "humanVisualApproval": false,
+      "technicalApproval": "PASS_WITH_DISCLOSED_MODELED_LCP_LIMIT"
+    },
+    {
+      "id": "ZE-UX-SKG-01",
+      "title": "SKG partner link",
+      "status": "COMPLETED",
+      "dependsOn": "ZE-10.2",
+      "criteria": [
+        {
+          "id": "ZE-UX-SKG-01-C01",
+          "status": "PASS",
+          "required": true,
+          "evidence": [
+            "ZE-UX-SKG-01-Report.md",
+            "evidence/ZE-UX-SKG-01/qa.json"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ZE-11",
       "title": "HomologaÃ§Ã£o local",
       "status": "QUEUED",
@@ -876,7 +956,9 @@
         "ZE-03-REWORK-POST-ZE09",
         "ZE-10.1",
         "ZE-09.1",
-        "ZE-UX-OBS-01"
+        "ZE-UX-OBS-01",
+        "ZE-10.2",
+        "ZE-UX-SKG-01"
       ]
     },
     {
@@ -886,6 +968,6 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-UX-OBS-01",
-  "currentApprovedSprint": "ZE-UX-OBS-01"
+  "lastCompletedSprint": "ZE-10.2",
+  "currentApprovedSprint": "ZE-10.2"
 }

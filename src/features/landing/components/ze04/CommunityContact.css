@@ -522,3 +522,7 @@
   .ze4-community .ze4-instagram-tile:hover > img { transform: none; }
   .ze4-community .ze4-review-card:hover, .ze4-community .ze4-review-card:focus-within { translate: none; }
 }
+
+/* Owner-approved partner destination; keep the unlinked OmnyaTech mark intact. */
+.ze4-footer-partners a { min-height:44px; border-radius:4px; }
+.ze4-footer-partners a:focus-visible { outline:2px solid #d0a95a; outline-offset:4px; }

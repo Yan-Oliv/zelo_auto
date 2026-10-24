@@ -1,0 +1,980 @@
+{
+  "kind": "Isolated local UI QA; TEST DATA Instagram route fixture, unavailable Google; no real Google verification",
+  "groups": [
+    {
+      "name": "Responsive 1920×1080",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1920,
+          "scroll": 1920
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 108,
+            "h": 108,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 108,
+            "h": 108,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 108,
+            "h": 108,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 1440×900",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1440,
+          "scroll": 1440
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 97.90625,
+            "h": 97.90625,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 97.90625,
+            "h": 97.90625,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 97.90625,
+            "h": 97.90625,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 1366×768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1366,
+          "scroll": 1366
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 92.875,
+            "h": 92.875,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 92.875,
+            "h": 92.875,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 92.875,
+            "h": 92.875,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 1024×768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1024,
+          "scroll": 1024
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 768×1024",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 768,
+          "scroll": 768
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 430×932",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 430,
+          "scroll": 430
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 390×844",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 390,
+          "scroll": 390
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 360×740",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 360,
+          "scroll": 360
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 320×640",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 320,
+          "scroll": 320
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Responsive 844×390",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 844,
+          "scroll": 844
+        },
+        "benefits": {
+          "background": "none",
+          "color": "rgba(0, 0, 0, 0)",
+          "text": "ResultadospremiumProdutos dealta qualidadeAtendimentoespecializado",
+          "icons": 3
+        },
+        "circles": [
+          {
+            "href": "https://www.vonixx.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vonixx",
+            "imageOK": true
+          },
+          {
+            "href": "https://vintex.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Vintex",
+            "imageOK": true
+          },
+          {
+            "href": "https://zacs.com.br/",
+            "w": 84,
+            "h": 84,
+            "radius": "50%",
+            "rel": "noopener noreferrer",
+            "alt": "Zacs",
+            "imageOK": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "No technical captions in DOM; accessible comparator/source remains honest",
+      "status": "PASS",
+      "evidence": [
+        {
+          "source": "real",
+          "alts": [
+            "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+            "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria."
+          ]
+        },
+        {
+          "source": "illustrative",
+          "alts": [
+            "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+            "Bancos antes da limpeza, em uma demonstração ilustrativa."
+          ]
+        },
+        {
+          "source": "illustrative",
+          "alts": [
+            "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+            "Carpete antes da limpeza, em uma demonstração ilustrativa."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Four distinct service-specific WhatsApp texts, safe links and 44px touch",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "lavagem_completa",
+          "message": "Olá! Gostaria de um orçamento para a Lavagem Completa do meu veículo. Quais horários estão disponíveis?"
+        },
+        {
+          "id": "limpeza_interna",
+          "message": "Olá! Tenho interesse na Limpeza Interna do meu veículo. Podem informar o orçamento e os cuidados incluídos para o interior?"
+        },
+        {
+          "id": "higienizacao_bancos",
+          "message": "Olá! Preciso de Higienização de Bancos. Gostaria de avaliar a limpeza do material e de possíveis manchas. Podem me passar um orçamento?"
+        },
+        {
+          "id": "higienizacao_carpete",
+          "message": "Olá! Tenho interesse na Higienização de Carpete do meu veículo. Podem orientar sobre a limpeza e o tratamento de odores, além do orçamento?"
+        }
+      ]
+    },
+    {
+      "name": "Instagram six official, no editorial fill",
+      "status": "PASS"
+    },
+    {
+      "name": "Instagram two official, no editorial fill",
+      "status": "PASS"
+    },
+    {
+      "name": "Instagram empty, no editorial fill",
+      "status": "PASS"
+    },
+    {
+      "name": "Instagram unavailable, no editorial fill",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard/slider/brand focus, consent analytics and navigation regression",
+      "status": "PASS",
+      "evidence": {
+        "events": [
+          {
+            "event": "select_service",
+            "params": {
+              "service_name": "lavagem_completa"
+            }
+          },
+          {
+            "event": "quote_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "lavagem_completa"
+            }
+          },
+          {
+            "event": "whatsapp_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "lavagem_completa"
+            }
+          },
+          {
+            "event": "select_service",
+            "params": {
+              "service_name": "limpeza_interna"
+            }
+          },
+          {
+            "event": "quote_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "limpeza_interna"
+            }
+          },
+          {
+            "event": "whatsapp_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "limpeza_interna"
+            }
+          },
+          {
+            "event": "select_service",
+            "params": {
+              "service_name": "higienizacao_bancos"
+            }
+          },
+          {
+            "event": "quote_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "higienizacao_bancos"
+            }
+          },
+          {
+            "event": "whatsapp_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "higienizacao_bancos"
+            }
+          },
+          {
+            "event": "select_service",
+            "params": {
+              "service_name": "higienizacao_carpete"
+            }
+          },
+          {
+            "event": "quote_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "higienizacao_carpete"
+            }
+          },
+          {
+            "event": "whatsapp_click",
+            "params": {
+              "cta_location": "services",
+              "service_context": "higienizacao_carpete"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sizes": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "overflow": {
+        "width": 1920,
+        "scroll": 1920
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 108,
+          "h": 108,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 108,
+          "h": 108,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 108,
+          "h": 108,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 97.90625,
+          "h": 97.90625,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 97.90625,
+          "h": 97.90625,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 97.90625,
+          "h": 97.90625,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "overflow": {
+        "width": 1366,
+        "scroll": 1366
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 92.875,
+          "h": 92.875,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 92.875,
+          "h": 92.875,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 92.875,
+          "h": 92.875,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "overflow": {
+        "width": 1024,
+        "scroll": 1024
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "overflow": {
+        "width": 768,
+        "scroll": 768
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "overflow": {
+        "width": 430,
+        "scroll": 430
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "overflow": {
+        "width": 360,
+        "scroll": 360
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 320,
+      "h": 640,
+      "overflow": {
+        "width": 320,
+        "scroll": 320
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "overflow": {
+        "width": 844,
+        "scroll": 844
+      },
+      "circles": [
+        {
+          "href": "https://www.vonixx.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vonixx",
+          "imageOK": true
+        },
+        {
+          "href": "https://vintex.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Vintex",
+          "imageOK": true
+        },
+        {
+          "href": "https://zacs.com.br/",
+          "w": 84,
+          "h": 84,
+          "radius": "50%",
+          "rel": "noopener noreferrer",
+          "alt": "Zacs",
+          "imageOK": true
+        }
+      ]
+    }
+  ]
+}

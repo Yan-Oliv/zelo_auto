@@ -1,0 +1,9 @@
+{
+  "head": "742b97fa9b4740a0d972463871e708e37e7ab677",
+  "branch": "work/ze-audi-redesign",
+  "status": " M .nox/ZE-09-Google-Handoff.md\n M .nox/ZE-09-Report.md\n?? new_interface/\n?? src/planos/\n",
+  "files": {
+    ".nox/ZE-09-Report.md": "40f6c2a0ac8f91f5f368c3e951fce5a9f2b1d8ea98d71d3e55c808484d15e4c4",
+    ".nox/ZE-09-Google-Handoff.md": "3e1c229d5f7ec2faf038d2760bae2fa67a458a626132a41521a0bde3edbcc54d"
+  }
+}

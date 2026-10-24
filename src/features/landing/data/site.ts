@@ -114,7 +114,7 @@ export const productBrands: (CarouselLogoItem & { href: string })[] = [
 
 export const partnerLogos: CarouselLogoItem[] = [
   { name: 'OmnyaTech', logo: omnyatechLogo, style: 'partner' },
-  { name: 'SKG', logo: skgLogo, style: 'partner' },
+  { name: 'SKG', logo: skgLogo, style: 'partner', href: 'https://www.instagram.com/skgclub.lamartine/' },
 ]
 
 export const locationInfo = {

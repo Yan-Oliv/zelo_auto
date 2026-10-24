@@ -1,0 +1,27 @@
+{
+  "authorizedPartnerFollowup": "SKG Instagram link only; OmnyaTech unlinked; independently verified in ZE-UX-SKG-01/qa.json",
+  "baseline": "742b97fa9b4740a0d972463871e708e37e7ab677",
+  "protectedTrackedFiles": 471,
+  "unexpectedChanges": [],
+  "ownerDocs": [
+    {
+      "file": ".nox/ZE-09-Report.md",
+      "unchanged": true
+    },
+    {
+      "file": ".nox/ZE-09-Google-Handoff.md",
+      "unchanged": true
+    }
+  ],
+  "untrackedPreserved": [
+    {
+      "path": "new_interface",
+      "exists": true
+    },
+    {
+      "path": "src/planos",
+      "exists": true
+    }
+  ],
+  "noProductionChanges": true
+}

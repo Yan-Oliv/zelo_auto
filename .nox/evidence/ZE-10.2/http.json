@@ -1,0 +1,147 @@
+{
+  "runtime": "Wrangler Pages4.132/workerd compatibility2026-09-22; real local static+Functions; .envloadingdisabled",
+  "cases": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/#servicos",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/#resultados",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/?utm_source=teste",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/debug-model",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/debug-crossfade",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/pagina-inexistente",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/qualquer-rota",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/nested/missing",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/assets/arquivo-inexistente.js",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/imagem-inexistente.webp",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/hero/responsive/zelo-logo-480.webp",
+      "status": 200,
+      "type": "image/webp",
+      "noRedirect": true,
+      "noindex": false
+    },
+    {
+      "path": "/errors/error-page.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "noRedirect": true,
+      "noindex": false
+    },
+    {
+      "path": "/errors/silhouette.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "noRedirect": true,
+      "noindex": false
+    },
+    {
+      "path": "/500",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/503",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "noRedirect": true,
+      "noindex": true
+    },
+    {
+      "path": "/api/instagram-feed",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "noRedirect": true,
+      "noindex": false
+    },
+    {
+      "path": "/api/google-reviews",
+      "status": 503,
+      "type": "application/json",
+      "noRedirect": true,
+      "noindex": false
+    },
+    {
+      "path": "/debug-model/",
+      "status": 301,
+      "location": "/debug-model",
+      "followedStatus": 200,
+      "noLoop": true
+    },
+    {
+      "path": "/debug-crossfade/",
+      "status": 301,
+      "location": "/debug-crossfade",
+      "followedStatus": 200,
+      "noLoop": true
+    }
+  ],
+  "staticServerErrors": "Direct /500 and /503 are operational templates HTTP200; no claim that Pages automatically returns500/503 for them",
+  "realGoogleIntegration": false
+}

@@ -1,0 +1,15 @@
+{
+  "technicalVisual": "PASS",
+  "humanVisualApproval": false,
+  "browser": 48,
+  "productionBoundary": 4,
+  "cloudflare": 38,
+  "regression": 17,
+  "http": 20,
+  "axeScans": 6,
+  "axeViolations": 0,
+  "apiMatrix": 23,
+  "openProductFindings": [],
+  "performance": "Measured: static errors lighter; desktop landing modeled LCP limitation retained",
+  "noDeploy": true
+}
