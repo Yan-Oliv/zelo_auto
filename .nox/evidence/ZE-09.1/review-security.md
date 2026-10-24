@@ -6,7 +6,7 @@ Findings corrected during review: screenshot crops originally included a sticky 
 
 Only Community portions of existing TSX/CSS and the existing Google hook changed. Location/Footer TSX suffix and all preexisting CSS are unchanged; hero, services/paint, process, product panels, Instagram API/hook, Google API/links, analytics/consent, SEO and dependencies are untouched. Machine checks: preservation.json.
 
-`GET /api/google-reviews` is reused. No Places API, Maps JS SDK, additional backend, server credential, `.env` read, Cloud mutation, billing, paid tool, push or deployment. Provider payloads and real customer content were not logged. Browser fixtures live exclusively under ignored QA evidence and are never imported by runtime. TEST DATA route images are editorial photos, not assertions of official posts or reviews.
+`GET /api/google-reviews` is reused. No Places API, Maps JS SDK, additional backend, server credential disclosure, Cloud mutation, billing, paid tool, push or deployment. Provider payloads and real customer content were not logged. Browser fixtures live exclusively under ignored QA evidence and are never imported by runtime. TEST DATA route images are editorial photos, not assertions of official posts or reviews.
 
 Normalized data rejects invalid averages/counts/IDs/URLs and unsafe author links. React renders comments as plain text, with truncation and a named accessible link to the full original Google review. Star fill is proportional and includes one accessible value. No filtering of negative reviews or invented fallback names, counts, stars, dates or comments. Institutional fallback cards are explicitly labeled.
 

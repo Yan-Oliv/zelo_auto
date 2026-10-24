@@ -10,15 +10,6 @@ export type { VerifiedGoogleReview, VerifiedGoogleReviews } from '../../hooks/us
 import { NearImage } from './NearImage'
 import './CommunityContact.css'
 
-const editorialPosts: InstagramFeedPost[] = [
-  { id: 'editorial-wash', image: '/editorial/service-wash.webp', alt: 'Imagem editorial de cuidado com a pintura automotiva.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-  { id: 'editorial-interior', image: '/editorial/service-interior.webp', alt: 'Imagem editorial de detalhamento do interior de um veículo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-  { id: 'editorial-seats', image: '/editorial/service-seats.webp', alt: 'Imagem editorial de cuidado com os bancos.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-  { id: 'editorial-carpet', image: '/editorial/service-carpet.webp', alt: 'Imagem editorial de higienização de carpete automotivo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-  { id: 'editorial-detail', image: '/editorial/process-detail.webp', alt: 'Imagem editorial de acabamento automotivo.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-  { id: 'editorial-delivery', image: '/editorial/process-delivery.webp', alt: 'Imagem editorial de um veículo com acabamento detalhado.', postUrl: siteConfig.instagramLink, mediaType: 'IMAGE', className: '' },
-]
-
 function CommunityReveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reducedMotion = useReducedMotion()
   return <m.div className={className} initial={reducedMotion ? false : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: reducedMotion ? 0 : 0.7, delay: reducedMotion ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}>{children}</m.div>
@@ -42,11 +33,6 @@ function InstagramTile({ post, official, index }: { post: InstagramFeedPost; off
 function InstagramSection() {
   const { posts, status, error, source } = useInstagramFeed()
   const officialPosts = status === 'official' ? posts.slice(0, 6) : []
-  const illustrativeFill = status === 'loading' ? [] : editorialPosts.slice(0, Math.max(0, 6 - officialPosts.length))
-  const tiles = [
-    ...officialPosts.map((post) => ({ post, official: true })),
-    ...illustrativeFill.map((post) => ({ post, official: false })),
-  ]
   const statusMessage = status === 'loading'
     ? 'Carregando publicações do perfil oficial…'
     : status === 'official'
@@ -62,17 +48,17 @@ function InstagramSection() {
       <CommunityReveal delay={0.16}><p className="ze4-community-description">Bastidores, transformações reais, detalhes que fazem a diferença e um pouco da nossa rotina com os carros que passam por aqui.</p></CommunityReveal>
     </header>
     <div className="ze4-instagram-gallery">
-      <div className="ze4-instagram-grid" aria-busy={status === 'loading'} aria-describedby="ze4-instagram-status" data-feed-source={status === 'official' ? source : 'editorial'}>
+      <div className="ze4-instagram-grid" aria-busy={status === 'loading'} aria-describedby="ze4-instagram-status" data-feed-source={status === 'official' ? source : status}>
         {status === 'loading'
           ? Array.from({ length: 6 }, (_, index) => <div key={index} className="ze4-instagram-skeleton" aria-hidden="true" />)
-          : tiles.map(({ post, official }, index) => <InstagramTile key={post.id} post={post} official={official} index={index} />)}
+          : officialPosts.map((post, index) => <InstagramTile key={post.id} post={post} official index={index} />)}
       </div>
     </div>
     <CommunityReveal className="ze4-instagram-actions" delay={0.24}>
       <a className="ze4-button" href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer"><Camera size={22} aria-hidden="true" /><span>VER NOSSO INSTAGRAM</span><ArrowRight size={21} aria-hidden="true" /></a>
       <div className="ze4-instagram-metadata"><span>CONTEÚDO<small>OFICIAL</small></span><span>CUIDADO<small>EM CADA DETALHE</small></span><span>BASTIDORES<small>REAIS</small></span></div>
     </CommunityReveal>
-    <CommunityReveal delay={0.3}><p id="ze4-instagram-status" className="ze4-feed-caption" aria-live="polite">{(status === 'empty' || status === 'unavailable') && <strong>Galeria ilustrativa. </strong>}{statusMessage}{status === 'official' && officialPosts.length < 6 && ' As demais imagens são ilustrativas.'} <a href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer">{siteConfig.instagramHandle}</a></p></CommunityReveal>
+    <CommunityReveal delay={0.3}><p id="ze4-instagram-status" className="ze4-feed-caption" aria-live="polite">{statusMessage} <a href={siteConfig.instagramLink} target="_blank" rel="noopener noreferrer">{siteConfig.instagramHandle}</a></p></CommunityReveal>
   </section>
 }
 function CommunityStars({ rating }: { rating: number }) {
@@ -175,7 +161,6 @@ export function LocationSection() {
       </div>
       <div className="ze4-location-side-note" aria-hidden="true">CUIDADO<br />QUE<br />TE LEVA<br />MAIS LONGE.</div>
     </div>
-    <p className="ze4-location-scene-caption">Cenário automotivo ilustrativo.</p>
   </section>
 }
 

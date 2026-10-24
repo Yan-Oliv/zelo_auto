@@ -1,12 +1,18 @@
-import { useId, useState, type CSSProperties, type ReactNode } from 'react'
+import { useId, useState, type CSSProperties, type ReactNode, type SVGProps } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
-import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, ShieldCheck, Sparkles, SprayCan, Waves } from 'lucide-react'
-import { productBrands, services, siteConfig, type ServiceItem } from '../../data/site'
+import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, ShieldCheck, Sparkles } from 'lucide-react'
+import { productBrands, services, serviceWhatsappLink, siteConfig, type ServiceItem } from '../../data/site'
 import { NearImage } from './NearImage'
 import './CommercialSections.css'
 
 const ease = [0.16, 1, 0.3, 1] as const
-const serviceIcons = { wash: Droplets, interior: SprayCan, seats: Armchair, carpet: Waves }
+function SteeringWheelIcon({ size = 24, ...props }: SVGProps<SVGSVGElement> & { size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="2" /><path d="M3.2 10.5h6.9m3.8 0h6.9M10.7 13.5 8.4 20m4.9-6.5 2.3 6.5" /></svg>
+}
+function CarpetIcon({ size = 24, ...props }: SVGProps<SVGSVGElement> & { size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}><path d="M7 4h10l3 16H4L7 4Z" strokeLinejoin="round" /><path d="M7.5 8h9m-9.7 4h10.4M6.4 16h11.2M9 20l1-16m5 16L14 4" /></svg>
+}
+const serviceIcons = { wash: Droplets, interior: SteeringWheelIcon, seats: Armchair, carpet: CarpetIcon }
 const editorial = (name: string) => `/editorial/${name}.webp`
 
 function CommercialReveal({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
@@ -34,7 +40,7 @@ function PremiumServiceCard({ service, index }: { service: ServiceItem; index: n
         <p>{service.description}</p>
         <span className="ze4-service-rule" aria-hidden="true" />
       </div>
-      <a data-analytics-quote data-analytics-service={({ wash: 'lavagem_completa', interior: 'limpeza_interna', seats: 'higienizacao_bancos', carpet: 'higienizacao_carpete' } as const)[service.icon]} className="ze4-service-action" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar orçamento: ${service.title}`}><ArrowRight size={19} strokeWidth={1.4} /></a>
+      <a data-analytics-quote data-analytics-service={({ wash: 'lavagem_completa', interior: 'limpeza_interna', seats: 'higienizacao_bancos', carpet: 'higienizacao_carpete' } as const)[service.icon]} className="ze4-service-action" href={serviceWhatsappLink(service)} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar orçamento: ${service.title}`}><ArrowRight size={19} strokeWidth={1.4} /></a>
     </m.article>
   )
 }
@@ -55,13 +61,12 @@ export function ServicesSection() {
             <p className="ze4-commercial-description">Serviços especializados para cuidar da estética<br className="ze4-desktop-break" /> e do valor do seu veículo, em cada detalhe.</p>
           </CommercialReveal>
           <div className="ze4-service-benefits" role="group" aria-label="Cuidado Zelo">
-            <span><Diamond aria-hidden="true" /><span>Cuidado em<br />cada detalhe</span></span>
-            <span><ShieldCheck aria-hidden="true" /><span>Produtos de<br />qualidade</span></span>
+            <span><Diamond aria-hidden="true" /><span>Resultados<br />premium</span></span>
+            <span><ShieldCheck aria-hidden="true" /><span>Produtos de<br />alta qualidade</span></span>
             <span><ChartNoAxesColumnIncreasing aria-hidden="true" /><span>Atendimento<br />especializado</span></span>
           </div>
         </div>
         <div className="ze4-services-grid">{services.map((service, index) => <PremiumServiceCard key={service.icon} service={service} index={index} />)}</div>
-        <p className="ze4-editorial-note">Fotografias ilustrativas dos serviços.</p>
       </div>
     </section>
   )
@@ -74,7 +79,6 @@ export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { t
   const [loaded, setLoaded] = useState({ before: false, after: false })
   const [imageFailed, setImageFailed] = useState(false)
   const labelId = useId()
-  const noteId = useId()
   return (
     <figure data-comparison-source={pair?.source ?? 'illustrative'} className={`ze4-comparison${pair ? ' ze4-comparison-ready' : ''}`} style={{ '--ze4-comparison-position': `${position}%` } as CSSProperties}>
       <figcaption id={labelId} className="ze4-comparison-title">{title}</figcaption>
@@ -84,14 +88,13 @@ export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { t
         <div className="ze4-comparison-before"><NearImage src={pair.before} alt={pair.beforeAlt} width="680" height="360" loading="lazy" decoding="async" onError={() => setImageFailed(true)} onLoad={event => { if (!event.currentTarget.currentSrc.startsWith('data:')) setLoaded(value => ({ ...value, before: true })) }} /></div>
         {(imageFailed || !loaded.before || !loaded.after) && <span className="ze4-comparison-status" role="status">{imageFailed ? 'Foto indisponível. Recarregue a página para tentar novamente.' : 'Carregando fotografias…'}</span>}
         <div className="ze4-comparison-divider" aria-hidden="true"><span><ChevronLeft size={14} /><ChevronRight size={14} /></span></div>
-        <input disabled={imageFailed} data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-describedby={noteId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
+        <input disabled={imageFailed} data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
         <span className="ze4-comparison-label ze4-comparison-label-before">Antes</span><span className="ze4-comparison-label ze4-comparison-label-after">Depois</span>
       </> : <>
         <NearImage src={preview} alt="Imagem ilustrativa; comparação de atendimento real ainda indisponível." width="680" height="360" loading="lazy" decoding="async" />
         <div className="ze4-comparison-empty"><Sparkles size={22} strokeWidth={1.2} aria-hidden="true" /><span>O cuidado faz a diferença</span><small>Comparação real indisponível</small></div>
       </>}
       </div>
-      <p id={noteId} className="ze4-comparison-note">{pair ? pair.note ?? 'Demonstração ilustrativa — não é resultado real da Zelo.' : 'Imagem ilustrativa — sem comparação de atendimento real.'}</p>
     </figure>
   )
 }
@@ -149,7 +152,6 @@ export function ProcessSection() {
           <p className="ze4-commercial-description">Cada veículo tem sua história e suas necessidades. Converse com a equipe para definir o cuidado ideal — da escolha do serviço aos detalhes da entrega.</p>
         </CommercialReveal>
         <ol className="ze4-process-timeline">{processSteps.map((step, index) => <ProcessStep key={step.title} step={step} index={index} />)}</ol>
-        <p className="ze4-editorial-note">Imagens ilustrativas do cuidado automotivo.</p>
       </div>
     </section>
   )
@@ -165,10 +167,9 @@ export function QualitySection() {
           <Eyebrow>Qualidade que</Eyebrow><h2 id="ze4-quality-title">Faz diferença</h2>
           <p>Produtos adequados a cada superfície, com atenção ao acabamento e aos detalhes do seu veículo.</p>
           <div className="ze4-quality-chips"><span><ShieldCheck aria-hidden="true" />Cuidado<br />criterioso</span><span><Diamond aria-hidden="true" />Atenção aos<br />detalhes</span><span><Leaf aria-hidden="true" />Limpeza e<br />conservação</span></div>
-          <div className="ze4-quality-brands" aria-label="Marcas de produtos utilizadas">{productBrands.map((brand) => <NearImage key={brand.name} src={brand.logo} alt={brand.name} width="90" height="30" loading="lazy" decoding="async" />)}</div>
+          <div className="ze4-quality-brands" aria-label="Marcas de produtos utilizadas">{productBrands.map((brand) => <a key={brand.name} data-brand={brand.name} href={brand.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar site oficial da ${brand.name} (abre em nova aba)`}><NearImage src={brand.logo} alt={brand.name} width="90" height="30" loading="lazy" decoding="async" /></a>)}</div>
         </CommercialReveal>
         <ul className="ze4-quality-attributes"><li><Check aria-hidden="true" />Cuidado na limpeza</li><li><Check aria-hidden="true" />Atenção ao acabamento</li><li><Check aria-hidden="true" />Detalhes que valorizam</li></ul>
-        <span className="ze4-quality-caption">Composição ilustrativa de produtos.</span>
       </div>
     </section>
   )

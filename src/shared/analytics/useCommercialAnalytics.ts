@@ -5,6 +5,7 @@ import { getConsent, subscribeConsent, track, type Location, type Service } from
 export function useCommercialAnalytics() {
   useEffect(() => {
     let comparisonTimer: number | undefined
+    const whatsappTarget = new URL(siteConfig.whatsappLink)
     function source(anchor: HTMLElement): Location {
       if (anchor.closest('footer')) return 'footer'
       if (anchor.closest('header, #zelo-mobile-menu')) return 'header'
@@ -21,7 +22,7 @@ export function useCommercialAnalytics() {
       const href = anchor.getAttribute('href')
       const cta_location = source(anchor)
       const service_context = anchor.dataset.analyticsService as Service | undefined
-      if (href === siteConfig.whatsappLink) {
+      if (anchor.origin === whatsappTarget.origin && anchor.pathname === whatsappTarget.pathname && !anchor.username && !anchor.password) {
         if (service_context) track('select_service', { service_name: service_context })
         if (anchor.hasAttribute('data-analytics-quote')) track('quote_click', { cta_location, service_context })
         track('whatsapp_click', { cta_location, service_context })

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "COMPLETED",
-  "currentSprint": "ZE-09.1",
-  "currentStep": "Exactly two deliveries completed; technical review PASS with measured performance limitations",
+  "status": "WAITING_USER_ACTION",
+  "currentSprint": "ZE-09",
+  "currentStep": "Authorized UI work completed; Google approval in correct account and local OAuth/server configuration unconfirmed",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
-  "stopReason": null,
-  "nextAction": "Continue separately authorized owner UX observations; ZE-09 remains external Google gate",
+  "stopReason": "WAITING_USER_ACTION",
+  "nextAction": "Owner verifies original Google request mailbox/project quota and authorized configuration; local preview5173 running. No ZE-11/12 advance.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -529,7 +529,8 @@
             "evidence/ZE-09/api-tests-result.txt"
           ]
         }
-      ]
+      ],
+      "pendingAction": "Google approval unconfirmed in request mailbox omnyatech@gmail.com; five server variables absent; no real authorized data verified. See ZE-09-Approval-Status.md"
     },
     {
       "id": "ZE-09.1",
@@ -604,6 +605,53 @@
       "technicalApproval": "PASS_WITH_DISCLOSED_PERFORMANCE_LIMITS",
       "externalGoogleValidation": "PENDING in ZE-09",
       "performancePreserved": false
+    },
+    {
+      "id": "ZE-UX-OBS-01",
+      "title": "Owner observations: visible captions, reference2 services, WhatsApp and brand links",
+      "status": "COMPLETED",
+      "dependsOn": "ZE-09.1",
+      "authorization": "Latest owner followup explicitly expands scope; visible caption instruction overrides former requirement",
+      "criteria": [
+        {
+          "id": "ZE-UX-OBS-01-C01",
+          "description": "Visible captions removed without fictitious facts",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-UX-OBS-01-Report.md",
+            "evidence/ZE-UX-OBS-01/qa.json",
+            "evidence/ZE-UX-OBS-01/analytics.json",
+            "evidence/ZE-UX-OBS-01/review.json"
+          ]
+        },
+        {
+          "id": "ZE-UX-OBS-01-C02",
+          "description": "Reference2 services/results and four targeted WhatsApp links",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-UX-OBS-01-Report.md",
+            "evidence/ZE-UX-OBS-01/qa.json",
+            "evidence/ZE-UX-OBS-01/analytics.json",
+            "evidence/ZE-UX-OBS-01/review.json"
+          ]
+        },
+        {
+          "id": "ZE-UX-OBS-01-C03",
+          "description": "Official circular brand links and responsive regression",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-UX-OBS-01-Report.md",
+            "evidence/ZE-UX-OBS-01/qa.json",
+            "evidence/ZE-UX-OBS-01/analytics.json",
+            "evidence/ZE-UX-OBS-01/review.json"
+          ]
+        }
+      ],
+      "technicalApproval": "PASS",
+      "humanVisualApproval": false
     },
     {
       "id": "ZE-03-REWORK-POST-ZE09",
@@ -822,7 +870,14 @@
       "id": "ZE-11",
       "title": "HomologaÃ§Ã£o local",
       "status": "QUEUED",
-      "criteria": []
+      "criteria": [],
+      "dependencies": [
+        "ZE-09",
+        "ZE-03-REWORK-POST-ZE09",
+        "ZE-10.1",
+        "ZE-09.1",
+        "ZE-UX-OBS-01"
+      ]
     },
     {
       "id": "ZE-12",
@@ -831,6 +886,6 @@
       "criteria": []
     }
   ],
-  "lastCompletedSprint": "ZE-09.1",
-  "currentApprovedSprint": "ZE-09.1"
+  "lastCompletedSprint": "ZE-UX-OBS-01",
+  "currentApprovedSprint": "ZE-UX-OBS-01"
 }

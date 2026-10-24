@@ -1,0 +1,10 @@
+
+> zelo-autoestetica@0.0.0 lint
+> oxlint
+
+src/shared/motion/MotionSettings.tsx:49:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/cinematic/context/CinematicContext.tsx:80:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/cinematic/context/CinematicContext.tsx:90:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/cinematic/components/CarScene.tsx:234:193: warning react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'debugParams' help: Either include it or remove the dependency array.
+src/features/cinematic/components/CarScene.tsx:237:132: warning react-hooks(exhaustive-deps): React hook useMemo depends on `staticState`, which changes every render help: Try memoizing this variable with `useRef` or `useCallback`.
+src/features/cinematic/components/CarScene.tsx:239:229: warning react-hooks(exhaustive-deps): React hook useMemo depends on `pbrState`, which changes every render help: Try memoizing this variable with `useRef` or `useCallback`.

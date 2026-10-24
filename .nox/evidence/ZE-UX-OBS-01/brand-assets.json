@@ -1,0 +1,37 @@
+{
+  "officialLinks": [
+    "https://www.vonixx.com.br/",
+    "https://vintex.com.br/",
+    "https://zacs.com.br/"
+  ],
+  "verification": "Root read-only official HTTPS pages checked2026-10-24. Original57px and official192px Vintex favicon rejected as visibly blurred; native180×41 alpha wordmark from official header used intact and self-hosted, rendered64–88px inside green circular badge, enough forDPR2. Existing owner assets unchanged. Circular CSS clipping/padding only, no fabricated/repainted brand artwork.",
+  "assets": [
+    {
+      "name": "Vonixx",
+      "file": "src/produtos/vonixx.png",
+      "source": "Owner-provided existing200px artwork retained",
+      "bytes": 2701,
+      "width": 200,
+      "height": 200,
+      "SHA256": "0b9b27c11fe30df22b6ca439fb4d6c838590810aeb9605d4ac882f15b2083447"
+    },
+    {
+      "name": "Vintex",
+      "file": "src/produtos/vintex-official-wordmark.webp",
+      "source": "https://vintex.com.br/wp-content/themes/vintex/images/vintex.webp",
+      "bytes": 672,
+      "width": 180,
+      "height": 41,
+      "SHA256": "b8af52c81a22e688f11a6ffbba68988a49265ef141f30d13303829eb9d25cc3c"
+    },
+    {
+      "name": "Zacs",
+      "file": "src/produtos/zacs.jpg",
+      "source": "Owner-provided existing320px artwork retained",
+      "bytes": 4891,
+      "width": 320,
+      "height": 320,
+      "SHA256": "c4c7ae641b9c92ef781d5e6f32b669ddb1bd1387980146fb0059f2c7a4b59702"
+    }
+  ]
+}

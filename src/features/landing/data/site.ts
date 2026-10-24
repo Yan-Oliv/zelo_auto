@@ -3,7 +3,7 @@ import iconLogo from '@assets/logos/zelo_icon_png_optimized.png'
 import mainLogo from '@assets/logos/zelo_logo_png_optimized.png'
 import omnyatechLogo from '@assets/parceiros/omnyatech.png'
 import skgLogo from '@assets/parceiros/skg.svg'
-import vintexLogo from '@assets/produtos/vintex.png'
+import vintexLogo from '@assets/produtos/vintex-official-wordmark.webp'
 import vonixxLogo from '@assets/produtos/vonixx.png'
 import zacsLogo from '@assets/produtos/zacs.jpg'
 
@@ -55,6 +55,19 @@ export type ServiceItem = {
   eyebrow: string
 }
 
+const serviceWhatsappMessages: Record<ServiceItem['icon'], string> = {
+  wash: 'Olá! Gostaria de um orçamento para a Lavagem Completa do meu veículo. Quais horários estão disponíveis?',
+  interior: 'Olá! Tenho interesse na Limpeza Interna do meu veículo. Podem informar o orçamento e os cuidados incluídos para o interior?',
+  seats: 'Olá! Preciso de Higienização de Bancos. Gostaria de avaliar a limpeza do material e de possíveis manchas. Podem me passar um orçamento?',
+  carpet: 'Olá! Tenho interesse na Higienização de Carpete do meu veículo. Podem orientar sobre a limpeza e o tratamento de odores, além do orçamento?',
+}
+
+export function serviceWhatsappLink(service: Pick<ServiceItem, 'icon'>) {
+  const url = new URL(siteConfig.whatsappLink)
+  url.searchParams.set('text', serviceWhatsappMessages[service.icon])
+  return url.toString()
+}
+
 export const services: ServiceItem[] = [
   {
     title: 'Lavagem Completa',
@@ -90,12 +103,13 @@ export type CarouselLogoItem = {
   name: string
   logo: string
   style?: 'product' | 'partner'
+  href?: string
 }
 
-export const productBrands: CarouselLogoItem[] = [
-  { name: 'Vonixx', logo: vonixxLogo, style: 'product' },
-  { name: 'Vintex', logo: vintexLogo, style: 'product' },
-  { name: 'Zacs', logo: zacsLogo, style: 'product' },
+export const productBrands: (CarouselLogoItem & { href: string })[] = [
+  { name: 'Vonixx', logo: vonixxLogo, style: 'product', href: 'https://www.vonixx.com.br/' },
+  { name: 'Vintex', logo: vintexLogo, style: 'product', href: 'https://vintex.com.br/' },
+  { name: 'Zacs', logo: zacsLogo, style: 'product', href: 'https://zacs.com.br/' },
 ]
 
 export const partnerLogos: CarouselLogoItem[] = [
