@@ -1,0 +1,327 @@
+{
+  "conditions": "Corrected authoritative motion scenario. Explicit prefers-reduced-motion:no-preference via CDP before load; default host reduce:true was discovered (earlier runs retained as reduced-motion controls). All cold profiles fresh Chrome, no session preseed. Warm natural previsit intro completion then same page/session/cache audited reload. Explicit mobileSlow4G CPU4 vs desktopDense4G CPU1 +appropriate UA. APIs503 deterministic, static headers mirror public/_headers. One sample/scenario; pauseAfterLoad4500ms includes full intro and deferred release. plain baseline local transport; gzip transport separate Pages-like diagnostic only. Runtime deferral does NOT modify product.",
+  "sources": [
+    "https://developers.cloudflare.com/pages/configuration/serving-pages/",
+    "https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md"
+  ],
+  "runs": [
+    {
+      "mode": "mobile",
+      "state": "cold",
+      "transport": "gzip-car-cleanup",
+      "hostReduce": true,
+      "scores": {
+        "performance": 80,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 5033,
+      "observedLCP": 2230,
+      "FCP": 1808,
+      "TBT": 75,
+      "CLS": 0,
+      "introSamples": {
+        "samples": [
+          {
+            "time": 174.70000004768372,
+            "intro": "waiting",
+            "reduce": false
+          },
+          {
+            "time": 280.7999999523163,
+            "intro": "playing",
+            "reduce": false
+          },
+          {
+            "time": 3614.100000023842,
+            "intro": "settled",
+            "reduce": false
+          }
+        ],
+        "cleanup": {
+          "time": 2185.899999976158,
+          "animationName": "zelo-car-arrive"
+        }
+      },
+      "sessionBefore": null,
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 17,
+          "transferSize": 996741
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 6,
+          "transferSize": 713218
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 119141
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 3,
+          "transferSize": 78296
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 2,
+          "transferSize": 60249
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 22318
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 3519
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4211/",
+          "start": 0.6500000953674316,
+          "end": 5.802000045776367,
+          "bytes": 3519
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/zelo-logo-480.webp",
+          "start": 17.993000030517578,
+          "end": 28.36400008201599,
+          "bytes": 32722
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-final-640.webp",
+          "start": 18.20299994945526,
+          "end": 36.747000098228455,
+          "bytes": 68867
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-final.webp",
+          "start": 18.312999963760376,
+          "end": 45.478999972343445,
+          "bytes": 214157
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+          "start": 18.437999963760376,
+          "end": 33.544000029563904,
+          "bytes": 26140
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-SnXa-KTv.js",
+          "start": 24.555999994277954,
+          "end": 36.56599998474121,
+          "bytes": 30198
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/rolldown-runtime-CNC7AqOf.js",
+          "start": 26.747000098228455,
+          "end": 45.026000022888184,
+          "bytes": 775
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/motion-Cp8bVSFd.js",
+          "start": 26.889999985694885,
+          "end": 50.8510000705719,
+          "bytes": 30332
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/react-DsI-K9mW.js",
+          "start": 27.020000100135803,
+          "end": 57.09500002861023,
+          "bytes": 57836
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-DQ2SUQdh.css",
+          "start": 27.693000078201294,
+          "end": 45.35699999332428,
+          "bytes": 22318
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+          "start": 158.6560000181198,
+          "end": 161.84700000286102,
+          "bytes": 26004
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+          "start": 158.8439999818802,
+          "end": 163.80200004577637,
+          "bytes": 26152
+        },
+        {
+          "url": "http://127.0.0.1:4211/api/instagram-feed",
+          "start": 161.12999999523163,
+          "end": 163.45300006866455,
+          "bytes": 254
+        },
+        {
+          "url": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+          "start": 193.80799996852875,
+          "end": 198.24399995803833,
+          "bytes": 26
+        },
+        {
+          "url": "http://127.0.0.1:4211/favicon-optimized.png",
+          "start": 198.83500003814697,
+          "end": 201.13900005817413,
+          "bytes": 59995
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-reference.webp",
+          "start": 203.15499997138977,
+          "end": 208.64800000190735,
+          "bytes": 189619
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-4k-640.webp",
+          "start": 203.29500007629395,
+          "end": 207.13100004196167,
+          "bytes": 63666
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/service-wash.webp",
+          "start": 203.38900005817413,
+          "end": 210.39599990844727,
+          "bytes": 144187
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 5.991000122070313
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 9.724999877929687
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 21.675
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 2192.13
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-3-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 461,
+            "bottom": 645,
+            "left": 25,
+            "right": 387,
+            "width": 363,
+            "height": 184
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 4500,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    }
+  ]
+}

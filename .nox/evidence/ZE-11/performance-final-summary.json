@@ -1,0 +1,1290 @@
+{
+  "phase": "final",
+  "root": "dist",
+  "baselineCommit": "0827b0d",
+  "conditions": "One sequential sample/scenario. Explicit normal motion via CDP; host default reduced motion measured separately. Fresh Chrome per profile, cold without session. Warm natural previsit completes intro then same page/session/cache. Explicit mobileSlow4G CPU4 and desktopDense4G CPU1 with correct UA. APIs503 deterministic. Local uncompressed static transport, identical to authoritative motion baseline; gzip diagnostics separate. pauseAfterLoad4500ms. Simulated LCP and unthrottled observed trace LCP are distinct, not field measurements.",
+  "runs": [
+    {
+      "mode": "mobile",
+      "state": "cold",
+      "transport": "plain",
+      "hostReduce": true,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 6367,
+      "observedLCP": 2203,
+      "FCP": 3606,
+      "TBT": 34,
+      "CLS": 0,
+      "introSamples": [
+        {
+          "time": 155.60000002384186,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 273.40000009536743,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3589.3000000715256,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 18,
+          "transferSize": 1359516
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 6,
+          "transferSize": 713218
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 366467
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 111655
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 4,
+          "transferSize": 98210
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 2,
+          "transferSize": 60249
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4211/",
+          "start": 0.7750000953674316,
+          "end": 4.20300018787384,
+          "bytes": 9717
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/zelo-logo-480.webp",
+          "start": 10.32800006866455,
+          "end": 30.425000071525574,
+          "bytes": 32722
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-final-640.webp",
+          "start": 10.499000072479248,
+          "end": 18.974000096321106,
+          "bytes": 68867
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-final.webp",
+          "start": 10.611000061035156,
+          "end": 33.88300001621246,
+          "bytes": 214157
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+          "start": 10.799000024795532,
+          "end": 21.27400004863739,
+          "bytes": 26140
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-DvcW-RGz.js",
+          "start": 14.28600013256073,
+          "end": 24.71500015258789,
+          "bytes": 93419
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/rolldown-runtime-CNC7AqOf.js",
+          "start": 16.29700016975403,
+          "end": 23.805000066757202,
+          "bytes": 1103
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/motion-Cp8bVSFd.js",
+          "start": 16.45300006866455,
+          "end": 30.66000008583069,
+          "bytes": 86790
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/react-DsI-K9mW.js",
+          "start": 17.15500009059906,
+          "end": 34.056000113487244,
+          "bytes": 185155
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-C2qCM-Ne.css",
+          "start": 17.246000051498413,
+          "end": 26.28500008583069,
+          "bytes": 111655
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+          "start": 140.20600008964539,
+          "end": 143.1030000448227,
+          "bytes": 26004
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+          "start": 140.33200013637543,
+          "end": 144.97000002861023,
+          "bytes": 26152
+        },
+        {
+          "url": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+          "start": 172.52300012111664,
+          "end": 177.47200000286102,
+          "bytes": 26
+        },
+        {
+          "url": "http://127.0.0.1:4211/api/instagram-feed",
+          "start": 174.10600018501282,
+          "end": 175.39300000667572,
+          "bytes": 254
+        },
+        {
+          "url": "http://127.0.0.1:4211/favicon-optimized.png",
+          "start": 178.05600011348724,
+          "end": 179.9190000295639,
+          "bytes": 59995
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-reference.webp",
+          "start": 182.6910001039505,
+          "end": 197.27800011634827,
+          "bytes": 189619
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-4k-640.webp",
+          "start": 182.80200016498566,
+          "end": 186.5790001153946,
+          "bytes": 63666
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/service-wash.webp",
+          "start": 182.8620001077652,
+          "end": 187.86600017547607,
+          "bytes": 144187
+        },
+        {
+          "url": "http://127.0.0.1:4211/fonts/michroma-community-latin.woff2",
+          "start": 3579.4990001916885,
+          "end": 3582.0080001354218,
+          "bytes": 19914
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 4.568
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 6.041
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 9.081
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 2183.327
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-3-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 461,
+            "bottom": 645,
+            "left": 25,
+            "right": 387,
+            "width": 363,
+            "height": 184
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 4500,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "mobile",
+      "state": "warm",
+      "transport": "plain",
+      "hostReduce": true,
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 2777,
+      "observedLCP": 144,
+      "FCP": 663,
+      "TBT": 49,
+      "CLS": 0,
+      "introSamples": [
+        {
+          "time": 136,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 17,
+          "transferSize": 743103
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 6,
+          "transferSize": 713218
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 4,
+          "transferSize": 19914
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 254
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4211/",
+          "start": 0.6919999122619629,
+          "end": 2.959999918937683,
+          "bytes": 9717
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/zelo-logo-480.webp",
+          "start": 9.686999917030334,
+          "end": 14.90499997138977,
+          "bytes": 32722
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-final-640.webp",
+          "start": 9.891999959945679,
+          "end": 22.020999908447266,
+          "bytes": 68867
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-final.webp",
+          "start": 10.003999948501587,
+          "end": 23.853000044822693,
+          "bytes": 214157
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+          "start": 10.098999977111816,
+          "end": 11.54799997806549,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-DvcW-RGz.js",
+          "start": 10.233999967575073,
+          "end": 13.051999926567078,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/rolldown-runtime-CNC7AqOf.js",
+          "start": 10.33299994468689,
+          "end": 11.942999958992004,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/motion-Cp8bVSFd.js",
+          "start": 10.431999921798706,
+          "end": 13.182999968528748,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/react-DsI-K9mW.js",
+          "start": 10.54799997806549,
+          "end": 13.810999870300293,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-C2qCM-Ne.css",
+          "start": 11.723999977111816,
+          "end": 15.102999925613403,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+          "start": 89.77799987792969,
+          "end": 90.46099996566772,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+          "start": 90.16799998283386,
+          "end": 90.90399992465973,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+          "start": 124.83499991893768,
+          "end": 140.4449999332428,
+          "bytes": 26
+        },
+        {
+          "url": "http://127.0.0.1:4211/fonts/michroma-community-latin.woff2",
+          "start": 140.74899995326996,
+          "end": 143.06399989128113,
+          "bytes": 19914
+        },
+        {
+          "url": "http://127.0.0.1:4211/api/instagram-feed",
+          "start": 141.32799994945526,
+          "end": 142.88699996471405,
+          "bytes": 254
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-reference.webp",
+          "start": 146.3659999370575,
+          "end": 150.12199997901917,
+          "bytes": 189619
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-4k-640.webp",
+          "start": 146.51599991321564,
+          "end": 152.90799987316132,
+          "bytes": 63666
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/service-wash.webp",
+          "start": 146.64300000667572,
+          "end": 178.97000002861023,
+          "bytes": 144187
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 3.03
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 6.818
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 12.641
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 121.557
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-0-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 461,
+            "bottom": 645,
+            "left": 25,
+            "right": 387,
+            "width": 363,
+            "height": 184
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 4500,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "desktop",
+      "state": "cold",
+      "transport": "plain",
+      "hostReduce": true,
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 1413,
+      "observedLCP": 2196,
+      "FCP": 686,
+      "TBT": 0,
+      "CLS": 0,
+      "introSamples": [
+        {
+          "time": 139.30000007152557,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 240,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3579.3000000715256,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 21,
+          "transferSize": 1431666
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 9,
+          "transferSize": 785368
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 366467
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 111655
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 4,
+          "transferSize": 98210
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 2,
+          "transferSize": 60249
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4211/",
+          "start": 0.7010000944137573,
+          "end": 3.6269999742507935,
+          "bytes": 9717
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/zelo-logo-480.webp",
+          "start": 8.962999939918518,
+          "end": 16.008000016212463,
+          "bytes": 32722
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-final-640.webp",
+          "start": 9.134999990463257,
+          "end": 16.1360000371933,
+          "bytes": 68867
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-final.webp",
+          "start": 9.228000044822693,
+          "end": 20.090999960899353,
+          "bytes": 214157
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+          "start": 9.34500002861023,
+          "end": 19.717000007629395,
+          "bytes": 26140
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-DvcW-RGz.js",
+          "start": 14.332000017166138,
+          "end": 20.943000078201294,
+          "bytes": 93419
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/rolldown-runtime-CNC7AqOf.js",
+          "start": 16.527999997138977,
+          "end": 23.044999957084656,
+          "bytes": 1103
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/motion-Cp8bVSFd.js",
+          "start": 16.600000023841858,
+          "end": 23.792999982833862,
+          "bytes": 86790
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/react-DsI-K9mW.js",
+          "start": 16.66699993610382,
+          "end": 24.948000073432922,
+          "bytes": 185155
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-C2qCM-Ne.css",
+          "start": 16.76700007915497,
+          "end": 27.167999982833862,
+          "bytes": 111655
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+          "start": 126.31699991226196,
+          "end": 128.3420000076294,
+          "bytes": 26004
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+          "start": 126.4889999628067,
+          "end": 131.12800002098083,
+          "bytes": 26152
+        },
+        {
+          "url": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+          "start": 153.4800000190735,
+          "end": 159.46299993991852,
+          "bytes": 26
+        },
+        {
+          "url": "http://127.0.0.1:4211/api/instagram-feed",
+          "start": 155.20000004768372,
+          "end": 156.11800003051758,
+          "bytes": 254
+        },
+        {
+          "url": "http://127.0.0.1:4211/favicon-optimized.png",
+          "start": 160.0770000219345,
+          "end": 162.38399994373322,
+          "bytes": 59995
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-reference.webp",
+          "start": 163.58399999141693,
+          "end": 166.08899998664856,
+          "bytes": 189619
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-4k-960.webp",
+          "start": 163.70900011062622,
+          "end": 167.77500009536743,
+          "bytes": 118321
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-wash-420.webp",
+          "start": 164.1599999666214,
+          "end": 169.41600000858307,
+          "bytes": 58696
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-interior-420.webp",
+          "start": 164.2740000486374,
+          "end": 170.77799999713898,
+          "bytes": 26276
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-seats-420.webp",
+          "start": 164.39999997615814,
+          "end": 172.71799993515015,
+          "bytes": 30844
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-carpet-420.webp",
+          "start": 164.8619999885559,
+          "end": 174.20800006389618,
+          "bytes": 45866
+        },
+        {
+          "url": "http://127.0.0.1:4211/fonts/michroma-community-latin.woff2",
+          "start": 3560.113000035286,
+          "end": 3561.7890000343323,
+          "bytes": 19914
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 3.8060001220703126
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 5.560999877929688
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 7.456
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 2179.548
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-5-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 341,
+            "bottom": 648,
+            "left": 407,
+            "right": 1012,
+            "width": 605,
+            "height": 307
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 4500,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "desktop",
+      "state": "warm",
+      "transport": "plain",
+      "hostReduce": true,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 584,
+      "observedLCP": 139,
+      "FCP": 174,
+      "TBT": 0,
+      "CLS": 0,
+      "introSamples": [
+        {
+          "time": 125.90000009536743,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 20,
+          "transferSize": 815253
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 9,
+          "transferSize": 785368
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 4,
+          "transferSize": 19914
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 254
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4211/",
+          "start": 0.6679999828338623,
+          "end": 2.736999988555908,
+          "bytes": 9717
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/zelo-logo-480.webp",
+          "start": 6.085999965667725,
+          "end": 12.840000033378601,
+          "bytes": 32722
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-final-640.webp",
+          "start": 6.212000012397766,
+          "end": 13.189000010490417,
+          "bytes": 68867
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-final.webp",
+          "start": 6.317000031471252,
+          "end": 15.335000038146973,
+          "bytes": 214157
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+          "start": 6.430999994277954,
+          "end": 8.261000037193298,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-DvcW-RGz.js",
+          "start": 6.5660001039505005,
+          "end": 9.925000071525574,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/rolldown-runtime-CNC7AqOf.js",
+          "start": 6.66100001335144,
+          "end": 8.872000098228455,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/motion-Cp8bVSFd.js",
+          "start": 6.7500001192092896,
+          "end": 10.425999999046326,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/react-DsI-K9mW.js",
+          "start": 6.884999990463257,
+          "end": 11.402999997138977,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/index-C2qCM-Ne.css",
+          "start": 8.142000079154968,
+          "end": 12.608999967575073,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+          "start": 82.92299997806549,
+          "end": 83.81400001049042,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4211/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+          "start": 83.05200004577637,
+          "end": 84.07400000095367,
+          "bytes": 0
+        },
+        {
+          "url": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+          "start": 117.41499996185303,
+          "end": 133.43300008773804,
+          "bytes": 26
+        },
+        {
+          "url": "http://127.0.0.1:4211/fonts/michroma-community-latin.woff2",
+          "start": 133.72399997711182,
+          "end": 136.1690000295639,
+          "bytes": 19914
+        },
+        {
+          "url": "http://127.0.0.1:4211/api/instagram-feed",
+          "start": 134.24200010299683,
+          "end": 136.0349999666214,
+          "bytes": 254
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/showroom-reference.webp",
+          "start": 139.37400007247925,
+          "end": 142.62900006771088,
+          "bytes": 189619
+        },
+        {
+          "url": "http://127.0.0.1:4211/hero/responsive/car-4k-960.webp",
+          "start": 139.52100002765656,
+          "end": 144.7720000743866,
+          "bytes": 118321
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-wash-420.webp",
+          "start": 139.60900008678436,
+          "end": 145.56400001049042,
+          "bytes": 58696
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-interior-420.webp",
+          "start": 139.74000000953674,
+          "end": 148.16100001335144,
+          "bytes": 26276
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-seats-420.webp",
+          "start": 140.35900008678436,
+          "end": 148.36700010299683,
+          "bytes": 30844
+        },
+        {
+          "url": "http://127.0.0.1:4211/editorial/responsive/service-carpet-420.webp",
+          "start": 140.47900009155273,
+          "end": 149.1010000705719,
+          "bytes": 45866
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 2.807
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 3.524
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 9.429
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 123.018
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-0-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,1,DIV,0,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop",
+          "boundingRect": {
+            "top": 0,
+            "bottom": 801,
+            "left": 0,
+            "right": 1425,
+            "width": 1425,
+            "height": 801
+          },
+          "snippet": "<img class=\"zelo-hero-backdrop\" sizes=\"(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw\" alt=\"\" width=\"1672\" height=\"940\" fetchpriority=\"high\" decoding=\"async\" srcset=\"/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-f…\" src=\"/hero/showroom-final.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop"
+        }
+      ],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 4500,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    }
+  ]
+}

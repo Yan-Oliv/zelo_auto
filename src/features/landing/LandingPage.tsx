@@ -57,6 +57,7 @@ export function LandingPage() {
   const carRef = useRef<HTMLImageElement>(null)
   const headerLogoRef = useRef<HTMLImageElement>(null)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [editorialFontReady, setEditorialFontReady] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const searchPanelRef = useRef<HTMLDivElement>(null)
   const searchButtonRef = useRef<HTMLButtonElement>(null)
@@ -147,6 +148,25 @@ export function LandingPage() {
   }, [heroIntro])
 
   useEffect(() => {
+    // The approved hero keeps its own type and never waits for the editorial face.
+    if (heroIntro !== 'settled' && onHero) return
+    let active = true
+    const loadDisplay = () => {
+      void document.fonts.load('400 44px "Michroma Community"').then(() => {
+        if (active) setEditorialFontReady(true)
+      }).catch(() => { /* Project/system type remains readable if the font fails. */ })
+    }
+    const services = document.getElementById('servicos')
+    if (!services) return
+    if (!('IntersectionObserver' in window)) { loadDisplay(); return () => { active = false } }
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); loadDisplay() }
+    }, { rootMargin: '400px 0px' })
+    observer.observe(services)
+    return () => { active = false; observer.disconnect() }
+  }, [heroIntro, onHero])
+
+  useEffect(() => {
     if (!searchOpen) return
     const closeOutside = (event: PointerEvent) => {
       if (!searchPanelRef.current?.contains(event.target as Node)
@@ -201,7 +221,7 @@ export function LandingPage() {
   }, [])
 
   return (
-    <div className="ze4-page min-h-screen">
+    <div className="ze4-page min-h-screen" data-editorial-font={editorialFontReady ? 'ready' : 'deferred'}>
       <a className="zelo-skip-link" href="#main-content">Pular para o conteúdo</a>
       <header data-intro={onHero && !heroReducedMotion ? heroIntro : 'settled'} className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
@@ -319,7 +339,11 @@ export function LandingPage() {
               <path fillRule="evenodd" d="M1149 191C1201 191 1241 231 1241 284V384C1241 436 1201 477 1149 477C1096 477 1057 437 1057 384V284C1057 231 1097 191 1149 191ZM1149 247C1129 247 1116 264 1116 286V383C1116 406 1129 421 1149 421C1169 421 1183 406 1183 383V286C1183 264 1169 247 1149 247Z" />
             </g>
           </svg>
-          <div className="zelo-hero-car" aria-hidden="true">
+          <div className="zelo-hero-car" aria-hidden="true" onAnimationEnd={(event) => {
+            // Drop only the already-finished fill effect. The final frame is identical,
+            // while the remaining intro, timings and session lifecycle continue normally.
+            if (event.target === event.currentTarget && event.animationName === 'zelo-car-arrive') event.currentTarget.style.animation = 'none'
+          }}>
             <div className="zelo-hero-reflection"><img src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} /></div>
             <div className="zelo-hero-ground-shadow" />
             <img className="zelo-hero-car-body" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/car-reference.webp')) { image.srcset = ''; image.src = '/hero/car-reference.webp' } }} ref={carRef} src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} decoding="async" fetchPriority="high" />

@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-24",
+  "scope": "Implemented cinematic hero only; does not approve complete ZE-11 landing",
+  "ownerStatement": "A hero está aprovada visualmente",
+  "acceptedSprint": "ZE-03-REWORK-POST-ZE09",
+  "implementationCommit": "cbd4b26",
+  "technicalReport": ".nox/ZE-03-REWORK-POST-ZE09-Report.md"
+}

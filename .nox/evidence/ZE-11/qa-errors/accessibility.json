@@ -1,0 +1,239 @@
+{
+  "kind": "Automated axe WCAG2 A/AA,2.1AA,2.2AA; actual Cloudflare-compatible local runtime. No physical assistive-technology certification.",
+  "results": [
+    {
+      "code": 404,
+      "width": 1366,
+      "height": 768,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "code": 404,
+      "width": 320,
+      "height": 640,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "code": 500,
+      "width": 1366,
+      "height": 768,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "code": 500,
+      "width": 320,
+      "height": 640,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "code": 503,
+      "width": 1366,
+      "height": 768,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "code": 503,
+      "width": 320,
+      "height": 640,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".ze-error__wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "text"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".ze-error__button--gold > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "passes": 18
+    }
+  ]
+}

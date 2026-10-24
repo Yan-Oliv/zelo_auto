@@ -1,0 +1,123 @@
+{
+  "verdict": "PASS independent tested functional/layout/motion/accessibility checks with explicit limits; BLOCKED integrated Google and PENDING owner acceptance/performance reconciliation",
+  "counts": {
+    "matrix": {
+      "total": 22,
+      "PASS": 22,
+      "FAIL": 0
+    },
+    "local": {
+      "total": 17,
+      "PASS": 17,
+      "FAIL": 0
+    },
+    "affected": {
+      "total": 14,
+      "PASS": 14,
+      "FAIL": 0
+    },
+    "feed": {
+      "total": 6,
+      "PASS": 6,
+      "FAIL": 0
+    },
+    "errors": {
+      "total": 48,
+      "PASS": 48,
+      "FAIL": 0
+    },
+    "productionBoundary": {
+      "total": 4,
+      "PASS": 4,
+      "FAIL": 0
+    },
+    "apiFailures": {
+      "total": 23,
+      "PASS": 23,
+      "FAIL": 0
+    },
+    "contrast": {
+      "total": 28,
+      "PASS": 28,
+      "FAIL": 0
+    }
+  },
+  "googleReal": "BLOCKED",
+  "humanFullLanding": "PENDING",
+  "performance": "separate agent evidence, not inferred from QA",
+  "ledger": {
+    "scope": "Current local independent QA only; human full-page visual approval and authenticated Google reviews remain external gates; performance measured by separate specialist.",
+    "findings": [
+      {
+        "id": "ZE11-QA01",
+        "severity": "MEDIUM",
+        "status": "PASS",
+        "defect": "Instagram2requests per StrictMode mount; first request canceled but transport still created.",
+        "fix": "Cancellable scheduled initial fetch and post-JSON abort guard.",
+        "baseline": "qa-local/results-baseline.json current interface inventory groups3FAIL",
+        "retest": "qa-feed/results.json6PASS + qa-local/results.json4actualinventorygroups IG1Google1"
+      },
+      {
+        "id": "ZE11-QA02",
+        "severity": "MEDIUM",
+        "status": "PASS",
+        "defect": "Quality brands div aria-label without role; axe incomplete serious aria-prohibited-attr manual confirmation.",
+        "fix": "role=group on existing labelled collection",
+        "retest": "qa-local/axe-{1440,390,320}.json no violations, incomplete only contrast"
+      },
+      {
+        "id": "ZE11-QA03",
+        "severity": "HIGH",
+        "status": "PASS",
+        "defect": "Glyph/background manual pixel contrast10/28samplefail in servicecopy and desktophero slogans despite axe unable to evaluate image backgrounds.",
+        "fix": "Continuous stronger white servicephoto fade and tight black text shadow on existing hero slogans; geometry/assets/colors unchanged.",
+        "baseline": "qa-contrast/results-baseline.json and before-services/hero PNG",
+        "retest": "qa-contrast/results.json28PASS; minsmalltext5.468, servicebody>=5.79; samples exclude antialias edges and do not certify complete WCAGAA"
+      },
+      {
+        "id": "ZE11-QA04",
+        "severity": "MEDIUM",
+        "status": "PASS",
+        "defect": "Deferred geometric font needed heading calibration, location could wrap7lines vs approved4.",
+        "fix": "Editorial font deferred; locationfontsize bounds calibrated without hero redesign.",
+        "retest": "qa-affected/results.json11normalviewportslocation<=4.1lines"
+      },
+      {
+        "id": "ZE11-QA05",
+        "severity": "MEDIUM",
+        "status": "PASS",
+        "defect": "200%computedtext location heading overflow within its box at390/320 though page scrollWidth still fit.",
+        "fix": "overflow-wrap:anywhere; default4lines retained.",
+        "baseline": "qa-affected/results-baseline.json2FAIL",
+        "retest": "qa-affected/results.json14PASS incltext200720390320"
+      },
+      {
+        "id": "HARNESS01",
+        "status": "CORRECTED",
+        "reason": "Maps official link maps.app.goo.gl incorrectly expected google.com/maps; permit real official shortenedURL."
+      },
+      {
+        "id": "HARNESS02",
+        "status": "CORRECTED",
+        "reason": "AX name CSS uppercase PINTURA/BANCOS/CARPETE was compared to titlecase; case-insensitive comparison.",
+        "evidence": "qa-local/results-baseline.json shows two harness errors alongside actual duplication defects; all retested"
+      },
+      {
+        "id": "HARNESS03",
+        "status": "CORRECTED",
+        "reason": "Lifecycle harness named ReactDOM import unavailable Vite cached package, switched default import; no product change.",
+        "evidence": "qa-feed/results-first.json vs results.json"
+      }
+    ],
+    "limits": [
+      "Google real integration BLOCKED: current endpoint503 configuration, no authorized OAuth/real reviews asserted; MOCK Google tests only prove UI contract.",
+      "Human final full-page visual acceptance PENDING; owner explicitly approved hero beforeZE11. Technical screenshots and tests do not replace owner approval.",
+      "Dedicated REAL-map-mobile-scroll.png visually proves actual map street/marker/Google attribution/two-finger gesture overlay and125pxonefinger vertical page scroll; normal5-area overview captures may contain blank transient iframe even when allowed network, do not use them as map pixels evidence.",
+      "Actual Instagram returns200sixofficialposts; no raw token or secret values stored. Local GA4 diagnostic events prove consent/dedup only; productionGA4delivery deliberately not executed.",
+      "axe3landing+6error scans zero detected violations; image/gradient contrast incomplete manually sampled28targets and errorbuttoncontrast in48groupharness. Physical screen reader, every image background pixel and complete WCAG certification not asserted.",
+      "Zoom200 test reflow equivalent720CSSpx for1440desktop, plus actual computed text sizes doubled at720390320; native OS toolbar zoom not automated.",
+      "404 verified realPagesHTTP404. Direct500/503templatesHTTP200, syntheticReactboundary does not retroactively alterHTTPstatus; no Cloudflareinfrastructurefaultinterception asserted.",
+      "No external website publishing/actions, deploy, push, billing, GoogleCloud change or credential mutation performed by QA."
+    ]
+  }
+}

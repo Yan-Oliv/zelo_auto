@@ -167,7 +167,7 @@ export function QualitySection() {
           <Eyebrow>Qualidade que</Eyebrow><h2 id="ze4-quality-title">Faz diferença</h2>
           <p>Produtos adequados a cada superfície, com atenção ao acabamento e aos detalhes do seu veículo.</p>
           <div className="ze4-quality-chips"><span><ShieldCheck aria-hidden="true" />Cuidado<br />criterioso</span><span><Diamond aria-hidden="true" />Atenção aos<br />detalhes</span><span><Leaf aria-hidden="true" />Limpeza e<br />conservação</span></div>
-          <div className="ze4-quality-brands" aria-label="Marcas de produtos utilizadas">{productBrands.map((brand) => <a key={brand.name} data-brand={brand.name} href={brand.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar site oficial da ${brand.name} (abre em nova aba)`}><NearImage src={brand.logo} alt={brand.name} width="90" height="30" loading="lazy" decoding="async" /></a>)}</div>
+          <div className="ze4-quality-brands" role="group" aria-label="Marcas de produtos utilizadas">{productBrands.map((brand) => <a key={brand.name} data-brand={brand.name} href={brand.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar site oficial da ${brand.name} (abre em nova aba)`}><NearImage src={brand.logo} alt={brand.name} width="90" height="30" loading="lazy" decoding="async" /></a>)}</div>
         </CommercialReveal>
         <ul className="ze4-quality-attributes"><li><Check aria-hidden="true" />Cuidado na limpeza</li><li><Check aria-hidden="true" />Atenção ao acabamento</li><li><Check aria-hidden="true" />Detalhes que valorizam</li></ul>
       </div>

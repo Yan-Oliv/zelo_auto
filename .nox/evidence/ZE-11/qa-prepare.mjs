@@ -1,0 +1,20 @@
+import fs from 'node:fs'
+const dir='.nox/evidence/ZE-11';fs.mkdirSync(dir,{recursive:true})
+let s=fs.readFileSync('.nox/evidence/ZE-10.1/qa-global.mjs','utf8')
+s=s.replace("const dir = '.nox/evidence/ZE-10.1'",`const dir = '${dir}/qa-matrix';fs.mkdirSync(dir,{recursive:true})`)
+s=s.replace("import sharp from 'sharp'", "import sharp from 'sharp'\nimport {instagram} from '../ZE-09.1/fixtures.mjs'")
+s=s.replace("'../ZE-09.1/fixtures.mjs'","'../ZE-09.1/fixtures.mjs'")
+s=s.replace("const base = process.env.ZE101_QA_URL", "const base = process.env.ZE11_QA_URL")
+s=s.replace("Google unavailable MOCK, Instagram empty MOCK", "Google unavailable MOCK, six Instagram TEST DATA posts")
+s=s.replace("await p.route('**/api/instagram-feed',r=>r.fulfill({status:200,contentType:'application/json',body:'{\"data\":[]}'}))", "await p.route('**/api/instagram-feed',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(instagram)}));await p.route('https://test-data.invalid/*',r=>r.fulfill({path:`public/editorial/${new URL(r.request().url()).pathname.split('/').pop()}`,contentType:'image/webp'}))")
+s=s.replace("assert.match(sources[0].text,/reais/i);assert.doesNotMatch(sources[0].text,/ilustrativ/i)", "assert.doesNotMatch(sources[0].text,/ilustrativ/i)")
+s=s.replace("for(const c of sources.slice(1))assert.match(c.text,/ilustrativ/i)", "for(const c of sources.slice(1))assert.ok(c.images.every(i=>/ilustrativ/i.test(i.alt)))")
+s=s.replace("assert.match(await card.innerText(),/Fotos reais/i);", "assert.equal(await card.getAttribute('data-comparison-source'),'real');")
+s=s.replace("if(w<=430){const order", "if(w<=430){const order")
+// All source notes were deliberately removed by the owner; semantics retain provenance.
+s=s.replace("assert.equal(await card.getAttribute('data-comparison-source'),'real');", "assert.equal(await card.getAttribute('data-comparison-source'),'real');")
+s=s.replace("await p.route(/https:\\/\\/(www\\.google|maps\\.google|www\\.googletagmanager)/,r=>r.abort())", "await p.route(/https:\\/\\/(www\\.google|maps\\.google|www\\.googletagmanager)/,r=>r.abort())")
+fs.writeFileSync(`${dir}/qa-matrix.mjs`,s)
+// Existing fault harness supports output/URL overrides; run it against the current candidate.
+fs.copyFileSync('.nox/evidence/ZE-10.2/qa-browser.mjs',`${dir}/qa-errors.mjs`)
+console.log('ZE-11 local-only QA harness prepared; product source untouched')

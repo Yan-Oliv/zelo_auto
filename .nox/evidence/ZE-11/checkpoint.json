@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-24",
+  "branch": "work/ze-audi-redesign",
+  "head": "0827b0d7bcef93cb5f1e861cb2e3a725c41d7fa4",
+  "checkpoint": "ZE-11-start-20261024",
+  "status": "M .nox/ZE-09-Google-Handoff.md\n M .nox/ZE-09-Report.md\n?? new_interface/\n?? src/planos/",
+  "protectedHashes": {
+    ".nox/ZE-09-Google-Handoff.md": "3e1c229d5f7ec2faf038d2760bae2fa67a458a626132a41521a0bde3edbcc54d",
+    ".nox/ZE-09-Report.md": "40f6c2a0ac8f91f5f368c3e951fce5a9f2b1d8ea98d71d3e55c808484d15e4c4"
+  }
+}

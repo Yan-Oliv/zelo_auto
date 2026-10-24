@@ -1,0 +1,908 @@
+{
+  "baseline": "0827b0d7bcef93cb5f1e861cb2e3a725c41d7fa4",
+  "checkpoint": "ZE-11-start-20261024",
+  "branch": "work/ze-audi-redesign",
+  "selection": "Reproducible harnesses, reports/raw Lighthouse (without bulky traces), all real five-area screenshots/selected errors, videos, prior failure ledgers. Built baseline/traces retained locally only, reproducible from baseline Git tag. No owner patch/env files included.",
+  "files": [
+    {
+      "file": ".nox/evidence/ZE-11/build-baseline.txt",
+      "bytes": 4918,
+      "sha256": "f7b8a9f410c65d3fe59bd4a2384a82f4bbcca8a2e2290a02a0899a1cb197f47a"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/build-final.txt",
+      "bytes": 4918,
+      "sha256": "e7372d09a3a116d840f31855d55ec781af8c03dc56953a889c477299bc53c360"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/checkpoint.json",
+      "bytes": 491,
+      "sha256": "035510a7e1384cfe5f015bdb3cd6c26f5fe3e526a0afbb85b3b90817681f417e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/findings.json",
+      "bytes": 6180,
+      "sha256": "d415447d1c7691c9d30528c213425ccef60378580bcf0a7e1fe66f5f88d40f8e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/font-diagnosis.mjs",
+      "bytes": 1054,
+      "sha256": "ee84190071c8b675c01bde6650fa92a98af776b8c92b656910d1f4ef985c61c6"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/hero-owner-approval.json",
+      "bytes": 316,
+      "sha256": "807e9a3931f6fdec68fc21453644fbe3f51693dd3715d2cbcca1e9e41d47ab66"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/lint-baseline.txt",
+      "bytes": 2772,
+      "sha256": "8d6427bb679e4a4ba566a7b5f47ecc0bccde7085583faa0ca9ff64c69ce18e50"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/lint-final.txt",
+      "bytes": 2772,
+      "sha256": "c123f5e49eba96204adfbcbc374157c5f85a4e848f8b393fad5c04d42fdde7c7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/package-evidence.mjs",
+      "bytes": 1938,
+      "sha256": "7b6c025a6839774f8319e79a4f087d1f7980df37c7b987789c866f48de8fed59"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-baseline-desktop-cold.json",
+      "bytes": 930911,
+      "sha256": "365abd895f06ec14794f0fdf3fe2314fadd1384e890f6a5c24fbcb3b2598b34c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-baseline-desktop-warm.json",
+      "bytes": 946928,
+      "sha256": "8c157f4503157aff4df2a1c967799fbb8a2d52729b1c09d8297f31e7b78f6780"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-baseline-mobile-cold.json",
+      "bytes": 493926,
+      "sha256": "0a5ac6f142f0004c44b7a66212356ce4c8b5e41afdb5d86af9ca1a73ecfa315d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-baseline-mobile-warm.json",
+      "bytes": 508340,
+      "sha256": "ac05a39ab97014727db69c293090f802a66c9027435ac82c3d601e6f5fd4b14c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-baseline-summary.json",
+      "bytes": 22525,
+      "sha256": "438e5364714f02c666085229355eb223baf103a28f563107d74d6d6ea85299d0"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-bench.mjs",
+      "bytes": 5628,
+      "sha256": "6cd03f520cf7e7b3bec0d575fd5083f43c277529a9df918ab5454df24e5e5522"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-cleanup-final-pixels.json",
+      "bytes": 485,
+      "sha256": "6da9248549f108c92a37b8b74e68f364239a66422750a8a8e77f5ff24303572d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-cleanup-mobile-cold-gzip-car-cleanup.json",
+      "bytes": 497138,
+      "sha256": "f9c82bb415b9e552c9ca1b6887b31473022d58b58f49b740a7b64cc870e4116d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-cleanup-summary.json",
+      "bytes": 10435,
+      "sha256": "8cedcf7d42f311b7004f4542783e75bf993f4079179378dd623d4ad52488fb03"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-diagnostic-gzip-deferral.json",
+      "bytes": 492850,
+      "sha256": "b73b068ef7c126078a43facc19dc194dbc7d42621ff801dc8b17081065ce89c6"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-diagnostic-gzip-normal.json",
+      "bytes": 492665,
+      "sha256": "8f6dd82e5465e5b1951116cbd6e8655bcba9353a92c7741ca0e5db9ae92cff7a"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-diagnostic-summary.json",
+      "bytes": 14771,
+      "sha256": "486cf0ef32be34bd9ae660458aa2778a378c3281eec61e44d9ac4f1345fc43ce"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-final-desktop-cold-plain.json",
+      "bytes": 910697,
+      "sha256": "b84444b8b8f6ff2534658dc90ad7c34b0d3545dc706c1010b9ce239b941ef554"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-final-desktop-warm-plain.json",
+      "bytes": 984280,
+      "sha256": "de164e471fb13e7d96372a267693f1944ecdb1d9781708bfdc8ea70d7a9300cd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-final-mobile-cold-plain.json",
+      "bytes": 499553,
+      "sha256": "a63f08ece4ecb0b5d23cd515fc44e458c83672570e78b2fc652c67ed73418e46"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-final-mobile-warm-plain.json",
+      "bytes": 516657,
+      "sha256": "45f1f8ae260bf007e83b6e6bb6388d220dcf0b5054a178c664be099aef1a4e51"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-final-summary.json",
+      "bytes": 39182,
+      "sha256": "b3d69ba4c9d6758304dc71d483da8f84d8cf606d8e74ab84d0272c3e73ab6406"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-desktop-cold-plain.json",
+      "bytes": 926069,
+      "sha256": "f8c34ad668fc4c6eb47e77e5b2d163e41b37ed3fafb966a56fdbb473bd771b07"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-desktop-warm-plain.json",
+      "bytes": 947342,
+      "sha256": "ef95a88476e7ca141159e9720e6a9998f99e4b17afb2cf9f76f7080568fba9b8"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-mobile-cold-gzip-deferral.json",
+      "bytes": 496644,
+      "sha256": "3a891dc65206c8983a99cc131cf37b88612ad495f94dec75aefabb1b938b9077"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-mobile-cold-gzip-normal.json",
+      "bytes": 496502,
+      "sha256": "edb088f4b89cb41d6523b9595121f9899e530ed92e874423473bd64a5d2d5651"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-mobile-cold-plain.json",
+      "bytes": 497562,
+      "sha256": "69cf5e3fc80bcfe1add34db93c9a547ad539f97fd9ffa0d08eed146e56629d2c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-mobile-warm-plain.json",
+      "bytes": 515513,
+      "sha256": "2b09f652ffc28e7253546e466038507bd2da802a851cb72b862ab6d750253e87"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/performance-motion-summary.json",
+      "bytes": 57238,
+      "sha256": "d61f9fe5258ee9a1fd102ef1a07676c2aed8083ae9867649a03d16aeca52fd46"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected.mjs",
+      "bytes": 4459,
+      "sha256": "a69f9d740468a148c5c8d9e3b6fd1dcdeeff0b2e75133d13e3c1a429b883a3fe"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected/results-baseline.json",
+      "bytes": 12726,
+      "sha256": "c7a136668e4d188fa5928c7a280f39a4aa1d7b7714c4781399929d722670a635"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected/results.json",
+      "bytes": 12833,
+      "sha256": "bad42f21dab3ba99d5799b5d0db0c8c884ac49251058d80bc8a7b32efa26c6f7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected/text200-320.png",
+      "bytes": 2833304,
+      "sha256": "da417b6c8ad08d60653c8b242d6e92be4686b4bea1eef6b99d3d7b3b5250da5f"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected/text200-390.png",
+      "bytes": 3174752,
+      "sha256": "a83a93fb3bdd8de16612c53de7a1ecff79ce834d06a7dc6d57b6d5453b9a6a0a"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-affected/text200-720.png",
+      "bytes": 4436313,
+      "sha256": "b3f9e387d0ecd34753a157e694325fdd833f4fda095d84950a21eee9e6f247b7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-api-google.txt",
+      "bytes": 3398,
+      "sha256": "28c770b3df0c074e4cc3f9b182aaad7e61680ffb669c2c0e5c2a1b4bcf1efaa4"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-api-matrix.json",
+      "bytes": 3654,
+      "sha256": "660bbbfcbc61657561dd522f2f02ecea35603407e1e1baec83a6497d70fe9010"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-api-matrix.mjs",
+      "bytes": 2457,
+      "sha256": "d2e8caab5e23f2fdf67339a276ab9f8345adac1dab76d91e9623a61dc6e172c6"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast.mjs",
+      "bytes": 3932,
+      "sha256": "344ea3bf6bb341240aad998d626df0d868ec1bd37fbc4c0ddf8ee304d57a2f6c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_footer_brand_div_p_last_child-background.png",
+      "bytes": 1190,
+      "sha256": "e9b99a14217a6a46648f466debd6182ee38127bb4d09b5f71078a1b5b1beffe5"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_footer_brand_div_p_last_child-original.png",
+      "bytes": 6381,
+      "sha256": "867f4e63bf191d38982054d1f13059f129f1d46a1b50506dca8090bd7aacb569"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_location_description-background.png",
+      "bytes": 5369,
+      "sha256": "1d8668d34330cc4ef7dbd1fc1b6844f4824c3ba51722aeeb589df791ef497ff9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_location_description-original.png",
+      "bytes": 15723,
+      "sha256": "9b950996debc4c32a607671fd1734a8df83d6da94e7c3f198eada8a72713baba"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_quality_attributes_li_first_child-background.png",
+      "bytes": 6018,
+      "sha256": "06a9836e087daf2fc323c9208dce707fca189e6c5ec91505ccb5869a43329a8f"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_quality_attributes_li_first_child-original.png",
+      "bytes": 7097,
+      "sha256": "7c15c243cd85587b4162fb8437b76d2fa7fc404ffd1887184ce8044e9185e4a4"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_quality_chips_span_first_child-background.png",
+      "bytes": 999,
+      "sha256": "be2f0e08c1eaebfc2466a2ecf9409aeefae1a8dd6925d6729da9e53f9d085a40"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_quality_chips_span_first_child-original.png",
+      "bytes": 1823,
+      "sha256": "14ddfd79ef6b1f1e5fc074a21a89017260bc725d82d1d4babbffec74ab95bfbd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_results_copy_p_last_child-background.png",
+      "bytes": 479,
+      "sha256": "62b7b06b0205a97a380892925394ac001efcae9f7e026d26929d2b5435c39c4f"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_results_copy_p_last_child-original.png",
+      "bytes": 4742,
+      "sha256": "e07958617b0a526da670f2499ba60ffa17eddbadbe11c7afee36779d18816a27"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_review_availability-background.png",
+      "bytes": 2318,
+      "sha256": "e8a9ccfbf5974512f30d29e956eb1c48fb88adc429f57d9c11bcd16871b7b979"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_review_availability-original.png",
+      "bytes": 4877,
+      "sha256": "a4f8dd2a650e8309b2b825dae7256f8c3c8c670389207dcd21a9f9f54032a107"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_benefits_span_first_child_span-background.png",
+      "bytes": 2228,
+      "sha256": "0a11adeb7cd4bd70bb05d71c591b38da049b2084f80fbd970077377061529ce5"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_benefits_span_first_child_span-original.png",
+      "bytes": 3579,
+      "sha256": "853a3e70d60c151243f8e8de9f82e41587e27474009f37e72e02dc059aa6865e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_first_child_h3-background.png",
+      "bytes": 5913,
+      "sha256": "65acfad2cfe7d47ea718c8aa4a19f0af0f59307a59f49e3ef2b841c026c29299"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_first_child_h3-original.png",
+      "bytes": 7982,
+      "sha256": "f2d194e4bcb625ad9fcdacc1c16f8dbba3bb92b2c9fd6a44b0ded21284140e4c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_first_child_p-background.png",
+      "bytes": 2803,
+      "sha256": "c503fed8b0e2eb41ab50ec14792132a0720629f98bebfc28d016311571d15ab9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_first_child_p-original.png",
+      "bytes": 8090,
+      "sha256": "9639ec0b786e7460d571d95d932d7d1cd665bfa100133f0be6b6165c8e99e166"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_2__p-background.png",
+      "bytes": 2688,
+      "sha256": "4e72afdf3d6f1b57b5832ad8a071ae2911fff7ea4d807ce22798182a76e0282a"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_2__p-original.png",
+      "bytes": 7726,
+      "sha256": "fbd15d579722c91c3a7277d4930d6eeca8f3d5b223d5e68d9c94c608fb023589"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_3__p-background.png",
+      "bytes": 2036,
+      "sha256": "177f0f1e64de4971528501bdcd0c7b9ac0c526923fa85245e97a756d1d869332"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_3__p-original.png",
+      "bytes": 7200,
+      "sha256": "307c6e14fd21b992f0eb44d333e692197918a9492e2a3fac2904e795d54f64c8"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_4__p-background.png",
+      "bytes": 2203,
+      "sha256": "700ea19d75f6b871758c49a7500613eaef0aacc530662eb013d91e683d4263e2"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_ze4_service_card_nth_child_4__p-original.png",
+      "bytes": 6789,
+      "sha256": "fb31c11c22c252472a821dd420a8da9dd2d39302c09cd174715776879a0ea817"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_zelo_hero_slogan_left-background.png",
+      "bytes": 14808,
+      "sha256": "a7ced43bb5d0f57d11128f905445179a8add784c703f59c72c6f91fba8f25ea5"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_zelo_hero_slogan_left-original.png",
+      "bytes": 15445,
+      "sha256": "0d72b43959704036e1216e5765f1ef71f7c92553588b0ed6cf62f97e53735b42"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_zelo_hero_slogan_right-background.png",
+      "bytes": 8848,
+      "sha256": "45edab419e4889304579e6bd9594690d4073d9c33a6b0bda5a4915ce4912fe25"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/1440-_zelo_hero_slogan_right-original.png",
+      "bytes": 9750,
+      "sha256": "628e98971c6fa224ae2abcf9601d3f88ac2ea3232298a2bd0f34374f3192f4ae"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_footer_brand_div_p_last_child-background.png",
+      "bytes": 1624,
+      "sha256": "19a3e12b8aa2d4ad01a2181b402a043b550c0de7c77a17ba3cf647efbb8dbe96"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_footer_brand_div_p_last_child-original.png",
+      "bytes": 7558,
+      "sha256": "e53d1afd5114e217a4ad98d78649057632bcb8097b47e7555ee7a6b20114bdd7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_location_description-background.png",
+      "bytes": 16175,
+      "sha256": "7b53d57b532f076e8d13b24f08891ec9a3f59f88ab33fdb2b7921d6af50f5958"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_location_description-original.png",
+      "bytes": 25706,
+      "sha256": "a946b45679953021be1412a1b3a117a92ba7a10af6997db7d8c31cf190e46f47"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_quality_attributes_li_first_child-background.png",
+      "bytes": 6980,
+      "sha256": "7fa64e1c770f45d6d7b3e1978dff0249d7e66da2a37150d80ba6f6b8ce5c78e3"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_quality_attributes_li_first_child-original.png",
+      "bytes": 8062,
+      "sha256": "313ae69d395ed25a193c1537a631deb11c6ed29dfa0d5d977a0466505754e912"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_quality_chips_span_first_child-background.png",
+      "bytes": 1003,
+      "sha256": "08b513c1fe679f101cb88adf38068bbf3746fb69c447956ba53fbde80066a30c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_quality_chips_span_first_child-original.png",
+      "bytes": 2027,
+      "sha256": "b0ff8c9fe6555465fcf7337893afe198b5b5c303ccd476bd968b11265ead6157"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_results_copy_p_last_child-background.png",
+      "bytes": 564,
+      "sha256": "6eb17fd1433bd17d629977104c21d6ce8da27c73012b3c366e5054b300b18c1e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_results_copy_p_last_child-original.png",
+      "bytes": 4448,
+      "sha256": "64f96402aae2f0de11ff834e24d42258c9d2089813bf18ac9b1994fc670abd30"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_review_availability-background.png",
+      "bytes": 1374,
+      "sha256": "d9187c7de979d91fcc7ff34cf65e40947be447168d3eef4dce30c8995f668c5e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_review_availability-original.png",
+      "bytes": 3941,
+      "sha256": "15a3f9d7a55253f1f8904913c7c0201a791933a859a4c10ff8b7d04d8df84b9e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_benefits_span_first_child_span-background.png",
+      "bytes": 500,
+      "sha256": "8207acb11a0ee960ed92f7f29b4505d141057bf6af85dacf5bd69872793eec13"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_benefits_span_first_child_span-original.png",
+      "bytes": 1894,
+      "sha256": "3de1072f588c7c2368bb40a30bfebe8f67650a02081508fb0ab3a7cd2fdea663"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_first_child_h3-background.png",
+      "bytes": 7302,
+      "sha256": "b5fe4559eed0f49cfddb9b61562bbdf04981a470101f5527f1428f0a83fb3b87"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_first_child_h3-original.png",
+      "bytes": 9761,
+      "sha256": "f562a70b4451a6e2996869078f416585667cdf450bfd3fe53565a46906dbdbd8"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_first_child_p-background.png",
+      "bytes": 4077,
+      "sha256": "19c93e1832ad3dce3ea987331c7c4f54b53099401352a282c669903a1ff0619e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_first_child_p-original.png",
+      "bytes": 10377,
+      "sha256": "a3fc91d96fb9803ea74e550f9081dd84e4505a58fd7edd8cf66d9e04ea286a13"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_2__p-background.png",
+      "bytes": 1263,
+      "sha256": "255d29fe904491a0aa1f81d2e4b428eaa39a235ec39e1cce720891a28463572d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_2__p-original.png",
+      "bytes": 6129,
+      "sha256": "6b6f723952d01ef5998e8ee52727ed09a4ae9868246bbe7a8d2b7a6305de833f"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_3__p-background.png",
+      "bytes": 1641,
+      "sha256": "2deb19d69a3b4739f1632536dfd679d8da8bcab216c8d1c91a8a7a336cfce318"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_3__p-original.png",
+      "bytes": 6879,
+      "sha256": "6136b84608c3859a05903d57926f973c08b923fade69eb5e59f26710c090c63e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_4__p-background.png",
+      "bytes": 1832,
+      "sha256": "925c9b13266582f48976f97aa7cd9ae74ae1774742d7f7d5f020e01afbc3175c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_ze4_service_card_nth_child_4__p-original.png",
+      "bytes": 6645,
+      "sha256": "1ab421eb8e3e78f831b5d4f63f415ac8d7de450d5ad6002e08cff1790ab1e627"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_zelo_hero_slogan_left-background.png",
+      "bytes": 3465,
+      "sha256": "b10af00fbd775ed03de00ba503864854a08fae6c1dd860561fdbe28132c0df2c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_zelo_hero_slogan_left-original.png",
+      "bytes": 4067,
+      "sha256": "c0502a1b3daa96d5d918f04c405b9bd55193482bf443e5028785930192083eaf"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_zelo_hero_slogan_right-background.png",
+      "bytes": 2225,
+      "sha256": "3e54270afd5bf26b6e2cc55e0cd8168d93f7a0b6687fdad25eef3f9f49b1a1cf"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/390-_zelo_hero_slogan_right-original.png",
+      "bytes": 3213,
+      "sha256": "9a0276eb0bc194c56c0785b3a3301782be0ef7587b131dfabfcbd929272c8164"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/before-hero-1440.png",
+      "bytes": 1612515,
+      "sha256": "a9fe2f3e448a8f3eeb782174f9d1c13c9693909c9ae7412af883f28a54d3a0b7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/before-services-1440.png",
+      "bytes": 1396965,
+      "sha256": "04e0d7ec4278e8ed4f78a612dfe957ddcf88e0dd400014ecb0e382e541dece88"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/before-services-390.png",
+      "bytes": 1530256,
+      "sha256": "9e0d3027401d69c1c1ae9e75345b2edd2255fd1ab61d8bd10c8984718ca6e4d9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/results-baseline.json",
+      "bytes": 9700,
+      "sha256": "6004f643d61ba18b1d842648dee46405ebb2ae664d85a3f135695d627c381484"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-contrast/results.json",
+      "bytes": 10920,
+      "sha256": "8369729c3376fa997709aafaf7d036029e8c2c3c9ab9c3f2c2bf1fb8c65cd468"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors-accessibility.mjs",
+      "bytes": 1425,
+      "sha256": "6322c6a30ddcc47fce1ff51525d494a3561c7bf1b415c1a345ef48dc813d3402"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors.mjs",
+      "bytes": 16144,
+      "sha256": "60c6cc18d6ac472f3bd146b30de867d0a940d6b0b9dbd6b8cd0f5975587a739c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/accessibility.json",
+      "bytes": 7715,
+      "sha256": "7be2b7edb8ecca970b102504b34073dbfb0c8a0c5a83c629b16b714b56f36e54"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/qa-browser.json",
+      "bytes": 46648,
+      "sha256": "add3660f2e2dafafcdce46735085a946eda812579faa78e1aebf23ea0049b4c9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/screens/404-390.png",
+      "bytes": 66341,
+      "sha256": "60febcc7c9c2c7075ef57041b753e28437dc7eabd019ae8e425b18ef319147c8"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/screens/500-390.png",
+      "bytes": 68880,
+      "sha256": "95c389c1d4f0346f1c958256254170052b3f1d84166731c7fd43bbb27d65d7de"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/screens/503-320.png",
+      "bytes": 60353,
+      "sha256": "3265fa1d883e512cd7776a88582077434b79efd802268bb3e831e1fae72019ff"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-errors/screens/boot-blocked-main.png",
+      "bytes": 66277,
+      "sha256": "d3bea1f020dcd2436a0d7924eb21cf5b1a5be5938d33ae224f645cfad1a8e198"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-feed-harness-fix.mjs",
+      "bytes": 415,
+      "sha256": "961e25a1283e24c176660b5366c19b494fe03e8b3e8d797f4b990e8cca825046"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-feed.mjs",
+      "bytes": 5594,
+      "sha256": "0f719a2807fae096ba1625dd9fbf6e9d31dce5ad97632ea259a29c91ae00dc72"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-feed/MOCK-broken-image.png",
+      "bytes": 187103,
+      "sha256": "c13aab54635c0013c21ad01acd6b92637020a751e9d2601c965218bc1cb4b8e3"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-feed/results-first.json",
+      "bytes": 1615,
+      "sha256": "0711bece34607382e921a010e57ebd2ce31b9cc2f26102849ba50c4bc752b2c1"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-feed/results.json",
+      "bytes": 1408,
+      "sha256": "8c63f27a99b9b6e78e2f9ec16091258779d7aaadf319d8284adbb350a8148c65"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-finalize.mjs",
+      "bytes": 5531,
+      "sha256": "a9523f5e8bbb33a9db792cb5c8f00f196fa0d6c6e23c02dc45c7f34e1526f05c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-findings.json",
+      "bytes": 4806,
+      "sha256": "e3adaeb6013a9150a6f5d181513d95d2d4412ab8687f24057a67349c9371929c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-font-update.mjs",
+      "bytes": 706,
+      "sha256": "151f835c38191326248adce228b52afb34766537131a6b18302e1feab3295541"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local.mjs",
+      "bytes": 22473,
+      "sha256": "ca252414196bde69b2cd6f42aa08a20bac1d9c990e6c8eeb928b503cc31f03fb"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-full-1440.png",
+      "bytes": 4985371,
+      "sha256": "1a98c8d20fe7ad0983feb1ba5364b9284d69647e9779244827f51f0aa7e4acf1"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-full-320.png",
+      "bytes": 2275637,
+      "sha256": "b72232f1f60353ed62e39d35bf134bdf4bf6310d014e64cf43478be9db6b23d2"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-full-390.png",
+      "bytes": 2776663,
+      "sha256": "fbd282d4f335bd0979bb722a69630001cf436f39a8cc450d72cb3ac934db399b"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-full-768.png",
+      "bytes": 3717643,
+      "sha256": "924358e148620cdcf0dbd07ad3b8c560179d3cc6e8bc1307b216c0ef2b4cedb9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-map-mobile-scroll.png",
+      "bytes": 205269,
+      "sha256": "9943c97e09ee06c73bf02e1313584c3a71503f67442e56df1183bfabbfa5c0cf"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-1-hero-1440.png",
+      "bytes": 1611944,
+      "sha256": "c123f5f7d8a7d7e9b5fba26ecdfb789b622b7e90dca99e9087f0b33339c0e1bd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-1-hero-320.png",
+      "bytes": 208557,
+      "sha256": "a8ae344e7f49341d6363fe2a9f35a7826d677ac78932dcd410d97e9fed4efe69"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-1-hero-390.png",
+      "bytes": 320470,
+      "sha256": "2f4ed554b397c5a9c419c2b01ac55b959f8ea6d65eced1f9a2f3ef1b040ad47b"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-1-hero-768.png",
+      "bytes": 789400,
+      "sha256": "91ccd0582e0486f02ed461f0fd565139aba6aabde9dfbadbdde8778450eb0e80"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-2-services-results-1440.png",
+      "bytes": 1260749,
+      "sha256": "510e7311acbbf707b8ce823b2cf12c82a1ef592bb4683bb0246081c4e94cbabf"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-2-services-results-320.png",
+      "bytes": 1088552,
+      "sha256": "2ee53bc82e138af7c0bec101c4198cff56e0df899fd52cce36f601c35b99c2ad"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-2-services-results-390.png",
+      "bytes": 1366333,
+      "sha256": "c8249ae98064731dcaa7d896f6338d9fc08669d4210a14e8cc7bb535069247ba"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-2-services-results-768.png",
+      "bytes": 1276699,
+      "sha256": "fab3438d1f0990ca6a1705f8d6772aa04ca06128e82fb39210ebca99970f7d84"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-3-process-quality-1440.png",
+      "bytes": 1789193,
+      "sha256": "b43d39ea840b043054deb1a39d029e5f1fd7972b0cfb5f03543f4bad3987ecf1"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-3-process-quality-320.png",
+      "bytes": 458495,
+      "sha256": "dd9423cf8f08d7eba3bfc3fec22b32b2c3e489adf440153f7154a185a38bafbb"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-3-process-quality-390.png",
+      "bytes": 599775,
+      "sha256": "76203407024847192e39e2132b47efebb1d2ae2a230c0b90bb3caf533d1145c4"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-3-process-quality-768.png",
+      "bytes": 905500,
+      "sha256": "870692deee14e5b2bce8d499a1c4838815762e345b6cd2c6608e191e744744ac"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-4-community-1440.png",
+      "bytes": 701687,
+      "sha256": "2ea5631f09f1bcab20f0a766b1ba0268639660fb8c5cd67b19b5bd372bfb4e5b"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-4-community-320.png",
+      "bytes": 396628,
+      "sha256": "3d78b959aebfe354856a735988af4699be15d771103e700e5f7dc40f919dda80"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-4-community-390.png",
+      "bytes": 486965,
+      "sha256": "c4c3961ecfa4635a51be7153030a35fa4ba90fdf337c0e061999e84efb5b87ef"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-4-community-768.png",
+      "bytes": 657362,
+      "sha256": "0911727a04dd69600a5d66aba87443bef310fee4fb7a911ef08f3eeb4fcb990d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-5-location-footer-1440.png",
+      "bytes": 943121,
+      "sha256": "1fb1da8764a2f7037cd85f55089632575f14d559ac02c93bbe138968d7c4028c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-5-location-footer-320.png",
+      "bytes": 328033,
+      "sha256": "0a32495f24296aa2bf90b9fb2d09aa8769890f5fe327dff3eb94db14f7893f71"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-5-location-footer-390.png",
+      "bytes": 357424,
+      "sha256": "c8f09599476983ef65e8e7f622bf18674d36691ecfbb79925ef65e99ddb316a8"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/REAL-model-5-location-footer-768.png",
+      "bytes": 912007,
+      "sha256": "7c913c6fec0917e27f4e34f49066de9fd3ed62bedac88df2432f68116923e8a9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/axe-1440.json",
+      "bytes": 32033,
+      "sha256": "f046fee137d7ae25fe89cdecb290ca2344f65a5c0e047e8b833f87d766347dea"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/axe-320.json",
+      "bytes": 30588,
+      "sha256": "fd105997f66dd3fcda03e830a09dd6c459d833d948734e3e6b36b530e5cac179"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/axe-390.json",
+      "bytes": 31139,
+      "sha256": "fae82614d60703f057c592b9d9f262eaecb2e5b4a0998745686bc431db3a021f"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/hero-cold-final.png",
+      "bytes": 1171169,
+      "sha256": "d4ab4f42601129eace829ae8e5afadb43862ec8be3abf5685be3f3c5816a3449"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/hero-cold-initial.png",
+      "bytes": 310246,
+      "sha256": "ab17e475f25b070de8a43312aab63e04e04f846494f5feb547dd0a6ee3da0a88"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/hero-cold-middle.png",
+      "bytes": 1100276,
+      "sha256": "c5c2416d0b3e01f3b0e1034f2e6ebc183aa5a9debf83b3e1f41310f3d7d73ec4"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/hero-slow-assets-final.png",
+      "bytes": 1171169,
+      "sha256": "d4ab4f42601129eace829ae8e5afadb43862ec8be3abf5685be3f3c5816a3449"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/results-baseline.json",
+      "bytes": 127601,
+      "sha256": "f3381973735801b480abadd57897dd397c9d27f49d9460577d20a5c4859bc25a"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/results.json",
+      "bytes": 142408,
+      "sha256": "a4ab615d8d8e9c10cc4f79362a56975775f5b72b562d04d0ec1b09508afbda2e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/videos/MOCK-scroll-comparators.webm",
+      "bytes": 1977457,
+      "sha256": "9f2aff435a4ce06a6bcf460abbf23b98675c332563391bc3fe62957059a8ab12"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-local/videos/hero-cold-warm.webm",
+      "bytes": 655532,
+      "sha256": "6d2947a551ac75d58644f77a04314075095b025987d5ef5de400e3d64b297f2e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-matrix.mjs",
+      "bytes": 15993,
+      "sha256": "15b95f1e53a6634a9344811bdd3c86288d669c59179651a4677686b5ab8de77e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-matrix/MOCK-global-2560x1440.png",
+      "bytes": 9689658,
+      "sha256": "427fc643a44545df36389e48585db03c0dd6733cb17da41cffa6b80c355a2034"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-matrix/MOCK-global-844x390.png",
+      "bytes": 4386017,
+      "sha256": "edf3b1206c7db2541dcb84662a81864a4b1bcdb360b2c860d49e07f3dbb1dfd6"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-matrix/qa-global-baseline.json",
+      "bytes": 33348,
+      "sha256": "93b4e30786e4ba71da7e238ad033ad9b9e7120586403d84a2506fe8f1021c7bd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-matrix/qa-global.json",
+      "bytes": 33357,
+      "sha256": "951cbf5d87f27d518de79e06cf43f5d8abcc5eac5176e0af9d42e669bdb827e6"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-prepare-production.mjs",
+      "bytes": 1201,
+      "sha256": "adde1e48b17778f5649424a4c8dbcf78384e79da08d05b99d35d73493600966d"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-prepare.mjs",
+      "bytes": 2402,
+      "sha256": "054f56fa1a138927b616b4633bc5a92270c8dcd1d87ba12b359a95324e79a9c3"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production.mjs",
+      "bytes": 4556,
+      "sha256": "8c93178238062d54ae2d58ee7c9774c6797713c292525366784c991a917a4b04"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/production-entry.tsx",
+      "bytes": 1974,
+      "sha256": "88fda3287d1812add6974ad33a4b7b32c92fb980c869c35d0915f46e46e66cbd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/qa-production.json",
+      "bytes": 1089,
+      "sha256": "4debb9db0e4ba1fe9beb8fcfa2ca4ba9ecbcb2eef0d2aa14525b89ec1b1fcc9e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/screens/production-lazy.png",
+      "bytes": 170414,
+      "sha256": "402cb556a79af1003a4a7af2d911e59f013da9d2367cdc5bcf9e0fd4bf4b8482"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/screens/production-provider.png",
+      "bytes": 170445,
+      "sha256": "c2d8cdac97cb4e4eaa698989e0837c5cbdb68c37949c2c08526871c304aef1e9"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/screens/production-render.png",
+      "bytes": 7130,
+      "sha256": "e58e2752b43a1413a34d8995bafd315510f98ef6862c604c8b02906ccd28750e"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-production/screens/production-root.png",
+      "bytes": 14009,
+      "sha256": "039d0c2bcbb00fef2812180659ddd0cd3130ba478cb8e326687cd3a30b001eec"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-report.md",
+      "bytes": 5627,
+      "sha256": "27daa0ea417c684a110488290e36fe46cd3a61388c0427638c9118e8b11f57f5"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-revise-harness.mjs",
+      "bytes": 1097,
+      "sha256": "5bd7fc2d92efcdd4e9560945d85cde0fb97d3495e51b92d5eb56f4255254ce41"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-summary.json",
+      "bytes": 5926,
+      "sha256": "57076049d1ea3ce078b3c803a049a7782755ae5d18a1dd5fdfcdd76ab2dea0d7"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/qa-update-current.mjs",
+      "bytes": 1872,
+      "sha256": "3819c9389025cb9bfe308afdf4ffef49e57aca6ca9fcffcfdf50f92c1ff4ecbd"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/review.json",
+      "bytes": 1822,
+      "sha256": "e981c3b8799fb7832ebae726e85aa49cc8b6e555e0637dfa241e0188175bb606"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/security-preservation.json",
+      "bytes": 801,
+      "sha256": "52822e365908f0d2a15f38736e0eb559c97f23add1ce3af3efdaf6afae90fb41"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/security-preservation.mjs",
+      "bytes": 2954,
+      "sha256": "20ad9c985324e7d912b5be84d905da4de679fdfd12de49bee0cfcb02616eae9c"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/state-final.mjs",
+      "bytes": 5884,
+      "sha256": "ef1f957ceb093690b858a0e3b04682d77f57a1bfd526c2ae433c7097504a4d13"
+    },
+    {
+      "file": ".nox/evidence/ZE-11/state-start.mjs",
+      "bytes": 5672,
+      "sha256": "e853c950a9b30bf05513c43d9b45d0e1215b96853304593743923963c889fa98"
+    }
+  ]
+}

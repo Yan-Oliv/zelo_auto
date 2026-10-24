@@ -1,0 +1,19 @@
+{
+  "baseline": "performance-motion-mobile-cold-gzip-normal.json",
+  "runtimeOnly": "performance-cleanup-mobile-cold-gzip-car-cleanup.json",
+  "area": "settled mobile hero CSS412x823",
+  "dimensions": {
+    "format": "raw",
+    "width": 412,
+    "height": 823,
+    "channels": 4,
+    "depth": "uchar",
+    "premultiplied": false,
+    "size": 1356304
+  },
+  "changedPixels": 0,
+  "pixels": 339076,
+  "maxChannelDifference": 0,
+  "meanAbsoluteChannelDifference": 0,
+  "identical": true
+}

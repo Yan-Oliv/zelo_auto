@@ -1,0 +1,145 @@
+{
+  "scope": "ZE-11 independent local homologation; Google integration and final owner acceptance remain separate gates",
+  "findings": [
+    {
+      "id": "ZE11-QA-01",
+      "severity": "MEDIUM",
+      "type": "product",
+      "finding": "Instagram development StrictMode starts an aborted request and another request on immediate effect remount",
+      "correction": "Schedule fetch for next task; cancel timer on cleanup; ignore aborted payload before state updates",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-local/results-baseline.json",
+        "qa-feed/results.json"
+      ]
+    },
+    {
+      "id": "ZE11-QA-02",
+      "severity": "MEDIUM",
+      "type": "product accessibility",
+      "finding": "Product brands container aria-label lacked supported semantic role",
+      "correction": "Set role=group; preserve accessible name and official links",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-local/results.json"
+      ]
+    },
+    {
+      "id": "ZE11-VIS-01",
+      "severity": "MEDIUM",
+      "type": "product visual",
+      "finding": "Editorial display fonts relied on unavailable local Eurostile, falling back to rounded Montserrat",
+      "correction": "Reuse existing licensed self-hosted Michroma for headings near content after hero intro; remove scaling and calibrate fits",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-local/REAL-model-2-services-results-1440.png",
+        "qa-local/REAL-model-3-process-quality-390.png",
+        "font-diagnosis.txt"
+      ]
+    },
+    {
+      "id": "ZE11-VIS-02",
+      "severity": "MEDIUM",
+      "type": "introduced during correction",
+      "finding": "Location heading grew to seven desktop lines after geometric face change",
+      "correction": "Calibrate responsive font sizes to four intended lines, including 320px; retain wrapping at enlarged text",
+      "status": "RESOLVED",
+      "evidence": [
+        "font-diagnosis.txt"
+      ]
+    },
+    {
+      "id": "ZE11-QA-03",
+      "severity": "HIGH",
+      "type": "product accessibility",
+      "finding": "Ten targeted rendered image-background text samples fell below small-text contrast threshold despite automated axe scans passing",
+      "correction": "Strengthen continuous white service-photo fade and existing narrow black slogan text shadows without changing layout/colors/photos",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-contrast/results-baseline.json",
+        "qa-contrast/results.json"
+      ]
+    },
+    {
+      "id": "ZE11-PERF-01",
+      "severity": "MEDIUM",
+      "type": "product performance",
+      "finding": "Finished car animation fill delayed observed LCP until global intro cleanup",
+      "correction": "Release only completed wrapper animation on its natural animationend; keep all timings and other intro layers",
+      "status": "RESOLVED",
+      "evidence": [
+        "performance-cleanup-summary.json",
+        "performance-cleanup-final-pixels.json"
+      ]
+    },
+    {
+      "id": "ZE11-METHOD-01",
+      "severity": "HIGH",
+      "type": "measurement method",
+      "finding": "Historical desktop Lighthouse inherited mobile CPU/network/UA; host default reduced motion skipped normal intro",
+      "correction": "Separate controls; authoritative baseline and final explicitly select normal motion, desktop/mobile network/CPU/UA, and cold/warm session conditions",
+      "status": "RESOLVED",
+      "evidence": [
+        "performance-baseline-summary.json",
+        "performance-motion-summary.json",
+        "performance-bench.mjs"
+      ]
+    },
+    {
+      "id": "ZE11-HARNESS-01",
+      "severity": "LOW",
+      "type": "QA harness",
+      "finding": "Maps URL assertion expected google.com/maps despite approved maps.app.goo.gl link; accessibility expected title case while CSS renders uppercase",
+      "correction": "Match actual approved official URL and case-insensitive accessible comparator names",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-local/results-baseline.json",
+        "qa-local/results.json"
+      ]
+    },
+    {
+      "id": "ZE11-PENDING-GOOGLE",
+      "severity": "BLOCKER",
+      "type": "external owner action",
+      "finding": "Official Google API approval/OAuth/server configuration/authentic reviews not established",
+      "status": "PENDING",
+      "action": "Owner confirms approval in omnyatech Gmail and configures authorized server credentials; then revalidate genuine Google source",
+      "evidence": [
+        "qa-local/results.json",
+        "../../ZE-09-Google-Handoff.md"
+      ]
+    },
+    {
+      "id": "ZE11-PENDING-OWNER",
+      "severity": "BLOCKER",
+      "type": "human approval",
+      "finding": "Implemented hero explicitly accepted; full current landing/error pages not yet accepted",
+      "status": "PENDING",
+      "action": "Owner reviews stable local candidate and explicitly accepts complete landing/error pages; separate decision on unmet performance tradeoff"
+    },
+    {
+      "id": "ZE11-TEXT200",
+      "severity": "MEDIUM",
+      "type": "introduced during correction",
+      "finding": "Location heading overflowed internally at320/390 with computed text sizes doubled",
+      "correction": "overflow-wrap:anywhere preserves default four lines and enlarged text reflows",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-affected/results-baseline.json",
+        "qa-affected/results.json"
+      ]
+    },
+    {
+      "id": "ZE11-PERFORMANCE-TARGET",
+      "severity": "HIGH",
+      "type": "owner tradeoff decision",
+      "finding": "Mobile first-visit Performance69 and simulatedLCP6367ms; targets90/2500 unmet",
+      "status": "PENDING",
+      "action": "Owner explicitly evaluates preserved cinematic intro/fidelity against unmet performance; no assumed exception",
+      "evidence": [
+        "performance-final-summary.json"
+      ]
+    }
+  ],
+  "limits": "Targeted pixel contrast is complementary sampling, not complete WCAG certification. Runtime cleanup pixel proof precedes intentional slogan shadow correction, so it proves only the cleanup effect's unchanged final frame. Fixtures prove component behavior only, never authentic Google integration."
+}

@@ -1,0 +1,166 @@
+{
+  "kind": "TEST FIXTURES; no live Google authorization established",
+  "results": [
+    {
+      "provider": "Instagram",
+      "scenario": "upstream400",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream400",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream401",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream401",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream403",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream403",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream404",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream404",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream429",
+      "status": 429,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream429",
+      "status": 429,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream500",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream500",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "upstream503",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "upstream503",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "network",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "network",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "timeout",
+      "status": 504,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "timeout",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "invalid JSON",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "invalid JSON",
+      "status": 502,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "valid empty200",
+      "status": 200,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Instagram",
+      "scenario": "missing configuration",
+      "status": 503,
+      "type": "application/json",
+      "sanitized": true
+    },
+    {
+      "provider": "Google",
+      "scenario": "missing configuration",
+      "status": 503,
+      "type": "application/json",
+      "sanitized": true
+    }
+  ]
+}

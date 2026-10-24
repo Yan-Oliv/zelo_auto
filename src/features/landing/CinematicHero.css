@@ -124,8 +124,8 @@
   line-height: 1.3;
   letter-spacing: .55em;
 }
-.zelo-hero-slogan-left { color: #fff; text-shadow: 0 1px 5px #000; }
-.zelo-hero-slogan-right { color: #dcad4b; text-shadow: 0 1px 5px #000; }
+.zelo-hero-slogan-left { color: #fff; text-shadow: 0 0 1px #000, 0 0 1px #000, 0 1px 5px #000; }
+.zelo-hero-slogan-right { color: #dcad4b; text-shadow: 0 0 1px #000, 0 0 1px #000, 0 1px 5px #000; }
 .zelo-hero-slogan::before,.zelo-hero-slogan::after { content: ''; position: absolute; top: calc(100% + 9px); height: 1px; width: 30.3%; background: linear-gradient(90deg,#d9d3c9b0,#d9d3c9b0); }
 .zelo-hero-slogan::before { left: 0; }
 .zelo-hero-slogan::after { right: 0; background: #c6a45caa; }

@@ -1,6 +1,6 @@
 # ZE-03-REWORK-POST-ZE09 - Final technical report
 
-State: WAITING_USER_ACTION. Technical implementation and checks reviewed by root/Nox; owner visual acceptance of this new implementation is PENDING. The approved reference does not automatically approve this implementation. No production deployment or push.
+State: COMPLETED. Technical implementation and checks reviewed by root/Nox; owner explicitly accepted the implemented hero on2026-10-24: "A hero está aprovada visualmente". The approved reference does not automatically approve this implementation. No production deployment or push.
 
 ## Authorization and preserved state
 The owner's attached contract (84bdb9ad-ec19-444c-9596-9aa33647b2ca) explicitly authorizes this limited exception while ZE-09 remains WAITING_USER_ACTION. ZE-09 criteria and its pending client/Profile/API/OAuth gates are unchanged. Google Cloud zelo-integracoes / 878742106609 exists; API approval is not established. Resume ZE-09 when those external approvals arrive. ZE-10/11/12 remain QUEUED. Historical ZE-03-REWORK remains COMPLETED; no duplicate third sprint was created.
@@ -45,3 +45,7 @@ Evidence directory: .nox/evidence/ZE-03-REWORK-POST-ZE09/. Baseline desktop/tabl
 
 ## Git and rollback
 Final scoped commit: the commit carrying this report; resolve its hash with git log -- .nox/ZE-03-REWORK-POST-ZE09-Report.md after the parent Git operation. A commit cannot embed its own hash. No push/deploy. Checkpoint remains recoverable. Rollback by selectively restoring only modified hero/product files from checkpoint after reviewing the diff; never reset/clean or overwrite ZE-09 updates. The ignored backup preserves the pre-existing dirty state of four ZE-09 documents.
+
+
+## Owner acceptance2026-10-24
+The latest explicit statement closes only this hero visual gate. Evidence: `.nox/evidence/ZE-11/hero-owner-approval.json`. It does not grant final landing acceptance, Google integration acceptance, production or ZE-12 authorization. Historical performance limits remain documented.

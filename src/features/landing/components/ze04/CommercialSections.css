@@ -27,7 +27,7 @@
 .ze4-service-card { position:relative; min-width:0; min-height:340px; overflow:hidden; border:1px solid var(--ze4-line,#dfddd7); border-radius:11px; background:#fff; box-shadow:0 3px 15px #29251f03; transition:border-color .3s,box-shadow .3s; }
 .ze4-service-card:hover,.ze4-service-card:focus-within { border-color:#c8a05f; box-shadow:0 12px 26px #5f471416; }
 .ze4-service-photo { position:absolute; inset:4px 4px auto; height:67%; overflow:hidden; border-radius:7px 7px 0 0; }
-.ze4-service-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,#fff 1%,#ffffffdf 10%,#ffffff12 48%,transparent 75%); }
+.ze4-service-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,#fff 0%,#fffffff7 30%,#ffffffc2 42%,#ffffff12 58%,transparent 80%); }
 .ze4-service-photo img { width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ze4-ease,cubic-bezier(.16,1,.3,1)); }
 .ze4-service-card:hover .ze4-service-photo img { transform:scale(1.03); }
 .ze4-service-copy { position:relative; z-index:1; padding:140px 25px 21px; }
@@ -243,4 +243,21 @@
   .ze4-quality-scene>img { height:280px; }
   .ze4-quality-attributes { width:220px; bottom:36px; }
   .ze4-quality-caption { font-size:10px; }
+}
+
+/* Use the existing licensed geometric face once the editorial content is near.
+   The hero retains its approved typography and composition. */
+.ze4-page[data-editorial-font="ready"] :is(.ze4-commercial-title,.ze4-service-copy h3,.ze4-results-copy h2,.ze4-quality h2) {
+  font-family:'Michroma Community','Montserrat',sans-serif;
+  font-weight:400;
+  transform:none;
+}
+.ze4-page[data-editorial-font="ready"] .ze4-commercial-title { font-size:clamp(32px,3.8vw,64px); line-height:1.1; letter-spacing:-.045em; }
+.ze4-page[data-editorial-font="ready"] .ze4-service-copy h3 { letter-spacing:.055em; }
+@media(max-width:1100px) {
+  .ze4-page[data-editorial-font="ready"] .ze4-commercial-title { font-size:clamp(30px,4.6vw,48px); }
+}
+@media(max-width:600px) {
+  .ze4-page[data-editorial-font="ready"] .ze4-commercial-title { font-size:clamp(24px,6.6vw,36px); letter-spacing:-.055em; }
+  .ze4-page[data-editorial-font="ready"] .ze4-quality h2 { font-size:clamp(23px,6.1vw,33px); letter-spacing:-.04em; white-space:normal; }
 }

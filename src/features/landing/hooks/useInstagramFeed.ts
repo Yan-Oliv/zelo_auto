@@ -64,6 +64,7 @@ export function useInstagramFeed() {
       try {
         const response = await fetch('/api/instagram-feed', { signal: controller.signal, headers: { accept: 'application/json' } })
         const payload = await response.json() as FeedResponse
+        if (controller.signal.aborted) return
         if (!response.ok) throw new Error(payload.error?.message ?? 'Publicações indisponíveis no momento.')
         const normalizedPosts = normalizePosts(payload)
         setPosts(normalizedPosts)
@@ -77,8 +78,10 @@ export function useInstagramFeed() {
       }
     }
 
-    void loadFeed()
-    return () => controller.abort()
+    // StrictMode immediately tears down and remounts effects in development.
+    // Let that cleanup cancel the scheduled work before starting a real request.
+    const start = window.setTimeout(() => { void loadFeed() }, 0)
+    return () => { window.clearTimeout(start); controller.abort() }
   }, [])
 
   return { posts, status, error, source: 'instagram-login' as const }

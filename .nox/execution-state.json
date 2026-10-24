@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "project": "zelo_autoestica",
   "status": "WAITING_USER_ACTION",
-  "currentSprint": "ZE-09",
-  "currentStep": "Google approval/OAuth and prior hero owner visual gates remain external; ZE-10.2 and SKG work technically complete",
+  "currentSprint": "ZE-11",
+  "currentStep": "Independent homologation and all internal fixes complete; Google, full visual acceptance and performance tradeoff remain pending",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Owner visual review locally; verify Google approval in omnyatech Gmail and configure authorized server secrets. Do not advance ZE-11/12.",
+  "nextAction": "Owner validates preview and decides unmet performance tradeoff; configure authorized Google source after approval. Do not execute ZE-12.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -656,20 +656,20 @@
     {
       "id": "ZE-03-REWORK-POST-ZE09",
       "title": "ZE-03-REWORK — correção visual pós-ZE-09",
-      "status": "WAITING_USER_ACTION",
+      "status": "COMPLETED",
       "dependsOn": "ZE-09",
       "criteria": [
         {
           "id": "ZE-03-RW-C01",
           "description": "Rendered fidelity to new_interface/1.png; independent layers; unbranded reference car",
           "required": true,
-          "status": "PENDING",
+          "status": "PASS",
           "evidence": [
             "ZE-03-REWORK-POST-ZE09-Report.md",
-            "evidence/ZE-03-REWORK-POST-ZE09/visual-comparison.json"
+            "evidence/ZE-03-REWORK-POST-ZE09/visual-comparison.json",
+            "evidence/ZE-11/hero-owner-approval.json"
           ],
-          "technicalApproval": "PASS",
-          "pendingAction": "Owner visually accepts the new implementation; reference approval alone is insufficient."
+          "technicalApproval": "PASS"
         },
         {
           "id": "ZE-03-RW-C02",
@@ -713,12 +713,20 @@
         "predecessorStatePreserved": "ZE-09 WAITING_USER_ACTION",
         "contract": "attachment 84bdb9ad-ec19-444c-9596-9aa33647b2ca/Pasted text.txt"
       },
-      "humanVisualApproval": false,
+      "humanVisualApproval": true,
       "technicalApproval": "PASS_WITH_DOCUMENTED_PERFORMANCE_LIMITS",
       "performanceLimits": {
         "mobile": "81 -> 80; LCP4808 -> 5034ms",
         "desktop": "67 -> 66; LCP4957 -> 5333ms",
         "note": "Observed samples, higher image transfer; no improvement or full performance PASS claimed."
+      },
+      "ownerApproval": {
+        "date": "2026-10-24",
+        "scope": "Implemented cinematic hero only; does not approve complete ZE-11 landing",
+        "ownerStatement": "A hero está aprovada visualmente",
+        "acceptedSprint": "ZE-03-REWORK-POST-ZE09",
+        "implementationCommit": "cbd4b26",
+        "technicalReport": ".nox/ZE-03-REWORK-POST-ZE09-Report.md"
       }
     },
     {
@@ -949,8 +957,61 @@
     {
       "id": "ZE-11",
       "title": "HomologaÃ§Ã£o local",
-      "status": "QUEUED",
-      "criteria": [],
+      "status": "WAITING_USER_ACTION",
+      "criteria": [
+        {
+          "id": "ZE-11-C01",
+          "description": "Regression functionality in authorized available/unavailable states",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-11-Report.md",
+            "evidence/ZE-11/qa-summary.json",
+            "evidence/ZE-11/qa-local/results.json"
+          ],
+          "limits": "Does not homologate authentic Google source; external gate retained in C04/ZE-09"
+        },
+        {
+          "id": "ZE-11-C02",
+          "description": "Five models, eleven viewports, motion and interactions technically reviewed",
+          "required": true,
+          "status": "PASS",
+          "evidence": [
+            "ZE-11-Report.md",
+            "evidence/ZE-11/qa-matrix/qa-global.json",
+            "evidence/ZE-11/qa-affected/results.json",
+            "evidence/ZE-11/review.json"
+          ],
+          "limits": "Human full-page acceptance remains separate"
+        },
+        {
+          "id": "ZE-11-C03",
+          "description": "Technical quality and measured performance targets",
+          "required": true,
+          "status": "PENDING",
+          "subgates": {
+            "buildLintSEOAnalyticsSecurityAccessibility": "PASS within evidence limits",
+            "mobilePerformanceTargets": "FAIL - score69/LCPsim6367ms; owner tradeoff decision pending"
+          },
+          "evidence": [
+            "ZE-11-Report.md",
+            "evidence/ZE-11/performance-final-summary.json",
+            "evidence/ZE-11/security-preservation.json"
+          ]
+        },
+        {
+          "id": "ZE-11-C04",
+          "description": "Evidence, integrated Google, human visual acceptance and handoff",
+          "required": true,
+          "status": "PENDING",
+          "evidence": [
+            "ZE-11-Report.md",
+            "evidence/ZE-11/hero-owner-approval.json",
+            "evidence/ZE-11/qa-summary.json"
+          ],
+          "pendingAction": "Confirm Google approval and authentic data; explicitly accept entire landing and measured performance tradeoff before ZE-12"
+        }
+      ],
       "dependencies": [
         "ZE-09",
         "ZE-03-REWORK-POST-ZE09",
@@ -959,7 +1020,46 @@
         "ZE-UX-OBS-01",
         "ZE-10.2",
         "ZE-UX-SKG-01"
-      ]
+      ],
+      "deliveries": [
+        "Full regression QA",
+        "Visual and functional homologation and handoff"
+      ],
+      "exception": "Owner explicitly authorizes independent validation while ZE-09 Google remains pending",
+      "technicalApproval": "Independent functional/visual checks PASS; mobile performance targets NOT MET",
+      "humanVisualApproval": false,
+      "performanceApproval": false,
+      "externalGoogleApproval": false,
+      "remainingActions": [
+        "Owner confirms Google approval/OAuth/server configuration and real data",
+        "Owner accepts full current landing and errors",
+        "Owner decides explicitly on unmet mobile performance tradeoff"
+      ],
+      "performance": {
+        "coldMobile": {
+          "score": 69,
+          "LCPsimulated": 6367,
+          "LCPobserved": 2203
+        },
+        "warmMobile": {
+          "score": 96,
+          "LCPsimulated": 2777,
+          "LCPobserved": 144
+        },
+        "coldDesktop": {
+          "score": 95,
+          "LCPsimulated": 1413,
+          "LCPobserved": 2196
+        },
+        "warmDesktop": {
+          "score": 100,
+          "LCPsimulated": 584,
+          "LCPobserved": 139
+        },
+        "CLS": 0,
+        "targetsMet": false,
+        "evidence": "evidence/ZE-11/performance-final-summary.json"
+      }
     },
     {
       "id": "ZE-12",
@@ -969,5 +1069,5 @@
     }
   ],
   "lastCompletedSprint": "ZE-10.2",
-  "currentApprovedSprint": "ZE-10.2"
+  "currentApprovedSprint": "ZE-11"
 }

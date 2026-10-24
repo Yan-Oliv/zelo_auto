@@ -1,0 +1,753 @@
+{
+  "phase": "baseline",
+  "root": ".nox/evidence/ZE-11/baseline-dist",
+  "commit": "0827b0d",
+  "conditions": "Sequential one sample/profile/state. Explicit LH simulated mobileSlow4G / desktopDense4G+desktop UA. API503 stable deterministic. No compression matching prior local static harness; asset Cache-Control mirrors public/_headers. Cold fresh Chrome. Warm natural intro completion then same Chrome/session/cache, disableStorageReset true. Not production network/CDN or field data.",
+  "runs": [
+    {
+      "mode": "mobile",
+      "state": "cold",
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 6310,
+      "observedLCP": 659,
+      "FCP": 3611,
+      "TBT": 44,
+      "CLS": 0,
+      "sessionBefore": null,
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 17,
+          "transferSize": 1337538
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 6,
+          "transferSize": 713285
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 365775
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 110216
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 3,
+          "transferSize": 78296
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 2,
+          "transferSize": 60249
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 6.467
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 7.454
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 15.329
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 629.321
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-3-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 461,
+            "bottom": 645,
+            "left": 25,
+            "right": 387,
+            "width": 363,
+            "height": 184
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "blocking": "Est savings of 750 ms",
+      "warnings": [],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "mobile",
+      "state": "warm",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 2627,
+      "observedLCP": 133,
+      "FCP": 646,
+      "TBT": 66,
+      "CLS": 0,
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 16,
+          "transferSize": 723256
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 6,
+          "transferSize": 713285
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 254
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 3,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 3.117
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 6.18
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 6.808
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 117.225
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-0-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,3,DIV,2,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body",
+          "boundingRect": {
+            "top": 461,
+            "bottom": 645,
+            "left": 25,
+            "right": 387,
+            "width": 363,
+            "height": 184
+          },
+          "snippet": "<img class=\"zelo-hero-car-body\" sizes=\"(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw\" alt=\"\" width=\"710\" height=\"360\" decoding=\"async\" fetchpriority=\"high\" srcset=\"/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.w…\" src=\"http://127.0.0.1:4211/hero/responsive/car-final-640.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-car > img.zelo-hero-car-body"
+        }
+      ],
+      "warnings": [],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "desktop",
+      "state": "cold",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 1531,
+      "observedLCP": 490,
+      "FCP": 685,
+      "TBT": 0,
+      "CLS": 0,
+      "sessionBefore": null,
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 20,
+          "transferSize": 1409679
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 9,
+          "transferSize": 785426
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 365775
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 110216
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 3,
+          "transferSize": 78296
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 2,
+          "transferSize": 60249
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 3.399
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 4.263
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 11.066
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 471.274
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-2-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,1,DIV,0,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop",
+          "boundingRect": {
+            "top": 0,
+            "bottom": 801,
+            "left": 0,
+            "right": 1425,
+            "width": 1425,
+            "height": 801
+          },
+          "snippet": "<img class=\"zelo-hero-backdrop\" sizes=\"(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw\" alt=\"\" width=\"1672\" height=\"940\" fetchpriority=\"high\" decoding=\"async\" srcset=\"/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-f…\" src=\"/hero/showroom-final.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop"
+        }
+      ],
+      "blocking": "Est savings of 120 ms",
+      "warnings": [],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    },
+    {
+      "mode": "desktop",
+      "state": "warm",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 523,
+      "observedLCP": 128,
+      "FCP": 174,
+      "TBT": 0,
+      "CLS": 0,
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 19,
+          "transferSize": 795397
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 9,
+          "transferSize": 785426
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9717
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 254
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 1,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 3,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 4,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "breakdown": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Subpart"
+            },
+            {
+              "key": "duration",
+              "valueType": "ms",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "subpart": "timeToFirstByte",
+              "label": "Time to first byte",
+              "duration": 2.734
+            },
+            {
+              "subpart": "resourceLoadDelay",
+              "label": "Resource load delay",
+              "duration": 3.712
+            },
+            {
+              "subpart": "resourceLoadDuration",
+              "label": "Resource load duration",
+              "duration": 9
+            },
+            {
+              "subpart": "elementRenderDelay",
+              "label": "Element render delay",
+              "duration": 112.924
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "lhId": "page-0-IMG",
+          "path": "1,HTML,1,BODY,0,DIV,0,DIV,2,MAIN,0,SECTION,1,DIV,0,IMG",
+          "selector": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop",
+          "boundingRect": {
+            "top": 0,
+            "bottom": 801,
+            "left": 0,
+            "right": 1425,
+            "width": 1425,
+            "height": 801
+          },
+          "snippet": "<img class=\"zelo-hero-backdrop\" sizes=\"(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw\" alt=\"\" width=\"1672\" height=\"940\" fetchpriority=\"high\" decoding=\"async\" srcset=\"/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-f…\" src=\"/hero/showroom-final.webp\">",
+          "nodeLabel": "main#main-content > section#hero > div.zelo-hero-stage > img.zelo-hero-backdrop"
+        }
+      ],
+      "warnings": [],
+      "settings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": true,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      }
+    }
+  ],
+  "harnessNote": "Initial cold mobile succeeded; attempted warm failed because Lighthouse own target closes. Remaining warm runs use explicit Puppeteer page, natural previsit until intro complete, same browser/cache on audited reload. No best-of selection."
+}
