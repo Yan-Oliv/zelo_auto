@@ -1,0 +1,30 @@
+{
+  "x": {
+    "bootstrap": {
+      "state": "settled",
+      "startedAt": 86
+    },
+    "prerendered": false,
+    "html": "<div id=\"root\"><div class=\"ze-error\" data-boot-fallback=\"\" data-boot-failed=\"\" data-error-code=\"500\">\n      <header class=\"ze-error__header\">\n        <a href=\"/\" aria-label=\"Zelo — início\"><img class=\"ze-error__logo\" src=\"/hero/responsive/zelo-logo-480.webp\" width=\"240\" height=\"60\" alt=\"Zelo Auto Estética\"></a>\n        <a class=\"ze-error__back\" href=\"/\">Voltar ao início <span aria-hidden=\"true\">↗</span></a>\n      </header>\n      <main id=\"error-root\" class=\"ze-error__main\" aria-labelledby=\"ze-error-heading\">\n        <div class=\"ze-error__art\" aria-hidden=\"true\">\n          <span class=\"ze-error__wordmark\">ZELO</span>\n          <svg class=\"ze-error__number\" viewBox=\"0 0 640 240\" focusable=\"false\"><text x=\"320\" y=\"204\" text-anchor=\"middle\">500</text></svg>\n          <img class=\"ze-error__silhouette\" data-error-src=\"/errors/silhouette.svg\" alt=\"\" width=\"560\" height=\"70\" src=\"/errors/silhouette.svg\"><noscript>&lt;img class=\"ze-error__silhouette\" src=\"/errors/silhouette.svg\" alt=\"\" width=\"560\" height=\"70\"&gt;</noscript>\n        </div>\n        <div class=\"ze-error__copy\">\n          <p class=\"ze-error__eyebrow\">Cada detalhe importa.</p>\n          <h1 id=\"ze-error-heading\" tabindex=\"-1\"><span data-boot-pending=\"\">Bem-vindo à Zelo</span><span data-boot-error=\"\">Algo saiu do percurso</span></h1>\n          <p class=\"ze-error__description\"><span data-boot-pending=\"\">Seu próximo cuidado começa aqui.</span><span data-boot-error=\"\">Não foi possível concluir esta ação. Tente novamente em instantes.</span></p>\n          <div class=\"ze-error__actions\">\n            <a class=\"ze-error__button z",
+    "imgs": [],
+    "body": "VOLTAR AO INÍCIO\n↗\nZELO\n500\n\nCADA DETALHE IMPORTA.\n\nALGO SAIU DO PERCURSO\n\nNão foi possível concluir esta ação. Tente no"
+  },
+  "errors": [
+    "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    "Cannot read properties of null (reading 'dataset')"
+  ],
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    }
+  ]
+}

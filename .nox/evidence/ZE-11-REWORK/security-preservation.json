@@ -1,0 +1,30 @@
+{
+  "baseline": "6bdd370632009ecd230298ba9384f33453d45a2d",
+  "protectedDocs": [
+    {
+      "file": ".nox/ZE-09-Google-Handoff.md",
+      "unchanged": true
+    },
+    {
+      "file": ".nox/ZE-09-Report.md",
+      "unchanged": true
+    }
+  ],
+  "protectedAssetAndIdentityFiles": 80,
+  "protectedChanges": [],
+  "unexpectedProductChanges": [],
+  "credentialFilesTracked": false,
+  "bundleFilesScanned": 21,
+  "secretSignatureFindings": [],
+  "untrackedOwnerInputsPreserved": [
+    {
+      "path": "new_interface",
+      "exists": true
+    },
+    {
+      "path": "src/planos",
+      "exists": true
+    }
+  ],
+  "limits": "Signature scan complements code/API review, not an exhaustive secret scanner. No .env values or provider payloads read or recorded. No deployment/push/remote mutation performed."
+}

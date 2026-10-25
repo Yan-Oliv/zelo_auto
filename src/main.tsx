@@ -1,8 +1,7 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import App from './App'
 import { MotionSettingsProvider } from '@shared/motion/MotionSettings'
-import { LazyMotion, domAnimation } from 'framer-motion'
 import './index.css'
 import { GlobalErrorBoundary } from '@shared/errors/GlobalErrorBoundary'
 import { applyErrorMetadata } from '@shared/errors/errorMetadata'
@@ -18,7 +17,7 @@ if (/^\/debug-(model|crossfade)\/?$/.test(window.location.pathname)) {
 }
 
 const rootContainer = document.getElementById('root')!
-const nativeRecovery = rootContainer.innerHTML
+const nativeRecovery = document.querySelector<HTMLTemplateElement>('#zelo-native-recovery')?.innerHTML ?? rootContainer.innerHTML
 const rootOptions = import.meta.env.PROD ? {
   // componentDidCatch owns the sanitized caught-error diagnostic.
   onCaughtError: () => {},
@@ -39,12 +38,14 @@ const rootOptions = import.meta.env.PROD ? {
   },
 } : undefined
 
-createRoot(rootContainer, rootOptions).render(
+const application = (
   <StrictMode>
     <GlobalErrorBoundary>
       <MotionSettingsProvider>
-      <LazyMotion features={domAnimation} strict><App /></LazyMotion>
+      <App />
       </MotionSettingsProvider>
     </GlobalErrorBoundary>
-  </StrictMode>,
+  </StrictMode>
 )
+if (rootContainer.hasAttribute('data-prerendered') && window.location.pathname === '/') hydrateRoot(rootContainer, application, rootOptions)
+else { rootContainer.removeAttribute('data-prerendered'); createRoot(rootContainer, rootOptions).render(application) }

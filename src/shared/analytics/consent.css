@@ -14,3 +14,6 @@
 .zelo-privacy-choice input { width:20px; height:20px; accent-color:#8b6a31; }
 @media (max-width:600px) { .zelo-consent { bottom:12px; left:12px; width:calc(100% - 24px); padding:16px; } .zelo-privacy-panel { padding:20px; } }
 @media (prefers-reduced-motion:reduce) { .zelo-consent { transform:none!important; opacity:1!important; transition:none!important; } }
+.zelo-consent { animation:zelo-consent-enter .35s ease-out both; }
+@keyframes zelo-consent-enter { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+@media(prefers-reduced-motion:reduce) { .zelo-consent { animation:none; } }

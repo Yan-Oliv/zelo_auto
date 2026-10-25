@@ -10,6 +10,9 @@
 /favicon-optimized.png
   Cache-Control: public, max-age=31536000, immutable
 
+/favicon-64-v1.png
+  Cache-Control: public, max-age=31536000, immutable
+
 /robots.txt
   Content-Type: text/plain; charset=utf-8
 

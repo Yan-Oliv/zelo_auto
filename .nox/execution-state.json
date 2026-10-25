@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "WAITING_USER_ACTION",
-  "currentSprint": "ZE-11",
-  "currentStep": "Independent homologation and owner visual acceptance complete; official Google and performance tradeoff remain pending",
+  "status": "QUEUED",
+  "currentSprint": null,
+  "currentStep": "ZE-11 completed; ZE-12 queued and not started",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
-  "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Confirm official Google approval/OAuth/authentic data and explicitly decide unmet mobile performance tradeoff. ZE-12 remains blocked.",
+  "stopReason": null,
+  "nextAction": "ZE-12 requires separate execution authorization. ZE-09 remains externally blocked under approved release exception.",
   "sprints": [
     {
       "id": "ZE-01",
@@ -479,7 +479,7 @@
     {
       "id": "ZE-09",
       "title": "ReputaÃ§Ã£o Google",
-      "status": "WAITING_USER_ACTION",
+      "status": "BLOCKED_EXTERNAL",
       "criteria": [
         {
           "id": "ZE-09-C01",
@@ -530,7 +530,8 @@
           ]
         }
       ],
-      "pendingAction": "Google approval unconfirmed in request mailbox omnyatech@gmail.com; five server variables absent; no real authorized data verified. See ZE-09-Approval-Status.md"
+      "pendingAction": "Google approval unconfirmed in request mailbox omnyatech@gmail.com; five server variables absent; no real authorized data verified. See ZE-09-Approval-Status.md",
+      "externalBlocker": "Owner states their requested actions are done; waiting for Google approval. Official API/OAuth data still unverified."
     },
     {
       "id": "ZE-09.1",
@@ -957,7 +958,7 @@
     {
       "id": "ZE-11",
       "title": "HomologaÃ§Ã£o local",
-      "status": "WAITING_USER_ACTION",
+      "status": "COMPLETED",
       "criteria": [
         {
           "id": "ZE-11-C01",
@@ -967,7 +968,9 @@
           "evidence": [
             "ZE-11-Report.md",
             "evidence/ZE-11/qa-summary.json",
-            "evidence/ZE-11/qa-local/results.json"
+            "evidence/ZE-11/qa-local/results.json",
+            "ZE-11-REWORK-Report.md",
+            "evidence/ZE-11-REWORK/qa-report.md"
           ],
           "limits": "Does not homologate authentic Google source; external gate retained in C04/ZE-09"
         },
@@ -981,7 +984,9 @@
             "evidence/ZE-11/qa-matrix/qa-global.json",
             "evidence/ZE-11/qa-affected/results.json",
             "evidence/ZE-11/review.json",
-            "evidence/ZE-11/owner-visual-approval.json"
+            "evidence/ZE-11/owner-visual-approval.json",
+            "ZE-11-REWORK-Report.md",
+            "evidence/ZE-11-REWORK/qa-report.md"
           ],
           "limits": "Owner explicitly accepted current candidate visually; technical review and evidence remain preserved"
         },
@@ -989,33 +994,38 @@
           "id": "ZE-11-C03",
           "description": "Technical quality and measured performance targets",
           "required": true,
-          "status": "PENDING",
+          "status": "PASS",
           "subgates": {
             "buildLintSEOAnalyticsSecurityAccessibility": "PASS within evidence limits",
-            "mobilePerformanceTargets": "FAIL - score69/LCPsim6367ms; owner tradeoff decision pending"
+            "mobilePerformanceTargets": "PASS - three cold normal-motion samples98, simulated LCP2363/2356/2357ms; mobile CLS0; no waiver"
           },
           "evidence": [
             "ZE-11-Report.md",
             "evidence/ZE-11/performance-final-summary.json",
-            "evidence/ZE-11/security-preservation.json"
+            "evidence/ZE-11/security-preservation.json",
+            "ZE-11-REWORK-Report.md",
+            "evidence/ZE-11-REWORK/qa-report.md",
+            "evidence/ZE-11-REWORK/performance-final-summary.json"
           ]
         },
         {
           "id": "ZE-11-C04",
-          "description": "Evidence, integrated Google, human visual acceptance and handoff",
+          "description": "Evidence, owner visual acceptance, handoff and explicitly approved honest Google unavailable state",
           "required": true,
-          "status": "PENDING",
+          "status": "PASS",
           "evidence": [
             "ZE-11-Report.md",
             "evidence/ZE-11/hero-owner-approval.json",
             "evidence/ZE-11/qa-summary.json",
-            "evidence/ZE-11/owner-visual-approval.json"
+            "evidence/ZE-11/owner-visual-approval.json",
+            "ZE-11-REWORK-Report.md",
+            "evidence/ZE-11-REWORK/qa-report.md"
           ],
-          "pendingAction": "Confirm Google approval/authentic data and explicitly resolve unmet mobile performance before ZE-12",
+          "pendingAction": null,
           "subgates": {
-            "humanVisualAcceptance": "PASS - owner explicit statement",
-            "officialGoogleIntegration": "PENDING",
-            "performanceTradeoffDecision": "PENDING"
+            "humanVisualAcceptance": "PASS - owner accepted full visual candidate; geometry preserved and Root reviewed rework",
+            "officialGoogleIntegration": "DEFERRED - BLOCKED_EXTERNAL in ZE-09; owner explicit release exception permits honest unavailable UI, not authenticated source PASS",
+            "performanceTradeoffDecision": "Not required: actual performance targets met without waiver"
           }
         }
       ],
@@ -1037,10 +1047,7 @@
       "humanVisualApproval": true,
       "performanceApproval": false,
       "externalGoogleApproval": false,
-      "remainingActions": [
-        "Owner confirms Google approval/OAuth/server configuration and real data",
-        "Owner decides explicitly on unmet mobile performance tradeoff"
-      ],
+      "remainingActions": [],
       "performance": {
         "coldMobile": {
           "score": 69,
@@ -1077,7 +1084,31 @@
           "Exception for unmet mobile performance targets",
           "Deployment/push/ZE-12"
         ]
-      }
+      },
+      "rework": {
+        "id": "ZE-11-REWORK",
+        "baseline": "6bdd370",
+        "targets": {
+          "coldMobilePerformance": 90,
+          "coldMobileLCP": 2500
+        },
+        "checkpoint": "ZE-11-REWORK-start-20261024",
+        "scope": [
+          "Genuine measured mobile performance correction preserving accepted visual/intro",
+          "Bounded automatic Google data recovery once valid server authorization exists; regression and handoff"
+        ],
+        "releaseException": "Owner permits eventual publication with honest Google unavailable UI; authentic source remains externally blocked, not a ZE-11 completion blocker",
+        "notAuthorized": [
+          "ZE-12 execution",
+          "Deployment/push",
+          "Cloud/OAuth/billing changes"
+        ],
+        "status": "COMPLETED",
+        "report": "ZE-11-REWORK-Report.md",
+        "performanceEvidence": "evidence/ZE-11-REWORK/performance-final-summary.json",
+        "QAEvidence": "evidence/ZE-11-REWORK/qa-summary.json"
+      },
+      "completedAt": "2026-10-24"
     },
     {
       "id": "ZE-12",
@@ -1087,5 +1118,5 @@
     }
   ],
   "lastCompletedSprint": "ZE-10.2",
-  "currentApprovedSprint": "ZE-11"
+  "currentApprovedSprint": null
 }

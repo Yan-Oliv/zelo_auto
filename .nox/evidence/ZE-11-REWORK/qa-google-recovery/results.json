@@ -1,0 +1,49 @@
+{
+  "kind": "TEST DATA isolated actual source hook. Controlled IO/visibility and Playwright clock; no Google authorization or OAuth configured by test.",
+  "results": [
+    {
+      "name": "Lazy source hook zero far calls; visible near config recovery only after5min, focus dedupe",
+      "status": "PASS",
+      "evidence": {
+        "initial0": true,
+        "firstFailed1": true,
+        "automaticAfter5min": 2,
+        "verifiedData": true,
+        "noFocusDup": true
+      }
+    },
+    {
+      "name": "Hidden document does not probe; visible near resumes once deadline passed",
+      "status": "PASS",
+      "evidence": {
+        "hidden6minutesCalls": 1,
+        "visibleCalls": 2
+      }
+    },
+    {
+      "name": "Far section does not probe; reentry afterdeadline fetches once",
+      "status": "PASS",
+      "evidence": {
+        "far6minutesCalls": 1,
+        "reentryCalls": 2
+      }
+    },
+    {
+      "name": "Persistent configuration error has bounded5min probes, not hot retryloop",
+      "status": "PASS",
+      "evidence": {
+        "after0min": 1,
+        "after5min": 2,
+        "after10min": 3
+      }
+    },
+    {
+      "name": "Manualretry remains60s and can recover beforeautomatic5min",
+      "status": "PASS",
+      "evidence": {
+        "manualEarlyBlocked": true,
+        "manualAfter61sRecovered": true
+      }
+    }
+  ]
+}

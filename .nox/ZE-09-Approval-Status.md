@@ -16,3 +16,8 @@ Local inspection was limited to variable names and nonempty-presence flags. The 
 4. Once configured locally, restart the existing local runtime and verify genuine business identity, average/count/reviews and official links. The frontend already consumes that authorized endpoint without code changes. Do not mark the real integration PASS based on TEST DATA captures.
 
 No Google Cloud account was changed, no API/billing enabled, no application submitted, and no production deployment performed. The current exact external condition is **approval unconfirmed and local Google configuration absent**; earlier statements about an ongoing Google analysis are owner-reported history rather than a newly observed Google decision.
+
+
+## 2026-10-24 — Classificação e decisão atual do proprietário
+
+ZE-09 é **BLOCKED_EXTERNAL**: o proprietário confirma que realizou suas ações e aguarda o Google. As instruções históricas acima não representam uma nova solicitação de ação. A publicação futura pode usar o estado indisponível honesto por decisão explícita do proprietário; isso não valida avaliações oficiais nem autoriza deploy nesta execução. A recuperação limitada do endpoint foi validada no ZE-11-REWORK; aprovação administrativa isolada não provisiona OAuth, IDs ou segredos. Ver `.nox/ZE-11-REWORK-Report.md`.

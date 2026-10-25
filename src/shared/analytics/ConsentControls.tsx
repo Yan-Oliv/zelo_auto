@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
-import { AnimatePresence, m, useReducedMotion } from 'framer-motion'
 import { getConsent, initializeAnalytics, setConsent, subscribeConsent } from './analytics'
 import './consent.css'
 
 export function ConsentControls() {
-  const reducedMotion = useReducedMotion()
   const consent = useSyncExternalStore(subscribeConsent, getConsent)
   const [preferences, setPreferences] = useState(false)
   const [analytics, setAnalytics] = useState(consent === 'granted')
@@ -20,8 +18,7 @@ export function ConsentControls() {
   const open = () => { setAnalytics(consent === 'granted'); setPreferences(true) }
   return <>
     <button className="zelo-privacy-access" type="button" onClick={open}>Privacidade e cookies</button>
-    <AnimatePresence>
-      {(consent === 'unset' || preferences) && <m.aside className="zelo-consent" aria-labelledby="zelo-consent-title" initial={reducedMotion ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: 10 }} transition={{ duration: reducedMotion ? 0 : .35 }}>
+      {(consent === 'unset' || preferences) && <aside className="zelo-consent" aria-labelledby="zelo-consent-title">
         <h2 id="zelo-consent-title">Privacidade e experiência</h2>
         <p>Utilizamos tecnologias opcionais para entender como nosso site é utilizado e melhorar sua experiência.</p>
         <div className="zelo-consent-actions">
@@ -29,8 +26,7 @@ export function ConsentControls() {
           <button type="button" onClick={() => { setConsent('denied'); setPreferences(false) }}>Recusar opcionais</button>
           <button type="button" onClick={open}>Configurar preferências</button>
         </div>
-      </m.aside>}
-    </AnimatePresence>
+      </aside>}
     {preferences && <div className="zelo-privacy-backdrop" onClick={event => { if (event.target === event.currentTarget) setPreferences(false) }}>
       <section className="zelo-privacy-panel" role="dialog" aria-modal="true" aria-labelledby="zelo-privacy-title" onKeyDown={event => {
         if (event.key === 'Escape') setPreferences(false)

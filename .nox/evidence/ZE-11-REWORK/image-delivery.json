@@ -1,0 +1,32 @@
+[
+  {
+    "src": "public/hero/responsive/car-final-420.webp",
+    "dst": "public/hero/responsive/car-final-420.avif",
+    "oldBytes": 36862,
+    "bytes": 22210
+  },
+  {
+    "src": "public/hero/responsive/car-final-640.webp",
+    "dst": "public/hero/responsive/car-final-640.avif",
+    "oldBytes": 68696,
+    "bytes": 39318
+  },
+  {
+    "src": "public/hero/car-final.webp",
+    "dst": "public/hero/responsive/car-final-710.avif",
+    "oldBytes": 92582,
+    "bytes": 43711
+  },
+  {
+    "src": "public/hero/showroom-final.webp",
+    "crop": {
+      "left": 366,
+      "top": 0,
+      "width": 940,
+      "height": 940
+    },
+    "dst": "public/hero/showroom-portrait.avif",
+    "oldPortraitBytes": 89568,
+    "bytes": 44003
+  }
+]

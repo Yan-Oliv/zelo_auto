@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon-optimized.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64-v1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>[data-error-src]:not([src]){display:none}[data-boot-fallback]{min-height:100vh;background:#fafaf8;color:#20201e;font-family:Arial,sans-serif}[data-boot-fallback]:not([data-boot-failed]) *{font-family:Arial,Helvetica,sans-serif!important}[data-boot-fallback] .ze-error__main{text-align:center;padding:24px}[data-boot-fallback] .ze-error__logo{max-width:240px;height:auto}[data-boot-fallback] [data-boot-error]{display:none}[data-boot-fallback] .ze-error__number{visibility:hidden}[data-boot-failed] [data-boot-error]{display:initial}[data-boot-failed] [data-boot-pending]{display:none}[data-boot-failed] .ze-error__number{visibility:visible}</style>
     <meta name="google-site-verification" content="KawUeGj82ZEXdiEELGEQJoAMm9taDoNDTRQtDpGAQFY" />
@@ -12,9 +12,12 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://zelo.omnyatech.com.br/" />
-    <link rel="preload" href="/hero/responsive/zelo-logo-480.webp" as="image" />
-    <link rel="preload" href="/hero/car-final.webp" as="image" fetchpriority="high" imagesrcset="/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.webp 640w, /hero/car-final.webp 710w" imagesizes="(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw" />
-    <link rel="preload" href="/hero/showroom-final.webp" as="image" fetchpriority="high" imagesrcset="/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w" imagesizes="(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw" />
+    <link rel="preload" href="/hero/responsive/zelo-logo-480.webp" as="image" media="(min-width: 601px)" />
+    <link rel="preload" href="/hero/responsive/zelo-logo-320.webp" as="image" media="(max-width: 600px)" />
+    <link rel="preload" media="(min-width: 1051px), (aspect-ratio > 1/1)" href="/hero/car-final.webp" as="image" fetchpriority="high" imagesrcset="/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.webp 640w, /hero/car-final.webp 710w" imagesizes="(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw" />
+    <link rel="preload" type="image/avif" media="(max-width: 1050px) and (max-aspect-ratio: 1/1)" href="/hero/responsive/car-final-710.avif" as="image" fetchpriority="high" imagesrcset="/hero/responsive/car-final-420.avif 420w, /hero/responsive/car-final-640.avif 640w, /hero/responsive/car-final-710.avif 710w" imagesizes="min(88vw, 58svh)" />
+    <link rel="preload" href="/hero/showroom-final.webp" as="image" fetchpriority="high" media="(aspect-ratio > 1/1)" imagesrcset="/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w" imagesizes="100vw" />
+    <link rel="preload" href="/hero/showroom-portrait.avif" type="image/avif" as="image" fetchpriority="high" media="(max-aspect-ratio: 1/1)" />
     <link rel="preload" href="/src/fontes/montserrat/Montserrat-Regular-latin.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content="Zelo Estética Automotiva em Catalão–GO" />
     <meta
@@ -102,6 +105,9 @@
       // Only sanitize metadata while boot has not committed; later failures belong to React/local handlers.
       window.addEventListener('error', function (event) {
         if (!(event instanceof ErrorEvent) && !(event.target instanceof HTMLScriptElement && event.target.type === 'module')) return;
+        var prerendered = document.querySelector('#root[data-prerendered]');
+        var recovery = document.getElementById('zelo-native-recovery');
+        if (prerendered && recovery) prerendered.innerHTML = recovery.innerHTML;
         if (!document.querySelector('[data-boot-fallback]')) return;
         document.querySelector('[data-boot-fallback]').setAttribute('data-boot-failed', '');
         document.querySelector('[data-boot-fallback]').setAttribute('data-error-code', '500');

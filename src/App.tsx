@@ -3,13 +3,13 @@ import { LandingPage } from '@features/landing/LandingPage'
 import { ErrorPage } from '@shared/errors/ErrorPage'
 
 const DebugCrossfadePage = lazy(async () => {
-  const module = await import('@features/debug/pages/DebugCrossfadePage')
-  return { default: module.DebugCrossfadePage }
+  const [module, motion] = await Promise.all([import('@features/debug/pages/DebugCrossfadePage'), import('framer-motion')])
+  return { default: () => <motion.LazyMotion features={motion.domAnimation} strict><module.DebugCrossfadePage /></motion.LazyMotion> }
 })
 
 const DebugModelPage = lazy(async () => {
-  const module = await import('@features/debug/pages/DebugModelPage')
-  return { default: module.DebugModelPage }
+  const [module, motion] = await Promise.all([import('@features/debug/pages/DebugModelPage'), import('framer-motion')])
+  return { default: () => <motion.LazyMotion features={motion.domAnimation} strict><module.DebugModelPage /></motion.LazyMotion> }
 })
 
 function App() {

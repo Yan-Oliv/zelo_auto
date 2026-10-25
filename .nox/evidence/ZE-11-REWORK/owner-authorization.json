@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-24",
+  "scope": "ZE-11-REWORK",
+  "visualAcceptancePreviouslyRecorded": true,
+  "request": "Execute ZE-11-REWORK focused on mobile performance so ZE-11 can be properly accepted and ZE-12 can follow",
+  "googleClassification": "BLOCKED_EXTERNAL - owner confirms their actions done, waiting Google",
+  "releaseException": "Future publication may retain honest Google unavailable state; automatic data activation when valid authorized endpoint responds",
+  "notAuthorized": [
+    "Deployment or push in this rework",
+    "ZE-12 execution",
+    "Cloud/OAuth/billing changes"
+  ],
+  "completionEvidence": [
+    "performance-final-summary.json",
+    "qa-summary.json"
+  ]
+}

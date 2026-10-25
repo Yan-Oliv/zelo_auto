@@ -68,19 +68,17 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     modulePreload: { polyfill: false },
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes('node_modules/three') || id.includes('@react-three')) {
-            return 'three'
-          }
-          if (id.includes('node_modules/framer-motion')) {
-            return 'motion'
-          }
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'react'
-          }
-          return undefined
+        codeSplitting: {
+          // Keep React's shared runtime out of the deferred motion/3D chunks.
+          // Recursive capture previously made the initial entry import motion.
+          includeDependenciesRecursively: false,
+          groups: [
+            { name: 'react', test: /node_modules[\\/](?:react|react-dom|scheduler)(?:[\\/]|$)/, priority: 30 },
+            { name: 'motion', test: /node_modules[\\/](?:framer-motion|motion-dom|motion-utils)(?:[\\/]|$)/, priority: 20 },
+            { name: 'three', test: /node_modules[\\/](?:three|@react-three)(?:[\\/]|$)/, priority: 10 },
+          ],
         },
       },
     },

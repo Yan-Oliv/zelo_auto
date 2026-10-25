@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-24",
+  "status": "PASS applicable local laboratory mobile Performance>=90 and simulated LCP<=2500ms",
+  "method": "Native Wrangler Pages transport with browser-negotiated Brotli. Fresh Chrome; explicit normal motion; cold has no preseeded storage. Warm completes a natural previsit, waits for #servicos and bounded network idle after intro, then reloads in same page/cache/session. CPU/network/UA explicitly profile-specific. APIs use isolated empty server configuration. Lighthouse simulated metrics and local observed trace are distinct; not field measurements. Warm results are descriptive, not compared to previous incomplete-cache/raw-transport warm profiles.",
+  "sourceHTMLSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+  "sameSourceForAllSix": true,
+  "baseline": {
+    "commit": "6bdd370",
+    "transport": "Native Wrangler Pages Brotli, same explicit mobile normal-motion cold profile",
+    "samples": 1,
+    "performance": 80,
+    "LCP": 5129,
+    "evidence": "performance-pages-early-summary.json",
+    "limits": "Single comparable baseline; no baseline distribution or field confidence interval is claimed."
+  },
+  "runs": [
+    {
+      "file": "performance-native-final-mobile-cold-summary.json",
+      "variant": "final",
+      "mode": "mobile",
+      "state": "cold",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 2363,
+      "observedLCP": 1266,
+      "FCP": 1388,
+      "TBT": 0,
+      "CLS": 0,
+      "intro": [
+        {
+          "time": 40.299999952316284,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 94,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3405.2999999523163,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": []
+    },
+    {
+      "file": "performance-native-final-mobile-warm-summary.json",
+      "variant": "final",
+      "mode": "mobile",
+      "state": "warm",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 902,
+      "observedLCP": 72,
+      "FCP": 630,
+      "TBT": 19,
+      "CLS": 0,
+      "intro": [
+        {
+          "time": 50.89999997615814,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "runtimeErrors": []
+    },
+    {
+      "file": "performance-native-final-desktop-cold-summary.json",
+      "variant": "final",
+      "mode": "desktop",
+      "state": "cold",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 1265,
+      "observedLCP": 2098,
+      "FCP": 503,
+      "TBT": 0,
+      "CLS": 0.003333333333333334,
+      "intro": [
+        {
+          "time": 40.799999952316284,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 135.09999990463257,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3459.899999976158,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": []
+    },
+    {
+      "file": "performance-native-final-desktop-warm-summary.json",
+      "variant": "final",
+      "mode": "desktop",
+      "state": "warm",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "LCP": 246,
+      "observedLCP": 64,
+      "FCP": 174,
+      "TBT": 0,
+      "CLS": 0.003333333333333334,
+      "intro": [
+        {
+          "time": 39.89999997615814,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "runtimeErrors": []
+    },
+    {
+      "file": "performance-native-robustness-1-mobile-cold-summary.json",
+      "variant": "robustness-1",
+      "mode": "mobile",
+      "state": "cold",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 2356,
+      "observedLCP": 1296,
+      "FCP": 1381,
+      "TBT": 0,
+      "CLS": 0,
+      "intro": [
+        {
+          "time": 38.700000047683716,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 124.20000004768372,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3418.399999976158,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": []
+    },
+    {
+      "file": "performance-native-robustness-2-mobile-cold-summary.json",
+      "variant": "robustness-2",
+      "mode": "mobile",
+      "state": "cold",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 2357,
+      "observedLCP": 1295,
+      "FCP": 1382,
+      "TBT": 0,
+      "CLS": 0,
+      "intro": [
+        {
+          "time": 39.89999997615814,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 125.39999997615814,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3441.399999976158,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": []
+    }
+  ],
+  "mobileColdRobustness": {
+    "predeclaredExtraSamples": 2,
+    "reason": "Initial fixed final cold LCP2363ms was only137ms below target; two fixed additional fresh-Chrome samples check repeatability without choosing the best score.",
+    "samples": 3,
+    "performanceRange": [
+      98,
+      98
+    ],
+    "LCPRange": [
+      2356,
+      2363
+    ],
+    "LCPMedian": 2357,
+    "allSamplesMeetTargets": true,
+    "CLS": 0
+  },
+  "desktopCLS": {
+    "value": 0.003333333333333334,
+    "criterion": "<=0.1",
+    "status": "PASS",
+    "culprit": ".zelo-privacy-access footer link moves when deferred editorial content mounts; immediately available consent controls preserved. Small movement disclosed, not reported as CLS0."
+  },
+  "bestPractices": {
+    "mobile": 96,
+    "desktop": 92,
+    "causes": [
+      "Isolated Instagram endpoint intentionally returns503, reported by browser console.",
+      "Desktop reflection has existing sub-1% responsive aspect-ratio rounding (605x305 displayed vs640x325 intrinsic)."
+    ],
+    "limits": "No JavaScript runtime errors; no actual production provider validation asserted."
+  },
+  "budget": {
+    "baselineEarlyBytes": 1002506,
+    "candidate5EarlyBytes": 234402,
+    "earlySavingPercent": 76.6,
+    "baselineAuditTotalBytes": 1022631,
+    "candidate5AuditTotalBytes": 799725,
+    "totalSavingPercent": 21.8,
+    "limits": "Budget measured in comparable early baseline/candidate5 traces; final audit rows preserve their own resource details. Requests started<1000ms are early payload, not necessarily bytes fully received by1s."
+  },
+  "limits": [
+    "All results are local laboratory measurements, not field data or promises for all devices.",
+    "Lighthouse simulated LCP and observed unthrottled trace LCP are distinct metrics.",
+    "Normal-motion first-visit intro is actually playing; no preseeded completion session in cold runs.",
+    "Warm visits use completed natural previsit, #servicos loaded and bounded network idle; do not compare these warm results to prior raw-transport/partial-cache warm profiles.",
+    "No benchmark-detection product branches, disabled intro, best-of selection or unreported failed final samples."
+  ]
+}

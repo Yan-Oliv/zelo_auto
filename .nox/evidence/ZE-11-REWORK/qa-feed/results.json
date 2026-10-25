@@ -1,0 +1,57 @@
+{
+  "label": "TEST DATA only; actual Instagram integration tested separately",
+  "results": [
+    {
+      "name": "Instagram six, single request StrictMode and no invented posts",
+      "status": "PASS",
+      "evidence": {
+        "calls": 1,
+        "count": 6
+      }
+    },
+    {
+      "name": "Instagram partial, single request StrictMode and no invented posts",
+      "status": "PASS",
+      "evidence": {
+        "calls": 1,
+        "count": 2
+      }
+    },
+    {
+      "name": "Instagram empty, single request StrictMode and no invented posts",
+      "status": "PASS",
+      "evidence": {
+        "calls": 1,
+        "count": 0
+      }
+    },
+    {
+      "name": "Instagram unavailable, single request StrictMode and no invented posts",
+      "status": "PASS",
+      "evidence": {
+        "calls": 1,
+        "count": 0
+      }
+    },
+    {
+      "name": "Instagram loading skeleton and broken image honest fallback",
+      "status": "PASS",
+      "evidence": {
+        "skeletons": 6,
+        "brokenFallbacks": 6,
+        "action": "official profile preserved"
+      }
+    },
+    {
+      "name": "Instagram pending unmount abort/remount; stale response cannot overwrite latest",
+      "status": "PASS",
+      "evidence": {
+        "calls": 2,
+        "strictModeRequests": 1,
+        "remountFreshRequest": 1,
+        "staleCannotOverwrite": true,
+        "noReactErrors": true
+      }
+    }
+  ]
+}

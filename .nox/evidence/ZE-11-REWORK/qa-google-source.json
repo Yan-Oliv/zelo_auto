@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-24",
+  "verdict": "PASS safe unavailable state; BLOCKED_EXTERNAL authenticated reviews",
+  "realLocalCheck": {
+    "endpoint": "http://127.0.0.1:5173/api/google-reviews",
+    "status": 503,
+    "category": "configuration",
+    "cacheControl": "private, no-store, max-age=0",
+    "type": "application/json",
+    "credentialsPrinted": false
+  },
+  "sourceFacts": {
+    "backend": "functions/api/google-reviews.ts",
+    "client": "src/features/landing/hooks/useGoogleReviews.ts",
+    "requiredServerConfiguration": [
+      "GOOGLE_BUSINESS_ACCOUNT_ID",
+      "GOOGLE_BUSINESS_LOCATION_ID",
+      "GOOGLE_BUSINESS_CLIENT_ID",
+      "GOOGLE_BUSINESS_CLIENT_SECRET",
+      "GOOGLE_BUSINESS_REFRESH_TOKEN"
+    ],
+    "approvalAloneConfiguresOAuth": false,
+    "flow": "Server validates configuration, exchanges OAuth refresh token, validates authenticated business identity/verification/official links, then reads at most3reviews and returns normalized data.",
+    "cachedCustomerContent": "Only client page-memory5min freshness/15min retention; server no-store; no persisted review content.",
+    "newDocumentWithValidServerConfiguration": "Automatically fetches when section is near400px, then renders valid authentic returned reviews.",
+    "existingDocumentAfterConfigurationFailure": "Current implementation sets manualOnly=true; focus/visibility/intersection do not retry. Manual retry after>=60s cooldown or page reload required.",
+    "existingDocumentSuccessfulData": "Revalidates on near-section entry/focus/visibility when stale>=5min; no continuous poll.",
+    "pending": "Google approval/access plus authorized OAuth/account/location/environment setup and real response validation. No actual deployment authorized in this rework."
+  },
+  "recommendation": "If automatic recovery in an already-open page is required, use bounded configuration-only recovery after a long cooldown upon visible+near focus/reentry, without interval polling; preserve authentication/identity manual-only policy and quota backoff. Do not claim the app creates OAuth or knows about Google approval."
+}

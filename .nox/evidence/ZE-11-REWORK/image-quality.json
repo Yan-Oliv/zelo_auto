@@ -1,0 +1,27 @@
+{
+  "method": "Native decoded RGB PSNR against approved source. Car RGB alpha-weighted; transparent RGB not visible. Alpha compared independently. No asset geometry change.",
+  "samples": [
+    {
+      "size": 420,
+      "bytes": 22210,
+      "weightedPSNR": 44.23532679755294,
+      "maxAlphaDifference": 15
+    },
+    {
+      "size": 640,
+      "bytes": 39318,
+      "weightedPSNR": 44.64080263603723,
+      "maxAlphaDifference": 16
+    },
+    {
+      "size": 710,
+      "bytes": 43711,
+      "weightedPSNR": 44.491655950015804,
+      "maxAlphaDifference": 16
+    },
+    {
+      "portraitBytes": 44003,
+      "PSNR": 45.420271051998725
+    }
+  ]
+}

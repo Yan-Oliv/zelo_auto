@@ -1,0 +1,125 @@
+{
+  "scope": "ZE-11-REWORK; measured mobile performance and bounded Google recovery, no ZE-12 or deployment",
+  "findings": [
+    {
+      "id": "RW-PERF-01",
+      "type": "product",
+      "finding": "Cold mobile transfer and eager React/motion/editorial rendering delayed hero",
+      "correction": "Pre-render actual hero DOM/CSS, native bootstrap with hydration handoff, supported chunk boundaries and lazy editorial demand",
+      "status": "RESOLVED",
+      "evidence": [
+        "performance-pages-baseline.json",
+        "performance-native-candidate5-mobile-cold.json"
+      ]
+    },
+    {
+      "id": "RW-PERF-02",
+      "type": "product",
+      "finding": "Full showroom, excessive logo/favicon transfer and competing font weights during mobile intro",
+      "correction": "Exact portrait crop, AVIF picture/preload and WebP fallback, responsive transparent logo, 64px favicon and deferred editorial/font weights",
+      "status": "RESOLVED",
+      "evidence": [
+        "image-delivery.json",
+        "image-quality.json",
+        "performance-native-candidate5-mobile-cold-summary.json"
+      ]
+    },
+    {
+      "id": "RW-PERF-03",
+      "type": "product timing",
+      "finding": "Mobile arrival timing keeps the car visually incomplete after assets load",
+      "correction": "Natural mobile-only fade now1.0s+.15s, same easing/scale/position; desktop unchanged; all other intro layers/session retained",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-hero-compare/results.json",
+        "qa-ssr/results.json"
+      ]
+    },
+    {
+      "id": "RW-METHOD-01",
+      "type": "measurement",
+      "finding": "Previous uncompressed local transport differs from native Pages Brotli",
+      "correction": "Rebuild baseline6bdd370 and measure baseline/candidate native Pages with identical normal-motion cold profile; do not claim compression as code gain",
+      "status": "RESOLVED",
+      "evidence": [
+        "performance-pages-early-summary.json",
+        "performance-native-pages.mjs"
+      ]
+    },
+    {
+      "id": "RW-SSR-01",
+      "type": "product failure recovery",
+      "finding": "Artwork404 can complete before React event handlers exist; direct native fallback DOM mutation then mismatches hydration",
+      "correction": "Native fallback records artwork state and initial React tree adopts matching fallback source/children; reflection shares source; bootstrap header lookup safe",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-ssr/results-fallback-first.json",
+        "qa-ssr/asset-failure-diagnostic.json",
+        "qa-ssr/results.json"
+      ]
+    },
+    {
+      "id": "RW-SSR-02",
+      "type": "product failure recovery",
+      "finding": "Failed lazy editorial chunk reached boundary but duplicate imperative import produced unhandled rejection",
+      "correction": "Remove duplicate imperative readiness import; actual child commit callback marks readiness, while React.lazy owns failures and recovery boundary",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-ssr/editorial-chunk-failure.json",
+        "qa-ssr/results.json"
+      ]
+    },
+    {
+      "id": "RW-GOOGLE-01",
+      "type": "product readiness",
+      "finding": "Existing permanent-error page never automatically retried after server authorization becomes valid",
+      "correction": "Controlled five-minute recovery only visible and near; cooldown/dedup/no hidden requests; genuine validated response activates UI",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-google-source.json",
+        "qa-google-recovery/results.json"
+      ]
+    },
+    {
+      "id": "RW-HARNESS-01",
+      "type": "test harness",
+      "finding": "Copied Portuguese matchers and pre-AVIF image block caused false test failures",
+      "correction": "Stable Unicode-safe accessible matchers and both AVIF/WebP network blocks; retain original failed harness separately",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-ssr/results-first-harness.json",
+        "qa-ssr/results.json"
+      ]
+    },
+    {
+      "id": "RW-EXTERNAL-GOOGLE",
+      "type": "external dependency",
+      "finding": "Authentic Google API authorization/server response not homologated",
+      "status": "BLOCKED_EXTERNAL",
+      "releaseException": "Owner permits future publication with honest unavailable state; not a blocking ZE-11 independent completion criterion; no fake source PASS"
+    },
+    {
+      "id": "RW-SSR-03",
+      "type": "product race",
+      "finding": "A pre-main native anchor intermittently missed its position because module-resolved readiness preceded actual Suspense commit",
+      "correction": "Stable onReady callback from mounted editorial child; observers/fonts/anchor effects follow actual targets",
+      "status": "RESOLVED",
+      "evidence": [
+        "qa-ssr/results-anchor-race.json",
+        "qa-ssr/anchor-diagnostic.json",
+        "qa-ssr/results.json"
+      ]
+    },
+    {
+      "id": "RW-CLS-DESKTOP",
+      "type": "measured nonblocking limitation",
+      "finding": "Footer privacy access moves as deferred editorial content mounts, desktop CLS0.003333; mobile CLS0",
+      "status": "DOCUMENTED_WITHIN_TARGET",
+      "decision": "Preserve immediate privacy access; below0.1, no score-only optimization loop",
+      "evidence": [
+        "performance-final-summary.json"
+      ]
+    }
+  ],
+  "limits": "Pixel/PSNR diagnostics supplement visible review, not lossless-image claims. Fixture recovery is not real Google authorization. Cold/warm and simulated/observed metrics remain distinct. No secrets or provider review bodies in evidence."
+}

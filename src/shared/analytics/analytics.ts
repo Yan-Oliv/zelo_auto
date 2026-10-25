@@ -118,7 +118,7 @@ export function setConsent(choice: Exclude<Consent, 'unset'>) {
   subscribers.forEach(callback => callback())
 }
 export function initializeAnalytics() { start() }
-window.addEventListener('storage', event => {
+if (typeof window !== 'undefined') window.addEventListener('storage', event => {
   if (event.key !== CONSENT_KEY && event.key !== null) return
   consent = readConsent()
   if (consent === 'granted') start(); else stop()

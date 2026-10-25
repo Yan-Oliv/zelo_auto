@@ -1,0 +1,21 @@
+{
+  "kind": "Actual compiled editorial code chunk503 injected only by Playwright; no real server error",
+  "status": "FAIL",
+  "errors": [
+    "Failed to fetch dynamically imported module: http://127.0.0.1:8888/assets/EditorialContent-BIm6mtRH.js"
+  ],
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    },
+    {
+      "type": "error",
+      "text": "[Zelo] APP_RENDER_FAILED"
+    }
+  ],
+  "bodySafe": true,
+  "heading": [
+    "Algo saiu do percurso"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "variant": "candidate3",
+  "mode": "mobile",
+  "state": "cold",
+  "url": "http://127.0.0.1:8888/",
+  "conditions": "One fresh-Chrome sample, native Wrangler Pages browser-negotiated Brotli, explicit CDP normal motion, MobileSlow4G CPU4 simulated, viewport412x823 DPR1.75, no preseeded storage, pauseAfterLoad4500ms. Same settings as candidate2. Inline first resumed benchmark emitted full findings to tool output; this file preserves measured summary. Reusable native benchmark script persisted afterwards; no duplicate score run.",
+  "scores": {
+    "performance": 95,
+    "accessibility": 100,
+    "best-practices": 96,
+    "seo": 100
+  },
+  "LCP": 2811,
+  "observedLCP": 2079,
+  "FCP": 1386,
+  "TBT": 3,
+  "CLS": 0,
+  "intro": [
+    {
+      "time": 47.2,
+      "intro": "waiting",
+      "reduce": false
+    },
+    {
+      "time": 149.9,
+      "intro": "playing",
+      "reduce": false
+    },
+    {
+      "time": 3466.8,
+      "intro": "settled",
+      "reduce": false
+    }
+  ],
+  "runtimeErrors": [],
+  "breakdown": {
+    "TTFB": 18.664,
+    "loadDelay": 10.068,
+    "loadDuration": 63.724,
+    "renderDelay": 1986.552
+  },
+  "criticalNetworkChanges": {
+    "faviconBytes": 4859,
+    "previousFaviconBytes": 60363,
+    "boldFontStartMs": 3535,
+    "semiBoldFontStartMs": 3459,
+    "previousBoldAndSemiBoldStartMs": 119
+  },
+  "result": "Performance90 target met; simulated LCP2500 target not met. Natural car arrival duration1.4s+delay.5s dominates remaining paint delay. Recommend bounded mobile-only arrival duration1.0s/delay.15s and measure once."
+}

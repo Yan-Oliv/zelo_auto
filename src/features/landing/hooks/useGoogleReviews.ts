@@ -71,6 +71,8 @@ let request: Promise<void> | undefined
 let controller: AbortController | undefined
 let failures = 0
 let manualOnly = false
+let automaticRecoveryAt = 0
+const recoveryProbeEvery = 5 * 60 * 1000
 let abandonTimer: ReturnType<typeof setTimeout> | undefined
 let expiryTimer: ReturnType<typeof setTimeout> | undefined
 const listeners = new Set<(value: Snapshot) => void>()
@@ -101,9 +103,10 @@ async function boundedJson(response: Response): Promise<unknown> {
   } finally { await reader.cancel().catch(() => {}); reader.releaseLock() }
 }
 
-function loadReviews(manual = false) {
+function loadReviews(manual = false, recoveryProbe = false) {
   expireData()
-  if (request || Date.now() < snapshot.retryAt || !manual && manualOnly) return
+  if (request || Date.now() < snapshot.retryAt || !manual && manualOnly && (!recoveryProbe || Date.now() < automaticRecoveryAt)) return
+  if (manualOnly) automaticRecoveryAt = Date.now() + recoveryProbeEvery
   if (!manual && snapshot.data && Date.now() - snapshot.updatedAt < freshFor) return
   publish({ ...snapshot, status: snapshot.data ? snapshot.status : 'loading', refreshing: !!snapshot.data, refreshError: false })
   const current = new AbortController()
@@ -130,6 +133,7 @@ function loadReviews(manual = false) {
         if (data) {
           failures = 0
           manualOnly = false
+          automaticRecoveryAt = 0
           const updatedAt = Date.now()
           publish({ data, status: data.total === 0 ? 'empty' : 'verified', retryAt: updatedAt + freshFor, retryable: true, updatedAt, refreshing: false, refreshError: false })
           clearTimeout(expiryTimer)
@@ -145,6 +149,7 @@ function loadReviews(manual = false) {
     if (controller !== current) return
     failures++
     manualOnly = permanentFailure
+    if (permanentFailure) automaticRecoveryAt = Date.now() + recoveryProbeEvery
     if (permanentFailure) delay = Math.max(delay, 60000)
     const data = !permanentFailure && Date.now() - snapshot.updatedAt < retainFor ? snapshot.data : null
     publish({ ...snapshot, data, status: data ? snapshot.status : 'unavailable', refreshing: false, refreshError: !!data, retryable: true, retryAt: Date.now() + delay })
@@ -159,12 +164,21 @@ export function useGoogleReviews(enabled = true) {
     if (!enabled) return
     clearTimeout(abandonTimer)
     let nearSection = false
-    const listener = (next: Snapshot) => setValue(next)
+    let recoveryTimer: ReturnType<typeof setTimeout> | undefined
+    const scheduleRecovery = () => {
+      clearTimeout(recoveryTimer)
+      if (!manualOnly || !nearSection || document.visibilityState === 'hidden') return
+      recoveryTimer = setTimeout(() => {
+        if (nearSection && document.visibilityState !== 'hidden') loadReviews(false, true)
+      }, Math.max(1000, automaticRecoveryAt - Date.now()))
+    }
+    const listener = (next: Snapshot) => { setValue(next); scheduleRecovery() }
     listeners.add(listener)
     expireData()
     setValue(snapshot)
     const revalidate = () => {
-      if (nearSection && document.visibilityState !== 'hidden') loadReviews()
+      if (nearSection && document.visibilityState !== 'hidden') loadReviews(false, true)
+      scheduleRecovery()
     }
     const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
       const wasNear = nearSection
@@ -176,6 +190,7 @@ export function useGoogleReviews(enabled = true) {
     window.addEventListener('focus', revalidate)
     document.addEventListener('visibilitychange', revalidate)
     return () => {
+      clearTimeout(recoveryTimer)
       observer?.disconnect(); listeners.delete(listener)
       window.removeEventListener('focus', revalidate)
       document.removeEventListener('visibilitychange', revalidate)

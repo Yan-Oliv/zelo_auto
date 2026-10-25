@@ -1,0 +1,508 @@
+{
+  "kind": "Final affected layout regression, deterministic APIs unavailable, real current font/CSS",
+  "results": [
+    {
+      "name": "Final typography location4lines services no collisions 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 2560,
+        "scroll": 2560,
+        "title": [
+          {
+            "height": 187.1875,
+            "line": 46.8,
+            "lines": 3.9997329059829063,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 816,
+            "cardRight": 906.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 1180.5,
+            "cardRight": 1271,
+            "clipped": false
+          },
+          {
+            "titleRight": 1545,
+            "cardRight": 1635.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 1909.5,
+            "cardRight": 2000,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 1920,
+        "scroll": 1920,
+        "title": [
+          {
+            "height": 187.1875,
+            "line": 46.8,
+            "lines": 3.9997329059829063,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 496,
+            "cardRight": 586.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 860.5,
+            "cardRight": 951,
+            "clipped": false
+          },
+          {
+            "titleRight": 1225,
+            "cardRight": 1315.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 1589.5,
+            "cardRight": 1680,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 1440x900",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "title": [
+          {
+            "height": 164.6875,
+            "line": 41.184,
+            "lines": 3.9988223581973585,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 328,
+            "cardRight": 382.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 656.5,
+            "cardRight": 711,
+            "clipped": false
+          },
+          {
+            "titleRight": 985,
+            "cardRight": 1039.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 1313.5,
+            "cardRight": 1368,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 1366,
+        "scroll": 1366,
+        "title": [
+          {
+            "height": 156.25,
+            "line": 39.0676,
+            "lines": 3.999477828174754,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 324.296875,
+            "cardRight": 362.140625,
+            "clipped": false
+          },
+          {
+            "titleRight": 636.140625,
+            "cardRight": 673.984375,
+            "clipped": false
+          },
+          {
+            "titleRight": 947.984375,
+            "cardRight": 985.828125,
+            "clipped": false
+          },
+          {
+            "titleRight": 1259.828125,
+            "cardRight": 1297.6875,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 1024,
+        "scroll": 1024,
+        "title": [
+          {
+            "height": 132.0625,
+            "line": 33.0138,
+            "lines": 4.000221119652993,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 306.203125,
+            "cardRight": 502,
+            "clipped": false
+          },
+          {
+            "titleRight": 777,
+            "cardRight": 972.796875,
+            "clipped": false
+          },
+          {
+            "titleRight": 306.203125,
+            "cardRight": 502,
+            "clipped": false
+          },
+          {
+            "titleRight": 777,
+            "cardRight": 972.796875,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 768,
+        "scroll": 768,
+        "title": [
+          {
+            "height": 159.75,
+            "line": 39.936,
+            "lines": 4.000150240384615,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 293.40625,
+            "cardRight": 374,
+            "clipped": false
+          },
+          {
+            "titleRight": 649,
+            "cardRight": 729.59375,
+            "clipped": false
+          },
+          {
+            "titleRight": 293.40625,
+            "cardRight": 374,
+            "clipped": false
+          },
+          {
+            "titleRight": 649,
+            "cardRight": 729.59375,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 430x932",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 430,
+        "scroll": 430,
+        "title": [
+          {
+            "height": 141.4375,
+            "line": 35.36,
+            "lines": 3.999929298642534,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 306.5,
+            "cardRight": 408.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 306.5,
+            "cardRight": 408.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 306.5,
+            "cardRight": 408.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 306.5,
+            "cardRight": 408.5,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 390x844",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 390,
+        "scroll": 390,
+        "title": [
+          {
+            "height": 134.625,
+            "line": 33.6648,
+            "lines": 3.9989841020888286,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 304.5,
+            "cardRight": 370.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 304.5,
+            "cardRight": 370.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 304.5,
+            "cardRight": 370.5,
+            "clipped": false
+          },
+          {
+            "titleRight": 304.5,
+            "cardRight": 370.5,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 360x740",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 360,
+        "scroll": 360,
+        "title": [
+          {
+            "height": 124.25,
+            "line": 31.0752,
+            "lines": 3.9983652558953766,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 303,
+            "cardRight": 342,
+            "clipped": false
+          },
+          {
+            "titleRight": 303,
+            "cardRight": 342,
+            "clipped": false
+          },
+          {
+            "titleRight": 303,
+            "cardRight": 342,
+            "clipped": false
+          },
+          {
+            "titleRight": 303,
+            "cardRight": 342,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 320x640",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 320,
+        "scroll": 320,
+        "title": [
+          {
+            "height": 112.3125,
+            "line": 28.08,
+            "lines": 3.9997329059829063,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 279,
+            "cardRight": 304,
+            "clipped": false
+          },
+          {
+            "titleRight": 279,
+            "cardRight": 304,
+            "clipped": false
+          },
+          {
+            "titleRight": 279,
+            "cardRight": 304,
+            "clipped": false
+          },
+          {
+            "titleRight": 279,
+            "cardRight": 304,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final typography location4lines services no collisions 844x390",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 844,
+        "scroll": 844,
+        "title": [
+          {
+            "height": 175.5625,
+            "line": 43.888,
+            "lines": 4.000239245351805,
+            "font": "\"Michroma Community\", Montserrat, sans-serif",
+            "overflow": false
+          }
+        ],
+        "offenders": [],
+        "cards": [
+          {
+            "titleRight": 297.203125,
+            "cardRight": 412,
+            "clipped": false
+          },
+          {
+            "titleRight": 687,
+            "cardRight": 801.796875,
+            "clipped": false
+          },
+          {
+            "titleRight": 297.203125,
+            "cardRight": 412,
+            "clipped": false
+          },
+          {
+            "titleRight": 687,
+            "cardRight": 801.796875,
+            "clipped": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Final doubled text 720 and location title reflow",
+      "status": "PASS",
+      "evidence": {
+        "state": {
+          "viewport": 720,
+          "scroll": 720,
+          "title": [
+            {
+              "height": 449.25,
+              "line": 74.88,
+              "lines": 5.9995993589743595,
+              "font": "\"Michroma Community\", Montserrat, sans-serif",
+              "overflow": false
+            }
+          ],
+          "offenders": []
+        },
+        "method": "All semantic text computed then doubled;720CSSpx reflow corresponds1440desktop200zoom, not physical toolbar zoom"
+      }
+    },
+    {
+      "name": "Final doubled text 390 and location title reflow",
+      "status": "PASS",
+      "evidence": {
+        "state": {
+          "viewport": 390,
+          "scroll": 390,
+          "title": [
+            {
+              "height": 605.8125,
+              "line": 67.3296,
+              "lines": 8.997714229699865,
+              "font": "\"Michroma Community\", Montserrat, sans-serif",
+              "overflow": false
+            }
+          ],
+          "offenders": []
+        },
+        "method": "All semantic text computed then doubled;720CSSpx reflow corresponds1440desktop200zoom, not physical toolbar zoom"
+      }
+    },
+    {
+      "name": "Final doubled text 320 and location title reflow",
+      "status": "PASS",
+      "evidence": {
+        "state": {
+          "viewport": 320,
+          "scroll": 320,
+          "title": [
+            {
+              "height": 505.40625,
+              "line": 56.16,
+              "lines": 8.999399038461538,
+              "font": "\"Michroma Community\", Montserrat, sans-serif",
+              "overflow": false
+            }
+          ],
+          "offenders": []
+        },
+        "method": "All semantic text computed then doubled;720CSSpx reflow corresponds1440desktop200zoom, not physical toolbar zoom"
+      }
+    }
+  ]
+}

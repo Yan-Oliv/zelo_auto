@@ -1,0 +1,222 @@
+{
+  "kind": "Actual compiled native Pages HTML and React hydration, deterministic API503. No authentic Google API assertion.",
+  "results": [
+    {
+      "name": "Native HTML source and no-main intro before React hydration",
+      "status": "PASS",
+      "evidence": {
+        "htmlHero": true,
+        "initial": {
+          "intro": "playing",
+          "bootstrap": "playing",
+          "hydrated": false,
+          "car": "0",
+          "running": 6,
+          "sections": 1,
+          "scroll": 0
+        },
+        "final": {
+          "intro": "settled",
+          "bootstrap": "settled",
+          "hydrated": true,
+          "car": "1",
+          "running": 0,
+          "sections": 8,
+          "scroll": 0
+        },
+        "samples": [
+          {
+            "t": 53.5,
+            "intro": "waiting",
+            "bootstrap": "waiting",
+            "hydrated": false
+          },
+          {
+            "t": 92.29999995231628,
+            "intro": "playing",
+            "bootstrap": "playing",
+            "hydrated": false
+          },
+          {
+            "t": 2867.7999999523163,
+            "intro": "playing",
+            "bootstrap": "playing",
+            "hydrated": true
+          },
+          {
+            "t": 3420.2999999523163,
+            "intro": "settled",
+            "bootstrap": "settled",
+            "hydrated": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cold intro frames video, natural cleanup, session reload and return",
+      "status": "PASS",
+      "evidence": {
+        "early": {
+          "intro": "playing",
+          "bootstrap": "playing",
+          "hydrated": true,
+          "car": "0",
+          "running": 6,
+          "sections": 1,
+          "scroll": 0
+        },
+        "middle": {
+          "intro": "playing",
+          "bootstrap": "playing",
+          "hydrated": true,
+          "car": "0.927484",
+          "running": 6,
+          "sections": 1,
+          "scroll": 0
+        },
+        "final": {
+          "intro": "settled",
+          "bootstrap": "settled",
+          "hydrated": true,
+          "car": "1",
+          "running": 0,
+          "sections": 8,
+          "scroll": 0
+        },
+        "reloadSettled": true
+      }
+    },
+    {
+      "name": "Reduced motion initially and dynamic during delayed assets",
+      "status": "PASS",
+      "evidence": {
+        "initialReduced": true,
+        "dynamicReduced": {
+          "intro": "settled",
+          "bootstrap": "settled",
+          "hydrated": true,
+          "car": "1",
+          "running": 0,
+          "sections": 8,
+          "scroll": 0
+        }
+      }
+    },
+    {
+      "name": "Slow critical artwork eventually visible, no hydration mismatch",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "bootstrap": "settled",
+        "hydrated": true,
+        "car": "1",
+        "running": 0,
+        "sections": 8,
+        "scroll": 0
+      }
+    },
+    {
+      "name": "Native desktop anchor selected before main bundle loads",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "bootstrap": "settled",
+        "hydrated": true,
+        "car": "1",
+        "running": 0,
+        "sections": 8,
+        "scroll": 1334
+      }
+    },
+    {
+      "name": "Repeat2 native desktop anchor selected before main bundle loads",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "bootstrap": "settled",
+        "hydrated": true,
+        "car": "1",
+        "running": 0,
+        "sections": 8,
+        "scroll": 1334
+      }
+    },
+    {
+      "name": "Repeat3 native desktop anchor selected before main bundle loads",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "bootstrap": "settled",
+        "hydrated": true,
+        "car": "1",
+        "running": 0,
+        "sections": 8,
+        "scroll": 1334
+      }
+    },
+    {
+      "name": "Mobile header menu/search responsive while intro still active; lazy anchors correct",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "bootstrap": "settled",
+        "hydrated": true,
+        "car": "1",
+        "running": 0,
+        "sections": 8,
+        "scroll": 744
+      }
+    },
+    {
+      "name": "Critical image failed before hydration still reaches safe source fallback",
+      "status": "PASS",
+      "evidence": {
+        "current": "/hero/car-reference.webp",
+        "fallbackLoaded": true
+      }
+    },
+    {
+      "name": "Actual editorial chunk unavailable renders safe boundary without unhandled import",
+      "status": "PASS",
+      "evidence": {
+        "safe500": true,
+        "unhandledErrors": [],
+        "logs": [
+          "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+          "[Zelo] APP_RENDER_FAILED"
+        ]
+      }
+    },
+    {
+      "name": "Late nonfatal global error cannot replace healthy hydrated UI",
+      "status": "PASS",
+      "evidence": {
+        "healthyRootPreserved": true
+      }
+    },
+    {
+      "name": "Compiled landing recovery nojs",
+      "status": "PASS",
+      "evidence": {
+        "safeRecovery": true
+      }
+    },
+    {
+      "name": "Compiled landing recovery blocked-main",
+      "status": "PASS",
+      "evidence": {
+        "safeRecovery": true
+      }
+    },
+    {
+      "name": "Compiled debug crossfade route replaces SSR without hydration error",
+      "status": "PASS",
+      "evidence": {
+        "headings": [
+          "Algo saiu do percurso"
+        ],
+        "hydrationMessages": []
+      }
+    }
+  ]
+}

@@ -1,12 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, CalendarDays, ChevronDown, Search, Menu, X } from 'lucide-react'
-import { AnimatePresence, m } from 'framer-motion'
 import clsx from 'clsx'
 import { services, siteConfig } from './data/site'
 import { useActiveSection } from '@shared/hooks/useActiveSection'
 import { useMotionSettings } from '@shared/motion/MotionSettings'
-import { ServicesSection, ResultsSection, ProcessSection, QualitySection } from './components/ze04/CommercialSections'
-import { CommunitySection, LocationSection, PremiumFooter } from './components/ze04/CommunityContact'
 import { ConsentControls } from '@shared/analytics/ConsentControls'
 import { useCommercialAnalytics } from '@shared/analytics/useCommercialAnalytics'
 import { track } from '@shared/analytics/analytics'
@@ -27,8 +24,12 @@ const searchLinks = [...headerLinks, { label: 'Instagram', href: '#instagram' },
 const observedSectionIds = ['hero', 'servicos', 'resultados', 'processo', 'marcas', 'instagram', 'avaliacoes', 'localizacao', 'contato', 'parceiros']
 const heroIntroKey = 'zelo:hero-intro:v4'
 const heroCarSources = '/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.webp 640w, /hero/car-final.webp 710w'
+const heroCarAvifSources = '/hero/responsive/car-final-420.avif 420w, /hero/responsive/car-final-640.avif 640w, /hero/responsive/car-final-710.avif 710w'
+const heroCarMedia = '(max-width: 1050px) and (max-aspect-ratio: 1/1)'
 const heroCarSizes = '(max-aspect-ratio: 1/1) min(88vw, 58svh), 42.464vw'
 let introConsumedInDocument = false
+const EditorialContent = lazy(() => import('./components/ze04/EditorialContent'))
+const PremiumFooter = lazy(() => import('./components/ze04/EditorialContent').then(module => ({default:module.PremiumFooter})))
 
 function hasSeenHeroIntro() {
   if (introConsumedInDocument) return true
@@ -49,10 +50,31 @@ export function LandingPage() {
   const menuPanelRef = useRef<HTMLDivElement>(null)
   const [onHero, setOnHero] = useState(true)
   const { reducedMotion } = useMotionSettings()
+  const [clientReady, setClientReady] = useState(() => typeof document !== 'undefined' && !document.getElementById('root')?.hasAttribute('data-prerendered'))
+  const [bodyReady, setBodyReady] = useState(false)
+  const [bodyMounted, setBodyMounted] = useState(false)
+  const markBodyMounted = useCallback(() => setBodyMounted(true), [])
+  useEffect(() => { setClientReady(true); document.getElementById('root')?.removeAttribute('data-prerendered') }, [])
+  useEffect(() => {
+    if (!clientReady) return
+    const requestBody = () => { if (window.scrollY > 8 || window.location.hash && window.location.hash !== '#hero' || (document.getElementById('hero')?.getBoundingClientRect().bottom ?? Infinity) < window.innerHeight) setBodyReady(true) }
+    window.addEventListener('scroll', requestBody, { passive: true })
+    window.addEventListener('hashchange', requestBody)
+    requestBody()
+    return () => { window.removeEventListener('scroll', requestBody); window.removeEventListener('hashchange', requestBody) }
+  }, [clientReady])
   const heroReducedMotion = reducedMotion || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const [heroIntro, setHeroIntro] = useState<'waiting' | 'playing' | 'settled'>(() =>
-    hasSeenHeroIntro() || heroReducedMotion ? 'settled' : 'waiting',
+    typeof window !== 'undefined' && window.__ZELO_HERO_BOOTSTRAP__ ? window.__ZELO_HERO_BOOTSTRAP__.state : hasSeenHeroIntro() || heroReducedMotion ? 'settled' : 'waiting',
   )
+  // Adopt any artwork recovery performed before React's event handlers existed.
+  // The initial client tree must match the already-visible native fallback.
+  const [heroArtwork] = useState(() => typeof window !== 'undefined' ? { ...window.__ZELO_HERO_BOOTSTRAP__?.artwork } : {})
+  useEffect(() => { if (clientReady && heroIntro === 'settled') setBodyReady(true) }, [clientReady, heroIntro])
+  useEffect(() => {
+    if (!bodyMounted || !window.location.hash || window.location.hash === '#hero') return
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ behavior: 'instant' })
+  }, [bodyMounted])
   const backdropRef = useRef<HTMLImageElement>(null)
   const carRef = useRef<HTMLImageElement>(null)
   const headerLogoRef = useRef<HTMLImageElement>(null)
@@ -101,6 +123,12 @@ export function LandingPage() {
       return
     }
     if (heroIntro !== 'waiting') return
+    if (window.__ZELO_HERO_BOOTSTRAP__) {
+      const update = () => setHeroIntro(window.__ZELO_HERO_BOOTSTRAP__!.state)
+      window.addEventListener('zelo:hero-bootstrap', update)
+      update()
+      return () => window.removeEventListener('zelo:hero-bootstrap', update)
+    }
     let cancelled = false
     let firstFrame = 0
     let secondFrame = 0
@@ -140,10 +168,11 @@ export function LandingPage() {
 
   useEffect(() => {
     if (heroIntro !== 'playing') return
+    const elapsed = window.__ZELO_HERO_BOOTSTRAP__?.startedAt ? performance.now() - window.__ZELO_HERO_BOOTSTRAP__.startedAt : 0
     const timer = window.setTimeout(() => {
       rememberHeroIntro()
       setHeroIntro('settled')
-    }, 3300)
+    }, Math.max(0, 3300 - elapsed))
     return () => window.clearTimeout(timer)
   }, [heroIntro])
 
@@ -164,7 +193,7 @@ export function LandingPage() {
     }, { rootMargin: '400px 0px' })
     observer.observe(services)
     return () => { active = false; observer.disconnect() }
-  }, [heroIntro, onHero])
+  }, [heroIntro, onHero, bodyMounted])
 
   useEffect(() => {
     if (!searchOpen) return
@@ -185,7 +214,7 @@ export function LandingPage() {
       document.removeEventListener('keydown', closeWithEscape)
     }
   }, [searchOpen])
-  const activeSection = useActiveSection(observedSectionIds)
+  const activeSection = useActiveSection(observedSectionIds, bodyMounted)
   useEffect(() => {
     const hero = document.getElementById('hero')
     const header = document.querySelector('header')
@@ -226,7 +255,7 @@ export function LandingPage() {
       <header data-intro={onHero && !heroReducedMotion ? heroIntro : 'settled'} className={clsx('zelo-site-header fixed inset-x-0 top-0 z-50', onHero ? 'zelo-hero-header' : 'zelo-site-header-dark')}>
         <div className="zelo-header-inner">
           <a href="#hero" className="zelo-header-brand" aria-label={`${brandName} — início`}>
-            <img ref={headerLogoRef} src="/hero/responsive/zelo-logo-480.webp" alt={brandName} width={640} height={427} fetchPriority="high" />
+            <picture><source media="(max-width: 600px)" srcSet="/hero/responsive/zelo-logo-320.webp" /><img ref={headerLogoRef} src="/hero/responsive/zelo-logo-480.webp" alt={brandName} width={640} height={427} fetchPriority="high" /></picture>
           </a>
           <span className="zelo-header-divider" aria-hidden="true" />
           <nav className="zelo-header-nav" aria-label="Navegação principal">
@@ -264,23 +293,14 @@ export function LandingPage() {
         )}
       </header>
 
-      <AnimatePresence>
         {menuOpen ? (
-          <m.div
-            initial={heroReducedMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={heroReducedMotion ? undefined : { opacity: 0 }}
-            transition={{ duration: heroReducedMotion ? 0 : 0.2 }}
+          <div
             id="zelo-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" className="fixed inset-0 z-[60] bg-brand-navy/96 backdrop-blur-xl zelo-mobile-menu"
             ref={menuPanelRef}
             onClick={(event) => { if (event.target === event.currentTarget) setMenuOpen(false) }}
           >
-            <m.div
-              initial={heroReducedMotion ? false : { x: '100%' }}
-              animate={{ x: 0 }}
-              exit={heroReducedMotion ? undefined : { x: '100%' }}
-              transition={{ duration: heroReducedMotion ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="ml-auto flex h-full w-[84%] max-w-sm flex-col border-l border-white/10 bg-brand-graphite px-6 pb-10 pt-6"
+            <div
+              className="zelo-mobile-menu-panel ml-auto flex h-full w-[84%] max-w-sm flex-col border-l border-white/10 bg-brand-graphite px-6 pb-10 pt-6"
             >
               <div className="mb-12 flex items-center justify-between">
                 <img src={siteConfig.iconLogo} alt="" className="h-11 w-11 object-contain" width={150} height={140} />
@@ -313,16 +333,15 @@ export function LandingPage() {
               >
                 {budgetLabel}
               </a>
-            </m.div>
-          </m.div>
+            </div>
+          </div>
         ) : null}
-      </AnimatePresence>
 
       <main id="main-content" tabIndex={-1} className="relative z-10">
         <section id="hero" className="zelo-hero" data-intro={heroReducedMotion ? 'settled' : heroIntro} aria-labelledby="zelo-hero-title">
           <h1 id="zelo-hero-title" className="sr-only">Mais que estética. É valorização. Zelo Estética Automotiva em Catalão — GO.</h1>
           <div className="zelo-hero-stage" aria-hidden="true">
-            <img ref={backdropRef} className="zelo-hero-backdrop" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/showroom-reference.webp')) { image.srcset = ''; image.src = '/hero/showroom-reference.webp' } }} src="/hero/showroom-final.webp" srcSet="/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w" sizes="(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw" alt="" width={1672} height={940} fetchPriority="high" decoding="async" />
+            <picture>{!heroArtwork.backdrop && <><source type="image/avif" media="(max-aspect-ratio: 1/1)" srcSet="/hero/showroom-portrait.avif" /><source media="(max-aspect-ratio: 1/1)" srcSet="/hero/showroom-portrait.webp" /></>}<img ref={backdropRef} className="zelo-hero-backdrop" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/showroom-reference.webp')) { image.srcset = ''; image.closest('picture')?.querySelectorAll('source').forEach(source => source.remove()); image.src = '/hero/showroom-reference.webp' } }} src={heroArtwork.backdrop ? "/hero/showroom-reference.webp" : "/hero/showroom-final.webp"} srcSet={heroArtwork.backdrop ? undefined : "/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w"} sizes="(max-aspect-ratio: 1/1) max(100vw, 177.87svh), 100vw" alt="" width={1672} height={940} fetchPriority="high" decoding="async" /></picture>
           </div>
           <svg className="zelo-hero-wordmark" viewBox="416 191 825 286" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
             <defs>
@@ -344,9 +363,9 @@ export function LandingPage() {
             // while the remaining intro, timings and session lifecycle continue normally.
             if (event.target === event.currentTarget && event.animationName === 'zelo-car-arrive') event.currentTarget.style.animation = 'none'
           }}>
-            <div className="zelo-hero-reflection"><img src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} /></div>
+            <div className="zelo-hero-reflection"><picture>{!heroArtwork.car && <source type="image/avif" media={heroCarMedia} srcSet={heroCarAvifSources} sizes={heroCarSizes} />}<img src={heroArtwork.car ? "/hero/car-reference.webp" : "/hero/car-final.webp"} srcSet={heroArtwork.car ? undefined : heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} /></picture></div>
             <div className="zelo-hero-ground-shadow" />
-            <img className="zelo-hero-car-body" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/car-reference.webp')) { image.srcset = ''; image.src = '/hero/car-reference.webp' } }} ref={carRef} src="/hero/car-final.webp" srcSet={heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} decoding="async" fetchPriority="high" />
+            <picture>{!heroArtwork.car && <source type="image/avif" media={heroCarMedia} srcSet={heroCarAvifSources} sizes={heroCarSizes} />}<img className="zelo-hero-car-body" onError={(event) => { const image = event.currentTarget; if (!image.src.endsWith('/hero/car-reference.webp')) { image.srcset = ''; image.closest('picture')?.querySelectorAll('source').forEach(source => source.remove()); image.src = '/hero/car-reference.webp' } }} ref={carRef} src={heroArtwork.car ? "/hero/car-reference.webp" : "/hero/car-final.webp"} srcSet={heroArtwork.car ? undefined : heroCarSources} sizes={heroCarSizes} alt="" width={710} height={360} decoding="async" fetchPriority="high" /></picture>
           </div>
           <div className="zelo-hero-edge-fade" aria-hidden="true" />
           <div className="zelo-hero-top-fade" aria-hidden="true" />
@@ -360,16 +379,11 @@ export function LandingPage() {
           </a>
         </section>
 
-        <ServicesSection />
-        <ResultsSection />
-        <ProcessSection />
-        <QualitySection />
-        <CommunitySection />
-        <LocationSection />
+        {bodyReady ? <Suspense fallback={<div className="zelo-editorial-loading" role="status">Carregando nossos serviços…</div>}><EditorialContent onReady={markBodyMounted} /></Suspense> : <div className="zelo-editorial-loading" aria-hidden="true" />}
       </main>
 
-      <PremiumFooter />
-      <ConsentControls />
+      {bodyReady && <Suspense fallback={null}><PremiumFooter /></Suspense>}
+      {clientReady && <ConsentControls />}
     </div>
   )
 }

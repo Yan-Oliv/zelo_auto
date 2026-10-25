@@ -1,0 +1,1075 @@
+{
+  "kind": "Local Chromium contract QA; Google unavailable MOCK, six Instagram TEST DATA posts. No real Google validation.",
+  "base": "http://127.0.0.1:8888",
+  "groups": [
+    {
+      "name": "Global 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 2560,
+          "scroll": 2560,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 942,
+            "y": 2138.84375,
+            "w": 345.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 1298.328125,
+            "y": 2138.84375,
+            "w": 345.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 1654.65625,
+            "y": 2138.84375,
+            "w": 345.34375,
+            "h": 176.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1920,
+          "scroll": 1920,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 622,
+            "y": 1779.03125,
+            "w": 345.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 978.328125,
+            "y": 1779.03125,
+            "w": 345.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 1334.65625,
+            "y": 1779.03125,
+            "w": 345.34375,
+            "h": 176.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 350,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 1440x900",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1440,
+          "scroll": 1440,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 418,
+            "y": 1487.15625,
+            "w": 309.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 738.328125,
+            "y": 1487.15625,
+            "w": 309.328125,
+            "h": 176.390625
+          },
+          {
+            "x": 1058.65625,
+            "y": 1487.15625,
+            "w": 309.34375,
+            "h": 176.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 316,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 316,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 316,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 316,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 316,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 316,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1366,
+          "scroll": 1366,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 397.640625,
+            "y": 1445.546875,
+            "w": 292.671875,
+            "h": 176.390625
+          },
+          {
+            "x": 701.3125,
+            "y": 1445.546875,
+            "w": 292.6875,
+            "h": 176.390625
+          },
+          {
+            "x": 1005,
+            "y": 1445.546875,
+            "w": 292.671875,
+            "h": 176.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 300,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 300,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 300,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 300,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 300,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 300,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1024,
+          "scroll": 1024,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 51.203125,
+            "y": 1863.765625,
+            "w": 299.859375,
+            "h": 176.390625
+          },
+          {
+            "x": 362.0625,
+            "y": 1863.765625,
+            "w": 299.859375,
+            "h": 176.390625
+          },
+          {
+            "x": 672.921875,
+            "y": 1863.765625,
+            "w": 299.875,
+            "h": 176.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 296,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 296,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 296,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 296,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 296,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 296,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 768,
+          "scroll": 768,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 38.40625,
+            "y": 2273.171875,
+            "w": 336.59375,
+            "h": 241.390625
+          },
+          {
+            "x": 393,
+            "y": 2273.171875,
+            "w": 336.59375,
+            "h": 241.390625
+          },
+          {
+            "x": 38.40625,
+            "y": 2532.5625,
+            "w": 336.59375,
+            "h": 241.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 337,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 337,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 337,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 337,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 337,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 337,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 430x932",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 430,
+          "scroll": 430,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 21.5,
+            "y": 3154.25,
+            "w": 387,
+            "h": 322.140625
+          },
+          {
+            "x": 21.5,
+            "y": 3498.390625,
+            "w": 387,
+            "h": 322.140625
+          },
+          {
+            "x": 21.5,
+            "y": 3842.53125,
+            "w": 387,
+            "h": 322.140625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 387,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 387,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 387,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 387,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 387,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 387,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 390x844",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 390,
+          "scroll": 390,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 19.5,
+            "y": 3135.625,
+            "w": 351,
+            "h": 295.140625
+          },
+          {
+            "x": 19.5,
+            "y": 3452.765625,
+            "w": 351,
+            "h": 295.140625
+          },
+          {
+            "x": 19.5,
+            "y": 3769.90625,
+            "w": 351,
+            "h": 295.140625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 351,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 351,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 351,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 351,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 351,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 351,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 360x740",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 360,
+          "scroll": 360,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 18,
+            "y": 3027.8125,
+            "w": 324,
+            "h": 274.890625
+          },
+          {
+            "x": 18,
+            "y": 3324.703125,
+            "w": 324,
+            "h": 274.890625
+          },
+          {
+            "x": 18,
+            "y": 3621.59375,
+            "w": 324,
+            "h": 274.890625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 324,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 324,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 324,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 324,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 324,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 324,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 320x640",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 3022.1875,
+            "w": 288,
+            "h": 251.390625
+          },
+          {
+            "x": 16,
+            "y": 3295.578125,
+            "w": 288,
+            "h": 251.390625
+          },
+          {
+            "x": 16,
+            "y": 3568.96875,
+            "w": 288,
+            "h": 251.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 287,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 287,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 287,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 287,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 287,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 287,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Global 844x390",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 844,
+          "scroll": 844,
+          "offenders": []
+        },
+        "cards": [
+          {
+            "x": 42.203125,
+            "y": 1786.34375,
+            "w": 370.796875,
+            "h": 241.390625
+          },
+          {
+            "x": 431,
+            "y": 1786.34375,
+            "w": 370.796875,
+            "h": 241.390625
+          },
+          {
+            "x": 42.203125,
+            "y": 2045.734375,
+            "w": 370.796875,
+            "h": 241.390625
+          }
+        ],
+        "sources": [
+          {
+            "text": "PinturaAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-after-420.webp",
+                "alt": "Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.",
+                "w": 371,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-paint-before-420.webp",
+                "alt": "Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.",
+                "w": 371,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "BancosAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-after-420.webp",
+                "alt": "Bancos depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 371,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-seats-before-420.webp",
+                "alt": "Bancos antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 371,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "text": "CarpeteAntesDepois",
+            "images": [
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-after-420.webp",
+                "alt": "Carpete depois da limpeza, em uma demonstração ilustrativa.",
+                "w": 371,
+                "complete": true
+              },
+              {
+                "src": "http://127.0.0.1:8888/editorial/responsive/comparison-carpet-before-420.webp",
+                "alt": "Carpete antes da limpeza, em uma demonstração ilustrativa.",
+                "w": 371,
+                "complete": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Range mouse and native keyboard Home End arrows; no reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Menu Esc focus trap, navigation, search accent-insensitive, landscape",
+      "status": "PASS",
+      "evidence": {
+        "links": [
+          {
+            "text": "Início",
+            "h": 44
+          },
+          {
+            "text": "Serviços",
+            "h": 44
+          },
+          {
+            "text": "Sobre",
+            "h": 44
+          },
+          {
+            "text": "Resultados",
+            "h": 44
+          },
+          {
+            "text": "Avaliações",
+            "h": 44
+          },
+          {
+            "text": "Contato",
+            "h": 44
+          },
+          {
+            "text": "Faça seu orçamento",
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "Touch horizontal comparison and vertical page scroll; rotate",
+      "status": "PASS",
+      "evidence": {
+        "value": 76,
+        "scrollBefore": 3095,
+        "scrollAfter": 3180
+      }
+    },
+    {
+      "name": "zoom200",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 720,
+          "scroll": 720,
+          "offenders": [
+            "hero"
+          ]
+        },
+        "note": "1440x900 browser zoom200 reflow equivalent720x450 CSS px; native browser chrome zoom not automated"
+      }
+    },
+    {
+      "name": "text200",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 390,
+          "scroll": 390,
+          "offenders": []
+        }
+      }
+    },
+    {
+      "name": "slow-assets",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 390,
+          "scroll": 390,
+          "offenders": []
+        }
+      }
+    },
+    {
+      "name": "Intro first visit frames, session return and reduced motion",
+      "status": "PASS",
+      "evidence": {
+        "state": "playing",
+        "carOpacity": "0.312819",
+        "animations": 6
+      }
+    },
+    {
+      "name": "Missing real photo honest state and disabled slider",
+      "status": "PASS"
+    },
+    {
+      "name": "Photo loading state then both photos ready stable geometry",
+      "status": "PASS",
+      "evidence": {
+        "initialHeight": 295.140625,
+        "readyHeight": 295.140625
+      }
+    },
+    {
+      "name": "Scroll reveal stagger reaches settled once",
+      "status": "PASS",
+      "evidence": {
+        "before": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "during": [
+          "0.655066",
+          "0.0886355",
+          "0",
+          "0"
+        ],
+        "settled": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "Consent, comparator analytics dedup, CTA request integrity",
+      "status": "PASS",
+      "evidence": {
+        "events": [
+          {
+            "event": "before_after_interaction",
+            "params": {
+              "comparator_id": "paint"
+            }
+          }
+        ],
+        "externalTargetsPreserved": true
+      }
+    }
+  ]
+}

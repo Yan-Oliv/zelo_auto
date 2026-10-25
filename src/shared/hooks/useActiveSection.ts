@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function useActiveSection(sectionIds: string[]) {
+export function useActiveSection(sectionIds: string[], contentReady = true) {
   const [activeSection, setActiveSection] = useState(sectionIds[0] ?? '')
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export function useActiveSection(sectionIds: string[]) {
       window.removeEventListener('resize', schedule)
       window.removeEventListener('hashchange', schedule)
     }
-  }, [sectionIds])
+  }, [sectionIds, contentReady])
 
   return activeSection
 }

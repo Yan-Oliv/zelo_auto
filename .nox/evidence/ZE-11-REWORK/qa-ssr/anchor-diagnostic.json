@@ -1,0 +1,101 @@
+{
+  "samples": [
+    {
+      "t": 2511.8000000715256,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 116.359375,
+      "servicesH": 640.796875,
+      "font": "deferred",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 2818.9000000953674,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 3132.3000000715256,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 3443.5,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 3751.3000000715256,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 4062.600000023842,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 4374.200000047684,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    },
+    {
+      "t": 4682.700000047684,
+      "y": 1334,
+      "hash": "#resultados",
+      "top": 137.15625,
+      "servicesH": 661.59375,
+      "font": "ready",
+      "hero": "settled",
+      "active": [
+        "Resultados"
+      ]
+    }
+  ],
+  "errors": []
+}

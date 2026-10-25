@@ -1,0 +1,29 @@
+{
+  "method": "Deterministic same-center square crop of original portrait backdrop; identical framing/object-fit for aspect<=1; quality95 balanced WebP encoding, no generated imagery or scene change. Desktop source unchanged. Logo resized without upscale for mobile2x/3x sampling.",
+  "crop": {
+    "left": 366,
+    "top": 0,
+    "width": 940,
+    "height": 940
+  },
+  "source": {
+    "file": "public/hero/showroom-final.webp",
+    "bytes": 213986,
+    "sha256": "2cfce7087af6480eab0b41fc6962c0a5ca8f032dc911719426b48c9ca140a53e"
+  },
+  "portrait": {
+    "file": "public/hero/showroom-portrait.webp",
+    "bytes": 89568,
+    "sha256": "337593a1d149700159148394495d147a8ee5ee7623675c3410f3f646d1e35206"
+  },
+  "logoSource": {
+    "file": "public/hero/responsive/zelo-logo-480.webp",
+    "bytes": 32552,
+    "sha256": "62b80ce3878f591d8de6f13edd1559062b7ed57c4a88903ad5b896ca3e3618f3"
+  },
+  "logo": {
+    "file": "public/hero/responsive/zelo-logo-320.webp",
+    "bytes": 17326,
+    "sha256": "4832406bcd6b1c46dd800f351336c8e830267711a7b2460d259e45d1bc9df7ed"
+  }
+}

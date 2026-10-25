@@ -1,0 +1,163 @@
+{
+  "kind": "Current rework verification. Fixtures and real compiled application separated. Not Google source authorization, real mobile field data or full WCAG certification.",
+  "suites": [
+    {
+      "name": "Compiled SSR and bootstrap",
+      "file": "qa-ssr/results.json",
+      "pass": 14,
+      "fail": 0,
+      "total": 14
+    },
+    {
+      "name": "Production global viewport and interaction matrix",
+      "file": "qa-matrix/qa-global.json",
+      "pass": 22,
+      "fail": 0,
+      "total": 22
+    },
+    {
+      "name": "Production affected typography and text200",
+      "file": "qa-affected/results.json",
+      "pass": 14,
+      "fail": 0,
+      "total": 14
+    },
+    {
+      "name": "Source SEO, consent, keyboard and axe",
+      "file": "qa-local/results.json",
+      "pass": 8,
+      "fail": 0,
+      "total": 8
+    },
+    {
+      "name": "Compiled landing axe",
+      "file": "qa-axe-production/results.json",
+      "pass": 3,
+      "fail": 0,
+      "total": 3
+    },
+    {
+      "name": "Source Instagram lifecycle",
+      "file": "qa-feed/results.json",
+      "pass": 6,
+      "fail": 0,
+      "total": 6
+    },
+    {
+      "name": "Source Google bounded recovery",
+      "file": "qa-google-recovery/results.json",
+      "pass": 5,
+      "fail": 0,
+      "total": 5
+    },
+    {
+      "name": "Compiled boundary/root/lazy errors",
+      "file": "qa-production/qa-production.json",
+      "pass": 4,
+      "fail": 0,
+      "total": 4
+    },
+    {
+      "name": "Targeted rendered text/photo contrast",
+      "file": "qa-contrast/results.json",
+      "pass": 28,
+      "fail": 0,
+      "total": 28
+    }
+  ],
+  "heroComparison": [
+    {
+      "width": 390,
+      "height": 844,
+      "status": "PASS geometry; pixel encoding differences quantified for visual reviewer",
+      "geometry": {
+        ".zelo-hero-car": {
+          "x": 23.40625,
+          "y": 472.625,
+          "w": 343.1875,
+          "h": 174.03125,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        },
+        ".zelo-hero-wordmark": {
+          "x": 23.40625,
+          "y": 253.1875,
+          "w": 343.1875,
+          "h": 118.96875,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        },
+        ".zelo-hero-slogan-left": {
+          "x": 0,
+          "y": 217.1875,
+          "w": 390,
+          "h": 14.296875,
+          "font": "\"Zelo Hero\", Arial, sans-serif"
+        },
+        ".zelo-hero-slogan-right": {
+          "x": 0,
+          "y": 390.1875,
+          "w": 390,
+          "h": 14.296875,
+          "font": "\"Zelo Hero\", Arial, sans-serif"
+        },
+        ".zelo-header-brand": {
+          "x": 15.59375,
+          "y": 14,
+          "w": 150,
+          "h": 55.546875,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        }
+      },
+      "MAE": 0.7975290638797747,
+      "changedPixelsAboveSum15": 2560,
+      "totalPixels": 329160,
+      "maxChannelDifference": 98
+    },
+    {
+      "width": 1440,
+      "height": 809,
+      "status": "PASS geometry; pixel encoding differences quantified for visual reviewer",
+      "geometry": {
+        ".zelo-hero-car": {
+          "x": 411.671875,
+          "y": 344.484375,
+          "w": 611.46875,
+          "h": 310.5,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        },
+        ".zelo-hero-wordmark": {
+          "x": 358.2734375,
+          "y": 164.5,
+          "w": 710.484375,
+          "h": 246.296875,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        },
+        ".zelo-hero-slogan-left": {
+          "x": 93.59375,
+          "y": 407.609375,
+          "w": 348.828125,
+          "h": 22.28125,
+          "font": "\"Zelo Hero\", Arial, sans-serif"
+        },
+        ".zelo-hero-slogan-right": {
+          "x": 1068.234375,
+          "y": 407.609375,
+          "w": 278.171875,
+          "h": 22.28125,
+          "font": "\"Zelo Hero\", Arial, sans-serif"
+        },
+        ".zelo-header-brand": {
+          "x": 96.46875,
+          "y": 8,
+          "w": 187.1875,
+          "h": 69.328125,
+          "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+        }
+      },
+      "MAE": 0,
+      "changedPixelsAboveSum15": 0,
+      "totalPixels": 1164960,
+      "maxChannelDifference": 0
+    }
+  ],
+  "allBrowserProcessesClosed": true
+}
