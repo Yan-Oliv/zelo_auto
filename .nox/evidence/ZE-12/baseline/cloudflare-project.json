@@ -1,0 +1,130 @@
+{
+  "checkedAt": "2026-10-25T02:46:20.510Z",
+  "accountId": "663888827c96aad8d97cea728e78fb0a",
+  "id": "2c35afd9-c446-43f7-86db-3edbc5ec2a4d",
+  "name": "zelo-auto",
+  "domains": [
+    "zelo-auto.pages.dev",
+    "zelo.omnyatech.com.br"
+  ],
+  "subdomain": "zelo-auto.pages.dev",
+  "production_branch": "main",
+  "build_config": {
+    "build_command": "npm run build",
+    "destination_dir": "dist",
+    "root_dir": "",
+    "web_analytics_tag": null,
+    "web_analytics_token": null
+  },
+  "source": {
+    "type": "github",
+    "config": {
+      "owner": "Yan-Oliv",
+      "repo_name": "zelo_auto",
+      "production_branch": "main",
+      "deployments_enabled": true,
+      "production_deployments_enabled": true,
+      "preview_deployment_setting": "all",
+      "preview_branch_includes": [
+        "*"
+      ],
+      "preview_branch_excludes": []
+    }
+  },
+  "deployment_configs": {
+    "production": {
+      "compatibility_date": "2026-07-06",
+      "compatibility_flags": [],
+      "env_vars": [
+        {
+          "name": "INSTAGRAM_ACCESS_TOKEN",
+          "type": "secret_text",
+          "present": true
+        },
+        {
+          "name": "INSTAGRAM_API_MODE",
+          "type": "secret_text",
+          "present": true
+        },
+        {
+          "name": "INSTAGRAM_FEED_ENDPOINT",
+          "type": "secret_text",
+          "present": true
+        },
+        {
+          "name": "INSTAGRAM_GRAPH_USER_ID",
+          "type": "secret_text",
+          "present": true
+        }
+      ],
+      "bindingNames": {
+        "kv": [],
+        "d1": [],
+        "r2": []
+      },
+      "build_image_major_version": 3
+    },
+    "preview": {
+      "compatibility_date": "2026-07-06",
+      "compatibility_flags": [],
+      "env_vars": [],
+      "bindingNames": {
+        "kv": [],
+        "d1": [],
+        "r2": []
+      },
+      "build_image_major_version": 3
+    }
+  },
+  "canonical_deployment": {
+    "id": "0f414771-cd0e-4407-9165-5a4311babff3",
+    "environment": "production",
+    "url": "https://0f414771.zelo-auto.pages.dev",
+    "created_on": "2026-07-23T20:13:07.436968Z",
+    "modified_on": "2026-07-23T20:13:51.366436Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-07-23T20:13:43.89177Z",
+      "ended_on": "2026-07-23T20:13:51.366436Z",
+      "status": "success"
+    },
+    "aliases": [
+      "https://zelo.omnyatech.com.br"
+    ],
+    "source": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+        "commit_message": "feat: cinematic foam playback and audit artifacts",
+        "commit_dirty": false
+      }
+    }
+  },
+  "latest_deployment": {
+    "id": "0f414771-cd0e-4407-9165-5a4311babff3",
+    "environment": "production",
+    "url": "https://0f414771.zelo-auto.pages.dev",
+    "created_on": "2026-07-23T20:13:07.436968Z",
+    "modified_on": "2026-07-23T20:13:51.366436Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-07-23T20:13:43.89177Z",
+      "ended_on": "2026-07-23T20:13:51.366436Z",
+      "status": "success"
+    },
+    "aliases": [
+      "https://zelo.omnyatech.com.br"
+    ],
+    "source": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+        "commit_message": "feat: cinematic foam playback and audit artifacts",
+        "commit_dirty": false
+      }
+    }
+  },
+  "limits": "Read-only API; binding values, credentials and provider payloads omitted."
+}

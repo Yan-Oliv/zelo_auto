@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-25T02:51:30.142Z",
+  "status": 400,
+  "upstreamType": "OAuthException",
+  "upstreamCode": 190,
+  "upstreamSubcode": 0,
+  "oldHandlerSource": "b575ed2:functions/api/instagram-feed.ts uses graph.instagram.com like current Instagram Login flow",
+  "interpretation": "Current production call rejects the configured Instagram authorization. No credential value or provider error message retained; rotating/synchronizing the production secret requires a separate authorized action.",
+  "changedProduction": false
+}

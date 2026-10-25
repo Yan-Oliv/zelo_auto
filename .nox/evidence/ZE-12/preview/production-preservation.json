@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-25T11:18:00.071Z",
+  "productionDeployment": "0f414771-cd0e-4407-9165-5a4311babff3",
+  "productionSHA": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+  "productionUnchanged": true,
+  "previewDeployment": "1d123d20-2d18-4619-baa9-4b411976046f",
+  "configurationChanged": false
+}

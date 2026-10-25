@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-25",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "project": "zelo-auto",
+  "productionDomain": "https://zelo.omnyatech.com.br/",
+  "productionBranch": "main",
+  "expectedCurrentProductionSHA": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+  "previousDeployment": "0f414771-cd0e-4407-9165-5a4311babff3",
+  "previewDeployment": "1d123d20-2d18-4619-baa9-4b411976046f",
+  "previewURL": "https://1d123d20.zelo-auto.pages.dev",
+  "GO_LIVE_authorized": false,
+  "secretSynchronizationAuthorized": false,
+  "requiredApproval": "Authorize this exact candidate/environment and bounded sequence; contract GateD final approval required.",
+  "steps": [
+    {
+      "order": 1,
+      "action": "Synchronize validated local Instagram server bindings to preview and production",
+      "keys": [
+        "INSTAGRAM_API_MODE",
+        "INSTAGRAM_GRAPH_USER_ID",
+        "INSTAGRAM_ACCESS_TOKEN"
+      ],
+      "preserve": "Legacy feed binding and all unrelated settings",
+      "status": "NOT_RUN"
+    },
+    {
+      "order": 2,
+      "action": "Rebuild same SHA preview with authorized bindings and verify authentic Instagram HTTP200 before production",
+      "onFailure": "Do not publish",
+      "status": "NOT_RUN"
+    },
+    {
+      "order": 3,
+      "action": "Recheck current main and previous deployment; fast-forward main only to exact candidate through existing Git pipeline",
+      "onDrift": "Stop and reconcile before any production push",
+      "status": "NOT_RUN"
+    },
+    {
+      "order": 4,
+      "action": "Run full production homologation, immediate smoke and one operational recheck after five minutes",
+      "status": "NOT_RUN"
+    },
+    {
+      "order": 5,
+      "action": "On critical release incident, rollback to known successful production deployment and verify canonical domain",
+      "target": "0f414771-cd0e-4407-9165-5a4311babff3",
+      "status": "NOT_RUN"
+    }
+  ],
+  "google": "Existing owner exception permits honest unavailable UI; ZE-09 BLOCKED_EXTERNAL; authentic source not approved",
+  "prohibited": [
+    "Force push",
+    "DNS/billing changes",
+    "OAuth Google changes",
+    "Secret values in chat/Git/client",
+    "Production push before final authorization"
+  ]
+}

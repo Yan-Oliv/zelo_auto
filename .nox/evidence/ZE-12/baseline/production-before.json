@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-25T02:46:22.114Z",
+  "checks": [
+    {
+      "url": "https://zelo.omnyatech.com.br/",
+      "status": 200,
+      "finalURL": "https://zelo.omnyatech.com.br/",
+      "contentType": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "cfCacheStatus": "DYNAMIC",
+      "bytes": 2297,
+      "sha256": "ba0e571cd3b9663cae97c6703fbcaea4d8c71737152c6c218daffdcce0bd6401",
+      "title": "Zelo Estética Automotiva | Estética automotiva em Catalão-GO",
+      "scripts": [
+        "/assets/index-CZNtdUOr.js"
+      ]
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/api/instagram-feed",
+      "status": 400,
+      "finalURL": "https://zelo.omnyatech.com.br/api/instagram-feed",
+      "contentType": "application/json; charset=UTF-8",
+      "server": "cloudflare",
+      "cacheControl": "public, s-maxage=900, stale-while-revalidate=86400",
+      "cfCacheStatus": "DYNAMIC",
+      "bytes": 277,
+      "sha256": "fd6715f2224a5c6a56bacf9426516f4a78985e93885d21c81e48a5343ca15e90"
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/api/google-reviews",
+      "status": 200,
+      "finalURL": "https://zelo.omnyatech.com.br/api/google-reviews",
+      "contentType": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "cfCacheStatus": "DYNAMIC",
+      "bytes": 2297,
+      "sha256": "ba0e571cd3b9663cae97c6703fbcaea4d8c71737152c6c218daffdcce0bd6401"
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/ze12-before-unknown",
+      "status": 200,
+      "finalURL": "https://zelo.omnyatech.com.br/ze12-before-unknown",
+      "contentType": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "cfCacheStatus": "DYNAMIC",
+      "bytes": 2297,
+      "sha256": "ba0e571cd3b9663cae97c6703fbcaea4d8c71737152c6c218daffdcce0bd6401"
+    }
+  ],
+  "limits": "Baseline only; no production mutation, no provider bodies retained."
+}

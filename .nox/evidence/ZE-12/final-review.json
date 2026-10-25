@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "status": "WAITING_USER_ACTION",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "independentPreparation": "PASS",
+  "remotePreviewGroups": 13,
+  "rootVisualReview": "PASS - actual preview hero mobile, services/results desktop, location/footer mobile; all5area captures present",
+  "productionPublished": false,
+  "postProductionHomologation": "NOT_RUN",
+  "bindingsChanged": false,
+  "goLiveAuthorized": false,
+  "ownerFilesPreserved": true,
+  "remaining": [
+    "Explicit candidate/environment go-live approval",
+    "Authorized Instagram bindings synchronization and authentic preview verification"
+  ],
+  "scopeLimit": "Google unavailable exception already approved, authentic reviews remain blocked externally"
+}

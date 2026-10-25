@@ -1,0 +1,113 @@
+{
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "base": "http://127.0.0.1:8890",
+  "scope": "Exact isolated Git archive and npm ci build; local compiled Cloudflare Pages runtime only. Production postdeploy NOT_RUN.",
+  "status": "PASS",
+  "suites": [
+    {
+      "name": "SSR/hydration",
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/results.json",
+      "total": 14,
+      "pass": 14,
+      "fail": 0
+    },
+    {
+      "name": "Global matrix and interactions",
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/qa-global.json",
+      "total": 22,
+      "pass": 22,
+      "fail": 0
+    },
+    {
+      "name": "SEO, consent, manual keyboard and axe",
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/results.json",
+      "total": 8,
+      "pass": 8,
+      "fail": 0
+    },
+    {
+      "name": "Actual local unavailable APIs and commercial links",
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/results.json",
+      "total": 2,
+      "pass": 2,
+      "fail": 0
+    }
+  ],
+  "httpChecks": [
+    {
+      "url": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/ze12-no-such-page",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "no-store"
+    },
+    {
+      "url": "/500",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/503",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/api/instagram-feed",
+      "status": 503,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "url": "/api/google-reviews",
+      "status": 503,
+      "contentType": "application/json",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "url": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "axeScans": 3,
+  "axeDetectedViolations": 0,
+  "harnessCorrection": "Initial granted-consent reload test attempted service click before intentional deferred DOM mounted. Explicit target readiness added in QA only; initial result preserved, affected group retested PASS.",
+  "integrations": {
+    "instagram": "Local isolated runtime503 configuration verified; no real feed asserted by this QA. Matrix uses labeledTEST DATA.",
+    "google": "Actual isolated endpoint503; unavailable UI without score/reviews. Fixtures validate interaction only, not official authorization.",
+    "maps": "External iframe not used as source validation; official route CTA intact.",
+    "analytics": "Consent diagnostic events validated; no production Google delivery asserted. Actual noncanonical page with granted consent emitted no Google network requests."
+  },
+  "visualEvidence": [
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-390.png"
+  ],
+  "production": {
+    "status": "NOT_RUN",
+    "goLiveAuthorized": false
+  }
+}

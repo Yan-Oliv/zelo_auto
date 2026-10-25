@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-10-25T02:58:40.930Z",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "environment": "preview",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 43122,
+      "sha256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+      "prerendered": true,
+      "canonical": "https://zelo.omnyatech.com.br/",
+      "robots": "noindex"
+    },
+    {
+      "path": "/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+      "status": 200,
+      "type": "font/woff2",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "bytes": 25920,
+      "sha256": "8722aa8030611ff93e25f1e8a6d1e2acdb19fac68285301e41672f5cf5cea1c7",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/assets/index-CicUotAQ.js",
+      "status": 200,
+      "type": "application/javascript",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "bytes": 44606,
+      "sha256": "dcf32850ef00cbe4d9a978c93b710a7b3665803cfae75a898cf98a58e9e2974e"
+    },
+    {
+      "path": "/assets/rolldown-runtime-CNC7AqOf.js",
+      "status": 200,
+      "type": "application/javascript",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "bytes": 879,
+      "sha256": "d4a36920c7bab6ec97d0bdc5d1233622f28fe010198ca32bcdd80c8cb6b64aae",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/assets/react-XhU2c4jO.js",
+      "status": 200,
+      "type": "application/javascript",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "bytes": 190221,
+      "sha256": "77886331cfb7cca8bdb7dd800ea2ca815bbb06b13cb57c3b2c2c5cb059556fa4",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/assets/index-BJdyku_3.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "bytes": 43788,
+      "sha256": "6c09a55343ddad43f3e21e1edb79c6203719052cea81c341377646260a1b82b8",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/hero/responsive/car-final-640.avif",
+      "status": 200,
+      "type": "image/avif",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 39318,
+      "sha256": "e3a9860162ed8400e7b5f2eb063b2e50c31becbad66f713587c175df2b3c91e0",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/hero/showroom-portrait.avif",
+      "status": 200,
+      "type": "image/avif",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 44003,
+      "sha256": "9bd3766454099b1d5614b1c5829efc98b6b557d86c633cb25d47baee37d23d69",
+      "matchesLocalArtifact": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 75,
+      "sha256": "d1b66face37ff2b6c404024c9a84a2a4c1e6313d5cb957499a0f67e27961919e",
+      "matchesLocalArtifact": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 173,
+      "sha256": "e807f46b7d8283a322ffbcf52e10e261182019eab8f6aca3f719882e0c0530a2",
+      "matchesLocalArtifact": false
+    },
+    {
+      "path": "/404.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 2588,
+      "sha256": "be020e5d9d6d4d5213fb668b48a873ce43cf4ee5b811bda2fb1fa5cd43489156",
+      "matchesLocalArtifact": false
+    },
+    {
+      "path": "/500",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 2422,
+      "sha256": "ba56acbe4b034b62bf307e2bcc4386fb2c74e278b2fb43f3d107a535f205c519"
+    },
+    {
+      "path": "/503",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 2695,
+      "sha256": "324631996c68e91cc45e16d1c07b92b3dd207a1edfd1fd808609bfbed9dc6f3d"
+    },
+    {
+      "path": "/ze12-release-unknown",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "cacheControl": "no-store",
+      "bytes": 2588,
+      "sha256": "be020e5d9d6d4d5213fb668b48a873ce43cf4ee5b811bda2fb1fa5cd43489156"
+    },
+    {
+      "path": "/api/instagram-feed",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cacheControl": "private, no-store, max-age=0",
+      "bytes": 81,
+      "sha256": "ea74141adca21c63692b381dbcf2afb6686bec7b9f9f73dc581aedec7c621bd5"
+    },
+    {
+      "path": "/api/google-reviews",
+      "status": 503,
+      "type": "application/json",
+      "cacheControl": "private, no-store, max-age=0",
+      "bytes": 90,
+      "sha256": "4db50d5ad8a4c61bfce9d36ae5d23b395b269f3a4d0b4eafed308137367a79f4"
+    }
+  ]
+}

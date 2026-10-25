@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-25T02:56:39.985Z",
+  "deployments": [
+    {
+      "id": "1d123d20-2d18-4619-baa9-4b411976046f",
+      "environment": "preview",
+      "url": "https://1d123d20.zelo-auto.pages.dev",
+      "created_on": "2026-10-25T02:53:51.92444Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-25T02:54:46.781113Z",
+        "ended_on": "2026-10-25T02:54:53.841533Z",
+        "status": "success"
+      },
+      "source": {
+        "branch": "release/ze12-preview-676f1a5",
+        "commit_hash": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+        "commit_message": "perf(landing): complete ZE-11 mobile performance rework",
+        "commit_dirty": false
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-10-25T02:53:52.047675Z",
+          "ended_on": "2026-10-25T02:53:52.050453Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-10-25T02:53:52.050453Z",
+          "ended_on": "2026-10-25T02:53:53.437606Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-10-25T02:53:53.437606Z",
+          "ended_on": "2026-10-25T02:54:19.576295Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-10-25T02:54:19.576295Z",
+          "ended_on": "2026-10-25T02:54:46.781113Z",
+          "status": "success"
+        },
+        {
+          "name": "deploy",
+          "started_on": "2026-10-25T02:54:46.781113Z",
+          "ended_on": "2026-10-25T02:54:53.841533Z",
+          "status": "success"
+        }
+      ]
+    }
+  ]
+}

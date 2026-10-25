@@ -1,0 +1,83 @@
+{
+  "scope": "Exact isolated candidate676f1a5; actual local Pages runtime and intentionally unconfigured APIs. Not post-deploy or genuine Google validation.",
+  "http": [
+    {
+      "url": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/ze12-no-such-page",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "no-store"
+    },
+    {
+      "url": "/500",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/503",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/api/instagram-feed",
+      "status": 503,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "url": "/api/google-reviews",
+      "status": 503,
+      "contentType": "application/json",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "url": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "screens": [
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-1440.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-390.png",
+    ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-390.png"
+  ],
+  "groups": [
+    {
+      "name": "Actual local unavailable integrations, links and noncanonical analytics 1440",
+      "status": "PASS",
+      "noMockedProviderData": true,
+      "noRuntimeErrors": true,
+      "noAnalyticsRequestsDespiteConsent": true
+    },
+    {
+      "name": "Actual local unavailable integrations, links and noncanonical analytics 390",
+      "status": "PASS",
+      "noMockedProviderData": true,
+      "noRuntimeErrors": true,
+      "noAnalyticsRequestsDespiteConsent": true
+    }
+  ]
+}

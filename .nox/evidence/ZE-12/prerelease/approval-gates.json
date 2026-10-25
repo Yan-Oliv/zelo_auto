@@ -1,0 +1,43 @@
+{
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "date": "2026-10-25",
+  "gates": {
+    "A_ZE11": {
+      "status": "PASS",
+      "basis": "COMPLETED; visual acceptance and actual rework performance/QA recorded; redundant legacy JSON fields reconciled"
+    },
+    "B_Google": {
+      "status": "EXCEPTION_APPROVED",
+      "basis": "Owner explicitly permits future honest unavailable UI; ZE-09 BLOCKED_EXTERNAL, no authenticated data PASS"
+    },
+    "C_Performance": {
+      "status": "PASS",
+      "basis": "Fresh isolated clean Git build, native Pages runtime, cold normal-motion Performance98 simulated LCP2363ms; approved cloud HTML hash identical to ZE11."
+    },
+    "D_GoLive": {
+      "status": "PENDING",
+      "basis": "Contract section4 GateD and sections22/24 require final explicit candidate/environment publication authorization"
+    }
+  },
+  "releaseChecks": {
+    "isolatedInstall": "PASS",
+    "build": "PASS",
+    "lint": "PASS - six legacy warnings",
+    "artifactSecurity": "PASS with documented14 tooling/debug dependency findings",
+    "localQA": "PASS - SSR14/global22/scoped8/actual2/HTTP8/axe3",
+    "cloudPreview": "PASS - actual Git deployment and remote13groups,11viewports; providers intentionally unconfigured",
+    "runtimeVariables": "Production names/types inspected; preview empty; no values emitted",
+    "instagram": "PENDING_AUTHORIZATION - local compiled200/6; old production400/OAuth190 and preview503; synchronize3serverbindings then verify preview before go-live",
+    "rollback": "PREPARED known successful production target; destructive rollback NOT_RUN"
+  },
+  "production": {
+    "project": "zelo-auto",
+    "hostname": "zelo.omnyatech.com.br",
+    "branch": "main",
+    "deploymentsEnabled": true,
+    "previousDeployment": "0f414771-cd0e-4407-9165-5a4311babff3",
+    "deployment": "NOT_RUN"
+  },
+  "requiredFinalAction": "Authorize exact candidate676f1a5 to zelo-auto production including safe Instagram server credential synchronization from validated local server configuration (or owner manual update) and the already-approved honest Google-unavailable exception. Do not send secret values in chat.",
+  "plan": "go-live-plan.json"
+}

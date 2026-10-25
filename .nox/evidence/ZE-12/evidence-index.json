@@ -1,0 +1,429 @@
+{
+  "date": "2026-10-25",
+  "scope": "ZE-12 independent preparation and isolated Cloudflare preview; production NOT_RUN",
+  "selection": "Selected local screenshots, all remote five-area captures and videos, QA reports/harnesses, dependency findings, manifests and sanitized Cloudflare metadata. Source/build working copies, owner backups, raw traces and env files excluded; complete local viewport result data retained.",
+  "count": 84,
+  "totalBytes": 51928348,
+  "files": [
+    {
+      "file": ".nox/evidence/ZE-12/baseline/cloudflare-project.json",
+      "bytes": 3543,
+      "sha256": "b9bb03019ec36aa93546112db14092871017b734f3ab01ec7204fa138eb2df73"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/compiled-local-integrations.json",
+      "bytes": 351,
+      "sha256": "9fcc8852f843fcee0120b554cdec16c0c2cb19307a3b5c92a63147b6f6fe168e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/git-checkpoint.json",
+      "bytes": 1340,
+      "sha256": "e380d1b35cd3fe094d8e2dc2ea47dfee98a91916c92f46c6f75428061023354e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/instagram-production-before.json",
+      "bytes": 535,
+      "sha256": "cdbef62768767c191064a409b77e62861e16aaba8ed6f2ef73f7e6964de77668"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/previous-deployment.json",
+      "bytes": 712,
+      "sha256": "e7b17bc4f0b2c7a7a2ed957c636a84a284b41ed40ad3601642851e99f787a7da"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/production-before.json",
+      "bytes": 2065,
+      "sha256": "69eb97a2c1bc5a1cb921a41a230da1028b7eeaaad0859b87d56c5796bd9630bf"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/baseline/rollback-target-check.json",
+      "bytes": 827,
+      "sha256": "7a568c266428e7fe2402e719ca1a4c6609a93476dd69a6427f93bde11d9a954d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/final-review.json",
+      "bytes": 759,
+      "sha256": "9afa6dfcbaf056d21b2efbdf3f5d1f7b8b4ab29a272783af49cbc050e3b4a472"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/inspect-cloudflare.mjs",
+      "bytes": 3489,
+      "sha256": "551196dba6756d87192474b06ab9b639460ef2eeeb353fdce41e30a1f5096bdc"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/approval-gates.json",
+      "bytes": 2197,
+      "sha256": "7834c29db70b1490289de11c8c08fb9594939520c531ccf3488100bc8ebf64b5"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/build.txt",
+      "bytes": 6376,
+      "sha256": "1639a7e4d270eccd5a7c37f7b3e42958f27e0424eed9f96a5a1c61ba9f2971a4"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/dependency-audit.json",
+      "bytes": 17900,
+      "sha256": "8dfed4f347aca25290ae29a419ea1ebfa5b3db54bc888f3ce6497a24dac5ec84"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/go-live-plan.json",
+      "bytes": 2232,
+      "sha256": "6d188e4a3d5038fec2f3084acc8a1dd2cf4596103bad35f53248d54092d5d6ff"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/install.txt",
+      "bytes": 309,
+      "sha256": "b883ea446dc5288b425ce9b82efeb36a54a6fc38ac480e7b1fe5409e62f30f77"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/lint.txt",
+      "bytes": 2772,
+      "sha256": "8d6427bb679e4a4ba566a7b5f47ecc0bccde7085583faa0ca9ff64c69ce18e50"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/performance-native-release-mobile-cold-summary.json",
+      "bytes": 9423,
+      "sha256": "03c6813e9bfdc2c9ddf90d3c86ca0d1db1e2e8a95cc268f3e918c54381602b0d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/performance-native-release-mobile-cold.json",
+      "bytes": 500546,
+      "sha256": "c71069346abe7bdea22677e92384e4c5a226a868d9491abf506556400fba73b7"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/performance-verify.mjs",
+      "bytes": 5000,
+      "sha256": "6623890a6b0f72f4d5666010139fc002ac390fea5412caa0b20b956d60745cb5"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual.mjs",
+      "bytes": 3825,
+      "sha256": "77b39fa1020fbe1e1097bab869e0d1d91ee15e0506d5844f30699a1b5f0ff149"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-1440.png",
+      "bytes": 1612197,
+      "sha256": "bf6e8f039d347ce7e504d4051f86f28a1496ed931be44eba03e9306497d89b81"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-1-hero-390.png",
+      "bytes": 297362,
+      "sha256": "f3bdc949ff4fd9c03f523e4d1910424576b7d084e86c903198cb19e108417c1c"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-1440.png",
+      "bytes": 1261525,
+      "sha256": "543ff87a6d128eca8c80185f7e815a9e109765e96b14f2480982b4fce08114fe"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-2-services-results-390.png",
+      "bytes": 1366917,
+      "sha256": "122a8c53c570327631adde3db18f83571fb35a59f579612b5bf26439268cc511"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-1440.png",
+      "bytes": 1789287,
+      "sha256": "70394b1e8c62026514dc05f24e4fcc416f6c33b3e944cdc81bb32e50b09adc50"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-3-process-quality-390.png",
+      "bytes": 599793,
+      "sha256": "65aeec440b333a4114b4ae9ce1f8bcc0fff6ce5e0fd3021d8129e96b7125b82d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-1440.png",
+      "bytes": 479158,
+      "sha256": "88c3c233908c7ba6d0c2b4bfa62be0bf0db6a7ec7180eeda9b4bb4ae5bb8275b"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-4-community-390.png",
+      "bytes": 277587,
+      "sha256": "b576fd86d193c54a845757656b862a498a8a518a8adc9b517a270b0fcdcd6d4f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-1440.png",
+      "bytes": 939426,
+      "sha256": "38e642f7435acbf176c0ae990f2926076e340baabdab27af7b38e178df8f4fa0"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-5-location-footer-390.png",
+      "bytes": 359827,
+      "sha256": "94be37ff9d037b31e0bef02871a72cbb69cbafa95fc4e7f11cb32303dcd76849"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-1440.png",
+      "bytes": 4799332,
+      "sha256": "e0526763801036481d7377e81ada1c47fac0872778dd9ef0d23d878ace311dcc"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/LOCAL-unconfigured-full-390.png",
+      "bytes": 2558601,
+      "sha256": "b21a899a353a24215718a1e29ed525da2a256a23cfaa67baa2c52d15ffe8b771"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-actual/results.json",
+      "bytes": 3096,
+      "sha256": "3312c37e509d64fafd907094d81fbd2a9b5a5cb0d1a002536e3bc8184079f080"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local.mjs",
+      "bytes": 22565,
+      "sha256": "bd9fabdf8bec58955fdea0a27f24d3503f0ed0ac514a2899743b0bd6c040fb4d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/axe-1440.json",
+      "bytes": 29389,
+      "sha256": "caa4e5b3d83bcd770db3759480cc1036e16f2a312011ee144f66799528924e86"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/axe-320.json",
+      "bytes": 27944,
+      "sha256": "5cf8c507f41b0d8d57eec2f357ae6c58ff6afe143481335bd505e6e9979e794c"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/axe-390.json",
+      "bytes": 28495,
+      "sha256": "3194fcc36984a9682c4c920e48c85582f026683bbd740c982475e4fc1034be0e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/results-first-harness.json",
+      "bytes": 104477,
+      "sha256": "085b47192cd2c714c390b0111e62244f38e6d1ab236e8b574ffc7d718561fbd3"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-local/results.json",
+      "bytes": 106798,
+      "sha256": "5b69cf9d2ec443e3bd431fd7dd8c8723972d61ae2974f57950fd885b6a381b5d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix.mjs",
+      "bytes": 16007,
+      "sha256": "838db8c99dd4955976184035952f158931e3ddcb3210740eef5f977e978382b9"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/MOCK-global-1440x900.png",
+      "bytes": 5205051,
+      "sha256": "569c7274c81a2ae84416c1aaa1e25a1ad99afe64f0ecdbe7e2e7e468645731da"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/MOCK-global-320x640.png",
+      "bytes": 2386882,
+      "sha256": "b1ea7fd844c53fa75789c17fa4617b622a8a556aef3539588535f05aa317b999"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/MOCK-global-390x844.png",
+      "bytes": 2902771,
+      "sha256": "55733d977aa323f790d4b5ce6d62a882def69f8c52a00298414d19f49efe578e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/qa-global.json",
+      "bytes": 33304,
+      "sha256": "3063930132e9c7215a337b002f8463a06e4615cadee068a0e0c1ea3f80ca458d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-matrix/text200.png",
+      "bytes": 2904531,
+      "sha256": "5da1883c8813e5b5a8a0df89af5e99b6f2992c3576394cea84b63bab223ad092"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-report.md",
+      "bytes": 1300,
+      "sha256": "76952dfa49487157659d7439771e150346e81a64f25959993b6e821d72536a6d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr.mjs",
+      "bytes": 12699,
+      "sha256": "cb87fa6ce1306fffc56fbe2bd6b1c1fa82e28ecfde8db8fe3bd8dd81e6ff6bf6"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/boot-blocked-main.png",
+      "bytes": 54389,
+      "sha256": "a86db22f8eac3e27e16434c509db5fe863abcb07ae2ebcc7530359ae4c04b955"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/boot-nojs.png",
+      "bytes": 58430,
+      "sha256": "eb7c20b8b05c6f2b9769835b6e5ec46729f9f85c8487552028dc0e62306c6779"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/cold-final.png",
+      "bytes": 234531,
+      "sha256": "0bfa94f7ce3f4adf894bb745f54057463579a065a1cdff23132f16e6aed89df5"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/cold-initial.png",
+      "bytes": 28280,
+      "sha256": "4efe3c03c8c759aa180aa3095f22a05b0efeafc4213a54d3bf14e6f12f49c61e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/cold-middle.png",
+      "bytes": 205339,
+      "sha256": "af33bd6f71f90a891fe4c07c33ae5990b145cdd57321c4746b7757034cfc00cd"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/cold-session.webm",
+      "bytes": 341666,
+      "sha256": "2189ab56b154bd440bcc5b3b0ab3e559a4227f0e91866c73e583f624cd251541"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/native-before-hydration.png",
+      "bytes": 41386,
+      "sha256": "f35aaefc3612214c656d8c43166d066774fd253aefa6b8fb9873fea62e00610f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/results.json",
+      "bytes": 5593,
+      "sha256": "1525b72efd52c6706b805865ad87f94e080c97ac1f11af4dcb159ea4b1b84c14"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-ssr/slow-final.png",
+      "bytes": 234531,
+      "sha256": "0bfa94f7ce3f4adf894bb745f54057463579a065a1cdff23132f16e6aed89df5"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/qa-summary.json",
+      "bytes": 4381,
+      "sha256": "3b763240617a796153cb45a11bfc31e7718ef79d139cf268a8b96e388410f8c0"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/release-manifest.json",
+      "bytes": 24657,
+      "sha256": "49ea93d9f65f6d3facedef303940751027b23535ddb13cc3f3be3a23ec4bd7ba"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/prerelease/security-summary.json",
+      "bytes": 1726,
+      "sha256": "0c000adc5694794c45cf72b90f9263fb1236aba20d7f5082bd8278dc9b88017a"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/build-summary.json",
+      "bytes": 533,
+      "sha256": "49953bdd23056124af5d3bb82ac3a4e006a956eedc2180e5cebd208cab6d5050"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/deployment.json",
+      "bytes": 1686,
+      "sha256": "340b9900456d76cd546e63513e4f86f0d83ff82ea7fbe78a378e29078c27f81d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/http-results.json",
+      "bytes": 4857,
+      "sha256": "a14173e0de2067dc49b1ed0637b96ac356adc3fcbe7bb2eaea26ec276ce38ec1"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/production-preservation.json",
+      "bytes": 302,
+      "sha256": "766ff3ec32d8e73a17353f51356aecf72dfb801f1946cbc7f7f838d919311cb7"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview.mjs",
+      "bytes": 9926,
+      "sha256": "6c9be8212926890fd2ebf5b6ce26b265078f4995d8543be2dfbfdbc59dac54ec"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-1-hero-1440.png",
+      "bytes": 1612197,
+      "sha256": "bf6e8f039d347ce7e504d4051f86f28a1496ed931be44eba03e9306497d89b81"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-1-hero-390.png",
+      "bytes": 297362,
+      "sha256": "f3bdc949ff4fd9c03f523e4d1910424576b7d084e86c903198cb19e108417c1c"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-2-services-results-1440.png",
+      "bytes": 1261525,
+      "sha256": "543ff87a6d128eca8c80185f7e815a9e109765e96b14f2480982b4fce08114fe"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-2-services-results-390.png",
+      "bytes": 1366917,
+      "sha256": "122a8c53c570327631adde3db18f83571fb35a59f579612b5bf26439268cc511"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-3-process-quality-1440.png",
+      "bytes": 1789287,
+      "sha256": "70394b1e8c62026514dc05f24e4fcc416f6c33b3e944cdc81bb32e50b09adc50"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-3-process-quality-390.png",
+      "bytes": 599793,
+      "sha256": "65aeec440b333a4114b4ae9ce1f8bcc0fff6ce5e0fd3021d8129e96b7125b82d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-4-community-1440.png",
+      "bytes": 479158,
+      "sha256": "88c3c233908c7ba6d0c2b4bfa62be0bf0db6a7ec7180eeda9b4bb4ae5bb8275b"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-4-community-390.png",
+      "bytes": 277587,
+      "sha256": "b576fd86d193c54a845757656b862a498a8a518a8adc9b517a270b0fcdcd6d4f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-5-location-footer-1440.png",
+      "bytes": 939426,
+      "sha256": "38e642f7435acbf176c0ae990f2926076e340baabdab27af7b38e178df8f4fa0"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-5-location-footer-390.png",
+      "bytes": 359827,
+      "sha256": "94be37ff9d037b31e0bef02871a72cbb69cbafa95fc4e7f11cb32303dcd76849"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-full-1440x900.png",
+      "bytes": 4799332,
+      "sha256": "e0526763801036481d7377e81ada1c47fac0872778dd9ef0d23d878ace311dcc"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-full-320x640.png",
+      "bytes": 2141177,
+      "sha256": "cd48eb2da1678aaa3e79df9c7196915f2d6e0cc6ded4727f8e947a1c87d94a45"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/PREVIEW-unconfigured-full-390x844.png",
+      "bytes": 2558601,
+      "sha256": "b21a899a353a24215718a1e29ed525da2a256a23cfaa67baa2c52d15ffe8b771"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/intro-final.png",
+      "bytes": 234489,
+      "sha256": "11fbedaf1716b211d10d9efe47371c94ffc92e4a69ae4cad882e38ee0ae0dbfd"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/intro-initial.png",
+      "bytes": 41386,
+      "sha256": "f35aaefc3612214c656d8c43166d066774fd253aefa6b8fb9873fea62e00610f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/intro-middle.png",
+      "bytes": 198022,
+      "sha256": "e6416fe39da9966352a33829ba459b84946a280bc4aac9a3b80867329270ee5e"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/intro-preview.webm",
+      "bytes": 958767,
+      "sha256": "c0e345aad4bbbe74762ef4bf6ff5930e1a1d897833f68a96509642bf64ccac5d"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/results-class-harness.json",
+      "bytes": 20518,
+      "sha256": "9078e8003352c34a5602253406b6688272d6a4e6e822f5c67e447fa3fd63b10f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/results-first-harness.json",
+      "bytes": 20518,
+      "sha256": "9078e8003352c34a5602253406b6688272d6a4e6e822f5c67e447fa3fd63b10f"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/preview/qa-preview/results.json",
+      "bytes": 27084,
+      "sha256": "32e00296bdc3e5a0fdbc003f00e3a893a12f5362c40e0ec26c16aceea23d1f60"
+    },
+    {
+      "file": ".nox/evidence/ZE-12/rollback/rollback-plan.md",
+      "bytes": 2640,
+      "sha256": "87f2242a14c0bf5aa05ab49d55d33e8325c456969c4d786b2996d97e55021529"
+    }
+  ]
+}

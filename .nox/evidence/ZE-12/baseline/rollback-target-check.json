@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "targetDeploymentId": "0f414771-cd0e-4407-9165-5a4311babff3",
+  "environment": "production",
+  "status": "success",
+  "checks": [
+    {
+      "url": "https://0f414771.zelo-auto.pages.dev/",
+      "status": 200,
+      "HTMLSHA256": "ba0e571cd3b9663cae97c6703fbcaea4d8c71737152c6c218daffdcce0bd6401",
+      "asset": "/assets/index-CZNtdUOr.js",
+      "assetStatus": 200
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/",
+      "status": 200,
+      "HTMLSHA256": "ba0e571cd3b9663cae97c6703fbcaea4d8c71737152c6c218daffdcce0bd6401",
+      "asset": "/assets/index-CZNtdUOr.js",
+      "assetStatus": 200
+    }
+  ],
+  "sameHTML": true,
+  "limits": "Read-only availability and current-content match. No rollback executed. Legacy current APIs/routing limitations remain part of the prior version."
+}

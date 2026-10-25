@@ -1,0 +1,1 @@
+Isolated candidate676f1a5 from git archive. npm ci --no-fund exit0. Added366 packages/audited367 in30s. Node24.13.1/npm11.8.0. Deprecated node-domexception1.0.0 and glob10.5.0. Audit14 findings (5moderate/9high), classified separately before release; no automatic fix or force. No root node_modules mutation.

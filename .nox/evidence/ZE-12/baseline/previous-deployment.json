@@ -1,0 +1,25 @@
+{
+  "id": "0f414771-cd0e-4407-9165-5a4311babff3",
+  "environment": "production",
+  "url": "https://0f414771.zelo-auto.pages.dev",
+  "created_on": "2026-07-23T20:13:07.436968Z",
+  "modified_on": "2026-07-23T20:13:51.366436Z",
+  "latest_stage": {
+    "name": "deploy",
+    "started_on": "2026-07-23T20:13:43.89177Z",
+    "ended_on": "2026-07-23T20:13:51.366436Z",
+    "status": "success"
+  },
+  "aliases": [
+    "https://zelo.omnyatech.com.br"
+  ],
+  "source": {
+    "type": "github:push",
+    "metadata": {
+      "branch": "main",
+      "commit_hash": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+      "commit_message": "feat: cinematic foam playback and audit artifacts",
+      "commit_dirty": false
+    }
+  }
+}

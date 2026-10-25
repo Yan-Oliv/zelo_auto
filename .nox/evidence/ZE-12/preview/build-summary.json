@@ -1,0 +1,15 @@
+{
+  "status": 200,
+  "deployment": "1d123d20-2d18-4619-baa9-4b411976046f",
+  "selectedBuildLines": [
+    "Success: Finished cloning repository files",
+    "Detected the following tools from environment: npm@10.9.9, nodejs@22.23.4",
+    "Executing user command: npm run build",
+    "Prerendered independent hero: HTML6611B criticalCSS20308B",
+    "Finished",
+    "✨ Compiled Worker successfully",
+    "Deploying your site to Cloudflare's global network...",
+    "Success: Your site was deployed!"
+  ],
+  "omittedOtherLines": true
+}

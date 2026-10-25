@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-25T02:57:54.100Z",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "runtime": "Wrangler native Pages8893 isolated build; whitelist local server variables supplied only in child process memory, no secret file or CLI argument",
+  "status": 200,
+  "posts": 6,
+  "category": null,
+  "buildLoadsEnvironment": false
+}
