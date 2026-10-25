@@ -1,0 +1,341 @@
+{
+  "mode": "mobile",
+  "state": "cold",
+  "url": "https://zelo.omnyatech.com.br/",
+  "checkedAt": "2026-10-25T11:39:48.296Z",
+  "lighthouseVersion": "13.5.0",
+  "indexSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+  "matchesApprovedHTML": true,
+  "scores": {
+    "performance": 95,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "LCP": 2554,
+  "observedLCP": 1430,
+  "FCP": 1954,
+  "TBT": 0,
+  "CLS": 0,
+  "speedIndex": 2222,
+  "TTFB": 754,
+  "intro": [
+    {
+      "time": 181.5,
+      "intro": "waiting",
+      "reduce": false
+    },
+    {
+      "time": 245.70000004768372,
+      "intro": "playing",
+      "reduce": false
+    },
+    {
+      "time": 3568.899999976158,
+      "intro": "settled",
+      "reduce": false
+    }
+  ],
+  "sessionBefore": null,
+  "runtimeErrors": [],
+  "runWarnings": [],
+  "resources": [
+    {
+      "resourceType": "total",
+      "label": "Total",
+      "requestCount": 23,
+      "transferSize": 817624
+    },
+    {
+      "resourceType": "image",
+      "label": "Image",
+      "requestCount": 6,
+      "transferSize": 500533
+    },
+    {
+      "resourceType": "script",
+      "label": "Script",
+      "requestCount": 7,
+      "transferSize": 170425
+    },
+    {
+      "resourceType": "font",
+      "label": "Font",
+      "requestCount": 4,
+      "transferSize": 99421
+    },
+    {
+      "resourceType": "stylesheet",
+      "label": "Stylesheet",
+      "requestCount": 2,
+      "transferSize": 25817
+    },
+    {
+      "resourceType": "document",
+      "label": "Document",
+      "requestCount": 1,
+      "transferSize": 12328
+    },
+    {
+      "resourceType": "other",
+      "label": "Other",
+      "requestCount": 3,
+      "transferSize": 9100
+    },
+    {
+      "resourceType": "media",
+      "label": "Media",
+      "requestCount": 0,
+      "transferSize": 0
+    },
+    {
+      "resourceType": "third-party",
+      "label": "Third-party",
+      "requestCount": 1,
+      "transferSize": 10478
+    }
+  ],
+  "breakdown": [
+    {
+      "type": "table",
+      "headings": [
+        {
+          "key": "label",
+          "valueType": "text",
+          "label": "Subpart"
+        },
+        {
+          "key": "duration",
+          "valueType": "ms",
+          "label": "Duration"
+        }
+      ],
+      "items": [
+        {
+          "subpart": "timeToFirstByte",
+          "label": "Time to first byte",
+          "duration": 155.746
+        },
+        {
+          "subpart": "resourceLoadDelay",
+          "label": "Resource load delay",
+          "duration": 6.347
+        },
+        {
+          "subpart": "resourceLoadDuration",
+          "label": "Resource load duration",
+          "duration": 61.434
+        },
+        {
+          "subpart": "elementRenderDelay",
+          "label": "Element render delay",
+          "duration": 1206.17
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "selector": "section#hero > div.zelo-hero-car > picture > img.zelo-hero-car-body",
+      "boundingRect": {
+        "top": 461,
+        "bottom": 645,
+        "left": 25,
+        "right": 387,
+        "width": 363,
+        "height": 184
+      }
+    }
+  ],
+  "network": [
+    {
+      "url": "https://zelo.omnyatech.com.br/",
+      "status": 200,
+      "bytes": 12328,
+      "start": 0.8400000333786011,
+      "end": 156.5220000743866
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/hero/responsive/zelo-logo-320.webp",
+      "status": 200,
+      "bytes": 17671,
+      "start": 161.65299999713898,
+      "end": 222.95600008964539
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/hero/responsive/car-final-640.avif",
+      "status": 200,
+      "bytes": 39813,
+      "start": 161.80099999904633,
+      "end": 222.83500003814697
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/hero/showroom-portrait.avif",
+      "status": 200,
+      "bytes": 44414,
+      "start": 161.8969999551773,
+      "end": 208.99000000953674
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/Montserrat-Regular-latin-B0KxnUOT.woff2",
+      "status": 200,
+      "bytes": 26314,
+      "start": 162.00699996948242,
+      "end": 195.1780000925064
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/index-CicUotAQ.js",
+      "status": 200,
+      "bytes": 17951,
+      "start": 166.23300004005432,
+      "end": 223.04700005054474
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/rolldown-runtime-CNC7AqOf.js",
+      "status": 200,
+      "bytes": 816,
+      "start": 166.3789999485016,
+      "end": 199.52300000190735
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/react-XhU2c4jO.js",
+      "status": 200,
+      "bytes": 59651,
+      "start": 166.47900009155273,
+      "end": 223.3400000333786
+    },
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "status": 200,
+      "bytes": 10478,
+      "start": 167.20500004291534,
+      "end": 279.72000002861023
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/index-BJdyku_3.css",
+      "status": 200,
+      "bytes": 11352,
+      "start": 167.3289999961853,
+      "end": 198.64400005340576
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/cdn-cgi/rum",
+      "status": 204,
+      "bytes": 511,
+      "start": 286.932000041008,
+      "end": 327.5349999666214
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/favicon-64-v1.png",
+      "status": 200,
+      "bytes": 5012,
+      "start": 287.9810000658035,
+      "end": 645.5470000505447
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/EditorialContent-Dywq92D7.js",
+      "status": 200,
+      "bytes": 15084,
+      "start": 3556.03200006485,
+      "end": 3734.2880001068115
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/motion-cOFAz5-i.js",
+      "status": 200,
+      "bytes": 61317,
+      "start": 3556.184000015259,
+      "end": 3729.9509999752045
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/es-DsQX03fu.js",
+      "status": 200,
+      "bytes": 5128,
+      "start": 3556.6729999780655,
+      "end": 3732.445000052452
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/EditorialContent-DNuLRO-M.css",
+      "status": 200,
+      "bytes": 14465,
+      "start": 3556.7799999713898,
+      "end": 3732.610999941826
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2",
+      "status": 200,
+      "bytes": 26332,
+      "start": 3567.7269999980927,
+      "end": 3866.214000105858
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/assets/Montserrat-Bold-latin-B1G_e2yF.woff2",
+      "status": 200,
+      "bytes": 26486,
+      "start": 3903.0750000476837,
+      "end": 4059.1460000276566
+    },
+    {
+      "url": "[inline-resource]",
+      "status": 200,
+      "bytes": 26,
+      "start": 3901.9079999923706,
+      "end": 3915.986999988556
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/api/instagram-feed",
+      "status": 200,
+      "bytes": 3577,
+      "start": 3903.639000058174,
+      "end": 4543.236000061035
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/hero/showroom-reference.webp",
+      "status": 200,
+      "bytes": 190018,
+      "start": 3918.3680000305176,
+      "end": 4229.800999999046
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/hero/responsive/car-4k-640.webp",
+      "status": 200,
+      "bytes": 64050,
+      "start": 3918.5069999694824,
+      "end": 4087.2309999465942
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/editorial/service-wash.webp",
+      "status": 200,
+      "bytes": 144567,
+      "start": 3918.9639999866486,
+      "end": 4374.145000100136
+    },
+    {
+      "url": "https://zelo.omnyatech.com.br/fonts/michroma-community-latin.woff2",
+      "status": 200,
+      "bytes": 20289,
+      "start": 3922.4090000391006,
+      "end": 4079.3980001211166
+    }
+  ],
+  "settings": {
+    "formFactor": "mobile",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "disableStorageReset": false,
+    "pauseAfterLoadMs": 4500
+  }
+}

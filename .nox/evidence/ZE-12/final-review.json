@@ -1,18 +1,38 @@
 {
   "date": "2026-10-25",
-  "status": "WAITING_USER_ACTION",
+  "status": "COMPLETED",
+  "publication": "PUBLICADA",
   "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
-  "independentPreparation": "PASS",
-  "remotePreviewGroups": 13,
-  "rootVisualReview": "PASS - actual preview hero mobile, services/results desktop, location/footer mobile; all5area captures present",
-  "productionPublished": false,
-  "postProductionHomologation": "NOT_RUN",
-  "bindingsChanged": false,
-  "goLiveAuthorized": false,
-  "ownerFilesPreserved": true,
-  "remaining": [
-    "Explicit candidate/environment go-live approval",
-    "Authorized Instagram bindings synchronization and authentic preview verification"
+  "productionDeployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "releaseTag": "ZE-12-release-20261025-676f1a5",
+  "domain": "https://zelo.omnyatech.com.br/",
+  "explicitGoLive": true,
+  "criteria": [
+    {
+      "id": "ZE-12-C01",
+      "status": "PASS"
+    },
+    {
+      "id": "ZE-12-C02",
+      "status": "PASS"
+    },
+    {
+      "id": "ZE-12-C03",
+      "status": "PASS"
+    },
+    {
+      "id": "ZE-12-C04",
+      "status": "PASS"
+    }
   ],
-  "scopeLimit": "Google unavailable exception already approved, authentic reviews remain blocked externally"
+  "QA": "PASS actual canonical-domain functional/visual/provider/HTTP/error/motion/accessibility checks",
+  "performanceMeasured": true,
+  "strictProductionMobileLCPTarget": "NOT_MET2554ms - disclosed54msabove target; no invented ownerwaiver",
+  "runtimeObservation": "PASS bounded sample",
+  "rollback": "PREPARED_NOT_REQUIRED",
+  "Google": "BLOCKED_EXTERNAL approved release exception",
+  "GA4Dashboard": "NOT_VERIFIED",
+  "ownerFilesPreserved": true,
+  "productSourceChangedDuringRelease": false,
+  "noDNSBillingGoogleOAuthChanges": true
 }

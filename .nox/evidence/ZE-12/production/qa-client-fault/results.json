@@ -1,0 +1,642 @@
+{
+  "scope": "Canonical production responses with browser-context-only dependency failure simulation; no public code/configuration mutation. Static error33states use3navigationrequests and11resizes each.",
+  "groups": [
+    {
+      "name": "Browser-simulated deferred chunk failure safe500 and full reload recovery",
+      "status": "PASS",
+      "evidence": {
+        "rootHTTPStatus": 200,
+        "injectedDependencyResponse": 503,
+        "scope": "Only this browser intercepts the actual production EditorialContent chunk; neither server nor public asset changed",
+        "safeReact500": true,
+        "diagnostic": "[Zelo] APP_RENDER_FAILED",
+        "recovery": "Interception removed, full document reload restored healthy page",
+        "healthy": {
+          "hero": true,
+          "services": 4,
+          "instagram": 6,
+          "noUnhandledErrors": true
+        },
+        "notClaimed": "Actual Cloudflare infrastructure500 or HTTP500 status for React UI"
+      }
+    },
+    {
+      "name": "Native error pages eleven viewports each 33 states with three page loads",
+      "status": "PASS",
+      "evidence": {
+        "pageLoads": [
+          {
+            "path": "/ze12-error-matrix-unknown",
+            "status": 404
+          },
+          {
+            "path": "/500",
+            "status": 200
+          },
+          {
+            "path": "/503",
+            "status": 200
+          }
+        ],
+        "states": 33,
+        "matrix": [
+          {
+            "code": 404,
+            "width": 2560,
+            "height": 1440,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 1920,
+            "height": 1080,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 1440,
+            "height": 900,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 1366,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 1024,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 768,
+            "height": 1024,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 430,
+            "height": 932,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 390,
+            "height": 844,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 360,
+            "height": 740,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 312,
+                "height": 52
+              },
+              {
+                "width": 312,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 320,
+            "height": 640,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 272,
+                "height": 52
+              },
+              {
+                "width": 272,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 404,
+            "width": 844,
+            "height": 390,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 222.9375,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 2560,
+            "height": 1440,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 1920,
+            "height": 1080,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 1440,
+            "height": 900,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 1366,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 1024,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 768,
+            "height": 1024,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 430,
+            "height": 932,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 390,
+            "height": 844,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 360,
+            "height": 740,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 312,
+                "height": 52
+              },
+              {
+                "width": 312,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 320,
+            "height": 640,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 272,
+                "height": 52
+              },
+              {
+                "width": 272,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 500,
+            "width": 844,
+            "height": 390,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 218,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 2560,
+            "height": 1440,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 1920,
+            "height": 1080,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 1440,
+            "height": 900,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 1366,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 1024,
+            "height": 768,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 768,
+            "height": 1024,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 430,
+            "height": 932,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 390,
+            "height": 844,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 330,
+                "height": 52
+              },
+              {
+                "width": 330,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 360,
+            "height": 740,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 312,
+                "height": 52
+              },
+              {
+                "width": 312,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 320,
+            "height": 640,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 272,
+                "height": 52
+              },
+              {
+                "width": 272,
+                "height": 52
+              }
+            ]
+          },
+          {
+            "code": 503,
+            "width": 844,
+            "height": 390,
+            "noHorizontalOverflow": true,
+            "textReadable": true,
+            "actionsVisibleByScroll": true,
+            "actionSizes": [
+              {
+                "width": 237.015625,
+                "height": 52
+              },
+              {
+                "width": 226.90625,
+                "height": 52
+              }
+            ]
+          }
+        ],
+        "limits": "500/503 templates returnHTTP200; responsive native error states are real but no Cloudflare origin fault was created."
+      }
+    }
+  ]
+}

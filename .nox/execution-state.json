@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "project": "zelo_autoestica",
-  "status": "WAITING_USER_ACTION",
-  "currentSprint": "ZE-12",
-  "currentStep": "Independent release preparation and isolated preview validated; final GO-LIVE and Instagram sync authorization pending",
+  "status": "BLOCKED_EXTERNAL",
+  "currentSprint": null,
+  "currentStep": "ZE-12 completed: canonical production published and homologated; only deferred Google source remains externally blocked",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
-  "stopReason": "WAITING_USER_ACTION",
-  "nextAction": "Explicit GO-LIVE approval for exact candidate/domain plus bounded Instagram server binding synchronization and conditional monitoring/rollback plan",
+  "stopReason": "BLOCKED_EXTERNAL",
+  "nextAction": "Await external Google authorization and authorized endpoint readiness; nonblocking field-performance monitoring backlog, no new sprint or active polling started",
   "sprints": [
     {
       "id": "ZE-01",
@@ -1136,19 +1136,24 @@
     {
       "id": "ZE-12",
       "title": "PublicaÃ§Ã£o controlada",
-      "status": "WAITING_USER_ACTION",
+      "status": "COMPLETED",
       "criteria": [
         {
           "id": "ZE-12-C01",
           "description": "Release prepared and final GO-LIVE authorized",
           "required": true,
-          "status": "PENDING",
+          "status": "PASS",
           "evidence": [
             "ZE-12-Report.md",
             "evidence/ZE-12/prerelease/release-manifest.json",
             "evidence/ZE-12/prerelease/approval-gates.json",
             "evidence/ZE-12/prerelease/go-live-plan.json",
-            "evidence/ZE-12/preview/qa-preview/results.json"
+            "evidence/ZE-12/preview/qa-preview/results.json",
+            "evidence/ZE-12/prerelease/go-live-authorization.json",
+            "evidence/ZE-12/production/bindings-sync.json",
+            "evidence/ZE-12/production/pre-push-gates.json",
+            "evidence/ZE-12/preview/authenticated-feed-check.json",
+            "ZE-12-Report.md"
           ],
           "subgates": {
             "ZE11": "PASS",
@@ -1157,32 +1162,66 @@
             "installBuildLint": "PASS",
             "security": "PASS with14 documented build/debug dependency findings",
             "localQA": "PASS",
-            "cloudPreview": "PASS",
+            "cloudPreview": "PASS - authenticated preview8a0949d0 same approved HTML SHA",
             "rollback": "PREPARED, no destructive test",
-            "Instagram": "PENDING_AUTHORIZED_BINDING_SYNC",
-            "GoLive": "PENDING"
+            "Instagram": "PASS - actual authenticated preview HTTP200/six official posts before production push",
+            "GoLive": "PASS - explicit owner authorization"
           }
         },
         {
           "id": "ZE-12-C02",
           "description": "Controlled correct deployment",
           "required": true,
-          "status": "PENDING",
-          "evidence": []
+          "status": "PASS",
+          "evidence": [
+            "evidence/ZE-12/production/deployment.json",
+            "evidence/ZE-12/production/pre-push-gates.json",
+            "evidence/ZE-12/production/smoke-initial.json",
+            "evidence/ZE-12/production/release-tag.json",
+            "ZE-12-Report.md"
+          ]
         },
         {
           "id": "ZE-12-C03",
           "description": "Real production homologation",
           "required": true,
-          "status": "PENDING",
-          "evidence": []
+          "status": "PASS",
+          "evidence": [
+            "ZE-12-Report.md",
+            "evidence/ZE-12/production/qa-summary.json",
+            "evidence/ZE-12/production/performance-results.json",
+            "evidence/ZE-12/production/performance-decision.json"
+          ],
+          "subgates": {
+            "canonicalDomainHTTP": "PASS",
+            "visualReferencesAndApprovedCandidate": "PASS",
+            "introAndSectionMotion": "PASS",
+            "responsive11Viewports": "PASS",
+            "realInstagram6Posts6DecodedImages": "PASS",
+            "Google": "ACCEPTED_EXCEPTION - source BLOCKED_EXTERNAL, honest unavailable UI",
+            "WhatsAppBrandsSKG": "PASS",
+            "MapsRealPixelsAndTouch": "PASS",
+            "SEO": "PASS",
+            "analyticsClientConsentEvents": "PASS -1tag4typedcommands2HTTP204; dashboard notverified",
+            "accessibility": "PASS targeted3axe/manualkeyboard; not certification",
+            "errorPages33StatesAndBrowserOnlyReactFaultRecovery": "PASS",
+            "performanceMeasurement": "PASS",
+            "strictProductionMobileLCPTarget": "NOT_MET -2554ms"
+          }
         },
         {
           "id": "ZE-12-C04",
           "description": "Observability and closure",
           "required": true,
-          "status": "PENDING",
-          "evidence": []
+          "status": "PASS",
+          "evidence": [
+            "ZE-12-Report.md",
+            "evidence/ZE-12/production/smoke-initial.json",
+            "evidence/ZE-12/production/smoke-observation.json",
+            "evidence/ZE-12/production/runtime-observation.json",
+            "evidence/ZE-12/production/release-tag.json",
+            "evidence/ZE-12/rollback/rollback-plan.md"
+          ]
         }
       ],
       "dependencies": [
@@ -1193,20 +1232,82 @@
         "Real production homologation and release closure"
       ],
       "releaseCandidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
-      "productionAuthorization": false,
+      "productionAuthorization": true,
       "exception": "Owner permits future honest Google unavailable UI; ZE-09 stays BLOCKED_EXTERNAL, no authenticated Google PASS",
       "preparationStatus": "PASS",
       "preview": {
-        "deploymentId": "1d123d20-2d18-4619-baa9-4b411976046f",
-        "url": "https://1d123d20.zelo-auto.pages.dev",
+        "deploymentId": "8a0949d0-a7f2-437d-8ddf-acab6d7fe12f",
+        "url": "https://8a0949d0.zelo-auto.pages.dev",
         "environment": "preview",
         "status": "PASS",
         "QA": "13/13",
-        "productionUpdated": false
+        "productionUpdated": false,
+        "Instagram": "PASS200/6"
       },
-      "requiredUserAction": "Explicit GO-LIVE approval for exact candidate/domain plus bounded Instagram server binding synchronization and conditional monitoring/rollback plan"
+      "requiredUserAction": null,
+      "authorizationEvidence": "evidence/ZE-12/prerelease/go-live-authorization.json",
+      "production": {
+        "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+        "branch": "main",
+        "deploymentId": "82345fa7-647c-4087-a103-beaa8b98539a",
+        "status": "ACTIVE_VALIDATED",
+        "url": "https://zelo.omnyatech.com.br/",
+        "deploymentURL": "https://82345fa7.zelo-auto.pages.dev",
+        "publishedAt": "2026-10-25T11:27:18.363589Z",
+        "canonicalSmoke": "PASS",
+        "releaseTag": "ZE-12-release-20261025-676f1a5",
+        "postDeploymentQA": "PASS",
+        "rollback": "PREPARED_NOT_EXECUTED_NOT_REQUIRED",
+        "observation": "PASS - immediate and5minrecheck",
+        "runtimeLogs": "PASS bounded45sec observedGoogle503normalworkeroutcome0exceptions"
+      },
+      "completedAt": "2026-10-25",
+      "remainingActions": [],
+      "publicationStatus": "PUBLICADA",
+      "performance": {
+        "production": [
+          {
+            "mode": "mobile",
+            "state": "cold",
+            "score": 95,
+            "LCPsimulated": 2554,
+            "CLS": 0
+          },
+          {
+            "mode": "mobile",
+            "state": "warm",
+            "score": 100,
+            "LCPsimulated": 780,
+            "CLS": 0
+          },
+          {
+            "mode": "desktop",
+            "state": "cold",
+            "score": 93,
+            "LCPsimulated": 1427,
+            "CLS": 0.09432134502923976
+          },
+          {
+            "mode": "desktop",
+            "state": "warm",
+            "score": 100,
+            "LCPsimulated": 213,
+            "CLS": 0.003333333333333334
+          }
+        ],
+        "strictProductionColdMobileLCPTarget": "NOT_MET -2554ms,54msabove2500",
+        "prereleaseGateC": "PASS",
+        "productionMeasurementCriterion": "PASS - fulfilled with limitation disclosed",
+        "decision": "evidence/ZE-12/production/performance-decision.json"
+      },
+      "nonblockingLimitations": [
+        "Google authentic source BLOCKED_EXTERNAL under already-approved honest-unavailable release exception",
+        "Production mobile cold LCPsim2554ms is54msabove2.5s; source unchanged, publicnetwork conditions measured, no owner waiver fabricated",
+        "GA4 client/tag/HTTP204 verified; Realtime/DebugView dashboard ingestion unverified without authorized panel access",
+        "Runtime log observation bounded45sec and smoke5min are samples, not indefinite availability guarantee"
+      ]
     }
   ],
-  "lastCompletedSprint": "ZE-11",
-  "currentApprovedSprint": "ZE-12"
+  "lastCompletedSprint": "ZE-12",
+  "currentApprovedSprint": null
 }

@@ -1,0 +1,774 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-current=\"location\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-nav > a[href$=\"#servicos\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-nav > a[href$=\"#processo\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-nav > a[href$=\"#resultados\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-nav > a[href$=\"#avaliacoes\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-nav > a[href$=\"#contato\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-header-budget > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".zelo-hero-slogan-left"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-hero-slogan-right"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".zelo-hero-scroll-hint > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-services-scene > .ze4-commercial-outline"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-services-title"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "#ze4-services-title > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "span:nth-child(1) > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "span:nth-child(2) > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-service-benefits > span:nth-child(3) > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .ze4-service-copy > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .ze4-service-copy > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .ze4-service-copy > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .ze4-service-copy > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .ze4-service-copy > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .ze4-service-copy > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .ze4-service-copy > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .ze4-service-copy > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "target": [
+            ".ze4-results-copy > .ze4-commercial-eyebrow"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#ze4-results-title"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#ze4-results-title > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-results-copy > p:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "figure[data-comparison-source=\"real\"] > .ze4-comparison-stage > .ze4-comparison-label-before.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "figure[data-comparison-source=\"real\"] > .ze4-comparison-stage > .ze4-comparison-label-after.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-comparison-reveal:nth-child(2) > figure[data-comparison-source=\"illustrative\"] > .ze4-comparison-stage > .ze4-comparison-label-before.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-comparison-reveal:nth-child(2) > figure[data-comparison-source=\"illustrative\"] > .ze4-comparison-stage > .ze4-comparison-label-after.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-comparison-reveal:nth-child(3) > figure[data-comparison-source=\"illustrative\"] > .ze4-comparison-stage > .ze4-comparison-label-before.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-comparison-reveal:nth-child(3) > figure[data-comparison-source=\"illustrative\"] > .ze4-comparison-stage > .ze4-comparison-label-after.ze4-comparison-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-results-actions > .ze4-button[data-analytics-quote=\"true\"][target=\"_blank\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-process-scene > .ze4-commercial-outline"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-process-aside"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-process-step:nth-child(2) > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "target": [
+            ".ze4-process-step:nth-child(3) > .ze4-process-number > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-process-step:nth-child(3) > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-process-step:nth-child(3) > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".ze4-quality-chips > span:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "ul > li:nth-child(1)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "ul > li:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "ul > li:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "#instagram > .ze4-community-heading > div:nth-child(1) > .ze4-community-eyebrow"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-instagram-title"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-instagram-title > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#instagram > .ze4-community-heading > div:nth-child(3) > .ze4-community-description"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-button[target=\"_blank\"][rel=\"noopener noreferrer\"] > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-instagram-metadata > span:nth-child(1)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "span:nth-child(1) > small"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-instagram-metadata > span:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "span:nth-child(2) > small"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-instagram-metadata > span:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "span:nth-child(3) > small"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-instagram-status"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-instagram-status > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#avaliacoes > .ze4-community-heading > div:nth-child(1) > .ze4-community-eyebrow"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-reviews-title"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-reviews-title > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#avaliacoes > .ze4-community-heading > div:nth-child(3) > .ze4-community-description"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-google-letter"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "strong"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-summary > div > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-availability"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(1) > div > .ze4-review-editorial-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(1) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(1) > div > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(1) > div > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(2) > div > .ze4-review-editorial-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(2) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(2) > div > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(2) > div > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(3) > div > .ze4-review-editorial-label"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(3) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(3) > div > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-card.ze4-review-unavailable:nth-child(3) > div > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-button-outline[data-analytics-review=\"view\"][target=\"_blank\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-review-write"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-reviews-source"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-reviews-attribution > span:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-reviews-attribution > a[data-analytics-review=\"view\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-reviews-status"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-wordmark"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-copy > div:nth-child(1) > .ze4-community-eyebrow"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-eyebrow-gold"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-location-title"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#ze4-location-title > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-description"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-info-row:nth-child(1) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "address"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-info-row:nth-child(2) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-info-row:nth-child(2) > div > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-info-row:nth-child(2) > div > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-info-row:nth-child(3) > div > h3"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(1) > dt"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(1) > dd"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > dt"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > dd"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(3) > dt"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "div:nth-child(3) > dd"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-actions > .ze4-button[data-analytics-quote=\"true\"][target=\"_blank\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-actions > .ze4-button-outline[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-location-side-note"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".ze4-footer-statement"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-statement > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-brand > div > p:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-nav > h2"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-nav > div > a[href$=\"#hero\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "div > a[href$=\"#resultados\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-nav > div > a[href$=\"#servicos\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "div > a[href$=\"#avaliacoes\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "div > a[href$=\"#processo\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "div > a[href$=\"#contato\"]"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-social > h2"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-social > a[target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-social > a[target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-contact > h2"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-contact > a[target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(2)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-contact > a[target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-verse > p"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-verse > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#parceiros > h2"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-bottom > p:nth-child(1)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-bottom > span"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".ze4-footer-bottom > p:nth-child(3)"
+          ],
+          "failure": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 33
+}

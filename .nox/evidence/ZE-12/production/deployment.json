@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-25T11:28:04.678Z",
+  "id": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "url": "https://82345fa7.zelo-auto.pages.dev",
+  "environment": "production",
+  "source": {
+    "branch": "main",
+    "commit_hash": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+    "commit_message": "perf(landing): complete ZE-11 mobile performance rework",
+    "commit_dirty": false
+  },
+  "latest_stage": {
+    "name": "deploy",
+    "started_on": "2026-10-25T11:27:13.389296Z",
+    "ended_on": "2026-10-25T11:27:18.363589Z",
+    "status": "success"
+  },
+  "created_on": "2026-10-25T11:26:24.621307Z",
+  "canonicalDeployment": "82345fa7-647c-4087-a103-beaa8b98539a"
+}

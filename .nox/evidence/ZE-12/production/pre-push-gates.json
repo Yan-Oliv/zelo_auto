@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-25T11:26:20.582Z",
+  "authorized": true,
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "remoteMainBefore": "b575ed2f42c0fa1a65c314a67d75644cf4ab640d",
+  "previousProduction": "0f414771-cd0e-4407-9165-5a4311babff3",
+  "previewSuccessful": "8a0949d0-a7f2-437d-8ddf-acab6d7fe12f",
+  "previewFeed": "200/6",
+  "method": "Existing Git integration, non-force fast-forward only; work branch preserved"
+}

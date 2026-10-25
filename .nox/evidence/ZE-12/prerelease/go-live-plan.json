@@ -8,9 +8,9 @@
   "previousDeployment": "0f414771-cd0e-4407-9165-5a4311babff3",
   "previewDeployment": "1d123d20-2d18-4619-baa9-4b411976046f",
   "previewURL": "https://1d123d20.zelo-auto.pages.dev",
-  "GO_LIVE_authorized": false,
-  "secretSynchronizationAuthorized": false,
-  "requiredApproval": "Authorize this exact candidate/environment and bounded sequence; contract GateD final approval required.",
+  "GO_LIVE_authorized": true,
+  "secretSynchronizationAuthorized": true,
+  "requiredApproval": "SATISFIED - owner explicit Autorizo on2026-10-25 for exact preceding plan",
   "steps": [
     {
       "order": 1,
@@ -21,30 +21,38 @@
         "INSTAGRAM_ACCESS_TOKEN"
       ],
       "preserve": "Legacy feed binding and all unrelated settings",
-      "status": "NOT_RUN"
+      "status": "PASS",
+      "evidence": "production/bindings-sync.json"
     },
     {
       "order": 2,
       "action": "Rebuild same SHA preview with authorized bindings and verify authentic Instagram HTTP200 before production",
       "onFailure": "Do not publish",
-      "status": "NOT_RUN"
+      "status": "PASS",
+      "evidence": "preview/authenticated-feed-check.json"
     },
     {
       "order": 3,
       "action": "Recheck current main and previous deployment; fast-forward main only to exact candidate through existing Git pipeline",
       "onDrift": "Stop and reconcile before any production push",
-      "status": "NOT_RUN"
+      "status": "PASS",
+      "evidence": "production/deployment.json"
     },
     {
       "order": 4,
       "action": "Run full production homologation, immediate smoke and one operational recheck after five minutes",
-      "status": "NOT_RUN"
+      "status": "PASS",
+      "evidence": [
+        "production/qa-summary.json",
+        "production/smoke-observation.json",
+        "production/performance-results.json"
+      ]
     },
     {
       "order": 5,
       "action": "On critical release incident, rollback to known successful production deployment and verify canonical domain",
       "target": "0f414771-cd0e-4407-9165-5a4311babff3",
-      "status": "NOT_RUN"
+      "status": "NOT_REQUIRED - no critical release incident"
     }
   ],
   "google": "Existing owner exception permits honest unavailable UI; ZE-09 BLOCKED_EXTERNAL; authentic source not approved",
@@ -54,5 +62,7 @@
     "OAuth Google changes",
     "Secret values in chat/Git/client",
     "Production push before final authorization"
-  ]
+  ],
+  "authorizationEvidence": "go-live-authorization.json",
+  "completedRelease": true
 }

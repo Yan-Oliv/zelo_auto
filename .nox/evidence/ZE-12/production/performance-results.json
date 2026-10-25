@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-25",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "base": "https://zelo.omnyatech.com.br/",
+  "method": "Four predeclared sequential production profiles, one sample each. QA and parent browsers closed. Fresh Chrome per profile; explicit normal motion; mobileSlow4G CPU4 and desktopDense4G CPU1 with correct viewport and UA. Cold has no preseeded storage; warm natural previsit completes intro/body and bounded network idle before same-page cache/session reload. Actual canonical HTTPS/CDN/APIs, no mocked or blocked provider requests. Lighthouse simulated and observed trace metrics are distinct, not field measurements. Edge cache state is uncontrolled. No repeat or best-sample selection.",
+  "runs": [
+    {
+      "mode": "mobile",
+      "state": "cold",
+      "url": "https://zelo.omnyatech.com.br/",
+      "checkedAt": "2026-10-25T11:39:48.296Z",
+      "lighthouseVersion": "13.5.0",
+      "indexSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+      "matchesApprovedHTML": true,
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "LCP": 2554,
+      "observedLCP": 1430,
+      "FCP": 1954,
+      "TBT": 0,
+      "CLS": 0,
+      "speedIndex": 2222,
+      "TTFB": 754,
+      "intro": [
+        {
+          "time": 181.5,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 245.70000004768372,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3568.899999976158,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": [],
+      "runWarnings": [],
+      "file": "performance-mobile-cold.json"
+    },
+    {
+      "mode": "mobile",
+      "state": "warm",
+      "url": "https://zelo.omnyatech.com.br/",
+      "checkedAt": "2026-10-25T11:40:07.058Z",
+      "lighthouseVersion": "13.5.0",
+      "indexSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+      "matchesApprovedHTML": true,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "LCP": 780,
+      "observedLCP": 101,
+      "FCP": 780,
+      "TBT": 11,
+      "CLS": 0,
+      "speedIndex": 780,
+      "TTFB": 451,
+      "intro": [
+        {
+          "time": 90.70000004768372,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "runtimeErrors": [],
+      "runWarnings": [],
+      "file": "performance-mobile-warm.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "cold",
+      "url": "https://zelo.omnyatech.com.br/",
+      "checkedAt": "2026-10-25T11:40:24.186Z",
+      "lighthouseVersion": "13.5.0",
+      "indexSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+      "matchesApprovedHTML": true,
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 1427,
+      "observedLCP": 2174,
+      "FCP": 673,
+      "TBT": 0,
+      "CLS": 0.09432134502923976,
+      "speedIndex": 912,
+      "TTFB": 129,
+      "intro": [
+        {
+          "time": 125,
+          "intro": "waiting",
+          "reduce": false
+        },
+        {
+          "time": 253,
+          "intro": "playing",
+          "reduce": false
+        },
+        {
+          "time": 3571.2000000476837,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": null,
+      "runtimeErrors": [],
+      "runWarnings": [],
+      "file": "performance-desktop-cold.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "warm",
+      "url": "https://zelo.omnyatech.com.br/",
+      "checkedAt": "2026-10-25T11:40:45.357Z",
+      "lighthouseVersion": "13.5.0",
+      "indexSHA256": "61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f",
+      "matchesApprovedHTML": true,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "LCP": 213,
+      "observedLCP": 106,
+      "FCP": 213,
+      "TBT": 0,
+      "CLS": 0.003333333333333334,
+      "speedIndex": 213,
+      "TTFB": 121,
+      "intro": [
+        {
+          "time": 98.89999997615814,
+          "intro": "settled",
+          "reduce": false
+        }
+      ],
+      "sessionBefore": {
+        "intro": "settled",
+        "session": "complete"
+      },
+      "runtimeErrors": [],
+      "runWarnings": [],
+      "file": "performance-desktop-warm.json"
+    }
+  ],
+  "allApprovedHTML": true,
+  "allNormalMotion": true,
+  "coldIntroObserved": true,
+  "mobileTargetsMet": false,
+  "noJavaScriptErrors": true
+}

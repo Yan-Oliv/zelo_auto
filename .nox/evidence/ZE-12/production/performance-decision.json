@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-25",
+  "reviewer": "Root technical release review reconciled by Nox",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "productionDeployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "prereleaseGateC": {
+    "status": "PASS",
+    "actualEvidence": "Clean isolated candidate98/LCP2363ms and ZE11 threecold2356?2363ms; owner exactcandidateGO-LIVE authorized"
+  },
+  "productionMeasurement": {
+    "status": "COMPLETE",
+    "mobileCold": {
+      "performance": 95,
+      "LCPsimulated": 2554,
+      "strict2500msTarget": "NOT_MET -54msabove",
+      "CLS": 0
+    },
+    "mobileWarm": {
+      "performance": 100,
+      "LCPsimulated": 780,
+      "CLS": 0
+    },
+    "desktopCold": {
+      "performance": 93,
+      "LCPsimulated": 1427,
+      "CLS": 0.094321
+    },
+    "desktopWarm": {
+      "performance": 100,
+      "LCPsimulated": 213,
+      "CLS": 0.003333
+    },
+    "A11ySEO": "100allfour",
+    "method": "Four predeclared canonical-domain nativeCDN samples, explicitnormalmotion, cold/warm separate, notfielddata"
+  },
+  "causalEvidence": {
+    "sameApprovedHTML": true,
+    "observedTTFBms": {
+      "production": 155.746,
+      "local": 12.199
+    },
+    "LCPImageLoadMs": {
+      "production": 61.434,
+      "local": 27.913
+    },
+    "observedRenderDelayMs": {
+      "production": 1206.17,
+      "local": 1284.476
+    }
+  },
+  "releaseDecision": {
+    "C03PerformanceMeasured": "PASS - contract postdeploymeasurement fulfilled with limitations disclosed",
+    "strictProductionColdMobileLCPTarget": "NOT_MET; not converted to PASS",
+    "criticalSourceOrReleaseRegression": false,
+    "rollbackRequired": false,
+    "productChangesAllowedOrMade": false,
+    "ownerPerformanceWaiverInvented": false,
+    "reason": "Same approved source/HTML; measured publicnetwork/server latency differs from local laboratory; observed render delay did not increase. Noncritical54ms simulated miss is disclosed, not hidden by repeat or code change midrelease."
+  },
+  "followUp": "PLANNED nonblocking monitoring of production CoreWebVitals when sufficient field data is available; no active polling, paid tool or new sprint started",
+  "evidence": [
+    "performance-results.json",
+    "performance-report.md"
+  ]
+}

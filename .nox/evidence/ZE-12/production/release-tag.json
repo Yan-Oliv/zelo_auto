@@ -1,0 +1,9 @@
+{
+  "createdAt": "2026-10-25T11:29:42.018Z",
+  "tag": "ZE-12-release-20261025-676f1a5",
+  "commit": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "remote": "origin",
+  "pushed": true,
+  "productionDeployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "mainCandidateUnchanged": true
+}

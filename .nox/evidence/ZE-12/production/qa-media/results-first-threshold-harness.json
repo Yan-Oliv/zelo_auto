@@ -1,0 +1,82 @@
+{
+  "scope": "Dedicated actual media decoding and mobile progressive reveal on canonical production; no CDN queries or provider bodies retained",
+  "groups": [
+    {
+      "name": "Actual Instagram six decoded visible media",
+      "status": "PASS",
+      "evidence": {
+        "count": 6,
+        "media": [
+          {
+            "host": "scontent-gru1-1.cdninstagram.com",
+            "width": 834,
+            "height": 923,
+            "complete": true
+          },
+          {
+            "host": "scontent-gru2-2.cdninstagram.com",
+            "width": 941,
+            "height": 1672,
+            "complete": true
+          },
+          {
+            "host": "scontent-gru1-2.cdninstagram.com",
+            "width": 927,
+            "height": 772,
+            "complete": true
+          },
+          {
+            "host": "scontent-gru2-1.cdninstagram.com",
+            "width": 941,
+            "height": 1672,
+            "complete": true
+          },
+          {
+            "host": "scontent-gru2-1.cdninstagram.com",
+            "width": 925,
+            "height": 923,
+            "complete": true
+          },
+          {
+            "host": "scontent-gru1-2.cdninstagram.com",
+            "width": 941,
+            "height": 1672,
+            "complete": true
+          }
+        ],
+        "links": [
+          {
+            "host": "www.instagram.com",
+            "official": true
+          },
+          {
+            "host": "www.instagram.com",
+            "official": true
+          },
+          {
+            "host": "www.instagram.com",
+            "official": true
+          },
+          {
+            "host": "www.instagram.com",
+            "official": true
+          },
+          {
+            "host": "www.instagram.com",
+            "official": true
+          },
+          {
+            "host": "www.instagram.com",
+            "official": true
+          }
+        ],
+        "screenshot": "REAL-instagram-six-decoded.png"
+      }
+    },
+    {
+      "name": "Dedicated media/progressive validation",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'0.990955' !== '1'\n\n    at file:///B:/OmnyaTech%20Project's/Projetos/zelo_autoestica/.nox/evidence/ZE-12/production/qa-media.mjs:3:2376"
+    }
+  ]
+}

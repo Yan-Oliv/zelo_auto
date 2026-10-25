@@ -1,70 +1,67 @@
 # ZE-12 — Release controlado e homologação em produção
 
-Estado em 2026-10-25: **WAITING_USER_ACTION — preparação independente concluída; produção NÃO PUBLICADA**. Exatamente duas entregas formais. O contrato anexado `47c49978-38a4-4211-802d-7ad15f7136a0/Pasted text.txt` exige autorização final do candidato/ambiente antes do go-live; o pedido para executar a sprint não substitui esse gate.
+**COMPLETED — PUBLICADA**, em 2026-10-25: https://zelo.omnyatech.com.br/
 
-## Estado inicial e candidato
+Exatamente duas entregas formais. O proprietário respondeu **Autorizo** ao plano concreto do candidato/ambiente e à sincronização Instagram, encerrando o GateD antes de qualquer publicação de produção. A hero e a landing já estavam aprovadas visualmente; a ZE-11 estava COMPLETED após rework. ZE-09 permanece BLOCKED_EXTERNAL sob a exceção expressa para apresentar Google indisponível de forma honesta.
 
-- Branch local: `work/ze-audi-redesign`.
-- Produto candidato: `676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8`, posterior ao aceite visual original `85e8073`.
-- Checkpoint: `ZE-12-start-20261024`, sem reescrever tags existentes.
-- ZE-11: **COMPLETED**, critérios aplicáveis PASS, após rework; mobile primeira visita98/LCP2356–2363ms, desktop97/LCP1265ms, movimento normal ativo. Medidas locais de laboratório, não dados de campo. Não é necessária exceção de performance.
-- Campos redundantes antigos de desempenho no JSON foram reconciliados com o rework; medições anteriores preservadas como histórico.
-- ZE-09: **BLOCKED_EXTERNAL**. A decisão comercial expressa do proprietário permite futura publicação com estado Google indisponível honesto. Isso não homologa fonte, nota ou comentários reais nem cria credenciais OAuth.
-- Duas alterações preexistentes do proprietário em `ZE-09-Google-Handoff.md` e `ZE-09-Report.md` permanecem preservadas por SHA256 e fora do commit. Referências, planos, fotografias originais, credenciais e configuração local intactos.
+## Entrega 1 — Release autorizado, rastreável e seguro
 
-## Entrega 1 — Engenharia de release
+- Produto publicado: **676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8**, da branch de trabalho preservada work/ze-audi-redesign. O commit documental de preparação20f91fe não foi confundido com o produto.
+- Projeto Pages: zelo-auto, conta663888827c96aad8d97cea728e78fb0a, repositório Yan-Oliv/zelo_auto, produção por main no pipeline GitHub existente. Nenhum projeto, DNS, billing ou pipeline paralelo criado.
+- Instalação limpa npm ci, lint e build PASS em fonte isolada do Git. Seis warnings legados no lint e aviso de chunk3D de debug preservados; Three/GLB não entram no caminho da landing. Os134arquivos/28,3MB do dist excluem .env/.nox/arquivos locais e o GLB ignorado66,6MB.
+- npm audit registrou14findings (9high/5moderate), classificados na revisão como ferramentas offline/build/dev e debug com URLs fixas, sem caminho remoto explorável demonstrado na landing/Functions. Isso não significa audit limpo; não houve upgrade indiscriminado.
+- As três variáveis Instagram autorizadas foram sincronizadas apenas como segredos server-side, preservando a variável legada de feed e demais bindings. Não foram exibidos/copiedos valores em evidências, cliente ou Git.
+- Preview autenticado8a0949d0-a7f2-437d-8ddf-acab6d7fe12f: mesmo SHA e HTML aprovado, HTTP200/seis posts oficiais antes do push de produção.
+- Após conferir main e deployment anterior, o root fez avanço fast-forward sem force de b575ed2 para676f1a5. Build remoto Node22.23.4/npm10.9.9, prerender e Worker compilados, publicação bem-sucedida.
+- Deployment ativo: **82345fa7-647c-4087-a103-beaa8b98539a**; URL imutável https://82345fa7.zelo-auto.pages.dev; sucesso2026-10-25T11:27:18Z. Domínio canônico confirmado com HTML SHA25661c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f, igual ao homologado.
+- Tag anotada enviada: **ZE-12-release-20261025-676f1a5**, apontando exatamente para o produto publicado, sem reescrever tags.
 
-### Git e pipeline
+## Entrega 2 — Homologação real do domínio
 
-Repositório confirmado: `Yan-Oliv/zelo_auto`. Projeto Pages confirmado por API de leitura: `zelo-auto`, conta `663888827c96aad8d97cea728e78fb0a`, domínio `https://zelo.omnyatech.com.br/`.
+QA no domínio canônico: **13/13** grupos principais, **11/11** complementares, **2/2** mídia/reveal e **2/2** recuperação/erros, além de três caminhos privados404 e três scans axe sem violações detectadas. Não é certificação integral WCAG nem teste em aparelho físico.
 
-Integração GitHub existente, produção a partir de `main`, deploy automático habilitado. Todas as branches não principais geram preview; não há workflow GitHub Actions separado. `main` remoto está em `b575ed2f42c0fa1a65c314a67d75644cf4ab640d`, ancestral do candidato; não se deve executar push de produção antes do gate final. Uma branch de preview isolada só conterá o candidato explícito, sem owner dirt.
+Foram verificadas onze resoluções, cinco áreas visuais desktop/mobile, intro real em vídeo/frames, sessão/retorno, movimento reduzido, reveal das seções, menu/busca/foco, âncoras, comparadores mouse/teclado/touch e orientação, serviços, mensagens WhatsApp distintas, links das marcas e SKG. A OmnyaTech continua sem link. Pintura usa as fotos reais aprovadas; Bancos/Carpete mantêm a fonte ilustrativa interna, sem legendas rejeitadas.
 
-Configuração remota observada: build `npm run build`, saída `dist`, root vazio, build imagev3, Functions compatibility date`2026-07-06`, sem bindings KV/D1/R2. Node local24.13.1/npm11.8.0; lock Vite8.1.3 exige Node20.19+ ou22.12+. O preview remoto confirmou **Node22.23.4/npm10.9.9**, build e compilação de Worker bem-sucedidos, sem mudança da configuração do projeto.
+Instagram: HTTP200, seis posts oficiais, seis imagens HTTPS de CDN efetivamente decodificadas, links correspondentes e grid visível. Google: HTTP503/configuration e UI indisponível honesta, sem nota/quantidade/reviews fictícios. A recuperação limitada poderá apresentar dados reais quando o endpoint autorizado estiver operacional; aprovação administrativa isolada não cria OAuth/IDs/segredos.
 
-### Build imutável e segurança
+Maps: evidência dedicada mostra ruas, marcador, atribuição Google e scroll com um dedo; o iframe respondeu200. Capturas de inventário podem bloquear Maps ou anteceder decode de mídia e não são usadas como essa prova; usar as capturas REAL específicas.
 
-Source extraído do Git candidato, sem `.nox`, `.env` ou arquivos locais não rastreados. Instalação `npm ci --no-fund`, lint e build **PASS** no diretório isolado `evidence/ZE-12/work/source`; não houve alteração do `node_modules` compartilhado. Lint tem seis warnings legados. Build mantém aviso de chunk3D grande em debug, sem Three/GLB no caminho da landing.
+HTTP/SEO: HTTPS/raiz/assets200, URL inexistente404 real, robots/sitemap/canonical/OG/JSON-LD comercial sem aggregateRating fictício; debug e erros noindex. Os caminhos /.env, /.git/config e /.nox/execution-state.json retornam404 sem conteúdo interno. Os templates diretos500/503 retornam200: não interceptam falhas da infraestrutura nem alteram retroativamente status HTTP. Trinta e três estados de erro foram validados em onze resoluções. Uma falha503 de chunk foi simulada somente no navegador, produzindo React500 segura sem promessa não tratada; a interceptação foi removida e o reload restaurou hero, quatro serviços e seis posts. Não foi provocada falha real da infraestrutura.
 
-Artefatos:134 arquivos, 28.313.127bytes, maior asset3,43MB, abaixo do limite Pages25MiB por arquivo. HTML prerender, CSS crítico, fontes, imagens, erros404/500/503, `_headers`, `_redirects`, sitemap, robots e favicons presentes. Build local limpo HTMLSHA256`1a189ffd435fba1d74ba724fb0f0fc6aca83e8d7824afbc412a23d12b4938b56`; manifesto completo em `prerelease/release-manifest.json`. O build Linux remoto gerou HTMLSHA256`61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f`, exatamente o artefato final homologado da ZE-11. A diferença local envolve literais CRLF e o hash do entry gerado; fontes, CSS, vendor e AVIF críticos foram conferidos, sem alteração do produto.
+GA4: uma tag, quatro comandos de eventos tipados sem duplicidade, dois recebimentos HTTP204, consentimento/negação/revogação e ausência de PII verificados. Recepção de rede não comprova ingestão em Realtime/DebugView: painel não verificado sem acesso autorizado. Nenhuma mensagem, avaliação ou e-mail foi enviado nos testes.
 
-Não publicar o `dist` compartilhado: ele contém GLB local ignorado66,6MB. O build isolado exclui esse arquivo e outros dados locais. Functions são compiladas pelo pipeline Git a partir de `functions/`; upload estático apenas do `dist` pelo dashboard não é método equivalente.
+## Performance real medida
 
-Revisão independente e scan de assinatura não encontraram segredos ou fontes privadas no output. Um resultado inicial dentro de base64 de decoderWASM foi falso positivo do scanner e foi corrigido com delimitadores; nenhum valor de token foi lido/exibido. `npm audit` registra14 findings (9high/5moderate), **não audit limpo**: cadeias offline de ferramentas GLTF/sharp, CSS build, devserverVite e loaders debug com URLs fixas. Não foi demonstrado caminho remoto explorável na landing/Functions; risco residual e manutenção documentados em `security-summary.json`. Nenhum `audit fix --force`/upgrade de framework foi executado.
+Quatro perfis planejados, uma amostra cada, domínio HTTPS real/CDN/APIs reais, movimento normal explícito. Cold sem storage pré-semeado; warm com visita natural completa e mesma sessão/cache. Não houve repetição para escolher melhor nota, bloqueio de provedores ou alteração do produto.
 
-### Ambientes e integrações
+| Perfil | Performance | LCP simulado | CLS |
+| --- | ---: | ---: | ---: |
+| Mobile primeira visita | 95 | **2554ms** | 0 |
+| Mobile retorno | 100 | 780ms | 0 |
+| Desktop primeira visita | 93 | 1427ms | 0,094321 |
+| Desktop retorno | 100 | 213ms | 0,003333 |
 
-Produção contém quatro variáveis Instagram do tipo secreto, existência/nome/tipo apenas. Preview não tem variáveis. As cinco variáveis Google não estão configuradas, conforme exceção de publicação aprovada. Não copiar valores para relatório, cliente ou arquivos públicos.
+Acessibilidade e SEO100 nos quatro perfis; nenhum erro JavaScript observado. **O LCP mobile inicial ficou54ms acima da meta estrita de2500ms; esse alvo não foi marcado PASS.** O GateC pré-publicação tinha passado realmente (candidato limpo98/LCP2363ms). Na produção, TTFB observado155,746ms versus12,199ms local e imagem61,434ms versus27,913ms; atraso de renderização1206,17ms versus1284,476ms local, portanto não aumentou. HTML/carro/geometria aprovados permanecem iguais.
 
-**Pendência impeditiva Instagram:** o endpoint público atual responde HTTP400/OAuthException190. Presença de bindings não prova credencial válida. O servidor local validado responde200/seis posts, inclusive o **build isolado compilado** com variáveis server-side fornecidas apenas em memória do processo (`baseline/compiled-local-integrations.json`). Será necessária atualização autorizada de `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_API_MODE` e `INSTAGRAM_GRAPH_USER_ID` no ambiente de destino ou ação manual equivalente, seguida de validação real. Preservar a variável legada de feed e demais segredos. A configuração de preview vazia produz503 honesto e não comprova integração oficial. Nenhum segredo foi alterado na Cloudflare nesta preparação.
+A revisão técnica do root classificou a medição pós-publicação como cumprida e a diferença de rede/servidor como limitação não crítica, sem regressão de código demonstrada, waiver comercial inventado, alteração de fonte ou rollback. CLS desktop0,094321 está abaixo de0,1, e não foi declarado zero. Medidas simuladas/observadas não são dados de campo nem garantia de dispositivo real. Acompanhar métricas de campo quando disponíveis fica como nota PLANNED não impeditiva, sem novo sprint, polling ou ferramenta paga.
 
-### Preview, autorização e rollback
+## Monitoramento, rollback e segurança
 
-Preview compilado local em `http://127.0.0.1:8890/`, runtime Pages com compatibilidade igual à produção e APIs deliberadamente sem configuração. QA local **PASS**: SSR14, matriz22 em onze resoluções, consentimento/SEO/teclado/axe8, estados reais indisponíveis/links2, HTTP8; três scans axe sem violações detectadas. Revalidação única de primeira visita mobile do artefato limpo: **98/LCP2363ms**, FCP1388ms/TBT0/CLS0, acessibilidade/SEO100, intro normal ativa e nenhum erro JavaScript. Não é dado de campo. O build remoto retorna o hash HTML aprovado na ZE-11 (`61c4fcebb4fd93c65d99c6e83b3cd9266ead2d82915b8045207da7c316dcc17f`); o build local do arquivo Git tem diferenças de fim de linha/identidade do entrypoint, com equivalência funcional e visual verificada separadamente.
+Smoke imediato PASS e nova verificação11:32:48UTC, mais de cinco minutos após o deploy11:27:18UTC, PASS. Observação limitada de runtime45s capturou a chamada Google503 esperada com outcomeok, zero exceções e zero mensagens de console. Nenhum IP, cabeçalho, corpo de provedor, query assinada ou texto bruto de log foi persistido. São amostras, não garantia de ausência de falhas fora da janela.
 
-Preview Git isolado na branch `release/ze12-preview-676f1a5`, exatamente o candidato e sem push de `main`: **https://1d123d20.zelo-auto.pages.dev**, deployment`1d123d20-2d18-4619-baa9-4b411976046f`, ambiente **preview**, build/Worker/deploy bem-sucedidos. O domínio de produção e o deployment canônico anterior permaneceram inalterados. HTTP do preview confirmou raiz200, paths inexistentes404, APIs503 sem configuração, cache e assets críticos. Templates diretos500/503 continuamHTTP200 e não interceptam falhas de infraestrutura. Header de robots do preview é `noindex`. QA remoto **13/13 PASS**: onze resoluções, intro real em vídeo/frames, persistência da sessão, movimento reduzido, menu/busca/foco, comparadores e links comerciais. Capturas das cinco áreas em desktop/mobile e páginas completas preservadas. Root revisou hero mobile, serviços/resultados desktop e localização/rodapé mobile: composição, tipografia e imagens preservadas. Mapas foram bloqueados deliberadamente nas capturas de inventário; essas imagens não comprovam mapa renderizado. As APIs remotas não usam fixtures e continuam indisponíveis por falta de bindings no preview. O primeiro teste de geometria mobile tinha serialização incorreta da classe SVG; o harness foi corrigido e os quatro tamanhos afetados passaram sem mudança no produto. Analytics restringe envio ao hostname canônico, sem conversões no preview.
+Rollback preparado para o deployment de produção anterior **0f414771-cd0e-4407-9165-5a4311babff3** (SHA b575ed2), raiz/asset e equivalência com a versão anterior verificados por leitura. Não foi necessário executar rollback nem um exercício destrutivo. Assets não restauram automaticamente segredos; a credencial antiga já rejeitada não foi copiada para backup. Sem DNS, billing, GoogleOAuth, exclusão de releases ou alteração de código durante o release.
 
-Deployment de produção anterior identificado: `0f414771-cd0e-4407-9165-5a4311babff3`, commit`b575ed2f42c0fa1a65c314a67d75644cf4ab640d`, sucesso2026-07-23, URL`https://0f414771.zelo-auto.pages.dev`. Raiz e asset principal foram verificados por leitura. Plano oficial de rollback em `rollback/rollback-plan.md`; alvo preparado, exercício destrutivo NOT_RUN. Rollback de assets não restaura segredos/configuração externa automaticamente.
+As duas alterações preexistentes do proprietário em ZE-09-Google-Handoff.md e ZE-09-Report.md continuam preservadas por SHA256 e fora do commit. new_interface, src/planos, originais de pintura, .env e demais dados locais intactos.
 
-**GO-LIVE PENDENTE:** autorização deve identificar candidato, `zelo-auto`/domínio de produção, exceção Google já aceita e a atualização necessária do Instagram. Nenhum push de produção, merge, deploy, DNS, billing ou alteração de segredo foi executado nesta preparação.
+## Aceite final e Nox
 
-## Entrega 2 — Homologação real pós-publicação
+| Critério | Resultado |
+| --- | --- |
+| C01 release preparado e autorizado | PASS |
+| C02 deployment controlado | PASS |
+| C03 homologação real, incluindo performance medida | PASS; alvo estrito LCPmobile NOT_MET explicitamente separado |
+| C04 observação, evidências, rollback e encerramento | PASS |
 
-**NOT_RUN**. Após go-live autorizado: domínio/HTTPS/HTTP404/assets, comparação visual dos cinco modelos e candidato aprovado, intro em vídeo/sessão/reduced motion, onze resoluções, serviços/comparadores, WhatsApp individual, Instagram oficial, Google indisponível conforme exceção, Maps real, SEO/noindexdebug, consentimento/analytics, segurança, cold/warm performance e observação operacional. Não substituir esses checks por evidência local ou apenas `pages.dev`.
+ZE-12 **COMPLETED**; ZE-11 COMPLETED; ZE-09 **BLOCKED_EXTERNAL** com exceção já aprovada. Sem sprint sucessora iniciada. Limitações não impeditivas: fonte Google autorizada ainda ausente, LCPmobile simulado54ms acima da meta e ingestão GA4 no painel não verificada.
 
-GA4: tag/eventos/consentimento podem ser verificados no navegador; recebimento em Realtime/DebugView depende de acesso autorizado ao painel. Não enviar mensagens WhatsApp nem registrar avaliações durante testes.
-
-## Estado e retomada
-
-ZE-12 está **WAITING_USER_ACTION** para o GO-LIVE específico e a liberação da configuração Instagram; C01 permanece PENDING nesses dois subgates, embora a preparação independente tenha passado. C02–C04 permanecem PENDING/NOT_RUN. ZE-09 continua BLOCKED_EXTERNAL; ZE-11 COMPLETED. O commit documental de preparação não substitui o produto candidato `676f1a5`.
-
-### Autorização concreta solicitada
-
-1. Autorizar a sincronização, a partir dos valores locais já validados, de `INSTAGRAM_API_MODE`, `INSTAGRAM_GRAPH_USER_ID` e `INSTAGRAM_ACCESS_TOKEN` nos ambientes preview/production de `zelo-auto`, preservando a variável legada de feed e demais configurações. Nenhum valor será enviado ao cliente, ao chat ou ao Git.
-2. Gerar novamente o preview do mesmo SHA com os bindings e exigir resposta oficial HTTP200/seis posts antes de liberar a publicação. Se a integração falhar, não publicar.
-3. Confirmar que `main` e o deployment anterior não mudaram; realizar somente avanço fast-forward de `main` para `676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8`, pelo pipeline GitHub existente, e publicar em `https://zelo.omnyatech.com.br/`.
-4. Executar a Entrega2, smoke imediato e nova verificação operacional após cinco minutos. Em incidente crítico de release, executar rollback para `0f414771-cd0e-4407-9165-5a4311babff3` e verificar novamente o domínio. Sem DNS, billing, OAuth Google ou alterações fora desse plano.
-
-A exceção Google já foi autorizada e não precisa de novo aceite. Todas as operações acima continuam **NOT_RUN**, aguardando a autorização final exigida pelo GateD do contrato. Plano estruturado em `prerelease/go-live-plan.json`.
-
-Produção: **NÃO PUBLICADA**. Não declarar sucesso de release antes de deploy correto, domínio homologado, evidência real e aceite final.
+Evidências: production/qa-summary.json e qa-report.md, performance-results.json e performance-decision.json, deployment.json, smoke-initial.json, smoke-observation.json, runtime-observation.json, release-tag.json, rollback/rollback-plan.md e índice evidence-index.json. O commit documental que carrega este relatório registra o fechamento, separado do SHA publicado.

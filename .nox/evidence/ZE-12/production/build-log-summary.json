@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-25T11:39:24.098Z",
+  "deployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "selectedLines": [
+    "Success: Finished cloning repository files",
+    "Detected the following tools from environment: npm@10.9.9, nodejs@22.23.4",
+    "Executing user command: npm run build",
+    "Prerendered independent hero: HTML6611B criticalCSS20308B",
+    "✨ Compiled Worker successfully",
+    "Success: Your site was deployed!"
+  ],
+  "buildErrorMarkers": 0,
+  "limits": "Whitelisted build metadata only; other log lines omitted. Runtime observation is a separate sanitized sample."
+}

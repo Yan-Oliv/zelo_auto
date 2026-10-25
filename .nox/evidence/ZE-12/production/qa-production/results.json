@@ -1,0 +1,958 @@
+{
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "base": "https://zelo.omnyatech.com.br",
+  "scope": "Actual canonical production domain, authentic Instagram response and honest Google unavailable state. No fixtures or provider body retention.",
+  "groups": [
+    {
+      "name": "Production viewport 2560x1440",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 2560,
+          "scroll": 2560
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 636.921875,
+              "y": 292.4375,
+              "width": 1263.09375,
+              "height": 437.859375,
+              "top": 292.4375,
+              "right": 1900.015625,
+              "bottom": 730.296875,
+              "left": 636.921875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 731.8515625,
+              "y": 612.421875,
+              "width": 1087.078125,
+              "height": 551.1875,
+              "top": 612.421875,
+              "right": 1818.9296875,
+              "bottom": 1163.609375,
+              "left": 731.8515625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 166.390625,
+              "y": 724.640625,
+              "width": 509,
+              "height": 32.5,
+              "top": 724.640625,
+              "right": 675.390625,
+              "bottom": 757.140625,
+              "left": 166.390625
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 1987.703125,
+              "y": 724.640625,
+              "width": 405.90625,
+              "height": 32.5,
+              "top": 724.640625,
+              "right": 2393.609375,
+              "bottom": 757.140625,
+              "left": 1987.703125
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          },
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 1920x1080",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1920,
+          "scroll": 1920
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 477.703125,
+              "y": 219.328125,
+              "width": 947.3125,
+              "height": 328.390625,
+              "top": 219.328125,
+              "right": 1425.015625,
+              "bottom": 547.71875,
+              "left": 477.703125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 548.8828125,
+              "y": 459.3125,
+              "width": 815.296875,
+              "height": 413.375,
+              "top": 459.3125,
+              "right": 1364.1796875,
+              "bottom": 872.6875,
+              "left": 548.8828125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 124.796875,
+              "y": 543.484375,
+              "width": 465.109375,
+              "height": 29.6875,
+              "top": 543.484375,
+              "right": 589.90625,
+              "bottom": 573.171875,
+              "left": 124.796875
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 1424.296875,
+              "y": 543.484375,
+              "width": 370.90625,
+              "height": 29.6875,
+              "top": 543.484375,
+              "right": 1795.203125,
+              "bottom": 573.171875,
+              "left": 1424.296875
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          },
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 1440x900",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1440,
+          "scroll": 1440
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 358.2734375,
+              "y": 164.5,
+              "width": 710.484375,
+              "height": 246.296875,
+              "top": 164.5,
+              "right": 1068.7578125,
+              "bottom": 410.796875,
+              "left": 358.2734375
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 411.671875,
+              "y": 344.484375,
+              "width": 611.46875,
+              "height": 310.5,
+              "top": 344.484375,
+              "right": 1023.140625,
+              "bottom": 654.984375,
+              "left": 411.671875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 93.59375,
+              "y": 407.609375,
+              "width": 348.828125,
+              "height": 22.28125,
+              "top": 407.609375,
+              "right": 442.421875,
+              "bottom": 429.890625,
+              "left": 93.59375
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 1068.234375,
+              "y": 407.609375,
+              "width": 278.171875,
+              "height": 22.28125,
+              "top": 407.609375,
+              "right": 1346.40625,
+              "bottom": 429.890625,
+              "left": 1068.234375
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          },
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 1366x768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1366,
+          "scroll": 1366
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 339.890625,
+              "y": 156.046875,
+              "width": 673.90625,
+              "height": 233.609375,
+              "top": 156.046875,
+              "right": 1013.796875,
+              "bottom": 389.65625,
+              "left": 339.890625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 390.5078125,
+              "y": 326.78125,
+              "width": 580.046875,
+              "height": 294.546875,
+              "top": 326.78125,
+              "right": 970.5546875,
+              "bottom": 621.328125,
+              "left": 390.5078125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 88.78125,
+              "y": 386.65625,
+              "width": 330.90625,
+              "height": 21.125,
+              "top": 386.65625,
+              "right": 419.6875,
+              "bottom": 407.78125,
+              "left": 88.78125
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 1013.328125,
+              "y": 386.65625,
+              "width": 263.890625,
+              "height": 21.125,
+              "top": 386.65625,
+              "right": 1277.21875,
+              "bottom": 407.78125,
+              "left": 1013.328125
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          },
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 1024x768",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 1024,
+          "scroll": 1024
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 259.3828125,
+              "y": 116.96875,
+              "width": 505.234375,
+              "height": 175.140625,
+              "top": 116.96875,
+              "right": 764.6171875,
+              "bottom": 292.109375,
+              "left": 259.3828125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 292.7421875,
+              "y": 244.96875,
+              "width": 434.828125,
+              "height": 220.796875,
+              "top": 244.96875,
+              "right": 727.5703125,
+              "bottom": 465.765625,
+              "left": 292.7421875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 66.546875,
+              "y": 289.84375,
+              "width": 248.046875,
+              "height": 15.84375,
+              "top": 289.84375,
+              "right": 314.59375,
+              "bottom": 305.6875,
+              "left": 66.546875
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 759.640625,
+              "y": 289.84375,
+              "width": 197.8125,
+              "height": 15.84375,
+              "top": 289.84375,
+              "right": 957.453125,
+              "bottom": 305.6875,
+              "left": 759.640625
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          },
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 768x1024",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 768,
+          "scroll": 768
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 148.484375,
+              "y": 307.1875,
+              "width": 471.03125,
+              "height": 163.28125,
+              "top": 307.1875,
+              "right": 619.515625,
+              "bottom": 470.46875,
+              "left": 148.484375
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 87.046875,
+              "y": 573.4375,
+              "width": 593.90625,
+              "height": 301.578125,
+              "top": 573.4375,
+              "right": 680.953125,
+              "bottom": 875.015625,
+              "left": 87.046875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 0,
+              "y": 271.1875,
+              "width": 768,
+              "height": 20.796875,
+              "top": 271.1875,
+              "right": 768,
+              "bottom": 291.984375,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 0,
+              "y": 488.515625,
+              "width": 768,
+              "height": 20.796875,
+              "top": 488.515625,
+              "right": 768,
+              "bottom": 509.3125,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 430x932",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 430,
+          "scroll": 430
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 25.8046875,
+              "y": 279.59375,
+              "width": 378.390625,
+              "height": 131.171875,
+              "top": 279.59375,
+              "right": 404.1953125,
+              "bottom": 410.765625,
+              "left": 25.8046875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 25.8046875,
+              "y": 521.90625,
+              "width": 378.390625,
+              "height": 191.890625,
+              "top": 521.90625,
+              "right": 404.1953125,
+              "bottom": 713.796875,
+              "left": 25.8046875
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 0,
+              "y": 243.59375,
+              "width": 430,
+              "height": 15.65625,
+              "top": 243.59375,
+              "right": 430,
+              "bottom": 259.25,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 0,
+              "y": 428.78125,
+              "width": 430,
+              "height": 15.65625,
+              "top": 428.78125,
+              "right": 430,
+              "bottom": 444.4375,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 390x844",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 390,
+          "scroll": 390
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 23.40625,
+              "y": 253.1875,
+              "width": 343.1875,
+              "height": 118.96875,
+              "top": 253.1875,
+              "right": 366.59375,
+              "bottom": 372.15625,
+              "left": 23.40625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 23.40625,
+              "y": 472.625,
+              "width": 343.1875,
+              "height": 174.03125,
+              "top": 472.625,
+              "right": 366.59375,
+              "bottom": 646.65625,
+              "left": 23.40625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 0,
+              "y": 217.1875,
+              "width": 390,
+              "height": 14.296875,
+              "top": 217.1875,
+              "right": 390,
+              "bottom": 231.484375,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 0,
+              "y": 390.1875,
+              "width": 390,
+              "height": 14.296875,
+              "top": 390.1875,
+              "right": 390,
+              "bottom": 404.484375,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 360x740",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 360,
+          "scroll": 360
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 21.6015625,
+              "y": 222,
+              "width": 316.796875,
+              "height": 109.8125,
+              "top": 222,
+              "right": 338.3984375,
+              "bottom": 331.8125,
+              "left": 21.6015625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 21.6015625,
+              "y": 414.390625,
+              "width": 316.796875,
+              "height": 160.65625,
+              "top": 414.390625,
+              "right": 338.3984375,
+              "bottom": 575.046875,
+              "left": 21.6015625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 0,
+              "y": 186,
+              "width": 360,
+              "height": 14.296875,
+              "top": 186,
+              "right": 360,
+              "bottom": 200.296875,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 0,
+              "y": 349.828125,
+              "width": 360,
+              "height": 14.296875,
+              "top": 349.828125,
+              "right": 360,
+              "bottom": 364.125,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 320x640",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 320,
+          "scroll": 320
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 19.203125,
+              "y": 192,
+              "width": 281.59375,
+              "height": 97.609375,
+              "top": 192,
+              "right": 300.796875,
+              "bottom": 289.609375,
+              "left": 19.203125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 19.203125,
+              "y": 358.390625,
+              "width": 281.59375,
+              "height": 142.796875,
+              "top": 358.390625,
+              "right": 300.796875,
+              "bottom": 501.1875,
+              "left": 19.203125
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 0,
+              "y": 156,
+              "width": 320,
+              "height": 14.296875,
+              "top": 156,
+              "right": 320,
+              "bottom": 170.296875,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 0,
+              "y": 307.625,
+              "width": 320,
+              "height": 14.296875,
+              "top": 307.625,
+              "right": 320,
+              "bottom": 321.921875,
+              "left": 0
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production viewport 844x390",
+      "status": "PASS",
+      "evidence": {
+        "overflow": {
+          "width": 844,
+          "scroll": 844
+        },
+        "geometry": [
+          {
+            "class": "zelo-hero-wordmark",
+            "box": {
+              "x": 213.7890625,
+              "y": 109.125,
+              "width": 416.421875,
+              "height": 144.359375,
+              "top": 109.125,
+              "right": 630.2109375,
+              "bottom": 253.484375,
+              "left": 213.7890625
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-car",
+            "box": {
+              "x": 241.2734375,
+              "y": 201.90625,
+              "width": 358.390625,
+              "height": 181.75,
+              "top": 201.90625,
+              "right": 599.6640625,
+              "bottom": 383.65625,
+              "left": 241.2734375
+            },
+            "font": "\"Zelo Hero\", Montserrat, Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-left",
+            "box": {
+              "x": 54.859375,
+              "y": 241.984375,
+              "width": 204.453125,
+              "height": 13.046875,
+              "top": 241.984375,
+              "right": 259.3125,
+              "bottom": 255.03125,
+              "left": 54.859375
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          },
+          {
+            "class": "zelo-hero-slogan-right",
+            "box": {
+              "x": 626.09375,
+              "y": 241.984375,
+              "width": 163.046875,
+              "height": 13.046875,
+              "top": 241.984375,
+              "right": 789.140625,
+              "bottom": 255.03125,
+              "left": 626.09375
+            },
+            "font": "\"Zelo Hero\", Arial, sans-serif"
+          }
+        ],
+        "APIs": [
+          {
+            "path": "/api/instagram-feed",
+            "status": 200
+          },
+          {
+            "path": "/api/google-reviews",
+            "status": 503
+          }
+        ],
+        "realInstagramSix": true,
+        "googleUnavailable": true,
+        "heroReducedMotionNoReplay": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    },
+    {
+      "name": "Production real cold intro, frames/video, session reload, section return and reduced motion",
+      "status": "PASS",
+      "evidence": {
+        "early": {
+          "state": "playing",
+          "car": "0",
+          "running": 6
+        },
+        "middle": {
+          "state": "playing",
+          "car": "0.836187",
+          "running": 6
+        },
+        "final": {
+          "state": "settled",
+          "car": "1",
+          "running": 0
+        },
+        "sessionPersists": true
+      }
+    },
+    {
+      "name": "Production menu/search/focus, commercial links and comparison keyboard/mouse",
+      "status": "PASS",
+      "evidence": {
+        "serviceMessagesDistinct": true,
+        "brandPartnerLinks": true,
+        "keyboardRange": true,
+        "menuFocusSearch": true,
+        "zeroAnalyticsOnPreview": true
+      }
+    }
+  ],
+  "screens": [
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-full-1440x900.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-1-hero-1440.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-2-services-results-1440.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-3-process-quality-1440.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-4-community-1440.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-5-location-footer-1440.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-full-390x844.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-1-hero-390.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-2-services-results-390.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-3-process-quality-390.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-4-community-390.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-5-location-footer-390.png",
+    ".nox/evidence/ZE-12/production/qa-production/PRODUCTION-full-320x640.png",
+    ".nox/evidence/ZE-12/production/qa-production/intro-production.webm"
+  ]
+}

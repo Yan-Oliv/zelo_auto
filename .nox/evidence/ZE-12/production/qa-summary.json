@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-25",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "domain": "https://zelo.omnyatech.com.br",
+  "productionDeployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "status": "PASS",
+  "suites": [
+    {
+      "name": "Canonical viewport/intro/navigation",
+      "file": "qa-production/results.json",
+      "total": 13,
+      "pass": 13,
+      "fail": 0,
+      "blocked": 0
+    },
+    {
+      "name": "HTTP/SEO/axe/Maps/motion/analytics",
+      "file": "qa-extra/results.json",
+      "total": 11,
+      "pass": 11,
+      "fail": 0,
+      "blocked": 0
+    },
+    {
+      "name": "Decoded real media and progressive mobile reveal",
+      "file": "qa-media/results.json",
+      "total": 2,
+      "pass": 2,
+      "fail": 0,
+      "blocked": 0
+    },
+    {
+      "name": "Browser-only client fault and native error matrix",
+      "file": "qa-client-fault/results.json",
+      "total": 2,
+      "pass": 2,
+      "fail": 0,
+      "blocked": 0
+    }
+  ],
+  "privatePaths": {
+    "file": "public-private-paths.json",
+    "checks": 3,
+    "status": "PASS"
+  },
+  "viewports": 11,
+  "axe": {
+    "scans": 3,
+    "detectedViolations": 0,
+    "completeCertification": false
+  },
+  "integrations": {
+    "instagram": "Actual production API HTTP200/6 plus six HTTPS CDN images fully decoded (>32x32), six official post links; no fixtures",
+    "google": "Actual production503/configuration; no rating/count/reviews; accepted external-block exception retained",
+    "maps": {
+      "actualIframe200": true,
+      "mapPixelsReviewed": true,
+      "mobileOneFingerScroll": {
+        "start": 8680,
+        "end": 8805
+      },
+      "screenshot": "qa-extra/REAL-map-mobile-scroll.png"
+    },
+    "analytics": {
+      "tagCount": 1,
+      "eventCommands": [
+        {
+          "event": "page_view",
+          "keys": [
+            "page_location",
+            "page_title",
+            "send_to"
+          ]
+        },
+        {
+          "event": "select_service",
+          "keys": [
+            "service_name",
+            "send_to"
+          ]
+        },
+        {
+          "event": "quote_click",
+          "keys": [
+            "cta_location",
+            "service_context",
+            "send_to"
+          ]
+        },
+        {
+          "event": "whatsapp_click",
+          "keys": [
+            "cta_location",
+            "service_context",
+            "send_to"
+          ]
+        }
+      ],
+      "networkReceipts": [
+        {
+          "origin": "https://www.google-analytics.com",
+          "status": 204
+        },
+        {
+          "origin": "https://www.google-analytics.com",
+          "status": 204
+        }
+      ],
+      "denialPersisted": true,
+      "revokeStopsNewEvents": true,
+      "dashboardIngestion": "NOT_VERIFIED - external GA4 Realtime/DebugView account access not used"
+    }
+  },
+  "motion": {
+    "hero": "Actual cold video/initialmiddlefinal, first-session persist/reload/section return/reduced-motion",
+    "sectionVideo": "qa-extra/production-scroll-motion.webm",
+    "mobileProgressive": "qa-media/results.json - first/last services/process/Instagram reveal when actually in viewport",
+    "errors": "Temporal draw/fade samples for actual404 and static500/503; reduced-motion no animation"
+  },
+  "evidence": {
+    "heroVideo": "qa-production/intro-production.webm",
+    "mediaLoaded": "qa-media/REAL-instagram-six-decoded.png",
+    "allSections": "qa-production/PRODUCTION-{1..5}-*-{1440,390}.png",
+    "fullScreens": [
+      "qa-production/PRODUCTION-full-1440x900.png",
+      "qa-production/PRODUCTION-full-390x844.png",
+      "qa-production/PRODUCTION-full-320x640.png"
+    ]
+  },
+  "harnessCorrections": [
+    {
+      "issue": "Mobile stacked cards outside viewport correctly have opacity0; generic direct-child all-visible assertion invalid",
+      "correction": "Desktop all-visible stagger capture plus actual mobile first/last target reveal checks",
+      "initial": "qa-extra/results-first-motion-harness.json"
+    },
+    {
+      "issue": "Wait until opacity>0.99 followed by strict equality1 sampled active final frame0.990955",
+      "correction": "Wait for final opacity1; targeted mobile reveal retestPASS",
+      "initial": "qa-media/results-first-threshold-harness.json"
+    },
+    {
+      "issue": "Error matrix assumed every heading>=20px, but approved503 stylesheet uses17px at<=360px",
+      "correction": "Check exact approved17px bound for that state,14px body, no clipping and52px controls; final33statesPASS",
+      "initial": "qa-client-fault/results-503-title-diagnostic.json"
+    }
+  ],
+  "limits": [
+    "Inventory screenshots intentionally block Maps; use dedicated map screenshot proof instead",
+    "Some initial Instagram inventory captures can precede CDN image decode; use dedicated six-decoded-media screenshot",
+    "500/503 direct static templates returnHTTP200, React screens do not retroactively set HTTP500",
+    "No physical screenreader/phone certification or field CoreWebVitals claim",
+    "No messages, reviews or emails sent; no provider-account mutation; no secret/env reads; no provider body/CDN query persistence",
+    "Postdeploy React500 verified with browser-context dependency failure simulation only; no actual public infrastructure fault or HTTP500 is claimed"
+  ],
+  "allQABrowsersClosed": true,
+  "errorMatrix": {
+    "states": 33,
+    "viewports": 11,
+    "codes": [
+      404,
+      500,
+      503
+    ],
+    "navigationsInFinalRun": 3,
+    "status": "PASS",
+    "nativeHTTP": {
+      "404": 404,
+      "500": 200,
+      "503": 200
+    }
+  },
+  "reactFault": {
+    "simulation": "BROWSER_ONLY intercept of actual deferred chunk response as503; public root stillHTTP200 and public assets untouched",
+    "safeUI500": true,
+    "noUnhandledPromise": true,
+    "recovery": "Interception removed; full reload restored hero/services4/Instagram6",
+    "status": "PASS",
+    "evidence": "qa-client-fault/results.json"
+  }
+}

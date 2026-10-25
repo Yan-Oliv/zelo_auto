@@ -15,8 +15,9 @@
       "basis": "Fresh isolated clean Git build, native Pages runtime, cold normal-motion Performance98 simulated LCP2363ms; approved cloud HTML hash identical to ZE11."
     },
     "D_GoLive": {
-      "status": "PENDING",
-      "basis": "Contract section4 GateD and sections22/24 require final explicit candidate/environment publication authorization"
+      "status": "PASS",
+      "basis": "Owner explicit Autorizo to exact candidate676f1a5/project/domain and conditional Instagram synchronization/previewverification/production/rollback plan",
+      "evidence": "go-live-authorization.json"
     }
   },
   "releaseChecks": {
@@ -27,8 +28,10 @@
     "localQA": "PASS - SSR14/global22/scoped8/actual2/HTTP8/axe3",
     "cloudPreview": "PASS - actual Git deployment and remote13groups,11viewports; providers intentionally unconfigured",
     "runtimeVariables": "Production names/types inspected; preview empty; no values emitted",
-    "instagram": "PENDING_AUTHORIZATION - local compiled200/6; old production400/OAuth190 and preview503; synchronize3serverbindings then verify preview before go-live",
-    "rollback": "PREPARED known successful production target; destructive rollback NOT_RUN"
+    "instagram": "PASS - synced authorized3serverbindings; authenticated sameSHA preview200/6 beforemainpush",
+    "rollback": "PREPARED known successful production target; destructive rollback NOT_RUN",
+    "productionQA": "PASS",
+    "productionPerformance": "MEASURED -95/2554ms mobilecold; strictLCPNOT_MET disclosed separately"
   },
   "production": {
     "project": "zelo-auto",
@@ -36,8 +39,8 @@
     "branch": "main",
     "deploymentsEnabled": true,
     "previousDeployment": "0f414771-cd0e-4407-9165-5a4311babff3",
-    "deployment": "NOT_RUN"
+    "deployment": "PASS -82345fa7 canonical active and homologated"
   },
-  "requiredFinalAction": "Authorize exact candidate676f1a5 to zelo-auto production including safe Instagram server credential synchronization from validated local server configuration (or owner manual update) and the already-approved honest Google-unavailable exception. Do not send secret values in chat.",
+  "requiredFinalAction": "NONE for ZE-12; authorized release executed and homologated, deferred Google outside release gate",
   "plan": "go-live-plan.json"
 }

@@ -1,0 +1,27 @@
+{
+  "scope": "Three bounded GET requests against user-owned production, no response bodies retained",
+  "cases": [
+    {
+      "path": "/.env",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "privateMarkersDetected": false,
+      "PASS": true
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "privateMarkersDetected": false,
+      "PASS": true
+    },
+    {
+      "path": "/.nox/execution-state.json",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "privateMarkersDetected": false,
+      "PASS": true
+    }
+  ],
+  "status": "PASS"
+}

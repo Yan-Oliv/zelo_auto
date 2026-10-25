@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "ownerReply": "Autorizo",
+  "decision": "Explicit approval of exact go-live plan presented in preceding final response",
+  "candidate": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "project": "zelo-auto",
+  "domain": "https://zelo.omnyatech.com.br/",
+  "authorized": [
+    "Synchronize3validatedlocalInstagramserverbindingsforpreviewandproduction",
+    "RequireauthenticpreviewfeedHTTP200beforeproduction",
+    "Fast-forwardmainonlytoexactcandidateviaconfirmedGitpipeline",
+    "Productionhomologationandimmediatesmokeplus5minrecheck",
+    "Rollbacktoknownproduction0f414771-cd0e-4407-9165-5a4311babff3ifcriticalreleaseincident"
+  ],
+  "googleExceptionAlreadyApproved": true,
+  "notAuthorized": [
+    "DNSorbillingchanges",
+    "OAuthGooglesetup",
+    "Forcepush",
+    "SecretvaluesinchatGitclient",
+    "Unrelatedproductchanges"
+  ],
+  "productionDeployment": "NOT_RUN at authorization record",
+  "plan": "prerelease/go-live-plan.json"
+}

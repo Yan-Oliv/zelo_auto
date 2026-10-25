@@ -1,0 +1,29 @@
+{
+  "scope": "Canonical production responses with browser-context-only dependency failure simulation; no public code/configuration mutation. Static error33states use3navigationrequests and11resizes each.",
+  "groups": [
+    {
+      "name": "Browser-simulated deferred chunk failure safe500 and full reload recovery",
+      "status": "PASS",
+      "evidence": {
+        "rootHTTPStatus": 200,
+        "injectedDependencyResponse": 503,
+        "scope": "Only this browser intercepts the actual production EditorialContent chunk; neither server nor public asset changed",
+        "safeReact500": true,
+        "diagnostic": "[Zelo] APP_RENDER_FAILED",
+        "recovery": "Interception removed, full document reload restored healthy page",
+        "healthy": {
+          "hero": true,
+          "services": 4,
+          "instagram": 6,
+          "noUnhandledErrors": true
+        },
+        "notClaimed": "Actual Cloudflare infrastructure500 or HTTP500 status for React UI"
+      }
+    },
+    {
+      "name": "Native error pages eleven viewports each 33 states with three page loads",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(m.heading.font>=20&&m.descriptionFont>=14)\n\n    at file:///B:/OmnyaTech%20Project's/Projetos/zelo_autoestica/.nox/evidence/ZE-12/production/qa-client-fault.mjs:6:1248\n    at async check (file:///B:/OmnyaTech%20Project's/Projetos/zelo_autoestica/.nox/evidence/ZE-12/production/qa-client-fault.mjs:3:83)\n    at async file:///B:/OmnyaTech%20Project's/Projetos/zelo_autoestica/.nox/evidence/ZE-12/production/qa-client-fault.mjs:6:1"
+    }
+  ]
+}

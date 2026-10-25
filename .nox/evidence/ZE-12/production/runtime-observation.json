@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-10-25T11:35:16.743Z",
+  "endedAt": "2026-10-25T11:36:01.770Z",
+  "deployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "scope": "45-second bounded read-only Pages Functions tail with one controlled Google unavailable invocation; store only sanitized aggregate/path/status, no IP/headers/cookies/provider bodies/console text",
+  "events": [
+    {
+      "timestamp": 1792928125420,
+      "outcome": "ok",
+      "method": "GET",
+      "path": "/api/google-reviews",
+      "status": 503,
+      "exceptionCount": 0,
+      "consoleEntryCount": 0
+    }
+  ],
+  "probeStatus": 503,
+  "stdoutBytes": 4122,
+  "exceptions": 0,
+  "stderrBytes": 0,
+  "limits": "Observed requests only, not a guarantee of absence outside the sample. Expected Google HTTP503 can have normal worker outcome."
+}
