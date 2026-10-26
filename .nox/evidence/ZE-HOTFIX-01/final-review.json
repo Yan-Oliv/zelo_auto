@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-26",
+  "status": "PASS",
+  "productCommit": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+  "rootVisualReview": "PASS settled desktop/mobile",
+  "QA": {
+    "local13": true,
+    "preview7": true,
+    "production13": true,
+    "analytics3": true
+  },
+  "ownerDocumentHashes": "unchanged",
+  "providerSecrets": "unchanged",
+  "rollback": "prepared not executed",
+  "Google": "BLOCKED_EXTERNAL accepted unchanged",
+  "specificOwnerBraveMismatchTrigger": "not established"
+}

@@ -1,0 +1,46 @@
+
+> zelo-autoestetica@0.0.0 build
+> tsc -b && vite build && node scripts/prerender.mjs
+
+vite v8.1.3 building client environment for production...
+[2K
+transforming...✓ 2763 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/zacs-atazOZij.jpg                                  4.89 kB
+dist/assets/skg-BpxQnwrD.svg                                   6.22 kB │ gzip:   2.27 kB
+dist/index.html                                               10.69 kB │ gzip:   3.42 kB
+dist/assets/Montserrat-SemiBold-latin-CvtnL4aj.woff2          25.78 kB
+dist/assets/Montserrat-Regular-latin-B0KxnUOT.woff2           25.92 kB
+dist/assets/Montserrat-Bold-latin-B1G_e2yF.woff2              25.93 kB
+dist/assets/zelo_horizontal_logo_png_optimized-CsK0Lo6Y.png   40.02 kB
+dist/assets/zelo_icon_png_optimized-iPJTs0CD.png              59.82 kB
+dist/assets/zelo_logo_png_optimized-BFbIag5O.png              85.49 kB
+dist/assets/omnyatech-BnjfoBAN.png                            92.88 kB
+dist/assets/index-BJdyku_3.css                                43.78 kB │ gzip:  10.52 kB
+dist/assets/EditorialContent-DNuLRO-M.css                     68.57 kB │ gzip:  12.70 kB
+dist/assets/rolldown-runtime-CNC7AqOf.js                       0.87 kB │ gzip:   0.50 kB
+dist/assets/DebugModelPage-BVtsqmph.js                         2.01 kB │ gzip:   1.00 kB
+dist/assets/DebugCrossfadePage-Dz54n9Wd.js                     3.17 kB │ gzip:   1.46 kB
+dist/assets/es-DsQX03fu.js                                    11.66 kB │ gzip:   4.91 kB
+dist/assets/index-dQaBHXj6.js                                 44.72 kB │ gzip:  18.07 kB
+dist/assets/EditorialContent-DoKqFGKs.js                      52.62 kB │ gzip:  14.20 kB
+dist/assets/decode-mnUY6Qbv.js                               138.54 kB │ gzip:  43.71 kB
+dist/assets/motion-cOFAz5-i.js                               178.65 kB │ gzip:  60.05 kB
+dist/assets/react-XhU2c4jO.js                                190.22 kB │ gzip:  59.81 kB
+dist/assets/three-DdUjExqR.js                                890.69 kB │ gzip: 237.74 kB
+
+✓ built in 1.17s
+node.exe : [plugin builtin:vite-reporter]
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([plugin builtin:vite-reporter] :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking:
+https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+Prerendered independent hero: HTML6611B criticalCSS20308B

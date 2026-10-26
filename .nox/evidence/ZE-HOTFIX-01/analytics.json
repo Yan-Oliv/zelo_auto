@@ -1,0 +1,100 @@
+{
+  "label": "Local diagnostic events only; no analytics delivery/PII",
+  "results": [
+    {
+      "name": "Personalized links consenttrue",
+      "status": "PASS",
+      "events": [
+        {
+          "event": "select_service",
+          "params": {
+            "service_name": "lavagem_completa"
+          }
+        },
+        {
+          "event": "quote_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "lavagem_completa"
+          }
+        },
+        {
+          "event": "whatsapp_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "lavagem_completa"
+          }
+        },
+        {
+          "event": "select_service",
+          "params": {
+            "service_name": "limpeza_interna"
+          }
+        },
+        {
+          "event": "quote_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "limpeza_interna"
+          }
+        },
+        {
+          "event": "whatsapp_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "limpeza_interna"
+          }
+        },
+        {
+          "event": "select_service",
+          "params": {
+            "service_name": "higienizacao_bancos"
+          }
+        },
+        {
+          "event": "quote_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "higienizacao_bancos"
+          }
+        },
+        {
+          "event": "whatsapp_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "higienizacao_bancos"
+          }
+        },
+        {
+          "event": "select_service",
+          "params": {
+            "service_name": "higienizacao_carpete"
+          }
+        },
+        {
+          "event": "quote_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "higienizacao_carpete"
+          }
+        },
+        {
+          "event": "whatsapp_click",
+          "params": {
+            "cta_location": "services",
+            "service_context": "higienizacao_carpete"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wrong WhatsApp destination not counted as approved business CTA",
+      "status": "PASS"
+    },
+    {
+      "name": "Personalized links consentfalse",
+      "status": "PASS",
+      "events": []
+    }
+  ]
+}

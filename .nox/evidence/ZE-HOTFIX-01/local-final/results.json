@@ -1,0 +1,319 @@
+{
+  "base": "http://127.0.0.1:8892",
+  "checkedAt": "2026-10-26T11:24:59.094Z",
+  "results": [
+    {
+      "name": "cold-desktop",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "cold-mobile",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "small-mobile",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "reduced-motion",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "session-return",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "storage-unavailable",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "delayed-main",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "recoverable-text-mismatch",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing",
+          "settled"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [
+          "[Zelo] APP_HYDRATION_RECOVERED"
+        ],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "recoverable-DOM-mismatch",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [
+          "[Zelo] APP_HYDRATION_RECOVERED"
+        ],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "optional-beacon-error-before-main",
+      "status": "PASS",
+      "evidence": {
+        "intro": "settled",
+        "states": [
+          "waiting",
+          "playing"
+        ],
+        "overflow": false,
+        "robots": "index, follow",
+        "wa": [
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+a+Lavagem+Completa+do+meu+ve%C3%ADculo.+Quais+hor%C3%A1rios+est%C3%A3o+dispon%C3%ADveis%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Limpeza+Interna+do+meu+ve%C3%ADculo.+Podem+informar+o+or%C3%A7amento+e+os+cuidados+inclu%C3%ADdos+para+o+interior%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Preciso+de+Higieniza%C3%A7%C3%A3o+de+Bancos.+Gostaria+de+avaliar+a+limpeza+do+material+e+de+poss%C3%ADveis+manchas.+Podem+me+passar+um+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1%21+Tenho+interesse+na+Higieniza%C3%A7%C3%A3o+de+Carpete+do+meu+ve%C3%ADculo.+Podem+orientar+sobre+a+limpeza+e+o+tratamento+de+odores%2C+al%C3%A9m+do+or%C3%A7amento%3F",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.",
+          "https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo."
+        ],
+        "phone": true,
+        "diagnostics": [],
+        "beaconBlocked": true
+      }
+    },
+    {
+      "name": "real-entry-load-failure-retains-native-recovery",
+      "status": "PASS",
+      "evidence": {
+        "native500": true,
+        "deliberateBrowserOnlyEntryBlock": true
+      }
+    },
+    {
+      "name": "actual-editorial-chunk-failure-and-reload-recovery",
+      "status": "PASS",
+      "evidence": {
+        "realRender500Retained": true,
+        "healthyReload": true
+      }
+    },
+    {
+      "name": "contact-all-assets-and-source-metadata",
+      "status": "PASS",
+      "evidence": {
+        "schemaTelephone": "+5564996168694",
+        "nativeErrorContacts": true,
+        "currentMainBundleOldContactAbsent": true
+      }
+    }
+  ]
+}

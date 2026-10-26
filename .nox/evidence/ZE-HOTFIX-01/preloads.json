@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1366,
+    "backdrop": "http://127.0.0.1:8892/hero/showroom-final.webp",
+    "car": "http://127.0.0.1:8892/hero/responsive/car-final-640.webp",
+    "preloads": [
+      {
+        "href": "/hero/responsive/zelo-logo-480.webp",
+        "srcset": null
+      },
+      {
+        "href": "/hero/car-final.webp",
+        "srcset": "/hero/responsive/car-final-420.webp 420w, /hero/responsive/car-final-640.webp 640w, /hero/car-final.webp 710w"
+      },
+      {
+        "href": "/hero/showroom-final.webp",
+        "srcset": "/hero/responsive/showroom-final-840.webp 840w, /hero/responsive/showroom-final-1280.webp 1280w, /hero/showroom-final.webp 1672w"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "width": 390,
+    "backdrop": "http://127.0.0.1:8892/hero/showroom-portrait.avif",
+    "car": "http://127.0.0.1:8892/hero/responsive/car-final-420.avif",
+    "preloads": [
+      {
+        "href": "/hero/responsive/zelo-logo-320.webp",
+        "srcset": null
+      },
+      {
+        "href": "/hero/responsive/car-final-710.avif",
+        "srcset": "/hero/responsive/car-final-420.avif 420w, /hero/responsive/car-final-640.avif 640w, /hero/responsive/car-final-710.avif 710w"
+      },
+      {
+        "href": "/hero/showroom-portrait.avif",
+        "srcset": null
+      }
+    ],
+    "warnings": []
+  }
+]

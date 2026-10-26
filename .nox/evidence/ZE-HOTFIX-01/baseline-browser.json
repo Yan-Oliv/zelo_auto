@@ -1,0 +1,18 @@
+[
+  {
+    "reducedMotion": "no-preference",
+    "errors": [],
+    "state": {
+      "hero": true,
+      "bootstrap": "settled"
+    }
+  },
+  {
+    "reducedMotion": "reduce",
+    "errors": [],
+    "state": {
+      "hero": true,
+      "bootstrap": "settled"
+    }
+  }
+]

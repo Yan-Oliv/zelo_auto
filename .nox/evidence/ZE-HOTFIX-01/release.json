@@ -1,0 +1,10 @@
+{
+  "candidate": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+  "tag": "ZE-HOTFIX-01-release-20261026-9496d68",
+  "productionDeployment": "6b3b979f-3e81-4c44-9904-94936bed8746",
+  "canonical": "https://zelo.omnyatech.com.br/",
+  "pipeline": "Existing Git integration, nonforce main fast-forward",
+  "rootHTMLSHA256": "3c712b09843ecb837d06af2ccdd4a0d76abb6b156522d7304577ae7ac9899a4c",
+  "tagPushed": true,
+  "rollback": "82345fa7 prepared not executed"
+}

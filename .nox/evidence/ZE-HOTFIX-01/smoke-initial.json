@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T11:30:55.793Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "newSchemaTelephone": true,
+      "oldTelephoneAbsent": true,
+      "nativeGuardMarker": true,
+      "indexable": true
+    },
+    {
+      "path": "/api/instagram-feed",
+      "status": 200,
+      "posts": 6
+    },
+    {
+      "path": "/api/google-reviews",
+      "status": 503
+    },
+    {
+      "path": "/hotfix-no-such-page",
+      "status": 404
+    },
+    {
+      "path": "/.env",
+      "status": 404
+    },
+    {
+      "path": "/503",
+      "status": 200
+    },
+    {
+      "path": "/404",
+      "status": 200
+    }
+  ],
+  "htmlSHA256": "3c712b09843ecb837d06af2ccdd4a0d76abb6b156522d7304577ae7ac9899a4c",
+  "entry": {
+    "path": "/assets/index-dQaBHXj6.js",
+    "newRecoveryCallback": true,
+    "oldTelephoneAbsent": true
+  },
+  "status": "PASS"
+}

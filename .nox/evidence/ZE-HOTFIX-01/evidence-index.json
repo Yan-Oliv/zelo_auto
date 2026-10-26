@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-26",
+  "classification": "Sanitized QA evidence; provider/customer bodies and secret values not stored",
+  "files": [
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/baseline.json",
+      "bytes": 514,
+      "sha256": "a451acf0e23fdf5e0f11c1e58f86483bc8ab3b898b5974ae5930c88a515d9b34"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/baseline-browser.json",
+      "bytes": 265,
+      "sha256": "ee3de95e5a7ae5aa38710e0ce370e052ff3fe85fa4f82fb86ac3c7e8283c5c37"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/reproduction.json",
+      "bytes": 1027,
+      "sha256": "d6c41a2a652593c64c2b8b90a1463b3f9933a0c1557ead9a3be614689d666a82"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/build.txt",
+      "bytes": 2900,
+      "sha256": "df1d638cae356189a97cb50804832951bfc6c9bb71b050b64cd1e7c900c09530"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/lint.txt",
+      "bytes": 1583,
+      "sha256": "ae9ef0736ff33f5e99526e35231181a541262c9e185ff1443336fdf8ae92f5d7"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/security.json",
+      "bytes": 224,
+      "sha256": "b64c1447ef30e05aafa7ecb14ed144dca7c7b4cc3ccfc2ac5f927419502dd732"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/preloads.json",
+      "bytes": 1312,
+      "sha256": "a1cd85759d646c02078f37455129104ab4357600859926c327dd480d7eefecd0"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production-before.json",
+      "bytes": 348,
+      "sha256": "b370481cef581d1db8584ef4d880bb0823d8f74daff63bf87cd8d5d4ea22426d"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/pre-push-gates.json",
+      "bytes": 540,
+      "sha256": "18521796105950e2b4738db5191640ab2534e715d26304ab5a11e43c3beee348"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/deployments.json",
+      "bytes": 908,
+      "sha256": "825a7c8816ff572da0deef9f10b48a98fe3239c468955d817b7ec1e4271de390"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/smoke-initial.json",
+      "bytes": 863,
+      "sha256": "ee09cafd0006d494e165d0ce37610c8f1d437835ab0a1fdcc7e5a38270488bc0"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/analytics.json",
+      "bytes": 2441,
+      "sha256": "33c7aa0e03e0c6875e71ea94c7ae0faabe4abf4a71b7b52036473b55101936a4"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/final-review.json",
+      "bytes": 489,
+      "sha256": "f7e749467a56998a9ebfd887a1d096853a8fef2e4f1e5271d534f0e10ae5fb61"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/qa.mjs",
+      "bytes": 6378,
+      "sha256": "ca6860cc759c40a66b08af4cc55ae02637f149dd9bf540167a9797c7dc18805c"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/qa-analytics.mjs",
+      "bytes": 2452,
+      "sha256": "81f00f12aedb734bc8c118904fbc458f9616f26b323ea9704471582b6f4604a7"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/poll-deploy.mjs",
+      "bytes": 992,
+      "sha256": "4b78a7265a48d806dccf163962848c1b4679c38142a62df8913b454d3acede95"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/smoke.mjs",
+      "bytes": 1748,
+      "sha256": "bb660157d5d8b90a55bbae5f1bf3d327041b4f92573427d490721cbbef2ab96a"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/finalize.mjs",
+      "bytes": 6938,
+      "sha256": "7d2ff8d5e5e855ea1b66eb960e48507ebdfec193abe94ad41fc556b61007c21e"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/local-final/results.json",
+      "bytes": 20603,
+      "sha256": "8ed98786f0e44e8622a6be5e8c30b108104864f3b3f69c9c42a5822385948ec2"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/preview/results.json",
+      "bytes": 10542,
+      "sha256": "71ace6c0b2997caf04cb1bdefde88f7f70e606efaa37247ad1f805d9e3b0e8b4"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production/results.json",
+      "bytes": 20611,
+      "sha256": "aed862d041741cbcda7ced8b9f736f00cbf05ccbcb5b5d2d4017bbd6575f1244"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/local-final/cold-desktop.png",
+      "bytes": 917304,
+      "sha256": "bd00392de579da4447e42907c278049e51589186856394430d4726504017d931"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/local-final/cold-mobile.png",
+      "bytes": 187158,
+      "sha256": "22c00b4d640d01cfc631915cc350d439caf11948e7a2e436dd707d5469ff661f"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production/cold-desktop.png",
+      "bytes": 917304,
+      "sha256": "bd00392de579da4447e42907c278049e51589186856394430d4726504017d931"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production/cold-mobile.png",
+      "bytes": 187158,
+      "sha256": "22c00b4d640d01cfc631915cc350d439caf11948e7a2e436dd707d5469ff661f"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production/recoverable-DOM-mismatch.png",
+      "bytes": 917304,
+      "sha256": "bd00392de579da4447e42907c278049e51589186856394430d4726504017d931"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/production/actual-entry-failure.png",
+      "bytes": 100932,
+      "sha256": "d43219c46dafbc2dc3b73807bf394c2fce6ffaaa935dbeae8d68ad1c0cf8fece"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/release.json",
+      "bytes": 453,
+      "sha256": "b3cc4170ddf6f6fee340e4e7b0ffb74ce9e20b388aab6ff90e9e08ce463ea454"
+    },
+    {
+      "path": ".nox/evidence/ZE-HOTFIX-01/smoke-observation.json",
+      "bytes": 863,
+      "sha256": "f9bc57c2ca30959705a516e09768b5974c2a680cb2d43dc3ffd8ca4a2b2e72a6"
+    }
+  ]
+}

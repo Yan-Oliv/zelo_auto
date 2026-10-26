@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-26",
+  "head": "443b2dc7f1e9832228076e9977de6a245ec7e9a6",
+  "hashes": {
+    ".nox/ZE-09-Google-Handoff.md": "3e1c229d5f7ec2faf038d2760bae2fa67a458a626132a41521a0bde3edbcc54d",
+    ".nox/ZE-09-Report.md": "40f6c2a0ac8f91f5f368c3e951fce5a9f2b1d8ea98d71d3e55c808484d15e4c4"
+  },
+  "authorization": "Owner explicitly requests correction and production deploy after validation",
+  "oldNumber": "5564996161968",
+  "newNumber": "5564996168694",
+  "rollback": "82345fa7-647c-4087-a103-beaa8b98539a"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "6b3b979f-3e81-4c44-9904-94936bed8746",
+    "url": "https://6b3b979f.zelo-auto.pages.dev",
+    "environment": "production",
+    "created": "2026-10-26T11:29:24.763357Z",
+    "stage": {
+      "name": "deploy",
+      "started_on": "2026-10-26T11:30:27.012968Z",
+      "ended_on": "2026-10-26T11:30:32.401436Z",
+      "status": "success"
+    },
+    "commit": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+    "branch": "main"
+  },
+  {
+    "id": "77604c60-2a7b-4d9c-9252-f2d7c37108f2",
+    "url": "https://77604c60.zelo-auto.pages.dev",
+    "environment": "preview",
+    "created": "2026-10-26T11:26:18.62743Z",
+    "stage": {
+      "name": "deploy",
+      "started_on": "2026-10-26T11:27:47.519857Z",
+      "ended_on": "2026-10-26T11:27:54.595804Z",
+      "status": "success"
+    },
+    "commit": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+    "branch": "release/hotfix-first-open-20261026"
+  }
+]

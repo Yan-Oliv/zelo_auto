@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": "Exact locally configured token/secret values checked in emitted HTML/JS/CSS, values never persisted",
+  "secretValuesPrinted": false,
+  "providerConfigurationChanged": false,
+  "files": 13
+}

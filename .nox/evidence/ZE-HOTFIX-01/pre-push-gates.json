@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-26T11:29:20.321Z",
+  "candidate": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+  "expectedProductionHead": "676f1a5a7e51e9c79c5f3fbe03c56edc35beedd8",
+  "previewQA": "7/7 PASS",
+  "instagram": {
+    "status": 200,
+    "posts": 6
+  },
+  "ownerDocuments": "SHA unchanged",
+  "authorization": "Explicit owner request for production deployment after correction",
+  "pipeline": "Existing Git integration main fast-forward only",
+  "rollbackDeployment": "82345fa7-647c-4087-a103-beaa8b98539a",
+  "noRawDistUpload": true
+}

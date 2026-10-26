@@ -3,14 +3,14 @@
   "project": "zelo_autoestica",
   "status": "BLOCKED_EXTERNAL",
   "currentSprint": null,
-  "currentStep": "ZE-12 completed: canonical production published and homologated; only deferred Google source remains externally blocked",
+  "currentStep": "Authorized first-open and company-contact hotfix completed and published; only deferred Google source externally blocked",
   "allowedStopReasons": [
     "WAITING_USER_ACTION",
     "BLOCKED_EXTERNAL",
     "PAYMENT_REQUIRED"
   ],
   "stopReason": "BLOCKED_EXTERNAL",
-  "nextAction": "Await external Google authorization and authorized endpoint readiness; nonblocking field-performance monitoring backlog, no new sprint or active polling started",
+  "nextAction": "Await external Google authorization and server endpoint readiness; no new activity or production change pending",
   "sprints": [
     {
       "id": "ZE-01",
@@ -1306,8 +1306,55 @@
         "GA4 client/tag/HTTP204 verified; Realtime/DebugView dashboard ingestion unverified without authorized panel access",
         "Runtime log observation bounded45sec and smoke5min are samples, not indefinite availability guarantee"
       ]
+    },
+    {
+      "id": "ZE-HOTFIX-01",
+      "title": "First-load hydration reliability and company WhatsApp",
+      "status": "COMPLETED",
+      "dependencies": [
+        "ZE-12"
+      ],
+      "productionAuthorization": true,
+      "criteria": [
+        {
+          "id": "C01",
+          "description": "Reproduce and fix first-load failure preserving intro and visual",
+          "status": "PASS"
+        },
+        {
+          "id": "C02",
+          "description": "Replace all current public contact surfaces",
+          "status": "PASS"
+        },
+        {
+          "id": "C03",
+          "description": "Build lint regression QA documentation and production smoke",
+          "status": "PASS"
+        }
+      ],
+      "productCommit": "9496d688c50750ed9bd73a944b794f1b8d6db221",
+      "completedAt": "2026-10-26",
+      "report": "ZE-HOTFIX-01-Report.md",
+      "production": {
+        "deploymentId": "6b3b979f-3e81-4c44-9904-94936bed8746",
+        "url": "https://zelo.omnyatech.com.br/",
+        "status": "ACTIVE_VALIDATED",
+        "publishedAt": "2026-10-26T11:30:32.401436Z",
+        "releaseTag": "ZE-HOTFIX-01-release-20261026-9496d68"
+      },
+      "QA": {
+        "local": "13/13 PASS",
+        "preview": "7/7 PASS",
+        "production": "13/13 PASS",
+        "analytics": "3/3 PASS",
+        "build": "PASS",
+        "lint": "PASS7legacywarnings",
+        "rootReview": "PASS settleddesktop/mobile; approvedvisualpreserved"
+      },
+      "remainingActions": [],
+      "observation": "PASS - immediate and five-minute canonical recheck; same deployed HTML, Instagram200six"
     }
   ],
-  "lastCompletedSprint": "ZE-12",
+  "lastCompletedSprint": "ZE-HOTFIX-01",
   "currentApprovedSprint": null
 }

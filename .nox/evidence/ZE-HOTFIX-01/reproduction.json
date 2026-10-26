@@ -1,0 +1,24 @@
+{
+  "url": "https://zelo.omnyatech.com.br/",
+  "candidate": "676f1a5",
+  "normalFreshContext": "PASS no pageerrors",
+  "reducedFreshContext": "PASS no pageerrors",
+  "browserOnlyControlledBeforeHydration": [
+    {
+      "mutation": "replace slogan text",
+      "pageerror": "React418 text mismatch",
+      "heroCount": 0,
+      "native500Count": 1
+    },
+    {
+      "mutation": "prepend span inside slogan",
+      "pageerror": "React418 text mismatch",
+      "heroCount": 0,
+      "native500Count": 1
+    }
+  ],
+  "cause": "React default recoverable reporting dispatches global error. Native window.error pre-commit listener treats it as fatal and replaces root with500 during React recovery.",
+  "specificUserBraveMismatchTrigger": "Not reproduced with unmodified headless Chromium; browser extension/DOM modification is a possible trigger, not established fact",
+  "optionalBeaconBlocked": "Not a fatal dependency; excluded from root recovery",
+  "google503": "Existing accepted external block, not landing render failure"
+}
