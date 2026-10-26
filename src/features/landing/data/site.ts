@@ -15,7 +15,7 @@ export const siteConfig = {
   instagramHandle: '@zelo_autoestetica',
   instagramLink: 'https://www.instagram.com/zelo_autoestetica/',
   whatsappLink:
-    'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
+    'https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.',
 }
 
 export const heroCopy = {
@@ -119,7 +119,7 @@ export const partnerLogos: CarouselLogoItem[] = [
 
 export const locationInfo = {
   address: 'R. Ant\u00f4nio Hor\u00e1cio Pereira, 1485 - Lot. Ipanema, Catal\u00e3o - GO, 75705-150',
-  phoneLabel: 'WhatsApp: (64) 99616-1968',
+  phoneLabel: 'WhatsApp: (64) 99616-8694',
   mapsLink: 'https://maps.app.goo.gl/9twSEgWic6k4YYyf7',
   embedUrl:
     'https://www.google.com/maps?q=R.%20Ant%C3%B4nio%20Hor%C3%A1cio%20Pereira%2C%201485%20-%20Lot.%20Ipanema%2C%20Catal%C3%A3o%20-%20GO%2C%2075705-150&z=16&output=embed',

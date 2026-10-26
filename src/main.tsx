@@ -17,10 +17,18 @@ if (/^\/debug-(model|crossfade)\/?$/.test(window.location.pathname)) {
 }
 
 const rootContainer = document.getElementById('root')!
+// From here React owns render failures. Recoverable hydration diagnostics must
+// never make the native pre-module guard replace a tree React is repairing.
+rootContainer.setAttribute('data-app-started', '')
 const nativeRecovery = document.querySelector<HTMLTemplateElement>('#zelo-native-recovery')?.innerHTML ?? rootContainer.innerHTML
 const rootOptions = import.meta.env.PROD ? {
   // componentDidCatch owns the sanitized caught-error diagnostic.
   onCaughtError: () => {},
+  onRecoverableError: () => {
+    // React has already regenerated the affected tree. Keep a sanitized diagnostic
+    // without dispatching a global ErrorEvent or exposing DOM/provider content.
+    console.warn('[Zelo] APP_HYDRATION_RECOVERED')
+  },
   onUncaughtError: () => {
     console.error('[Zelo] APP_ROOT_FAILED')
     rootContainer.innerHTML = nativeRecovery

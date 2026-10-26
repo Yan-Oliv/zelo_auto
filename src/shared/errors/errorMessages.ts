@@ -19,4 +19,4 @@ export const errorMessages = {
 } as const
 
 // Kept independent from landing configuration: recovery must not import its assets or APIs.
-export const errorContactUrl = 'https://wa.me/5564996161968?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.'
+export const errorContactUrl = 'https://wa.me/5564996168694?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo.'

@@ -42,7 +42,7 @@
         "@id": "https://zelo.omnyatech.com.br/#business",
         "name": "Zelo Estética Automotiva",
         "url": "https://zelo.omnyatech.com.br/",
-        "telephone": "+5564996161968",
+        "telephone": "+5564996168694",
         "image": "https://zelo.omnyatech.com.br/og/zelo-estetica-automotiva-catalao.jpg",
         "address": {
           "@type": "PostalAddress",
@@ -99,13 +99,19 @@
       <footer class="ze-error__footer"><span>MAIS QUE ESTÉTICA.</span><span>É VALORIZAÇÃO.</span></footer>
     </div>
     </div>
-    <noscript><link rel="stylesheet" href="/errors/error-page.css"><meta name="robots" content="noindex, nofollow, noarchive"><style>[data-boot-fallback] [data-boot-error]{display:initial}[data-boot-fallback] [data-boot-pending]{display:none}[data-boot-fallback] .ze-error__number{visibility:visible}</style><p style="margin:0;padding:16px;text-align:center;background:#fafaf8;color:#20201e">Ative o JavaScript para explorar o site. <a href="https://wa.me/5564996161968" style="color:#75521a">Fale com a Zelo pelo WhatsApp</a>.</p></noscript>
+    <noscript><link rel="stylesheet" href="/errors/error-page.css"><meta name="robots" content="noindex, nofollow, noarchive"><style>[data-boot-fallback] [data-boot-error]{display:initial}[data-boot-fallback] [data-boot-pending]{display:none}[data-boot-fallback] .ze-error__number{visibility:visible}</style><p style="margin:0;padding:16px;text-align:center;background:#fafaf8;color:#20201e">Ative o JavaScript para explorar o site. <a href="https://wa.me/5564996168694" style="color:#75521a">Fale com a Zelo pelo WhatsApp</a>.</p></noscript>
     <script>
       // A blocked entry module leaves native recovery HTML in place. No auto-reload.
-      // Only sanitize metadata while boot has not committed; later failures belong to React/local handlers.
+      // React owns failures as soon as its entry starts, including recoverable
+      // hydration. Optional third-party scripts cannot invalidate native HTML.
       window.addEventListener('error', function (event) {
         if (!(event instanceof ErrorEvent) && !(event.target instanceof HTMLScriptElement && event.target.type === 'module')) return;
         var prerendered = document.querySelector('#root[data-prerendered]');
+        if (document.querySelector('#root[data-app-started]')) return;
+        if (event instanceof ErrorEvent) {
+          if (!event.filename) return;
+          try { if (new URL(event.filename, location.href).origin !== location.origin) return; } catch { return; }
+        }
         var recovery = document.getElementById('zelo-native-recovery');
         if (prerendered && recovery) prerendered.innerHTML = recovery.innerHTML;
         if (!document.querySelector('[data-boot-fallback]')) return;
