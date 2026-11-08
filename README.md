@@ -1,37 +1,42 @@
-# Zelo Auto
+# Zelo Auto Estética — landing page
 
-Landing page cinematografica da Zelo Estetica Automotiva, criada com React, TypeScript, Vite, Three.js e GSAP.
+![React 19](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=white) ![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 
-## Rodando localmente
+Landing page **cinematográfica** da Zelo Estética Automotiva: um carro em 3D, transições guiadas pelo scroll e uma galeria conectada ao Instagram da marca.
+
+**Site:** [zelo.omnyatech.com.br](https://zelo.omnyatech.com.br/)
+
+## Destaques
+
+- Cena 3D com **React Three Fiber** e **drei** (modelos glTF otimizados com `gltf-transform`)
+- Animações com **GSAP** e **Framer Motion**; carrosséis com **Embla**
+- Galeria alimentada pela **Instagram API** através de uma função em `functions/api` (Cloudflare Pages Functions), com *fallback* identificado quando o feed não está disponível
+- Pré-renderização da página no build para SEO e primeira pintura rápida
+- Espuma em *macro* gerada **offline no Blender** (`tools/blender`) e integrada ao Three.js
+
+## Stack
+
+React 19 · TypeScript · Vite · Three.js · GSAP · Framer Motion · Embla · Tailwind CSS · Cloudflare Pages
+
+## Como executar
 
 ```bash
 npm install
-npm run dev
-```
-
-Para gerar a build de producao:
-
-```bash
-npm run build
-```
-
-Para visualizar a build:
-
-```bash
+npm run dev       # desenvolvimento
+npm run build     # build + pré-renderização
 npm run preview
 ```
 
-## Instagram
+### Variáveis do servidor (Cloudflare Pages)
 
-The gallery uses the same-origin `/api/instagram-feed` endpoint. The server calls the Instagram API only when `INSTAGRAM_API_MODE=instagram-login` is explicitly set; Facebook Login tokens are unsupported. Configure `INSTAGRAM_GRAPH_USER_ID` (numeric Instagram user ID) and `INSTAGRAM_ACCESS_TOKEN` as server-side secrets locally and in Cloudflare Pages. This integration requires the `instagram_business_basic` Instagram Login permission.
+| Variável | Uso |
+|---|---|
+| `INSTAGRAM_API_MODE` | `instagram-login` para ativar o feed real |
+| `INSTAGRAM_GRAPH_USER_ID` | ID numérico da conta |
+| `INSTAGRAM_ACCESS_TOKEN` | token com a permissão `instagram_business_basic` |
 
-The public endpoint returned Meta error 190 with its previous server-side credential during initial verification. After the owner updated the ignored local `.env`, a fresh Vite route/browser run returned six official posts and rendered the images successfully. Cloudflare Pages was not changed, so production still requires the owner to update its server-side variables and recheck the public endpoint. When unavailable or empty, the page labels gallery images as illustrative.
+Os segredos ficam apenas no servidor (local em `.env`, nunca versionado).
 
-Owner setup for live verification:
+---
 
-1. In Meta for Developers, use the app's Instagram API with Instagram Login configuration and grant the Instagram `instagram_business_basic` permission to the authorized professional account.
-2. Complete Meta's official authorization flow for the intended Business or Creator account and obtain an access token issued by that flow. Do not reuse a Facebook Login token; the API host and permissions differ. Facebook's **Test Users** area is separate from Instagram Login; the account can use the Instagram Login flow without a linked Facebook Page. The owner confirmed `zelo_autoestetica` is already an Instagram Tester.
-3. Set `INSTAGRAM_API_MODE=instagram-login`, `INSTAGRAM_GRAPH_USER_ID` to that account's numeric Instagram user ID, and `INSTAGRAM_ACCESS_TOKEN` as server-only variables in the Cloudflare Pages project. For local development, use an ignored `.dev.vars` file. Never place credentials in a `VITE_` variable, source control, screenshots, or chat.
-4. Re-test `/api/instagram-feed` and confirm six or fewer official posts, real Instagram permalinks, and no token in request URLs or browser assets. If Meta still returns an authentication category, renew authorization through the official flow and check the app permission/account selection in Meta; do not paste the token into a support request.
-
-Never expose the token through a `VITE_` variable or commit `.env`.
+<sub>Desenvolvido por <a href="https://github.com/Yan-Oliv">Yan Monteiro</a> · <a href="https://www.linkedin.com/in/yan-de-oliveira-gon%C3%A7alves-monteiro-a2886619a/">LinkedIn</a> · <a href="https://github.com/OmnyaTech">OmnyaTech</a></sub>
