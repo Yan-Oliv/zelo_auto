@@ -1,6 +1,6 @@
 import { useId, useState, type CSSProperties, type ReactNode, type SVGProps } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
-import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, ShieldCheck, Sparkles } from 'lucide-react'
+import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, Motorbike, ShieldCheck, Sparkles } from 'lucide-react'
 import { productBrands, services, serviceWhatsappLink, siteConfig, type ServiceItem } from '../../data/site'
 import { NearImage } from './NearImage'
 import './CommercialSections.css'
@@ -74,7 +74,7 @@ export function ServicesSection() {
 
 export type ComparisonPair = { before: string; after: string; beforeAlt: string; afterAlt: string; source?: 'real' | 'illustrative'; note?: string }
 
-export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { title: string; analyticsId?: string; preview: string; pair?: ComparisonPair }) {
+export function BeforeAfterComparison({ title, preview, pair, analyticsId, pendingIcon }: { title: string; analyticsId?: string; preview?: string; pair?: ComparisonPair; pendingIcon?: ReactNode }) {
   const [position, setPosition] = useState(50)
   const [loaded, setLoaded] = useState({ before: false, after: false })
   const [imageFailed, setImageFailed] = useState(false)
@@ -91,13 +91,31 @@ export function BeforeAfterComparison({ title, preview, pair, analyticsId }: { t
         <input disabled={imageFailed} data-analytics-comparator={analyticsId} type="range" min="0" max="100" step="1" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-labelledby={labelId} aria-valuetext={`${position}% da imagem antes; ${100 - position}% da imagem depois`} />
         <span className="ze4-comparison-label ze4-comparison-label-before">Antes</span><span className="ze4-comparison-label ze4-comparison-label-after">Depois</span>
       </> : <>
-        <NearImage src={preview} alt="Imagem ilustrativa; comparação de atendimento real ainda indisponível." width="680" height="360" loading="lazy" decoding="async" />
-        <div className="ze4-comparison-empty"><Sparkles size={22} strokeWidth={1.2} aria-hidden="true" /><span>O cuidado faz a diferença</span><small>Comparação real indisponível</small></div>
+        {preview && <NearImage src={preview} alt={`Imagem ilustrativa de ${title.toLowerCase()}; fotos reais de antes e depois ainda não disponíveis.`} width="680" height="360" loading="lazy" decoding="async" />}
+        <div className="ze4-comparison-empty">{pendingIcon ?? <Sparkles size={22} strokeWidth={1.2} aria-hidden="true" />}<span>O cuidado faz a diferença</span><small>Fotos reais em breve</small></div>
       </>}
       </div>
     </figure>
   )
 }
+
+/**
+ * Antes/depois: somente fotos reais da Zelo. Motos e Interior aguardam as fotos da empresa;
+ * para publicar, adicione `pair` com comparison-<key>-before/after em public/editorial.
+ */
+const resultItems: { key: string; title: string; preview?: string; pair?: ComparisonPair; pendingIcon?: ReactNode }[] = [
+  {
+    key: 'paint', title: 'Pintura',
+    pair: {
+      before: editorial('comparison-paint-before'), after: editorial('comparison-paint-after'), source: 'real',
+      note: 'Fotos reais cedidas pela Zelo. Limpeza da caixa de roda e lataria; ângulos diferentes.',
+      beforeAlt: 'Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.',
+      afterAlt: 'Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.',
+    },
+  },
+  { key: 'motos', title: 'Motos', pendingIcon: <Motorbike size={26} strokeWidth={1.2} aria-hidden="true" /> },
+  { key: 'interior', title: 'Interior', preview: 'service-interior' },
+]
 
 export function ResultsSection() {
   return (
@@ -106,14 +124,10 @@ export function ResultsSection() {
         <CommercialReveal className="ze4-results-copy">
           <Eyebrow>Antes / Depois</Eyebrow>
           <h2 id="ze4-results-title">A diferença<br />{' '}está <span>nos detalhes</span></h2>
-          <p>Conheça nosso cuidado com a pintura, os bancos e os detalhes do interior.</p>
+          <p>Conheça nosso cuidado com a pintura, as motos e os detalhes do interior.</p>
         </CommercialReveal>
         <div className="ze4-results-grid">
-          {[
-            { key: 'paint', title: 'Pintura', preview: 'service-wash' },
-            { key: 'seats', title: 'Bancos', preview: 'service-seats' },
-            { key: 'carpet', title: 'Carpete', preview: 'service-carpet' },
-          ].map(({ key, title, preview }, index) => <CommercialReveal key={key} className="ze4-comparison-reveal" delay={index * 0.1}><BeforeAfterComparison analyticsId={key} title={title} preview={editorial(preview)} pair={{ before: editorial(`comparison-${key}-before`), after: editorial(`comparison-${key}-after`), source: key === 'paint' ? 'real' : 'illustrative', note: key === 'paint' ? 'Fotos reais cedidas pela Zelo. Limpeza da caixa de roda e lataria; ângulos diferentes.' : 'Demonstração ilustrativa — não é resultado real da Zelo.', beforeAlt: key === 'paint' ? 'Carro vermelho antes da limpeza, mostrando sujeira na região da caixa de roda, pneu e lataria.' : `${title} antes da limpeza, em uma demonstração ilustrativa.`, afterAlt: key === 'paint' ? 'Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.' : `${title} depois da limpeza, em uma demonstração ilustrativa.` }} /></CommercialReveal>)}
+          {resultItems.map(({ key, title, preview, pair, pendingIcon }, index) => <CommercialReveal key={key} className="ze4-comparison-reveal" delay={index * 0.1}><BeforeAfterComparison analyticsId={key} title={title} preview={preview && editorial(preview)} pair={pair} pendingIcon={pendingIcon} /></CommercialReveal>)}
         </div>
       </div>
       <div className="ze4-container ze4-results-actions">

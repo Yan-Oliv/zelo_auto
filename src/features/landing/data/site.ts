@@ -104,6 +104,8 @@ export type CarouselLogoItem = {
   logo: string
   style?: 'product' | 'partner'
   href?: string
+  /** Destination described to screen readers, e.g. "no Instagram" or "no site". */
+  hrefLabel?: string
 }
 
 export const productBrands: (CarouselLogoItem & { href: string })[] = [
@@ -113,8 +115,8 @@ export const productBrands: (CarouselLogoItem & { href: string })[] = [
 ]
 
 export const partnerLogos: CarouselLogoItem[] = [
-  { name: 'OmnyaTech', logo: omnyatechLogo, style: 'partner' },
-  { name: 'SKG', logo: skgLogo, style: 'partner', href: 'https://www.instagram.com/skgclub.lamartine/' },
+  { name: 'OmnyaTech', logo: omnyatechLogo, style: 'partner', href: 'https://omnyatech.com.br/', hrefLabel: 'no site' },
+  { name: 'SKG', logo: skgLogo, style: 'partner', href: 'https://www.instagram.com/skgclub.lamartine/', hrefLabel: 'no Instagram' },
 ]
 
 export const locationInfo = {

@@ -41,7 +41,11 @@
         "@type": "AutoWash",
         "@id": "https://zelo.omnyatech.com.br/#business",
         "name": "Zelo Estética Automotiva",
+        "description": "Estética automotiva em Catalão–GO para carros e motos: lavagem completa, limpeza interna e higienização de bancos e carpetes.",
         "url": "https://zelo.omnyatech.com.br/",
+        "logo": "https://zelo.omnyatech.com.br/favicon.png",
+        "areaServed": { "@type": "City", "name": "Catalão", "containedInPlace": { "@type": "State", "name": "Goiás" } },
+        "contactPoint": { "@type": "ContactPoint", "telephone": "+5564996168694", "contactType": "customer service", "availableLanguage": "pt-BR" },
         "telephone": "+5564996168694",
         "image": "https://zelo.omnyatech.com.br/og/zelo-estetica-automotiva-catalao.jpg",
         "address": {
@@ -99,7 +103,7 @@
       <footer class="ze-error__footer"><span>MAIS QUE ESTÉTICA.</span><span>É VALORIZAÇÃO.</span></footer>
     </div>
     </div>
-    <noscript><link rel="stylesheet" href="/errors/error-page.css"><meta name="robots" content="noindex, nofollow, noarchive"><style>[data-boot-fallback] [data-boot-error]{display:initial}[data-boot-fallback] [data-boot-pending]{display:none}[data-boot-fallback] .ze-error__number{visibility:visible}</style><p style="margin:0;padding:16px;text-align:center;background:#fafaf8;color:#20201e">Ative o JavaScript para explorar o site. <a href="https://wa.me/5564996168694" style="color:#75521a">Fale com a Zelo pelo WhatsApp</a>.</p></noscript>
+    <noscript><link rel="stylesheet" href="/errors/error-page.css"><style>[data-boot-fallback] [data-boot-error]{display:initial}[data-boot-fallback] [data-boot-pending]{display:none}[data-boot-fallback] .ze-error__number{visibility:visible}</style><p style="margin:0;padding:16px;text-align:center;background:#fafaf8;color:#20201e">Ative o JavaScript para explorar o site. <a href="https://wa.me/5564996168694" style="color:#75521a">Fale com a Zelo pelo WhatsApp</a>.</p></noscript>
     <script>
       // A blocked entry module leaves native recovery HTML in place. No auto-reload.
       // React owns failures as soon as its entry starts, including recoverable
@@ -120,8 +124,6 @@
         if (!document.querySelector('link[href="/errors/error-page.css"]')) { var stylesheet = document.createElement('link'); stylesheet.rel = 'stylesheet'; stylesheet.href = '/errors/error-page.css'; document.head.append(stylesheet); }
         document.querySelectorAll('img[data-error-src]').forEach(function (image) { image.src = image.getAttribute('data-error-src'); });
         document.title = '500 — Algo saiu do percurso | Zelo';
-        var robots = document.querySelector('meta[name="robots"]');
-        if (robots) robots.content = 'noindex, nofollow, noarchive';
         document.querySelectorAll('link[rel="canonical"],script[type="application/ld+json"],meta[property^="og:"],meta[name^="twitter:"]').forEach(function (node) { node.remove(); });
         var heading = document.getElementById('ze-error-heading');
         if (heading && document.activeElement !== heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }

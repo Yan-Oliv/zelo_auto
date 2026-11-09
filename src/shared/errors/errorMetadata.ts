@@ -14,8 +14,10 @@ export function applyErrorMetadata(code: ErrorCode): () => void {
   const originalRobots = previousRobots?.content
   const robots = previousRobots ?? document.createElement('meta')
   robots.name = 'robots'
-  robots.content = 'noindex, nofollow, noarchive'
-  if (!previousRobots) document.head.append(robots)
+  // Only a real "not found" is excluded from search. 500/503 are transient: a noindex
+  // there would drop the home page if Google's renderer ever hit a temporary failure.
+  if (code === 404) robots.content = 'noindex, nofollow, noarchive'
+  if (!previousRobots && code === 404) document.head.append(robots)
   document.title = `${code} — ${errorMessages[code].title} | Zelo`
   document.querySelectorAll('link[rel="canonical"], script[type="application/ld+json"], meta[property^="og:"], meta[name^="twitter:"]').forEach((element) => {
     removed.push({ element, next: element.nextSibling })
