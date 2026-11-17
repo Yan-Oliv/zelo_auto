@@ -1,6 +1,6 @@
 import { useId, useState, type CSSProperties, type ReactNode, type SVGProps } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
-import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, Motorbike, ShieldCheck, Sparkles } from 'lucide-react'
+import { Armchair, ArrowRight, ChartNoAxesColumnIncreasing, Check, ChevronLeft, ChevronRight, Diamond, Droplets, Leaf, ShieldCheck, Sparkles } from 'lucide-react'
 import { productBrands, services, serviceWhatsappLink, siteConfig, type ServiceItem } from '../../data/site'
 import { NearImage } from './NearImage'
 import './CommercialSections.css'
@@ -100,8 +100,8 @@ export function BeforeAfterComparison({ title, preview, pair, analyticsId, pendi
 }
 
 /**
- * Antes/depois: somente fotos reais da Zelo. Motos e Interior aguardam as fotos da empresa;
- * para publicar, adicione `pair` com comparison-<key>-before/after em public/editorial.
+ * Antes/depois: somente fotos reais da Zelo (Pintura, Motos e Interior).
+ * Novos pares: comparison-<key>-before/after em public/editorial (+ responsiveImages.ts).
  */
 const resultItems: { key: string; title: string; preview?: string; pair?: ComparisonPair; pendingIcon?: ReactNode }[] = [
   {
@@ -113,8 +113,24 @@ const resultItems: { key: string; title: string; preview?: string; pair?: Compar
       afterAlt: 'Carro vermelho após a limpeza, mostrando a região da caixa de roda, pneu e lataria mais limpos.',
     },
   },
-  { key: 'motos', title: 'Motos', pendingIcon: <Motorbike size={26} strokeWidth={1.2} aria-hidden="true" /> },
-  { key: 'interior', title: 'Interior', preview: 'service-interior' },
+  {
+    key: 'motos', title: 'Motos',
+    pair: {
+      before: editorial('comparison-motos-before'), after: editorial('comparison-motos-after'), source: 'real',
+      note: 'Fotos reais cedidas pela Zelo. Limpeza da traseira da moto: pneu, roda, suspensão e escapamento.',
+      beforeAlt: 'Traseira de moto antes da limpeza, com pneu, roda, mola da suspensão e escapamento cobertos de poeira e barro.',
+      afterAlt: 'Traseira da mesma moto após a limpeza, com pneu, roda, mola da suspensão e escapamento limpos.',
+    },
+  },
+  {
+    key: 'interior', title: 'Interior',
+    pair: {
+      before: editorial('comparison-interior-before'), after: editorial('comparison-interior-after'), source: 'real',
+      note: 'Fotos reais cedidas pela Zelo. Limpeza do assoalho, tapete e soleira do motorista.',
+      beforeAlt: 'Assoalho do motorista antes da limpeza, com tapete, soleira e carpete cobertos de terra vermelha.',
+      afterAlt: 'Assoalho do motorista após a limpeza, com tapete, soleira e carpete limpos.',
+    },
+  },
 ]
 
 export function ResultsSection() {
